@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState, useMemo } from 'react';
 import { QuizQuestion, UserAnswerRecord } from '@/types/quiz';
-import { Volume2, CheckCircle2, XCircle, ArrowRight, Sparkles } from 'lucide-react';
+import { Volume2, CheckCircle2, XCircle, ArrowRight, ArrowLeft, RotateCcw } from 'lucide-react';
 import { playChineseAudio, shuffleArray } from '@/lib/quiz-utils';
 
 interface QuizCardProps {
@@ -11,6 +11,8 @@ interface QuizCardProps {
   totalQuestions: number;
   userAnswer?: UserAnswerRecord;
   onSelectAnswer: (selectedOption: string) => void;
+  onRetryQuestion?: (questionId: number) => void;
+  onPrevQuestion?: () => void;
   onNextQuestion: () => void;
   isLastQuestion: boolean;
 }
@@ -23,36 +25,47 @@ export const QuizCard: React.FC<QuizCardProps> = ({
   totalQuestions,
   userAnswer,
   onSelectAnswer,
+  onRetryQuestion,
+  onPrevQuestion,
   onNextQuestion,
   isLastQuestion,
 }) => {
-  // Shuffled options unique per question. We memoize based on question.id so it doesn't reshuffle when user clicks!
+  // Memoize shuffled options based on question.id
   const displayOptions = useMemo(() => {
     return shuffleArray(question.options);
   }, [question.id]);
 
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
 
-  // Play audio helper
   const handlePlayAudio = () => {
     setIsPlayingAudio(true);
     playChineseAudio(question.hanzi);
     setTimeout(() => setIsPlayingAudio(false), 800);
   };
 
-  // Keyboard navigation for A/B/C/D or 1/2/3/4 and Enter
+  // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      // If already answered, Enter proceeds to next question
-      if (userAnswer) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          onNextQuestion();
-        }
+      // Arrow keys navigation
+      if (e.key === 'ArrowLeft' && onPrevQuestion && questionIndex > 0) {
+        e.preventDefault();
+        onPrevQuestion();
+        return;
+      }
+      if (e.key === 'ArrowRight' && userAnswer) {
+        e.preventDefault();
+        onNextQuestion();
         return;
       }
 
-      // If not yet answered, map keys
+      if (e.key === 'Enter') {
+        if (userAnswer) {
+          e.preventDefault();
+          onNextQuestion();
+          return;
+        }
+      }
+
       const keyMap: Record<string, number> = {
         '1': 0, 'a': 0, 'A': 0,
         '2': 1, 'b': 1, 'B': 1,
@@ -71,12 +84,11 @@ export const QuizCard: React.FC<QuizCardProps> = ({
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [userAnswer, displayOptions, onSelectAnswer, onNextQuestion]);
+  }, [userAnswer, displayOptions, onSelectAnswer, onNextQuestion, onPrevQuestion, questionIndex]);
 
   const hasAnswered = !!userAnswer;
   const isCorrect = userAnswer?.isCorrect;
 
-  // Find letter corresponding to the correct answer in the current display order
   const correctLetter = useMemo(() => {
     const idx = displayOptions.indexOf(question.correctAnswer);
     return idx >= 0 ? OPTION_PREFIXES[idx] : '';
@@ -91,15 +103,27 @@ export const QuizCard: React.FC<QuizCardProps> = ({
           <span className="font-semibold text-rose-600 uppercase tracking-wider bg-rose-50 px-3 py-1 rounded-full">
             Câu {questionIndex + 1} / {totalQuestions}
           </span>
-          <button
-            onClick={handlePlayAudio}
-            className="flex items-center gap-1.5 text-slate-500 hover:text-rose-600 transition px-2.5 py-1 rounded-full hover:bg-slate-50"
-            title="Nghe phát âm"
-            aria-label="Phát âm chữ Hán"
-          >
-            <Volume2 className={`w-4 h-4 ${isPlayingAudio ? 'text-rose-600 animate-bounce' : ''}`} />
-            <span className="text-xs">Phát âm</span>
-          </button>
+          <div className="flex items-center gap-2">
+            {hasAnswered && onRetryQuestion && (
+              <button
+                onClick={() => onRetryQuestion(question.id)}
+                className="flex items-center gap-1 text-xs text-slate-500 hover:text-amber-600 bg-amber-50 hover:bg-amber-100 px-2.5 py-1 rounded-full transition"
+                title="Làm lại câu này từ đầu"
+              >
+                <RotateCcw className="w-3 h-3 text-amber-600" />
+                <span className="text-amber-800 font-medium">Chọn lại</span>
+              </button>
+            )}
+            <button
+              onClick={handlePlayAudio}
+              className="flex items-center gap-1.5 text-slate-500 hover:text-rose-600 transition px-2.5 py-1 rounded-full hover:bg-slate-50"
+              title="Nghe phát âm"
+              aria-label="Phát âm chữ Hán"
+            >
+              <Volume2 className={`w-4 h-4 ${isPlayingAudio ? 'text-rose-600 animate-bounce' : ''}`} />
+              <span className="text-xs">Phát âm</span>
+            </button>
+          </div>
         </div>
 
         {/* Question Prominent Hanzi & Pinyin */}
@@ -125,11 +149,11 @@ export const QuizCard: React.FC<QuizCardProps> = ({
           </div>
 
           <p className="text-xs sm:text-sm text-slate-400 font-normal">
-            Chọn nghĩa đúng của từ trên
+            {hasAnswered ? 'Bạn có thể bấm chọn lại đáp án khác nếu muốn' : 'Chọn nghĩa đúng của từ trên'}
           </p>
         </div>
 
-        {/* Options list: Vertical layout, large touch target */}
+        {/* Options list */}
         <div className="px-4 sm:px-6 pb-6 pt-2 space-y-3" role="radiogroup" aria-label="Các lựa chọn đáp án">
           {displayOptions.map((opt, idx) => {
             const letter = OPTION_PREFIXES[idx];
@@ -141,26 +165,21 @@ export const QuizCard: React.FC<QuizCardProps> = ({
 
             if (hasAnswered) {
               if (isThisCorrect) {
-                // Correct answer is highlighted green
                 buttonStyles = "border-emerald-500 bg-emerald-50/90 text-emerald-950 font-semibold ring-2 ring-emerald-400/50";
                 badgeStyles = "bg-emerald-600 text-white";
               } else if (isThisSelected && !isThisCorrect) {
-                // Wrong answer chosen by user is highlighted red
                 buttonStyles = "border-rose-400 bg-rose-50/90 text-rose-950 ring-2 ring-rose-400/40 line-through opacity-90";
                 badgeStyles = "bg-rose-600 text-white";
               } else {
-                // Other unchosen wrong answers
-                buttonStyles = "border-slate-200/60 bg-slate-50/60 text-slate-400 opacity-60";
-                badgeStyles = "bg-slate-100 text-slate-400";
+                buttonStyles = "border-slate-200/70 bg-slate-50/60 hover:bg-rose-50/40 text-slate-600";
+                badgeStyles = "bg-slate-100 text-slate-500";
               }
             }
 
             return (
               <button
                 key={opt}
-                onClick={() => !hasAnswered && onSelectAnswer(opt)}
-                disabled={hasAnswered}
-                aria-disabled={hasAnswered}
+                onClick={() => onSelectAnswer(opt)}
                 aria-label={`Đáp án ${letter}: ${opt}`}
                 className={`group w-full min-h-[58px] sm:min-h-[64px] px-4 py-3 sm:px-5 sm:py-3.5 rounded-2xl border-2 text-left flex items-center justify-between gap-3 text-base sm:text-lg transition-all duration-200 active:scale-[0.99] focus:outline-none focus:ring-2 focus:ring-rose-400 ${buttonStyles}`}
               >
@@ -235,15 +254,25 @@ export const QuizCard: React.FC<QuizCardProps> = ({
               </div>
             </div>
 
-            {/* Next Question Button */}
-            <div className="mt-4 pt-1 flex justify-end">
+            {/* Navigation buttons: Prev Question & Next Question */}
+            <div className="mt-4 pt-1 flex items-center justify-between gap-3">
+              {onPrevQuestion && questionIndex > 0 ? (
+                <button
+                  onClick={onPrevQuestion}
+                  className="px-4 py-3 sm:px-5 sm:py-3.5 rounded-2xl border border-slate-200 hover:bg-slate-100 text-slate-700 font-medium text-sm sm:text-base flex items-center gap-1.5 transition active:scale-[0.98]"
+                >
+                  <ArrowLeft className="w-4 h-4" />
+                  <span>Câu trước</span>
+                </button>
+              ) : <div />}
+
               <button
                 onClick={onNextQuestion}
                 autoFocus
-                className="w-full sm:w-auto px-6 py-3.5 bg-gradient-to-r from-rose-600 to-red-600 hover:from-rose-700 hover:to-red-700 text-white font-semibold rounded-2xl shadow-md hover:shadow-lg shadow-rose-600/20 flex items-center justify-center gap-2 text-base transition-all active:scale-[0.98]"
+                className="px-6 py-3.5 bg-gradient-to-r from-rose-600 to-red-600 hover:from-rose-700 hover:to-red-700 text-white font-semibold rounded-2xl shadow-md hover:shadow-lg shadow-rose-600/20 flex items-center justify-center gap-2 text-sm sm:text-base transition-all active:scale-[0.98]"
               >
                 <span>{isLastQuestion ? 'Xem kết quả 🎉' : 'Câu tiếp theo →'}</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
             </div>
           </div>

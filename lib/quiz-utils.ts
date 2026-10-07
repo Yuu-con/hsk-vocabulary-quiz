@@ -19,28 +19,30 @@ export interface ScoreTier {
   feedback: string;
 }
 
-export function getScoreTier(score: number): ScoreTier {
-  if (score >= 135) {
+export function getScoreTier(score: number, totalQuestions: number = 150): ScoreTier {
+  const ratio = totalQuestions > 0 ? score / totalQuestions : 0;
+
+  if (ratio >= 0.9) {
     return {
       tier: 'Xuất sắc',
       badge: '🏆 Xuất sắc',
       color: 'text-amber-600',
       bgLight: 'bg-amber-50',
       borderColor: 'border-amber-300',
-      feedback: 'Kiến thức từ vựng HSK 1 của bạn gần như hoàn hảo! Bạn đã sẵn sàng để chinh phục HSK 2.',
+      feedback: 'Kiến thức từ vựng của bạn gần như hoàn hảo! Bạn đã sẵn sàng để chinh phục các cấp độ cao hơn.',
     };
   }
-  if (score >= 120) {
+  if (ratio >= 0.8) {
     return {
       tier: 'Rất tốt',
       badge: '🎉 Rất tốt',
       color: 'text-emerald-600',
       bgLight: 'bg-emerald-50',
       borderColor: 'border-emerald-300',
-      feedback: 'Bạn nắm rất chắc phần lớn từ vựng HSK 1. Hãy ôn lại vài câu còn nhầm lẫn nhé!',
+      feedback: 'Bạn nắm rất chắc phần lớn từ vựng. Hãy ôn lại vài câu còn nhầm lẫn nhé!',
     };
   }
-  if (score >= 100) {
+  if (ratio >= 0.66) {
     return {
       tier: 'Khá tốt',
       badge: '👍 Khá tốt',
@@ -50,7 +52,7 @@ export function getScoreTier(score: number): ScoreTier {
       feedback: 'Kết quả khá tốt! Bạn đã vượt qua mức trung bình, chỉ cần trau chuốt thêm một chút.',
     };
   }
-  if (score >= 80) {
+  if (ratio >= 0.53) {
     return {
       tier: 'Cần ôn thêm',
       badge: '📚 Cần ôn thêm',
@@ -82,10 +84,9 @@ export function playChineseAudio(text: string): boolean {
     window.speechSynthesis.cancel();
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'zh-CN';
-    utterance.rate = 0.85; // Slightly slower for clear learning
+    utterance.rate = 0.85;
     utterance.pitch = 1.0;
     
-    // Attempt to pick a zh-CN voice if available
     const voices = window.speechSynthesis.getVoices();
     const chineseVoice = voices.find(v => v.lang === 'zh-CN' || v.lang === 'zh_CN');
     if (chineseVoice) {

@@ -7,10 +7,12 @@ import { QuizCard } from '@/components/QuizCard';
 import { StartScreen } from '@/components/StartScreen';
 import { ResultScreen } from '@/components/ResultScreen';
 import { ReviewFinishedScreen } from '@/components/ReviewFinishedScreen';
+import { QuestionNavigatorModal } from '@/components/QuestionNavigatorModal';
 
 export default function HomePage() {
   const {
     isHydrated,
+    level,
     mode,
     currentIndex,
     totalQuestions,
@@ -20,11 +22,17 @@ export default function HomePage() {
     currentQuestion,
     currentUserAnswer,
     wrongQuestionIds,
+    answers,
+    activeDataset,
+    changeLevel,
     startQuiz,
     resumeQuiz,
     resetQuiz,
     selectAnswer,
+    retryQuestion,
+    prevQuestion,
     nextQuestion,
+    jumpToQuestion,
     // Review mode
     reviewQuestions,
     reviewCurrentIndex,
@@ -33,12 +41,14 @@ export default function HomePage() {
     currentReviewAnswer,
     startReviewWrongAnswers,
     selectReviewAnswer,
+    prevReviewQuestion,
     nextReviewQuestion,
     returnToResults,
     setMode,
-  } = useQuiz();
+  } = useQuiz('hsk1');
 
   const [showResetConfirm, setShowResetConfirm] = useState(false);
+  const [isNavigatorOpen, setIsNavigatorOpen] = useState(false);
 
   // Avoid flash during SSR hydration
   if (!isHydrated) {
@@ -46,7 +56,7 @@ export default function HomePage() {
       <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4">
         <div className="text-center space-y-3">
           <div className="text-4xl animate-bounce">🇨🇳</div>
-          <div className="text-slate-600 font-semibold text-sm">Đang tải HSK 1 Quiz...</div>
+          <div className="text-slate-600 font-semibold text-sm">Đang tải HSK Quiz...</div>
         </div>
       </div>
     );
@@ -66,7 +76,7 @@ export default function HomePage() {
             <div className="text-3xl mb-2">⚠️</div>
             <h3 className="text-lg font-bold text-slate-900 mb-1">Bắt đầu lại từ đầu?</h3>
             <p className="text-xs sm:text-sm text-slate-500 mb-6 leading-relaxed">
-              Toàn bộ tiến độ {answeredCount > 0 ? `(${answeredCount} câu đã làm, ${score} điểm)` : ''} sẽ bị xóa và bạn sẽ làm lại từ câu 1.
+              Toàn bộ tiến độ của cấp độ {level.toUpperCase()} ({answeredCount} câu đã làm, {score} điểm) sẽ bị xóa và bạn sẽ làm lại từ câu 1.
             </p>
             <div className="flex items-center gap-3">
               <button
@@ -86,28 +96,49 @@ export default function HomePage() {
         </div>
       )}
 
+      {/* Question Navigator Modal */}
+      <QuestionNavigatorModal
+        isOpen={isNavigatorOpen}
+        onClose={() => setIsNavigatorOpen(false)}
+        questions={activeDataset}
+        currentIndex={currentIndex}
+        answers={answers}
+        wrongQuestionIds={wrongQuestionIds}
+        onSelectQuestion={(idx) => {
+          jumpToQuestion(idx);
+          if (mode === 'completed') {
+            setMode('in_progress');
+          }
+        }}
+      />
+
       {/* Screen Views based on Quiz Mode */}
       <div className="w-full flex-1 flex flex-col">
         {mode === 'idle' && (
           <StartScreen
+            currentLevel={level}
+            onChangeLevel={changeLevel}
             onStartQuiz={startQuiz}
             onResumeQuiz={hasSavedProgress ? resumeQuiz : undefined}
             onResetQuiz={() => (hasSavedProgress ? setShowResetConfirm(true) : resetQuiz())}
             hasSavedProgress={hasSavedProgress}
             savedIndex={currentIndex}
             savedScore={score}
+            totalQuestions={totalQuestions}
           />
         )}
 
         {mode === 'in_progress' && currentQuestion && (
           <>
             <QuizHeader
+              level={level}
               currentIndex={currentIndex}
               totalQuestions={totalQuestions}
               score={score}
               answeredCount={answeredCount}
               onReset={() => setShowResetConfirm(true)}
               onGoHome={() => setMode('idle')}
+              onOpenNavigator={() => setIsNavigatorOpen(true)}
             />
 
             <div className="flex-1 flex items-center justify-center">
@@ -117,6 +148,8 @@ export default function HomePage() {
                 totalQuestions={totalQuestions}
                 userAnswer={currentUserAnswer}
                 onSelectAnswer={selectAnswer}
+                onRetryQuestion={retryQuestion}
+                onPrevQuestion={prevQuestion}
                 onNextQuestion={nextQuestion}
                 isLastQuestion={currentIndex === totalQuestions - 1}
               />
@@ -127,12 +160,14 @@ export default function HomePage() {
         {mode === 'completed' && (
           <>
             <QuizHeader
+              level={level}
               currentIndex={totalQuestions - 1}
               totalQuestions={totalQuestions}
               score={score}
               answeredCount={totalQuestions}
               onReset={() => setShowResetConfirm(true)}
               onGoHome={() => setMode('idle')}
+              onOpenNavigator={() => setIsNavigatorOpen(true)}
             />
 
             <div className="flex-1 flex items-center justify-center">
@@ -142,6 +177,7 @@ export default function HomePage() {
                 wrongCount={wrongQuestionIds.length}
                 onRestart={() => setShowResetConfirm(true)}
                 onReviewWrongAnswers={startReviewWrongAnswers}
+                onOpenNavigator={() => setIsNavigatorOpen(true)}
               />
             </div>
           </>
@@ -150,6 +186,7 @@ export default function HomePage() {
         {mode === 'reviewing' && currentReviewQuestion && (
           <>
             <QuizHeader
+              level={level}
               currentIndex={reviewCurrentIndex}
               totalQuestions={reviewQuestions.length}
               score={reviewScore}
@@ -166,6 +203,7 @@ export default function HomePage() {
                 totalQuestions={reviewQuestions.length}
                 userAnswer={currentReviewAnswer}
                 onSelectAnswer={selectReviewAnswer}
+                onPrevQuestion={prevReviewQuestion}
                 onNextQuestion={nextReviewQuestion}
                 isLastQuestion={reviewCurrentIndex === reviewQuestions.length - 1}
               />
@@ -187,7 +225,7 @@ export default function HomePage() {
 
       {/* Footer Branding */}
       <footer className="w-full py-4 text-center text-xs text-slate-400 border-t border-slate-200/50 mt-auto">
-        <p>HSK 1 Vocabulary Quiz (150 từ - HSK 2.0 chuẩn) · Học tiếng Trung mỗi ngày</p>
+        <p>HSK Vocabulary Quiz · HSK 1 (150 từ) · HSK 2 (150 từ) · HSK 1+2 (300 từ) chuẩn HSK 2.0</p>
       </footer>
     </main>
   );

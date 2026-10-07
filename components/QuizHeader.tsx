@@ -1,9 +1,11 @@
 'use client';
 
 import React from 'react';
-import { RotateCcw, Home, Sparkles } from 'lucide-react';
+import { RotateCcw, Home, LayoutGrid } from 'lucide-react';
+import { QuizLevel } from '@/types/quiz';
 
 interface QuizHeaderProps {
+  level: QuizLevel;
   currentIndex: number;
   totalQuestions: number;
   score: number;
@@ -11,9 +13,17 @@ interface QuizHeaderProps {
   isReviewMode?: boolean;
   onReset: () => void;
   onGoHome?: () => void;
+  onOpenNavigator?: () => void;
 }
 
+const LEVEL_LABELS: Record<QuizLevel, string> = {
+  hsk1: 'HSK 1 · 150 từ',
+  hsk2: 'HSK 2 · 150 từ',
+  all: 'HSK 1 & 2 · 300 từ',
+};
+
 export const QuizHeader: React.FC<QuizHeaderProps> = ({
+  level,
   currentIndex,
   totalQuestions,
   score,
@@ -21,6 +31,7 @@ export const QuizHeader: React.FC<QuizHeaderProps> = ({
   isReviewMode = false,
   onReset,
   onGoHome,
+  onOpenNavigator,
 }) => {
   const currentQuestionNumber = Math.min(currentIndex + 1, totalQuestions);
   const progressPercent = totalQuestions > 0 ? (currentQuestionNumber / totalQuestions) * 100 : 0;
@@ -43,20 +54,36 @@ export const QuizHeader: React.FC<QuizHeaderProps> = ({
             )}
             <div>
               <h1 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight flex items-center gap-1.5">
-                <span>🇨🇳</span> HSK 1 Vocabulary Quiz
-                {isReviewMode && (
+                <span>🇨🇳</span> HSK Vocabulary Quiz
+                {isReviewMode ? (
                   <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 border border-amber-300">
                     Ôn câu sai
+                  </span>
+                ) : (
+                  <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-rose-100 text-rose-800 border border-rose-200">
+                    {level.toUpperCase()}
                   </span>
                 )}
               </h1>
               <p className="text-xs text-slate-500 font-medium">
-                {isReviewMode ? 'Chế độ ôn tập từ vựng làm sai' : 'HSK 1 · 150 từ · HSK 2.0'}
+                {isReviewMode ? 'Chế độ ôn tập từ vựng làm sai' : LEVEL_LABELS[level]}
               </p>
             </div>
           </div>
 
           <div className="flex items-center gap-1.5">
+            {onOpenNavigator && (
+              <button
+                onClick={onOpenNavigator}
+                title="Bảng danh sách câu hỏi"
+                aria-label="Mở danh sách câu hỏi"
+                className="flex items-center gap-1 px-2.5 py-1.5 text-xs font-medium text-slate-700 hover:text-rose-600 bg-slate-100 hover:bg-rose-50 rounded-lg transition"
+              >
+                <LayoutGrid className="w-3.5 h-3.5" />
+                <span className="hidden sm:inline">Danh sách câu</span>
+              </button>
+            )}
+
             <button
               onClick={onReset}
               title="Làm lại từ đầu"
@@ -64,7 +91,7 @@ export const QuizHeader: React.FC<QuizHeaderProps> = ({
               className="flex items-center gap-1 px-2.5 py-1.5 text-xs font-medium text-slate-600 hover:text-rose-600 bg-slate-100 hover:bg-rose-50 rounded-lg transition"
             >
               <RotateCcw className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">Bắt đầu lại</span>
+              <span className="hidden sm:inline">Làm lại</span>
             </button>
           </div>
         </div>

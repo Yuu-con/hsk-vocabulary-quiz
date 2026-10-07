@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import { getScoreTier } from '@/lib/quiz-utils';
 import confetti from 'canvas-confetti';
-import { RotateCcw, BookOpenCheck, Trophy, CheckCircle2, XCircle, Percent, ArrowRight } from 'lucide-react';
+import { RotateCcw, BookOpenCheck, ArrowRight, LayoutGrid } from 'lucide-react';
 
 interface ResultScreenProps {
   score: number;
@@ -11,6 +11,7 @@ interface ResultScreenProps {
   wrongCount: number;
   onRestart: () => void;
   onReviewWrongAnswers: () => void;
+  onOpenNavigator?: () => void;
 }
 
 export const ResultScreen: React.FC<ResultScreenProps> = ({
@@ -19,25 +20,24 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
   wrongCount,
   onRestart,
   onReviewWrongAnswers,
+  onOpenNavigator,
 }) => {
   const percentage = totalQuestions > 0 ? ((score / totalQuestions) * 100).toFixed(1) : '0';
-  const tierInfo = getScoreTier(score);
+  const tierInfo = getScoreTier(score, totalQuestions);
   const correctCount = score;
 
-  // Trigger confetti for high scores (>= 100)
+  // Trigger confetti for high scores (>= 75% score)
   useEffect(() => {
-    if (score >= 100) {
+    if (totalQuestions > 0 && score / totalQuestions >= 0.75) {
       try {
         confetti({
           particleCount: 80,
           spread: 70,
           origin: { y: 0.6 },
         });
-      } catch (e) {
-        // Safe catch if canvas-confetti is not loaded in SSR
-      }
+      } catch (e) {}
     }
-  }, [score]);
+  }, [score, totalQuestions]);
 
   return (
     <div className="w-full max-w-2xl mx-auto px-4 py-8 sm:py-12 animate-pop-in">
@@ -49,7 +49,7 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
           Hoàn thành!
         </h1>
         <p className="text-sm sm:text-base text-slate-500 font-medium mb-6">
-          Bạn đã hoàn thành 150 câu hỏi từ vựng HSK 1
+          Bạn đã hoàn thành bài kiểm tra ({totalQuestions} câu hỏi)
         </p>
 
         {/* Score Card Box */}
@@ -99,7 +99,7 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
           </div>
         </div>
 
-        {/* Review Mode Banner or Zero Wrong note */}
+        {/* Review Mode Banner */}
         {wrongCount > 0 ? (
           <div className="mb-6 p-4 rounded-2xl bg-rose-50/70 border border-rose-200 text-left flex items-start gap-3">
             <div className="w-8 h-8 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center shrink-0 mt-0.5">
@@ -110,7 +110,7 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                 Bạn có {wrongCount} câu chưa chính xác
               </div>
               <div className="text-xs text-rose-800 leading-relaxed">
-                Hãy luyện tập lại các câu sai này để củng cố trí nhớ và đạt điểm tuyệt đối 150/150!
+                Hãy bấm &quot;Ôn lại câu sai&quot; để làm lại và ghi nhớ chuẩn xác các từ này!
               </div>
             </div>
           </div>
@@ -133,9 +133,19 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
             </button>
           )}
 
+          {onOpenNavigator && (
+            <button
+              onClick={onOpenNavigator}
+              className="w-full py-3 px-6 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-base flex items-center justify-center gap-2 transition"
+            >
+              <LayoutGrid className="w-4 h-4" />
+              <span>Xem bảng câu hỏi & sửa đáp án</span>
+            </button>
+          )}
+
           <button
             onClick={onRestart}
-            className="w-full py-3.5 px-6 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-base flex items-center justify-center gap-2 transition"
+            className="w-full py-3 px-6 rounded-2xl border border-slate-200 hover:bg-slate-50 text-slate-700 font-semibold text-base flex items-center justify-center gap-2 transition"
           >
             <RotateCcw className="w-4 h-4" />
             <span>Làm lại từ đầu</span>
