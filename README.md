@@ -1,14 +1,28 @@
-# 🇨🇳 HSK 1 Vocabulary Quiz (150 từ - HSK 2.0)
+# 🇨🇳 HSK Vocabulary Quiz (HSK 1 · HSK 2 · HSK 1 & 2 Chuẩn HSK 2.0)
 
-Website trắc nghiệm từ vựng tiếng Trung **HSK 1 (phiên bản 2.0)** chuẩn gồm **đúng và đủ 150 từ vựng**, được thiết kế hiện đại, mobile-first, mượt mà và hoạt động hoàn chỉnh 100%.
+Website trắc nghiệm từ vựng tiếng Trung toàn diện gồm 3 mục:
+- 🇨🇳 **HSK 1**: 150 từ vựng căn bản
+- 🇨🇳 **HSK 2**: 150 từ vựng chuẩn HSK 2.0
+- 🇨🇳 **HSK 1 + 2**: Trọn bộ 300 từ vựng HSK 1 & 2
+
+Được thiết kế hiện đại, mobile-first, mượt mà và hoạt động hoàn chỉnh 100%.
 
 ---
 
 ## 🌟 Tính năng nổi bật
 
-1. **Chuẩn 150/150 từ vựng HSK 1 phiên bản 2.0**:
-   - Mỗi câu gồm chữ Hán lớn, Pinyin chuẩn thanh điệu, 4 lựa chọn và giải thích nghĩa súc tích, dễ nhớ.
-   - Dữ liệu được kiểm tra bằng script tự động: 0 trùng lặp, 100% đúng đáp án.
+1. **3 Danh mục Quiz độc lập**:
+   - Chọn nhanh giữa **HSK 1 (150 từ)**, **HSK 2 (150 từ)**, hoặc **HSK 1 + 2 (300 từ)**.
+   - Lưu trữ tiến độ riêng biệt cho từng cấp độ trong `localStorage`.
+
+2. **Cho phép Chọn lại Đáp án & Làm lại Câu hỏi**:
+   - Thêm nút **"← Câu trước"** và **"Câu tiếp theo →"** để di chuyển tự do.
+   - Người học có thể bấm chọn lại đáp án bất kỳ lúc nào; điểm số và trạng thái đúng/sai tự động cập nhật lại chuẩn xác (+1 điểm khi sửa từ sai thành đúng).
+   - Nút **"Chọn lại"** để reset trạng thái câu hỏi đang làm dở.
+
+3. **Bảng điều hướng câu hỏi (Question Navigator)**:
+   - Nút **"Danh sách câu"** hiển thị toàn bộ 150 hoặc 300 câu hỏi với màu sắc trực quan (🟢 Đúng, 🔴 Sai, ⚪ Chưa làm).
+   - Bộ lọc xem riêng **"Câu sai"** để nhảy trực tiếp vào câu sai và sửa đáp án ngay lập tức.
 
 2. **Cơ chế Quiz thông minh & Random hóa**:
    - Vị trí các lựa chọn A/B/C/D được xáo trộn ngẫu nhiên (Fisher-Yates shuffle) mỗi lần xuất hiện.
