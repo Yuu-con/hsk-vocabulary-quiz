@@ -72,23 +72,24 @@ export function getScoreTier(score: number, totalQuestions: number = 150): Score
   };
 }
 
-/**
- * Text-to-speech for Chinese characters using Web Speech API
- */
-export function playChineseAudio(text: string): boolean {
+let currentAudioElement: HTMLAudioElement | null = null;
+
+function tryWebSpeech(text: string): boolean {
   if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
     return false;
   }
-
   try {
     window.speechSynthesis.cancel();
+    if (window.speechSynthesis.paused) {
+      window.speechSynthesis.resume();
+    }
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'zh-CN';
     utterance.rate = 0.85;
     utterance.pitch = 1.0;
-    
+
     const voices = window.speechSynthesis.getVoices();
-    const chineseVoice = voices.find(v => v.lang === 'zh-CN' || v.lang === 'zh_CN');
+    const chineseVoice = voices.find(v => v.lang.toLowerCase().includes('zh') || v.lang.toLowerCase().includes('cmn'));
     if (chineseVoice) {
       utterance.voice = chineseVoice;
     }
@@ -96,7 +97,79 @@ export function playChineseAudio(text: string): boolean {
     window.speechSynthesis.speak(utterance);
     return true;
   } catch (err) {
-    console.error('Audio playback failed', err);
+    console.error('SpeechSynthesis error', err);
     return false;
   }
+}
+
+function tryGoogleTts(text: string): Promise<boolean> {
+  return new Promise((resolve) => {
+    try {
+      const googleUrl = `https://translate.google.com/translate_tts?ie=UTF-8&tl=zh-CN&client=tw-ob&q=${encodeURIComponent(text)}`;
+      const audio = new Audio(googleUrl);
+      currentAudioElement = audio;
+      audio.onended = () => resolve(true);
+      audio.onerror = () => resolve(false);
+      audio.play().then(() => resolve(true)).catch(() => resolve(false));
+    } catch {
+      resolve(false);
+    }
+  });
+}
+
+/**
+ * Text-to-speech for Chinese characters:
+ * 1. Primary: Dictionary MP3 voice (Youdao zh) - crystal clear native audio, works on all devices without voice pack
+ * 2. Secondary: Google Translate TTS audio
+ * 3. Fallback: Web Speech API (speechSynthesis)
+ */
+export function playChineseAudio(text: string): Promise<boolean> {
+  if (typeof window === 'undefined') {
+    return Promise.resolve(false);
+  }
+
+  return new Promise((resolve) => {
+    try {
+      // Stop any playing audio
+      if (currentAudioElement) {
+        currentAudioElement.pause();
+        currentAudioElement.currentTime = 0;
+      }
+
+      // Try Youdao Chinese voice (native pronunciation MP3)
+      const youdaoUrl = `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(text)}&le=zh`;
+      const audio = new Audio(youdaoUrl);
+      currentAudioElement = audio;
+
+      audio.onended = () => resolve(true);
+      audio.onerror = () => {
+        // Fallback to Google TTS
+        tryGoogleTts(text).then((success) => {
+          if (!success) {
+            resolve(tryWebSpeech(text));
+          } else {
+            resolve(true);
+          }
+        });
+      };
+
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => resolve(true))
+          .catch(() => {
+            // If browser autoplay restriction or network failure, try fallbacks
+            tryGoogleTts(text).then((success) => {
+              if (!success) {
+                resolve(tryWebSpeech(text));
+              } else {
+                resolve(true);
+              }
+            });
+          });
+      }
+    } catch {
+      resolve(tryWebSpeech(text));
+    }
+  });
 }

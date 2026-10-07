@@ -37,10 +37,13 @@ export const QuizCard: React.FC<QuizCardProps> = ({
 
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
 
-  const handlePlayAudio = () => {
+  const handlePlayAudio = async () => {
     setIsPlayingAudio(true);
-    playChineseAudio(question.hanzi);
-    setTimeout(() => setIsPlayingAudio(false), 800);
+    try {
+      await playChineseAudio(question.hanzi);
+    } finally {
+      setIsPlayingAudio(false);
+    }
   };
 
   // Keyboard navigation
