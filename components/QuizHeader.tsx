@@ -6,11 +6,11 @@ import { QuizLevel } from '@/types/quiz';
 
 interface QuizHeaderProps {
   level: QuizLevel;
+  round: number;
   currentIndex: number;
   totalQuestions: number;
   score: number;
   answeredCount: number;
-  isReviewMode?: boolean;
   onReset: () => void;
   onGoHome?: () => void;
   onOpenNavigator?: () => void;
@@ -24,11 +24,11 @@ const LEVEL_LABELS: Record<QuizLevel, string> = {
 
 export const QuizHeader: React.FC<QuizHeaderProps> = ({
   level,
+  round,
   currentIndex,
   totalQuestions,
   score,
   answeredCount,
-  isReviewMode = false,
   onReset,
   onGoHome,
   onOpenNavigator,
@@ -54,10 +54,10 @@ export const QuizHeader: React.FC<QuizHeaderProps> = ({
             )}
             <div>
               <h1 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight flex items-center gap-1.5">
-                <span>🇨🇳</span> HSK Vocabulary Quiz
-                {isReviewMode ? (
+                <span>🇨🇳</span> HSK Quiz
+                {round > 1 ? (
                   <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 border border-amber-300">
-                    Ôn câu sai
+                    Vòng {round} (Ôn câu sai)
                   </span>
                 ) : (
                   <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-rose-100 text-rose-800 border border-rose-200">
@@ -66,7 +66,7 @@ export const QuizHeader: React.FC<QuizHeaderProps> = ({
                 )}
               </h1>
               <p className="text-xs text-slate-500 font-medium">
-                {isReviewMode ? 'Chế độ ôn tập từ vựng làm sai' : LEVEL_LABELS[level]}
+                {round > 1 ? `Làm lại ${totalQuestions} câu chưa đúng của vòng trước` : LEVEL_LABELS[level]}
               </p>
             </div>
           </div>
@@ -80,7 +80,7 @@ export const QuizHeader: React.FC<QuizHeaderProps> = ({
                 className="flex items-center gap-1 px-2.5 py-1.5 text-xs font-medium text-slate-700 hover:text-rose-600 bg-slate-100 hover:bg-rose-50 rounded-lg transition"
               >
                 <LayoutGrid className="w-3.5 h-3.5" />
-                <span className="hidden sm:inline">Danh sách câu</span>
+                <span className="hidden sm:inline">Danh sách</span>
               </button>
             )}
 
@@ -103,7 +103,7 @@ export const QuizHeader: React.FC<QuizHeaderProps> = ({
             Câu {currentQuestionNumber} / {totalQuestions}
           </span>
           <span className="text-slate-600 bg-slate-100 px-2 py-0.5 rounded-md font-mono">
-            Điểm: <span className="text-rose-600 font-bold">{score}</span> / {answeredCount}
+            {round === 1 ? 'Đúng' : 'Vòng này'}: <span className="text-rose-600 font-bold">{score}</span> / {answeredCount}
           </span>
         </div>
 
@@ -117,7 +117,7 @@ export const QuizHeader: React.FC<QuizHeaderProps> = ({
         >
           <div
             className={`h-full transition-all duration-300 ease-out rounded-full ${
-              isReviewMode 
+              round > 1 
                 ? 'bg-gradient-to-r from-amber-500 to-orange-500' 
                 : 'bg-gradient-to-r from-rose-500 via-rose-600 to-red-600'
             }`}

@@ -6,19 +6,32 @@ import { HSK1_VOCAB_DATA } from '@/data/hsk1-data';
 import { HSK2_VOCAB_DATA } from '@/data/hsk2-data';
 import { HSK_COMBINED_VOCAB_DATA } from '@/data/hsk-combined-data';
 
-const STORAGE_PREFIX = 'hsk_quiz_progress_v3_';
+const STORAGE_PREFIX = 'hsk_mastery_loop_v1_';
+
+function getInitialDataset(level: QuizLevel): QuizQuestion[] {
+  switch (level) {
+    case 'hsk2':
+      return HSK2_VOCAB_DATA;
+    case 'all':
+      return HSK_COMBINED_VOCAB_DATA;
+    case 'hsk1':
+    default:
+      return HSK1_VOCAB_DATA;
+  }
+}
 
 function getInitialState(level: QuizLevel): QuizProgress {
+  const dataset = getInitialDataset(level);
   return {
     level,
+    round: 1,
+    initialFirstRoundScore: 0,
+    activeQuestionIds: dataset.map(q => q.id),
     currentIndex: 0,
     score: 0,
-    answers: {},
-    wrongQuestionIds: [],
+    currentRoundAnswers: {},
+    currentRoundWrongIds: [],
     mode: 'idle',
-    reviewCurrentIndex: 0,
-    reviewScore: 0,
-    reviewAnswers: {},
   };
 }
 
@@ -34,7 +47,11 @@ export function useQuiz(initialLevel: QuizLevel = 'hsk1') {
       const saved = localStorage.getItem(storageKey);
       if (saved) {
         const parsed = JSON.parse(saved) as QuizProgress;
-        if (typeof parsed.currentIndex === 'number' && typeof parsed.score === 'number') {
+        if (
+          typeof parsed.round === 'number' &&
+          Array.isArray(parsed.activeQuestionIds) &&
+          parsed.activeQuestionIds.length > 0
+        ) {
           setState({ ...parsed, level });
         } else {
           setState(getInitialState(level));
@@ -61,42 +78,45 @@ export function useQuiz(initialLevel: QuizLevel = 'hsk1') {
     }
   }, [state, isHydrated]);
 
-  // Active dataset based on level
-  const activeDataset: QuizQuestion[] = useMemo(() => {
-    switch (state.level) {
-      case 'hsk2':
-        return HSK2_VOCAB_DATA;
-      case 'all':
-        return HSK_COMBINED_VOCAB_DATA;
-      case 'hsk1':
-      default:
-        return HSK1_VOCAB_DATA;
-    }
+  // Full dataset for level
+  const fullDataset: QuizQuestion[] = useMemo(() => {
+    return getInitialDataset(state.level);
   }, [state.level]);
 
-  const totalQuestions = activeDataset.length;
-  const currentQuestion: QuizQuestion | undefined = activeDataset[state.currentIndex];
+  // Questions for current round
+  const activeRoundQuestions: QuizQuestion[] = useMemo(() => {
+    const idMap = new Map(fullDataset.map(q => [q.id, q]));
+    return state.activeQuestionIds
+      .map(id => idMap.get(id))
+      .filter((q): q is QuizQuestion => q !== undefined);
+  }, [fullDataset, state.activeQuestionIds]);
 
-  // Review mode questions (subset of wrong questions)
-  const reviewQuestions = useMemo(() => {
-    return activeDataset.filter(q => state.wrongQuestionIds.includes(q.id));
-  }, [activeDataset, state.wrongQuestionIds]);
-
-  const currentReviewQuestion: QuizQuestion | undefined =
-    reviewQuestions[state.reviewCurrentIndex ?? 0];
+  const totalQuestionsInRound = activeRoundQuestions.length;
+  const currentQuestion: QuizQuestion | undefined = activeRoundQuestions[state.currentIndex];
+  const currentUserAnswer: UserAnswerRecord | undefined = currentQuestion
+    ? state.currentRoundAnswers[currentQuestion.id]
+    : undefined;
 
   // Change level
   const changeLevel = useCallback((newLevel: QuizLevel) => {
     setLevel(newLevel);
   }, []);
 
-  // Start new quiz
+  // Start new quiz from Round 1
   const startQuiz = useCallback(() => {
-    setState(prev => ({
-      ...getInitialState(prev.level),
+    const dataset = getInitialDataset(state.level);
+    setState({
+      level: state.level,
+      round: 1,
+      initialFirstRoundScore: 0,
+      activeQuestionIds: dataset.map(q => q.id),
+      currentIndex: 0,
+      score: 0,
+      currentRoundAnswers: {},
+      currentRoundWrongIds: [],
       mode: 'in_progress',
-    }));
-  }, []);
+    });
+  }, [state.level]);
 
   // Resume existing quiz
   const resumeQuiz = useCallback(() => {
@@ -106,7 +126,7 @@ export function useQuiz(initialLevel: QuizLevel = 'hsk1') {
     }));
   }, []);
 
-  // Reset quiz for current level
+  // Reset quiz completely
   const resetQuiz = useCallback(() => {
     try {
       localStorage.removeItem(STORAGE_PREFIX + state.level);
@@ -114,79 +134,86 @@ export function useQuiz(initialLevel: QuizLevel = 'hsk1') {
     setState(getInitialState(state.level));
   }, [state.level]);
 
-  // Answer or Re-answer a question
+  // Answer a question in the current round
+  // RULE: Answers are LOCKED once chosen! User cannot change answer immediately.
   const selectAnswer = useCallback((selectedOption: string) => {
     setState(prev => {
-      const q = activeDataset[prev.currentIndex];
+      const idMap = new Map(fullDataset.map(q => [q.id, q]));
+      const roundQuestions = prev.activeQuestionIds
+        .map(id => idMap.get(id))
+        .filter((q): q is QuizQuestion => q !== undefined);
+
+      const q = roundQuestions[prev.currentIndex];
       if (!q) return prev;
 
-      const previousAnswer = prev.answers[q.id];
-      const isNewCorrect = selectedOption === q.correctAnswer;
-
-      let scoreDelta = 0;
-      if (!previousAnswer) {
-        // First time answering this question
-        scoreDelta = isNewCorrect ? 1 : 0;
-      } else {
-        // Re-answering already answered question
-        if (previousAnswer.selectedAnswer === selectedOption) {
-          // Same option clicked, no state change needed
-          return prev;
-        }
-        if (!previousAnswer.isCorrect && isNewCorrect) {
-          scoreDelta = 1; // Was wrong, now right: +1 point
-        } else if (previousAnswer.isCorrect && !isNewCorrect) {
-          scoreDelta = -1; // Was right, now wrong: -1 point
-        }
+      // STRICT LOCK: If already answered in this round, cannot answer again!
+      if (prev.currentRoundAnswers[q.id]) {
+        return prev;
       }
 
-      const newScore = Math.max(0, Math.min(activeDataset.length, prev.score + scoreDelta));
+      const isCorrect = selectedOption === q.correctAnswer;
+      const newScore = isCorrect ? prev.score + 1 : prev.score;
+      const newInitialScore =
+        prev.round === 1 && isCorrect
+          ? prev.initialFirstRoundScore + 1
+          : prev.initialFirstRoundScore;
 
       const newAnswers = {
-        ...prev.answers,
+        ...prev.currentRoundAnswers,
         [q.id]: {
           questionId: q.id,
           selectedAnswer: selectedOption,
-          isCorrect: isNewCorrect,
+          isCorrect,
           correctAnswer: q.correctAnswer,
           answeredAt: Date.now(),
         },
       };
 
-      const newWrongQuestionIds = isNewCorrect
-        ? prev.wrongQuestionIds.filter(id => id !== q.id)
-        : prev.wrongQuestionIds.includes(q.id)
-        ? prev.wrongQuestionIds
-        : [...prev.wrongQuestionIds, q.id];
+      const newWrongIds = isCorrect
+        ? prev.currentRoundWrongIds.filter(id => id !== q.id)
+        : prev.currentRoundWrongIds.includes(q.id)
+        ? prev.currentRoundWrongIds
+        : [...prev.currentRoundWrongIds, q.id];
 
       return {
         ...prev,
         score: newScore,
-        answers: newAnswers,
-        wrongQuestionIds: newWrongQuestionIds,
+        initialFirstRoundScore: newInitialScore,
+        currentRoundAnswers: newAnswers,
+        currentRoundWrongIds: newWrongIds,
       };
     });
-  }, [activeDataset]);
+  }, [fullDataset]);
 
-  // Retry/clear answer for a question so user can pick from clean state
-  const retryQuestion = useCallback((questionId: number) => {
+  // Advance to next question or conclude current round
+  const nextQuestion = useCallback(() => {
     setState(prev => {
-      const prevAns = prev.answers[questionId];
-      if (!prevAns) return prev;
+      const nextIdx = prev.currentIndex + 1;
+      if (nextIdx < prev.activeQuestionIds.length) {
+        return {
+          ...prev,
+          currentIndex: nextIdx,
+        };
+      }
 
-      const newAnswers = { ...prev.answers };
-      delete newAnswers[questionId];
-
-      const scoreDelta = prevAns.isCorrect ? -1 : 0;
-      return {
-        ...prev,
-        score: Math.max(0, prev.score + scoreDelta),
-        answers: newAnswers,
-      };
+      // Reached the end of the round!
+      if (prev.currentRoundWrongIds.length > 0) {
+        // Still has wrong questions: transition to next round review
+        return {
+          ...prev,
+          mode: 'round_completed',
+        };
+      } else {
+        // Zero wrong questions: Mastery 100%!
+        return {
+          ...prev,
+          mode: 'mastery_completed',
+        };
+      }
     });
   }, []);
 
-  // Navigation
+  // Previous question (to review what was selected)
   const prevQuestion = useCallback(() => {
     setState(prev => ({
       ...prev,
@@ -194,156 +221,62 @@ export function useQuiz(initialLevel: QuizLevel = 'hsk1') {
     }));
   }, []);
 
-  const nextQuestion = useCallback(() => {
-    setState(prev => {
-      const nextIdx = prev.currentIndex + 1;
-      if (nextIdx >= activeDataset.length) {
-        return {
-          ...prev,
-          mode: 'completed',
-        };
-      }
-      return {
-        ...prev,
-        currentIndex: nextIdx,
-      };
-    });
-  }, [activeDataset.length]);
-
+  // Jump to specific question within the round
   const jumpToQuestion = useCallback((index: number) => {
     setState(prev => ({
       ...prev,
-      currentIndex: Math.max(0, Math.min(activeDataset.length - 1, index)),
-    }));
-  }, [activeDataset.length]);
-
-  // Review mode
-  const startReviewWrongAnswers = useCallback(() => {
-    setState(prev => ({
-      ...prev,
-      mode: 'reviewing',
-      reviewCurrentIndex: 0,
-      reviewScore: 0,
-      reviewAnswers: {},
+      currentIndex: Math.max(0, Math.min(prev.activeQuestionIds.length - 1, index)),
     }));
   }, []);
 
-  const selectReviewAnswer = useCallback((selectedOption: string) => {
+  // Start the next round with only the wrong questions accumulated!
+  const startNextRound = useCallback(() => {
     setState(prev => {
-      const revIdx = prev.reviewCurrentIndex ?? 0;
-      const wrongList = activeDataset.filter(q => prev.wrongQuestionIds.includes(q.id));
-      const q = wrongList[revIdx];
-      if (!q) return prev;
-
-      const currentReviewAnswers = prev.reviewAnswers ?? {};
-      const previousReviewAns = currentReviewAnswers[q.id];
-      const isCorrect = selectedOption === q.correctAnswer;
-
-      let revScoreDelta = 0;
-      if (!previousReviewAns) {
-        revScoreDelta = isCorrect ? 1 : 0;
-      } else {
-        if (previousReviewAns.selectedAnswer === selectedOption) return prev;
-        if (!previousReviewAns.isCorrect && isCorrect) revScoreDelta = 1;
-        else if (previousReviewAns.isCorrect && !isCorrect) revScoreDelta = -1;
-      }
-
-      const newRevScore = Math.max(0, (prev.reviewScore ?? 0) + revScoreDelta);
-
-      // If user answers correctly in review mode, also remove from main wrongQuestionIds!
-      const newWrongIds = isCorrect
-        ? prev.wrongQuestionIds.filter(id => id !== q.id)
-        : prev.wrongQuestionIds;
-
+      const nextRoundQuestions = [...prev.currentRoundWrongIds];
       return {
         ...prev,
-        wrongQuestionIds: newWrongIds,
-        reviewScore: newRevScore,
-        reviewAnswers: {
-          ...currentReviewAnswers,
-          [q.id]: {
-            questionId: q.id,
-            selectedAnswer: selectedOption,
-            isCorrect,
-            correctAnswer: q.correctAnswer,
-          },
-        },
+        round: prev.round + 1,
+        activeQuestionIds: nextRoundQuestions,
+        currentRoundWrongIds: [],
+        currentRoundAnswers: {},
+        currentIndex: 0,
+        mode: 'in_progress',
       };
     });
-  }, [activeDataset]);
-
-  const prevReviewQuestion = useCallback(() => {
-    setState(prev => ({
-      ...prev,
-      reviewCurrentIndex: Math.max(0, (prev.reviewCurrentIndex ?? 0) - 1),
-    }));
   }, []);
 
-  const nextReviewQuestion = useCallback(() => {
-    setState(prev => {
-      const revIdx = (prev.reviewCurrentIndex ?? 0) + 1;
-      const wrongList = activeDataset.filter(q => prev.wrongQuestionIds.includes(q.id));
-      if (revIdx >= wrongList.length) {
-        return {
-          ...prev,
-          mode: 'review_completed',
-        };
-      }
-      return {
-        ...prev,
-        reviewCurrentIndex: revIdx,
-      };
-    });
-  }, [activeDataset]);
-
-  const returnToResults = useCallback(() => {
-    setState(prev => ({
-      ...prev,
-      mode: 'completed',
-    }));
-  }, []);
-
-  const answeredCount = Object.keys(state.answers).length;
-  const hasSavedProgress = answeredCount > 0 && answeredCount < totalQuestions;
+  const answeredCountInRound = Object.keys(state.currentRoundAnswers).length;
+  const hasSavedProgress =
+    state.round > 1 || (answeredCountInRound > 0 && answeredCountInRound < totalQuestionsInRound);
 
   return {
     isHydrated,
     level: state.level,
+    round: state.round,
+    initialFirstRoundScore: state.initialFirstRoundScore,
     mode: state.mode,
     currentIndex: state.currentIndex,
-    totalQuestions,
+    totalQuestionsInRound,
+    totalFullQuestions: fullDataset.length,
     score: state.score,
-    answers: state.answers,
-    wrongQuestionIds: state.wrongQuestionIds,
+    currentRoundAnswers: state.currentRoundAnswers,
+    currentRoundWrongIds: state.currentRoundWrongIds,
     currentQuestion,
-    currentUserAnswer: currentQuestion ? state.answers[currentQuestion.id] : undefined,
-    answeredCount,
+    currentUserAnswer,
+    answeredCountInRound,
     hasSavedProgress,
-    activeDataset,
-    // Review mode
-    reviewQuestions,
-    reviewCurrentIndex: state.reviewCurrentIndex ?? 0,
-    reviewScore: state.reviewScore ?? 0,
-    currentReviewQuestion,
-    currentReviewAnswer: currentReviewQuestion
-      ? (state.reviewAnswers ?? {})[currentReviewQuestion.id]
-      : undefined,
-    reviewAnsweredCount: Object.keys(state.reviewAnswers ?? {}).length,
+    activeRoundQuestions,
+    fullDataset,
     // Actions
     changeLevel,
     startQuiz,
     resumeQuiz,
     resetQuiz,
     selectAnswer,
-    retryQuestion,
-    prevQuestion,
     nextQuestion,
+    prevQuestion,
     jumpToQuestion,
-    startReviewWrongAnswers,
-    selectReviewAnswer,
-    prevReviewQuestion,
-    nextReviewQuestion,
-    returnToResults,
+    startNextRound,
     setMode: (mode: QuizMode) => setState(prev => ({ ...prev, mode })),
   };
 }

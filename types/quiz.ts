@@ -18,16 +18,16 @@ export interface UserAnswerRecord {
   answeredAt?: number;
 }
 
-export type QuizMode = 'idle' | 'in_progress' | 'completed' | 'reviewing' | 'review_completed';
+export type QuizMode = 'idle' | 'in_progress' | 'round_completed' | 'mastery_completed';
 
 export interface QuizProgress {
   level: QuizLevel;
+  round: number; // 1, 2, 3...
+  initialFirstRoundScore: number; // Score from initial round
+  activeQuestionIds: number[]; // Questions for current round
   currentIndex: number;
   score: number;
-  answers: Record<number, UserAnswerRecord>;
-  wrongQuestionIds: number[];
+  currentRoundAnswers: Record<number, UserAnswerRecord>;
+  currentRoundWrongIds: number[];
   mode: QuizMode;
-  reviewCurrentIndex?: number;
-  reviewScore?: number;
-  reviewAnswers?: Record<number, UserAnswerRecord>;
 }

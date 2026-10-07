@@ -14,6 +14,7 @@ interface StartScreenProps {
   savedIndex: number;
   savedScore: number;
   totalQuestions: number;
+  round?: number;
 }
 
 const LEVEL_CONFIGS: Record<QuizLevel, { title: string; count: number; desc: string }> = {
