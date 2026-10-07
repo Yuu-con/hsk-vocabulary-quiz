@@ -149,26 +149,14 @@ npm run start
 
 ### 3. Deploy lên Vercel
 
-Dự án được cấu hình tiêu chuẩn Next.js nên tương thích tuyệt đối với Vercel:
+Repository chính thức trên GitHub:
+👉 **[https://github.com/Yuu-con/hsk-vocabulary-quiz](https://github.com/Yuu-con/hsk-vocabulary-quiz)**
 
-#### Cách 1: Deploy qua Vercel CLI
-```bash
-npx vercel
-```
-Làm theo hướng dẫn trên màn hình (đăng nhập tài khoản Vercel và chọn thiết lập mặc định).
+Để deploy tự động trên Vercel:
+1. Đăng nhập [vercel.com/new](https://vercel.com/new).
+2. Chọn repository **`Yuu-con/hsk-vocabulary-quiz`**.
+3. Bấm **Deploy**. Vercel sẽ tự động build và cấp domain trực tuyến vĩnh viễn dạng `https://hsk-vocabulary-quiz.vercel.app` (tự động cập nhật mỗi khi bạn push code mới).
 
-#### Cách 2: Deploy qua GitHub (Khuyên dùng)
-1. Đẩy mã nguồn lên kho chứa GitHub cá nhân:
-   ```bash
-   git add .
-   git commit -m "feat: complete HSK 1 vocabulary quiz application"
-   git remote add origin https://github.com/<your-username>/<your-repo-name>.git
-   git branch -M main
-   git push -u origin main
-   ```
-2. Truy cập [vercel.com/new](https://vercel.com/new) -> Chọn repository vừa tạo -> Bấm **Deploy**.
-3. Vercel sẽ tự động build và cung cấp domain trực tuyến miễn phí dạng:
-   `https://<your-project-name>.vercel.app`
 
 ---
 
