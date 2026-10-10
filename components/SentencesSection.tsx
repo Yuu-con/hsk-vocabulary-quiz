@@ -25,6 +25,7 @@ export const SentencesSection: React.FC = () => {
   const [studyMode, setStudyMode] = useState<'cards' | 'meaning_quiz' | 'fill_quiz'>('cards');
   const [showPinyin, setShowPinyin] = useState<boolean>(true);
   const [showVietnamese, setShowVietnamese] = useState<boolean>(true);
+  const [showFillTranslation, setShowFillTranslation] = useState<boolean>(false);
   const [playingId, setPlayingId] = useState<number | null>(null);
 
   // Persistence in localStorage
@@ -130,12 +131,14 @@ export const SentencesSection: React.FC = () => {
       setQuizIndex(quizIndex + 1);
       setSelectedAnswer(null);
       setIsAnswered(false);
+      setShowFillTranslation(false);
     } else {
       // Completed round
       alert(`Hoàn thành! Điểm số: ${quizScore + (isCorrectAnswer ? 1 : 0)} / ${filteredSentences.length}`);
       setQuizIndex(0);
       setSelectedAnswer(null);
       setIsAnswered(false);
+      setShowFillTranslation(false);
       setQuizScore(0);
     }
   };
@@ -184,6 +187,7 @@ export const SentencesSection: React.FC = () => {
                   setStudyMode('cards');
                   setSelectedAnswer(null);
                   setIsAnswered(false);
+                  setShowFillTranslation(false);
                 }}
                 className={`px-3 py-1.5 rounded-lg transition-all ${
                   studyMode === 'cards'
@@ -199,6 +203,7 @@ export const SentencesSection: React.FC = () => {
                   setQuizIndex(0);
                   setSelectedAnswer(null);
                   setIsAnswered(false);
+                  setShowFillTranslation(false);
                   setQuizScore(0);
                 }}
                 className={`px-3 py-1.5 rounded-lg transition-all ${
@@ -215,6 +220,7 @@ export const SentencesSection: React.FC = () => {
                   setQuizIndex(0);
                   setSelectedAnswer(null);
                   setIsAnswered(false);
+                  setShowFillTranslation(false);
                   setQuizScore(0);
                 }}
                 className={`px-3 py-1.5 rounded-lg transition-all ${
@@ -448,10 +454,29 @@ export const SentencesSection: React.FC = () => {
                   </div>
                 )}
 
-                {/* Show Vietnamese Meaning hint in Fill Quiz if enabled */}
-                {studyMode === 'fill_quiz' && showVietnamese && (
-                  <div className="text-xs sm:text-sm text-stone-600 font-medium mt-1 bg-white/70 inline-block px-3 py-1 rounded-xl border border-rose-100">
-                    💡 Dịch nghĩa cả câu: <span className="text-stone-900 font-semibold">{currentQuizItem.vietnamese}</span>
+                {/* Show/Hide translation hint button in Fill Quiz */}
+                {studyMode === 'fill_quiz' && (
+                  <div className="mt-2 flex flex-col items-center gap-1.5">
+                    {!showFillTranslation ? (
+                      <button
+                        onClick={() => setShowFillTranslation(true)}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-amber-300 bg-amber-50 hover:bg-amber-100/80 text-amber-900 text-xs font-semibold shadow-2xs transition-all"
+                      >
+                        <Eye className="w-3.5 h-3.5 text-amber-600" />
+                        <span>Xem dịch nghĩa câu hỏi</span>
+                      </button>
+                    ) : (
+                      <div className="text-xs sm:text-sm text-stone-700 font-medium bg-amber-50/90 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl border border-amber-200 shadow-2xs">
+                        <span>💡 Dịch nghĩa cả câu: <strong className="text-stone-900">{currentQuizItem.vietnamese}</strong></span>
+                        <button
+                          onClick={() => setShowFillTranslation(false)}
+                          className="text-stone-400 hover:text-stone-700 p-0.5 rounded-md"
+                          title="Ẩn dịch nghĩa"
+                        >
+                          <EyeOff className="w-3.5 h-3.5" />
+                        </button>
+                      </div>
+                    )}
                   </div>
                 )}
 
@@ -478,8 +503,11 @@ export const SentencesSection: React.FC = () => {
                       ? option === currentQuizItem.quizMeaning.correctAnswer
                       : option === currentQuizItem.quizFill.correctAnswer;
 
-                  // Find vocab details if option is a Chinese word in keyVocab
-                  const vocabDetail = currentQuizItem.keyVocab.find((v) => v.word === option);
+                  // Find vocab details from optionsWithPinyin or keyVocab
+                  const optionPinyinObj = currentQuizItem.quizFill.optionsWithPinyin?.find((o) => o.word === option);
+                  const keyVocabObj = currentQuizItem.keyVocab.find((v) => v.word === option);
+                  const optionPinyin = optionPinyinObj?.pinyin || keyVocabObj?.pinyin || '';
+                  const optionMeaning = optionPinyinObj?.meaning || keyVocabObj?.meaning || '';
 
                   let btnStyle = 'border-stone-200 bg-white hover:border-stone-300 text-stone-800';
                   if (isAnswered) {
@@ -499,14 +527,25 @@ export const SentencesSection: React.FC = () => {
                       onClick={() => handleAnswerQuiz(option)}
                       className={`p-4 rounded-xl border text-left text-sm transition-all flex items-center justify-between ${btnStyle}`}
                     >
-                      <div>
-                        <span className="font-semibold">{option}</span>
-                        {isAnswered && vocabDetail && (
-                          <span className="ml-2 text-xs font-normal text-stone-500">
-                            [{vocabDetail.pinyin}]: {vocabDetail.meaning}
-                          </span>
+                      <div className="flex flex-col">
+                        <div className="flex items-baseline gap-2">
+                          <span className="font-bold text-base sm:text-lg">{option}</span>
+                          {/* Always display Pinyin for Fill Quiz options if showPinyin is true */}
+                          {studyMode === 'fill_quiz' && showPinyin && optionPinyin && (
+                            <span className="text-xs font-semibold text-rose-600">
+                              [{optionPinyin}]
+                            </span>
+                          )}
+                        </div>
+
+                        {/* Display Vietnamese meaning for options after answered */}
+                        {isAnswered && studyMode === 'fill_quiz' && optionMeaning && (
+                          <div className="text-xs font-normal text-stone-500 mt-0.5">
+                            Nghĩa: {optionMeaning}
+                          </div>
                         )}
                       </div>
+
                       {isAnswered && isCorrect && <CheckCircle2 className="w-5 h-5 text-emerald-600 ml-2 shrink-0" />}
                       {isAnswered && isSelected && !isCorrect && (
                         <XCircle className="w-5 h-5 text-rose-500 ml-2 shrink-0" />

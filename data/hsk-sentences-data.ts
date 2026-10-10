@@ -26,10 +26,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"你好！很高兴认识你。\" (Nǐ hǎo! Hěn gāoxìng rènshi nǐ.) có nghĩa là gì?",
       "options": [
-        "Mỗi buổi sáng anh ấy đều chạy bộ nửa tiếng đồng hồ.",
-        "Chào bạn! Rất vui được quen biết bạn.",
-        "Anh ấy rất thích xem phim điện ảnh Trung Quốc.",
-        "Sau khi thức dậy, tôi rửa mặt trước rồi mới ăn sáng."
+        "Táo này bao nhiêu tiền một cân (500g)?",
+        "Bạn biết nói tiếng Anh và tiếng Trung không?",
+        "Tôi là người Việt Nam, anh ấy học tiếng Trung ở Trung Quốc.",
+        "Chào bạn! Rất vui được quen biết bạn."
       ],
       "correctAnswer": "Chào bạn! Rất vui được quen biết bạn."
     },
@@ -37,10 +37,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 你好！很____认识你。",
       "questionPinyin": "Nǐ hǎo! Hěn ____ rènshi nǐ.",
       "options": [
-        "多少",
-        "老师",
+        "跑步",
+        "欢迎",
         "高兴",
-        "学生"
+        "名字"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "跑步",
+          "pinyin": "pǎobù",
+          "meaning": "chạy bộ"
+        },
+        {
+          "word": "欢迎",
+          "pinyin": "huānyíng",
+          "meaning": "hoan nghênh"
+        },
+        {
+          "word": "高兴",
+          "pinyin": "gāoxìng",
+          "meaning": "vui mừng"
+        },
+        {
+          "word": "名字",
+          "pinyin": "míngzi",
+          "meaning": "tên gọi"
+        }
       ],
       "correctAnswer": "高兴",
       "explanation": "Từ cần điền là \"高兴\". Cả câu hoàn chỉnh là: \"你好！很高兴认识你。\" (Nǐ hǎo! Hěn gāoxìng rènshi nǐ.) - Chào bạn! Rất vui được quen biết bạn.."
@@ -69,10 +91,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"早上好，老师！\" (Zǎoshang hǎo, lǎoshī!) có nghĩa là gì?",
       "options": [
-        "Đã lâu không gặp, dạo này bạn khỏe không?",
-        "Chào buổi sáng, thầy giáo!",
-        "Thưa thầy, em nghe không hiểu câu nói này.",
-        "Bạn làm việc ở đâu?"
+        "Đừng nói chuyện nữa, xin mọi người hãy nghe tôi nói.",
+        "Đi về phía trước, đến đèn giao thông thì rẽ phải.",
+        "Bạn còn muốn món nào khác không? Không cần nữa đâu, cảm ơn.",
+        "Chào buổi sáng, thầy giáo!"
       ],
       "correctAnswer": "Chào buổi sáng, thầy giáo!"
     },
@@ -80,10 +102,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: ____好，老师！",
       "questionPinyin": "____ hǎo, lǎoshī!",
       "options": [
-        "作业",
-        "前面",
-        "喜欢",
+        "时间",
+        "认识",
+        "飞机",
         "早上"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "时间",
+          "pinyin": "shíjiān",
+          "meaning": "thời gian"
+        },
+        {
+          "word": "认识",
+          "pinyin": "rènshi",
+          "meaning": "quen biết"
+        },
+        {
+          "word": "飞机",
+          "pinyin": "fēijī",
+          "meaning": "máy bay"
+        },
+        {
+          "word": "早上",
+          "pinyin": "zǎoshang",
+          "meaning": "buổi sáng"
+        }
       ],
       "correctAnswer": "早上",
       "explanation": "Từ cần điền là \"早上\". Cả câu hoàn chỉnh là: \"早上好，老师！\" (Zǎoshang hǎo, lǎoshī!) - Chào buổi sáng, thầy giáo!."
@@ -112,10 +156,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"好久不见，你最近好吗？\" (Hǎojiǔ bú jiàn, nǐ zuìjìn hǎo ma?) có nghĩa là gì?",
       "options": [
-        "Mỗi buổi sáng anh ấy đều chạy bộ nửa tiếng đồng hồ.",
-        "Tôi làm việc ở bệnh viện, tôi là bác sĩ.",
         "Đã lâu không gặp, dạo này bạn khỏe không?",
-        "Thịt cừu của quán ăn này thật là ngon!"
+        "Ngoài đọc sách ra, tôi còn biết chơi đàn dương cầm.",
+        "Xin hỏi, đi đến ga tàu hỏa thì đi đường nào?",
+        "Bình thường bạn có sở thích gì?"
       ],
       "correctAnswer": "Đã lâu không gặp, dạo này bạn khỏe không?"
     },
@@ -123,10 +167,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 好久不见，你____好吗？",
       "questionPinyin": "Hǎojiǔ bú jiàn, nǐ ____ hǎo ma?",
       "options": [
-        "什么",
-        "足球",
-        "最近",
-        "水果"
+        "下午",
+        "汉语",
+        "名字",
+        "最近"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "下午",
+          "pinyin": "xiàwǔ",
+          "meaning": "buổi chiều"
+        },
+        {
+          "word": "汉语",
+          "pinyin": "Hànyǔ",
+          "meaning": "tiếng Trung"
+        },
+        {
+          "word": "名字",
+          "pinyin": "míngzi",
+          "meaning": "tên gọi"
+        },
+        {
+          "word": "最近",
+          "pinyin": "zuìjìn",
+          "meaning": "dạo gần đây"
+        }
       ],
       "correctAnswer": "最近",
       "explanation": "Từ cần điền là \"最近\". Cả câu hoàn chỉnh là: \"好久不见，你最近好吗？\" (Hǎojiǔ bú jiàn, nǐ zuìjìn hǎo ma?) - Đã lâu không gặp, dạo này bạn khỏe không?."
@@ -155,10 +221,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"欢迎你们来到北京！\" (Huānyíng nǐmen lái dào Běijīng!) có nghĩa là gì?",
       "options": [
-        "Chúng mình cùng nhau đi đá bóng nhé!",
-        "Để tôi giới thiệu một chút về bạn của tôi.",
-        "Mỗi buổi sáng anh ấy đều chạy bộ nửa tiếng đồng hồ.",
-        "Hoan nghênh các bạn đã đến Bắc Kinh!"
+        "Bạn tên là gì?",
+        "Hoan nghênh các bạn đã đến Bắc Kinh!",
+        "Chúng ta gặp nhau lúc 3 rưỡi chiều trước cổng trường.",
+        "Bạn là người nước nào?"
       ],
       "correctAnswer": "Hoan nghênh các bạn đã đến Bắc Kinh!"
     },
@@ -166,10 +232,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: ____你们来到北京！",
       "questionPinyin": "____ nǐmen lái dào Běijīng!",
       "options": [
+        "早上",
         "欢迎",
-        "名字",
-        "多少",
-        "足球"
+        "高兴",
+        "什么"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "早上",
+          "pinyin": "zǎoshang",
+          "meaning": "buổi sáng"
+        },
+        {
+          "word": "欢迎",
+          "pinyin": "huānyíng",
+          "meaning": "hoan nghênh"
+        },
+        {
+          "word": "高兴",
+          "pinyin": "gāoxìng",
+          "meaning": "vui mừng"
+        },
+        {
+          "word": "什么",
+          "pinyin": "shénme",
+          "meaning": "cái gì"
+        }
       ],
       "correctAnswer": "欢迎",
       "explanation": "Từ cần điền là \"欢迎\". Cả câu hoàn chỉnh là: \"欢迎你们来到北京！\" (Huānyíng nǐmen lái dào Běijīng!) - Hoan nghênh các bạn đã đến Bắc Kinh!."
@@ -198,10 +286,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"你叫什么名字？\" (Nǐ jiào shénme míngzi?) có nghĩa là gì?",
       "options": [
-        "Bạn làm việc ở đâu?",
-        "Xin hỏi, quý tính của ngài là gì?",
         "Bạn tên là gì?",
-        "Để tôi giới thiệu một chút về bạn của tôi."
+        "Bạn mấy tuổi rồi? (thường hỏi trẻ nhỏ dưới 10 tuổi)",
+        "Bạn biết nói tiếng Anh và tiếng Trung không?",
+        "Tôi vô cùng thích chơi bóng rổ và hát ca."
       ],
       "correctAnswer": "Bạn tên là gì?"
     },
@@ -209,10 +297,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 你____什么名字？",
       "questionPinyin": "Nǐ ____ shénme míngzi?",
       "options": [
-        "高",
         "叫",
-        "岁",
+        "坐",
+        "国",
         "几"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "叫",
+          "pinyin": "jiào",
+          "meaning": "gọi là, tên là"
+        },
+        {
+          "word": "坐",
+          "pinyin": "zuò",
+          "meaning": "ngồi"
+        },
+        {
+          "word": "国",
+          "pinyin": "guó",
+          "meaning": "quốc gia"
+        },
+        {
+          "word": "几",
+          "pinyin": "jǐ",
+          "meaning": "mấy"
+        }
       ],
       "correctAnswer": "叫",
       "explanation": "Từ cần điền là \"叫\". Cả câu hoàn chỉnh là: \"你叫什么名字？\" (Nǐ jiào shénme míngzi?) - Bạn tên là gì?."
@@ -236,10 +346,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"我叫李月，我是学生。\" (Wǒ jiào Lǐ Yuè, wǒ shì xuésheng.) có nghĩa là gì?",
       "options": [
-        "Siêu thị nằm ngay bên cạnh ngân hàng kia.",
-        "Thịt cừu của quán ăn này thật là ngon!",
-        "Bạn đi đến trường bằng phương tiện gì? Tôi đi xe taxi.",
-        "Tôi tên là Lý Nguyệt, tôi là học sinh."
+        "Tôi tên là Lý Nguyệt, tôi là học sinh.",
+        "Hôm nay thứ mấy? Hôm nay thứ Sáu.",
+        "Bạn biết nói tiếng Anh và tiếng Trung không?",
+        "Xin hỏi, đi đến ga tàu hỏa thì đi đường nào?"
       ],
       "correctAnswer": "Tôi tên là Lý Nguyệt, tôi là học sinh."
     },
@@ -247,10 +357,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 我叫李月，我是____。",
       "questionPinyin": "Wǒ jiào Lǐ Yuè, wǒ shì ____.",
       "options": [
-        "医生",
-        "喜欢",
-        "飞机",
-        "学生"
+        "学生",
+        "北京",
+        "电影",
+        "介绍"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "学生",
+          "pinyin": "xuésheng",
+          "meaning": "học sinh"
+        },
+        {
+          "word": "北京",
+          "pinyin": "Běijīng",
+          "meaning": "Bắc Kinh"
+        },
+        {
+          "word": "电影",
+          "pinyin": "diànyǐng",
+          "meaning": "phim ảnh"
+        },
+        {
+          "word": "介绍",
+          "pinyin": "jièshào",
+          "meaning": "giới thiệu"
+        }
       ],
       "correctAnswer": "学生",
       "explanation": "Từ cần điền là \"学生\". Cả câu hoàn chỉnh là: \"我叫李月，我是学生。\" (Wǒ jiào Lǐ Yuè, wǒ shì xuésheng.) - Tôi tên là Lý Nguyệt, tôi là học sinh.."
@@ -280,9 +412,9 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Câu tiếng Trung \"请问，您贵姓？\" (Qǐngwèn, nín guìxìng?) có nghĩa là gì?",
       "options": [
         "Để tôi giới thiệu một chút về bạn của tôi.",
-        "Xin hỏi, quý tính của ngài là gì?",
-        "Đi về phía trước, đến đèn giao thông thì rẽ phải.",
-        "Tiếng Trung của anh ấy nói rất tốt."
+        "Anh ấy rất thích xem phim điện ảnh Trung Quốc.",
+        "Tạm biệt! Ngày mai gặp lại!",
+        "Xin hỏi, quý tính của ngài là gì?"
       ],
       "correctAnswer": "Xin hỏi, quý tính của ngài là gì?"
     },
@@ -290,10 +422,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: ____，您贵姓？",
       "questionPinyin": "____, nín guìxìng?",
       "options": [
-        "医生",
-        "便宜",
         "什么",
-        "请问"
+        "请问",
+        "今年",
+        "爱好"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "什么",
+          "pinyin": "shénme",
+          "meaning": "cái gì"
+        },
+        {
+          "word": "请问",
+          "pinyin": "qǐngwèn",
+          "meaning": "xin hỏi"
+        },
+        {
+          "word": "今年",
+          "pinyin": "jīnnián",
+          "meaning": "năm nay"
+        },
+        {
+          "word": "爱好",
+          "pinyin": "àihào",
+          "meaning": "sở thích"
+        }
       ],
       "correctAnswer": "请问",
       "explanation": "Từ cần điền là \"请问\". Cả câu hoàn chỉnh là: \"请问，您贵姓？\" (Qǐngwèn, nín guìxìng?) - Xin hỏi, quý tính của ngài là gì?."
@@ -322,10 +476,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"我来介绍一下我的朋友。\" (Wǒ lái jièshào yíxià wǒ de péngyou.) có nghĩa là gì?",
       "options": [
-        "Bạn có thể giúp tôi mua một ly cà phê không?",
         "Để tôi giới thiệu một chút về bạn của tôi.",
-        "Chào bạn! Rất vui được quen biết bạn.",
-        "Tôi là người Việt Nam, anh ấy học tiếng Trung ở Trung Quốc."
+        "Mỗi buổi sáng anh ấy đều chạy bộ nửa tiếng đồng hồ.",
+        "Bạn còn muốn món nào khác không? Không cần nữa đâu, cảm ơn.",
+        "Tuy rằng thời tiết không tốt, nhưng chúng tôi vẫn đi."
       ],
       "correctAnswer": "Để tôi giới thiệu một chút về bạn của tôi."
     },
@@ -333,10 +487,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 我来____一下我的朋友。",
       "questionPinyin": "Wǒ lái ____ yíxià wǒ de péngyou.",
       "options": [
-        "介绍",
-        "中国",
-        "医生",
-        "怎么"
+        "时间",
+        "英语",
+        "妈妈",
+        "介绍"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "时间",
+          "pinyin": "shíjiān",
+          "meaning": "thời gian"
+        },
+        {
+          "word": "英语",
+          "pinyin": "Yīngyǔ",
+          "meaning": "tiếng Anh"
+        },
+        {
+          "word": "妈妈",
+          "pinyin": "māma",
+          "meaning": "mẹ"
+        },
+        {
+          "word": "介绍",
+          "pinyin": "jièshào",
+          "meaning": "giới thiệu"
+        }
       ],
       "correctAnswer": "介绍",
       "explanation": "Từ cần điền là \"介绍\". Cả câu hoàn chỉnh là: \"我来介绍一下我的朋友。\" (Wǒ lái jièshào yíxià wǒ de péngyou.) - Để tôi giới thiệu một chút về bạn của tôi.."
@@ -365,10 +541,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"你几岁了？\" (Nǐ jǐ suì le?) có nghĩa là gì?",
       "options": [
+        "Vấn đề này tôi có thể giúp bạn giải quyết.",
         "Bạn mấy tuổi rồi? (thường hỏi trẻ nhỏ dưới 10 tuổi)",
-        "Bạn muốn ăn gì? Tôi muốn ăn món ăn Trung Quốc.",
-        "Tôi bị cảm rồi, hôm nay muốn ở nhà nghỉ ngơi.",
-        "Hôm nay thứ mấy? Hôm nay thứ Sáu."
+        "Siêu thị nằm ngay bên cạnh ngân hàng kia.",
+        "Đã lâu không gặp, dạo này bạn khỏe không?"
       ],
       "correctAnswer": "Bạn mấy tuổi rồi? (thường hỏi trẻ nhỏ dưới 10 tuổi)"
     },
@@ -376,10 +552,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 你____岁了？",
       "questionPinyin": "Nǐ ____ suì le?",
       "options": [
+        "点",
         "几",
-        "高",
-        "贵",
-        "帮"
+        "家",
+        "想"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "点",
+          "pinyin": "diǎn",
+          "meaning": "giờ"
+        },
+        {
+          "word": "几",
+          "pinyin": "jǐ",
+          "meaning": "mấy"
+        },
+        {
+          "word": "家",
+          "pinyin": "jiā",
+          "meaning": "gia đình"
+        },
+        {
+          "word": "想",
+          "pinyin": "xiǎng",
+          "meaning": "muốn, nhớ"
+        }
       ],
       "correctAnswer": "几",
       "explanation": "Từ cần điền là \"几\". Cả câu hoàn chỉnh là: \"你几岁了？\" (Nǐ jǐ suì le?) - Bạn mấy tuổi rồi? (thường hỏi trẻ nhỏ dưới 10 tuổi)."
@@ -403,9 +601,9 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"你多大了？\" (Nǐ duō dà le?) có nghĩa là gì?",
       "options": [
-        "Bạn biết nói tiếng Anh và tiếng Trung không?",
-        "Bạn mấy tuổi rồi? (thường hỏi trẻ nhỏ dưới 10 tuổi)",
-        "Bình thường bạn có sở thích gì?",
+        "Đi về phía trước, đến đèn giao thông thì rẽ phải.",
+        "Chúng ta gặp nhau lúc 3 rưỡi chiều trước cổng trường.",
+        "Hoan nghênh các bạn đã đến Bắc Kinh!",
         "Bạn bao nhiêu tuổi rồi? (hỏi người cùng lứa tuổi hoặc thanh niên)"
       ],
       "correctAnswer": "Bạn bao nhiêu tuổi rồi? (hỏi người cùng lứa tuổi hoặc thanh niên)"
@@ -415,9 +613,31 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "questionPinyin": "Nǐ ____ le?",
       "options": [
         "多大",
-        "前面",
-        "中国",
-        "喜欢"
+        "跑步",
+        "今天",
+        "电影"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "多大",
+          "pinyin": "duō dà",
+          "meaning": "bao nhiêu tuổi"
+        },
+        {
+          "word": "跑步",
+          "pinyin": "pǎobù",
+          "meaning": "chạy bộ"
+        },
+        {
+          "word": "今天",
+          "pinyin": "jīntiān",
+          "meaning": "hôm nay"
+        },
+        {
+          "word": "电影",
+          "pinyin": "diànyǐng",
+          "meaning": "phim ảnh"
+        }
       ],
       "correctAnswer": "多大",
       "explanation": "Từ cần điền là \"多大\". Cả câu hoàn chỉnh là: \"你多大了？\" (Nǐ duō dà le?) - Bạn bao nhiêu tuổi rồi? (hỏi người cùng lứa tuổi hoặc thanh niên)."
@@ -447,9 +667,9 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Câu tiếng Trung \"我今年二十二岁。\" (Wǒ jīnnián èrshí’èr suì.) có nghĩa là gì?",
       "options": [
         "Năm nay tôi 22 tuổi.",
-        "Tôi là người Việt Nam, anh ấy học tiếng Trung ở Trung Quốc.",
-        "Chúng mình cùng nhau đi đá bóng nhé!",
-        "Nhà tôi có 4 người: bố, mẹ, anh trai và tôi."
+        "Bạn muốn ăn gì? Tôi muốn ăn món ăn Trung Quốc.",
+        "Bộ quần áo này tổng cộng 100 tệ.",
+        "Thịt cừu của quán ăn này thật là ngon!"
       ],
       "correctAnswer": "Năm nay tôi 22 tuổi."
     },
@@ -457,10 +677,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 我____二十二岁。",
       "questionPinyin": "Wǒ ____ èrshí’èr suì.",
       "options": [
+        "汉语",
         "今年",
-        "什么",
-        "天气",
-        "飞机"
+        "学生",
+        "多少"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "汉语",
+          "pinyin": "Hànyǔ",
+          "meaning": "tiếng Trung"
+        },
+        {
+          "word": "今年",
+          "pinyin": "jīnnián",
+          "meaning": "năm nay"
+        },
+        {
+          "word": "学生",
+          "pinyin": "xuésheng",
+          "meaning": "học sinh"
+        },
+        {
+          "word": "多少",
+          "pinyin": "duōshao",
+          "meaning": "bao nhiêu"
+        }
       ],
       "correctAnswer": "今年",
       "explanation": "Từ cần điền là \"今年\". Cả câu hoàn chỉnh là: \"我今年二十二岁。\" (Wǒ jīnnián èrshí’èr suì.) - Năm nay tôi 22 tuổi.."
@@ -489,10 +731,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"你是哪国人？\" (Nǐ shì nǎ guó rén?) có nghĩa là gì?",
       "options": [
+        "Ngày mai là ngày mùng 10 tháng 9.",
+        "Hoan nghênh các bạn đã đến Bắc Kinh!",
         "Bạn là người nước nào?",
-        "Đắt quá rồi, có thể rẻ hơn một chút không?",
-        "Bạn đi đến trường bằng phương tiện gì? Tôi đi xe taxi.",
-        "Để tôi giới thiệu một chút về bạn của tôi."
+        "Bạn tên là gì?"
       ],
       "correctAnswer": "Bạn là người nước nào?"
     },
@@ -500,10 +742,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 你是____国人？",
       "questionPinyin": "Nǐ shì ____ guó rén?",
       "options": [
-        "几",
-        "岁",
-        "高",
-        "哪"
+        "想",
+        "哪",
+        "点",
+        "茶"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "想",
+          "pinyin": "xiǎng",
+          "meaning": "muốn, nhớ"
+        },
+        {
+          "word": "哪",
+          "pinyin": "nǎ",
+          "meaning": "nào"
+        },
+        {
+          "word": "点",
+          "pinyin": "diǎn",
+          "meaning": "giờ"
+        },
+        {
+          "word": "茶",
+          "pinyin": "chá",
+          "meaning": "trà"
+        }
       ],
       "correctAnswer": "哪",
       "explanation": "Từ cần điền là \"哪\". Cả câu hoàn chỉnh là: \"你是哪国人？\" (Nǐ shì nǎ guó rén?) - Bạn là người nước nào?."
@@ -532,10 +796,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"我是越南人，他在中国学汉语。\" (Wǒ shì Yuènán rén, tā zài Zhōngguó xué Hànyǔ.) có nghĩa là gì?",
       "options": [
-        "Tôi là người Việt Nam, anh ấy học tiếng Trung ở Trung Quốc.",
         "Siêu thị nằm ngay bên cạnh ngân hàng kia.",
-        "Bởi vì trời mưa, cho nên hôm nay không đi học.",
-        "Tôi tên là Lý Nguyệt, tôi là học sinh."
+        "Bạn còn muốn món nào khác không? Không cần nữa đâu, cảm ơn.",
+        "Tôi bị cảm rồi, hôm nay muốn ở nhà nghỉ ngơi.",
+        "Tôi là người Việt Nam, anh ấy học tiếng Trung ở Trung Quốc."
       ],
       "correctAnswer": "Tôi là người Việt Nam, anh ấy học tiếng Trung ở Trung Quốc."
     },
@@ -543,10 +807,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 我是____人，他在中国学汉语。",
       "questionPinyin": "Wǒ shì ____ rén, tā zài Zhōngguó xué Hànyǔ.",
       "options": [
+        "下雨",
+        "时间",
         "越南",
-        "旁边",
-        "学生",
-        "作业"
+        "爸爸"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "下雨",
+          "pinyin": "xiàyǔ",
+          "meaning": "mưa"
+        },
+        {
+          "word": "时间",
+          "pinyin": "shíjiān",
+          "meaning": "thời gian"
+        },
+        {
+          "word": "越南",
+          "pinyin": "Yuènán",
+          "meaning": "Việt Nam"
+        },
+        {
+          "word": "爸爸",
+          "pinyin": "bàba",
+          "meaning": "bố"
+        }
       ],
       "correctAnswer": "越南",
       "explanation": "Từ cần điền là \"越南\". Cả câu hoàn chỉnh là: \"我是越南人，他在中国学汉语。\" (Wǒ shì Yuènán rén, tā zài Zhōngguó xué Hànyǔ.) - Tôi là người Việt Nam, anh ấy học tiếng Trung ở Trung Quốc.."
@@ -575,10 +861,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"你会说英语和汉语吗？\" (Nǐ huì shuō Yīngyǔ hé Hànyǔ ma?) có nghĩa là gì?",
       "options": [
-        "Thưa thầy, em nghe không hiểu câu nói này.",
-        "Mỗi buổi sáng anh ấy đều chạy bộ nửa tiếng đồng hồ.",
-        "Tôi có thể ngồi ở đây không? Đương nhiên được.",
-        "Bạn biết nói tiếng Anh và tiếng Trung không?"
+        "Bạn biết nói tiếng Anh và tiếng Trung không?",
+        "Tiếng Trung của anh ấy nói rất tốt.",
+        "Đã lâu không gặp, dạo này bạn khỏe không?",
+        "Tôi làm việc ở bệnh viện, tôi là bác sĩ."
       ],
       "correctAnswer": "Bạn biết nói tiếng Anh và tiếng Trung không?"
     },
@@ -587,9 +873,31 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "questionPinyin": "Nǐ huì shuō ____ hé Hànyǔ ma?",
       "options": [
         "作业",
-        "英语",
-        "老师",
-        "足球"
+        "欢迎",
+        "时间",
+        "英语"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "作业",
+          "pinyin": "zuòyè",
+          "meaning": "bài tập"
+        },
+        {
+          "word": "欢迎",
+          "pinyin": "huānyíng",
+          "meaning": "hoan nghênh"
+        },
+        {
+          "word": "时间",
+          "pinyin": "shíjiān",
+          "meaning": "thời gian"
+        },
+        {
+          "word": "英语",
+          "pinyin": "Yīngyǔ",
+          "meaning": "tiếng Anh"
+        }
       ],
       "correctAnswer": "英语",
       "explanation": "Từ cần điền là \"英语\". Cả câu hoàn chỉnh là: \"你会说英语和汉语吗？\" (Nǐ huì shuō Yīngyǔ hé Hànyǔ ma?) - Bạn biết nói tiếng Anh và tiếng Trung không?."
@@ -618,10 +926,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"他的汉语说得非常好。\" (Tā de Hànyǔ shuō de fēicháng hǎo.) có nghĩa là gì?",
       "options": [
-        "Đã lâu không gặp, dạo này bạn khỏe không?",
-        "Nhà vệ sinh ở đâu vậy?",
-        "Đắt quá rồi, có thể rẻ hơn một chút không?",
-        "Tiếng Trung của anh ấy nói rất tốt."
+        "Tiếng Trung của anh ấy nói rất tốt.",
+        "Bạn mấy tuổi rồi? (thường hỏi trẻ nhỏ dưới 10 tuổi)",
+        "Bình thường bạn có sở thích gì?",
+        "Đừng nói chuyện nữa, xin mọi người hãy nghe tôi nói."
       ],
       "correctAnswer": "Tiếng Trung của anh ấy nói rất tốt."
     },
@@ -629,10 +937,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 他的汉语说得____好。",
       "questionPinyin": "Tā de Hànyǔ shuō de ____ hǎo.",
       "options": [
-        "非常",
-        "作业",
-        "前面",
-        "医生"
+        "星期",
+        "哥哥",
+        "现在",
+        "非常"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "星期",
+          "pinyin": "xīngqī",
+          "meaning": "thứ, tuần"
+        },
+        {
+          "word": "哥哥",
+          "pinyin": "gēge",
+          "meaning": "anh trai"
+        },
+        {
+          "word": "现在",
+          "pinyin": "xiànzài",
+          "meaning": "bây giờ"
+        },
+        {
+          "word": "非常",
+          "pinyin": "fēicháng",
+          "meaning": "vô cùng, rất"
+        }
       ],
       "correctAnswer": "非常",
       "explanation": "Từ cần điền là \"非常\". Cả câu hoàn chỉnh là: \"他的汉语说得非常好。\" (Tā de Hànyǔ shuō de fēicháng hǎo.) - Tiếng Trung của anh ấy nói rất tốt.."
@@ -661,10 +991,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"你家有几口人？\" (Nǐ jiā yǒu jǐ kǒu rén?) có nghĩa là gì?",
       "options": [
-        "Nhà bạn có mấy người?",
+        "Xin hỏi, quý tính của ngài là gì?",
         "Để tôi giới thiệu một chút về bạn của tôi.",
-        "Bạn biết nói tiếng Anh và tiếng Trung không?",
-        "Bạn là người nước nào?"
+        "Tôi có thể ngồi ở đây không? Đương nhiên được.",
+        "Nhà bạn có mấy người?"
       ],
       "correctAnswer": "Nhà bạn có mấy người?"
     },
@@ -672,10 +1002,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 你____有几口人？",
       "questionPinyin": "Nǐ ____ yǒu jǐ kǒu rén?",
       "options": [
-        "高",
-        "帮",
+        "喝",
+        "想",
         "几",
         "家"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "喝",
+          "pinyin": "hē",
+          "meaning": "uống"
+        },
+        {
+          "word": "想",
+          "pinyin": "xiǎng",
+          "meaning": "muốn, nhớ"
+        },
+        {
+          "word": "几",
+          "pinyin": "jǐ",
+          "meaning": "mấy"
+        },
+        {
+          "word": "家",
+          "pinyin": "jiā",
+          "meaning": "nhà, gia đình"
+        }
       ],
       "correctAnswer": "家",
       "explanation": "Từ cần điền là \"家\". Cả câu hoàn chỉnh là: \"你家有几口人？\" (Nǐ jiā yǒu jǐ kǒu rén?) - Nhà bạn có mấy người?."
@@ -709,10 +1061,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"我家有四口人：爸爸、妈妈、哥哥和我。\" (Wǒ jiā yǒu sì kǒu rén: bàba, māma, gēge hé wǒ.) có nghĩa là gì?",
       "options": [
-        "Bộ quần áo này tổng cộng 100 tệ.",
+        "Bạn là người nước nào?",
         "Nhà tôi có 4 người: bố, mẹ, anh trai và tôi.",
-        "Thịt cừu của quán ăn này thật là ngon!",
-        "Bạn đi đến trường bằng phương tiện gì? Tôi đi xe taxi."
+        "Siêu thị nằm ngay bên cạnh ngân hàng kia.",
+        "Chúng ta gặp nhau lúc 3 rưỡi chiều trước cổng trường."
       ],
       "correctAnswer": "Nhà tôi có 4 người: bố, mẹ, anh trai và tôi."
     },
@@ -720,10 +1072,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 我家有四口人：____、妈妈、哥哥和我。",
       "questionPinyin": "Wǒ jiā yǒu sì kǒu rén: ____, māma, gēge hé wǒ.",
       "options": [
-        "可以",
+        "桌子",
+        "下午",
         "爸爸",
-        "医生",
-        "天气"
+        "工作"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "桌子",
+          "pinyin": "zhuōzi",
+          "meaning": "cái bàn"
+        },
+        {
+          "word": "下午",
+          "pinyin": "xiàwǔ",
+          "meaning": "buổi chiều"
+        },
+        {
+          "word": "爸爸",
+          "pinyin": "bàba",
+          "meaning": "bố"
+        },
+        {
+          "word": "工作",
+          "pinyin": "gōngzuò",
+          "meaning": "làm việc"
+        }
       ],
       "correctAnswer": "爸爸",
       "explanation": "Từ cần điền là \"爸爸\". Cả câu hoàn chỉnh là: \"我家有四口人：爸爸、妈妈、哥哥和我。\" (Wǒ jiā yǒu sì kǒu rén: bàba, māma, gēge hé wǒ.) - Nhà tôi có 4 người: bố, mẹ, anh trai và tôi.."
@@ -752,10 +1126,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"我的弟弟比我小两岁。\" (Wǒ de dìdi bǐ wǒ xiǎo liǎng suì.) có nghĩa là gì?",
       "options": [
+        "Bây giờ là mấy giờ?",
         "Em trai tôi nhỏ hơn tôi 2 tuổi.",
-        "Tôi tên là Lý Nguyệt, tôi là học sinh.",
-        "Tạm biệt! Ngày mai gặp lại!",
-        "Sau khi thức dậy, tôi rửa mặt trước rồi mới ăn sáng."
+        "Đi về phía trước, đến đèn giao thông thì rẽ phải.",
+        "Bạn bao nhiêu tuổi rồi? (hỏi người cùng lứa tuổi hoặc thanh niên)"
       ],
       "correctAnswer": "Em trai tôi nhỏ hơn tôi 2 tuổi."
     },
@@ -763,10 +1137,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 我的____比我小两岁。",
       "questionPinyin": "Wǒ de ____ bǐ wǒ xiǎo liǎng suì.",
       "options": [
-        "旁边",
         "弟弟",
-        "便宜",
-        "前面"
+        "起床",
+        "明天",
+        "名字"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "弟弟",
+          "pinyin": "dìdi",
+          "meaning": "em trai"
+        },
+        {
+          "word": "起床",
+          "pinyin": "qǐchuáng",
+          "meaning": "thức dậy"
+        },
+        {
+          "word": "明天",
+          "pinyin": "míngtiān",
+          "meaning": "ngày mai"
+        },
+        {
+          "word": "名字",
+          "pinyin": "míngzi",
+          "meaning": "tên gọi"
+        }
       ],
       "correctAnswer": "弟弟",
       "explanation": "Từ cần điền là \"弟弟\". Cả câu hoàn chỉnh là: \"我的弟弟比我小两岁。\" (Wǒ de dìdi bǐ wǒ xiǎo liǎng suì.) - Em trai tôi nhỏ hơn tôi 2 tuổi.."
@@ -795,10 +1191,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"姐姐的眼睛很大，长得很漂亮。\" (Jiějie de yǎnjing hěn dà, zhǎng de hěn piàoliang.) có nghĩa là gì?",
       "options": [
-        "Đã lâu không gặp, dạo này bạn khỏe không?",
         "Mắt của chị gái rất to, trông rất xinh xắn.",
-        "Tôi là người Việt Nam, anh ấy học tiếng Trung ở Trung Quốc.",
-        "Chào buổi sáng, thầy giáo!"
+        "Bạn tên là gì?",
+        "Đi về phía trước, đến đèn giao thông thì rẽ phải.",
+        "Xin lỗi! Không sao đâu."
       ],
       "correctAnswer": "Mắt của chị gái rất to, trông rất xinh xắn."
     },
@@ -806,10 +1202,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 姐姐的____很大，长得很漂亮。",
       "questionPinyin": "Jiějie de ____ hěn dà, zhǎng de hěn piàoliang.",
       "options": [
-        "喜欢",
+        "多大",
+        "早上",
         "眼睛",
-        "作业",
-        "名字"
+        "欢迎"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "多大",
+          "pinyin": "duō dà",
+          "meaning": "bao nhiêu tuổi"
+        },
+        {
+          "word": "早上",
+          "pinyin": "zǎoshang",
+          "meaning": "buổi sáng"
+        },
+        {
+          "word": "眼睛",
+          "pinyin": "yǎnjing",
+          "meaning": "mắt"
+        },
+        {
+          "word": "欢迎",
+          "pinyin": "huānyíng",
+          "meaning": "hoan nghênh"
+        }
       ],
       "correctAnswer": "眼睛",
       "explanation": "Từ cần điền là \"眼睛\". Cả câu hoàn chỉnh là: \"姐姐的眼睛很大，长得很漂亮。\" (Jiějie de yǎnjing hěn dà, zhǎng de hěn piàoliang.) - Mắt của chị gái rất to, trông rất xinh xắn.."
@@ -839,9 +1257,9 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Câu tiếng Trung \"现在几点？\" (Xiànzài jǐ diǎn?) có nghĩa là gì?",
       "options": [
         "Bây giờ là mấy giờ?",
-        "Trường học ở phía trước bệnh viện.",
-        "Bạn đi đến trường bằng phương tiện gì? Tôi đi xe taxi.",
-        "Tôi làm việc ở bệnh viện, tôi là bác sĩ."
+        "Để tôi giới thiệu một chút về bạn của tôi.",
+        "Chào buổi sáng, thầy giáo!",
+        "Bạn muốn ăn gì? Tôi muốn ăn món ăn Trung Quốc."
       ],
       "correctAnswer": "Bây giờ là mấy giờ?"
     },
@@ -849,10 +1267,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: ____几点？",
       "questionPinyin": "____ jǐ diǎn?",
       "options": [
-        "前面",
-        "汉语",
-        "学生",
-        "现在"
+        "明天",
+        "星期",
+        "现在",
+        "爱好"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "明天",
+          "pinyin": "míngtiān",
+          "meaning": "ngày mai"
+        },
+        {
+          "word": "星期",
+          "pinyin": "xīngqī",
+          "meaning": "thứ, tuần"
+        },
+        {
+          "word": "现在",
+          "pinyin": "xiànzài",
+          "meaning": "bây giờ"
+        },
+        {
+          "word": "爱好",
+          "pinyin": "àihào",
+          "meaning": "sở thích"
+        }
       ],
       "correctAnswer": "现在",
       "explanation": "Từ cần điền là \"现在\". Cả câu hoàn chỉnh là: \"现在几点？\" (Xiànzài jǐ diǎn?) - Bây giờ là mấy giờ?."
@@ -881,10 +1321,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"今天星期几？今天星期五。\" (Jīntiān xīngqījǐ? Jīntiān xīngqīwǔ.) có nghĩa là gì?",
       "options": [
-        "Mỗi buổi sáng anh ấy đều chạy bộ nửa tiếng đồng hồ.",
-        "Chào bạn! Rất vui được quen biết bạn.",
-        "Bạn là người nước nào?",
-        "Hôm nay thứ mấy? Hôm nay thứ Sáu."
+        "Bạn tên là gì?",
+        "Hôm nay thứ mấy? Hôm nay thứ Sáu.",
+        "Tôi là người Việt Nam, anh ấy học tiếng Trung ở Trung Quốc.",
+        "Vấn đề này tôi có thể giúp bạn giải quyết."
       ],
       "correctAnswer": "Hôm nay thứ mấy? Hôm nay thứ Sáu."
     },
@@ -892,10 +1332,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: ____星期几？今天星期五。",
       "questionPinyin": "____ xīngqījǐ? Jīntiān xīngqīwǔ.",
       "options": [
-        "便宜",
         "今天",
-        "足球",
-        "休息"
+        "漂亮",
+        "最近",
+        "现在"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "今天",
+          "pinyin": "jīntiān",
+          "meaning": "hôm nay"
+        },
+        {
+          "word": "漂亮",
+          "pinyin": "piàoliang",
+          "meaning": "xinh đẹp"
+        },
+        {
+          "word": "最近",
+          "pinyin": "zuìjìn",
+          "meaning": "dạo gần đây"
+        },
+        {
+          "word": "现在",
+          "pinyin": "xiànzài",
+          "meaning": "bây giờ"
+        }
       ],
       "correctAnswer": "今天",
       "explanation": "Từ cần điền là \"今天\". Cả câu hoàn chỉnh là: \"今天星期几？今天星期五。\" (Jīntiān xīngqījǐ? Jīntiān xīngqīwǔ.) - Hôm nay thứ mấy? Hôm nay thứ Sáu.."
@@ -929,10 +1391,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"明天是九月十号。\" (Míngtiān shì jiǔ yuè shí hào.) có nghĩa là gì?",
       "options": [
-        "Hoan nghênh các bạn đã đến Bắc Kinh!",
-        "Mỗi buổi sáng anh ấy đều chạy bộ nửa tiếng đồng hồ.",
-        "Chào bạn! Rất vui được quen biết bạn.",
-        "Ngày mai là ngày mùng 10 tháng 9."
+        "Ngày mai là ngày mùng 10 tháng 9.",
+        "Xin lỗi! Không sao đâu.",
+        "Bạn có thể giúp tôi mua một ly cà phê không?",
+        "Bạn là người nước nào?"
       ],
       "correctAnswer": "Ngày mai là ngày mùng 10 tháng 9."
     },
@@ -940,10 +1402,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: ____是九月十号。",
       "questionPinyin": "____ shì jiǔ yuè shí hào.",
       "options": [
-        "什么",
-        "名字",
         "明天",
-        "后面"
+        "怎么",
+        "认识",
+        "名字"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "明天",
+          "pinyin": "míngtiān",
+          "meaning": "ngày mai"
+        },
+        {
+          "word": "怎么",
+          "pinyin": "zěnme",
+          "meaning": "như thế nào"
+        },
+        {
+          "word": "认识",
+          "pinyin": "rènshi",
+          "meaning": "quen biết"
+        },
+        {
+          "word": "名字",
+          "pinyin": "míngzi",
+          "meaning": "tên gọi"
+        }
       ],
       "correctAnswer": "明天",
       "explanation": "Từ cần điền là \"明天\". Cả câu hoàn chỉnh là: \"明天是九月十号。\" (Míngtiān shì jiǔ yuè shí hào.) - Ngày mai là ngày mùng 10 tháng 9.."
@@ -977,10 +1461,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"我们下午三点半在学校门前见。\" (Wǒmen xiàwǔ sān diǎn bàn zài xuéxiào ménqián jiàn.) có nghĩa là gì?",
       "options": [
-        "Nhà bạn có mấy người?",
-        "Tôi làm việc ở bệnh viện, tôi là bác sĩ.",
         "Chúng ta gặp nhau lúc 3 rưỡi chiều trước cổng trường.",
-        "Xin lỗi! Không sao đâu."
+        "Bạn tên là gì?",
+        "Anh ấy rất thích xem phim điện ảnh Trung Quốc.",
+        "Bạn bao nhiêu tuổi rồi? (hỏi người cùng lứa tuổi hoặc thanh niên)"
       ],
       "correctAnswer": "Chúng ta gặp nhau lúc 3 rưỡi chiều trước cổng trường."
     },
@@ -988,10 +1472,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 我们____三点半在学校门前见。",
       "questionPinyin": "Wǒmen ____ sān diǎn bàn zài xuéxiào ménqián jiàn.",
       "options": [
-        "名字",
         "下午",
-        "怎么",
-        "什么"
+        "眼睛",
+        "喜欢",
+        "水果"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "下午",
+          "pinyin": "xiàwǔ",
+          "meaning": "buổi chiều"
+        },
+        {
+          "word": "眼睛",
+          "pinyin": "yǎnjing",
+          "meaning": "đôi mắt"
+        },
+        {
+          "word": "喜欢",
+          "pinyin": "xǐhuan",
+          "meaning": "thích"
+        },
+        {
+          "word": "水果",
+          "pinyin": "shuǐguǒ",
+          "meaning": "hoa quả"
+        }
       ],
       "correctAnswer": "下午",
       "explanation": "Từ cần điền là \"下午\". Cả câu hoàn chỉnh là: \"我们下午三点半在学校门前见。\" (Wǒmen xiàwǔ sān diǎn bàn zài xuéxiào ménqián jiàn.) - Chúng ta gặp nhau lúc 3 rưỡi chiều trước cổng trường.."
@@ -1020,10 +1526,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"你在哪儿工作？\" (Nǐ zài nǎr gōngzuò?) có nghĩa là gì?",
       "options": [
-        "Bạn làm việc ở đâu?",
-        "Chào bạn! Rất vui được quen biết bạn.",
-        "Bạn biết nói tiếng Anh và tiếng Trung không?",
-        "Vấn đề này tôi có thể giúp bạn giải quyết."
+        "Để tôi giới thiệu một chút về bạn của tôi.",
+        "Anh ấy rất thích xem phim điện ảnh Trung Quốc.",
+        "Thịt cừu của quán ăn này thật là ngon!",
+        "Bạn làm việc ở đâu?"
       ],
       "correctAnswer": "Bạn làm việc ở đâu?"
     },
@@ -1031,10 +1537,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 你在____工作？",
       "questionPinyin": "Nǐ zài ____ gōngzuò?",
       "options": [
-        "后面",
+        "哪儿",
         "老师",
-        "怎么",
-        "哪儿"
+        "妈妈",
+        "前面"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "哪儿",
+          "pinyin": "nǎr",
+          "meaning": "ở đâu"
+        },
+        {
+          "word": "老师",
+          "pinyin": "lǎoshī",
+          "meaning": "thầy cô giáo"
+        },
+        {
+          "word": "妈妈",
+          "pinyin": "māma",
+          "meaning": "mẹ"
+        },
+        {
+          "word": "前面",
+          "pinyin": "qiánmiàn",
+          "meaning": "phía trước"
+        }
       ],
       "correctAnswer": "哪儿",
       "explanation": "Từ cần điền là \"哪儿\". Cả câu hoàn chỉnh là: \"你在哪儿工作？\" (Nǐ zài nǎr gōngzuò?) - Bạn làm việc ở đâu?."
@@ -1063,10 +1591,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"我在医院工作，我是医生。\" (Wǒ zài yīyuàn gōngzuò, wǒ shì yīshēng.) có nghĩa là gì?",
       "options": [
-        "Bạn có thể giúp tôi mua một ly cà phê không?",
+        "Xin lỗi! Không sao đâu.",
         "Tôi làm việc ở bệnh viện, tôi là bác sĩ.",
-        "Thưa thầy, em nghe không hiểu câu nói này.",
-        "Mỗi buổi sáng anh ấy đều chạy bộ nửa tiếng đồng hồ."
+        "Để tôi giới thiệu một chút về bạn của tôi.",
+        "Cô ấy khiêu vũ rất đẹp / múa rất giỏi."
       ],
       "correctAnswer": "Tôi làm việc ở bệnh viện, tôi là bác sĩ."
     },
@@ -1075,9 +1603,31 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "questionPinyin": "Wǒ zài ____ gōngzuò, wǒ shì yīshēng.",
       "options": [
         "医院",
-        "老师",
-        "足球",
-        "什么"
+        "时间",
+        "飞机",
+        "后面"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "医院",
+          "pinyin": "yīyuàn",
+          "meaning": "bệnh viện"
+        },
+        {
+          "word": "时间",
+          "pinyin": "shíjiān",
+          "meaning": "thời gian"
+        },
+        {
+          "word": "飞机",
+          "pinyin": "fēijī",
+          "meaning": "máy bay"
+        },
+        {
+          "word": "后面",
+          "pinyin": "hòumiàn",
+          "meaning": "phía sau"
+        }
       ],
       "correctAnswer": "医院",
       "explanation": "Từ cần điền là \"医院\". Cả câu hoàn chỉnh là: \"我在医院工作，我是医生。\" (Wǒ zài yīyuàn gōngzuò, wǒ shì yīshēng.) - Tôi làm việc ở bệnh viện, tôi là bác sĩ.."
@@ -1107,9 +1657,9 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Câu tiếng Trung \"明天早上八点开始考试。\" (Míngtiān zǎoshang bā diǎn kāishǐ kǎoshì.) có nghĩa là gì?",
       "options": [
         "8 giờ sáng mai bắt đầu thi.",
-        "Bạn mấy tuổi rồi? (thường hỏi trẻ nhỏ dưới 10 tuổi)",
-        "Bạn là người nước nào?",
-        "Vấn đề này tôi có thể giúp bạn giải quyết."
+        "Bạn tên là gì?",
+        "Vấn đề này tôi có thể giúp bạn giải quyết.",
+        "Ngày mai là ngày mùng 10 tháng 9."
       ],
       "correctAnswer": "8 giờ sáng mai bắt đầu thi."
     },
@@ -1117,10 +1667,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 明天早上八点____考试。",
       "questionPinyin": "Míngtiān zǎoshang bā diǎn ____ kǎoshì.",
       "options": [
-        "喜欢",
-        "前面",
-        "名字",
+        "时间",
+        "欢迎",
+        "老师",
         "开始"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "时间",
+          "pinyin": "shíjiān",
+          "meaning": "thời gian"
+        },
+        {
+          "word": "欢迎",
+          "pinyin": "huānyíng",
+          "meaning": "hoan nghênh"
+        },
+        {
+          "word": "老师",
+          "pinyin": "lǎoshī",
+          "meaning": "thầy cô giáo"
+        },
+        {
+          "word": "开始",
+          "pinyin": "kāishǐ",
+          "meaning": "bắt đầu"
+        }
       ],
       "correctAnswer": "开始",
       "explanation": "Từ cần điền là \"开始\". Cả câu hoàn chỉnh là: \"明天早上八点开始考试。\" (Míngtiān zǎoshang bā diǎn kāishǐ kǎoshì.) - 8 giờ sáng mai bắt đầu thi.."
@@ -1154,10 +1726,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"这个问题我可以帮你解决。\" (Zhè ge wèntí wǒ kěyǐ bāng nǐ jiějué.) có nghĩa là gì?",
       "options": [
+        "Tôi đã làm xong bài tập về nhà rồi.",
+        "Anh ấy rất thích xem phim điện ảnh Trung Quốc.",
         "Vấn đề này tôi có thể giúp bạn giải quyết.",
-        "Mỗi buổi sáng anh ấy đều chạy bộ nửa tiếng đồng hồ.",
-        "Chào bạn! Rất vui được quen biết bạn.",
-        "Bạn tên là gì?"
+        "Thưa thầy, em nghe không hiểu câu nói này."
       ],
       "correctAnswer": "Vấn đề này tôi có thể giúp bạn giải quyết."
     },
@@ -1165,10 +1737,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 这个____我可以帮你解决。",
       "questionPinyin": "Zhè ge ____ wǒ kěyǐ bāng nǐ jiějué.",
       "options": [
-        "什么",
-        "名字",
         "问题",
-        "怎么"
+        "姐姐",
+        "名字",
+        "喜欢"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "问题",
+          "pinyin": "wèntí",
+          "meaning": "vấn đề, câu hỏi"
+        },
+        {
+          "word": "姐姐",
+          "pinyin": "jiějie",
+          "meaning": "chị gái"
+        },
+        {
+          "word": "名字",
+          "pinyin": "míngzi",
+          "meaning": "tên gọi"
+        },
+        {
+          "word": "喜欢",
+          "pinyin": "xǐhuan",
+          "meaning": "thích"
+        }
       ],
       "correctAnswer": "问题",
       "explanation": "Từ cần điền là \"问题\". Cả câu hoàn chỉnh là: \"这个问题我可以帮你解决。\" (Zhè ge wèntí wǒ kěyǐ bāng nǐ jiějué.) - Vấn đề này tôi có thể giúp bạn giải quyết.."
@@ -1197,10 +1791,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"你想吃什么？我想吃中国菜。\" (Nǐ xiǎng chī shénme? Wǒ xiǎng chī Zhōngguó cài.) có nghĩa là gì?",
       "options": [
-        "Ngày mai sẽ mưa to, ra ngoài nhớ mang ô/dù nhé.",
-        "Nhà bạn có mấy người?",
-        "Vô cùng cảm ơn bạn! Không có gì đâu.",
-        "Bạn muốn ăn gì? Tôi muốn ăn món ăn Trung Quốc."
+        "Bạn muốn ăn gì? Tôi muốn ăn món ăn Trung Quốc.",
+        "Siêu thị nằm ngay bên cạnh ngân hàng kia.",
+        "Sức khỏe của bạn thế nào? Đã đỡ hơn chút nào chưa?",
+        "Chúng mình cùng nhau đi đá bóng nhé!"
       ],
       "correctAnswer": "Bạn muốn ăn gì? Tôi muốn ăn món ăn Trung Quốc."
     },
@@ -1208,10 +1802,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 你____吃什么？我想吃中国菜。",
       "questionPinyin": "Nǐ ____ chī shénme? Wǒ xiǎng chī Zhōngguó cài.",
       "options": [
-        "高",
-        "贵",
-        "帮",
-        "想"
+        "想",
+        "坐",
+        "几",
+        "国"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "想",
+          "pinyin": "xiǎng",
+          "meaning": "muốn, nhớ"
+        },
+        {
+          "word": "坐",
+          "pinyin": "zuò",
+          "meaning": "ngồi"
+        },
+        {
+          "word": "几",
+          "pinyin": "jǐ",
+          "meaning": "mấy"
+        },
+        {
+          "word": "国",
+          "pinyin": "guó",
+          "meaning": "quốc gia"
+        }
       ],
       "correctAnswer": "想",
       "explanation": "Từ cần điền là \"想\". Cả câu hoàn chỉnh là: \"你想吃什么？我想吃中国菜。\" (Nǐ xiǎng chī shénme? Wǒ xiǎng chī Zhōngguó cài.) - Bạn muốn ăn gì? Tôi muốn ăn món ăn Trung Quốc.."
@@ -1245,10 +1861,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"请喝茶，请坐！\" (Qǐng hē chá, qǐng zuò!) có nghĩa là gì?",
       "options": [
+        "Bạn có thể giúp tôi mua một ly cà phê không?",
+        "Tôi là người Việt Nam, anh ấy học tiếng Trung ở Trung Quốc.",
         "Mời uống trà, mời ngồi!",
-        "Tuy rằng thời tiết không tốt, nhưng chúng tôi vẫn đi.",
-        "Tôi làm việc ở bệnh viện, tôi là bác sĩ.",
-        "Đã lâu không gặp, dạo này bạn khỏe không?"
+        "Bạn muốn ăn gì? Tôi muốn ăn món ăn Trung Quốc."
       ],
       "correctAnswer": "Mời uống trà, mời ngồi!"
     },
@@ -1256,10 +1872,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 请____茶，请坐！",
       "questionPinyin": "Qǐng ____ chá, qǐng zuò!",
       "options": [
-        "几",
         "岁",
-        "高",
-        "喝"
+        "喝",
+        "想",
+        "国"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "岁",
+          "pinyin": "suì",
+          "meaning": "tuổi"
+        },
+        {
+          "word": "喝",
+          "pinyin": "hē",
+          "meaning": "uống"
+        },
+        {
+          "word": "想",
+          "pinyin": "xiǎng",
+          "meaning": "muốn, nhớ"
+        },
+        {
+          "word": "国",
+          "pinyin": "guó",
+          "meaning": "quốc gia"
+        }
       ],
       "correctAnswer": "喝",
       "explanation": "Từ cần điền là \"喝\". Cả câu hoàn chỉnh là: \"请喝茶，请坐！\" (Qǐng hē chá, qǐng zuò!) - Mời uống trà, mời ngồi!."
@@ -1288,10 +1926,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"服务员，请给我们一份菜单。\" (Fúwùyuán, qǐng gěi wǒmen yí fèn càidān.) có nghĩa là gì?",
       "options": [
-        "Anh ấy rất thích xem phim điện ảnh Trung Quốc.",
-        "Ngoài đọc sách ra, tôi còn biết chơi đàn dương cầm.",
-        "Bạn biết nói tiếng Anh và tiếng Trung không?",
-        "Phục vụ, xin cho chúng tôi một cuốn thực đơn."
+        "Xin hỏi, đi đến ga tàu hỏa thì đi đường nào?",
+        "Phục vụ, xin cho chúng tôi một cuốn thực đơn.",
+        "Tôi tên là Lý Nguyệt, tôi là học sinh.",
+        "Đừng nói chuyện nữa, xin mọi người hãy nghe tôi nói."
       ],
       "correctAnswer": "Phục vụ, xin cho chúng tôi một cuốn thực đơn."
     },
@@ -1299,10 +1937,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: ____，请给我们一份菜单。",
       "questionPinyin": "____, qǐng gěi wǒmen yí fèn càidān.",
       "options": [
-        "服务员",
-        "为什么",
-        "洗手间",
-        "老师"
+        "出租车",
+        "火车站",
+        "打篮球",
+        "服务员"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "出租车",
+          "pinyin": "chūzūchē",
+          "meaning": "xe taxi"
+        },
+        {
+          "word": "火车站",
+          "pinyin": "huǒchēzhàn",
+          "meaning": "ga tàu hỏa"
+        },
+        {
+          "word": "打篮球",
+          "pinyin": "dǎ lánqiú",
+          "meaning": "chơi bóng rổ"
+        },
+        {
+          "word": "服务员",
+          "pinyin": "fúwùyuán",
+          "meaning": "nhân viên phục vụ"
+        }
       ],
       "correctAnswer": "服务员",
       "explanation": "Từ cần điền là \"服务员\". Cả câu hoàn chỉnh là: \"服务员，请给我们一份菜单。\" (Fúwùyuán, qǐng gěi wǒmen yí fèn càidān.) - Phục vụ, xin cho chúng tôi một cuốn thực đơn.."
@@ -1336,10 +1996,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"这家饭馆的羊肉真好吃！\" (Zhè jiā fànguǎn de yángròu zhēn hǎochī!) có nghĩa là gì?",
       "options": [
-        "Những loại hoa quả này rất tươi, cũng rất ngọt.",
+        "Đi về phía trước, đến đèn giao thông thì rẽ phải.",
         "Thịt cừu của quán ăn này thật là ngon!",
-        "Bạn là người nước nào?",
-        "Đắt quá rồi, có thể rẻ hơn một chút không?"
+        "Bạn làm việc ở đâu?",
+        "Tuy rằng thời tiết không tốt, nhưng chúng tôi vẫn đi."
       ],
       "correctAnswer": "Thịt cừu của quán ăn này thật là ngon!"
     },
@@ -1347,10 +2007,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 这家饭馆的____真好吃！",
       "questionPinyin": "Zhè jiā fànguǎn de ____ zhēn hǎochī!",
       "options": [
+        "认识",
+        "高兴",
         "羊肉",
-        "水果",
-        "老师",
-        "怎么"
+        "欢迎"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "认识",
+          "pinyin": "rènshi",
+          "meaning": "quen biết"
+        },
+        {
+          "word": "高兴",
+          "pinyin": "gāoxìng",
+          "meaning": "vui mừng"
+        },
+        {
+          "word": "羊肉",
+          "pinyin": "yángròu",
+          "meaning": "thịt cừu"
+        },
+        {
+          "word": "欢迎",
+          "pinyin": "huānyíng",
+          "meaning": "hoan nghênh"
+        }
       ],
       "correctAnswer": "羊肉",
       "explanation": "Từ cần điền là \"羊肉\". Cả câu hoàn chỉnh là: \"这家饭馆的羊肉真好吃！\" (Zhè jiā fànguǎn de yángròu zhēn hǎochī!) - Thịt cừu của quán ăn này thật là ngon!."
@@ -1385,9 +2067,9 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Câu tiếng Trung \"这个苹果多少钱一斤？\" (Zhè ge píngguǒ duōshao qián yì jīn?) có nghĩa là gì?",
       "options": [
         "Những loại hoa quả này rất tươi, cũng rất ngọt.",
-        "Bạn mấy tuổi rồi? (thường hỏi trẻ nhỏ dưới 10 tuổi)",
         "Táo này bao nhiêu tiền một cân (500g)?",
-        "Đắt quá rồi, có thể rẻ hơn một chút không?"
+        "Tôi đã làm xong bài tập về nhà rồi.",
+        "Xin hỏi, đi đến ga tàu hỏa thì đi đường nào?"
       ],
       "correctAnswer": "Táo này bao nhiêu tiền một cân (500g)?"
     },
@@ -1395,10 +2077,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 这个苹果____钱一斤？",
       "questionPinyin": "Zhè ge píngguǒ ____ qián yì jīn?",
       "options": [
-        "名字",
-        "喜欢",
-        "医生",
-        "多少"
+        "多少",
+        "每天",
+        "星期",
+        "便宜"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "多少",
+          "pinyin": "duōshao",
+          "meaning": "bao nhiêu"
+        },
+        {
+          "word": "每天",
+          "pinyin": "měitiān",
+          "meaning": "mỗi ngày"
+        },
+        {
+          "word": "星期",
+          "pinyin": "xīngqī",
+          "meaning": "thứ, tuần"
+        },
+        {
+          "word": "便宜",
+          "pinyin": "piányi",
+          "meaning": "rẻ"
+        }
       ],
       "correctAnswer": "多少",
       "explanation": "Từ cần điền là \"多少\". Cả câu hoàn chỉnh là: \"这个苹果多少钱一斤？\" (Zhè ge píngguǒ duōshao qián yì jīn?) - Táo này bao nhiêu tiền một cân (500g)?."
@@ -1427,9 +2131,9 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"太贵了，能不能便宜一点儿？\" (Tài guì le, néng bu néng piányi yìdiǎnr?) có nghĩa là gì?",
       "options": [
-        "Nhà vệ sinh ở đâu vậy?",
-        "Bạn còn muốn món nào khác không? Không cần nữa đâu, cảm ơn.",
-        "Xin hỏi, đi đến ga tàu hỏa thì đi đường nào?",
+        "Hoan nghênh các bạn đã đến Bắc Kinh!",
+        "Hôm nay thứ mấy? Hôm nay thứ Sáu.",
+        "Tiếng Trung của anh ấy nói rất tốt.",
         "Đắt quá rồi, có thể rẻ hơn một chút không?"
       ],
       "correctAnswer": "Đắt quá rồi, có thể rẻ hơn một chút không?"
@@ -1438,10 +2142,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 太____了，能不能便宜一点儿？",
       "questionPinyin": "Tài ____ le, néng bu néng piányi yìdiǎnr?",
       "options": [
-        "岁",
+        "茶",
+        "想",
         "几",
-        "贵",
-        "高"
+        "贵"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "茶",
+          "pinyin": "chá",
+          "meaning": "trà"
+        },
+        {
+          "word": "想",
+          "pinyin": "xiǎng",
+          "meaning": "muốn, nhớ"
+        },
+        {
+          "word": "几",
+          "pinyin": "jǐ",
+          "meaning": "mấy"
+        },
+        {
+          "word": "贵",
+          "pinyin": "guì",
+          "meaning": "đắt"
+        }
       ],
       "correctAnswer": "贵",
       "explanation": "Từ cần điền là \"贵\". Cả câu hoàn chỉnh là: \"太贵了，能不能便宜一点儿？\" (Tài guì le, néng bu néng piányi yìdiǎnr?) - Đắt quá rồi, có thể rẻ hơn một chút không?."
@@ -1475,10 +2201,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"这件衣服一共一百块钱。\" (Zhè jiàn yīfu yígòng yì bǎi kuài qián.) có nghĩa là gì?",
       "options": [
-        "Bình thường bạn có sở thích gì?",
-        "Siêu thị nằm ngay bên cạnh ngân hàng kia.",
+        "Bộ quần áo này tổng cộng 100 tệ.",
+        "Bạn làm việc ở đâu?",
         "Xin hỏi, đi đến ga tàu hỏa thì đi đường nào?",
-        "Bộ quần áo này tổng cộng 100 tệ."
+        "Bây giờ là mấy giờ?"
       ],
       "correctAnswer": "Bộ quần áo này tổng cộng 100 tệ."
     },
@@ -1486,10 +2212,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 这____衣服一共一百块钱。",
       "questionPinyin": "Zhè ____ yīfu yígòng yì bǎi kuài qián.",
       "options": [
-        "高",
         "件",
-        "几",
-        "贵"
+        "国",
+        "哪",
+        "岁"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "件",
+          "pinyin": "jiàn",
+          "meaning": "chiếc, cái (quần áo)"
+        },
+        {
+          "word": "国",
+          "pinyin": "guó",
+          "meaning": "quốc gia"
+        },
+        {
+          "word": "哪",
+          "pinyin": "nǎ",
+          "meaning": "nào"
+        },
+        {
+          "word": "岁",
+          "pinyin": "suì",
+          "meaning": "tuổi"
+        }
       ],
       "correctAnswer": "件",
       "explanation": "Từ cần điền là \"件\". Cả câu hoàn chỉnh là: \"这件衣服一共一百块钱。\" (Zhè jiàn yīfu yígòng yì bǎi kuài qián.) - Bộ quần áo này tổng cộng 100 tệ.."
@@ -1518,10 +2266,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"书在桌子上，电脑在书的旁边。\" (Shū zài zhuōzi shang, diànnǎo zài shū de pángbiān.) có nghĩa là gì?",
       "options": [
-        "Tuy rằng thời tiết không tốt, nhưng chúng tôi vẫn đi.",
-        "Nhà tôi có 4 người: bố, mẹ, anh trai và tôi.",
-        "Sách ở trên bàn, máy tính ở bên cạnh quyển sách.",
-        "Bình thường bạn có sở thích gì?"
+        "Tôi tên là Lý Nguyệt, tôi là học sinh.",
+        "Trường học ở phía trước bệnh viện.",
+        "Không vấn đề gì, việc này cứ để tôi lo.",
+        "Sách ở trên bàn, máy tính ở bên cạnh quyển sách."
       ],
       "correctAnswer": "Sách ở trên bàn, máy tính ở bên cạnh quyển sách."
     },
@@ -1529,10 +2277,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 书在____上，电脑在书的旁边。",
       "questionPinyin": "Shū zài ____ shang, diànnǎo zài shū de pángbiān.",
       "options": [
+        "最近",
+        "爱好",
         "桌子",
-        "什么",
-        "可以",
-        "多少"
+        "认识"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "最近",
+          "pinyin": "zuìjìn",
+          "meaning": "dạo gần đây"
+        },
+        {
+          "word": "爱好",
+          "pinyin": "àihào",
+          "meaning": "sở thích"
+        },
+        {
+          "word": "桌子",
+          "pinyin": "zhuōzi",
+          "meaning": "cái bàn"
+        },
+        {
+          "word": "认识",
+          "pinyin": "rènshi",
+          "meaning": "quen biết"
+        }
       ],
       "correctAnswer": "桌子",
       "explanation": "Từ cần điền là \"桌子\". Cả câu hoàn chỉnh là: \"书在桌子上，电脑在书的旁边。\" (Shū zài zhuōzi shang, diànnǎo zài shū de pángbiān.) - Sách ở trên bàn, máy tính ở bên cạnh quyển sách.."
@@ -1556,10 +2326,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"学校在医院的前面。\" (Xuéxiào zài yīyuàn de qiánmiàn.) có nghĩa là gì?",
       "options": [
-        "Trường học ở phía trước bệnh viện.",
-        "Thịt cừu của quán ăn này thật là ngon!",
-        "Tôi có thể ngồi ở đây không? Đương nhiên được.",
-        "Cô ấy khiêu vũ rất đẹp / múa rất giỏi."
+        "Xin hỏi, quý tính của ngài là gì?",
+        "Sách ở trên bàn, máy tính ở bên cạnh quyển sách.",
+        "Để tôi giới thiệu một chút về bạn của tôi.",
+        "Trường học ở phía trước bệnh viện."
       ],
       "correctAnswer": "Trường học ở phía trước bệnh viện."
     },
@@ -1568,9 +2338,31 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "questionPinyin": "Xuéxiào zài yīyuàn de ____.",
       "options": [
         "前面",
-        "飞机",
-        "多少",
-        "便宜"
+        "高兴",
+        "医生",
+        "问题"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "前面",
+          "pinyin": "qiánmiàn",
+          "meaning": "phía trước"
+        },
+        {
+          "word": "高兴",
+          "pinyin": "gāoxìng",
+          "meaning": "vui mừng"
+        },
+        {
+          "word": "医生",
+          "pinyin": "yīshēng",
+          "meaning": "bác sĩ"
+        },
+        {
+          "word": "问题",
+          "pinyin": "wèntí",
+          "meaning": "vấn đề"
+        }
       ],
       "correctAnswer": "前面",
       "explanation": "Từ cần điền là \"前面\". Cả câu hoàn chỉnh là: \"学校在医院的前面。\" (Xuéxiào zài yīyuàn de qiánmiàn.) - Trường học ở phía trước bệnh viện.."
@@ -1604,10 +2396,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"往前走，到红绿灯往右拐。\" (Wǎng qián zǒu, dào hónglǜdēng wǎng yòu guǎi.) có nghĩa là gì?",
       "options": [
-        "Chào bạn! Rất vui được quen biết bạn.",
-        "Hoan nghênh các bạn đã đến Bắc Kinh!",
-        "8 giờ sáng mai bắt đầu thi.",
-        "Đi về phía trước, đến đèn giao thông thì rẽ phải."
+        "Đi về phía trước, đến đèn giao thông thì rẽ phải.",
+        "Anh ấy rất thích xem phim điện ảnh Trung Quốc.",
+        "Bạn là người nước nào?",
+        "Nhà bạn có mấy người?"
       ],
       "correctAnswer": "Đi về phía trước, đến đèn giao thông thì rẽ phải."
     },
@@ -1615,10 +2407,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: ____前走，到红绿灯往右拐。",
       "questionPinyin": "____ qián zǒu, dào hónglǜdēng wǎng yòu guǎi.",
       "options": [
-        "岁",
-        "帮",
-        "贵",
-        "往"
+        "往",
+        "想",
+        "家",
+        "国"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "往",
+          "pinyin": "wǎng",
+          "meaning": "hướng về"
+        },
+        {
+          "word": "想",
+          "pinyin": "xiǎng",
+          "meaning": "muốn, nhớ"
+        },
+        {
+          "word": "家",
+          "pinyin": "jiā",
+          "meaning": "gia đình"
+        },
+        {
+          "word": "国",
+          "pinyin": "guó",
+          "meaning": "quốc gia"
+        }
       ],
       "correctAnswer": "往",
       "explanation": "Từ cần điền là \"往\". Cả câu hoàn chỉnh là: \"往前走，到红绿灯往右拐。\" (Wǎng qián zǒu, dào hónglǜdēng wǎng yòu guǎi.) - Đi về phía trước, đến đèn giao thông thì rẽ phải.."
@@ -1652,9 +2466,9 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"我的家离公司不太远。\" (Wǒ de jiā lí gōngsī bú tài yuǎn.) có nghĩa là gì?",
       "options": [
-        "Vô cùng cảm ơn bạn! Không có gì đâu.",
-        "Mắt của chị gái rất to, trông rất xinh xắn.",
-        "Mỗi buổi sáng anh ấy đều chạy bộ nửa tiếng đồng hồ.",
+        "Chào bạn! Rất vui được quen biết bạn.",
+        "8 giờ sáng mai bắt đầu thi.",
+        "Nhà tôi có 4 người: bố, mẹ, anh trai và tôi.",
         "Nhà tôi cách công ty không xa lắm."
       ],
       "correctAnswer": "Nhà tôi cách công ty không xa lắm."
@@ -1664,9 +2478,31 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "questionPinyin": "Wǒ de jiā ____ gōngsī bú tài yuǎn.",
       "options": [
         "岁",
-        "高",
+        "离",
         "几",
-        "离"
+        "家"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "岁",
+          "pinyin": "suì",
+          "meaning": "tuổi"
+        },
+        {
+          "word": "离",
+          "pinyin": "lí",
+          "meaning": "cách"
+        },
+        {
+          "word": "几",
+          "pinyin": "jǐ",
+          "meaning": "mấy"
+        },
+        {
+          "word": "家",
+          "pinyin": "jiā",
+          "meaning": "gia đình"
+        }
       ],
       "correctAnswer": "离",
       "explanation": "Từ cần điền là \"离\". Cả câu hoàn chỉnh là: \"我的家离公司不太远。\" (Wǒ de jiā lí gōngsī bú tài yuǎn.) - Nhà tôi cách công ty không xa lắm.."
@@ -1695,10 +2531,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"你怎么去学校？我坐出租车去。\" (Nǐ zěnme qù xuéxiào? Wǒ zuò chūzūchē qù.) có nghĩa là gì?",
       "options": [
-        "Anh ấy rất thích xem phim điện ảnh Trung Quốc.",
-        "Chào buổi sáng, thầy giáo!",
-        "Bạn đi đến trường bằng phương tiện gì? Tôi đi xe taxi.",
-        "Tôi làm việc ở bệnh viện, tôi là bác sĩ."
+        "Tôi có thể ngồi ở đây không? Đương nhiên được.",
+        "Sức khỏe của bạn thế nào? Đã đỡ hơn chút nào chưa?",
+        "Phục vụ, xin cho chúng tôi một cuốn thực đơn.",
+        "Bạn đi đến trường bằng phương tiện gì? Tôi đi xe taxi."
       ],
       "correctAnswer": "Bạn đi đến trường bằng phương tiện gì? Tôi đi xe taxi."
     },
@@ -1706,10 +2542,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 你____去学校？我坐出租车去。",
       "questionPinyin": "Nǐ ____ qù xuéxiào? Wǒ zuò chūzūchē qù.",
       "options": [
-        "老师",
-        "天气",
-        "作业",
-        "怎么"
+        "多大",
+        "怎么",
+        "下雨",
+        "作业"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "多大",
+          "pinyin": "duō dà",
+          "meaning": "bao nhiêu tuổi"
+        },
+        {
+          "word": "怎么",
+          "pinyin": "zěnme",
+          "meaning": "như thế nào"
+        },
+        {
+          "word": "下雨",
+          "pinyin": "xiàyǔ",
+          "meaning": "mưa"
+        },
+        {
+          "word": "作业",
+          "pinyin": "zuòyè",
+          "meaning": "bài tập"
+        }
       ],
       "correctAnswer": "怎么",
       "explanation": "Từ cần điền là \"怎么\". Cả câu hoàn chỉnh là: \"你怎么去学校？我坐出租车去。\" (Nǐ zěnme qù xuéxiào? Wǒ zuò chūzūchē qù.) - Bạn đi đến trường bằng phương tiện gì? Tôi đi xe taxi.."
@@ -1743,10 +2601,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"他每天早上都跑步半个小时。\" (Tā měitiān zǎoshang dōu pǎobù bàn ge xiǎoshí.) có nghĩa là gì?",
       "options": [
-        "Chúng ta đi máy bay đi du lịch nhé, được không?",
+        "Sau khi thức dậy, tôi rửa mặt trước rồi mới ăn sáng.",
+        "Tạm biệt! Ngày mai gặp lại!",
         "Mỗi buổi sáng anh ấy đều chạy bộ nửa tiếng đồng hồ.",
-        "Xin hỏi, quý tính của ngài là gì?",
-        "Chào bạn! Rất vui được quen biết bạn."
+        "Không vấn đề gì, việc này cứ để tôi lo."
       ],
       "correctAnswer": "Mỗi buổi sáng anh ấy đều chạy bộ nửa tiếng đồng hồ."
     },
@@ -1754,10 +2612,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 他____早上都跑步半个小时。",
       "questionPinyin": "Tā ____ zǎoshang dōu pǎobù bàn ge xiǎoshí.",
       "options": [
-        "每天",
-        "水果",
-        "天气",
-        "怎么"
+        "早上",
+        "工作",
+        "欢迎",
+        "每天"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "早上",
+          "pinyin": "zǎoshang",
+          "meaning": "buổi sáng"
+        },
+        {
+          "word": "工作",
+          "pinyin": "gōngzuò",
+          "meaning": "làm việc"
+        },
+        {
+          "word": "欢迎",
+          "pinyin": "huānyíng",
+          "meaning": "hoan nghênh"
+        },
+        {
+          "word": "每天",
+          "pinyin": "měitiān",
+          "meaning": "mỗi ngày"
+        }
       ],
       "correctAnswer": "每天",
       "explanation": "Từ cần điền là \"每天\". Cả câu hoàn chỉnh là: \"他每天早上都跑步半个小时。\" (Tā měitiān zǎoshang dōu pǎobù bàn ge xiǎoshí.) - Mỗi buổi sáng anh ấy đều chạy bộ nửa tiếng đồng hồ.."
@@ -1786,10 +2666,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"我们坐飞机去旅游，好吗？\" (Wǒmen zuò fēijī qù lǚyóu, hǎo ma?) có nghĩa là gì?",
       "options": [
-        "Thời tiết hôm nay thế nào? Hôm nay rất lạnh.",
-        "Xin hỏi, đi đến ga tàu hỏa thì đi đường nào?",
-        "Chúng ta đi máy bay đi du lịch nhé, được không?",
-        "Táo này bao nhiêu tiền một cân (500g)?"
+        "Để tôi giới thiệu một chút về bạn của tôi.",
+        "Thịt cừu của quán ăn này thật là ngon!",
+        "Xin lỗi! Không sao đâu.",
+        "Chúng ta đi máy bay đi du lịch nhé, được không?"
       ],
       "correctAnswer": "Chúng ta đi máy bay đi du lịch nhé, được không?"
     },
@@ -1797,10 +2677,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 我们坐____去旅游，好吗？",
       "questionPinyin": "Wǒmen zuò ____ qù lǚyóu, hǎo ma?",
       "options": [
-        "飞机",
-        "什么",
-        "名字",
-        "学生"
+        "中国",
+        "北京",
+        "眼睛",
+        "飞机"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "中国",
+          "pinyin": "Zhōngguó",
+          "meaning": "Trung Quốc"
+        },
+        {
+          "word": "北京",
+          "pinyin": "Běijīng",
+          "meaning": "Bắc Kinh"
+        },
+        {
+          "word": "眼睛",
+          "pinyin": "yǎnjing",
+          "meaning": "đôi mắt"
+        },
+        {
+          "word": "飞机",
+          "pinyin": "fēijī",
+          "meaning": "máy bay"
+        }
       ],
       "correctAnswer": "飞机",
       "explanation": "Từ cần điền là \"飞机\". Cả câu hoàn chỉnh là: \"我们坐飞机去旅游，好吗？\" (Wǒmen zuò fēijī qù lǚyóu, hǎo ma?) - Chúng ta đi máy bay đi du lịch nhé, được không?."
@@ -1835,9 +2737,9 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Câu tiếng Trung \"起床以后，我先洗脸再吃早饭。\" (Qǐchuáng yǐhòu, wǒ xiān xǐliǎn zài chī zǎofàn.) có nghĩa là gì?",
       "options": [
         "Sau khi thức dậy, tôi rửa mặt trước rồi mới ăn sáng.",
-        "Thịt cừu của quán ăn này thật là ngon!",
-        "Tiếng Trung của anh ấy nói rất tốt.",
-        "Hôm nay thứ mấy? Hôm nay thứ Sáu."
+        "Nhà bạn có mấy người?",
+        "Đã lâu không gặp, dạo này bạn khỏe không?",
+        "Chào buổi sáng, thầy giáo!"
       ],
       "correctAnswer": "Sau khi thức dậy, tôi rửa mặt trước rồi mới ăn sáng."
     },
@@ -1845,10 +2747,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: ____以后，我先洗脸再吃早饭。",
       "questionPinyin": "____ yǐhòu, wǒ xiān xǐliǎn zài chī zǎofàn.",
       "options": [
-        "起床",
-        "足球",
-        "怎么",
-        "名字"
+        "下雨",
+        "飞机",
+        "前面",
+        "起床"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "下雨",
+          "pinyin": "xiàyǔ",
+          "meaning": "mưa"
+        },
+        {
+          "word": "飞机",
+          "pinyin": "fēijī",
+          "meaning": "máy bay"
+        },
+        {
+          "word": "前面",
+          "pinyin": "qiánmiàn",
+          "meaning": "phía trước"
+        },
+        {
+          "word": "起床",
+          "pinyin": "qǐchuáng",
+          "meaning": "thức dậy"
+        }
       ],
       "correctAnswer": "起床",
       "explanation": "Từ cần điền là \"起床\". Cả câu hoàn chỉnh là: \"起床以后，我先洗脸再吃早饭。\" (Qǐchuáng yǐhòu, wǒ xiān xǐliǎn zài chī zǎofàn.) - Sau khi thức dậy, tôi rửa mặt trước rồi mới ăn sáng.."
@@ -1878,9 +2802,9 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Câu tiếng Trung \"他很喜欢看中国电影。\" (Tā hěn xǐhuan kàn Zhōngguó diànyǐng.) có nghĩa là gì?",
       "options": [
         "Anh ấy rất thích xem phim điện ảnh Trung Quốc.",
-        "Đừng nói chuyện nữa, xin mọi người hãy nghe tôi nói.",
-        "Bạn đi đến trường bằng phương tiện gì? Tôi đi xe taxi.",
-        "Cô ấy khiêu vũ rất đẹp / múa rất giỏi."
+        "Thịt cừu của quán ăn này thật là ngon!",
+        "Tôi là người Việt Nam, anh ấy học tiếng Trung ở Trung Quốc.",
+        "Ngày mai là ngày mùng 10 tháng 9."
       ],
       "correctAnswer": "Anh ấy rất thích xem phim điện ảnh Trung Quốc."
     },
@@ -1889,9 +2813,31 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "questionPinyin": "Tā hěn ____ kàn Zhōngguó diànyǐng.",
       "options": [
         "喜欢",
-        "作业",
-        "名字",
-        "怎么"
+        "旁边",
+        "最近",
+        "认识"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "喜欢",
+          "pinyin": "xǐhuan",
+          "meaning": "thích"
+        },
+        {
+          "word": "旁边",
+          "pinyin": "pángbiān",
+          "meaning": "bên cạnh"
+        },
+        {
+          "word": "最近",
+          "pinyin": "zuìjìn",
+          "meaning": "dạo gần đây"
+        },
+        {
+          "word": "认识",
+          "pinyin": "rènshi",
+          "meaning": "quen biết"
+        }
       ],
       "correctAnswer": "喜欢",
       "explanation": "Từ cần điền là \"喜欢\". Cả câu hoàn chỉnh là: \"他很喜欢看中国电影。\" (Tā hěn xǐhuan kàn Zhōngguó diànyǐng.) - Anh ấy rất thích xem phim điện ảnh Trung Quốc.."
@@ -1920,10 +2866,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"你平时有什么爱好？\" (Nǐ píngshí yǒu shénme àihào?) có nghĩa là gì?",
       "options": [
-        "Tôi bị cảm rồi, hôm nay muốn ở nhà nghỉ ngơi.",
         "Bình thường bạn có sở thích gì?",
-        "Đừng nói chuyện nữa, xin mọi người hãy nghe tôi nói.",
-        "Trường học ở phía trước bệnh viện."
+        "Chào bạn! Rất vui được quen biết bạn.",
+        "Ngày mai là ngày mùng 10 tháng 9.",
+        "Táo này bao nhiêu tiền một cân (500g)?"
       ],
       "correctAnswer": "Bình thường bạn có sở thích gì?"
     },
@@ -1931,10 +2877,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 你____有什么爱好？",
       "questionPinyin": "Nǐ ____ yǒu shénme àihào?",
       "options": [
+        "今天",
+        "下雨",
         "平时",
-        "名字",
-        "休息",
-        "喜欢"
+        "今年"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "今天",
+          "pinyin": "jīntiān",
+          "meaning": "hôm nay"
+        },
+        {
+          "word": "下雨",
+          "pinyin": "xiàyǔ",
+          "meaning": "mưa"
+        },
+        {
+          "word": "平时",
+          "pinyin": "píngshí",
+          "meaning": "bình thường, ngày thường"
+        },
+        {
+          "word": "今年",
+          "pinyin": "jīnnián",
+          "meaning": "năm nay"
+        }
       ],
       "correctAnswer": "平时",
       "explanation": "Từ cần điền là \"平时\". Cả câu hoàn chỉnh là: \"你平时有什么爱好？\" (Nǐ píngshí yǒu shénme àihào?) - Bình thường bạn có sở thích gì?."
@@ -1963,9 +2931,9 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"我非常喜欢打篮球和唱歌。\" (Wǒ fēicháng xǐhuan dǎ lánqiú hé chànggē.) có nghĩa là gì?",
       "options": [
-        "Đi đến đó bằng xe buýt cần mất bao lâu?",
-        "Đi về phía trước, đến đèn giao thông thì rẽ phải.",
-        "Nhà tôi cách công ty không xa lắm.",
+        "Đã lâu không gặp, dạo này bạn khỏe không?",
+        "Phục vụ, xin cho chúng tôi một cuốn thực đơn.",
+        "Bạn bao nhiêu tuổi rồi? (hỏi người cùng lứa tuổi hoặc thanh niên)",
         "Tôi vô cùng thích chơi bóng rổ và hát ca."
       ],
       "correctAnswer": "Tôi vô cùng thích chơi bóng rổ và hát ca."
@@ -1974,10 +2942,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 我非常喜欢____和唱歌。",
       "questionPinyin": "Wǒ fēicháng xǐhuan ____ hé chànggē.",
       "options": [
-        "喜欢",
-        "为什么",
-        "洗手间",
-        "打篮球"
+        "出租车",
+        "打篮球",
+        "火车站",
+        "洗手间"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "出租车",
+          "pinyin": "chūzūchē",
+          "meaning": "xe taxi"
+        },
+        {
+          "word": "打篮球",
+          "pinyin": "dǎ lánqiú",
+          "meaning": "chơi bóng rổ"
+        },
+        {
+          "word": "火车站",
+          "pinyin": "huǒchēzhàn",
+          "meaning": "ga tàu hỏa"
+        },
+        {
+          "word": "洗手间",
+          "pinyin": "xǐshǒujiān",
+          "meaning": "nhà vệ sinh"
+        }
       ],
       "correctAnswer": "打篮球",
       "explanation": "Từ cần điền là \"打篮球\". Cả câu hoàn chỉnh là: \"我非常喜欢打篮球和唱歌。\" (Wǒ fēicháng xǐhuan dǎ lánqiú hé chànggē.) - Tôi vô cùng thích chơi bóng rổ và hát ca.."
@@ -2001,10 +2991,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"她跳舞跳得非常好。\" (Tā tiàowǔ tiào de fēicháng hǎo.) có nghĩa là gì?",
       "options": [
-        "Bạn là người nước nào?",
-        "Sách ở trên bàn, máy tính ở bên cạnh quyển sách.",
-        "Đi về phía trước, đến đèn giao thông thì rẽ phải.",
-        "Cô ấy khiêu vũ rất đẹp / múa rất giỏi."
+        "Cô ấy khiêu vũ rất đẹp / múa rất giỏi.",
+        "Chúng mình cùng nhau đi đá bóng nhé!",
+        "Tạm biệt! Ngày mai gặp lại!",
+        "Tôi bị cảm rồi, hôm nay muốn ở nhà nghỉ ngơi."
       ],
       "correctAnswer": "Cô ấy khiêu vũ rất đẹp / múa rất giỏi."
     },
@@ -2012,10 +3002,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 她____跳得非常好。",
       "questionPinyin": "Tā ____ tiào de fēicháng hǎo.",
       "options": [
-        "休息",
-        "足球",
-        "可以",
+        "飞机",
+        "名字",
+        "作业",
         "跳舞"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "飞机",
+          "pinyin": "fēijī",
+          "meaning": "máy bay"
+        },
+        {
+          "word": "名字",
+          "pinyin": "míngzi",
+          "meaning": "tên gọi"
+        },
+        {
+          "word": "作业",
+          "pinyin": "zuòyè",
+          "meaning": "bài tập"
+        },
+        {
+          "word": "跳舞",
+          "pinyin": "tiàowǔ",
+          "meaning": "khiêu vũ, múa"
+        }
       ],
       "correctAnswer": "跳舞",
       "explanation": "Từ cần điền là \"跳舞\". Cả câu hoàn chỉnh là: \"她跳舞跳得非常好。\" (Tā tiàowǔ tiào de fēicháng hǎo.) - Cô ấy khiêu vũ rất đẹp / múa rất giỏi.."
@@ -2039,10 +3051,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"洗手间在哪儿？\" (Xǐshǒujiān zài nǎr?) có nghĩa là gì?",
       "options": [
+        "Ngày mai sẽ mưa to, ra ngoài nhớ mang ô/dù nhé.",
         "Nhà vệ sinh ở đâu vậy?",
-        "Bạn đi đến trường bằng phương tiện gì? Tôi đi xe taxi.",
-        "Tôi là người Việt Nam, anh ấy học tiếng Trung ở Trung Quốc.",
-        "Tôi tên là Lý Nguyệt, tôi là học sinh."
+        "Đừng nói chuyện nữa, xin mọi người hãy nghe tôi nói.",
+        "Bởi vì trời mưa, cho nên hôm nay không đi học."
       ],
       "correctAnswer": "Nhà vệ sinh ở đâu vậy?"
     },
@@ -2050,10 +3062,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: ____在哪儿？",
       "questionPinyin": "____ zài nǎr?",
       "options": [
-        "洗手间",
-        "为什么",
-        "足球",
-        "什么"
+        "踢足球",
+        "打篮球",
+        "火车站",
+        "洗手间"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "踢足球",
+          "pinyin": "tī zúqiú",
+          "meaning": "đá bóng"
+        },
+        {
+          "word": "打篮球",
+          "pinyin": "dǎ lánqiú",
+          "meaning": "chơi bóng rổ"
+        },
+        {
+          "word": "火车站",
+          "pinyin": "huǒchēzhàn",
+          "meaning": "ga tàu hỏa"
+        },
+        {
+          "word": "洗手间",
+          "pinyin": "xǐshǒujiān",
+          "meaning": "nhà vệ sinh"
+        }
       ],
       "correctAnswer": "洗手间",
       "explanation": "Từ cần điền là \"洗手间\". Cả câu hoàn chỉnh là: \"洗手间在哪儿？\" (Xǐshǒujiān zài nǎr?) - Nhà vệ sinh ở đâu vậy?."
@@ -2077,10 +3111,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"请问，去火车站怎么走？\" (Qǐngwèn, qù huǒchēzhàn zěnme zǒu?) có nghĩa là gì?",
       "options": [
-        "Hôm nay thứ mấy? Hôm nay thứ Sáu.",
-        "Táo này bao nhiêu tiền một cân (500g)?",
-        "Tôi tên là Lý Nguyệt, tôi là học sinh.",
-        "Xin hỏi, đi đến ga tàu hỏa thì đi đường nào?"
+        "Xin hỏi, đi đến ga tàu hỏa thì đi đường nào?",
+        "Để tôi giới thiệu một chút về bạn của tôi.",
+        "Đi về phía trước, đến đèn giao thông thì rẽ phải.",
+        "Bạn đi đến trường bằng phương tiện gì? Tôi đi xe taxi."
       ],
       "correctAnswer": "Xin hỏi, đi đến ga tàu hỏa thì đi đường nào?"
     },
@@ -2088,10 +3122,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 请问，去____怎么走？",
       "questionPinyin": "Qǐngwèn, qù ____ zěnme zǒu?",
       "options": [
-        "为什么",
-        "洗手间",
+        "打篮球",
+        "出租车",
         "火车站",
-        "后面"
+        "洗手间"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "打篮球",
+          "pinyin": "dǎ lánqiú",
+          "meaning": "chơi bóng rổ"
+        },
+        {
+          "word": "出租车",
+          "pinyin": "chūzūchē",
+          "meaning": "xe taxi"
+        },
+        {
+          "word": "火车站",
+          "pinyin": "huǒchēzhàn",
+          "meaning": "ga tàu hỏa"
+        },
+        {
+          "word": "洗手间",
+          "pinyin": "xǐshǒujiān",
+          "meaning": "nhà vệ sinh"
+        }
       ],
       "correctAnswer": "火车站",
       "explanation": "Từ cần điền là \"火车站\". Cả câu hoàn chỉnh là: \"请问，去火车站怎么走？\" (Qǐngwèn, qù huǒchēzhàn zěnme zǒu?) - Xin hỏi, đi đến ga tàu hỏa thì đi đường nào?."
@@ -2120,10 +3176,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"超市就在那家银行旁边。\" (Chāoshì jiù zài nà jiā yínháng pángbiān.) có nghĩa là gì?",
       "options": [
-        "Bạn bao nhiêu tuổi rồi? (hỏi người cùng lứa tuổi hoặc thanh niên)",
         "Siêu thị nằm ngay bên cạnh ngân hàng kia.",
-        "Bởi vì trời mưa, cho nên hôm nay không đi học.",
-        "8 giờ sáng mai bắt đầu thi."
+        "Hôm nay thứ mấy? Hôm nay thứ Sáu.",
+        "Chúng ta gặp nhau lúc 3 rưỡi chiều trước cổng trường.",
+        "Tôi làm việc ở bệnh viện, tôi là bác sĩ."
       ],
       "correctAnswer": "Siêu thị nằm ngay bên cạnh ngân hàng kia."
     },
@@ -2131,10 +3187,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 超市____在那家银行旁边。",
       "questionPinyin": "Chāoshì ____ zài nà jiā yínháng pángbiān.",
       "options": [
-        "高",
-        "几",
+        "喝",
+        "贵",
         "就",
-        "贵"
+        "几"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "喝",
+          "pinyin": "hē",
+          "meaning": "uống"
+        },
+        {
+          "word": "贵",
+          "pinyin": "guì",
+          "meaning": "đắt"
+        },
+        {
+          "word": "就",
+          "pinyin": "jiù",
+          "meaning": "ngay, chính là"
+        },
+        {
+          "word": "几",
+          "pinyin": "jǐ",
+          "meaning": "mấy"
+        }
       ],
       "correctAnswer": "就",
       "explanation": "Từ cần điền là \"就\". Cả câu hoàn chỉnh là: \"超市就在那家银行旁边。\" (Chāoshì jiù zài nà jiā yínháng pángbiān.) - Siêu thị nằm ngay bên cạnh ngân hàng kia.."
@@ -2163,9 +3241,9 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"我可以坐这里吗？当然可以。\" (Wǒ kěyǐ zuò zhèlǐ ma? Dāngrán kěyǐ.) có nghĩa là gì?",
       "options": [
-        "Mắt của chị gái rất to, trông rất xinh xắn.",
-        "Xin hỏi, quý tính của ngài là gì?",
-        "Siêu thị nằm ngay bên cạnh ngân hàng kia.",
+        "Mời uống trà, mời ngồi!",
+        "Chào bạn! Rất vui được quen biết bạn.",
+        "Đừng nói chuyện nữa, xin mọi người hãy nghe tôi nói.",
         "Tôi có thể ngồi ở đây không? Đương nhiên được."
       ],
       "correctAnswer": "Tôi có thể ngồi ở đây không? Đương nhiên được."
@@ -2174,10 +3252,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 我可以坐____吗？当然可以。",
       "questionPinyin": "Wǒ kěyǐ zuò ____ ma? Dāngrán kěyǐ.",
       "options": [
-        "什么",
-        "喜欢",
         "这里",
-        "怎么"
+        "明天",
+        "爱好",
+        "欢迎"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "这里",
+          "pinyin": "zhèlǐ",
+          "meaning": "ở đây, chỗ này"
+        },
+        {
+          "word": "明天",
+          "pinyin": "míngtiān",
+          "meaning": "ngày mai"
+        },
+        {
+          "word": "爱好",
+          "pinyin": "àihào",
+          "meaning": "sở thích"
+        },
+        {
+          "word": "欢迎",
+          "pinyin": "huānyíng",
+          "meaning": "hoan nghênh"
+        }
       ],
       "correctAnswer": "这里",
       "explanation": "Từ cần điền là \"这里\". Cả câu hoàn chỉnh là: \"我可以坐这里吗？当然可以。\" (Wǒ kěyǐ zuò zhèlǐ ma? Dāngrán kěyǐ.) - Tôi có thể ngồi ở đây không? Đương nhiên được.."
@@ -2211,10 +3311,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"别说话，请大家听我说。\" (Bié shuōhuà, qǐng dàjiā tīng wǒ shuō.) có nghĩa là gì?",
       "options": [
+        "Ngày mai sẽ mưa to, ra ngoài nhớ mang ô/dù nhé.",
         "Đừng nói chuyện nữa, xin mọi người hãy nghe tôi nói.",
-        "Vô cùng cảm ơn bạn! Không có gì đâu.",
-        "Anh ấy rất thích xem phim điện ảnh Trung Quốc.",
-        "Đi về phía trước, đến đèn giao thông thì rẽ phải."
+        "Xin hỏi, quý tính của ngài là gì?",
+        "Bạn là người nước nào?"
       ],
       "correctAnswer": "Đừng nói chuyện nữa, xin mọi người hãy nghe tôi nói."
     },
@@ -2222,10 +3322,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: ____说话，请大家听我说。",
       "questionPinyin": "____ shuōhuà, qǐng dàjiā tīng wǒ shuō.",
       "options": [
-        "别",
-        "高",
-        "岁",
-        "几"
+        "哪",
+        "茶",
+        "喝",
+        "别"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "哪",
+          "pinyin": "nǎ",
+          "meaning": "nào"
+        },
+        {
+          "word": "茶",
+          "pinyin": "chá",
+          "meaning": "trà"
+        },
+        {
+          "word": "喝",
+          "pinyin": "hē",
+          "meaning": "uống"
+        },
+        {
+          "word": "别",
+          "pinyin": "bié",
+          "meaning": "đừng"
+        }
       ],
       "correctAnswer": "别",
       "explanation": "Từ cần điền là \"别\". Cả câu hoàn chỉnh là: \"别说话，请大家听我说。\" (Bié shuōhuà, qǐng dàjiā tīng wǒ shuō.) - Đừng nói chuyện nữa, xin mọi người hãy nghe tôi nói.."
@@ -2254,10 +3376,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"你能帮我买一杯咖啡吗？\" (Nǐ néng bāng wǒ mǎi yì bēi kāfēi ma?) có nghĩa là gì?",
       "options": [
-        "Chào bạn! Rất vui được quen biết bạn.",
-        "Bởi vì trời mưa, cho nên hôm nay không đi học.",
-        "Để tôi giới thiệu một chút về bạn của tôi.",
-        "Bạn có thể giúp tôi mua một ly cà phê không?"
+        "Bạn có thể giúp tôi mua một ly cà phê không?",
+        "8 giờ sáng mai bắt đầu thi.",
+        "Chào buổi sáng, thầy giáo!",
+        "Năm nay tôi 22 tuổi."
       ],
       "correctAnswer": "Bạn có thể giúp tôi mua một ly cà phê không?"
     },
@@ -2265,10 +3387,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 你能帮我买一____咖啡吗？",
       "questionPinyin": "Nǐ néng bāng wǒ mǎi yì ____ kāfēi ma?",
       "options": [
+        "贵",
         "岁",
         "几",
-        "高",
         "杯"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "贵",
+          "pinyin": "guì",
+          "meaning": "đắt"
+        },
+        {
+          "word": "岁",
+          "pinyin": "suì",
+          "meaning": "tuổi"
+        },
+        {
+          "word": "几",
+          "pinyin": "jǐ",
+          "meaning": "mấy"
+        },
+        {
+          "word": "杯",
+          "pinyin": "bēi",
+          "meaning": "cốc, ly (lượng từ)"
+        }
       ],
       "correctAnswer": "杯",
       "explanation": "Từ cần điền là \"杯\". Cả câu hoàn chỉnh là: \"你能帮我买一杯咖啡吗？\" (Nǐ néng bāng wǒ mǎi yì bēi kāfēi ma?) - Bạn có thể giúp tôi mua một ly cà phê không?."
@@ -2297,10 +3441,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"太感谢你了！不客气。\" (Tài gǎnxiè nǐ le! Bú kèqi.) có nghĩa là gì?",
       "options": [
-        "Vô cùng cảm ơn bạn! Không có gì đâu.",
-        "Tôi là người Việt Nam, anh ấy học tiếng Trung ở Trung Quốc.",
-        "Ngoài đọc sách ra, tôi còn biết chơi đàn dương cầm.",
-        "Hôm nay thứ mấy? Hôm nay thứ Sáu."
+        "Bạn biết nói tiếng Anh và tiếng Trung không?",
+        "Bạn là người nước nào?",
+        "Bạn đi đến trường bằng phương tiện gì? Tôi đi xe taxi.",
+        "Vô cùng cảm ơn bạn! Không có gì đâu."
       ],
       "correctAnswer": "Vô cùng cảm ơn bạn! Không có gì đâu."
     },
@@ -2308,10 +3452,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 太____你了！不客气。",
       "questionPinyin": "Tài ____ nǐ le! Bú kèqi.",
       "options": [
-        "旁边",
-        "前面",
+        "名字",
+        "作业",
         "感谢",
-        "医生"
+        "怎么"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "名字",
+          "pinyin": "míngzi",
+          "meaning": "tên gọi"
+        },
+        {
+          "word": "作业",
+          "pinyin": "zuòyè",
+          "meaning": "bài tập"
+        },
+        {
+          "word": "感谢",
+          "pinyin": "gǎnxiè",
+          "meaning": "cảm tạ, cảm ơn"
+        },
+        {
+          "word": "怎么",
+          "pinyin": "zěnme",
+          "meaning": "như thế nào"
+        }
       ],
       "correctAnswer": "感谢",
       "explanation": "Từ cần điền là \"感谢\". Cả câu hoàn chỉnh là: \"太感谢你了！不客气。\" (Tài gǎnxiè nǐ le! Bú kèqi.) - Vô cùng cảm ơn bạn! Không có gì đâu.."
@@ -2340,10 +3506,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"对不起！没关系。\" (Duìbuqǐ! Méi guānxi.) có nghĩa là gì?",
       "options": [
+        "Bạn làm việc ở đâu?",
+        "Chào bạn! Rất vui được quen biết bạn.",
         "Xin lỗi! Không sao đâu.",
-        "Bạn có thể giúp tôi mua một ly cà phê không?",
-        "Nhà bạn có mấy người?",
-        "Bạn làm việc ở đâu?"
+        "Bộ quần áo này tổng cộng 100 tệ."
       ],
       "correctAnswer": "Xin lỗi! Không sao đâu."
     },
@@ -2352,9 +3518,31 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "questionPinyin": "____! Méi guānxi.",
       "options": [
         "对不起",
-        "为什么",
-        "洗手间",
-        "后面"
+        "火车站",
+        "踢足球",
+        "出租车"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "对不起",
+          "pinyin": "duìbuqǐ",
+          "meaning": "xin lỗi"
+        },
+        {
+          "word": "火车站",
+          "pinyin": "huǒchēzhàn",
+          "meaning": "ga tàu hỏa"
+        },
+        {
+          "word": "踢足球",
+          "pinyin": "tī zúqiú",
+          "meaning": "đá bóng"
+        },
+        {
+          "word": "出租车",
+          "pinyin": "chūzūchē",
+          "meaning": "xe taxi"
+        }
       ],
       "correctAnswer": "对不起",
       "explanation": "Từ cần điền là \"对不起\". Cả câu hoàn chỉnh là: \"对不起！没关系。\" (Duìbuqǐ! Méi guānxi.) - Xin lỗi! Không sao đâu.."
@@ -2384,9 +3572,9 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Câu tiếng Trung \"现在差五分八点，快迟到了。\" (Xiànzài chà wǔ fēn bā diǎn, kuài chídào le.) có nghĩa là gì?",
       "options": [
         "Để tôi giới thiệu một chút về bạn của tôi.",
-        "Tôi là người Việt Nam, anh ấy học tiếng Trung ở Trung Quốc.",
-        "Mỗi buổi sáng anh ấy đều chạy bộ nửa tiếng đồng hồ.",
-        "Bây giờ là 8 giờ kém 5, sắp muộn rồi."
+        "Bây giờ là 8 giờ kém 5, sắp muộn rồi.",
+        "Trường học ở phía trước bệnh viện.",
+        "Chào buổi sáng, thầy giáo!"
       ],
       "correctAnswer": "Bây giờ là 8 giờ kém 5, sắp muộn rồi."
     },
@@ -2394,10 +3582,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 现在____五分八点，快迟到了。",
       "questionPinyin": "Xiànzài ____ wǔ fēn bā diǎn, kuài chídào le.",
       "options": [
-        "岁",
-        "几",
-        "差",
-        "帮"
+        "贵",
+        "喝",
+        "想",
+        "差"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "贵",
+          "pinyin": "guì",
+          "meaning": "đắt"
+        },
+        {
+          "word": "喝",
+          "pinyin": "hē",
+          "meaning": "uống"
+        },
+        {
+          "word": "想",
+          "pinyin": "xiǎng",
+          "meaning": "muốn, nhớ"
+        },
+        {
+          "word": "差",
+          "pinyin": "chà",
+          "meaning": "kém, thiếu"
+        }
       ],
       "correctAnswer": "差",
       "explanation": "Từ cần điền là \"差\". Cả câu hoàn chỉnh là: \"现在差五分八点，快迟到了。\" (Xiànzài chà wǔ fēn bā diǎn, kuài chídào le.) - Bây giờ là 8 giờ kém 5, sắp muộn rồi.."
@@ -2431,10 +3641,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"今天天气怎么样？今天很冷。\" (Jīntiān tiānqì zěnmeyàng? Jīntiān hěn lěng.) có nghĩa là gì?",
       "options": [
-        "Bạn muốn ăn gì? Tôi muốn ăn món ăn Trung Quốc.",
-        "Đừng nói chuyện nữa, xin mọi người hãy nghe tôi nói.",
+        "Bạn đi đến trường bằng phương tiện gì? Tôi đi xe taxi.",
         "Thời tiết hôm nay thế nào? Hôm nay rất lạnh.",
-        "Hoan nghênh các bạn đã đến Bắc Kinh!"
+        "Thưa thầy, em nghe không hiểu câu nói này.",
+        "Tôi có thể ngồi ở đây không? Đương nhiên được."
       ],
       "correctAnswer": "Thời tiết hôm nay thế nào? Hôm nay rất lạnh."
     },
@@ -2442,10 +3652,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 今天____怎么样？今天很冷。",
       "questionPinyin": "Jīntiān ____ zěnmeyàng? Jīntiān hěn lěng.",
       "options": [
-        "前面",
         "天气",
-        "名字",
-        "汉语"
+        "飞机",
+        "现在",
+        "工作"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "天气",
+          "pinyin": "tiānqì",
+          "meaning": "thời tiết"
+        },
+        {
+          "word": "飞机",
+          "pinyin": "fēijī",
+          "meaning": "máy bay"
+        },
+        {
+          "word": "现在",
+          "pinyin": "xiànzài",
+          "meaning": "bây giờ"
+        },
+        {
+          "word": "工作",
+          "pinyin": "gōngzuò",
+          "meaning": "làm việc"
+        }
       ],
       "correctAnswer": "天气",
       "explanation": "Từ cần điền là \"天气\". Cả câu hoàn chỉnh là: \"今天天气怎么样？今天很冷。\" (Jīntiān tiānqì zěnmeyàng? Jīntiān hěn lěng.) - Thời tiết hôm nay thế nào? Hôm nay rất lạnh.."
@@ -2475,9 +3707,9 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Câu tiếng Trung \"明天会下大雨，出门要带雨伞。\" (Míngtiān huì xià dàyǔ, chūmén yào dài yǔsǎn.) có nghĩa là gì?",
       "options": [
         "Ngày mai sẽ mưa to, ra ngoài nhớ mang ô/dù nhé.",
-        "Hoan nghênh các bạn đã đến Bắc Kinh!",
-        "Xin hỏi, quý tính của ngài là gì?",
-        "Thời tiết hôm nay thế nào? Hôm nay rất lạnh."
+        "Tôi là người Việt Nam, anh ấy học tiếng Trung ở Trung Quốc.",
+        "Trường học ở phía trước bệnh viện.",
+        "Bạn đi đến trường bằng phương tiện gì? Tôi đi xe taxi."
       ],
       "correctAnswer": "Ngày mai sẽ mưa to, ra ngoài nhớ mang ô/dù nhé."
     },
@@ -2485,10 +3717,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: ____会下大雨，出门要带雨伞。",
       "questionPinyin": "Míngtiān huì xià dàyǔ, chūmén yào dài yǔsǎn.",
       "options": [
-        "足球",
-        "医生",
-        "前面",
+        "什么",
+        "多少",
+        "桌子",
         "明天"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "什么",
+          "pinyin": "shénme",
+          "meaning": "cái gì"
+        },
+        {
+          "word": "多少",
+          "pinyin": "duōshao",
+          "meaning": "bao nhiêu"
+        },
+        {
+          "word": "桌子",
+          "pinyin": "zhuōzi",
+          "meaning": "cái bàn"
+        },
+        {
+          "word": "明天",
+          "pinyin": "míngtiān",
+          "meaning": "ngày mai"
+        }
       ],
       "correctAnswer": "明天",
       "explanation": "Từ cần điền là \"明天\". Cả câu hoàn chỉnh là: \"明天会下大雨，出门要带雨伞。\" (Míngtiān huì xià dàyǔ, chūmén yào dài yǔsǎn.) - Ngày mai sẽ mưa to, ra ngoài nhớ mang ô/dù nhé.."
@@ -2512,10 +3766,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"你身体怎么样？好些了吗？\" (Nǐ shēntǐ zěnmeyàng? Hǎo xiē le ma?) có nghĩa là gì?",
       "options": [
-        "Sau khi thức dậy, tôi rửa mặt trước rồi mới ăn sáng.",
-        "Tôi bị cảm rồi, hôm nay muốn ở nhà nghỉ ngơi.",
-        "Sức khỏe của bạn thế nào? Đã đỡ hơn chút nào chưa?",
-        "Đừng nói chuyện nữa, xin mọi người hãy nghe tôi nói."
+        "Bạn tên là gì?",
+        "8 giờ sáng mai bắt đầu thi.",
+        "Bạn đi đến trường bằng phương tiện gì? Tôi đi xe taxi.",
+        "Sức khỏe của bạn thế nào? Đã đỡ hơn chút nào chưa?"
       ],
       "correctAnswer": "Sức khỏe của bạn thế nào? Đã đỡ hơn chút nào chưa?"
     },
@@ -2523,10 +3777,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 你____怎么样？好些了吗？",
       "questionPinyin": "Nǐ ____ zěnmeyàng? Hǎo xiē le ma?",
       "options": [
-        "学生",
-        "休息",
-        "足球",
-        "身体"
+        "身体",
+        "非常",
+        "越南",
+        "每天"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "身体",
+          "pinyin": "shēntǐ",
+          "meaning": "thân thể, sức khỏe"
+        },
+        {
+          "word": "非常",
+          "pinyin": "fēicháng",
+          "meaning": "vô cùng, rất"
+        },
+        {
+          "word": "越南",
+          "pinyin": "Yuènán",
+          "meaning": "Việt Nam"
+        },
+        {
+          "word": "每天",
+          "pinyin": "měitiān",
+          "meaning": "mỗi ngày"
+        }
       ],
       "correctAnswer": "身体",
       "explanation": "Từ cần điền là \"身体\". Cả câu hoàn chỉnh là: \"你身体怎么样？好些了吗？\" (Nǐ shēntǐ zěnmeyàng? Hǎo xiē le ma?) - Sức khỏe của bạn thế nào? Đã đỡ hơn chút nào chưa?."
@@ -2555,10 +3831,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"我感冒了，今天想在家休息。\" (Wǒ gǎnmào le, jīntiān xiǎng zài jiā xiūxi.) có nghĩa là gì?",
       "options": [
-        "Chúng ta gặp nhau lúc 3 rưỡi chiều trước cổng trường.",
-        "Siêu thị nằm ngay bên cạnh ngân hàng kia.",
+        "Thịt cừu của quán ăn này thật là ngon!",
+        "Ngoài đọc sách ra, tôi còn biết chơi đàn dương cầm.",
         "Tôi bị cảm rồi, hôm nay muốn ở nhà nghỉ ngơi.",
-        "Bộ quần áo này tổng cộng 100 tệ."
+        "Năm nay tôi 22 tuổi."
       ],
       "correctAnswer": "Tôi bị cảm rồi, hôm nay muốn ở nhà nghỉ ngơi."
     },
@@ -2566,10 +3842,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 我____了，今天想在家休息。",
       "questionPinyin": "Wǒ ____ le, jīntiān xiǎng zài jiā xiūxi.",
       "options": [
-        "医生",
         "感冒",
-        "时间",
-        "中国"
+        "欢迎",
+        "前面",
+        "姐姐"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "感冒",
+          "pinyin": "gǎnmào",
+          "meaning": "cảm cúm"
+        },
+        {
+          "word": "欢迎",
+          "pinyin": "huānyíng",
+          "meaning": "hoan nghênh"
+        },
+        {
+          "word": "前面",
+          "pinyin": "qiánmiàn",
+          "meaning": "phía trước"
+        },
+        {
+          "word": "姐姐",
+          "pinyin": "jiějie",
+          "meaning": "chị gái"
+        }
       ],
       "correctAnswer": "感冒",
       "explanation": "Từ cần điền là \"感冒\". Cả câu hoàn chỉnh là: \"我感冒了，今天想在家休息。\" (Wǒ gǎnmào le, jīntiān xiǎng zài jiā xiūxi.) - Tôi bị cảm rồi, hôm nay muốn ở nhà nghỉ ngơi.."
@@ -2599,9 +3897,9 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Câu tiếng Trung \"老师，我听不懂这句话。\" (Lǎoshī, wǒ tīng bù dǒng zhè jù huà.) có nghĩa là gì?",
       "options": [
         "Thưa thầy, em nghe không hiểu câu nói này.",
-        "Thời tiết hôm nay thế nào? Hôm nay rất lạnh.",
-        "Tôi bị cảm rồi, hôm nay muốn ở nhà nghỉ ngơi.",
-        "Tôi có thể ngồi ở đây không? Đương nhiên được."
+        "Phục vụ, xin cho chúng tôi một cuốn thực đơn.",
+        "Để tôi giới thiệu một chút về bạn của tôi.",
+        "8 giờ sáng mai bắt đầu thi."
       ],
       "correctAnswer": "Thưa thầy, em nghe không hiểu câu nói này."
     },
@@ -2609,10 +3907,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 老师，我听不____这句话。",
       "questionPinyin": "Lǎoshī, wǒ tīng bù ____ zhè jù huà.",
       "options": [
-        "懂",
-        "帮",
-        "岁",
-        "高"
+        "家",
+        "贵",
+        "喝",
+        "懂"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "家",
+          "pinyin": "jiā",
+          "meaning": "gia đình"
+        },
+        {
+          "word": "贵",
+          "pinyin": "guì",
+          "meaning": "đắt"
+        },
+        {
+          "word": "喝",
+          "pinyin": "hē",
+          "meaning": "uống"
+        },
+        {
+          "word": "懂",
+          "pinyin": "dǒng",
+          "meaning": "hiểu"
+        }
       ],
       "correctAnswer": "懂",
       "explanation": "Từ cần điền là \"懂\". Cả câu hoàn chỉnh là: \"老师，我听不懂这句话。\" (Lǎoshī, wǒ tīng bù dǒng zhè jù huà.) - Thưa thầy, em nghe không hiểu câu nói này.."
@@ -2646,10 +3966,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"我已经把作业做完了。\" (Wǒ yǐjīng bǎ zuòyè zuò wán le.) có nghĩa là gì?",
       "options": [
-        "Tôi làm việc ở bệnh viện, tôi là bác sĩ.",
-        "Ngày mai là ngày mùng 10 tháng 9.",
+        "Chào bạn! Rất vui được quen biết bạn.",
         "Tôi đã làm xong bài tập về nhà rồi.",
-        "Đi đến đó bằng xe buýt cần mất bao lâu?"
+        "Chào buổi sáng, thầy giáo!",
+        "Bạn làm việc ở đâu?"
       ],
       "correctAnswer": "Tôi đã làm xong bài tập về nhà rồi."
     },
@@ -2657,10 +3977,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 我____把作业做完了。",
       "questionPinyin": "Wǒ ____ bǎ zuòyè zuò wán le.",
       "options": [
-        "名字",
-        "中国",
         "已经",
-        "学生"
+        "下雨",
+        "名字",
+        "唱歌"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "已经",
+          "pinyin": "yǐjīng",
+          "meaning": "đã"
+        },
+        {
+          "word": "下雨",
+          "pinyin": "xiàyǔ",
+          "meaning": "mưa"
+        },
+        {
+          "word": "名字",
+          "pinyin": "míngzi",
+          "meaning": "tên gọi"
+        },
+        {
+          "word": "唱歌",
+          "pinyin": "chànggē",
+          "meaning": "ca hát"
+        }
       ],
       "correctAnswer": "已经",
       "explanation": "Từ cần điền là \"已经\". Cả câu hoàn chỉnh là: \"我已经把作业做完了。\" (Wǒ yǐjīng bǎ zuòyè zuò wán le.) - Tôi đã làm xong bài tập về nhà rồi.."
@@ -2695,9 +4037,9 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Câu tiếng Trung \"这些水果很新鲜，也很甜。\" (Zhèxiē shuǐguǒ hěn xīnxiān, yě hěn tián.) có nghĩa là gì?",
       "options": [
         "Những loại hoa quả này rất tươi, cũng rất ngọt.",
-        "Nhà tôi có 4 người: bố, mẹ, anh trai và tôi.",
-        "Bởi vì trời mưa, cho nên hôm nay không đi học.",
-        "Hôm nay thứ mấy? Hôm nay thứ Sáu."
+        "Bộ quần áo này tổng cộng 100 tệ.",
+        "Hoan nghênh các bạn đã đến Bắc Kinh!",
+        "Xin hỏi, quý tính của ngài là gì?"
       ],
       "correctAnswer": "Những loại hoa quả này rất tươi, cũng rất ngọt."
     },
@@ -2706,9 +4048,31 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "questionPinyin": "Zhèxiē ____ hěn xīnxiān, yě hěn tián.",
       "options": [
         "水果",
-        "什么",
-        "多少",
-        "时间"
+        "眼睛",
+        "欢迎",
+        "今年"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "水果",
+          "pinyin": "shuǐguǒ",
+          "meaning": "hoa quả, trái cây"
+        },
+        {
+          "word": "眼睛",
+          "pinyin": "yǎnjing",
+          "meaning": "đôi mắt"
+        },
+        {
+          "word": "欢迎",
+          "pinyin": "huānyíng",
+          "meaning": "hoan nghênh"
+        },
+        {
+          "word": "今年",
+          "pinyin": "jīnnián",
+          "meaning": "năm nay"
+        }
       ],
       "correctAnswer": "水果",
       "explanation": "Từ cần điền là \"水果\". Cả câu hoàn chỉnh là: \"这些水果很新鲜，也很甜。\" (Zhèxiē shuǐguǒ hěn xīnxiān, yě hěn tián.) - Những loại hoa quả này rất tươi, cũng rất ngọt.."
@@ -2742,10 +4106,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"我们一起去踢足球吧！\" (Wǒmen yìqǐ qù tī zúqiú ba!) có nghĩa là gì?",
       "options": [
-        "Nhà vệ sinh ở đâu vậy?",
-        "Hoan nghênh các bạn đã đến Bắc Kinh!",
-        "Chào buổi sáng, thầy giáo!",
-        "Chúng mình cùng nhau đi đá bóng nhé!"
+        "Xin hỏi, quý tính của ngài là gì?",
+        "Trường học ở phía trước bệnh viện.",
+        "Chúng mình cùng nhau đi đá bóng nhé!",
+        "Tôi có thể ngồi ở đây không? Đương nhiên được."
       ],
       "correctAnswer": "Chúng mình cùng nhau đi đá bóng nhé!"
     },
@@ -2754,9 +4118,31 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "questionPinyin": "Wǒmen ____ qù tī zúqiú ba!",
       "options": [
         "天气",
-        "汉语",
+        "电影",
         "一起",
-        "喜欢"
+        "身体"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "天气",
+          "pinyin": "tiānqì",
+          "meaning": "thời tiết"
+        },
+        {
+          "word": "电影",
+          "pinyin": "diànyǐng",
+          "meaning": "phim ảnh"
+        },
+        {
+          "word": "一起",
+          "pinyin": "yìqǐ",
+          "meaning": "cùng nhau"
+        },
+        {
+          "word": "身体",
+          "pinyin": "shēntǐ",
+          "meaning": "sức khỏe"
+        }
       ],
       "correctAnswer": "一起",
       "explanation": "Từ cần điền là \"一起\". Cả câu hoàn chỉnh là: \"我们一起去踢足球吧！\" (Wǒmen yìqǐ qù tī zúqiú ba!) - Chúng mình cùng nhau đi đá bóng nhé!."
@@ -2790,10 +4176,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"虽然天气不好，但是我们还是去了。\" (Suīrán tiānqì bù hǎo, dànshì wǒmen háishi qù le.) có nghĩa là gì?",
       "options": [
+        "Nhà vệ sinh ở đâu vậy?",
+        "Sau khi thức dậy, tôi rửa mặt trước rồi mới ăn sáng.",
         "Tuy rằng thời tiết không tốt, nhưng chúng tôi vẫn đi.",
-        "Chào bạn! Rất vui được quen biết bạn.",
-        "Bạn muốn ăn gì? Tôi muốn ăn món ăn Trung Quốc.",
-        "Năm nay tôi 22 tuổi."
+        "Không vấn đề gì, việc này cứ để tôi lo."
       ],
       "correctAnswer": "Tuy rằng thời tiết không tốt, nhưng chúng tôi vẫn đi."
     },
@@ -2801,10 +4187,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: ____天气不好，但是我们还是去了。",
       "questionPinyin": "____ tiānqì bù hǎo, dànshì wǒmen háishi qù le.",
       "options": [
-        "医生",
-        "中国",
         "虽然",
-        "旁边"
+        "汉语",
+        "水果",
+        "下雨"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "虽然",
+          "pinyin": "suīrán",
+          "meaning": "tuy rằng"
+        },
+        {
+          "word": "汉语",
+          "pinyin": "Hànyǔ",
+          "meaning": "tiếng Trung"
+        },
+        {
+          "word": "水果",
+          "pinyin": "shuǐguǒ",
+          "meaning": "hoa quả"
+        },
+        {
+          "word": "下雨",
+          "pinyin": "xiàyǔ",
+          "meaning": "mưa"
+        }
       ],
       "correctAnswer": "虽然",
       "explanation": "Từ cần điền là \"虽然\". Cả câu hoàn chỉnh là: \"虽然天气不好，但是我们还是去了。\" (Suīrán tiānqì bù hǎo, dànshì wǒmen háishi qù le.) - Tuy rằng thời tiết không tốt, nhưng chúng tôi vẫn đi.."
@@ -2833,10 +4241,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"再见！明天见！\" (Zàijiàn! Míngtiān jiàn!) có nghĩa là gì?",
       "options": [
-        "Để tôi giới thiệu một chút về bạn của tôi.",
+        "Hoan nghênh các bạn đã đến Bắc Kinh!",
+        "Những loại hoa quả này rất tươi, cũng rất ngọt.",
         "Tạm biệt! Ngày mai gặp lại!",
-        "Mời uống trà, mời ngồi!",
-        "Chúng mình cùng nhau đi đá bóng nhé!"
+        "Đã lâu không gặp, dạo này bạn khỏe không?"
       ],
       "correctAnswer": "Tạm biệt! Ngày mai gặp lại!"
     },
@@ -2845,9 +4253,31 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "questionPinyin": "____! Míngtiān jiàn!",
       "options": [
         "再见",
-        "作业",
-        "汉语",
-        "喜欢"
+        "爱好",
+        "电影",
+        "英语"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "再见",
+          "pinyin": "zàijiàn",
+          "meaning": "tạm biệt"
+        },
+        {
+          "word": "爱好",
+          "pinyin": "àihào",
+          "meaning": "sở thích"
+        },
+        {
+          "word": "电影",
+          "pinyin": "diànyǐng",
+          "meaning": "phim ảnh"
+        },
+        {
+          "word": "英语",
+          "pinyin": "Yīngyǔ",
+          "meaning": "tiếng Anh"
+        }
       ],
       "correctAnswer": "再见",
       "explanation": "Từ cần điền là \"再见\". Cả câu hoàn chỉnh là: \"再见！明天见！\" (Zàijiàn! Míngtiān jiàn!) - Tạm biệt! Ngày mai gặp lại!."
@@ -2881,9 +4311,9 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"因为下雨，所以今天不上课。\" (Yīnwèi xiàyǔ, suǒyǐ jīntiān bú shàngkè.) có nghĩa là gì?",
       "options": [
-        "Mỗi buổi sáng anh ấy đều chạy bộ nửa tiếng đồng hồ.",
-        "Tạm biệt! Ngày mai gặp lại!",
-        "Tôi vô cùng thích chơi bóng rổ và hát ca.",
+        "Bạn đi đến trường bằng phương tiện gì? Tôi đi xe taxi.",
+        "Bạn biết nói tiếng Anh và tiếng Trung không?",
+        "Chúng ta gặp nhau lúc 3 rưỡi chiều trước cổng trường.",
         "Bởi vì trời mưa, cho nên hôm nay không đi học."
       ],
       "correctAnswer": "Bởi vì trời mưa, cho nên hôm nay không đi học."
@@ -2892,10 +4322,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: ____下雨，所以今天不上课。",
       "questionPinyin": "____ xiàyǔ, suǒyǐ jīntiān bú shàngkè.",
       "options": [
-        "因为",
-        "时间",
-        "足球",
-        "多少"
+        "介绍",
+        "英语",
+        "医院",
+        "因为"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "介绍",
+          "pinyin": "jièshào",
+          "meaning": "giới thiệu"
+        },
+        {
+          "word": "英语",
+          "pinyin": "Yīngyǔ",
+          "meaning": "tiếng Anh"
+        },
+        {
+          "word": "医院",
+          "pinyin": "yīyuàn",
+          "meaning": "bệnh viện"
+        },
+        {
+          "word": "因为",
+          "pinyin": "yīnwèi",
+          "meaning": "bởi vì"
+        }
       ],
       "correctAnswer": "因为",
       "explanation": "Từ cần điền là \"因为\". Cả câu hoàn chỉnh là: \"因为下雨，所以今天不上课。\" (Yīnwèi xiàyǔ, suǒyǐ jīntiān bú shàngkè.) - Bởi vì trời mưa, cho nên hôm nay không đi học.."
@@ -2924,10 +4376,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"你还要别的菜吗？不要了，谢谢。\" (Nǐ hái yào bié de cài ma? Bú yào le, xièxie.) có nghĩa là gì?",
       "options": [
-        "Xin hỏi, quý tính của ngài là gì?",
-        "Bạn đi đến trường bằng phương tiện gì? Tôi đi xe taxi.",
-        "Bạn còn muốn món nào khác không? Không cần nữa đâu, cảm ơn.",
-        "Bạn là người nước nào?"
+        "Nhà tôi cách công ty không xa lắm.",
+        "Đừng nói chuyện nữa, xin mọi người hãy nghe tôi nói.",
+        "Phục vụ, xin cho chúng tôi một cuốn thực đơn.",
+        "Bạn còn muốn món nào khác không? Không cần nữa đâu, cảm ơn."
       ],
       "correctAnswer": "Bạn còn muốn món nào khác không? Không cần nữa đâu, cảm ơn."
     },
@@ -2935,10 +4387,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 你____要别的菜吗？不要了，谢谢。",
       "questionPinyin": "Nǐ ____ yào bié de cài ma? Bú yào le, xièxie.",
       "options": [
+        "茶",
         "还",
-        "高",
-        "几",
-        "岁"
+        "国",
+        "贵"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "茶",
+          "pinyin": "chá",
+          "meaning": "trà"
+        },
+        {
+          "word": "还",
+          "pinyin": "hái",
+          "meaning": "còn"
+        },
+        {
+          "word": "国",
+          "pinyin": "guó",
+          "meaning": "quốc gia"
+        },
+        {
+          "word": "贵",
+          "pinyin": "guì",
+          "meaning": "đắt"
+        }
       ],
       "correctAnswer": "还",
       "explanation": "Từ cần điền là \"还\". Cả câu hoàn chỉnh là: \"你还要别的菜吗？不要了，谢谢。\" (Nǐ hái yào bié de cài ma? Bú yào le, xièxie.) - Bạn còn muốn món nào khác không? Không cần nữa đâu, cảm ơn.."
@@ -2967,10 +4441,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"除了看书，我还会弹钢琴。\" (Chúle kànshū, wǒ hái huì tán gāngqín.) có nghĩa là gì?",
       "options": [
+        "Sau khi thức dậy, tôi rửa mặt trước rồi mới ăn sáng.",
         "Ngoài đọc sách ra, tôi còn biết chơi đàn dương cầm.",
-        "Phục vụ, xin cho chúng tôi một cuốn thực đơn.",
-        "Xin hỏi, đi đến ga tàu hỏa thì đi đường nào?",
-        "Chào bạn! Rất vui được quen biết bạn."
+        "Bạn biết nói tiếng Anh và tiếng Trung không?",
+        "Đừng nói chuyện nữa, xin mọi người hãy nghe tôi nói."
       ],
       "correctAnswer": "Ngoài đọc sách ra, tôi còn biết chơi đàn dương cầm."
     },
@@ -2978,10 +4452,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: ____看书，我还会弹钢琴。",
       "questionPinyin": "____ kànshū, wǒ hái huì tán gāngqín.",
       "options": [
-        "除了",
-        "便宜",
+        "喜欢",
         "名字",
-        "足球"
+        "星期",
+        "除了"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "喜欢",
+          "pinyin": "xǐhuan",
+          "meaning": "thích"
+        },
+        {
+          "word": "名字",
+          "pinyin": "míngzi",
+          "meaning": "tên gọi"
+        },
+        {
+          "word": "星期",
+          "pinyin": "xīngqī",
+          "meaning": "thứ, tuần"
+        },
+        {
+          "word": "除了",
+          "pinyin": "chúle",
+          "meaning": "ngoài ra, trừ phi"
+        }
       ],
       "correctAnswer": "除了",
       "explanation": "Từ cần điền là \"除了\". Cả câu hoàn chỉnh là: \"除了看书，我还会弹钢琴。\" (Chúle kànshū, wǒ hái huì tán gāngqín.) - Ngoài đọc sách ra, tôi còn biết chơi đàn dương cầm.."
@@ -3015,9 +4511,9 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"去那儿坐公共汽车需要多长时间？\" (Qù nàr zuò gōnggòng qìchē xūyào duō cháng shíjiān?) có nghĩa là gì?",
       "options": [
-        "Hôm nay thứ mấy? Hôm nay thứ Sáu.",
-        "Hoan nghênh các bạn đã đến Bắc Kinh!",
-        "Đi về phía trước, đến đèn giao thông thì rẽ phải.",
+        "Chào buổi sáng, thầy giáo!",
+        "Chào bạn! Rất vui được quen biết bạn.",
+        "Tôi làm việc ở bệnh viện, tôi là bác sĩ.",
         "Đi đến đó bằng xe buýt cần mất bao lâu?"
       ],
       "correctAnswer": "Đi đến đó bằng xe buýt cần mất bao lâu?"
@@ -3026,10 +4522,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 去那儿坐____需要多长时间？",
       "questionPinyin": "Qù nàr zuò ____ xūyào duō cháng shíjiān?",
       "options": [
-        "作业",
-        "中国",
         "公共汽车",
-        "便宜"
+        "下午",
+        "喜欢",
+        "每天"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "公共汽车",
+          "pinyin": "gōnggòng qìchē",
+          "meaning": "xe buýt"
+        },
+        {
+          "word": "下午",
+          "pinyin": "xiàwǔ",
+          "meaning": "buổi chiều"
+        },
+        {
+          "word": "喜欢",
+          "pinyin": "xǐhuan",
+          "meaning": "thích"
+        },
+        {
+          "word": "每天",
+          "pinyin": "měitiān",
+          "meaning": "mỗi ngày"
+        }
       ],
       "correctAnswer": "公共汽车",
       "explanation": "Từ cần điền là \"公共汽车\". Cả câu hoàn chỉnh là: \"去那儿坐公共汽车需要多长时间？\" (Qù nàr zuò gōnggòng qìchē xūyào duō cháng shíjiān?) - Đi đến đó bằng xe buýt cần mất bao lâu?."
@@ -3053,10 +4571,10 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
     "quizMeaning": {
       "question": "Câu tiếng Trung \"没问题，这件事情包在我身上。\" (Méi wèntí, zhè jiàn shìqing bāo zài wǒ shēnshang.) có nghĩa là gì?",
       "options": [
-        "Không vấn đề gì, việc này cứ để tôi lo.",
-        "Xin hỏi, đi đến ga tàu hỏa thì đi đường nào?",
-        "Tôi bị cảm rồi, hôm nay muốn ở nhà nghỉ ngơi.",
-        "Trường học ở phía trước bệnh viện."
+        "Bình thường bạn có sở thích gì?",
+        "Xin hỏi, quý tính của ngài là gì?",
+        "Nhà bạn có mấy người?",
+        "Không vấn đề gì, việc này cứ để tôi lo."
       ],
       "correctAnswer": "Không vấn đề gì, việc này cứ để tôi lo."
     },
@@ -3064,10 +4582,32 @@ export const HSK_SENTENCE_PATTERNS: SentencePattern[] = [
       "question": "Chọn từ thích hợp điền vào chỗ trống: 没问题，这件____包在我身上。",
       "questionPinyin": "Méi wèntí, zhè jiàn ____ bāo zài wǒ shēnshang.",
       "options": [
-        "作业",
-        "可以",
-        "便宜",
-        "事情"
+        "事情",
+        "明天",
+        "认识",
+        "高兴"
+      ],
+      "optionsWithPinyin": [
+        {
+          "word": "事情",
+          "pinyin": "shìqing",
+          "meaning": "sự tình, việc"
+        },
+        {
+          "word": "明天",
+          "pinyin": "míngtiān",
+          "meaning": "ngày mai"
+        },
+        {
+          "word": "认识",
+          "pinyin": "rènshi",
+          "meaning": "quen biết"
+        },
+        {
+          "word": "高兴",
+          "pinyin": "gāoxìng",
+          "meaning": "vui mừng"
+        }
       ],
       "correctAnswer": "事情",
       "explanation": "Từ cần điền là \"事情\". Cả câu hoàn chỉnh là: \"没问题，这件事情包在我身上。\" (Méi wèntí, zhè jiàn shìqing bāo zài wǒ shēnshang.) - Không vấn đề gì, việc này cứ để tôi lo.."

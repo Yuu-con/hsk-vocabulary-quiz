@@ -19,6 +19,7 @@ interface SentenceItem {
     question: string;
     questionPinyin?: string;
     options: string[];
+    optionsWithPinyin?: { word: string; pinyin: string; meaning?: string }[];
     correctAnswer: string;
     explanation: string;
   };
@@ -917,13 +918,89 @@ function generateQuizOptions(correct: string, pool: string[]): string[] {
   return all4;
 }
 
-const allVietnameseMeanings = rawSentences.map(s => s.vietnamese);
+const fillWordsDictionary: Record<string, { pinyin: string; meaning: string }> = {
+  '名字': { pinyin: 'míngzi', meaning: 'tên gọi' },
+  '学生': { pinyin: 'xuésheng', meaning: 'học sinh' },
+  '老师': { pinyin: 'lǎoshī', meaning: 'thầy cô giáo' },
+  '高兴': { pinyin: 'gāoxìng', meaning: 'vui mừng' },
+  '认识': { pinyin: 'rènshi', meaning: 'quen biết' },
+  '早上': { pinyin: 'zǎoshang', meaning: 'buổi sáng' },
+  '最近': { pinyin: 'zuìjìn', meaning: 'dạo gần đây' },
+  '欢迎': { pinyin: 'huānyíng', meaning: 'hoan nghênh' },
+  '北京': { pinyin: 'Běijīng', meaning: 'Bắc Kinh' },
+  '介绍': { pinyin: 'jièshào', meaning: 'giới thiệu' },
+  '什么': { pinyin: 'shénme', meaning: 'cái gì' },
+  '几': { pinyin: 'jǐ', meaning: 'mấy' },
+  '岁': { pinyin: 'suì', meaning: 'tuổi' },
+  '多大': { pinyin: 'duō dà', meaning: 'bao nhiêu tuổi' },
+  '今年': { pinyin: 'jīnnián', meaning: 'năm nay' },
+  '哪': { pinyin: 'nǎ', meaning: 'nào' },
+  '国': { pinyin: 'guó', meaning: 'quốc gia' },
+  '中国': { pinyin: 'Zhōngguó', meaning: 'Trung Quốc' },
+  '越南': { pinyin: 'Yuènán', meaning: 'Việt Nam' },
+  '汉语': { pinyin: 'Hànyǔ', meaning: 'tiếng Trung' },
+  '英语': { pinyin: 'Yīngyǔ', meaning: 'tiếng Anh' },
+  '非常': { pinyin: 'fēicháng', meaning: 'vô cùng, rất' },
+  '家': { pinyin: 'jiā', meaning: 'gia đình' },
+  '爸爸': { pinyin: 'bàba', meaning: 'bố' },
+  '妈妈': { pinyin: 'māma', meaning: 'mẹ' },
+  '哥哥': { pinyin: 'gēge', meaning: 'anh trai' },
+  '弟弟': { pinyin: 'dìdi', meaning: 'em trai' },
+  '姐姐': { pinyin: 'jiějie', meaning: 'chị gái' },
+  '眼睛': { pinyin: 'yǎnjing', meaning: 'đôi mắt' },
+  '漂亮': { pinyin: 'piàoliang', meaning: 'xinh đẹp' },
+  '现在': { pinyin: 'xiànzài', meaning: 'bây giờ' },
+  '点': { pinyin: 'diǎn', meaning: 'giờ' },
+  '今天': { pinyin: 'jīntiān', meaning: 'hôm nay' },
+  '明天': { pinyin: 'míngtiān', meaning: 'ngày mai' },
+  '星期': { pinyin: 'xīngqī', meaning: 'thứ, tuần' },
+  '下午': { pinyin: 'xiàwǔ', meaning: 'buổi chiều' },
+  '工作': { pinyin: 'gōngzuò', meaning: 'làm việc' },
+  '医院': { pinyin: 'yīyuàn', meaning: 'bệnh viện' },
+  '医生': { pinyin: 'yīshēng', meaning: 'bác sĩ' },
+  '开始': { pinyin: 'kāishǐ', meaning: 'bắt đầu' },
+  '考试': { pinyin: 'kǎoshì', meaning: 'thi cử' },
+  '问题': { pinyin: 'wèntí', meaning: 'vấn đề' },
+  '可以': { pinyin: 'kěyǐ', meaning: 'có thể' },
+  '想': { pinyin: 'xiǎng', meaning: 'muốn, nhớ' },
+  '喝': { pinyin: 'hē', meaning: 'uống' },
+  '茶': { pinyin: 'chá', meaning: 'trà' },
+  '坐': { pinyin: 'zuò', meaning: 'ngồi' },
+  '苹果': { pinyin: 'píngguǒ', meaning: 'quả táo' },
+  '多少': { pinyin: 'duōshao', meaning: 'bao nhiêu' },
+  '便宜': { pinyin: 'piányi', meaning: 'rẻ' },
+  '贵': { pinyin: 'guì', meaning: 'đắt' },
+  '桌子': { pinyin: 'zhuōzi', meaning: 'cái bàn' },
+  '旁边': { pinyin: 'pángbiān', meaning: 'bên cạnh' },
+  '前面': { pinyin: 'qiánmiàn', meaning: 'phía trước' },
+  '后面': { pinyin: 'hòumiàn', meaning: 'phía sau' },
+  '怎么': { pinyin: 'zěnme', meaning: 'như thế nào' },
+  '出租车': { pinyin: 'chūzūchē', meaning: 'xe taxi' },
+  '每天': { pinyin: 'měitiān', meaning: 'mỗi ngày' },
+  '跑步': { pinyin: 'pǎobù', meaning: 'chạy bộ' },
+  '飞机': { pinyin: 'fēijī', meaning: 'máy bay' },
+  '旅游': { pinyin: 'lǚyóu', meaning: 'du lịch' },
+  '起床': { pinyin: 'qǐchuáng', meaning: 'thức dậy' },
+  '喜欢': { pinyin: 'xǐhuan', meaning: 'thích' },
+  '电影': { pinyin: 'diànyǐng', meaning: 'phim ảnh' },
+  '爱好': { pinyin: 'àihào', meaning: 'sở thích' },
+  '打篮球': { pinyin: 'dǎ lánqiú', meaning: 'chơi bóng rổ' },
+  '唱歌': { pinyin: 'chànggē', meaning: 'ca hát' },
+  '洗手间': { pinyin: 'xǐshǒujiān', meaning: 'nhà vệ sinh' },
+  '火车站': { pinyin: 'huǒchēzhàn', meaning: 'ga tàu hỏa' },
+  '天气': { pinyin: 'tiānqì', meaning: 'thời tiết' },
+  '下雨': { pinyin: 'xiàyǔ', meaning: 'mưa' },
+  '身体': { pinyin: 'shēntǐ', meaning: 'sức khỏe' },
+  '休息': { pinyin: 'xiūxi', meaning: 'nghỉ ngơi' },
+  '作业': { pinyin: 'zuòyè', meaning: 'bài tập' },
+  '水果': { pinyin: 'shuǐguǒ', meaning: 'hoa quả' },
+  '踢足球': { pinyin: 'tī zúqiú', meaning: 'đá bóng' },
+  '时间': { pinyin: 'shíjiān', meaning: 'thời gian' }
+};
 
-const fillWordsPool = [
-  '名字', '学生', '老师', '高', '什么', '几', '岁', '中国', '汉语', '医生',
-  '多少', '便宜', '贵', '旁边', '前面', '后面', '怎么', '飞机', '喜欢', '洗手间',
-  '可以', '帮', '天气', '休息', '作业', '水果', '足球', '为什么', '时间'
-];
+const fillWordsPool = Object.keys(fillWordsDictionary);
+
+const allVietnameseMeanings = rawSentences.map(s => s.vietnamese);
 
 const sentencesWithQuizzes: SentenceItem[] = rawSentences.map((s, idx) => {
   const id = idx + 1;
@@ -944,10 +1021,6 @@ const sentencesWithQuizzes: SentenceItem[] = rawSentences.map((s, idx) => {
   if (fillTargetPinyin) {
     questionPinyinWithBlank = s.pinyin.replace(new RegExp(fillTargetPinyin, 'i'), '____');
   }
-  if (questionPinyinWithBlank === s.pinyin) {
-    // Fallback simple replacement if tone mark variant
-    questionPinyinWithBlank = s.pinyin;
-  }
 
   const fillDistractors = fillWordsPool.filter(w => w !== fillTarget && w.length === fillTarget.length);
   const shuffledDist = fillDistractors.sort(() => Math.random() - 0.5);
@@ -956,6 +1029,16 @@ const sentencesWithQuizzes: SentenceItem[] = rawSentences.map((s, idx) => {
     fillOptions.push(fillWordsPool[Math.floor(Math.random() * fillWordsPool.length)]);
   }
   const randomizedFillOptions = Array.from(new Set(fillOptions)).slice(0, 4).sort(() => Math.random() - 0.5);
+
+  const optionsWithPinyin = randomizedFillOptions.map(opt => {
+    const vocab = s.keyVocab.find(v => v.word === opt);
+    const dict = fillWordsDictionary[opt];
+    return {
+      word: opt,
+      pinyin: vocab?.pinyin || dict?.pinyin || '',
+      meaning: vocab?.meaning || dict?.meaning || ''
+    };
+  });
 
   return {
     ...s,
@@ -969,6 +1052,7 @@ const sentencesWithQuizzes: SentenceItem[] = rawSentences.map((s, idx) => {
       question: `Chọn từ thích hợp điền vào chỗ trống: ${questionWithBlank}`,
       questionPinyin: questionPinyinWithBlank,
       options: randomizedFillOptions,
+      optionsWithPinyin,
       correctAnswer: fillTarget,
       explanation: `Từ cần điền là "${fillTarget}". Cả câu hoàn chỉnh là: "${s.chinese}" (${s.pinyin}) - ${s.vietnamese}.`
     }

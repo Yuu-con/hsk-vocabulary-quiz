@@ -20,6 +20,7 @@ export interface SentencePattern {
     question: string; // e.g. "你叫___名字？"
     questionPinyin?: string; // e.g. "Nǐ jiào ____ míngzi?"
     options: string[];
+    optionsWithPinyin?: { word: string; pinyin: string; meaning?: string }[];
     correctAnswer: string;
     explanation: string;
   };
