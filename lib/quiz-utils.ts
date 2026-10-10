@@ -74,7 +74,20 @@ export function getScoreTier(score: number, totalQuestions: number = 150): Score
 
 let currentAudioElement: HTMLAudioElement | null = null;
 
-function tryWebSpeech(text: string): boolean {
+export function stopChineseAudio(): void {
+  if (typeof window !== 'undefined') {
+    if (currentAudioElement) {
+      currentAudioElement.pause();
+      currentAudioElement.currentTime = 0;
+      currentAudioElement = null;
+    }
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+    }
+  }
+}
+
+function tryWebSpeech(text: string, rate: number = 0.85): boolean {
   if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
     return false;
   }
@@ -85,7 +98,7 @@ function tryWebSpeech(text: string): boolean {
     }
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'zh-CN';
-    utterance.rate = 0.85;
+    utterance.rate = rate;
     utterance.pitch = 1.0;
 
     const voices = window.speechSynthesis.getVoices();
@@ -102,11 +115,12 @@ function tryWebSpeech(text: string): boolean {
   }
 }
 
-function tryGoogleTts(text: string): Promise<boolean> {
+function tryGoogleTts(text: string, rate: number = 1.0): Promise<boolean> {
   return new Promise((resolve) => {
     try {
       const googleUrl = `https://translate.google.com/translate_tts?ie=UTF-8&tl=zh-CN&client=tw-ob&q=${encodeURIComponent(text)}`;
       const audio = new Audio(googleUrl);
+      audio.playbackRate = rate;
       currentAudioElement = audio;
       audio.onended = () => resolve(true);
       audio.onerror = () => resolve(false);
@@ -118,35 +132,32 @@ function tryGoogleTts(text: string): Promise<boolean> {
 }
 
 /**
- * Text-to-speech for Chinese characters:
- * 1. Primary: Dictionary MP3 voice (Youdao zh) - crystal clear native audio, works on all devices without voice pack
+ * Text-to-speech for Chinese characters with customizable speed rate:
+ * 1. Primary: Dictionary MP3 voice (Youdao zh)
  * 2. Secondary: Google Translate TTS audio
  * 3. Fallback: Web Speech API (speechSynthesis)
  */
-export function playChineseAudio(text: string): Promise<boolean> {
+export function playChineseAudio(text: string, rate: number = 1.0): Promise<boolean> {
   if (typeof window === 'undefined') {
     return Promise.resolve(false);
   }
 
   return new Promise((resolve) => {
     try {
-      // Stop any playing audio
-      if (currentAudioElement) {
-        currentAudioElement.pause();
-        currentAudioElement.currentTime = 0;
-      }
+      stopChineseAudio();
 
       // Try Youdao Chinese voice (native pronunciation MP3)
       const youdaoUrl = `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(text)}&le=zh`;
       const audio = new Audio(youdaoUrl);
+      audio.playbackRate = rate;
       currentAudioElement = audio;
 
       audio.onended = () => resolve(true);
       audio.onerror = () => {
         // Fallback to Google TTS
-        tryGoogleTts(text).then((success) => {
+        tryGoogleTts(text, rate).then((success) => {
           if (!success) {
-            resolve(tryWebSpeech(text));
+            resolve(tryWebSpeech(text, rate));
           } else {
             resolve(true);
           }
@@ -159,9 +170,9 @@ export function playChineseAudio(text: string): Promise<boolean> {
           .then(() => resolve(true))
           .catch(() => {
             // If browser autoplay restriction or network failure, try fallbacks
-            tryGoogleTts(text).then((success) => {
+            tryGoogleTts(text, rate).then((success) => {
               if (!success) {
-                resolve(tryWebSpeech(text));
+                resolve(tryWebSpeech(text, rate));
               } else {
                 resolve(true);
               }
@@ -169,7 +180,7 @@ export function playChineseAudio(text: string): Promise<boolean> {
           });
       }
     } catch {
-      resolve(tryWebSpeech(text));
+      resolve(tryWebSpeech(text, rate));
     }
   });
 }

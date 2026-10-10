@@ -7,12 +7,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "ba",
     "question": "吧 — ba nghĩa là gì?",
     "options": [
-      "Nhé / nhé / đi (trợ từ ngữ khí đề nghị)",
-      "Không (phủ định)",
+      "Nhé",
+      "Không",
       "Ở đâu",
       "Của"
     ],
-    "correctAnswer": "Nhé / nhé / đi (trợ từ ngữ khí đề nghị)",
+    "correctAnswer": "Nhé",
     "explanation": "吧 (ba) đứng cuối câu biểu thị sự gợi ý, đề nghị hoặc suy đoán (Ví dụ: 走吧 - đi thôi nào)."
   },
   {
@@ -21,12 +21,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "bái",
     "question": "白 — bái nghĩa là gì?",
     "options": [
-      "Trắng / màu trắng",
-      "Đen",
-      "Đỏ",
-      "Xanh"
+      "Màu trắng",
+      "Màu đen",
+      "Màu đỏ",
+      "Màu xanh"
     ],
-    "correctAnswer": "Trắng / màu trắng",
+    "correctAnswer": "Màu trắng",
     "explanation": "白 (bái) chỉ màu trắng (Ví dụ: 白色的衣服 - quần áo màu trắng)."
   },
   {
@@ -35,12 +35,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "bǎi",
     "question": "百 — bǎi nghĩa là gì?",
     "options": [
-      "Trăm (số 100)",
-      "Nghìn",
+      "Một trăm",
+      "Một nghìn",
       "Mười",
-      "Vạn"
+      "Một vạn"
     ],
-    "correctAnswer": "Trăm (số 100)",
+    "correctAnswer": "Một trăm",
     "explanation": "百 (bǎi) là hàng trăm (Ví dụ: 一百 - một trăm)."
   },
   {
@@ -49,12 +49,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "bāngzhù",
     "question": "帮助 — bāngzhù nghĩa là gì?",
     "options": [
-      "Giúp đỡ / hỗ trợ",
+      "Giúp đỡ",
       "Học tập",
       "Nói chuyện",
       "Tìm kiếm"
     ],
-    "correctAnswer": "Giúp đỡ / hỗ trợ",
+    "correctAnswer": "Giúp đỡ",
     "explanation": "帮助 (bāngzhù) là hỗ trợ hoặc giúp đỡ ai đó (Ví dụ: 谢谢你的帮助 - cảm ơn sự giúp đỡ của bạn)."
   },
   {
@@ -63,12 +63,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "bàozhǐ",
     "question": "报纸 — bàozhǐ nghĩa là gì?",
     "options": [
-      "Báo / tờ báo",
-      "Sách",
-      "Bút chì",
-      "Bàn"
+      "Tờ báo",
+      "Quyển sách",
+      "Cây bút",
+      "Cái bàn"
     ],
-    "correctAnswer": "Báo / tờ báo",
+    "correctAnswer": "Tờ báo",
     "explanation": "报纸 (bàozhǐ) là ấn phẩm báo chí để đọc tin tức (Ví dụ: 看报纸 - đọc báo)."
   },
   {
@@ -77,12 +77,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "bǐ",
     "question": "比 — bǐ nghĩa là gì?",
     "options": [
-      "So với (so sánh)",
+      "So với",
       "Bởi vì",
       "Cùng nhau",
       "Cho nên"
     ],
-    "correctAnswer": "So với (so sánh)",
+    "correctAnswer": "So với",
     "explanation": "比 (bǐ) dùng trong câu so sánh (Ví dụ: 他比我高 - anh ấy cao hơn tôi)."
   },
   {
@@ -91,12 +91,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "bié",
     "question": "别 — bié nghĩa là gì?",
     "options": [
-      "Đừng / chớ (khuyên can)",
+      "Đừng",
       "Phải",
       "Muốn",
       "Đã"
     ],
-    "correctAnswer": "Đừng / chớ (khuyên can)",
+    "correctAnswer": "Đừng",
     "explanation": "别 (bié) dùng khuyên bảo hoặc cấm đoán (Ví dụ: 别走 - đừng đi)."
   },
   {
@@ -105,12 +105,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "cháng",
     "question": "长 — cháng nghĩa là gì?",
     "options": [
-      "Dài (chiều dài)",
+      "Dài",
       "Ngắn",
       "Cao",
       "Rộng"
     ],
-    "correctAnswer": "Dài (chiều dài)",
+    "correctAnswer": "Dài",
     "explanation": "长 (cháng) miêu tả độ dài của vật hoặc thời gian (Ví dụ: 头发很长 - tóc rất dài)."
   },
   {
@@ -119,12 +119,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "chànggē",
     "question": "唱歌 — chànggē nghĩa là gì?",
     "options": [
-      "Hát / ca hát",
+      "Ca hát",
       "Nhảy múa",
       "Nghe nhạc",
       "Nói chuyện"
     ],
-    "correctAnswer": "Hát / ca hát",
+    "correctAnswer": "Ca hát",
     "explanation": "唱歌 (chànggē) là hát những bài ca (Ví dụ: 喜欢唱歌 - thích hát)."
   },
   {
@@ -133,12 +133,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "chū",
     "question": "出 — chū nghĩa là gì?",
     "options": [
-      "Ra / đi ra ngoài",
-      "Vào",
-      "Đến",
-      "Về"
+      "Đi ra",
+      "Đi vào",
+      "Đi đến",
+      "Trở về"
     ],
-    "correctAnswer": "Ra / đi ra ngoài",
+    "correctAnswer": "Đi ra",
     "explanation": "出 (chū) là chuyển động từ trong ra ngoài (Ví dụ: 出去 - đi ra ngoài)."
   },
   {
@@ -147,12 +147,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "chuān",
     "question": "穿 — chuān nghĩa là gì?",
     "options": [
-      "Mặc (quần áo) / đi (giày)",
-      "Mua",
-      "Rửa / giặt",
-      "Cởi"
+      "Mặc áo",
+      "Mua đồ",
+      "Giặt đồ",
+      "Cởi áo"
     ],
-    "correctAnswer": "Mặc (quần áo) / đi (giày)",
+    "correctAnswer": "Mặc áo",
     "explanation": "穿 (chuān) là mặc trang phục (Ví dụ: 穿衣服 - mặc quần áo)."
   },
   {
@@ -161,12 +161,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "cì",
     "question": "次 — cì nghĩa là gì?",
     "options": [
-      "Lần / lượt (lượng từ số lần)",
+      "Lần",
       "Giờ",
       "Ngày",
       "Năm"
     ],
-    "correctAnswer": "Lần / lượt (lượng từ số lần)",
+    "correctAnswer": "Lần",
     "explanation": "次 (cì) là lượng từ đo số lần thực hiện hành động (Ví dụ: 去过一次 - đã đi một lần)."
   },
   {
@@ -175,12 +175,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "cóng",
     "question": "从 — cóng nghĩa là gì?",
     "options": [
-      "Từ (điểm bắt đầu nơi chốn/thời gian)",
-      "Đến",
-      "Ở",
-      "Với"
+      "Từ đâu",
+      "Đến đâu",
+      "Ở đâu",
+      "Với ai"
     ],
-    "correctAnswer": "Từ (điểm bắt đầu nơi chốn/thời gian)",
+    "correctAnswer": "Từ đâu",
     "explanation": "从 (cóng) biểu thị điểm xuất phát (Ví dụ: 从北京来 - đến từ Bắc Kinh)."
   },
   {
@@ -189,12 +189,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "cuò",
     "question": "错 — cuò nghĩa là gì?",
     "options": [
-      "Sai / lỗi",
-      "Đúng",
-      "Tốt",
-      "Mới"
+      "Sai sót",
+      "Đúng đắn",
+      "Tốt đẹp",
+      "Mới mẻ"
     ],
-    "correctAnswer": "Sai / lỗi",
+    "correctAnswer": "Sai sót",
     "explanation": "错 (cuò) biểu thị sự sai sót, không đúng (Ví dụ: 没错 - không sai)."
   },
   {
@@ -204,9 +204,9 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "question": "打篮球 — dǎ lánqiú nghĩa là gì?",
     "options": [
       "Chơi bóng rổ",
-      "Đá bóng",
-      "Bơi lội",
-      "Chạy bộ"
+      "Đá bóng đá",
+      "Bơi dưới nước",
+      "Chạy bộ nhanh"
     ],
     "correctAnswer": "Chơi bóng rổ",
     "explanation": "打篮球 (dǎ lánqiú) là môn thể thao chơi bóng rổ."
@@ -217,12 +217,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "dàjiā",
     "question": "大家 — dàjiā nghĩa là gì?",
     "options": [
-      "Mọi người / tất cả mọi người",
-      "Gia đình lớn",
+      "Mọi người",
+      "Gia đình",
       "Bạn bè",
       "Học sinh"
     ],
-    "correctAnswer": "Mọi người / tất cả mọi người",
+    "correctAnswer": "Mọi người",
     "explanation": "大家 (dàjiā) là đại từ chỉ tập thể mọi người (Ví dụ: 大家好 - chào mọi người)."
   },
   {
@@ -231,12 +231,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "dào",
     "question": "到 — dào nghĩa là gì?",
     "options": [
-      "Đến / tới",
+      "Đến nơi",
       "Rời đi",
       "Chờ đợi",
       "Bắt đầu"
     ],
-    "correctAnswer": "Đến / tới",
+    "correctAnswer": "Đến nơi",
     "explanation": "到 (dào) biểu thị điểm đến hoặc đạt tới (Ví dụ: 到了 - đã đến nơi rồi)."
   },
   {
@@ -245,12 +245,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "de",
     "question": "得 — de nghĩa là gì?",
     "options": [
-      "Trợ từ kết cấu (nối động từ và bổ ngữ)",
-      "Trợ từ sở hữu",
-      "Trợ từ nghi vấn",
-      "Liên từ"
+      "Đến mức",
+      "Của ai",
+      "Chăng nữa",
+      "Và cùng"
     ],
-    "correctAnswer": "Trợ từ kết cấu (nối động từ và bổ ngữ)",
+    "correctAnswer": "Đến mức",
     "explanation": "得 (de) đặt sau động từ để dẫn ra trình độ, trạng thái (Ví dụ: 跑得很快 - chạy rất nhanh)."
   },
   {
@@ -259,12 +259,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "děng",
     "question": "等 — děng nghĩa là gì?",
     "options": [
-      "Chờ / đợi",
-      "Đi",
-      "Tìm",
-      "Hỏi"
+      "Chờ đợi",
+      "Rời bước",
+      "Tìm kiếm",
+      "Hỏi han"
     ],
-    "correctAnswer": "Chờ / đợi",
+    "correctAnswer": "Chờ đợi",
     "explanation": "等 (děng) là hành động chờ đợi ai đó hoặc điều gì (Ví dụ: 等一下 - đợi một chút)."
   },
   {
@@ -287,12 +287,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "dì-yī",
     "question": "第一 — dì-yī nghĩa là gì?",
     "options": [
-      "Thứ nhất / đầu tiên / số một",
+      "Thứ nhất",
       "Thứ hai",
-      "Cuối cùng",
-      "Tất cả"
+      "Thứ ba",
+      "Cuối cùng"
     ],
-    "correctAnswer": "Thứ nhất / đầu tiên / số một",
+    "correctAnswer": "Thứ nhất",
     "explanation": "第一 (dì-yī) là số thứ tự đầu tiên (Ví dụ: 第一次 - lần đầu tiên)."
   },
   {
@@ -301,12 +301,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "dǒng",
     "question": "懂 — dǒng nghĩa là gì?",
     "options": [
-      "Hiểu / hiểu rõ",
-      "Quên",
-      "Nói",
-      "Nhìn"
+      "Thấu hiểu",
+      "Quên mất",
+      "Nói năng",
+      "Nhìn thấy"
     ],
-    "correctAnswer": "Hiểu / hiểu rõ",
+    "correctAnswer": "Thấu hiểu",
     "explanation": "懂 (dǒng) chỉ nhận thức, nắm rõ ý nghĩa (Ví dụ: 我懂了 - tôi hiểu rồi)."
   },
   {
@@ -315,12 +315,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "duì",
     "question": "对 — duì nghĩa là gì?",
     "options": [
-      "Đúng / chính xác (hoặc: đối với)",
-      "Sai",
-      "Ít",
-      "Nhiều"
+      "Đúng đắn",
+      "Sai lầm",
+      "Ít ỏi",
+      "Nhiều nhặn"
     ],
-    "correctAnswer": "Đúng / chính xác (hoặc: đối với)",
+    "correctAnswer": "Đúng đắn",
     "explanation": "对 (duì) nghĩa là đúng (đối lập với 错) hoặc giới từ 'đối với ai đó'."
   },
   {
@@ -343,12 +343,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "fēicháng",
     "question": "非常 — fēicháng nghĩa là gì?",
     "options": [
-      "Vô cùng / hết sức / rất",
+      "Vô cùng",
       "Một chút",
       "Bình thường",
       "Không hề"
     ],
-    "correctAnswer": "Vô cùng / hết sức / rất",
+    "correctAnswer": "Vô cùng",
     "explanation": "非常 (fēicháng) là phó từ mức độ cao hơn cả 很 (Ví dụ: 非常高兴 - vô cùng vui mừng)."
   },
   {
@@ -357,12 +357,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "fúwùyuán",
     "question": "服务员 — fúwùyuán nghĩa là gì?",
     "options": [
-      "Nhân viên phục vụ / bồi bàn",
+      "Bồi bàn",
       "Bác sĩ",
-      "Giáo viên",
+      "Thầy giáo",
       "Tài xế"
     ],
-    "correctAnswer": "Nhân viên phục vụ / bồi bàn",
+    "correctAnswer": "Bồi bàn",
     "explanation": "服务员 (fúwùyuán) là người làm công việc phục vụ ở nhà hàng, khách sạn."
   },
   {
@@ -371,12 +371,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "gāo",
     "question": "高 — gāo nghĩa là gì?",
     "options": [
-      "Cao",
-      "Thấp",
-      "Dài",
-      "Lớn"
+      "Cao lớn",
+      "Thấp bé",
+      "Dài ngoẵng",
+      "To đùng"
     ],
-    "correctAnswer": "Cao",
+    "correctAnswer": "Cao lớn",
     "explanation": "高 (gāo) miêu tả chiều cao người hoặc vật (Ví dụ: 很高 - rất cao)."
   },
   {
@@ -385,12 +385,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "gàosu",
     "question": "告诉 — gàosu nghĩa là gì?",
     "options": [
-      "Bảo / nói cho biết",
-      "Hỏi",
-      "Nghe",
-      "Nghĩ"
+      "Bảo cho",
+      "Hỏi han",
+      "Nghe ngóng",
+      "Suy nghĩ"
     ],
-    "correctAnswer": "Bảo / nói cho biết",
+    "correctAnswer": "Bảo cho",
     "explanation": "告诉 (gàosu) là truyền đạt thông tin cho người khác (Ví dụ: 告诉我 - nói cho tôi biết)."
   },
   {
@@ -401,7 +401,7 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "options": [
       "Anh trai",
       "Em trai",
-      "Bố",
+      "Người bố",
       "Bạn bè"
     ],
     "correctAnswer": "Anh trai",
@@ -413,12 +413,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "gěi",
     "question": "给 — gěi nghĩa là gì?",
     "options": [
-      "Cho / đưa cho",
-      "Lấy",
-      "Bán",
-      "Mua"
+      "Đưa cho",
+      "Cầm lấy",
+      "Bán đi",
+      "Mua về"
     ],
-    "correctAnswer": "Cho / đưa cho",
+    "correctAnswer": "Đưa cho",
     "explanation": "给 (gěi) là đưa vật gì cho ai đó (Ví dụ: 给你 - đưa cho bạn)."
   },
   {
@@ -455,12 +455,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "guì",
     "question": "贵 — guì nghĩa là gì?",
     "options": [
-      "Đắt / đắt đỏ / quý",
-      "Rẻ",
-      "Nhiều",
-      "Tốt"
+      "Đắt tiền",
+      "Rẻ tiền",
+      "Nhiều tiền",
+      "Tốt tính"
     ],
-    "correctAnswer": "Đắt / đắt đỏ / quý",
+    "correctAnswer": "Đắt tiền",
     "explanation": "贵 (guì) miêu tả giá cả cao (đối lập với 便宜 - rẻ)."
   },
   {
@@ -469,12 +469,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "guo",
     "question": "过 — guo nghĩa là gì?",
     "options": [
-      "Từng / đã từng (trợ từ trải nghiệm)",
-      "Đang",
-      "Sẽ",
-      "Chưa"
+      "Đã từng",
+      "Đang làm",
+      "Sẽ làm",
+      "Chưa làm"
     ],
-    "correctAnswer": "Từng / đã từng (trợ từ trải nghiệm)",
+    "correctAnswer": "Đã từng",
     "explanation": "过 (guo) đứng sau động từ chỉ trải nghiệm trong quá khứ (Ví dụ: 去过 - từng đi qua)."
   },
   {
@@ -483,12 +483,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "hái",
     "question": "还 — hái nghĩa là gì?",
     "options": [
-      "Vẫn / còn / lại",
-      "Đã",
-      "Chưa",
-      "Chỉ"
+      "Vẫn còn",
+      "Đã qua",
+      "Chưa từng",
+      "Chỉ có"
     ],
-    "correctAnswer": "Vẫn / còn / lại",
+    "correctAnswer": "Vẫn còn",
     "explanation": "还 (hái) là phó từ biểu thị sự tiếp diễn hoặc bổ sung (Ví dụ: 还有 - vẫn còn)."
   },
   {
@@ -497,12 +497,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "háizi",
     "question": "孩子 — háizi nghĩa là gì?",
     "options": [
-      "Trẻ con / con cái",
+      "Trẻ con",
       "Người lớn",
       "Học sinh",
       "Bố mẹ"
     ],
-    "correctAnswer": "Trẻ con / con cái",
+    "correctAnswer": "Trẻ con",
     "explanation": "孩子 (háizi) chỉ đứa trẻ hoặc con cái của bố mẹ."
   },
   {
@@ -511,12 +511,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "hǎochī",
     "question": "好吃 — hǎochī nghĩa là gì?",
     "options": [
-      "Ngon / ngon miệng",
-      "Dở / khó ăn",
-      "Đẹp",
+      "Ngon miệng",
+      "Khó nuốt",
+      "Xinh đẹp",
       "Vui vẻ"
     ],
-    "correctAnswer": "Ngon / ngon miệng",
+    "correctAnswer": "Ngon miệng",
     "explanation": "好吃 (hǎochī) khen ngợi đồ ăn thơm ngon."
   },
   {
@@ -525,12 +525,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "hēi",
     "question": "黑 — hēi nghĩa là gì?",
     "options": [
-      "Đen / màu đen",
-      "Trắng",
-      "Đỏ",
-      "Vàng"
+      "Màu đen",
+      "Màu trắng",
+      "Màu đỏ",
+      "Màu vàng"
     ],
-    "correctAnswer": "Đen / màu đen",
+    "correctAnswer": "Màu đen",
     "explanation": "黑 (hēi) chỉ màu đen (đối lập với 白 - bái)."
   },
   {
@@ -539,12 +539,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "hóng",
     "question": "红 — hóng nghĩa là gì?",
     "options": [
-      "Đỏ / màu đỏ",
-      "Trắng",
-      "Đen",
-      "Xanh"
+      "Màu đỏ",
+      "Màu trắng",
+      "Màu đen",
+      "Màu xanh"
     ],
-    "correctAnswer": "Đỏ / màu đỏ",
+    "correctAnswer": "Màu đỏ",
     "explanation": "红 (hóng) chỉ màu đỏ (Ví dụ: 红色的苹果 - quả táo màu đỏ)."
   },
   {
@@ -553,12 +553,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "huǒchēzhàn",
     "question": "火车站 — huǒchēzhàn nghĩa là gì?",
     "options": [
-      "Ga tàu hỏa / bến tàu",
-      "Sân bay",
+      "Ga xe lửa",
+      "Cảng hàng không",
       "Bến xe buýt",
-      "Bệnh viện"
+      "Trạm xá"
     ],
-    "correctAnswer": "Ga tàu hỏa / bến tàu",
+    "correctAnswer": "Ga xe lửa",
     "explanation": "火车站 (huǒchēzhàn) là nơi tàu hỏa đón và trả khách."
   },
   {
@@ -583,7 +583,7 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "options": [
       "Trứng gà",
       "Thịt cừu",
-      "Cá",
+      "Cá tươi",
       "Dưa hấu"
     ],
     "correctAnswer": "Trứng gà",
@@ -595,12 +595,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "jiàn",
     "question": "件 — jiàn nghĩa là gì?",
     "options": [
-      "Kiện / chiếc (lượng từ áo quần, sự việc)",
-      "Cuốn / quyển",
-      "Cái / con",
-      "Bát / chén"
+      "Chiếc áo",
+      "Cuốn sách",
+      "Cái chén",
+      "Bát canh"
     ],
-    "correctAnswer": "Kiện / chiếc (lượng từ áo quần, sự việc)",
+    "correctAnswer": "Chiếc áo",
     "explanation": "件 (jiàn) là lượng từ dùng cho quần áo (一件衣服) hoặc việc (一件事)."
   },
   {
@@ -609,12 +609,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "jiàoshì",
     "question": "教室 — jiàoshì nghĩa là gì?",
     "options": [
-      "Phòng học / lớp học",
+      "Lớp học",
       "Phòng ngủ",
       "Bệnh viện",
       "Cửa hàng"
     ],
-    "correctAnswer": "Phòng học / lớp học",
+    "correctAnswer": "Lớp học",
     "explanation": "教室 (jiàoshì) là căn phòng trong trường nơi diễn ra việc dạy và học."
   },
   {
@@ -625,7 +625,7 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "options": [
       "Chị gái",
       "Em gái",
-      "Mẹ",
+      "Người mẹ",
       "Con gái"
     ],
     "correctAnswer": "Chị gái",
@@ -651,12 +651,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "jìn",
     "question": "进 — jìn nghĩa là gì?",
     "options": [
-      "Vào / tiến vào",
-      "Ra",
-      "Đi",
-      "Về"
+      "Bước vào",
+      "Bước ra",
+      "Đi xa",
+      "Trở về"
     ],
-    "correctAnswer": "Vào / tiến vào",
+    "correctAnswer": "Bước vào",
     "explanation": "进 (jìn) là đi vào bên trong (đối lập với 出 - ra ngoài, 请进 - xin mời vào)."
   },
   {
@@ -665,12 +665,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "jìn",
     "question": "近 — jìn nghĩa là gì?",
     "options": [
-      "Gần (khoảng cách)",
-      "Xa",
-      "Lớn",
-      "Nhỏ"
+      "Gần gũi",
+      "Xa xôi",
+      "To lớn",
+      "Nhỏ bé"
     ],
-    "correctAnswer": "Gần (khoảng cách)",
+    "correctAnswer": "Gần gũi",
     "explanation": "近 (jìn) miêu tả cự ly ngắn (đối lập với 远 - xa)."
   },
   {
@@ -679,12 +679,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "jiù",
     "question": "就 — jiù nghĩa là gì?",
     "options": [
-      "Thì / ngay / liền (phó từ nhấn mạnh)",
-      "Cũng",
-      "Đều",
-      "Vẫn"
+      "Liền ngay",
+      "Cũng vậy",
+      "Đều là",
+      "Vẫn còn"
     ],
-    "correctAnswer": "Thì / ngay / liền (phó từ nhấn mạnh)",
+    "correctAnswer": "Liền ngay",
     "explanation": "就 (jiù) nhấn mạnh tính chất sớm, nhanh hoặc khẳng định."
   },
   {
@@ -693,12 +693,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "juéde",
     "question": "觉得 — juéde nghĩa là gì?",
     "options": [
-      "Cảm thấy / thấy rằng",
+      "Cảm thấy",
       "Nghe thấy",
       "Nhìn thấy",
       "Biết được"
     ],
-    "correctAnswer": "Cảm thấy / thấy rằng",
+    "correctAnswer": "Cảm thấy",
     "explanation": "觉得 (juéde) dùng để bày tỏ cảm nhận, quan điểm cá nhân (Ví dụ: 我觉得很好)."
   },
   {
@@ -708,8 +708,8 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "question": "咖啡 — kāfēi nghĩa là gì?",
     "options": [
       "Cà phê",
-      "Trà",
-      "Nước",
+      "Trà thơm",
+      "Nước lọc",
       "Sữa bò"
     ],
     "correctAnswer": "Cà phê",
@@ -735,12 +735,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "kǎoshì",
     "question": "考试 — kǎoshì nghĩa là gì?",
     "options": [
-      "Thi cử / bài thi",
+      "Thi cử",
       "Học tập",
       "Làm việc",
       "Nghỉ hè"
     ],
-    "correctAnswer": "Thi cử / bài thi",
+    "correctAnswer": "Thi cử",
     "explanation": "考试 (kǎoshì) là kỳ thi hoặc bài kiểm tra năng lực học tập."
   },
   {
@@ -749,12 +749,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "kěnéng",
     "question": "可能 — kěnéng nghĩa là gì?",
     "options": [
-      "Có thể / có lẽ (khả năng)",
+      "Có lẽ",
       "Nhất định",
       "Không thể",
-      "Nên"
+      "Nên làm"
     ],
-    "correctAnswer": "Có thể / có lẽ (khả năng)",
+    "correctAnswer": "Có lẽ",
     "explanation": "可能 (kěnéng) biểu thị phán đoán về khả năng xảy ra của một sự việc."
   },
   {
@@ -763,12 +763,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "kěyǐ",
     "question": "可以 — kěyǐ nghĩa là gì?",
     "options": [
-      "Có thể / được phép",
+      "Có thể",
       "Không được",
-      "Phải",
-      "Muốn"
+      "Bắt buộc",
+      "Muốn làm"
     ],
-    "correctAnswer": "Có thể / được phép",
+    "correctAnswer": "Có thể",
     "explanation": "可以 (kěyǐ) biểu thị sự cho phép hoặc khả thi (Ví dụ: 可以吗 - được không?)."
   },
   {
@@ -777,12 +777,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "kè",
     "question": "课 — kè nghĩa là gì?",
     "options": [
-      "Tiết học / bài học / môn học",
+      "Bài học",
       "Quyển sách",
-      "Bài thi",
+      "Kỳ thi",
       "Trường học"
     ],
-    "correctAnswer": "Tiết học / bài học / môn học",
+    "correctAnswer": "Bài học",
     "explanation": "课 (kè) chỉ giờ lên lớp hoặc nội dung học (Ví dụ: 上课 - vào học)."
   },
   {
@@ -791,12 +791,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "kuài",
     "question": "快 — kuài nghĩa là gì?",
     "options": [
-      "Nhanh / sắp sửa",
-      "Chậm",
-      "Cao",
-      "Xa"
+      "Nhanh nhẹn",
+      "Chậm chạp",
+      "Cao ráo",
+      "Xa xôi"
     ],
-    "correctAnswer": "Nhanh / sắp sửa",
+    "correctAnswer": "Nhanh nhẹn",
     "explanation": "快 (kuài) chỉ tốc độ nhanh hoặc hành động sắp diễn ra (Ví dụ: 跑得很快, 快到了)."
   },
   {
@@ -805,12 +805,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "kuàilè",
     "question": "快乐 — kuàilè nghĩa là gì?",
     "options": [
-      "Vui vẻ / hạnh phúc",
+      "Hạnh phúc",
       "Buồn bã",
       "Mệt mỏi",
       "Tức giận"
     ],
-    "correctAnswer": "Vui vẻ / hạnh phúc",
+    "correctAnswer": "Hạnh phúc",
     "explanation": "快乐 (kuàilè) miêu tả niềm vui trọn vẹn (Ví dụ: 生日快乐 - sinh nhật vui vẻ)."
   },
   {
@@ -819,12 +819,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "lèi",
     "question": "累 — lèi nghĩa là gì?",
     "options": [
-      "Mệt / mệt mỏi",
-      "Đói",
+      "Mệt mỏi",
+      "Đói bụng",
       "Vui vẻ",
-      "Khát"
+      "Khát nước"
     ],
-    "correctAnswer": "Mệt / mệt mỏi",
+    "correctAnswer": "Mệt mỏi",
     "explanation": "累 (lèi) miêu tả trạng thái hao tổn thể lực, mệt sức sau khi làm việc."
   },
   {
@@ -833,12 +833,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "lí",
     "question": "离 — lí nghĩa là gì?",
     "options": [
-      "Cách (khoảng cách nơi chốn/thời gian)",
-      "Đến",
-      "Ở",
-      "Từ"
+      "Cách xa",
+      "Đến gần",
+      "Ở tại",
+      "Từ nơi"
     ],
-    "correctAnswer": "Cách (khoảng cách nơi chốn/thời gian)",
+    "correctAnswer": "Cách xa",
     "explanation": "离 (lí) dùng đo cự ly giữa hai điểm (Ví dụ: 我家离学校很近)."
   },
   {
@@ -847,12 +847,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "liǎng",
     "question": "两 — liǎng nghĩa là gì?",
     "options": [
-      "Hai (dùng trước lượng từ)",
-      "Một",
-      "Ba",
-      "Mười"
+      "Hai cái",
+      "Một cái",
+      "Ba cái",
+      "Mười cái"
     ],
-    "correctAnswer": "Hai (dùng trước lượng từ)",
+    "correctAnswer": "Hai cái",
     "explanation": "两 (liǎng) dùng để chỉ số lượng 2 khi đứng trước lượng từ (Ví dụ: 两个人)."
   },
   {
@@ -861,12 +861,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "líng",
     "question": "零 — líng nghĩa là gì?",
     "options": [
-      "Số không (0)",
-      "Số một",
-      "Số mười",
-      "Số một trăm"
+      "Số 0",
+      "Số 1",
+      "Số 10",
+      "Số 100"
     ],
-    "correctAnswer": "Số không (0)",
+    "correctAnswer": "Số 0",
     "explanation": "零 (líng) là con số 0 trong toán học và ngày tháng."
   },
   {
@@ -875,12 +875,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "lù",
     "question": "路 — lù nghĩa là gì?",
     "options": [
-      "Đường / con đường",
-      "Cửa",
-      "Phòng",
-      "Cầu"
+      "Con đường",
+      "Cửa ngõ",
+      "Căn phòng",
+      "Cây cầu"
     ],
-    "correctAnswer": "Đường / con đường",
+    "correctAnswer": "Con đường",
     "explanation": "路 (lù) là đường sá đi lại (Ví dụ: 路上 - trên đường)."
   },
   {
@@ -889,12 +889,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "lǚyóu",
     "question": "旅游 — lǚyóu nghĩa là gì?",
     "options": [
-      "Du lịch / đi chơi xa",
+      "Du lịch",
       "Làm việc",
       "Học tập",
       "Nghỉ ngơi"
     ],
-    "correctAnswer": "Du lịch / đi chơi xa",
+    "correctAnswer": "Du lịch",
     "explanation": "旅游 (lǚyóu) là hoạt động đi tham quan nghỉ dưỡng ở nơi xa."
   },
   {
@@ -903,12 +903,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "mài",
     "question": "卖 — mài nghĩa là gì?",
     "options": [
-      "Bán",
-      "Mua",
-      "Cho",
-      "Lấy"
+      "Bán đồ",
+      "Mua đồ",
+      "Tặng đồ",
+      "Mượn đồ"
     ],
-    "correctAnswer": "Bán",
+    "correctAnswer": "Bán đồ",
     "explanation": "卖 (mài - mang thanh 4) nghĩa là bán hàng hóa (đối lập với 买 - mua mang thanh 3)."
   },
   {
@@ -917,12 +917,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "màn",
     "question": "慢 — màn nghĩa là gì?",
     "options": [
-      "Chậm / chậm chạp",
-      "Nhanh",
-      "Sớm",
-      "Muộn"
+      "Chậm chạp",
+      "Nhanh nhẹn",
+      "Sớm sủa",
+      "Muộn màng"
     ],
-    "correctAnswer": "Chậm / chậm chạp",
+    "correctAnswer": "Chậm chạp",
     "explanation": "慢 (màn) miêu tả tốc độ chậm (đối lập với 快, Ví dụ: 慢走 - đi thong thả)."
   },
   {
@@ -931,12 +931,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "máng",
     "question": "忙 — máng nghĩa là gì?",
     "options": [
-      "Bận / bận rộn",
-      "Rảnh",
-      "Mệt",
-      "Vui"
+      "Bận rộn",
+      "Rảnh rỗi",
+      "Mệt mỏi",
+      "Vui vẻ"
     ],
-    "correctAnswer": "Bận / bận rộn",
+    "correctAnswer": "Bận rộn",
     "explanation": "忙 (máng) miêu tả tình trạng có nhiều việc phải làm (Ví dụ: 你忙吗 - bạn bận không?)."
   },
   {
@@ -945,12 +945,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "měi",
     "question": "每 — měi nghĩa là gì?",
     "options": [
-      "Mỗi / từng",
+      "Mỗi một",
       "Tất cả",
-      "Nhiều",
-      "Ít"
+      "Rất nhiều",
+      "Ít ỏi"
     ],
-    "correctAnswer": "Mỗi / từng",
+    "correctAnswer": "Mỗi một",
     "explanation": "每 (měi) chỉ từng cá thể trong một nhóm (Ví dụ: 每天 - mỗi ngày)."
   },
   {
@@ -973,12 +973,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "mén",
     "question": "门 — mén nghĩa là gì?",
     "options": [
-      "Cửa / cánh cổng",
+      "Cửa vào",
       "Cửa sổ",
       "Căn phòng",
-      "Bàn"
+      "Cái bàn"
     ],
-    "correctAnswer": "Cửa / cánh cổng",
+    "correctAnswer": "Cửa vào",
     "explanation": "门 (mén) là cửa ra vào hoặc cổng nhà (Ví dụ: 开门 - mở cửa)."
   },
   {
@@ -987,12 +987,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "nán",
     "question": "男 — nán nghĩa là gì?",
     "options": [
-      "Nam / đàn ông",
-      "Nữ / phụ nữ",
-      "Trẻ em",
+      "Nam giới",
+      "Nữ giới",
+      "Trẻ con",
       "Người già"
     ],
-    "correctAnswer": "Nam / đàn ông",
+    "correctAnswer": "Nam giới",
     "explanation": "男 (nán) chỉ giới tính nam (Ví dụ: 男人 - đàn ông, 男生 - nam sinh)."
   },
   {
@@ -1001,12 +1001,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "nín",
     "question": "您 — nín nghĩa là gì?",
     "options": [
-      "Ngài / ông / bà (kính ngữ của 你)",
+      "Ngài",
       "Tôi",
       "Anh ấy",
       "Các bạn"
     ],
-    "correctAnswer": "Ngài / ông / bà (kính ngữ của 你)",
+    "correctAnswer": "Ngài",
     "explanation": "您 (nín) thể hiện sự kính trọng với người lớn tuổi hoặc cấp trên."
   },
   {
@@ -1016,7 +1016,7 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "question": "牛奶 — niúnǎi nghĩa là gì?",
     "options": [
       "Sữa bò",
-      "Trà",
+      "Trà xanh",
       "Cà phê",
       "Nước khoáng"
     ],
@@ -1029,12 +1029,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "nǚ",
     "question": "女 — nǚ nghĩa là gì?",
     "options": [
-      "Nữ / phụ nữ",
-      "Nam / đàn ông",
-      "Bố",
+      "Nữ giới",
+      "Nam giới",
+      "Người cha",
       "Con trai"
     ],
-    "correctAnswer": "Nữ / phụ nữ",
+    "correctAnswer": "Nữ giới",
     "explanation": "女 (nǚ) chỉ giới tính nữ (Ví dụ: 女人 - phụ nữ, 女生 - nữ sinh)."
   },
   {
@@ -1071,12 +1071,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "piányi",
     "question": "便宜 — piányi nghĩa là gì?",
     "options": [
-      "Rẻ / giá rẻ",
-      "Đắt",
-      "Đẹp",
-      "Ngon"
+      "Giá rẻ",
+      "Giá đắt",
+      "Xinh đẹp",
+      "Ngon lành"
     ],
-    "correctAnswer": "Rẻ / giá rẻ",
+    "correctAnswer": "Giá rẻ",
     "explanation": "便宜 (piányi) miêu tả giá tiền thấp (đối lập với 贵 - đắt)."
   },
   {
@@ -1085,12 +1085,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "piào",
     "question": "票 — piào nghĩa là gì?",
     "options": [
-      "Vé",
-      "Tiền",
-      "Sách",
-      "Báo"
+      "Tấm vé",
+      "Tiền bạc",
+      "Quyển sách",
+      "Tờ báo"
     ],
-    "correctAnswer": "Vé",
+    "correctAnswer": "Tấm vé",
     "explanation": "票 (piào) là vé vào cửa, vé xem phim, vé tàu xe (Ví dụ: 车票, 电影票)."
   },
   {
@@ -1099,12 +1099,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "qīzi",
     "question": "妻子 — qīzi nghĩa là gì?",
     "options": [
-      "Vợ",
-      "Chồng",
-      "Mẹ",
+      "Người vợ",
+      "Người chồng",
+      "Người mẹ",
       "Chị gái"
     ],
-    "correctAnswer": "Vợ",
+    "correctAnswer": "Người vợ",
     "explanation": "妻子 (qīzi) là người vợ trong mối quan hệ hôn nhân."
   },
   {
@@ -1113,12 +1113,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "qǐchuáng",
     "question": "起床 — qǐchuáng nghĩa là gì?",
     "options": [
-      "Thức dậy / rời khỏi giường",
+      "Thức dậy",
       "Đi ngủ",
       "Tắm rửa",
       "Ăn sáng"
     ],
-    "correctAnswer": "Thức dậy / rời khỏi giường",
+    "correctAnswer": "Thức dậy",
     "explanation": "起床 (qǐchuáng) là hành động dậy sau giấc ngủ."
   },
   {
@@ -1127,12 +1127,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "qiān",
     "question": "千 — qiān nghĩa là gì?",
     "options": [
-      "Nghìn / ngàn (số 1000)",
-      "Trăm",
-      "Mười",
-      "Vạn"
+      "Một nghìn",
+      "Một trăm",
+      "Một chục",
+      "Một vạn"
     ],
-    "correctAnswer": "Nghìn / ngàn (số 1000)",
+    "correctAnswer": "Một nghìn",
     "explanation": "千 (qiān) là hàng ngàn (Ví dụ: 一千 - một nghìn)."
   },
   {
@@ -1142,9 +1142,9 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "question": "铅笔 — qiānbǐ nghĩa là gì?",
     "options": [
       "Bút chì",
-      "Sách",
+      "Sách vở",
       "Thước kẻ",
-      "Vở"
+      "Cục tẩy"
     ],
     "correctAnswer": "Bút chì",
     "explanation": "铅笔 (qiānbǐ) là dụng cụ viết bằng chì vẽ hoặc ghi chép."
@@ -1155,12 +1155,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "qíng",
     "question": "晴 — qíng nghĩa là gì?",
     "options": [
-      "Trời nắng / quang đãng",
+      "Trời nắng",
       "Trời mưa",
-      "Trời âm u",
-      "Trời lạnh"
+      "Trời rét",
+      "Có tuyết"
     ],
-    "correctAnswer": "Trời nắng / quang đãng",
+    "correctAnswer": "Trời nắng",
     "explanation": "晴 (qíng) miêu tả thời tiết có nắng, trời quang không mây (晴天)."
   },
   {
@@ -1169,12 +1169,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "qùnián",
     "question": "去年 — qùnián nghĩa là gì?",
     "options": [
-      "Năm ngoái / năm trước",
+      "Năm ngoái",
       "Năm nay",
       "Năm sau",
       "Tháng trước"
     ],
-    "correctAnswer": "Năm ngoái / năm trước",
+    "correctAnswer": "Năm ngoái",
     "explanation": "去年 (qùnián) là năm liền trước năm hiện tại."
   },
   {
@@ -1183,12 +1183,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "ràng",
     "question": "让 — ràng nghĩa là gì?",
     "options": [
-      "Cho phép / để cho / nhường / bảo",
-      "Muốn",
-      "Phải",
-      "Biết"
+      "Để cho",
+      "Muốn có",
+      "Phải làm",
+      "Biết rõ"
     ],
-    "correctAnswer": "Cho phép / để cho / nhường / bảo",
+    "correctAnswer": "Để cho",
     "explanation": "让 (ràng) là động từ sai khiến hoặc nhượng bộ (Ví dụ: 让我看看 - để tôi xem)."
   },
   {
@@ -1197,12 +1197,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "rì",
     "question": "日 — rì nghĩa là gì?",
     "options": [
-      "Ngày / mặt trời",
-      "Tháng",
-      "Năm",
-      "Giờ"
+      "Mặt trời",
+      "Mặt trăng",
+      "Ngôi sao",
+      "Đám mây"
     ],
-    "correctAnswer": "Ngày / mặt trời",
+    "correctAnswer": "Mặt trời",
     "explanation": "日 (rì) dùng trong văn viết chỉ ngày trong tháng hoặc mặt trời."
   },
   {
@@ -1211,12 +1211,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "shàngbān",
     "question": "上班 — shàngbān nghĩa là gì?",
     "options": [
-      "Đi làm / bắt đầu ca làm",
+      "Đi làm",
       "Tan làm",
       "Đi học",
       "Nghỉ ngơi"
     ],
-    "correctAnswer": "Đi làm / bắt đầu ca làm",
+    "correctAnswer": "Đi làm",
     "explanation": "上班 (shàngbān) là đến cơ quan làm việc (đối lập với 下班 - tan làm)."
   },
   {
@@ -1225,12 +1225,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "shēntǐ",
     "question": "身体 — shēntǐ nghĩa là gì?",
     "options": [
-      "Cơ thể / sức khỏe",
+      "Thân thể",
       "Thời gian",
       "Công việc",
       "Tuổi tác"
     ],
-    "correctAnswer": "Cơ thể / sức khỏe",
+    "correctAnswer": "Thân thể",
     "explanation": "身体 (shēntǐ) chỉ thân thể con người hoặc tình trạng sức khỏe (身体好)."
   },
   {
@@ -1239,12 +1239,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "shēngbìng",
     "question": "生病 — shēngbìng nghĩa là gì?",
     "options": [
-      "Bị ốm / mắc bệnh",
+      "Bị ốm",
       "Khỏe mạnh",
       "Mệt mỏi",
-      "Uống thuốc"
+      "Đau răng"
     ],
-    "correctAnswer": "Bị ốm / mắc bệnh",
+    "correctAnswer": "Bị ốm",
     "explanation": "生病 (shēngbìng) là trạng thái cơ thể không khỏe, nhiễm bệnh."
   },
   {
@@ -1253,12 +1253,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "shēngrì",
     "question": "生日 — shēngrì nghĩa là gì?",
     "options": [
-      "Ngày sinh nhật",
+      "Sinh nhật",
       "Hôm nay",
       "Ngày lễ",
       "Năm mới"
     ],
-    "correctAnswer": "Ngày sinh nhật",
+    "correctAnswer": "Sinh nhật",
     "explanation": "生日 (shēngrì) là ngày kỷ niệm chào đời của một người."
   },
   {
@@ -1281,12 +1281,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "shìqing",
     "question": "事情 — shìqing nghĩa là gì?",
     "options": [
-      "Sự việc / công việc / việc",
+      "Sự việc",
       "Đồ vật",
       "Thời gian",
       "Nơi chốn"
     ],
-    "correctAnswer": "Sự việc / công việc / việc",
+    "correctAnswer": "Sự việc",
     "explanation": "事情 (shìqing) chỉ sự tình hoặc công việc cần giải quyết (Ví dụ: 什么事)."
   },
   {
@@ -1295,12 +1295,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "shǒubiǎo",
     "question": "手表 — shǒubiǎo nghĩa là gì?",
     "options": [
-      "Đồng hồ đeo tay",
+      "Đồng hồ",
       "Điện thoại",
       "Máy tính",
       "Túi xách"
     ],
-    "correctAnswer": "Đồng hồ đeo tay",
+    "correctAnswer": "Đồng hồ",
     "explanation": "手表 (shǒubiǎo) là phụ kiện xem giờ đeo ở cổ tay."
   },
   {
@@ -1309,12 +1309,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "shǒujī",
     "question": "手机 — shǒujī nghĩa là gì?",
     "options": [
-      "Điện thoại di động",
+      "Điện thoại",
       "Đồng hồ",
       "Máy tính",
       "Tivi"
     ],
-    "correctAnswer": "Điện thoại di động",
+    "correctAnswer": "Điện thoại",
     "explanation": "手机 (shǒujī) nghĩa đen là 'máy cầm tay', tức điện thoại di động."
   },
   {
@@ -1323,12 +1323,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "shuōhuà",
     "question": "说话 — shuōhuà nghĩa là gì?",
     "options": [
-      "Nói chuyện / trò chuyện",
+      "Nói chuyện",
       "Nghe nhạc",
-      "Hát",
+      "Hát ca",
       "Đọc sách"
     ],
-    "correctAnswer": "Nói chuyện / trò chuyện",
+    "correctAnswer": "Nói chuyện",
     "explanation": "说话 (shuōhuà) là việc phát ra lời nói để trao đổi (Ví dụ: 别说话 - đừng nói chuyện)."
   },
   {
@@ -1337,12 +1337,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "sòng",
     "question": "送 — sòng nghĩa là gì?",
     "options": [
-      "Tặng / tiễn đưa",
-      "Nhận",
-      "Mua",
-      "Mượn"
+      "Tặng quà",
+      "Nhận quà",
+      "Mua sắm",
+      "Mượn đồ"
     ],
-    "correctAnswer": "Tặng / tiễn đưa",
+    "correctAnswer": "Tặng quà",
     "explanation": "送 (sòng) nghĩa là tặng quà (送礼物) hoặc tiễn ai đó lên đường (送朋友)."
   },
   {
@@ -1351,12 +1351,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "suīrán",
     "question": "虽然 — suīrán nghĩa là gì?",
     "options": [
-      "Mặc dù / tuy rằng",
+      "Mặc dù",
       "Bởi vì",
       "Cho nên",
       "Nếu như"
     ],
-    "correctAnswer": "Mặc dù / tuy rằng",
+    "correctAnswer": "Mặc dù",
     "explanation": "虽然 (suīrán) đứng đầu phân câu nhượng bộ, thường đi cặp với 但是 (nhưng)."
   },
   {
@@ -1365,12 +1365,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "dànshì",
     "question": "但是 — dànshì nghĩa là gì?",
     "options": [
-      "Nhưng mà / tuy nhiên",
+      "Nhưng mà",
       "Bởi vì",
       "Cho nên",
-      "Và"
+      "Và lại"
     ],
-    "correctAnswer": "Nhưng mà / tuy nhiên",
+    "correctAnswer": "Nhưng mà",
     "explanation": "但是 (dànshì) là liên từ biểu thị sự chuyển ý tương phản."
   },
   {
@@ -1379,12 +1379,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "tā",
     "question": "它 — tā nghĩa là gì?",
     "options": [
-      "Nó (chỉ động vật, đồ vật)",
+      "Đồ vật đó",
       "Anh ấy",
       "Cô ấy",
-      "Tôi"
+      "Tôi đây"
     ],
-    "correctAnswer": "Nó (chỉ động vật, đồ vật)",
+    "correctAnswer": "Đồ vật đó",
     "explanation": "它 (tā) là đại từ nhân xưng ngôi thứ ba chỉ con vật hoặc đồ vật."
   },
   {
@@ -1393,12 +1393,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "tī zúqiú",
     "question": "踢足球 — tī zúqiú nghĩa là gì?",
     "options": [
-      "Đá bóng / chơi bóng đá",
+      "Đá bóng",
       "Chơi bóng rổ",
       "Bơi lội",
       "Chạy bộ"
     ],
-    "correctAnswer": "Đá bóng / chơi bóng đá",
+    "correctAnswer": "Đá bóng",
     "explanation": "踢足球 (tī zúqiú) là môn thể thao bóng đá (tī: đá, zúqiú: bóng đá)."
   },
   {
@@ -1407,12 +1407,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "tí",
     "question": "题 — tí nghĩa là gì?",
     "options": [
-      "Câu hỏi / đề bài / chủ đề",
+      "Đề bài",
       "Quyển sách",
       "Bài thi",
       "Điểm số"
     ],
-    "correctAnswer": "Câu hỏi / đề bài / chủ đề",
+    "correctAnswer": "Đề bài",
     "explanation": "题 (tí) là đề mục, câu hỏi trong bài kiểm tra (Ví dụ: 这道题 - câu hỏi này)."
   },
   {
@@ -1421,12 +1421,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "tiàowǔ",
     "question": "跳舞 — tiàowǔ nghĩa là gì?",
     "options": [
-      "Nhảy múa / khiêu vũ",
+      "Khiêu vũ",
       "Ca hát",
       "Đá bóng",
       "Chạy bộ"
     ],
-    "correctAnswer": "Nhảy múa / khiêu vũ",
+    "correctAnswer": "Khiêu vũ",
     "explanation": "跳舞 (tiàowǔ) là vũ đạo biểu diễn hoặc khiêu vũ."
   },
   {
@@ -1435,12 +1435,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "wài",
     "question": "外 — wài nghĩa là gì?",
     "options": [
-      "Ngoài / bên ngoài",
-      "Trong",
-      "Trên",
-      "Dưới"
+      "Bên ngoài",
+      "Bên trong",
+      "Bên trên",
+      "Bên dưới"
     ],
-    "correctAnswer": "Ngoài / bên ngoài",
+    "correctAnswer": "Bên ngoài",
     "explanation": "外 (wài) chỉ vị trí bên ngoài (đối lập với 里 - trong)."
   },
   {
@@ -1449,12 +1449,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "wán",
     "question": "完 — wán nghĩa là gì?",
     "options": [
-      "Xong / hết / hoàn thành",
+      "Xong xuôi",
       "Bắt đầu",
       "Còn lại",
-      "Đang"
+      "Đang làm"
     ],
-    "correctAnswer": "Xong / hết / hoàn thành",
+    "correctAnswer": "Xong xuôi",
     "explanation": "完 (wán) là bổ ngữ kết quả chỉ hành động đã kết thúc (Ví dụ: 做完 - làm xong)."
   },
   {
@@ -1463,12 +1463,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "wán",
     "question": "玩 — wán nghĩa là gì?",
     "options": [
-      "Chơi / vui chơi",
+      "Vui chơi",
       "Làm việc",
       "Học tập",
       "Nghỉ ngơi"
     ],
-    "correctAnswer": "Chơi / vui chơi",
+    "correctAnswer": "Vui chơi",
     "explanation": "玩 (wán) là hoạt động giải trí vui chơi (Ví dụ: 好玩 - chơi vui)."
   },
   {
@@ -1477,12 +1477,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "wǎnshang",
     "question": "晚上 — wǎnshang nghĩa là gì?",
     "options": [
-      "Buổi tối / ban đêm",
+      "Buổi tối",
       "Buổi sáng",
       "Buổi chiều",
       "Buổi trưa"
     ],
-    "correctAnswer": "Buổi tối / ban đêm",
+    "correctAnswer": "Buổi tối",
     "explanation": "晚上 (wǎnshang) là khoảng thời gian từ lúc chập tối đến đêm."
   },
   {
@@ -1491,12 +1491,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "wǎng",
     "question": "往 — wǎng nghĩa là gì?",
     "options": [
-      "Về phía / hướng tới",
-      "Từ",
-      "Ở",
-      "Đến"
+      "Hướng về",
+      "Xuất phát",
+      "Ở tại",
+      "Đến nơi"
     ],
-    "correctAnswer": "Về phía / hướng tới",
+    "correctAnswer": "Hướng về",
     "explanation": "往 (wǎng) là giới từ chỉ hướng chuyển động (Ví dụ: 往前走 - đi về phía trước)."
   },
   {
@@ -1505,12 +1505,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "wèishénme",
     "question": "为什么 — wèishénme nghĩa là gì?",
     "options": [
-      "Tại sao / vì sao",
+      "Tại sao",
       "Cái gì",
       "Ở đâu",
       "Bao giờ"
     ],
-    "correctAnswer": "Tại sao / vì sao",
+    "correctAnswer": "Tại sao",
     "explanation": "为什么 (wèishénme) là đại từ hỏi nguyên nhân, lý do."
   },
   {
@@ -1519,12 +1519,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "wèn",
     "question": "问 — wèn nghĩa là gì?",
     "options": [
-      "Hỏi",
+      "Hỏi han",
       "Trả lời",
-      "Nói",
-      "Nghe"
+      "Nói năng",
+      "Lắng nghe"
     ],
-    "correctAnswer": "Hỏi",
+    "correctAnswer": "Hỏi han",
     "explanation": "问 (wèn) là đặt câu hỏi cho người khác (Ví dụ: 问老师 - hỏi thầy giáo)."
   },
   {
@@ -1533,12 +1533,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "wèntí",
     "question": "问题 — wèntí nghĩa là gì?",
     "options": [
-      "Vấn đề / câu hỏi",
+      "Vấn đề",
       "Đáp án",
       "Bài tập",
       "Ý kiến"
     ],
-    "correctAnswer": "Vấn đề / câu hỏi",
+    "correctAnswer": "Vấn đề",
     "explanation": "问题 (wèntí) là khúc mắc, câu hỏi hoặc vấn đề cần xử lý (Ví dụ: 没问题 - không vấn đề)."
   },
   {
@@ -1548,9 +1548,9 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "question": "西瓜 — xīguā nghĩa là gì?",
     "options": [
       "Dưa hấu",
-      "Táo",
-      "Cam",
-      "Chuối"
+      "Quả táo",
+      "Quả cam",
+      "Quả chuối"
     ],
     "correctAnswer": "Dưa hấu",
     "explanation": "西瓜 (xīguā) là loại trái cây vỏ xanh ruột đỏ nhiều nước ngọt mát."
@@ -1561,12 +1561,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "xīwàng",
     "question": "希望 — xīwàng nghĩa là gì?",
     "options": [
-      "Hy vọng / mong muốn",
+      "Hy vọng",
       "Thất vọng",
       "Sợ hãi",
       "Quên mất"
     ],
-    "correctAnswer": "Hy vọng / mong muốn",
+    "correctAnswer": "Hy vọng",
     "explanation": "希望 (xīwàng) biểu thị nguyện vọng tốt đẹp đối với tương lai."
   },
   {
@@ -1575,12 +1575,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "xǐ",
     "question": "洗 — xǐ nghĩa là gì?",
     "options": [
-      "Rửa / giặt / tắm",
-      "Mặc",
-      "Mua",
-      "Nấu"
+      "Rửa sạch",
+      "Mặc vào",
+      "Mua về",
+      "Nấu chín"
     ],
-    "correctAnswer": "Rửa / giặt / tắm",
+    "correctAnswer": "Rửa sạch",
     "explanation": "洗 (xǐ) là làm sạch bằng nước (Ví dụ: 洗手 - rửa tay, 洗衣服 - giặt quần áo)."
   },
   {
@@ -1589,12 +1589,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "xiǎoshí",
     "question": "小时 — xiǎoshí nghĩa là gì?",
     "options": [
-      "Tiếng đồng hồ / giờ (khoảng thời gian)",
-      "Phút",
-      "Giây",
-      "Ngày"
+      "Tiếng đồng hồ",
+      "Phút giây",
+      "Ngày đêm",
+      "Tháng năm"
     ],
-    "correctAnswer": "Tiếng đồng hồ / giờ (khoảng thời gian)",
+    "correctAnswer": "Tiếng đồng hồ",
     "explanation": "小时 (xiǎoshí) chỉ độ dài thời gian tính bằng giờ (Ví dụ: 一个小时 - một tiếng)."
   },
   {
@@ -1603,12 +1603,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "xiào",
     "question": "笑 — xiào nghĩa là gì?",
     "options": [
-      "Cười",
-      "Khóc",
-      "Nói",
-      "Hát"
+      "Mỉm cười",
+      "Khóc lóc",
+      "Nói năng",
+      "Ca hát"
     ],
-    "correctAnswer": "Cười",
+    "correctAnswer": "Mỉm cười",
     "explanation": "笑 (xiào) biểu lộ niềm vui qua nụ cười (đối lập với 哭 - khóc)."
   },
   {
@@ -1617,12 +1617,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "xīn",
     "question": "新 — xīn nghĩa là gì?",
     "options": [
-      "Mới",
-      "Cũ",
-      "Đẹp",
-      "Tốt"
+      "Mới mẻ",
+      "Cũ kỹ",
+      "Xinh đẹp",
+      "Tốt lành"
     ],
-    "correctAnswer": "Mới",
+    "correctAnswer": "Mới mẻ",
     "explanation": "新 (xīn) chỉ sự vật mới xuất hiện (Ví dụ: 新书 - sách mới)."
   },
   {
@@ -1631,12 +1631,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "xìng",
     "question": "姓 — xìng nghĩa là gì?",
     "options": [
-      "Họ (họ trong họ tên)",
-      "Tên",
-      "Tuổi",
-      "Nghề nghiệp"
+      "Họ tên",
+      "Tuổi tác",
+      "Nghề nghiệp",
+      "Quê quán"
     ],
-    "correctAnswer": "Họ (họ trong họ tên)",
+    "correctAnswer": "Họ tên",
     "explanation": "姓 (xìng) dùng chỉ dòng họ của một người (Ví dụ: 我姓王 - tôi họ Vương)."
   },
   {
@@ -1659,12 +1659,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "xuě",
     "question": "雪 — xuě nghĩa là gì?",
     "options": [
-      "Tuyết",
-      "Mưa",
-      "Gió",
-      "Mây"
+      "Bông tuyết",
+      "Hạt mưa",
+      "Cơn gió",
+      "Đám mây"
     ],
-    "correctAnswer": "Tuyết",
+    "correctAnswer": "Bông tuyết",
     "explanation": "雪 (xuě) là những bông tuyết trắng rơi vào mùa đông (下雪 - tuyết rơi)."
   },
   {
@@ -1703,7 +1703,7 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "options": [
       "Thịt cừu",
       "Thịt bò",
-      "Thịt lợn",
+      "Thịt heo",
       "Thịt gà"
     ],
     "correctAnswer": "Thịt cừu",
@@ -1715,12 +1715,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "yào",
     "question": "药 — yào nghĩa là gì?",
     "options": [
-      "Thuốc (chữa bệnh)",
+      "Thuốc uống",
       "Thức ăn",
-      "Nước uống",
-      "Trà"
+      "Nước ngọt",
+      "Trà xanh"
     ],
-    "correctAnswer": "Thuốc (chữa bệnh)",
+    "correctAnswer": "Thuốc uống",
     "explanation": "药 (yào) dùng để điều trị bệnh tật (Ví dụ: 吃药 - uống thuốc)."
   },
   {
@@ -1729,12 +1729,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "yào",
     "question": "要 — yào nghĩa là gì?",
     "options": [
-      "Muốn / cần / phải / sắp",
-      "Không muốn",
-      "Đã",
-      "Chưa"
+      "Cần phải",
+      "Không cần",
+      "Đã từng",
+      "Chưa từng"
     ],
-    "correctAnswer": "Muốn / cần / phải / sắp",
+    "correctAnswer": "Cần phải",
     "explanation": "要 (yào) biểu thị nguyện vọng, nhu cầu hoặc hành động sắp diễn ra."
   },
   {
@@ -1743,12 +1743,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "yě",
     "question": "也 — yě nghĩa là gì?",
     "options": [
-      "Cũng",
-      "Đều",
-      "Rất",
-      "Không"
+      "Cũng là",
+      "Đều là",
+      "Rất là",
+      "Không là"
     ],
-    "correctAnswer": "Cũng",
+    "correctAnswer": "Cũng là",
     "explanation": "也 (yě) là phó từ chỉ sự tương đồng (Ví dụ: 我也是 - tôi cũng vậy)."
   },
   {
@@ -1757,12 +1757,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "yíxià",
     "question": "一下 — yíxià nghĩa là gì?",
     "options": [
-      "Một chút / một lát / thử",
+      "Một lát",
       "Một lần",
       "Rất lâu",
       "Mãi mãi"
     ],
-    "correctAnswer": "Một chút / một lát / thử",
+    "correctAnswer": "Một lát",
     "explanation": "一下 (yíxià) đứng sau động từ làm nhẹ sắc thái hành động (Ví dụ: 看一下 - xem thử một chút)."
   },
   {
@@ -1785,12 +1785,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "yǐjīng",
     "question": "已经 — yǐjīng nghĩa là gì?",
     "options": [
-      "Đã / rồi",
-      "Chưa",
-      "Đang",
-      "Sẽ"
+      "Đã rồi",
+      "Chưa có",
+      "Đang làm",
+      "Sẽ làm"
     ],
-    "correctAnswer": "Đã / rồi",
+    "correctAnswer": "Đã rồi",
     "explanation": "已经 (yǐjīng) biểu thị hành động đã hoàn tất trước thời điểm nói (Ví dụ: 已经知道了)."
   },
   {
@@ -1799,12 +1799,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "yìsi",
     "question": "意思 — yìsi nghĩa là gì?",
     "options": [
-      "Ý nghĩa / sự thú vị",
+      "Ý nghĩa",
       "Thời gian",
       "Ý kiến",
       "Lý do"
     ],
-    "correctAnswer": "Ý nghĩa / sự thú vị",
+    "correctAnswer": "Ý nghĩa",
     "explanation": "意思 (yìsi) là nội hàm của từ ngữ hoặc sự thú vị (有意思 - thú vị)."
   },
   {
@@ -1813,12 +1813,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "yīnwèi",
     "question": "因为 — yīnwèi nghĩa là gì?",
     "options": [
-      "Bởi vì / do",
+      "Bởi vì",
       "Cho nên",
       "Mặc dù",
-      "Nhưng"
+      "Nhưng mà"
     ],
-    "correctAnswer": "Bởi vì / do",
+    "correctAnswer": "Bởi vì",
     "explanation": "因为 (yīnwèi) là liên từ biểu thị nguyên nhân."
   },
   {
@@ -1827,12 +1827,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "suǒyǐ",
     "question": "所以 — suǒyǐ nghĩa là gì?",
     "options": [
-      "Cho nên / vì thế",
+      "Cho nên",
       "Bởi vì",
       "Mặc dù",
-      "Nhưng"
+      "Nhưng mà"
     ],
-    "correctAnswer": "Cho nên / vì thế",
+    "correctAnswer": "Cho nên",
     "explanation": "所以 (suǒyǐ) là liên từ biểu thị kết quả, thường đi cặp với 因为."
   },
   {
@@ -1841,12 +1841,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "yīn",
     "question": "阴 — yīn nghĩa là gì?",
     "options": [
-      "Âm u / trời râm",
-      "Nắng ráo",
-      "Mưa to",
+      "Trời râm",
+      "Trời nắng",
+      "Trời mưa",
       "Tuyết rơi"
     ],
-    "correctAnswer": "Âm u / trời râm",
+    "correctAnswer": "Trời râm",
     "explanation": "阴 (yīn) miêu tả thời tiết nhiều mây, không có ánh mặt trời (阴天)."
   },
   {
@@ -1855,12 +1855,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "yóuyǒng",
     "question": "游泳 — yóuyǒng nghĩa là gì?",
     "options": [
-      "Bơi lội / bơi",
+      "Bơi lội",
       "Chạy bộ",
       "Đá bóng",
       "Chơi bóng rổ"
     ],
-    "correctAnswer": "Bơi lội / bơi",
+    "correctAnswer": "Bơi lội",
     "explanation": "游泳 (yóuyǒng) là môn thể thao dưới nước."
   },
   {
@@ -1897,12 +1897,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "yuǎn",
     "question": "远 — yuǎn nghĩa là gì?",
     "options": [
-      "Xa (khoảng cách)",
-      "Gần",
-      "Cao",
-      "Rộng"
+      "Xa xôi",
+      "Gần gũi",
+      "Cao ráo",
+      "Rộng lớn"
     ],
-    "correctAnswer": "Xa (khoảng cách)",
+    "correctAnswer": "Xa xôi",
     "explanation": "远 (yuǎn) miêu tả cự ly dài (đối lập với 近 - gần)."
   },
   {
@@ -1911,12 +1911,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "yùndòng",
     "question": "运动 — yùndòng nghĩa là gì?",
     "options": [
-      "Vận động / thể thao",
+      "Thể thao",
       "Học tập",
       "Làm việc",
       "Nghỉ ngơi"
     ],
-    "correctAnswer": "Vận động / thể thao",
+    "correctAnswer": "Thể thao",
     "explanation": "运动 (yùndòng) là tập luyện thể dục thể thao rèn luyện sức khỏe."
   },
   {
@@ -1925,12 +1925,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "zài",
     "question": "再 — zài nghĩa là gì?",
     "options": [
-      "Lại / lần nữa / thêm nữa",
-      "Đã",
-      "Chưa",
-      "Vẫn"
+      "Lần nữa",
+      "Đã rồi",
+      "Chưa làm",
+      "Vẫn còn"
     ],
-    "correctAnswer": "Lại / lần nữa / thêm nữa",
+    "correctAnswer": "Lần nữa",
     "explanation": "再 (zài) là phó từ chỉ hành động lặp lại trong tương lai (Ví dụ: 再见 - gặp lại sau)."
   },
   {
@@ -1954,8 +1954,8 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "question": "丈夫 — zhàngfu nghĩa là gì?",
     "options": [
       "Người chồng",
-      "Vợ",
-      "Bố",
+      "Người vợ",
+      "Người bố",
       "Anh trai"
     ],
     "correctAnswer": "Người chồng",
@@ -1967,12 +1967,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "zhǎo",
     "question": "找 — zhǎo nghĩa là gì?",
     "options": [
-      "Tìm kiếm / thối tiền",
-      "Mất",
-      "Mua",
-      "Đưa"
+      "Tìm kiếm",
+      "Đánh mất",
+      "Mua sắm",
+      "Giao nộp"
     ],
-    "correctAnswer": "Tìm kiếm / thối tiền",
+    "correctAnswer": "Tìm kiếm",
     "explanation": "找 (zhǎo) nghĩa là tìm đồ (找东西) hoặc trả lại tiền thừa (找钱)."
   },
   {
@@ -1981,12 +1981,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "zhe",
     "question": "着 — zhe nghĩa là gì?",
     "options": [
-      "Đang (trợ từ thái duy trì trạng thái)",
-      "Đã",
-      "Sẽ",
-      "Chưa"
+      "Đang diễn ra",
+      "Đã kết thúc",
+      "Sẽ bắt đầu",
+      "Chưa xảy ra"
     ],
-    "correctAnswer": "Đang (trợ từ thái duy trì trạng thái)",
+    "correctAnswer": "Đang diễn ra",
     "explanation": "着 (zhe) đặt sau động từ chỉ sự tiếp diễn của một trạng thái (Ví dụ: 门开着 - cửa đang mở)."
   },
   {
@@ -1995,12 +1995,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "zhēn",
     "question": "真 — zhēn nghĩa là gì?",
     "options": [
-      "Thật / thật là",
-      "Giả",
-      "Rất",
-      "Không"
+      "Thật sự",
+      "Giả dối",
+      "Rất là",
+      "Không hề"
     ],
-    "correctAnswer": "Thật / thật là",
+    "correctAnswer": "Thật sự",
     "explanation": "真 (zhēn) là phó từ cảm thán nhấn mạnh (Ví dụ: 真好 - thật là tốt)."
   },
   {
@@ -2009,12 +2009,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "zhèngzài",
     "question": "正在 — zhèngzài nghĩa là gì?",
     "options": [
-      "Đang (tiến hành hành động)",
-      "Đã",
-      "Sắp",
-      "Vừa"
+      "Đang lúc",
+      "Đã xong",
+      "Sắp sửa",
+      "Vừa mới"
     ],
-    "correctAnswer": "Đang (tiến hành hành động)",
+    "correctAnswer": "Đang lúc",
     "explanation": "正在 (zhèngzài) nhấn mạnh hành động đang diễn ra tại đúng thời điểm nói."
   },
   {
@@ -2023,12 +2023,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "zhīdào",
     "question": "知道 — zhīdào nghĩa là gì?",
     "options": [
-      "Biết / hiểu rõ",
-      "Quên",
-      "Nghĩ",
-      "Hỏi"
+      "Biết rõ",
+      "Quên mất",
+      "Suy nghĩ",
+      "Hỏi han"
     ],
-    "correctAnswer": "Biết / hiểu rõ",
+    "correctAnswer": "Biết rõ",
     "explanation": "知道 (zhīdào) là nắm được thông tin hoặc sự việc (Ví dụ: 我知道 - tôi biết rồi)."
   },
   {
@@ -2037,12 +2037,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "zhǔnbèi",
     "question": "准备 — zhǔnbèi nghĩa là gì?",
     "options": [
-      "Chuẩn bị / dự định",
+      "Chuẩn bị",
       "Bắt đầu",
       "Hoàn thành",
       "Nghỉ ngơi"
     ],
-    "correctAnswer": "Chuẩn bị / dự định",
+    "correctAnswer": "Chuẩn bị",
     "explanation": "准备 (zhǔnbèi) là việc sắp xếp trước cho một kế hoạch hoặc công việc."
   },
   {
@@ -2065,12 +2065,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "zǒu",
     "question": "走 — zǒu nghĩa là gì?",
     "options": [
-      "Đi / bước đi / rời đi",
-      "Chạy",
-      "Ngồi",
-      "Đứng"
+      "Bước đi",
+      "Chạy trốn",
+      "Ngồi xuống",
+      "Đứng lại"
     ],
-    "correctAnswer": "Đi / bước đi / rời đi",
+    "correctAnswer": "Bước đi",
     "explanation": "走 (zǒu) là hành động đi bộ hoặc rời khỏi vị trí (Ví dụ: 慢走 - đi thong thả)."
   },
   {
@@ -2079,12 +2079,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "zuì",
     "question": "最 — zuì nghĩa là gì?",
     "options": [
-      "Nhất (so sánh bậc nhất)",
+      "Nhất",
       "Hơn",
       "Rất",
       "Đều"
     ],
-    "correctAnswer": "Nhất (so sánh bậc nhất)",
+    "correctAnswer": "Nhất",
     "explanation": "最 (zuì) đứng trước tính từ biểu thị mức độ cao nhất (Ví dụ: 最好 - tốt nhất)."
   },
   {

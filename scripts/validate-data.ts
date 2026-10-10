@@ -65,15 +65,71 @@ function validateDataset(name: string, data: QuizQuestion[], expectedCount: numb
   }
 }
 
+import { HSK_SENTENCE_PATTERNS } from '../data/hsk-sentences-data';
+import { HSK_DIALOGUES } from '../data/hsk-dialogues-data';
+
+function validateSentences(): boolean {
+  const errors: string[] = [];
+  if (HSK_SENTENCE_PATTERNS.length < 50) {
+    errors.push(`Expected at least 50 sentence patterns, but got ${HSK_SENTENCE_PATTERNS.length}`);
+  }
+
+  HSK_SENTENCE_PATTERNS.forEach((s) => {
+    if (!s.chinese || !s.pinyin || !s.vietnamese || !s.grammar) {
+      errors.push(`Sentence id ${s.id} has missing required field`);
+    }
+    if (s.quizMeaning.options.length !== 4 || !s.quizMeaning.options.includes(s.quizMeaning.correctAnswer)) {
+      errors.push(`Sentence id ${s.id} quizMeaning invalid options`);
+    }
+    if (s.quizFill.options.length !== 4 || !s.quizFill.options.includes(s.quizFill.correctAnswer)) {
+      errors.push(`Sentence id ${s.id} quizFill invalid options`);
+    }
+  });
+
+  if (errors.length > 0) {
+    console.error('❌ [HSK Sentences] FAILED:', errors);
+    return false;
+  }
+  console.log(`✅ [HSK Sentences] Passed (${HSK_SENTENCE_PATTERNS.length} patterns valid, >= 50 required)`);
+  return true;
+}
+
+function validateDialogues(): boolean {
+  const errors: string[] = [];
+  if (HSK_DIALOGUES.length < 20) {
+    errors.push(`Expected at least 20 dialogues, but got ${HSK_DIALOGUES.length}`);
+  }
+
+  HSK_DIALOGUES.forEach((d) => {
+    if (!d.title || d.lines.length < 3 || d.quizzes.length < 2) {
+      errors.push(`Dialogue id ${d.id} has incomplete lines or quizzes`);
+    }
+    d.quizzes.forEach((q, idx) => {
+      if (q.options.length !== 4 || !q.options.includes(q.correctAnswer)) {
+        errors.push(`Dialogue id ${d.id} quiz ${idx + 1} invalid options`);
+      }
+    });
+  });
+
+  if (errors.length > 0) {
+    console.error('❌ [HSK Dialogues] FAILED:', errors);
+    return false;
+  }
+  console.log(`✅ [HSK Dialogues] Passed (${HSK_DIALOGUES.length} dialogues valid, >= 20 required)`);
+  return true;
+}
+
 function runAllValidation() {
   const v1 = validateDataset('HSK 1', HSK1_VOCAB_DATA, 150);
   const v2 = validateDataset('HSK 2', HSK2_VOCAB_DATA, 150);
   const v3 = validateDataset('HSK 1+2', HSK_COMBINED_VOCAB_DATA, 300);
+  const v4 = validateSentences();
+  const v5 = validateDialogues();
 
-  if (!v1 || !v2 || !v3) {
+  if (!v1 || !v2 || !v3 || !v4 || !v5) {
     process.exit(1);
   }
-  console.log('\n🎉 ALL DATASETS (HSK 1, HSK 2, HSK 1+2 COMBINED) PASSED VALIDATION!\n');
+  console.log('\n🎉 ALL DATASETS (HSK 1, HSK 2, HSK 1+2, SENTENCES, DIALOGUES) PASSED VALIDATION!\n');
 }
 
 runAllValidation();

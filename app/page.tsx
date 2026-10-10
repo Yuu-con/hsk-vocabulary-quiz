@@ -8,8 +8,15 @@ import { StartScreen } from '@/components/StartScreen';
 import { ResultScreen } from '@/components/ResultScreen';
 import { RoundTransitionScreen } from '@/components/RoundTransitionScreen';
 import { QuestionNavigatorModal } from '@/components/QuestionNavigatorModal';
+import { NavigationTabs } from '@/components/NavigationTabs';
+import { SentencesSection } from '@/components/SentencesSection';
+import { ReadingSection } from '@/components/ReadingSection';
+import { ListeningSection } from '@/components/ListeningSection';
+import { PracticeTab } from '@/types/practice';
 
 export default function HomePage() {
+  const [activeTab, setActiveTab] = useState<PracticeTab>('vocab');
+
   const {
     isHydrated,
     level,
@@ -60,7 +67,7 @@ export default function HomePage() {
   };
 
   return (
-    <main className="min-h-screen bg-slate-50 flex flex-col justify-between selection:bg-rose-500 selection:text-white">
+    <main className="min-h-screen bg-slate-50 flex flex-col justify-between selection:bg-rose-500 selection:text-white pt-4 sm:pt-6">
       {/* Reset Confirmation Modal */}
       {showResetConfirm && (
         <div className="fixed inset-0 z-50 bg-slate-900/40 backdrop-blur-sm flex items-center justify-center p-4">
@@ -101,79 +108,97 @@ export default function HomePage() {
         }}
       />
 
-      {/* Screen Views based on Quiz Mode */}
+      {/* Top 4-Tab Navigation Bar: Always visible on idle or home, gives immediate access */}
+      {mode === 'idle' && (
+        <NavigationTabs activeTab={activeTab} onTabChange={setActiveTab} />
+      )}
+
+      {/* Content Rendering Based on Active Tab & Quiz Mode */}
       <div className="w-full flex-1 flex flex-col">
-        {mode === 'idle' && (
-          <StartScreen
-            currentLevel={level}
-            onChangeLevel={changeLevel}
-            onStartQuiz={startQuiz}
-            onResumeQuiz={hasSavedProgress ? resumeQuiz : undefined}
-            onResetQuiz={() => (hasSavedProgress ? setShowResetConfirm(true) : resetQuiz())}
-            hasSavedProgress={hasSavedProgress}
-            savedIndex={currentIndex}
-            savedScore={score}
-            totalQuestions={totalFullQuestions}
-            round={round}
-          />
-        )}
-
-        {mode === 'in_progress' && currentQuestion && (
+        {activeTab === 'vocab' && (
           <>
-            <QuizHeader
-              level={level}
-              round={round}
-              currentIndex={currentIndex}
-              totalQuestions={totalQuestionsInRound}
-              score={score}
-              answeredCount={answeredCountInRound}
-              onReset={() => setShowResetConfirm(true)}
-              onGoHome={() => setMode('idle')}
-              onOpenNavigator={() => setIsNavigatorOpen(true)}
-            />
-
-            <div className="flex-1 flex items-center justify-center">
-              <QuizCard
-                question={currentQuestion}
-                questionIndex={currentIndex}
-                totalQuestions={totalQuestionsInRound}
+            {mode === 'idle' && (
+              <StartScreen
+                currentLevel={level}
+                onChangeLevel={changeLevel}
+                onStartQuiz={startQuiz}
+                onResumeQuiz={hasSavedProgress ? resumeQuiz : undefined}
+                onResetQuiz={() => (hasSavedProgress ? setShowResetConfirm(true) : resetQuiz())}
+                hasSavedProgress={hasSavedProgress}
+                savedIndex={currentIndex}
+                savedScore={score}
+                totalQuestions={totalFullQuestions}
                 round={round}
-                userAnswer={currentUserAnswer}
-                onSelectAnswer={selectAnswer}
-                onPrevQuestion={prevQuestion}
-                onNextQuestion={nextQuestion}
-                isLastQuestion={currentIndex === totalQuestionsInRound - 1}
               />
-            </div>
+            )}
+
+            {mode === 'in_progress' && currentQuestion && (
+              <>
+                <QuizHeader
+                  level={level}
+                  round={round}
+                  currentIndex={currentIndex}
+                  totalQuestions={totalQuestionsInRound}
+                  score={score}
+                  answeredCount={answeredCountInRound}
+                  onReset={() => setShowResetConfirm(true)}
+                  onGoHome={() => setMode('idle')}
+                  onOpenNavigator={() => setIsNavigatorOpen(true)}
+                />
+
+                <div className="flex-1 flex items-center justify-center">
+                  <QuizCard
+                    question={currentQuestion}
+                    questionIndex={currentIndex}
+                    totalQuestions={totalQuestionsInRound}
+                    round={round}
+                    userAnswer={currentUserAnswer}
+                    onSelectAnswer={selectAnswer}
+                    onPrevQuestion={prevQuestion}
+                    onNextQuestion={nextQuestion}
+                    isLastQuestion={currentIndex === totalQuestionsInRound - 1}
+                  />
+                </div>
+              </>
+            )}
+
+            {/* Transition Screen: Round finished with some wrong questions */}
+            {mode === 'round_completed' && (
+              <div className="flex-1 flex items-center justify-center">
+                <RoundTransitionScreen
+                  currentRound={round}
+                  totalInRound={totalQuestionsInRound}
+                  wrongCount={currentRoundWrongIds.length}
+                  onStartNextRound={startNextRound}
+                  onRestartAll={() => setShowResetConfirm(true)}
+                />
+              </div>
+            )}
+
+            {/* 100% Mastery Achieved! */}
+            {mode === 'mastery_completed' && (
+              <div className="flex-1 flex items-center justify-center">
+                <ResultScreen
+                  level={level}
+                  totalQuestions={totalFullQuestions}
+                  initialScore={initialFirstRoundScore}
+                  totalRounds={round}
+                  onRestart={startQuiz}
+                  onGoHome={() => setMode('idle')}
+                />
+              </div>
+            )}
           </>
         )}
 
-        {/* Transition Screen: Round finished with some wrong questions */}
-        {mode === 'round_completed' && (
-          <div className="flex-1 flex items-center justify-center">
-            <RoundTransitionScreen
-              currentRound={round}
-              totalInRound={totalQuestionsInRound}
-              wrongCount={currentRoundWrongIds.length}
-              onStartNextRound={startNextRound}
-              onRestartAll={() => setShowResetConfirm(true)}
-            />
-          </div>
-        )}
+        {/* Tab 2: Sentences */}
+        {activeTab === 'sentences' && <SentencesSection />}
 
-        {/* 100% Mastery Achieved! */}
-        {mode === 'mastery_completed' && (
-          <div className="flex-1 flex items-center justify-center">
-            <ResultScreen
-              level={level}
-              totalQuestions={totalFullQuestions}
-              initialScore={initialFirstRoundScore}
-              totalRounds={round}
-              onRestart={startQuiz}
-              onGoHome={() => setMode('idle')}
-            />
-          </div>
-        )}
+        {/* Tab 3: Reading */}
+        {activeTab === 'reading' && <ReadingSection />}
+
+        {/* Tab 4: Listening */}
+        {activeTab === 'listening' && <ListeningSection />}
       </div>
 
       {/* Footer Branding */}
