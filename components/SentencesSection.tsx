@@ -495,27 +495,72 @@ export const SentencesSection: React.FC = () => {
               {/* Feedback and Explanation */}
               {isAnswered && (
                 <div
-                  className={`p-4 rounded-xl border mb-6 text-xs sm:text-sm ${
+                  className={`p-4 sm:p-5 rounded-2xl border mb-6 text-xs sm:text-sm space-y-3 ${
                     isCorrectAnswer
-                      ? 'bg-emerald-50 border-emerald-200 text-emerald-800'
-                      : 'bg-rose-50 border-rose-200 text-rose-800'
+                      ? 'bg-emerald-50/90 border-emerald-200 text-emerald-950'
+                      : 'bg-rose-50/90 border-rose-200 text-rose-950'
                   }`}
                 >
-                  <div className="font-bold flex items-center gap-1.5 mb-1">
-                    {isCorrectAnswer ? (
-                      <>
-                        <CheckCircle2 className="w-4 h-4 text-emerald-600" /> Chính xác!
-                      </>
-                    ) : (
-                      <>
-                        <XCircle className="w-4 h-4 text-rose-600" /> Chưa chính xác!
-                      </>
+                  <div className="font-bold text-sm sm:text-base flex items-center justify-between">
+                    <div className="flex items-center gap-1.5">
+                      {isCorrectAnswer ? (
+                        <>
+                          <CheckCircle2 className="w-5 h-5 text-emerald-600" /> Chính xác! Bạn làm rất tốt 🎉
+                        </>
+                      ) : (
+                        <>
+                          <XCircle className="w-5 h-5 text-rose-600" /> Chưa chính xác 💡
+                        </>
+                      )}
+                    </div>
+                    {!isCorrectAnswer && (
+                      <span className="text-xs px-2 py-0.5 rounded-md bg-rose-100 text-rose-800 font-bold border border-rose-200">
+                        Đáp án đúng: {studyMode === 'meaning_quiz' ? currentQuizItem.quizMeaning.correctAnswer : currentQuizItem.quizFill.correctAnswer}
+                      </span>
                     )}
                   </div>
-                  <div>
-                    {studyMode === 'meaning_quiz'
-                      ? `Nghĩa đúng: "${currentQuizItem.vietnamese}". Ngữ pháp: ${currentQuizItem.grammar}`
-                      : currentQuizItem.quizFill.explanation}
+
+                  {/* Prominent Core Sentence Display: Hanzi + Pinyin + Vietnamese */}
+                  <div className="bg-white/90 p-3.5 rounded-xl border border-stone-200/80 shadow-xs space-y-1.5">
+                    <div className="text-[11px] font-bold text-stone-400 uppercase tracking-wider">
+                      Mẫu câu chuẩn cần ghi nhớ:
+                    </div>
+                    <div className="text-lg sm:text-xl font-bold font-sans text-stone-900 tracking-wide">
+                      {currentQuizItem.chinese}
+                    </div>
+                    <div className="text-xs sm:text-sm font-semibold text-rose-600">
+                      [{currentQuizItem.pinyin}]
+                    </div>
+                    <div className="text-xs sm:text-sm font-bold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200 inline-block">
+                      Dịch nghĩa: {currentQuizItem.vietnamese}
+                    </div>
+                  </div>
+
+                  {/* Grammar and Vocab Context */}
+                  <div className="bg-white/60 p-3 rounded-xl border border-stone-200/60 space-y-1 text-stone-700">
+                    <div>
+                      <strong className="text-stone-900">📖 Ngữ pháp: </strong>
+                      {currentQuizItem.grammar}
+                    </div>
+                    {studyMode === 'fill_quiz' && (
+                      <div className="pt-1 border-t border-stone-200/50 text-stone-600">
+                        <strong className="text-stone-900">💡 Chú thích điền từ: </strong>
+                        {currentQuizItem.quizFill.explanation}
+                      </div>
+                    )}
+                    {currentQuizItem.keyVocab.length > 0 && (
+                      <div className="pt-1.5 flex flex-wrap items-center gap-1.5">
+                        <span className="text-[11px] font-bold text-stone-500">Từ then chốt:</span>
+                        {currentQuizItem.keyVocab.map((v, i) => (
+                          <span
+                            key={i}
+                            className="bg-stone-100 text-stone-800 px-2 py-0.5 rounded-md text-[11px] font-medium border border-stone-200/60"
+                          >
+                            <strong className="text-rose-600">{v.word}</strong> [{v.pinyin}]: {v.meaning}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               )}

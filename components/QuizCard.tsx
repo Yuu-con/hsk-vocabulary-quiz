@@ -232,30 +232,48 @@ export const QuizCard: React.FC<QuizCardProps> = ({
                   )}
                 </div>
 
-                <div className="flex-1 space-y-1">
-                  <div className="font-bold text-base sm:text-lg">
-                    {isCorrect ? 'Chính xác!' : 'Chưa đúng'}
+                <div className="flex-1 space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="font-bold text-base sm:text-lg">
+                      {isCorrect ? 'Chính xác! Rất xuất sắc 🎉' : 'Chưa chính xác 💡'}
+                    </span>
+                    {!isCorrect && (
+                      <span className="text-xs font-bold px-2 py-0.5 rounded-md bg-rose-100 text-rose-800 border border-rose-200">
+                        Đáp án đúng: {correctLetter}
+                      </span>
+                    )}
                   </div>
 
-                  {!isCorrect && (
-                    <div className="text-sm font-semibold text-rose-700">
-                      Đáp án đúng: <span className="font-extrabold text-slate-900">{correctLetter}</span> ({question.correctAnswer})
+                  {/* Highlight Core Word: Hanzi + Pinyin + Vietnamese Meaning */}
+                  <div className="bg-white/80 rounded-xl p-3 border border-slate-200/80 shadow-xs">
+                    <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">
+                      Từ vựng cần ghi nhớ:
                     </div>
-                  )}
-
-                  <div className="text-sm sm:text-base font-medium text-slate-800">
-                    <span className="font-hanzi font-bold text-slate-900">{question.hanzi}</span> ({question.pinyin}) = {question.correctAnswer}
+                    <div className="flex flex-wrap items-baseline gap-2">
+                      <span className="font-hanzi font-bold text-xl sm:text-2xl text-slate-900 tracking-wide">
+                        {question.hanzi}
+                      </span>
+                      <span className="text-sm sm:text-base font-semibold text-rose-600">
+                        [{question.pinyin}]
+                      </span>
+                      <span className="text-sm sm:text-base font-bold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-lg border border-emerald-200">
+                        Nghĩa: {question.correctAnswer}
+                      </span>
+                    </div>
                   </div>
 
+                  {/* Detailed Explanation & Grammar/Context */}
                   {question.explanation && (
-                    <div className="text-xs sm:text-sm text-slate-600 pt-1 leading-relaxed border-t border-slate-200/50 mt-1">
-                      💡 {question.explanation}
+                    <div className="text-xs sm:text-sm text-slate-700 leading-relaxed bg-white/60 p-3 rounded-xl border border-slate-200/60">
+                      <strong className="text-slate-900">📖 Giải thích chi tiết: </strong>
+                      {question.explanation}
                     </div>
                   )}
 
                   {!isCorrect && (
-                    <div className="text-xs text-amber-800 bg-amber-100/70 rounded-lg p-2 mt-2 font-medium">
-                      📌 Câu này đã được dồn vào vòng ôn tập tiếp theo. Bạn sẽ làm lại câu này sau khi hoàn thành hết đề!
+                    <div className="text-xs text-amber-800 bg-amber-100/70 rounded-xl p-2.5 font-medium border border-amber-200/60 flex items-center gap-2">
+                      <span>📌</span>
+                      <span>Câu này đã được hệ thống tự động ghi nhớ và dồn vào vòng ôn tập tiếp theo. Bạn sẽ làm lại cho đến khi trả lời đúng!</span>
                     </div>
                   )}
                 </div>
