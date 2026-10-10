@@ -17,6 +17,7 @@ interface SentenceItem {
   };
   quizFill: {
     question: string;
+    questionPinyin?: string;
     options: string[];
     correctAnswer: string;
     explanation: string;
@@ -930,11 +931,22 @@ const sentencesWithQuizzes: SentenceItem[] = rawSentences.map((s, idx) => {
 
   // Generate fill-in-blank quiz
   let fillTarget = s.keyVocab[0]?.word || '什么';
+  let fillTargetPinyin = s.keyVocab[0]?.pinyin || '';
   let questionWithBlank = s.chinese.replace(fillTarget, '____');
   if (questionWithBlank === s.chinese) {
     // If not matched, pick first 2 chars
     fillTarget = s.chinese.slice(0, 2);
     questionWithBlank = s.chinese.replace(fillTarget, '____');
+  }
+
+  // Calculate pinyin with blank
+  let questionPinyinWithBlank = s.pinyin;
+  if (fillTargetPinyin) {
+    questionPinyinWithBlank = s.pinyin.replace(new RegExp(fillTargetPinyin, 'i'), '____');
+  }
+  if (questionPinyinWithBlank === s.pinyin) {
+    // Fallback simple replacement if tone mark variant
+    questionPinyinWithBlank = s.pinyin;
   }
 
   const fillDistractors = fillWordsPool.filter(w => w !== fillTarget && w.length === fillTarget.length);
@@ -943,7 +955,7 @@ const sentencesWithQuizzes: SentenceItem[] = rawSentences.map((s, idx) => {
   while (fillOptions.length < 4) {
     fillOptions.push(fillWordsPool[Math.floor(Math.random() * fillWordsPool.length)]);
   }
-  const randomizedFillOptions = [...new Set(fillOptions)].slice(0, 4).sort(() => Math.random() - 0.5);
+  const randomizedFillOptions = Array.from(new Set(fillOptions)).slice(0, 4).sort(() => Math.random() - 0.5);
 
   return {
     ...s,
@@ -955,6 +967,7 @@ const sentencesWithQuizzes: SentenceItem[] = rawSentences.map((s, idx) => {
     },
     quizFill: {
       question: `Chọn từ thích hợp điền vào chỗ trống: ${questionWithBlank}`,
+      questionPinyin: questionPinyinWithBlank,
       options: randomizedFillOptions,
       correctAnswer: fillTarget,
       explanation: `Từ cần điền là "${fillTarget}". Cả câu hoàn chỉnh là: "${s.chinese}" (${s.pinyin}) - ${s.vietnamese}.`

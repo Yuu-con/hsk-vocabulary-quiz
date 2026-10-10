@@ -438,9 +438,23 @@ export const SentencesSection: React.FC = () => {
                     ? currentQuizItem.chinese
                     : currentQuizItem.quizFill.question}
                 </div>
-                {studyMode === 'meaning_quiz' && showPinyin && (
-                  <div className="text-sm text-rose-600 font-medium">{currentQuizItem.pinyin}</div>
+
+                {/* Show Pinyin in both Meaning Quiz and Fill Quiz */}
+                {showPinyin && (
+                  <div className="text-sm sm:text-base text-rose-600 font-semibold mb-1">
+                    {studyMode === 'meaning_quiz'
+                      ? currentQuizItem.pinyin
+                      : (currentQuizItem.quizFill.questionPinyin || currentQuizItem.pinyin)}
+                  </div>
                 )}
+
+                {/* Show Vietnamese Meaning hint in Fill Quiz if enabled */}
+                {studyMode === 'fill_quiz' && showVietnamese && (
+                  <div className="text-xs sm:text-sm text-stone-600 font-medium mt-1 bg-white/70 inline-block px-3 py-1 rounded-xl border border-rose-100">
+                    💡 Dịch nghĩa cả câu: <span className="text-stone-900 font-semibold">{currentQuizItem.vietnamese}</span>
+                  </div>
+                )}
+
                 <div className="mt-3 flex justify-center">
                   <button
                     onClick={() => handlePlayAudio(currentQuizItem)}
@@ -464,6 +478,9 @@ export const SentencesSection: React.FC = () => {
                       ? option === currentQuizItem.quizMeaning.correctAnswer
                       : option === currentQuizItem.quizFill.correctAnswer;
 
+                  // Find vocab details if option is a Chinese word in keyVocab
+                  const vocabDetail = currentQuizItem.keyVocab.find((v) => v.word === option);
+
                   let btnStyle = 'border-stone-200 bg-white hover:border-stone-300 text-stone-800';
                   if (isAnswered) {
                     if (isCorrect) {
@@ -482,10 +499,17 @@ export const SentencesSection: React.FC = () => {
                       onClick={() => handleAnswerQuiz(option)}
                       className={`p-4 rounded-xl border text-left text-sm transition-all flex items-center justify-between ${btnStyle}`}
                     >
-                      <span>{option}</span>
-                      {isAnswered && isCorrect && <CheckCircle2 className="w-5 h-5 text-emerald-600 ml-2" />}
+                      <div>
+                        <span className="font-semibold">{option}</span>
+                        {isAnswered && vocabDetail && (
+                          <span className="ml-2 text-xs font-normal text-stone-500">
+                            [{vocabDetail.pinyin}]: {vocabDetail.meaning}
+                          </span>
+                        )}
+                      </div>
+                      {isAnswered && isCorrect && <CheckCircle2 className="w-5 h-5 text-emerald-600 ml-2 shrink-0" />}
                       {isAnswered && isSelected && !isCorrect && (
-                        <XCircle className="w-5 h-5 text-rose-500 ml-2" />
+                        <XCircle className="w-5 h-5 text-rose-500 ml-2 shrink-0" />
                       )}
                     </button>
                   );
@@ -521,44 +545,58 @@ export const SentencesSection: React.FC = () => {
                   </div>
 
                   {/* Prominent Core Sentence Display: Hanzi + Pinyin + Vietnamese */}
-                  <div className="bg-white/90 p-3.5 rounded-xl border border-stone-200/80 shadow-xs space-y-1.5">
+                  <div className="bg-white/95 p-4 rounded-xl border border-stone-200 shadow-xs space-y-2">
                     <div className="text-[11px] font-bold text-stone-400 uppercase tracking-wider">
                       Mẫu câu chuẩn cần ghi nhớ:
                     </div>
-                    <div className="text-lg sm:text-xl font-bold font-sans text-stone-900 tracking-wide">
+                    <div className="text-xl sm:text-2xl font-bold font-sans text-stone-900 tracking-wide">
                       {currentQuizItem.chinese}
                     </div>
-                    <div className="text-xs sm:text-sm font-semibold text-rose-600">
+                    <div className="text-sm font-semibold text-rose-600">
                       [{currentQuizItem.pinyin}]
                     </div>
-                    <div className="text-xs sm:text-sm font-bold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200 inline-block">
-                      Dịch nghĩa: {currentQuizItem.vietnamese}
+                    
+                    {/* Dịch nghĩa câu nổi bật */}
+                    <div className="p-2.5 rounded-lg bg-emerald-50/80 border border-emerald-200 text-emerald-950 font-medium text-xs sm:text-sm">
+                      <strong className="text-emerald-800">🇻🇳 Dịch nghĩa: </strong>
+                      {currentQuizItem.vietnamese}
                     </div>
                   </div>
 
-                  {/* Grammar and Vocab Context */}
-                  <div className="bg-white/60 p-3 rounded-xl border border-stone-200/60 space-y-1 text-stone-700">
+                  {/* Từ vựng quan trọng trong câu (Key Vocabulary Card) */}
+                  {currentQuizItem.keyVocab.length > 0 && (
+                    <div className="bg-white/95 p-3.5 rounded-xl border border-stone-200/90 shadow-xs">
+                      <div className="text-[11px] font-bold text-stone-500 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                        <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+                        <span>Các từ vựng quan trọng trong câu:</span>
+                      </div>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        {currentQuizItem.keyVocab.map((v, i) => (
+                          <div
+                            key={i}
+                            className="bg-stone-50 hover:bg-stone-100 p-2 rounded-lg border border-stone-200/70 flex items-center justify-between text-xs"
+                          >
+                            <div className="flex items-baseline gap-1.5">
+                              <span className="font-bold text-sm text-stone-900">{v.word}</span>
+                              <span className="text-rose-600 font-medium">[{v.pinyin}]</span>
+                            </div>
+                            <span className="text-stone-600 font-medium">{v.meaning}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Grammar and Fill explanation Context */}
+                  <div className="bg-white/70 p-3 rounded-xl border border-stone-200/60 space-y-1 text-stone-700">
                     <div>
-                      <strong className="text-stone-900">📖 Ngữ pháp: </strong>
+                      <strong className="text-stone-900">📖 Cấu trúc ngữ pháp: </strong>
                       {currentQuizItem.grammar}
                     </div>
                     {studyMode === 'fill_quiz' && (
-                      <div className="pt-1 border-t border-stone-200/50 text-stone-600">
-                        <strong className="text-stone-900">💡 Chú thích điền từ: </strong>
+                      <div className="pt-1.5 border-t border-stone-200/50 text-stone-600">
+                        <strong className="text-stone-900">💡 Giải thích từ điền: </strong>
                         {currentQuizItem.quizFill.explanation}
-                      </div>
-                    )}
-                    {currentQuizItem.keyVocab.length > 0 && (
-                      <div className="pt-1.5 flex flex-wrap items-center gap-1.5">
-                        <span className="text-[11px] font-bold text-stone-500">Từ then chốt:</span>
-                        {currentQuizItem.keyVocab.map((v, i) => (
-                          <span
-                            key={i}
-                            className="bg-stone-100 text-stone-800 px-2 py-0.5 rounded-md text-[11px] font-medium border border-stone-200/60"
-                          >
-                            <strong className="text-rose-600">{v.word}</strong> [{v.pinyin}]: {v.meaning}
-                          </span>
-                        ))}
                       </div>
                     )}
                   </div>

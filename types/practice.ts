@@ -18,6 +18,7 @@ export interface SentencePattern {
   };
   quizFill: {
     question: string; // e.g. "你叫___名字？"
+    questionPinyin?: string; // e.g. "Nǐ jiào ____ míngzi?"
     options: string[];
     correctAnswer: string;
     explanation: string;
