@@ -1097,7 +1097,7 @@ export const HSK2_CLEAN: CleanVocabItem[] = [
   {
     id: 23, hanzi: "报纸", pinyin: "bàozhǐ", lesson: 3,
     correctAnswer: "Tờ báo",
-    options: ["Tờ báo", "Quyển sách", "Cây bút", "Tờ giấy"],
+    options: ["Tờ báo", "Bút", "Sách", "Giấy trắng"],
     explanation: "报纸 (bàozhǐ) là ấn phẩm báo in tức."
   },
   {
@@ -1672,8 +1672,8 @@ export const HSK2_CLEAN: CleanVocabItem[] = [
   },
   {
     id: 116, hanzi: "零", pinyin: "líng", lesson: 12,
-    correctAnswer: "Số không",
-    options: ["Số không", "Số một", "Số mười", "Số một trăm"],
+    correctAnswer: "Số 0",
+    options: ["Số 0", "Số 1", "Số 10", "Số 100"],
     explanation: "零 (líng) là con số 0."
   },
   {
@@ -1809,7 +1809,7 @@ export const HSK2_CLEAN: CleanVocabItem[] = [
   {
     id: 138, hanzi: "服务员", pinyin: "fúwùyuán", lesson: 14,
     correctAnswer: "Nhân viên phục vụ",
-    options: ["Nhân viên phục vụ", "Bác sĩ khám bệnh", "Giáo viên giảng dạy", "Học sinh đi học"],
+    options: ["Nhân viên phục vụ", "Bác sĩ", "Giáo viên", "Học sinh"],
     explanation: "服务员 (fúwùyuán) là người phục vụ trong nhà hàng, khách sạn."
   },
   {

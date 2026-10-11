@@ -339,9 +339,9 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "question": "报纸 — bàozhǐ nghĩa là gì?",
     "options": [
       "Tờ báo",
-      "Quyển sách",
-      "Cây bút",
-      "Tờ giấy"
+      "Bút",
+      "Sách",
+      "Giấy trắng"
     ],
     "correctAnswer": "Tờ báo",
     "explanation": "报纸 (bàozhǐ) là ấn phẩm báo in tức."
@@ -1733,12 +1733,12 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 12,
     "question": "零 — líng nghĩa là gì?",
     "options": [
-      "Số không",
-      "Số một",
-      "Số mười",
-      "Số một trăm"
+      "Số 0",
+      "Số 1",
+      "Số 10",
+      "Số 100"
     ],
-    "correctAnswer": "Số không",
+    "correctAnswer": "Số 0",
     "explanation": "零 (líng) là con số 0."
   },
   {
@@ -2064,9 +2064,9 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "question": "服务员 — fúwùyuán nghĩa là gì?",
     "options": [
       "Nhân viên phục vụ",
-      "Bác sĩ khám bệnh",
-      "Giáo viên giảng dạy",
-      "Học sinh đi học"
+      "Bác sĩ",
+      "Giáo viên",
+      "Học sinh"
     ],
     "correctAnswer": "Nhân viên phục vụ",
     "explanation": "服务员 (fúwùyuán) là người phục vụ trong nhà hàng, khách sạn."
