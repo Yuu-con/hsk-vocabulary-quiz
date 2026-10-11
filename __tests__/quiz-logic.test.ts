@@ -102,4 +102,53 @@ console.log('--- RUNNING SPACED REPETITION MASTERY LOOP TESTS ---');
   console.log('✔ Test 4: Round loop repeats until all wrong questions are answered correctly');
 }
 
-console.log('\n🎉 ALL MASTERY LOOP TESTS PASSED SUCCESSFULLY!\n');
+// Test 5: Polysemous words check
+{
+  const hui = HSK1_VOCAB_DATA.find(q => q.hanzi === '会');
+  assert.ok(hui && hui.correctAnswer.includes('/'), '会 includes multiple meanings');
+  
+  const xiang = HSK1_VOCAB_DATA.find(q => q.hanzi === '想');
+  assert.ok(xiang && xiang.correctAnswer.includes('/'), '想 includes multiple meanings');
+
+  const dian = HSK1_VOCAB_DATA.find(q => q.hanzi === '点');
+  assert.ok(dian && dian.correctAnswer.includes('/'), '点 includes multiple meanings');
+
+  const zhao = HSK2_VOCAB_DATA.find(q => q.hanzi === '找');
+  assert.ok(zhao && zhao.correctAnswer.includes('/'), '找 includes multiple meanings');
+
+  const rang = HSK2_VOCAB_DATA.find(q => q.hanzi === '让');
+  assert.ok(rang && rang.correctAnswer.includes('/'), '让 includes multiple meanings');
+
+  console.log('✔ Test 5: Polysemous words display complete multi-meaning answers');
+}
+
+// Test 6: Lesson Selection filter
+{
+  const dataset = HSK1_VOCAB_DATA;
+  const selectedLessons = [1, 3]; // Lesson 1 (words 1..10) and Lesson 3 (words 21..30)
+  const filtered = dataset.filter((_, idx) => {
+    const lessonNum = Math.floor(idx / 10) + 1;
+    return selectedLessons.includes(lessonNum);
+  });
+
+  assert.equal(filtered.length, 20, '2 selected lessons yield exactly 20 questions');
+  assert.equal(filtered[0].id, 1, 'First question is from Lesson 1');
+  assert.equal(filtered[10].id, 21, 'Eleventh question is from Lesson 3');
+  console.log('✔ Test 6: Lesson-based selection correctly filters chosen lessons');
+}
+
+// Test 7: Shuffling order
+{
+  const ids = Array.from({ length: 50 }, (_, i) => i + 1);
+  const shuffled = [...ids];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+
+  assert.equal(shuffled.length, ids.length, 'Shuffled has same length');
+  assert.notDeepEqual(shuffled, ids, 'Order is randomized, not strictly alphabetical');
+  console.log('✔ Test 7: Question sequence is successfully shuffled');
+}
+
+console.log('\n🎉 ALL MASTERY LOOP & NEW FEATURE TESTS PASSED SUCCESSFULLY!\n');

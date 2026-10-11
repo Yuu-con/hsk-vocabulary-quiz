@@ -20,6 +20,15 @@ function getInitialDataset(level: QuizLevel): QuizQuestion[] {
   }
 }
 
+function shuffleArray<T>(array: T[]): T[] {
+  const result = [...array];
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
+
 function getInitialState(level: QuizLevel): QuizProgress {
   const dataset = getInitialDataset(level);
   return {
@@ -32,6 +41,7 @@ function getInitialState(level: QuizLevel): QuizProgress {
     currentRoundAnswers: {},
     currentRoundWrongIds: [],
     mode: 'idle',
+    isShuffled: true,
   };
 }
 
@@ -103,18 +113,39 @@ export function useQuiz(initialLevel: QuizLevel = 'hsk1') {
   }, []);
 
   // Start new quiz from Round 1
-  const startQuiz = useCallback(() => {
+  const startQuiz = useCallback((options?: { selectedLessons?: number[]; shuffle?: boolean }) => {
     const dataset = getInitialDataset(state.level);
+    const selectedLessons = options?.selectedLessons;
+    const shouldShuffle = options?.shuffle ?? true;
+
+    let chosenIds: number[] = [];
+    if (selectedLessons && selectedLessons.length > 0) {
+      chosenIds = dataset
+        .filter((_, idx) => {
+          const lessonNumber = Math.floor(idx / 10) + 1;
+          return selectedLessons.includes(lessonNumber);
+        })
+        .map(q => q.id);
+    } else {
+      chosenIds = dataset.map(q => q.id);
+    }
+
+    if (shouldShuffle) {
+      chosenIds = shuffleArray(chosenIds);
+    }
+
     setState({
       level: state.level,
       round: 1,
       initialFirstRoundScore: 0,
-      activeQuestionIds: dataset.map(q => q.id),
+      activeQuestionIds: chosenIds,
       currentIndex: 0,
       score: 0,
       currentRoundAnswers: {},
       currentRoundWrongIds: [],
       mode: 'in_progress',
+      selectedLessons: selectedLessons,
+      isShuffled: shouldShuffle,
     });
   }, [state.level]);
 
@@ -232,7 +263,10 @@ export function useQuiz(initialLevel: QuizLevel = 'hsk1') {
   // Start the next round with only the wrong questions accumulated!
   const startNextRound = useCallback(() => {
     setState(prev => {
-      const nextRoundQuestions = [...prev.currentRoundWrongIds];
+      let nextRoundQuestions = [...prev.currentRoundWrongIds];
+      if (prev.isShuffled) {
+        nextRoundQuestions = shuffleArray(nextRoundQuestions);
+      }
       return {
         ...prev,
         round: prev.round + 1,
@@ -267,6 +301,8 @@ export function useQuiz(initialLevel: QuizLevel = 'hsk1') {
     hasSavedProgress,
     activeRoundQuestions,
     fullDataset,
+    selectedLessons: state.selectedLessons,
+    isShuffled: state.isShuffled,
     // Actions
     changeLevel,
     startQuiz,

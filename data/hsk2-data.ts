@@ -91,13 +91,13 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "bié",
     "question": "别 — bié nghĩa là gì?",
     "options": [
-      "Đừng",
-      "Phải",
-      "Muốn",
-      "Đã"
+      "Đừng / Khác",
+      "Phải / Đúng",
+      "Nên / Cần",
+      "Muốn / Thích"
     ],
-    "correctAnswer": "Đừng",
-    "explanation": "别 (bié) dùng khuyên bảo hoặc cấm đoán (Ví dụ: 别走 - đừng đi)."
+    "correctAnswer": "Đừng / Khác",
+    "explanation": "别 (bié) dùng khuyên bảo hoặc cấm đoán (别走: đừng đi) hoặc chỉ người khác (别人: người khác)."
   },
   {
     "id": 8,
@@ -315,13 +315,13 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "duì",
     "question": "对 — duì nghĩa là gì?",
     "options": [
-      "Đúng đắn",
-      "Sai lầm",
-      "Ít ỏi",
-      "Nhiều nhặn"
+      "Đúng / Đối với",
+      "Sai / Trái lại",
+      "Thích / Hợp ý",
+      "Gần / Cận kề"
     ],
-    "correctAnswer": "Đúng đắn",
-    "explanation": "对 (duì) nghĩa là đúng (đối lập với 错) hoặc giới từ 'đối với ai đó'."
+    "correctAnswer": "Đúng / Đối với",
+    "explanation": "对 (duì) nghĩa là đúng (đối lập với 错) hoặc là giới từ biểu thị 'đối với ai đó' (对我说: nói với tôi)."
   },
   {
     "id": 24,
@@ -413,13 +413,13 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "gěi",
     "question": "给 — gěi nghĩa là gì?",
     "options": [
-      "Đưa cho",
-      "Cầm lấy",
-      "Bán đi",
-      "Mua về"
+      "Cho / Đưa cho",
+      "Cầm / Nhận lấy",
+      "Bán / Giao đồ",
+      "Mua / Chuộc về"
     ],
-    "correctAnswer": "Đưa cho",
-    "explanation": "给 (gěi) là đưa vật gì cho ai đó (Ví dụ: 给你 - đưa cho bạn)."
+    "correctAnswer": "Cho / Đưa cho",
+    "explanation": "给 (gěi) vừa là động từ đưa cho (给你), vừa là giới từ làm gì cho ai (给我买: mua cho tôi)."
   },
   {
     "id": 31,
@@ -595,13 +595,13 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "jiàn",
     "question": "件 — jiàn nghĩa là gì?",
     "options": [
-      "Chiếc áo",
-      "Cuốn sách",
-      "Cái chén",
-      "Bát canh"
+      "Chiếc / Vụ việc",
+      "Cuốn / Quyển vở",
+      "Cái / Chiếc cốc",
+      "Bát / Nồi canh"
     ],
-    "correctAnswer": "Chiếc áo",
-    "explanation": "件 (jiàn) là lượng từ dùng cho quần áo (一件衣服) hoặc việc (一件事)."
+    "correctAnswer": "Chiếc / Vụ việc",
+    "explanation": "件 (jiàn) là lượng từ dùng cho quần áo (一件衣服) hoặc sự việc (一件事)."
   },
   {
     "id": 44,
@@ -791,13 +791,13 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "kuài",
     "question": "快 — kuài nghĩa là gì?",
     "options": [
-      "Nhanh nhẹn",
-      "Chậm chạp",
-      "Cao ráo",
-      "Xa xôi"
+      "Nhanh / Sắp sửa",
+      "Chậm / Muộn màng",
+      "Sớm / Kịp thời",
+      "Dài / Lâu lắc"
     ],
-    "correctAnswer": "Nhanh nhẹn",
-    "explanation": "快 (kuài) chỉ tốc độ nhanh hoặc hành động sắp diễn ra (Ví dụ: 跑得很快, 快到了)."
+    "correctAnswer": "Nhanh / Sắp sửa",
+    "explanation": "快 (kuài) chỉ tốc độ nhanh nhẹn (跑得快) hoặc hành động sắp diễn ra (快到了: sắp đến nơi)."
   },
   {
     "id": 58,
@@ -1183,13 +1183,13 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "ràng",
     "question": "让 — ràng nghĩa là gì?",
     "options": [
-      "Để cho",
-      "Muốn có",
-      "Phải làm",
-      "Biết rõ"
+      "Để cho / Nhường",
+      "Bắt buộc / Cấm",
+      "Mong muốn / Cần",
+      "Biết rõ / Hiểu"
     ],
-    "correctAnswer": "Để cho",
-    "explanation": "让 (ràng) là động từ sai khiến hoặc nhượng bộ (Ví dụ: 让我看看 - để tôi xem)."
+    "correctAnswer": "Để cho / Nhường",
+    "explanation": "让 (ràng) là động từ sai khiến (让我看看: để tôi xem) hoặc nhượng bộ, nhường nhịn."
   },
   {
     "id": 86,
@@ -1197,13 +1197,13 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "rì",
     "question": "日 — rì nghĩa là gì?",
     "options": [
-      "Mặt trời",
-      "Mặt trăng",
-      "Ngôi sao",
-      "Đám mây"
+      "Ngày / Mặt trời",
+      "Tháng / Mặt trăng",
+      "Năm / Ngôi sao",
+      "Tuần / Đám mây"
     ],
-    "correctAnswer": "Mặt trời",
-    "explanation": "日 (rì) dùng trong văn viết chỉ ngày trong tháng hoặc mặt trời."
+    "correctAnswer": "Ngày / Mặt trời",
+    "explanation": "日 (rì) dùng trong văn viết chỉ ngày trong tháng (Ví dụ: 10月1日) hoặc mặt trời."
   },
   {
     "id": 87,
@@ -1337,13 +1337,13 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "sòng",
     "question": "送 — sòng nghĩa là gì?",
     "options": [
-      "Tặng quà",
-      "Nhận quà",
-      "Mua sắm",
-      "Mượn đồ"
+      "Tặng / Tiễn đưa",
+      "Nhận / Đón rước",
+      "Mua / Bán đồ",
+      "Mượn / Trả lại"
     ],
-    "correctAnswer": "Tặng quà",
-    "explanation": "送 (sòng) nghĩa là tặng quà (送礼物) hoặc tiễn ai đó lên đường (送朋友)."
+    "correctAnswer": "Tặng / Tiễn đưa",
+    "explanation": "送 (sòng) vừa có nghĩa là tặng quà (送礼物) vừa có nghĩa là tiễn ai đó lên đường (送朋友)."
   },
   {
     "id": 97,
@@ -1967,13 +1967,13 @@ export const HSK2_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "zhǎo",
     "question": "找 — zhǎo nghĩa là gì?",
     "options": [
-      "Tìm kiếm",
-      "Đánh mất",
-      "Mua sắm",
-      "Giao nộp"
+      "Tìm kiếm / Thối tiền",
+      "Đánh mất / Tiêu xài",
+      "Mua sắm / Gom góp",
+      "Bán đi / Nhận lấy"
     ],
-    "correctAnswer": "Tìm kiếm",
-    "explanation": "找 (zhǎo) nghĩa là tìm đồ (找东西) hoặc trả lại tiền thừa (找钱)."
+    "correctAnswer": "Tìm kiếm / Thối tiền",
+    "explanation": "找 (zhǎo) nghĩa là tìm kiếm đồ đạc (找东西) hoặc trả lại tiền thừa (找钱)."
   },
   {
     "id": 142,

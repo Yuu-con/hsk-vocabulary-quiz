@@ -217,13 +217,13 @@ export const HSK1_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "diǎn",
     "question": "点 — diǎn nghĩa là gì?",
     "options": [
-      "Giờ",
-      "Phút",
-      "Năm",
-      "Tháng"
+      "Giờ / Chút ít",
+      "Phút / Giây lát",
+      "Năm / Mùa vụ",
+      "Tháng / Tuần lễ"
     ],
-    "correctAnswer": "Giờ",
-    "explanation": "点 (diǎn) dùng để nói giờ trong ngày (Ví dụ: 八点 - 8 giờ) hoặc một chút (一点儿)."
+    "correctAnswer": "Giờ / Chút ít",
+    "explanation": "点 (diǎn) vừa dùng nói giờ trong ngày (八点: 8 giờ) vừa chỉ số lượng nhỏ (一点儿: một chút)."
   },
   {
     "id": 17,
@@ -455,12 +455,12 @@ export const HSK1_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "gōngzuò",
     "question": "工作 — gōngzuò nghĩa là gì?",
     "options": [
-      "Làm việc",
-      "Học tập",
-      "Nghỉ ngơi",
-      "Mua sắm"
+      "Công việc / Làm việc",
+      "Học hỏi / Học tập",
+      "Thư giãn / Nghỉ ngơi",
+      "Mua bán / Mua sắm"
     ],
-    "correctAnswer": "Làm việc",
+    "correctAnswer": "Công việc / Làm việc",
     "explanation": "工作 (gōngzuò) vừa là danh từ (công việc) vừa là động từ (làm việc)."
   },
   {
@@ -595,13 +595,13 @@ export const HSK1_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "huì",
     "question": "会 — huì nghĩa là gì?",
     "options": [
-      "Biết làm",
-      "Muốn làm",
-      "Thích làm",
-      "Phải làm"
+      "Biết / Sẽ",
+      "Muốn / Thích",
+      "Cần / Phải",
+      "Dám / Đành"
     ],
-    "correctAnswer": "Biết làm",
-    "explanation": "会 (huì) biểu thị kỹ năng có được qua học tập hoặc khả năng sẽ xảy ra trong tương lai."
+    "correctAnswer": "Biết / Sẽ",
+    "explanation": "会 (huì) vừa chỉ kỹ năng qua học tập (Biết làm), vừa biểu thị sự việc sẽ xảy ra trong tương lai."
   },
   {
     "id": 44,
@@ -637,13 +637,13 @@ export const HSK1_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "jiào",
     "question": "叫 — jiào nghĩa là gì?",
     "options": [
-      "Tên là",
-      "Đi là",
-      "Hỏi là",
-      "Nghe là"
+      "Gọi / Tên là",
+      "Nói / Kể lại",
+      "Hỏi / Đáp lại",
+      "Nghe / Nhìn thấy"
     ],
-    "correctAnswer": "Tên là",
-    "explanation": "叫 (jiào) dùng để giới thiệu tên gọi (Ví dụ: 你叫什么名字 - bạn tên là gì)."
+    "correctAnswer": "Gọi / Tên là",
+    "explanation": "叫 (jiào) vừa mang nghĩa gọi ai đó (叫他), vừa dùng để giới thiệu tên gọi (我叫...)."
   },
   {
     "id": 47,
@@ -679,12 +679,12 @@ export const HSK1_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "kāi",
     "question": "开 — kāi nghĩa là gì?",
     "options": [
-      "Mở ra",
-      "Đóng lại",
-      "Dừng lại",
-      "Đi về"
+      "Mở / Lái xe / Họp",
+      "Đóng / Dừng xe / Về",
+      "Ngồi / Nghỉ ngơi / Chờ",
+      "Đi / Chạy bộ / Rời"
     ],
-    "correctAnswer": "Mở ra",
+    "correctAnswer": "Mở / Lái xe / Họp",
     "explanation": "开 (kāi) có nhiều nghĩa: 开门 (mở cửa), 开车 (lái xe), 开会 (họp)."
   },
   {
@@ -693,13 +693,13 @@ export const HSK1_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "kàn",
     "question": "看 — kàn nghĩa là gì?",
     "options": [
-      "Nhìn xem",
-      "Lắng nghe",
-      "Nói chuyện",
-      "Đọc sách"
+      "Nhìn / Xem / Đọc",
+      "Nghe / Hiểu / Biết",
+      "Nói / Kể / Hát",
+      "Viết / Vẽ / Làm"
     ],
-    "correctAnswer": "Nhìn xem",
-    "explanation": "看 (kàn) là động từ thị giác (Ví dụ: 看书 - đọc sách, 看电视 - xem tivi)."
+    "correctAnswer": "Nhìn / Xem / Đọc",
+    "explanation": "看 (kàn) mang nghĩa nhìn ngắm, xem (看电视: xem tivi) hoặc đọc sách báo (看书: đọc sách)."
   },
   {
     "id": 51,
@@ -1673,13 +1673,13 @@ export const HSK1_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "xiǎng",
     "question": "想 — xiǎng nghĩa là gì?",
     "options": [
-      "Muốn",
-      "Làm",
-      "Xem",
-      "Ăn"
+      "Muốn / Nhớ / Nghĩ",
+      "Yêu / Thích / Mê",
+      "Hỏi / Nói / Kể",
+      "Làm / Xem / Đi"
     ],
-    "correctAnswer": "Muốn",
-    "explanation": "想 (xiǎng) biểu thị suy nghĩ, ước muốn làm điều gì đó hoặc nhớ nhung người khác."
+    "correctAnswer": "Muốn / Nhớ / Nghĩ",
+    "explanation": "想 (xiǎng) biểu thị suy nghĩ, ước muốn làm điều gì đó (Muốn) hoặc nhớ nhung người khác (Nhớ)."
   },
   {
     "id": 121,
@@ -1939,13 +1939,13 @@ export const HSK1_VOCAB_DATA: QuizQuestion[] = [
     "pinyin": "zài",
     "question": "在 — zài nghĩa là gì?",
     "options": [
-      "Ở tại",
-      "Đi đến",
-      "Trở về",
-      "Rời khỏi"
+      "Ở tại / Đang",
+      "Đi đến / Sắp",
+      "Trở về / Đã",
+      "Rời khỏi / Chưa"
     ],
-    "correctAnswer": "Ở tại",
-    "explanation": "在 (zài) chỉ vị trí nơi chốn (我在家 - tôi ở nhà) hoặc phó từ chỉ hành động đang diễn ra."
+    "correctAnswer": "Ở tại / Đang",
+    "explanation": "在 (zài) vừa là giới từ chỉ vị trí (我在家: tôi ở nhà), vừa là phó từ chỉ hành động đang diễn ra (在看书)."
   },
   {
     "id": 140,

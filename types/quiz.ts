@@ -30,4 +30,6 @@ export interface QuizProgress {
   currentRoundAnswers: Record<number, UserAnswerRecord>;
   currentRoundWrongIds: number[];
   mode: QuizMode;
+  selectedLessons?: number[];
+  isShuffled?: boolean;
 }
