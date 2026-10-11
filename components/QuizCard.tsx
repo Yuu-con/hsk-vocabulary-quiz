@@ -2,9 +2,10 @@
 
 import React, { useEffect, useState, useMemo } from 'react';
 import { QuizQuestion, UserAnswerRecord } from '@/types/quiz';
-import { Volume2, CheckCircle2, XCircle, ArrowRight, ArrowLeft } from 'lucide-react';
+import { Volume2, CheckCircle2, XCircle, ArrowRight, ArrowLeft, Flame } from 'lucide-react';
 import { playChineseAudio, shuffleArray } from '@/lib/quiz-utils';
 import { RoastNotification } from '@/components/RoastNotification';
+import { useRoastMode } from '@/hooks/useRoastMode';
 
 interface QuizCardProps {
   question: QuizQuestion;
@@ -36,17 +37,18 @@ export const QuizCard: React.FC<QuizCardProps> = ({
     return shuffleArray(question.options);
   }, [question.id]);
 
+  const { isRoastEnabled, toggleRoast } = useRoastMode();
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
   const [showRoastNotification, setShowRoastNotification] = useState(false);
 
-  // Trigger floating roast notification whenever user answers incorrectly
+  // Trigger centered roast modal popup whenever user answers incorrectly AND roast mode is enabled
   useEffect(() => {
-    if (userAnswer && !userAnswer.isCorrect) {
+    if (userAnswer && !userAnswer.isCorrect && isRoastEnabled) {
       setShowRoastNotification(true);
     } else {
       setShowRoastNotification(false);
     }
-  }, [userAnswer, question.id]);
+  }, [userAnswer, question.id, isRoastEnabled]);
 
   const handlePlayAudio = async () => {
     setIsPlayingAudio(true);
@@ -111,11 +113,16 @@ export const QuizCard: React.FC<QuizCardProps> = ({
 
   return (
     <>
-      {/* Floating Roast Notification Card (thẻ thông báo nổi) */}
+      {/* Centered Roast Modal Popup with Answer Details & Toggle */}
       <RoastNotification
         isVisible={showRoastNotification}
         onClose={() => setShowRoastNotification(false)}
         seed={question.id * 37 + (userAnswer?.answeredAt || questionIndex)}
+        answerDetails={{
+          hanzi: question.hanzi,
+          pinyin: question.pinyin,
+          vietnamese: question.correctAnswer,
+        }}
       />
 
       <div className="w-full max-w-2xl mx-auto px-4 py-4 sm:py-6">
@@ -134,15 +141,31 @@ export const QuizCard: React.FC<QuizCardProps> = ({
             )}
           </div>
 
-          <button
-            onClick={handlePlayAudio}
-            className="flex items-center gap-1.5 text-slate-500 hover:text-rose-600 transition px-2.5 py-1 rounded-full hover:bg-slate-50"
-            title="Nghe phát âm"
-            aria-label="Phát âm chữ Hán"
-          >
-            <Volume2 className={`w-4 h-4 ${isPlayingAudio ? 'text-rose-600 animate-bounce' : ''}`} />
-            <span className="text-xs font-medium">Phát âm</span>
-          </button>
+          <div className="flex items-center gap-1.5">
+            <button
+              onClick={() => toggleRoast()}
+              className={`flex items-center gap-1 transition px-2.5 py-1 rounded-full text-xs font-semibold ${
+                isRoastEnabled
+                  ? 'text-rose-600 bg-rose-50 hover:bg-rose-100'
+                  : 'text-slate-400 bg-slate-100 hover:bg-slate-200 hover:text-slate-600'
+              }`}
+              title={isRoastEnabled ? "Chế độ đá đểu: Đang BẬT (bấm để tắt)" : "Chế độ đá đểu: Đang TẮT (bấm để bật)"}
+              aria-label="Bật tắt chế độ đá đểu"
+            >
+              <Flame className={`w-3.5 h-3.5 ${isRoastEnabled ? 'fill-rose-500 text-rose-500' : 'text-slate-400'}`} />
+              <span className="hidden sm:inline">Đá đểu: {isRoastEnabled ? 'Bật' : 'Tắt'}</span>
+            </button>
+
+            <button
+              onClick={handlePlayAudio}
+              className="flex items-center gap-1.5 text-slate-500 hover:text-rose-600 transition px-2.5 py-1 rounded-full hover:bg-slate-50"
+              title="Nghe phát âm"
+              aria-label="Phát âm chữ Hán"
+            >
+              <Volume2 className={`w-4 h-4 ${isPlayingAudio ? 'text-rose-600 animate-bounce' : ''}`} />
+              <span className="text-xs font-medium">Phát âm</span>
+            </button>
+          </div>
         </div>
 
         {/* Question Prominent Hanzi & Pinyin */}

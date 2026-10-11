@@ -1,9 +1,10 @@
 'use client';
 
 import React, { useState, useMemo, useEffect } from 'react';
-import { BookOpen, CheckCircle, HelpCircle, Sparkles, RotateCcw, ArrowRight, Shuffle, Layers, Check } from 'lucide-react';
+import { BookOpen, CheckCircle, HelpCircle, Sparkles, RotateCcw, ArrowRight, Shuffle, Layers, Check, Flame } from 'lucide-react';
 import { QuizLevel } from '@/types/quiz';
 import { HSK1_LESSON_INFO, HSK2_LESSON_INFO } from '@/data/lesson-info';
+import { useRoastMode } from '@/hooks/useRoastMode';
 
 interface StartScreenProps {
   currentLevel: QuizLevel;
@@ -36,6 +37,7 @@ export const StartScreen: React.FC<StartScreenProps> = ({
   totalQuestions,
 }) => {
   const currentConfig = LEVEL_CONFIGS[currentLevel];
+  const { isRoastEnabled, toggleRoast } = useRoastMode();
   const [scopeMode, setScopeMode] = useState<'all' | 'custom'>('all');
   const [selectedLessons, setSelectedLessons] = useState<number[]>([]);
   const [shuffleQuestions, setShuffleQuestions] = useState<boolean>(true);
@@ -287,6 +289,38 @@ export const StartScreen: React.FC<StartScreenProps> = ({
               type="checkbox"
               checked={shuffleQuestions}
               onChange={(e) => setShuffleQuestions(e.target.checked)}
+              className="sr-only peer"
+            />
+            <div className="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-rose-600"></div>
+          </label>
+        </div>
+
+        {/* Roast Mode Toggle Option */}
+        <div className="mb-6 p-4 rounded-2xl bg-amber-50/50 border border-amber-200/80 text-left flex items-center justify-between gap-4">
+          <div className="flex items-start gap-3">
+            <div className="w-8 h-8 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center shrink-0 mt-0.5">
+              <Flame className="w-4 h-4 fill-amber-500 text-amber-500" />
+            </div>
+            <div>
+              <div className="font-bold text-sm text-slate-900 flex items-center gap-1.5">
+                Chế độ thông báo đá đểu khi làm sai
+                <span className={`text-[10px] uppercase font-bold tracking-wide px-1.5 py-0.5 rounded ${
+                  isRoastEnabled ? 'bg-amber-100 text-amber-800' : 'bg-slate-200 text-slate-600'
+                }`}>
+                  {isRoastEnabled ? 'Đang bật' : 'Đang tắt'}
+                </span>
+              </div>
+              <div className="text-xs text-slate-500 mt-0.5">
+                Bật cửa sổ Modal trêu đùa hài hước và hiện chuẩn đáp án (Chữ Hán — Pinyin — Tiếng Việt) khi chọn sai
+              </div>
+            </div>
+          </div>
+
+          <label className="relative inline-flex items-center cursor-pointer shrink-0">
+            <input
+              type="checkbox"
+              checked={isRoastEnabled}
+              onChange={(e) => toggleRoast(e.target.checked)}
               className="sr-only peer"
             />
             <div className="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-rose-600"></div>

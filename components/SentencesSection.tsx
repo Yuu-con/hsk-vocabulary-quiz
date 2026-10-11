@@ -17,8 +17,10 @@ import {
   BookMarked,
   ArrowRight,
   RotateCcw,
+  Flame,
 } from 'lucide-react';
 import { RoastNotification } from '@/components/RoastNotification';
+import { useRoastMode } from '@/hooks/useRoastMode';
 
 export const SentencesSection: React.FC = () => {
   const [selectedLevel, setSelectedLevel] = useState<'all' | 'hsk1' | 'hsk2'>('all');
@@ -32,6 +34,7 @@ export const SentencesSection: React.FC = () => {
   // Persistence in localStorage
   const [favorites, setFavorites] = useState<number[]>([]);
   const [learnedIds, setLearnedIds] = useState<number[]>([]);
+  const { isRoastEnabled, toggleRoast } = useRoastMode();
 
   // Quiz state
   const [quizIndex, setQuizIndex] = useState<number>(0);
@@ -127,7 +130,9 @@ export const SentencesSection: React.FC = () => {
         saveLearned([...learnedIds, currentQuizItem.id]);
       }
     } else {
-      setShowSentenceRoast(true);
+      if (isRoastEnabled) {
+        setShowSentenceRoast(true);
+      }
     }
   };
 
@@ -156,11 +161,18 @@ export const SentencesSection: React.FC = () => {
 
   return (
     <>
-      {/* Floating Roast Notification Card */}
+      {/* Centered Roast Modal Popup with Answer Details & Toggle */}
       <RoastNotification
         isVisible={showSentenceRoast}
         onClose={() => setShowSentenceRoast(false)}
         seed={currentQuizItem ? currentQuizItem.id * 43 + quizIndex : 0}
+        answerDetails={currentQuizItem ? {
+          hanzi: currentQuizItem.chinese,
+          pinyin: currentQuizItem.pinyin,
+          vietnamese: studyMode === 'meaning_quiz'
+            ? currentQuizItem.quizMeaning.correctAnswer
+            : currentQuizItem.quizFill.correctAnswer,
+        } : undefined}
       />
 
       <section className="w-full max-w-4xl mx-auto px-4 pb-16">
@@ -272,6 +284,19 @@ export const SentencesSection: React.FC = () => {
               >
                 {showVietnamese ? <Eye className="w-3.5 h-3.5" /> : <EyeOff className="w-3.5 h-3.5" />}
                 Tiếng Việt
+              </button>
+
+              <button
+                onClick={() => toggleRoast()}
+                className={`px-2.5 py-1.5 rounded-lg border text-xs font-semibold inline-flex items-center gap-1.5 transition-colors ${
+                  isRoastEnabled
+                    ? 'border-rose-300 bg-rose-50 text-rose-700'
+                    : 'border-stone-200 bg-white text-stone-400'
+                }`}
+                title="Bật/Tắt chế độ đá đểu khi làm sai"
+              >
+                <Flame className={`w-3.5 h-3.5 ${isRoastEnabled ? 'fill-rose-500 text-rose-500' : 'text-stone-400'}`} />
+                Đá đểu: {isRoastEnabled ? 'Bật' : 'Tắt'}
               </button>
             </div>
           </div>

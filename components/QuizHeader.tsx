@@ -1,9 +1,10 @@
 'use client';
 
 import React from 'react';
-import { RotateCcw, Home, LayoutGrid, Shield } from 'lucide-react';
+import { RotateCcw, Home, LayoutGrid, Shield, Flame } from 'lucide-react';
 import { QuizLevel } from '@/types/quiz';
 import { useAdminAuth } from '@/hooks/useAdminAuth';
+import { useRoastMode } from '@/hooks/useRoastMode';
 
 interface QuizHeaderProps {
   level: QuizLevel;
@@ -37,6 +38,7 @@ export const QuizHeader: React.FC<QuizHeaderProps> = ({
   onOpenAdminModal,
 }) => {
   const { isAdmin } = useAdminAuth();
+  const { isRoastEnabled, toggleRoast } = useRoastMode();
   const currentQuestionNumber = Math.min(currentIndex + 1, totalQuestions);
   const progressPercent = totalQuestions > 0 ? (currentQuestionNumber / totalQuestions) * 100 : 0;
 
@@ -76,6 +78,20 @@ export const QuizHeader: React.FC<QuizHeaderProps> = ({
           </div>
 
           <div className="flex items-center gap-1.5">
+            <button
+              onClick={() => toggleRoast()}
+              title={isRoastEnabled ? "Chế độ đá đểu: Đang BẬT (bấm để tắt)" : "Chế độ đá đểu: Đang TẮT (bấm để bật)"}
+              aria-label="Bật tắt chế độ đá đểu"
+              className={`flex items-center gap-1 px-2 py-1.5 text-xs font-semibold rounded-lg border transition ${
+                isRoastEnabled
+                  ? 'bg-rose-50 text-rose-700 border-rose-200 shadow-xs'
+                  : 'bg-slate-100 text-slate-400 border-slate-200 hover:text-slate-600'
+              }`}
+            >
+              <Flame className={`w-3.5 h-3.5 ${isRoastEnabled ? 'fill-rose-500 text-rose-500 animate-pulse' : 'text-slate-400'}`} />
+              <span className="hidden sm:inline">Đá đểu: {isRoastEnabled ? 'Bật' : 'Tắt'}</span>
+            </button>
+
             {onOpenAdminModal && (
               <button
                 onClick={onOpenAdminModal}

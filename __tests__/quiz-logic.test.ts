@@ -202,6 +202,23 @@ console.log('--- RUNNING SPACED REPETITION MASTERY LOOP TESTS ---');
   console.log('✔ Test 10: Humorous wrong answer roasts properly loaded and formatted');
 }
 
+// Test 11: Roast modal answer details formatted as Chữ Hán — Pinyin — Tiếng Việt
+{
+  const { HSK1_VOCAB_DATA } = require('../data/hsk1-data');
+  const sample = HSK1_VOCAB_DATA[0]; // 你 - nǐ - Bạn
+  const formattedAnswer = `${sample.hanzi} — ${sample.pinyin} — ${sample.correctAnswer}`;
+  assert.strictEqual(formattedAnswer, '你 — nǐ — Bạn');
+
+  const { HSK2_VOCAB_DATA } = require('../data/hsk2-data');
+  const baozhi = HSK2_VOCAB_DATA.find((q: any) => q.hanzi === '报纸');
+  assert.ok(baozhi, 'Found 报纸 in HSK 2');
+  const baozhiFormatted = `${baozhi.hanzi} — ${baozhi.pinyin} — ${baozhi.correctAnswer}`;
+  assert.strictEqual(baozhiFormatted, '报纸 — bàozhǐ — Tờ báo');
+  assert.deepStrictEqual(baozhi.options, ['Tờ báo', 'Bút', 'Sách', 'Giấy trắng']);
+
+  console.log('✔ Test 11: Roast modal answer details correctly format as Chữ Hán — Pinyin — Tiếng Việt');
+}
+
 console.log('\n🎉 ALL MASTERY LOOP & NEW FEATURE TESTS PASSED SUCCESSFULLY!\n');
 
 
