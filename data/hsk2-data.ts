@@ -3,2102 +3,2252 @@ import { QuizQuestion } from '@/types/quiz';
 export const HSK2_VOCAB_DATA: QuizQuestion[] = [
   {
     "id": 1,
-    "hanzi": "吧",
-    "pinyin": "ba",
-    "question": "吧 — ba nghĩa là gì?",
+    "hanzi": "旅游",
+    "pinyin": "lǚyóu",
+    "lesson": 1,
+    "question": "旅游 — lǚyóu nghĩa là gì?",
     "options": [
-      "Nhé",
-      "Không",
-      "Ở đâu",
-      "Của"
+      "Du lịch / Tham quan (Lữ du)",
+      "Làm việc công sở",
+      "Học tập trường lớp",
+      "Nghỉ ngơi tại nhà"
     ],
-    "correctAnswer": "Nhé",
-    "explanation": "吧 (ba) đứng cuối câu biểu thị sự gợi ý, đề nghị hoặc suy đoán (Ví dụ: 走吧 - đi thôi nào)."
+    "correctAnswer": "Du lịch / Tham quan (Lữ du)",
+    "explanation": "旅游 (lǚyóu - Hán Việt: Lữ du) là hoạt động đi tham quan nghỉ dưỡng (Ví dụ: 去北京旅游 - đi Bắc Kinh du lịch)."
   },
   {
     "id": 2,
-    "hanzi": "白",
-    "pinyin": "bái",
-    "question": "白 — bái nghĩa là gì?",
+    "hanzi": "觉得",
+    "pinyin": "juéde",
+    "lesson": 1,
+    "question": "觉得 — juéde nghĩa là gì?",
     "options": [
-      "Màu trắng",
-      "Màu đen",
-      "Màu đỏ",
-      "Màu xanh"
+      "Cảm thấy / Cho rằng (Giác đắc)",
+      "Nghe thấy thanh âm",
+      "Nhìn thấy tận mắt",
+      "Biết rõ sự tình"
     ],
-    "correctAnswer": "Màu trắng",
-    "explanation": "白 (bái) chỉ màu trắng (Ví dụ: 白色的衣服 - quần áo màu trắng)."
+    "correctAnswer": "Cảm thấy / Cho rằng (Giác đắc)",
+    "explanation": "觉得 (juéde - Hán Việt: Giác đắc) dùng để bày tỏ cảm nhận, nhận định cá nhân (Ví dụ: 我觉得很好 - Tôi cảm thấy rất tốt)."
   },
   {
     "id": 3,
-    "hanzi": "百",
-    "pinyin": "bǎi",
-    "question": "百 — bǎi nghĩa là gì?",
+    "hanzi": "最",
+    "pinyin": "zuì",
+    "lesson": 1,
+    "question": "最 — zuì nghĩa là gì?",
     "options": [
-      "Một trăm",
-      "Một nghìn",
-      "Mười",
-      "Một vạn"
+      "Nhất / Cực kỳ (Tối - mức độ cao nhất)",
+      "Hơn / Tương đối",
+      "Rất / Khá là",
+      "Đều / Toàn bộ"
     ],
-    "correctAnswer": "Một trăm",
-    "explanation": "百 (bǎi) là hàng trăm (Ví dụ: 一百 - một trăm)."
+    "correctAnswer": "Nhất / Cực kỳ (Tối - mức độ cao nhất)",
+    "explanation": "最 (zuì - Hán Việt: Tối) đứng trước tính từ/động từ chỉ mức độ cao nhất (Ví dụ: 最好 - tốt nhất, 最喜欢 - thích nhất)."
   },
   {
     "id": 4,
-    "hanzi": "帮助",
-    "pinyin": "bāngzhù",
-    "question": "帮助 — bāngzhù nghĩa là gì?",
+    "hanzi": "为什么",
+    "pinyin": "wèishénme",
+    "lesson": 1,
+    "question": "为什么 — wèishénme nghĩa là gì?",
     "options": [
-      "Giúp đỡ",
-      "Học tập",
-      "Nói chuyện",
-      "Tìm kiếm"
+      "Tại sao / Vì sao (Vi thập ma)",
+      "Cái gì đồ vật",
+      "Ở đâu nơi chốn",
+      "Bao giờ thời điểm"
     ],
-    "correctAnswer": "Giúp đỡ",
-    "explanation": "帮助 (bāngzhù) là hỗ trợ hoặc giúp đỡ ai đó (Ví dụ: 谢谢你的帮助 - cảm ơn sự giúp đỡ của bạn)."
+    "correctAnswer": "Tại sao / Vì sao (Vi thập ma)",
+    "explanation": "为什么 (wèishénme - Hán Việt: Vi thập ma) là đại từ hỏi nguyên nhân, lý do."
   },
   {
     "id": 5,
-    "hanzi": "报纸",
-    "pinyin": "bàozhǐ",
-    "question": "报纸 — bàozhǐ nghĩa là gì?",
+    "hanzi": "也",
+    "pinyin": "yě",
+    "lesson": 1,
+    "question": "也 — yě nghĩa là gì?",
     "options": [
-      "Tờ báo",
-      "Quyển sách",
-      "Cây bút",
-      "Cái bàn"
+      "Cũng / Cũng vậy (Dã)",
+      "Đều là toàn bộ",
+      "Rất là mức độ",
+      "Không là phủ định"
     ],
-    "correctAnswer": "Tờ báo",
-    "explanation": "报纸 (bàozhǐ) là ấn phẩm báo chí để đọc tin tức (Ví dụ: 看报纸 - đọc báo)."
+    "correctAnswer": "Cũng / Cũng vậy (Dã)",
+    "explanation": "也 (yě - Hán Việt: Dã) là phó từ chỉ sự đồng nhất, tương đồng (Ví dụ: 我也是 - Tôi cũng vậy)."
   },
   {
     "id": 6,
-    "hanzi": "比",
-    "pinyin": "bǐ",
-    "question": "比 — bǐ nghĩa là gì?",
+    "hanzi": "运动",
+    "pinyin": "yùndòng",
+    "lesson": 1,
+    "question": "运动 — yùndòng nghĩa là gì?",
     "options": [
-      "So với",
-      "Bởi vì",
-      "Cùng nhau",
-      "Cho nên"
+      "Vận động / Thể thao (Vận động)",
+      "Học tập tri thức",
+      "Nghỉ ngơi an dưỡng",
+      "Làm việc công tác"
     ],
-    "correctAnswer": "So với",
-    "explanation": "比 (bǐ) dùng trong câu so sánh (Ví dụ: 他比我高 - anh ấy cao hơn tôi)."
+    "correctAnswer": "Vận động / Thể thao (Vận động)",
+    "explanation": "运动 (yùndòng - Hán Việt: Vận động) là hoạt động thể dục thể thao rèn luyện sức khỏe."
   },
   {
     "id": 7,
-    "hanzi": "别",
-    "pinyin": "bié",
-    "question": "别 — bié nghĩa là gì?",
+    "hanzi": "踢足球",
+    "pinyin": "tī zúqiú",
+    "lesson": 1,
+    "question": "踢足球 — tī zúqiú nghĩa là gì?",
     "options": [
-      "Đừng / Khác",
-      "Phải / Đúng",
-      "Nên / Cần",
-      "Muốn / Thích"
+      "Đá bóng / Túc cầu (Thích túc cầu)",
+      "Chơi bóng rổ tay",
+      "Bơi lội dưới nước",
+      "Chạy bộ rèn sức"
     ],
-    "correctAnswer": "Đừng / Khác",
-    "explanation": "别 (bié) dùng khuyên bảo hoặc cấm đoán (别走: đừng đi) hoặc chỉ người khác (别人: người khác)."
+    "correctAnswer": "Đá bóng / Túc cầu (Thích túc cầu)",
+    "explanation": "踢足球 (tī zúqiú - Hán Việt: Thích túc cầu: đá quả bóng bằng chân) là môn bóng đá."
   },
   {
     "id": 8,
-    "hanzi": "长",
-    "pinyin": "cháng",
-    "question": "长 — cháng nghĩa là gì?",
+    "hanzi": "一起",
+    "pinyin": "yìqǐ",
+    "lesson": 1,
+    "question": "一起 — yìqǐ nghĩa là gì?",
     "options": [
-      "Dài",
-      "Ngắn",
-      "Cao",
-      "Rộng"
+      "Cùng nhau (Nhất khởi)",
+      "Một mình đơn độc",
+      "Trước tiên mở đầu",
+      "Sau đó tiếp nối"
     ],
-    "correctAnswer": "Dài",
-    "explanation": "长 (cháng) miêu tả độ dài của vật hoặc thời gian (Ví dụ: 头发很长 - tóc rất dài)."
+    "correctAnswer": "Cùng nhau (Nhất khởi)",
+    "explanation": "一起 (yìqǐ - Hán Việt: Nhất khởi) chỉ sự kết hợp đồng thời cùng làm gì đó (Ví dụ: 一起去 - cùng đi)."
   },
   {
     "id": 9,
-    "hanzi": "唱歌",
-    "pinyin": "chànggē",
-    "question": "唱歌 — chànggē nghĩa là gì?",
+    "hanzi": "新",
+    "pinyin": "xīn",
+    "lesson": 1,
+    "question": "新 — xīn nghĩa là gì?",
     "options": [
-      "Ca hát",
-      "Nhảy múa",
-      "Nghe nhạc",
-      "Nói chuyện"
+      "Mới mẻ / Mới (Tân - đối lập với 旧)",
+      "Cũ kỹ cổ xưa",
+      "Đẹp đẽ mỹ miều",
+      "Tốt lành thuận lợi"
     ],
-    "correctAnswer": "Ca hát",
-    "explanation": "唱歌 (chànggē) là hát những bài ca (Ví dụ: 喜欢唱歌 - thích hát)."
+    "correctAnswer": "Mới mẻ / Mới (Tân - đối lập với 旧)",
+    "explanation": "新 (xīn - Hán Việt: Tân) chỉ sự vật mới xuất hiện (Ví dụ: 新书 - sách mới, 新年 - năm mới)."
   },
   {
     "id": 10,
-    "hanzi": "出",
-    "pinyin": "chū",
-    "question": "出 — chū nghĩa là gì?",
+    "hanzi": "要",
+    "pinyin": "yào",
+    "lesson": 1,
+    "question": "要 — yào nghĩa là gì?",
     "options": [
-      "Đi ra",
-      "Đi vào",
-      "Đi đến",
-      "Trở về"
+      "Cần / Muốn / Sắp sửa (Yếu)",
+      "Không cần chối từ",
+      "Đã từng trải qua",
+      "Chưa từng thực hiện"
     ],
-    "correctAnswer": "Đi ra",
-    "explanation": "出 (chū) là chuyển động từ trong ra ngoài (Ví dụ: 出去 - đi ra ngoài)."
+    "correctAnswer": "Cần / Muốn / Sắp sửa (Yếu)",
+    "explanation": "要 (yào - Hán Việt: Yếu) biểu thị nhu cầu, nguyện vọng hoặc hành động sắp diễn ra (Ví dụ: 我要买 - tôi muốn mua)."
   },
   {
     "id": 11,
-    "hanzi": "穿",
-    "pinyin": "chuān",
-    "question": "穿 — chuān nghĩa là gì?",
+    "hanzi": "生病",
+    "pinyin": "shēngbìng",
+    "lesson": 2,
+    "question": "生病 — shēngbìng nghĩa là gì?",
     "options": [
-      "Mặc áo",
-      "Mua đồ",
-      "Giặt đồ",
-      "Cởi áo"
+      "Bị ốm / Nhiễm bệnh (Sinh bệnh)",
+      "Khỏe mạnh cường tráng",
+      "Mệt mỏi kiệt sức",
+      "Đau đầu nhức óc"
     ],
-    "correctAnswer": "Mặc áo",
-    "explanation": "穿 (chuān) là mặc trang phục (Ví dụ: 穿衣服 - mặc quần áo)."
+    "correctAnswer": "Bị ốm / Nhiễm bệnh (Sinh bệnh)",
+    "explanation": "生病 (shēngbìng - Hán Việt: Sinh bệnh) là trạng thái cơ thể không khỏe, mắc bệnh tật."
   },
   {
     "id": 12,
-    "hanzi": "次",
-    "pinyin": "cì",
-    "question": "次 — cì nghĩa là gì?",
+    "hanzi": "每",
+    "pinyin": "měi",
+    "lesson": 2,
+    "question": "每 — měi nghĩa là gì?",
     "options": [
-      "Lần",
-      "Giờ",
-      "Ngày",
-      "Năm"
+      "Mỗi / Hàng (Mỗi - từng cá thể)",
+      "Tất cả toàn bộ",
+      "Rất nhiều vô kể",
+      "Ít ỏi hiếm hoi"
     ],
-    "correctAnswer": "Lần",
-    "explanation": "次 (cì) là lượng từ đo số lần thực hiện hành động (Ví dụ: 去过一次 - đã đi một lần)."
+    "correctAnswer": "Mỗi / Hàng (Mỗi - từng cá thể)",
+    "explanation": "每 (měi - Hán Việt: Mỗi) chỉ từng cá thể trong một tập thể (Ví dụ: 每天 - mỗi ngày/hàng ngày, 每个人 - mỗi người)."
   },
   {
     "id": 13,
-    "hanzi": "从",
-    "pinyin": "cóng",
-    "question": "从 — cóng nghĩa là gì?",
+    "hanzi": "早上",
+    "pinyin": "zǎoshang",
+    "lesson": 2,
+    "question": "早上 — zǎoshang nghĩa là gì?",
     "options": [
-      "Từ đâu",
-      "Đến đâu",
-      "Ở đâu",
-      "Với ai"
+      "Buổi sáng / Sáng sớm (Tảo thượng)",
+      "Buổi trưa chính ngọ",
+      "Buổi chiều tà tà",
+      "Buổi tối đêm khuya"
     ],
-    "correctAnswer": "Từ đâu",
-    "explanation": "从 (cóng) biểu thị điểm xuất phát (Ví dụ: 从北京来 - đến từ Bắc Kinh)."
+    "correctAnswer": "Buổi sáng / Sáng sớm (Tảo thượng)",
+    "explanation": "早上 (zǎoshang - Hán Việt: Tảo thượng) là thời điểm sáng sớm khi mặt trời vừa lên."
   },
   {
     "id": 14,
-    "hanzi": "错",
-    "pinyin": "cuò",
-    "question": "错 — cuò nghĩa là gì?",
+    "hanzi": "跑步",
+    "pinyin": "pǎobù",
+    "lesson": 2,
+    "question": "跑步 — pǎobù nghĩa là gì?",
     "options": [
-      "Sai sót",
-      "Đúng đắn",
-      "Tốt đẹp",
-      "Mới mẻ"
+      "Chạy bộ (Bào bộ)",
+      "Bơi lội dưới hồ",
+      "Đá bóng sân cỏ",
+      "Đi dạo thong thả"
     ],
-    "correctAnswer": "Sai sót",
-    "explanation": "错 (cuò) biểu thị sự sai sót, không đúng (Ví dụ: 没错 - không sai)."
+    "correctAnswer": "Chạy bộ (Bào bộ)",
+    "explanation": "跑步 (pǎobù - Hán Việt: Bào bộ) là hoạt động chạy bộ rèn luyện sức khỏe."
   },
   {
     "id": 15,
-    "hanzi": "打篮球",
-    "pinyin": "dǎ lánqiú",
-    "question": "打篮球 — dǎ lánqiú nghĩa là gì?",
+    "hanzi": "起床",
+    "pinyin": "qǐchuáng",
+    "lesson": 2,
+    "question": "起床 — qǐchuáng nghĩa là gì?",
     "options": [
-      "Chơi bóng rổ",
-      "Đá bóng đá",
-      "Bơi dưới nước",
-      "Chạy bộ nhanh"
+      "Thức dậy / Rời giường (Khởi sàng)",
+      "Đi ngủ say giấc",
+      "Tắm gội sạch sẽ",
+      "Ăn sáng điểm tâm"
     ],
-    "correctAnswer": "Chơi bóng rổ",
-    "explanation": "打篮球 (dǎ lánqiú) là môn thể thao chơi bóng rổ."
+    "correctAnswer": "Thức dậy / Rời giường (Khởi sàng)",
+    "explanation": "起床 (qǐchuáng - Hán Việt: Khởi sàng: dậy khỏi giường) là thức dậy sau giấc ngủ."
   },
   {
     "id": 16,
-    "hanzi": "大家",
-    "pinyin": "dàjiā",
-    "question": "大家 — dàjiā nghĩa là gì?",
+    "hanzi": "药",
+    "pinyin": "yào",
+    "lesson": 2,
+    "question": "药 — yào nghĩa là gì?",
     "options": [
-      "Mọi người",
-      "Gia đình",
-      "Bạn bè",
-      "Học sinh"
+      "Thuốc uống / Dược phẩm (Dược)",
+      "Thức ăn bổ dưỡng",
+      "Nước ngọt giải khát",
+      "Trà xanh thanh nhiệt"
     ],
-    "correctAnswer": "Mọi người",
-    "explanation": "大家 (dàjiā) là đại từ chỉ tập thể mọi người (Ví dụ: 大家好 - chào mọi người)."
+    "correctAnswer": "Thuốc uống / Dược phẩm (Dược)",
+    "explanation": "药 (yào - Hán Việt: Dược) là thuốc chữa bệnh (Ví dụ: 吃药 - uống thuốc, 中药 - thuốc đông y)."
   },
   {
     "id": 17,
-    "hanzi": "到",
-    "pinyin": "dào",
-    "question": "到 — dào nghĩa là gì?",
+    "hanzi": "身体",
+    "pinyin": "shēntǐ",
+    "lesson": 2,
+    "question": "身体 — shēntǐ nghĩa là gì?",
     "options": [
-      "Đến nơi",
-      "Rời đi",
-      "Chờ đợi",
-      "Bắt đầu"
+      "Thân thể / Sức khỏe (Thân thể)",
+      "Thời gian năm tháng",
+      "Công việc sự nghiệp",
+      "Tuổi tác đời người"
     ],
-    "correctAnswer": "Đến nơi",
-    "explanation": "到 (dào) biểu thị điểm đến hoặc đạt tới (Ví dụ: 到了 - đã đến nơi rồi)."
+    "correctAnswer": "Thân thể / Sức khỏe (Thân thể)",
+    "explanation": "身体 (shēntǐ - Hán Việt: Thân thể) chỉ cơ thể hoặc sức khỏe con người (身体好: sức khỏe tốt)."
   },
   {
     "id": 18,
-    "hanzi": "得",
-    "pinyin": "de",
-    "question": "得 — de nghĩa là gì?",
+    "hanzi": "休息",
+    "pinyin": "xiūxi",
+    "lesson": 2,
+    "question": "休息 — xiūxi nghĩa là gì?",
     "options": [
-      "Đến mức",
-      "Của ai",
-      "Chăng nữa",
-      "Và cùng"
+      "Nghỉ ngơi / Hưu tức (Hưu tức)",
+      "Làm việc miệt mài",
+      "Học tập chăm chỉ",
+      "Tập luyện thể thao"
     ],
-    "correctAnswer": "Đến mức",
-    "explanation": "得 (de) đặt sau động từ để dẫn ra trình độ, trạng thái (Ví dụ: 跑得很快 - chạy rất nhanh)."
+    "correctAnswer": "Nghỉ ngơi / Hưu tức (Hưu tức)",
+    "explanation": "休息 (xiūxi - Hán Việt: Hưu tức) là dừng công việc để nghỉ ngơi, hồi phục sức lực."
   },
   {
     "id": 19,
-    "hanzi": "等",
-    "pinyin": "děng",
-    "question": "等 — děng nghĩa là gì?",
+    "hanzi": "出",
+    "pinyin": "chū",
+    "lesson": 2,
+    "question": "出 — chū nghĩa là gì?",
     "options": [
-      "Chờ đợi",
-      "Rời bước",
-      "Tìm kiếm",
-      "Hỏi han"
+      "Ra ngoài / Xuất (đối lập với 进)",
+      "Đi vào bên trong",
+      "Đi đến nơi xa",
+      "Trở về chốn cũ"
     ],
-    "correctAnswer": "Chờ đợi",
-    "explanation": "等 (děng) là hành động chờ đợi ai đó hoặc điều gì (Ví dụ: 等一下 - đợi một chút)."
+    "correctAnswer": "Ra ngoài / Xuất (đối lập với 进)",
+    "explanation": "出 (chū - Hán Việt: Xuất) là chuyển động từ trong ra ngoài (Ví dụ: 出去 - đi ra ngoài, 出院 - xuất viện)."
   },
   {
     "id": 20,
-    "hanzi": "弟弟",
-    "pinyin": "dìdi",
-    "question": "弟弟 — dìdi nghĩa là gì?",
+    "hanzi": "忙",
+    "pinyin": "máng",
+    "lesson": 2,
+    "question": "忙 — máng nghĩa là gì?",
     "options": [
-      "Em trai",
-      "Anh trai",
-      "Em gái",
-      "Con trai"
+      "Bận rộn / Mang (nhiều việc)",
+      "Rảnh rỗi thảnh thơi",
+      "Mệt mỏi đuối sức",
+      "Vui vẻ phấn khởi"
     ],
-    "correctAnswer": "Em trai",
-    "explanation": "弟弟 (dìdi) là em trai ruột trong gia đình."
+    "correctAnswer": "Bận rộn / Mang (nhiều việc)",
+    "explanation": "忙 (máng - Hán Việt: Mang) miêu tả trạng thái có nhiều việc phải làm tất bật (Ví dụ: 你忙吗 - bạn bận không?)."
   },
   {
     "id": 21,
-    "hanzi": "第一",
-    "pinyin": "dì-yī",
-    "question": "第一 — dì-yī nghĩa là gì?",
+    "hanzi": "手表",
+    "pinyin": "shǒubiǎo",
+    "lesson": 3,
+    "question": "手表 — shǒubiǎo nghĩa là gì?",
     "options": [
-      "Thứ nhất",
-      "Thứ hai",
-      "Thứ ba",
-      "Cuối cùng"
+      "Đồng hồ đeo tay (Thủ biểu)",
+      "Điện thoại di động",
+      "Máy vi tính để bàn",
+      "Túi xách thời trang"
     ],
-    "correctAnswer": "Thứ nhất",
-    "explanation": "第一 (dì-yī) là số thứ tự đầu tiên (Ví dụ: 第一次 - lần đầu tiên)."
+    "correctAnswer": "Đồng hồ đeo tay (Thủ biểu)",
+    "explanation": "手表 (shǒubiǎo - Hán Việt: Thủ biểu) là phụ kiện xem giờ đeo ở cổ tay."
   },
   {
     "id": 22,
-    "hanzi": "懂",
-    "pinyin": "dǒng",
-    "question": "懂 — dǒng nghĩa là gì?",
+    "hanzi": "千",
+    "pinyin": "qiān",
+    "lesson": 3,
+    "question": "千 — qiān nghĩa là gì?",
     "options": [
-      "Thấu hiểu",
-      "Quên mất",
-      "Nói năng",
-      "Nhìn thấy"
+      "Một nghìn / Ngàn (Thiên)",
+      "Một trăm (Bách)",
+      "Một vạn (Vạn)",
+      "Mười (Thập)"
     ],
-    "correctAnswer": "Thấu hiểu",
-    "explanation": "懂 (dǒng) chỉ nhận thức, nắm rõ ý nghĩa (Ví dụ: 我懂了 - tôi hiểu rồi)."
+    "correctAnswer": "Một nghìn / Ngàn (Thiên)",
+    "explanation": "千 (qiān - Hán Việt: Thiên) là hàng ngàn (Ví dụ: 一千 - một nghìn, 三千 - ba nghìn)."
   },
   {
     "id": 23,
-    "hanzi": "对",
-    "pinyin": "duì",
-    "question": "对 — duì nghĩa là gì?",
+    "hanzi": "报纸",
+    "pinyin": "bàozhǐ",
+    "lesson": 3,
+    "question": "报纸 — bàozhǐ nghĩa là gì?",
     "options": [
-      "Đúng / Đối với",
-      "Sai / Trái lại",
-      "Thích / Hợp ý",
-      "Gần / Cận kề"
+      "Báo chí / Tờ báo (Báo chỉ)",
+      "Quyển sách vở",
+      "Cây bút mực",
+      "Tờ giấy trắng"
     ],
-    "correctAnswer": "Đúng / Đối với",
-    "explanation": "对 (duì) nghĩa là đúng (đối lập với 错) hoặc là giới từ biểu thị 'đối với ai đó' (对我说: nói với tôi)."
+    "correctAnswer": "Báo chí / Tờ báo (Báo chỉ)",
+    "explanation": "报纸 (bàozhǐ - Hán Việt: Báo chỉ: giấy in tin tức) là ấn phẩm báo đọc tin tức (看报纸 - đọc báo)."
   },
   {
     "id": 24,
-    "hanzi": "房间",
-    "pinyin": "fángjiān",
-    "question": "房间 — fángjiān nghĩa là gì?",
+    "hanzi": "送",
+    "pinyin": "sòng",
+    "lesson": 3,
+    "question": "送 — sòng nghĩa là gì?",
     "options": [
-      "Căn phòng",
-      "Ngôi nhà",
-      "Cửa hàng",
-      "Trường học"
+      "Tặng / Tiễn đưa (Tống)",
+      "Nhận / Đón rước",
+      "Mua / Bán đồ",
+      "Mượn / Vay tiền"
     ],
-    "correctAnswer": "Căn phòng",
-    "explanation": "房间 (fángjiān) chỉ buồng phòng bên trong một tòa nhà (Ví dụ: 我的房间 - phòng của tôi)."
+    "correctAnswer": "Tặng / Tiễn đưa (Tống)",
+    "explanation": "送 (sòng - Hán Việt: Tống) vừa là tặng quà (送礼物), vừa là tiễn ai đó lên đường (送朋友: tiễn bạn)."
   },
   {
     "id": 25,
-    "hanzi": "非常",
-    "pinyin": "fēicháng",
-    "question": "非常 — fēicháng nghĩa là gì?",
+    "hanzi": "一下",
+    "pinyin": "yíxià",
+    "lesson": 3,
+    "question": "一下 — yíxià nghĩa là gì?",
     "options": [
-      "Vô cùng",
-      "Một chút",
-      "Bình thường",
-      "Không hề"
+      "Một lát / Thử xem (Nhất hạ)",
+      "Một lần duy nhất",
+      "Rất lâu hàng giờ",
+      "Mãi mãi trường tồn"
     ],
-    "correctAnswer": "Vô cùng",
-    "explanation": "非常 (fēicháng) là phó từ mức độ cao hơn cả 很 (Ví dụ: 非常高兴 - vô cùng vui mừng)."
+    "correctAnswer": "Một lát / Thử xem (Nhất hạ)",
+    "explanation": "一下 (yíxià - Hán Việt: Nhất hạ) đứng sau động từ để làm nhẹ sắc thái, biểu thị làm thử một chút (看一下 - xem thử)."
   },
   {
     "id": 26,
-    "hanzi": "服务员",
-    "pinyin": "fúwùyuán",
-    "question": "服务员 — fúwùyuán nghĩa là gì?",
+    "hanzi": "牛奶",
+    "pinyin": "niúnǎi",
+    "lesson": 3,
+    "question": "牛奶 — niúnǎi nghĩa là gì?",
     "options": [
-      "Bồi bàn",
-      "Bác sĩ",
-      "Thầy giáo",
-      "Tài xế"
+      "Sữa bò (Ngưu nãi)",
+      "Trà xanh thanh mát",
+      "Cà phê đen đậm",
+      "Nước khoáng tinh khiết"
     ],
-    "correctAnswer": "Bồi bàn",
-    "explanation": "服务员 (fúwùyuán) là người làm công việc phục vụ ở nhà hàng, khách sạn."
+    "correctAnswer": "Sữa bò (Ngưu nãi)",
+    "explanation": "牛奶 (niúnǎi - Hán Việt: Ngưu nãi) là thức uống sữa dinh dưỡng từ con bò."
   },
   {
     "id": 27,
-    "hanzi": "高",
-    "pinyin": "gāo",
-    "question": "高 — gāo nghĩa là gì?",
+    "hanzi": "房间",
+    "pinyin": "fángjiān",
+    "lesson": 3,
+    "question": "房间 — fángjiān nghĩa là gì?",
     "options": [
-      "Cao lớn",
-      "Thấp bé",
-      "Dài ngoẵng",
-      "To đùng"
+      "Căn phòng / Buồng (Phòng gian)",
+      "Ngôi nhà toàn thể",
+      "Cửa hàng buôn bán",
+      "Trường học viện"
     ],
-    "correctAnswer": "Cao lớn",
-    "explanation": "高 (gāo) miêu tả chiều cao người hoặc vật (Ví dụ: 很高 - rất cao)."
+    "correctAnswer": "Căn phòng / Buồng (Phòng gian)",
+    "explanation": "房间 (fángjiān - Hán Việt: Phòng gian) là căn phòng bên trong ngôi nhà hoặc khách sạn."
   },
   {
     "id": 28,
-    "hanzi": "告诉",
-    "pinyin": "gàosu",
-    "question": "告诉 — gàosu nghĩa là gì?",
+    "hanzi": "丈夫",
+    "pinyin": "zhàngfu",
+    "lesson": 3,
+    "question": "丈夫 — zhàngfu nghĩa là gì?",
     "options": [
-      "Bảo cho",
-      "Hỏi han",
-      "Nghe ngóng",
-      "Suy nghĩ"
+      "Người chồng / Trượng phu",
+      "Người vợ thê tử",
+      "Người cha phụ thân",
+      "Anh trai ca ca"
     ],
-    "correctAnswer": "Bảo cho",
-    "explanation": "告诉 (gàosu) là truyền đạt thông tin cho người khác (Ví dụ: 告诉我 - nói cho tôi biết)."
+    "correctAnswer": "Người chồng / Trượng phu",
+    "explanation": "丈夫 (zhàngfu - Hán Việt: Trượng phu) là người chồng trong quan hệ hôn nhân."
   },
   {
     "id": 29,
-    "hanzi": "哥哥",
-    "pinyin": "gēge",
-    "question": "哥哥 — gēge nghĩa là gì?",
+    "hanzi": "红",
+    "pinyin": "hóng",
+    "lesson": 3,
+    "question": "红 — hóng nghĩa là gì?",
     "options": [
-      "Anh trai",
-      "Em trai",
-      "Người bố",
-      "Bạn bè"
+      "Màu đỏ / Hồng (Hồng sắc)",
+      "Màu trắng bạch",
+      "Màu đen hắc",
+      "Màu vàng hoàng"
     ],
-    "correctAnswer": "Anh trai",
-    "explanation": "哥哥 (gēge) là anh trai ruột trong gia đình."
+    "correctAnswer": "Màu đỏ / Hồng (Hồng sắc)",
+    "explanation": "红 (hóng - Hán Việt: Hồng) chỉ màu đỏ (Ví dụ: 红色的衣服 - quần áo màu đỏ)."
   },
   {
     "id": 30,
+    "hanzi": "颜色",
+    "pinyin": "yánsè",
+    "lesson": 3,
+    "question": "颜色 — yánsè nghĩa là gì?",
+    "options": [
+      "Màu sắc / Nhan sắc",
+      "Hình dáng vóc dáng",
+      "Kích thước độ lớn",
+      "Âm thanh tiếng động"
+    ],
+    "correctAnswer": "Màu sắc / Nhan sắc",
+    "explanation": "颜色 (yánsè - Hán Việt: Nhan sắc) chỉ các sắc màu như đỏ, xanh, trắng, vàng."
+  },
+  {
+    "id": 31,
+    "hanzi": "生日",
+    "pinyin": "shēngrì",
+    "lesson": 4,
+    "question": "生日 — shēngrì nghĩa là gì?",
+    "options": [
+      "Sinh nhật / Ngày sinh",
+      "Hôm nay hiện tại",
+      "Ngày lễ kỷ niệm",
+      "Năm mới tết đến"
+    ],
+    "correctAnswer": "Sinh nhật / Ngày sinh",
+    "explanation": "生日 (shēngrì - Hán Việt: Sinh nhật) là ngày kỷ niệm chào đời (Ví dụ: 生日快乐 - sinh nhật vui vẻ)."
+  },
+  {
+    "id": 32,
+    "hanzi": "快乐",
+    "pinyin": "kuàilè",
+    "lesson": 4,
+    "question": "快乐 — kuàilè nghĩa là gì?",
+    "options": [
+      "Hạnh phúc / Vui vẻ (Khoái lạc)",
+      "Buồn bã đau thương",
+      "Mệt mỏi suy kiệt",
+      "Tức giận căm hờn"
+    ],
+    "correctAnswer": "Hạnh phúc / Vui vẻ (Khoái lạc)",
+    "explanation": "快乐 (kuàilè - Hán Việt: Khoái lạc) miêu tả niềm vui trọn vẹn, hoan hỷ."
+  },
+  {
+    "id": 33,
     "hanzi": "给",
     "pinyin": "gěi",
+    "lesson": 4,
     "question": "给 — gěi nghĩa là gì?",
     "options": [
-      "Cho / Đưa cho",
+      "Cho / Đưa cho / Cấp",
       "Cầm / Nhận lấy",
       "Bán / Giao đồ",
       "Mua / Chuộc về"
     ],
-    "correctAnswer": "Cho / Đưa cho",
-    "explanation": "给 (gěi) vừa là động từ đưa cho (给你), vừa là giới từ làm gì cho ai (给我买: mua cho tôi)."
-  },
-  {
-    "id": 31,
-    "hanzi": "公共汽车",
-    "pinyin": "gōnggòng qìchē",
-    "question": "公共汽车 — gōnggòng qìchē nghĩa là gì?",
-    "options": [
-      "Xe buýt",
-      "Xe taxi",
-      "Máy bay",
-      "Xe đạp"
-    ],
-    "correctAnswer": "Xe buýt",
-    "explanation": "公共汽车 (gōnggòng qìchē) là phương tiện giao thông công cộng xe buýt."
-  },
-  {
-    "id": 32,
-    "hanzi": "公司",
-    "pinyin": "gōngsī",
-    "question": "公司 — gōngsī nghĩa là gì?",
-    "options": [
-      "Công ty",
-      "Bệnh viện",
-      "Trường học",
-      "Cửa hàng"
-    ],
-    "correctAnswer": "Công ty",
-    "explanation": "公司 (gōngsī) là doanh nghiệp, cơ quan làm việc (Ví dụ: 去公司 - đến công ty)."
-  },
-  {
-    "id": 33,
-    "hanzi": "贵",
-    "pinyin": "guì",
-    "question": "贵 — guì nghĩa là gì?",
-    "options": [
-      "Đắt tiền",
-      "Rẻ tiền",
-      "Nhiều tiền",
-      "Tốt tính"
-    ],
-    "correctAnswer": "Đắt tiền",
-    "explanation": "贵 (guì) miêu tả giá cả cao (đối lập với 便宜 - rẻ)."
+    "correctAnswer": "Cho / Đưa cho / Cấp",
+    "explanation": "给 (gěi - Hán Việt: Cấp) là đưa vật gì cho ai (给你) hoặc giới từ làm gì cho ai (给我买: mua cho tôi)."
   },
   {
     "id": 34,
-    "hanzi": "过",
-    "pinyin": "guo",
-    "question": "过 — guo nghĩa là gì?",
+    "hanzi": "晚上",
+    "pinyin": "wǎnshang",
+    "lesson": 4,
+    "question": "晚上 — wǎnshang nghĩa là gì?",
     "options": [
-      "Đã từng",
-      "Đang làm",
-      "Sẽ làm",
-      "Chưa làm"
+      "Buổi tối / Ban đêm (Vãn thượng)",
+      "Buổi sáng sớm mai",
+      "Buổi chiều tà tà",
+      "Buổi trưa chính ngọ"
     ],
-    "correctAnswer": "Đã từng",
-    "explanation": "过 (guo) đứng sau động từ chỉ trải nghiệm trong quá khứ (Ví dụ: 去过 - từng đi qua)."
+    "correctAnswer": "Buổi tối / Ban đêm (Vãn thượng)",
+    "explanation": "晚上 (wǎnshang - Hán Việt: Vãn thượng) là khoảng thời gian từ chiều tối đến đêm."
   },
   {
     "id": 35,
-    "hanzi": "还",
-    "pinyin": "hái",
-    "question": "还 — hái nghĩa là gì?",
+    "hanzi": "问",
+    "pinyin": "wèn",
+    "lesson": 4,
+    "question": "问 — wèn nghĩa là gì?",
     "options": [
-      "Vẫn còn",
-      "Đã qua",
-      "Chưa từng",
-      "Chỉ có"
+      "Hỏi han / Vấn (đặt câu hỏi)",
+      "Trả lời giải đáp",
+      "Nói năng phát biểu",
+      "Lắng nghe tiếp nhận"
     ],
-    "correctAnswer": "Vẫn còn",
-    "explanation": "还 (hái) là phó từ biểu thị sự tiếp diễn hoặc bổ sung (Ví dụ: 还有 - vẫn còn)."
+    "correctAnswer": "Hỏi han / Vấn (đặt câu hỏi)",
+    "explanation": "问 (wèn - Hán Việt: Vấn) là đặt câu hỏi (Ví dụ: 问好 - hỏi thăm, 问老师 - hỏi thầy giáo)."
   },
   {
     "id": 36,
-    "hanzi": "孩子",
-    "pinyin": "háizi",
-    "question": "孩子 — háizi nghĩa là gì?",
+    "hanzi": "非常",
+    "pinyin": "fēicháng",
+    "lesson": 4,
+    "question": "非常 — fēicháng nghĩa là gì?",
     "options": [
-      "Trẻ con",
-      "Người lớn",
-      "Học sinh",
-      "Bố mẹ"
+      "Vô cùng / Phi thường / Rất",
+      "Một chút ít ỏi",
+      "Bình thường không có gì",
+      "Không hề phủ định"
     ],
-    "correctAnswer": "Trẻ con",
-    "explanation": "孩子 (háizi) chỉ đứa trẻ hoặc con cái của bố mẹ."
+    "correctAnswer": "Vô cùng / Phi thường / Rất",
+    "explanation": "非常 (fēicháng - Hán Việt: Phi thường: khác thường) là phó từ chỉ mức độ cao hơn cả 很 (非常高兴)."
   },
   {
     "id": 37,
-    "hanzi": "好吃",
-    "pinyin": "hǎochī",
-    "question": "好吃 — hǎochī nghĩa là gì?",
+    "hanzi": "开始",
+    "pinyin": "kāishǐ",
+    "lesson": 4,
+    "question": "开始 — kāishǐ nghĩa là gì?",
     "options": [
-      "Ngon miệng",
-      "Khó nuốt",
-      "Xinh đẹp",
-      "Vui vẻ"
+      "Bắt đầu / Khởi đầu (Khai thủy)",
+      "Kết thúc hoàn tất",
+      "Nghỉ ngơi tạm dừng",
+      "Dừng hẳn thôi làm"
     ],
-    "correctAnswer": "Ngon miệng",
-    "explanation": "好吃 (hǎochī) khen ngợi đồ ăn thơm ngon."
+    "correctAnswer": "Bắt đầu / Khởi đầu (Khai thủy)",
+    "explanation": "开始 (kāishǐ - Hán Việt: Khai thủy) là khởi đầu một quá trình hoặc hành động (开始学习 - bắt đầu học)."
   },
   {
     "id": 38,
-    "hanzi": "黑",
-    "pinyin": "hēi",
-    "question": "黑 — hēi nghĩa là gì?",
+    "hanzi": "介绍",
+    "pinyin": "jièshào",
+    "lesson": 4,
+    "question": "介绍 — jièshào nghĩa là gì?",
     "options": [
-      "Màu đen",
-      "Màu trắng",
-      "Màu đỏ",
-      "Màu vàng"
+      "Giới thiệu / Tiến cử",
+      "Giúp đỡ hỗ trợ",
+      "Bắt đầu mở màn",
+      "Gặp gỡ tương ngộ"
     ],
-    "correctAnswer": "Màu đen",
-    "explanation": "黑 (hēi) chỉ màu đen (đối lập với 白 - bái)."
+    "correctAnswer": "Giới thiệu / Tiến cử",
+    "explanation": "介绍 (jièshào - Hán Việt: Giới thiệu) là làm quen, cung cấp thông tin người hoặc vật (介绍一下)."
   },
   {
     "id": 39,
-    "hanzi": "红",
-    "pinyin": "hóng",
-    "question": "红 — hóng nghĩa là gì?",
+    "hanzi": "去年",
+    "pinyin": "qùnián",
+    "lesson": 4,
+    "question": "去年 — qùnián nghĩa là gì?",
     "options": [
-      "Màu đỏ",
-      "Màu trắng",
-      "Màu đen",
-      "Màu xanh"
+      "Năm ngoái (Khứ niên)",
+      "Năm nay kim niên",
+      "Năm sau minh niên",
+      "Tháng trước thượng nguyệt"
     ],
-    "correctAnswer": "Màu đỏ",
-    "explanation": "红 (hóng) chỉ màu đỏ (Ví dụ: 红色的苹果 - quả táo màu đỏ)."
+    "correctAnswer": "Năm ngoái (Khứ niên)",
+    "explanation": "去年 (qùnián - Hán Việt: Khứ niên) là năm vừa trôi qua liền trước năm hiện tại."
   },
   {
     "id": 40,
-    "hanzi": "火车站",
-    "pinyin": "huǒchēzhàn",
-    "question": "火车站 — huǒchēzhàn nghĩa là gì?",
+    "hanzi": "累",
+    "pinyin": "lèi",
+    "lesson": 4,
+    "question": "累 — lèi nghĩa là gì?",
     "options": [
-      "Ga xe lửa",
-      "Cảng hàng không",
-      "Bến xe buýt",
-      "Trạm xá"
+      "Mệt mỏi / Mệt nhọc (Luy)",
+      "Đói bụng cồn cào",
+      "Vui vẻ phấn khởi",
+      "Khát nước cháy họng"
     ],
-    "correctAnswer": "Ga xe lửa",
-    "explanation": "火车站 (huǒchēzhàn) là nơi tàu hỏa đón và trả khách."
+    "correctAnswer": "Mệt mỏi / Mệt nhọc (Luy)",
+    "explanation": "累 (lèi - Hán Việt: Luy) miêu tả trạng thái hao tổn thể lực sau khi làm việc nặng."
   },
   {
     "id": 41,
-    "hanzi": "机场",
-    "pinyin": "jīchǎng",
-    "question": "机场 — jīchǎng nghĩa là gì?",
+    "hanzi": "外",
+    "pinyin": "wài",
+    "lesson": 5,
+    "question": "外 — wài nghĩa là gì?",
     "options": [
-      "Sân bay",
-      "Ga tàu",
-      "Bến xe",
-      "Công viên"
+      "Bên ngoài / Ngoại (đối lập với 里)",
+      "Bên trong phía trong",
+      "Bên trên phía trên",
+      "Bên dưới phía dưới"
     ],
-    "correctAnswer": "Sân bay",
-    "explanation": "机场 (jīchǎng) là cảng hàng không đón máy bay cất và hạ cánh."
+    "correctAnswer": "Bên ngoài / Ngoại (đối lập với 里)",
+    "explanation": "外 (wài - Hán Việt: Ngoại) chỉ vị trí bên ngoài (Ví dụ: 外面 - bên ngoài, 外国 - nước ngoài)."
   },
   {
     "id": 42,
-    "hanzi": "鸡蛋",
-    "pinyin": "jīdàn",
-    "question": "鸡蛋 — jīdàn nghĩa là gì?",
+    "hanzi": "自行车",
+    "pinyin": "zìxíngchē",
+    "lesson": 5,
+    "question": "自行车 — zìxíngchē nghĩa là gì?",
     "options": [
-      "Trứng gà",
-      "Thịt cừu",
-      "Cá tươi",
-      "Dưa hấu"
+      "Xe đạp (Tự hành xa)",
+      "Xe máy hai bánh",
+      "Xe buýt công cộng",
+      "Xe taxi dịch vụ"
     ],
-    "correctAnswer": "Trứng gà",
-    "explanation": "鸡蛋 (jīdàn) là quả trứng của con gà dùng làm thức ăn."
+    "correctAnswer": "Xe đạp (Tự hành xa)",
+    "explanation": "自行车 (zìxíngchē - Hán Việt: Tự hành xa: xe tự đi bằng sức người) là xe đạp."
   },
   {
     "id": 43,
-    "hanzi": "件",
-    "pinyin": "jiàn",
-    "question": "件 — jiàn nghĩa là gì?",
+    "hanzi": "羊肉",
+    "pinyin": "yángròu",
+    "lesson": 5,
+    "question": "羊肉 — yángròu nghĩa là gì?",
     "options": [
-      "Chiếc / Vụ việc",
-      "Cuốn / Quyển vở",
-      "Cái / Chiếc cốc",
-      "Bát / Nồi canh"
+      "Thịt cừu / Thịt dê (Dương nhục)",
+      "Thịt bò bổ dưỡng",
+      "Thịt heo nạc dăm",
+      "Thịt gà thả vườn"
     ],
-    "correctAnswer": "Chiếc / Vụ việc",
-    "explanation": "件 (jiàn) là lượng từ dùng cho quần áo (一件衣服) hoặc sự việc (一件事)."
+    "correctAnswer": "Thịt cừu / Thịt dê (Dương nhục)",
+    "explanation": "羊肉 (yángròu - Hán Việt: Dương nhục) là món thịt từ loài dê hoặc cừu."
   },
   {
     "id": 44,
-    "hanzi": "教室",
-    "pinyin": "jiàoshì",
-    "question": "教室 — jiàoshì nghĩa là gì?",
+    "hanzi": "好吃",
+    "pinyin": "hǎochī",
+    "lesson": 5,
+    "question": "好吃 — hǎochī nghĩa là gì?",
     "options": [
-      "Lớp học",
-      "Phòng ngủ",
-      "Bệnh viện",
-      "Cửa hàng"
+      "Ngon miệng / Ngon (Hảo xuy)",
+      "Khó nuốt vị đắng",
+      "Đẹp đẽ ưa nhìn",
+      "Vui tươi sảng khoái"
     ],
-    "correctAnswer": "Lớp học",
-    "explanation": "教室 (jiàoshì) là căn phòng trong trường nơi diễn ra việc dạy và học."
+    "correctAnswer": "Ngon miệng / Ngon (Hảo xuy)",
+    "explanation": "好吃 (hǎochī - Hán Việt: Hảo xuy) khen ngợi đồ ăn thơm ngon hợp khẩu vị."
   },
   {
     "id": 45,
-    "hanzi": "姐姐",
-    "pinyin": "jiějie",
-    "question": "姐姐 — jiějie nghĩa là gì?",
+    "hanzi": "吧",
+    "pinyin": "ba",
+    "lesson": 5,
+    "question": "吧 — ba nghĩa là gì?",
     "options": [
-      "Chị gái",
-      "Em gái",
-      "Người mẹ",
-      "Con gái"
+      "Nhé / Đi (trợ từ ngữ khí gợi ý)",
+      "Không phủ định",
+      "Ở đâu vị trí",
+      "Của ai sở hữu"
     ],
-    "correctAnswer": "Chị gái",
-    "explanation": "姐姐 (jiějie) là người chị gái trong gia đình."
+    "correctAnswer": "Nhé / Đi (trợ từ ngữ khí gợi ý)",
+    "explanation": "吧 (ba) đứng cuối câu biểu thị sự gợi ý, đề xuất, thương lượng (走吧 - đi thôi nào)."
   },
   {
     "id": 46,
-    "hanzi": "介绍",
-    "pinyin": "jièshào",
-    "question": "介绍 — jièshào nghĩa là gì?",
+    "hanzi": "件",
+    "pinyin": "jiàn",
+    "lesson": 5,
+    "question": "件 — jiàn nghĩa là gì?",
     "options": [
-      "Giới thiệu",
-      "Giúp đỡ",
-      "Bắt đầu",
-      "Gặp gỡ"
+      "Chiếc (áo) / Vụ việc (Kiện)",
+      "Cuốn sách tập san",
+      "Cái chén cái cốc",
+      "Bát cơm tô canh"
     ],
-    "correctAnswer": "Giới thiệu",
-    "explanation": "介绍 (jièshào) là làm quen, thông tin về người hoặc vật (Ví dụ: 介绍一下 - giới thiệu một chút)."
+    "correctAnswer": "Chiếc (áo) / Vụ việc (Kiện)",
+    "explanation": "件 (jiàn - Hán Việt: Kiện) là lượng từ dùng cho quần áo (一件衣服) hoặc sự việc (一件事)."
   },
   {
     "id": 47,
-    "hanzi": "进",
-    "pinyin": "jìn",
-    "question": "进 — jìn nghĩa là gì?",
+    "hanzi": "还",
+    "pinyin": "hái",
+    "lesson": 5,
+    "question": "还 — hái nghĩa là gì?",
     "options": [
-      "Bước vào",
-      "Bước ra",
-      "Đi xa",
-      "Trở về"
+      "Vẫn còn / Còn (Hoàn)",
+      "Đã qua dĩ vãng",
+      "Chưa từng trải qua",
+      "Chỉ có duy nhất"
     ],
-    "correctAnswer": "Bước vào",
-    "explanation": "进 (jìn) là đi vào bên trong (đối lập với 出 - ra ngoài, 请进 - xin mời vào)."
+    "correctAnswer": "Vẫn còn / Còn (Hoàn)",
+    "explanation": "还 (hái - Hán Việt: Hoàn) là phó từ biểu thị sự tiếp diễn hoặc bổ sung (Ví dụ: 还有 - vẫn còn)."
   },
   {
     "id": 48,
-    "hanzi": "近",
-    "pinyin": "jìn",
-    "question": "近 — jìn nghĩa là gì?",
+    "hanzi": "可以",
+    "pinyin": "kěyǐ",
+    "lesson": 5,
+    "question": "可以 — kěyǐ nghĩa là gì?",
     "options": [
-      "Gần gũi",
-      "Xa xôi",
-      "To lớn",
-      "Nhỏ bé"
+      "Có thể / Được phép (Khả dĩ)",
+      "Không được cấm đoán",
+      "Bắt buộc phải làm",
+      "Muốn có ước ao"
     ],
-    "correctAnswer": "Gần gũi",
-    "explanation": "近 (jìn) miêu tả cự ly ngắn (đối lập với 远 - xa)."
+    "correctAnswer": "Có thể / Được phép (Khả dĩ)",
+    "explanation": "可以 (kěyǐ - Hán Việt: Khả dĩ) biểu thị sự cho phép hoặc khả thi (Ví dụ: 可以吗 - được không?)."
   },
   {
     "id": 49,
-    "hanzi": "就",
-    "pinyin": "jiù",
-    "question": "就 — jiù nghĩa là gì?",
-    "options": [
-      "Liền ngay",
-      "Cũng vậy",
-      "Đều là",
-      "Vẫn còn"
-    ],
-    "correctAnswer": "Liền ngay",
-    "explanation": "就 (jiù) nhấn mạnh tính chất sớm, nhanh hoặc khẳng định."
-  },
-  {
-    "id": 50,
-    "hanzi": "觉得",
-    "pinyin": "juéde",
-    "question": "觉得 — juéde nghĩa là gì?",
-    "options": [
-      "Cảm thấy",
-      "Nghe thấy",
-      "Nhìn thấy",
-      "Biết được"
-    ],
-    "correctAnswer": "Cảm thấy",
-    "explanation": "觉得 (juéde) dùng để bày tỏ cảm nhận, quan điểm cá nhân (Ví dụ: 我觉得很好)."
-  },
-  {
-    "id": 51,
     "hanzi": "咖啡",
     "pinyin": "kāfēi",
+    "lesson": 5,
     "question": "咖啡 — kāfēi nghĩa là gì?",
     "options": [
-      "Cà phê",
-      "Trà thơm",
-      "Nước lọc",
-      "Sữa bò"
+      "Cà phê (đồ uống)",
+      "Trà thơm thanh mát",
+      "Nước lọc tinh khiết",
+      "Sữa bò nguyên kem"
     ],
-    "correctAnswer": "Cà phê",
+    "correctAnswer": "Cà phê (đồ uống)",
     "explanation": "咖啡 (kāfēi) là đồ uống cà phê pha từ hạt cà phê."
   },
   {
-    "id": 52,
-    "hanzi": "开始",
-    "pinyin": "kāishǐ",
-    "question": "开始 — kāishǐ nghĩa là gì?",
+    "id": 50,
+    "hanzi": "鱼",
+    "pinyin": "yú",
+    "lesson": 5,
+    "question": "鱼 — yú nghĩa là gì?",
     "options": [
-      "Bắt đầu",
-      "Kết thúc",
-      "Nghỉ ngơi",
-      "Dừng lại"
+      "Con cá (Ngư)",
+      "Con gà gáy sáng",
+      "Con cừu lông trắng",
+      "Con chó giữ nhà"
     ],
-    "correctAnswer": "Bắt đầu",
-    "explanation": "开始 (kāishǐ) là khởi đầu một quá trình hoặc hành động (Ví dụ: 开始学习)."
+    "correctAnswer": "Con cá (Ngư)",
+    "explanation": "鱼 (yú - Hán Việt: Ngư) là loài động vật sống dưới nước có vây và vảy (吃鱼: ăn cá)."
+  },
+  {
+    "id": 51,
+    "hanzi": "门",
+    "pinyin": "mén",
+    "lesson": 6,
+    "question": "门 — mén nghĩa là gì?",
+    "options": [
+      "Cửa vào / Cổng (Môn)",
+      "Cửa sổ thông gió",
+      "Căn phòng ngủ",
+      "Cái bàn ăn cơm"
+    ],
+    "correctAnswer": "Cửa vào / Cổng (Môn)",
+    "explanation": "门 (mén - Hán Việt: Môn) là cửa ra vào hoặc cổng nhà (Ví dụ: 开门 - mở cửa)."
+  },
+  {
+    "id": 52,
+    "hanzi": "考试",
+    "pinyin": "kǎoshì",
+    "lesson": 6,
+    "question": "考试 — kǎoshì nghĩa là gì?",
+    "options": [
+      "Thi cử / Kiểm tra (Khảo thí)",
+      "Học tập trường lớp",
+      "Làm việc công sở",
+      "Nghỉ hè an dưỡng"
+    ],
+    "correctAnswer": "Thi cử / Kiểm tra (Khảo thí)",
+    "explanation": "考试 (kǎoshì - Hán Việt: Khảo thí) là kỳ thi hoặc bài kiểm tra năng lực học tập."
   },
   {
     "id": 53,
-    "hanzi": "考试",
-    "pinyin": "kǎoshì",
-    "question": "考试 — kǎoshì nghĩa là gì?",
+    "hanzi": "意思",
+    "pinyin": "yìsi",
+    "lesson": 6,
+    "question": "意思 — yìsi nghĩa là gì?",
     "options": [
-      "Thi cử",
-      "Học tập",
-      "Làm việc",
-      "Nghỉ hè"
+      "Ý nghĩa / Thú vị (Ý tứ)",
+      "Thời gian năm tháng",
+      "Ý kiến đóng góp",
+      "Lý do biện minh"
     ],
-    "correctAnswer": "Thi cử",
-    "explanation": "考试 (kǎoshì) là kỳ thi hoặc bài kiểm tra năng lực học tập."
+    "correctAnswer": "Ý nghĩa / Thú vị (Ý tứ)",
+    "explanation": "意思 (yìsi - Hán Việt: Ý tứ) là nội hàm của từ ngữ hoặc sự thú vị (有意思 - thú vị, 什么意思 - ý gì)."
   },
   {
     "id": 54,
-    "hanzi": "可能",
-    "pinyin": "kěnéng",
-    "question": "可能 — kěnéng nghĩa là gì?",
+    "hanzi": "准备",
+    "pinyin": "zhǔnbèi",
+    "lesson": 6,
+    "question": "准备 — zhǔnbèi nghĩa là gì?",
     "options": [
-      "Có lẽ",
-      "Nhất định",
-      "Không thể",
-      "Nên làm"
+      "Chuẩn bị / Trù bị",
+      "Bắt đầu khởi sự",
+      "Hoàn thành xong xuôi",
+      "Nghỉ ngơi thư giãn"
     ],
-    "correctAnswer": "Có lẽ",
-    "explanation": "可能 (kěnéng) biểu thị phán đoán về khả năng xảy ra của một sự việc."
+    "correctAnswer": "Chuẩn bị / Trù bị",
+    "explanation": "准备 (zhǔnbèi - Hán Việt: Chuẩn bị) là sắp xếp, trù bị trước cho một kế hoạch hoặc công việc."
   },
   {
     "id": 55,
-    "hanzi": "可以",
-    "pinyin": "kěyǐ",
-    "question": "可以 — kěyǐ nghĩa là gì?",
+    "hanzi": "阴",
+    "pinyin": "yīn",
+    "lesson": 6,
+    "question": "阴 — yīn nghĩa là gì?",
     "options": [
-      "Có thể",
-      "Không được",
-      "Bắt buộc",
-      "Muốn làm"
+      "Trời râm / U ám (Âm - mây phủ)",
+      "Trời nắng chói chang",
+      "Trời mưa tầm tã",
+      "Tuyết rơi lạnh buốt"
     ],
-    "correctAnswer": "Có thể",
-    "explanation": "可以 (kěyǐ) biểu thị sự cho phép hoặc khả thi (Ví dụ: 可以吗 - được không?)."
+    "correctAnswer": "Trời râm / U ám (Âm - mây phủ)",
+    "explanation": "阴 (yīn - Hán Việt: Âm) miêu tả thời tiết nhiều mây, không có ánh nắng mặt trời (阴天: ngày râm trời)."
   },
   {
     "id": 56,
-    "hanzi": "课",
-    "pinyin": "kè",
-    "question": "课 — kè nghĩa là gì?",
+    "hanzi": "懂",
+    "pinyin": "dǒng",
+    "lesson": 6,
+    "question": "懂 — dǒng nghĩa là gì?",
     "options": [
-      "Bài học",
-      "Quyển sách",
-      "Kỳ thi",
-      "Trường học"
+      "Hiểu rõ / Nắm được (Đổng)",
+      "Quên mất lãng quên",
+      "Nói năng phát biểu",
+      "Nhìn thấy mắt thấy"
     ],
-    "correctAnswer": "Bài học",
-    "explanation": "课 (kè) chỉ giờ lên lớp hoặc nội dung học (Ví dụ: 上课 - vào học)."
+    "correctAnswer": "Hiểu rõ / Nắm được (Đổng)",
+    "explanation": "懂 (dǒng - Hán Việt: Đổng) chỉ sự nhận thức, hiểu rõ nội dung (Ví dụ: 我懂了 - tôi hiểu rồi)."
   },
   {
     "id": 57,
-    "hanzi": "快",
-    "pinyin": "kuài",
-    "question": "快 — kuài nghĩa là gì?",
+    "hanzi": "题",
+    "pinyin": "tí",
+    "lesson": 6,
+    "question": "题 — tí nghĩa là gì?",
     "options": [
-      "Nhanh / Sắp sửa",
-      "Chậm / Muộn màng",
-      "Sớm / Kịp thời",
-      "Dài / Lâu lắc"
+      "Đề thi / Câu hỏi (Đề)",
+      "Quyển sách thư tịch",
+      "Bài thi kiểm tra",
+      "Điểm số đạt được"
     ],
-    "correctAnswer": "Nhanh / Sắp sửa",
-    "explanation": "快 (kuài) chỉ tốc độ nhanh nhẹn (跑得快) hoặc hành động sắp diễn ra (快到了: sắp đến nơi)."
+    "correctAnswer": "Đề thi / Câu hỏi (Đề)",
+    "explanation": "题 (tí - Hán Việt: Đề) là đề mục, câu hỏi trong bài kiểm tra (这道题 - câu hỏi này)."
   },
   {
     "id": 58,
-    "hanzi": "快乐",
-    "pinyin": "kuàilè",
-    "question": "快乐 — kuàilè nghĩa là gì?",
+    "hanzi": "西瓜",
+    "pinyin": "xīguā",
+    "lesson": 6,
+    "question": "西瓜 — xīguā nghĩa là gì?",
     "options": [
-      "Hạnh phúc",
-      "Buồn bã",
-      "Mệt mỏi",
-      "Tức giận"
+      "Dưa hấu (Tây qua)",
+      "Quả táo đỏ giòn",
+      "Quả cam mọng nước",
+      "Quả chuối chín vàng"
     ],
-    "correctAnswer": "Hạnh phúc",
-    "explanation": "快乐 (kuàilè) miêu tả niềm vui trọn vẹn (Ví dụ: 生日快乐 - sinh nhật vui vẻ)."
+    "correctAnswer": "Dưa hấu (Tây qua)",
+    "explanation": "西瓜 (xīguā - Hán Việt: Tây qua) là loại dưa vỏ xanh ruột đỏ nhiều nước ngọt mát."
   },
   {
     "id": 59,
-    "hanzi": "累",
-    "pinyin": "lèi",
-    "question": "累 — lèi nghĩa là gì?",
+    "hanzi": "鸡蛋",
+    "pinyin": "jīdàn",
+    "lesson": 6,
+    "question": "鸡蛋 — jīdàn nghĩa là gì?",
     "options": [
-      "Mệt mỏi",
-      "Đói bụng",
-      "Vui vẻ",
-      "Khát nước"
+      "Trứng gà (Kê noãn)",
+      "Thịt cừu nướng",
+      "Cá tươi kho",
+      "Thịt bò xào"
     ],
-    "correctAnswer": "Mệt mỏi",
-    "explanation": "累 (lèi) miêu tả trạng thái hao tổn thể lực, mệt sức sau khi làm việc."
+    "correctAnswer": "Trứng gà (Kê noãn)",
+    "explanation": "鸡蛋 (jīdàn - Hán Việt: Kê noãn: trứng con gà) là thực phẩm quen thuộc."
   },
   {
     "id": 60,
-    "hanzi": "离",
-    "pinyin": "lí",
-    "question": "离 — lí nghĩa là gì?",
+    "hanzi": "完",
+    "pinyin": "wán",
+    "lesson": 6,
+    "question": "完 — wán nghĩa là gì?",
     "options": [
-      "Cách xa",
-      "Đến gần",
-      "Ở tại",
-      "Từ nơi"
+      "Xong xuôi / Hoàn thành (Hoàn)",
+      "Bắt đầu khởi đầu",
+      "Còn lại dư thừa",
+      "Đang làm dang dở"
     ],
-    "correctAnswer": "Cách xa",
-    "explanation": "离 (lí) dùng đo cự ly giữa hai điểm (Ví dụ: 我家离学校很近)."
+    "correctAnswer": "Xong xuôi / Hoàn thành (Hoàn)",
+    "explanation": "完 (wán - Hán Việt: Hoàn) là bổ ngữ kết quả chỉ hành động đã kết thúc trọn vẹn (做完 - làm xong)."
   },
   {
     "id": 61,
-    "hanzi": "两",
-    "pinyin": "liǎng",
-    "question": "两 — liǎng nghĩa là gì?",
+    "hanzi": "离",
+    "pinyin": "lí",
+    "lesson": 7,
+    "question": "离 — lí nghĩa là gì?",
     "options": [
-      "Hai cái",
-      "Một cái",
-      "Ba cái",
-      "Mười cái"
+      "Cách xa / Ly (khoảng cách cự ly)",
+      "Đến gần cận kề",
+      "Ở tại vị trí",
+      "Từ nơi xuất phát"
     ],
-    "correctAnswer": "Hai cái",
-    "explanation": "两 (liǎng) dùng để chỉ số lượng 2 khi đứng trước lượng từ (Ví dụ: 两个人)."
+    "correctAnswer": "Cách xa / Ly (khoảng cách cự ly)",
+    "explanation": "离 (lí - Hán Việt: Ly) dùng để đo cự ly giữa hai địa điểm (我家离学校很近 - Nhà tôi cách trường rất gần)."
   },
   {
     "id": 62,
-    "hanzi": "零",
-    "pinyin": "líng",
-    "question": "零 — líng nghĩa là gì?",
+    "hanzi": "公司",
+    "pinyin": "gōngsī",
+    "lesson": 7,
+    "question": "公司 — gōngsī nghĩa là gì?",
     "options": [
-      "Số 0",
-      "Số 1",
-      "Số 10",
-      "Số 100"
+      "Công ty / Doanh nghiệp",
+      "Bệnh viện khám bệnh",
+      "Trường học giảng dạy",
+      "Cửa hàng bán lẻ"
     ],
-    "correctAnswer": "Số 0",
-    "explanation": "零 (líng) là con số 0 trong toán học và ngày tháng."
+    "correctAnswer": "Công ty / Doanh nghiệp",
+    "explanation": "公司 (gōngsī - Hán Việt: Công ty) là cơ quan, doanh nghiệp làm việc (去公司 - đến công ty làm việc)."
   },
   {
     "id": 63,
-    "hanzi": "路",
-    "pinyin": "lù",
-    "question": "路 — lù nghĩa là gì?",
+    "hanzi": "远",
+    "pinyin": "yuǎn",
+    "lesson": 7,
+    "question": "远 — yuǎn nghĩa là gì?",
     "options": [
-      "Con đường",
-      "Cửa ngõ",
-      "Căn phòng",
-      "Cây cầu"
+      "Xa xôi / Xa (Viễn - đối lập với 近)",
+      "Gần gũi sát bên (Cận)",
+      "Cao ráo ngất trời",
+      "Rộng lớn bao la"
     ],
-    "correctAnswer": "Con đường",
-    "explanation": "路 (lù) là đường sá đi lại (Ví dụ: 路上 - trên đường)."
+    "correctAnswer": "Xa xôi / Xa (Viễn - đối lập với 近)",
+    "explanation": "远 (yuǎn - Hán Việt: Viễn) miêu tả cự ly dài, khoảng cách xa (Ví dụ: 很远 - rất xa)."
   },
   {
     "id": 64,
-    "hanzi": "旅游",
-    "pinyin": "lǚyóu",
-    "question": "旅游 — lǚyóu nghĩa là gì?",
+    "hanzi": "公共汽车",
+    "pinyin": "gōnggòng qìchē",
+    "lesson": 7,
+    "question": "公共汽车 — gōnggòng qìchē nghĩa là gì?",
     "options": [
-      "Du lịch",
-      "Làm việc",
-      "Học tập",
-      "Nghỉ ngơi"
+      "Xe buýt (Công cộng khí xa)",
+      "Xe taxi dịch vụ",
+      "Máy bay hàng không",
+      "Xe đạp hai bánh"
     ],
-    "correctAnswer": "Du lịch",
-    "explanation": "旅游 (lǚyóu) là hoạt động đi tham quan nghỉ dưỡng ở nơi xa."
+    "correctAnswer": "Xe buýt (Công cộng khí xa)",
+    "explanation": "公共汽车 (gōnggòng qìchē - Hán Việt: Công cộng khí xa) là phương tiện xe buýt công cộng."
   },
   {
     "id": 65,
-    "hanzi": "卖",
-    "pinyin": "mài",
-    "question": "卖 — mài nghĩa là gì?",
+    "hanzi": "小时",
+    "pinyin": "xiǎoshí",
+    "lesson": 7,
+    "question": "小时 — xiǎoshí nghĩa là gì?",
     "options": [
-      "Bán đồ",
-      "Mua đồ",
-      "Tặng đồ",
-      "Mượn đồ"
+      "Tiếng đồng hồ / Giờ (Tiểu thời)",
+      "Phút giây chốc lát",
+      "Ngày đêm tròn vẹn",
+      "Tháng năm dài lâu"
     ],
-    "correctAnswer": "Bán đồ",
-    "explanation": "卖 (mài - mang thanh 4) nghĩa là bán hàng hóa (đối lập với 买 - mua mang thanh 3)."
+    "correctAnswer": "Tiếng đồng hồ / Giờ (Tiểu thời)",
+    "explanation": "小时 (xiǎoshí - Hán Việt: Tiểu thời) chỉ khoảng thời gian tính bằng giờ (一个小时 - một tiếng đồng hồ)."
   },
   {
     "id": 66,
     "hanzi": "慢",
     "pinyin": "màn",
+    "lesson": 7,
     "question": "慢 — màn nghĩa là gì?",
     "options": [
-      "Chậm chạp",
-      "Nhanh nhẹn",
-      "Sớm sủa",
-      "Muộn màng"
+      "Chậm chạp / Từ tốn (Mạn - đối lập với 快)",
+      "Nhanh nhẹn cấp tốc",
+      "Sớm sủa kịp thời",
+      "Muộn màng trễ nải"
     ],
-    "correctAnswer": "Chậm chạp",
-    "explanation": "慢 (màn) miêu tả tốc độ chậm (đối lập với 快, Ví dụ: 慢走 - đi thong thả)."
+    "correctAnswer": "Chậm chạp / Từ tốn (Mạn - đối lập với 快)",
+    "explanation": "慢 (màn - Hán Việt: Mạn) miêu tả tốc độ chậm (慢走: đi thong thả, 走得慢: đi chậm)."
   },
   {
     "id": 67,
-    "hanzi": "忙",
-    "pinyin": "máng",
-    "question": "忙 — máng nghĩa là gì?",
+    "hanzi": "快",
+    "pinyin": "kuài",
+    "lesson": 7,
+    "question": "快 — kuài nghĩa là gì?",
     "options": [
-      "Bận rộn",
-      "Rảnh rỗi",
-      "Mệt mỏi",
-      "Vui vẻ"
+      "Nhanh / Sắp sửa (Khoái)",
+      "Chậm / Muộn màng",
+      "Sớm / Kịp thời",
+      "Dài / Lâu lắc"
     ],
-    "correctAnswer": "Bận rộn",
-    "explanation": "忙 (máng) miêu tả tình trạng có nhiều việc phải làm (Ví dụ: 你忙吗 - bạn bận không?)."
+    "correctAnswer": "Nhanh / Sắp sửa (Khoái)",
+    "explanation": "快 (kuài - Hán Việt: Khoái) chỉ tốc độ nhanh (跑得快) hoặc sự việc sắp diễn ra (快到了: sắp đến nơi)."
   },
   {
     "id": 68,
-    "hanzi": "每",
-    "pinyin": "měi",
-    "question": "每 — měi nghĩa là gì?",
+    "hanzi": "过",
+    "pinyin": "guo",
+    "lesson": 7,
+    "question": "过 — guo nghĩa là gì?",
     "options": [
-      "Mỗi một",
-      "Tất cả",
-      "Rất nhiều",
-      "Ít ỏi"
+      "Đã từng / Qua (Quá - trải nghiệm quá khứ)",
+      "Đang làm hiện tại",
+      "Sẽ làm tương lai",
+      "Chưa từng bao giờ"
     ],
-    "correctAnswer": "Mỗi một",
-    "explanation": "每 (měi) chỉ từng cá thể trong một nhóm (Ví dụ: 每天 - mỗi ngày)."
+    "correctAnswer": "Đã từng / Qua (Quá - trải nghiệm quá khứ)",
+    "explanation": "过 (guo - Hán Việt: Quá) đặt sau động từ biểu thị trải nghiệm trong quá khứ (去过 - từng đi qua)."
   },
   {
     "id": 69,
-    "hanzi": "妹妹",
-    "pinyin": "mèimei",
-    "question": "妹妹 — mèimei nghĩa là gì?",
+    "hanzi": "走",
+    "pinyin": "zǒu",
+    "lesson": 7,
+    "question": "走 — zǒu nghĩa là gì?",
     "options": [
-      "Em gái",
-      "Chị gái",
-      "Em trai",
-      "Con gái"
+      "Đi bộ / Rời đi (Tẩu)",
+      "Chạy trốn thật xa",
+      "Ngồi xuống ghế tựa",
+      "Đứng lại bất động"
     ],
-    "correctAnswer": "Em gái",
-    "explanation": "妹妹 (mèimei) là em gái ruột trong gia đình."
+    "correctAnswer": "Đi bộ / Rời đi (Tẩu)",
+    "explanation": "走 (zǒu - Hán Việt: Tẩu) là hành động đi bộ hoặc rời khỏi vị trí (Ví dụ: 慢走 - đi thong thả)."
   },
   {
     "id": 70,
-    "hanzi": "门",
-    "pinyin": "mén",
-    "question": "门 — mén nghĩa là gì?",
+    "hanzi": "路",
+    "pinyin": "lù",
+    "lesson": 7,
+    "question": "路 — lù nghĩa là gì?",
     "options": [
-      "Cửa vào",
-      "Cửa sổ",
-      "Căn phòng",
-      "Cái bàn"
+      "Con đường / Tuyến đường (Lộ)",
+      "Cửa ngõ ra vào",
+      "Căn phòng khép kín",
+      "Cây cầu bắc qua"
     ],
-    "correctAnswer": "Cửa vào",
-    "explanation": "门 (mén) là cửa ra vào hoặc cổng nhà (Ví dụ: 开门 - mở cửa)."
+    "correctAnswer": "Con đường / Tuyến đường (Lộ)",
+    "explanation": "路 (lù - Hán Việt: Lộ) là đường sá đi lại hoặc tuyến xe (路上: trên đường, 一路顺风: thượng lộ bình an)."
   },
   {
     "id": 71,
-    "hanzi": "男",
-    "pinyin": "nán",
-    "question": "男 — nán nghĩa là gì?",
+    "hanzi": "再",
+    "pinyin": "zài",
+    "lesson": 8,
+    "question": "再 — zài nghĩa là gì?",
     "options": [
-      "Nam giới",
-      "Nữ giới",
-      "Trẻ con",
-      "Người già"
+      "Lần nữa / Lại (Tái - hành động lặp lại)",
+      "Đã rồi hoàn tất",
+      "Chưa làm dang dở",
+      "Vẫn còn tiếp tục"
     ],
-    "correctAnswer": "Nam giới",
-    "explanation": "男 (nán) chỉ giới tính nam (Ví dụ: 男人 - đàn ông, 男生 - nam sinh)."
+    "correctAnswer": "Lần nữa / Lại (Tái - hành động lặp lại)",
+    "explanation": "再 (zài - Hán Việt: Tái) là phó từ chỉ hành động lặp lại trong tương lai (Ví dụ: 再见 - gặp lại sau, 再看 - xem lại)."
   },
   {
     "id": 72,
-    "hanzi": "您",
-    "pinyin": "nín",
-    "question": "您 — nín nghĩa là gì?",
+    "hanzi": "让",
+    "pinyin": "ràng",
+    "lesson": 8,
+    "question": "让 — ràng nghĩa là gì?",
     "options": [
-      "Ngài",
-      "Tôi",
-      "Anh ấy",
-      "Các bạn"
+      "Để cho / Bảo / Nhường (Nhượng)",
+      "Bắt buộc ép uổng",
+      "Mong muốn khao khát",
+      "Biết rõ tường tận"
     ],
-    "correctAnswer": "Ngài",
-    "explanation": "您 (nín) thể hiện sự kính trọng với người lớn tuổi hoặc cấp trên."
+    "correctAnswer": "Để cho / Bảo / Nhường (Nhượng)",
+    "explanation": "让 (ràng - Hán Việt: Nhượng) là động từ sai khiến (让我想想: để tôi nghĩ) hoặc nhượng bộ."
   },
   {
     "id": 73,
-    "hanzi": "牛奶",
-    "pinyin": "niúnǎi",
-    "question": "牛奶 — niúnǎi nghĩa là gì?",
+    "hanzi": "告诉",
+    "pinyin": "gàosu",
+    "lesson": 8,
+    "question": "告诉 — gàosu nghĩa là gì?",
     "options": [
-      "Sữa bò",
-      "Trà xanh",
-      "Cà phê",
-      "Nước khoáng"
+      "Nói cho / Báo cho / Cáo tri",
+      "Hỏi han thắc mắc",
+      "Nghe ngóng tin tức",
+      "Suy nghĩ đắn đo"
     ],
-    "correctAnswer": "Sữa bò",
-    "explanation": "牛奶 (niúnǎi) là thức uống sữa bò bổ dưỡng."
+    "correctAnswer": "Nói cho / Báo cho / Cáo tri",
+    "explanation": "告诉 (gàosu - Hán Việt: Cáo tri/Cáo tố) là truyền đạt thông tin cho người khác biết (告诉我: nói cho tôi biết)."
   },
   {
     "id": 74,
-    "hanzi": "女",
-    "pinyin": "nǚ",
-    "question": "女 — nǚ nghĩa là gì?",
+    "hanzi": "等",
+    "pinyin": "děng",
+    "lesson": 8,
+    "question": "等 — děng nghĩa là gì?",
     "options": [
-      "Nữ giới",
-      "Nam giới",
-      "Người cha",
-      "Con trai"
+      "Chờ đợi / Đợi (Đẳng)",
+      "Rời bước đi ngay",
+      "Tìm kiếm khắp nơi",
+      "Hỏi han cặn kẽ"
     ],
-    "correctAnswer": "Nữ giới",
-    "explanation": "女 (nǚ) chỉ giới tính nữ (Ví dụ: 女人 - phụ nữ, 女生 - nữ sinh)."
+    "correctAnswer": "Chờ đợi / Đợi (Đẳng)",
+    "explanation": "等 (děng - Hán Việt: Đẳng) là hành động chờ đợi ai đó hoặc điều gì (等一下 - đợi một lát)."
   },
   {
     "id": 75,
-    "hanzi": "旁边",
-    "pinyin": "pángbiān",
-    "question": "旁边 — pángbiān nghĩa là gì?",
+    "hanzi": "找",
+    "pinyin": "zhǎo",
+    "lesson": 8,
+    "question": "找 — zhǎo nghĩa là gì?",
     "options": [
-      "Bên cạnh",
-      "Phía trước",
-      "Phía sau",
-      "Bên trong"
+      "Tìm kiếm / Thối tiền thừa",
+      "Đánh mất tiêu xài",
+      "Mua sắm gom góp",
+      "Bán đi nhận lấy"
     ],
-    "correctAnswer": "Bên cạnh",
-    "explanation": "旁边 (pángbiān) là từ chỉ vị trí sát bên một đối tượng."
+    "correctAnswer": "Tìm kiếm / Thối tiền thừa",
+    "explanation": "找 (zhǎo) nghĩa là tìm kiếm đồ đạc (找东西) hoặc trả lại tiền thối (找钱)."
   },
   {
     "id": 76,
-    "hanzi": "跑步",
-    "pinyin": "pǎobù",
-    "question": "跑步 — pǎobù nghĩa là gì?",
+    "hanzi": "事情",
+    "pinyin": "shìqing",
+    "lesson": 8,
+    "question": "事情 — shìqing nghĩa là gì?",
     "options": [
-      "Chạy bộ",
-      "Bơi lội",
-      "Đá bóng",
-      "Đi bộ"
+      "Sự việc / Sự tình (việc cần làm)",
+      "Đồ vật khí cụ",
+      "Thời gian khoảnh khắc",
+      "Nơi chốn địa điểm"
     ],
-    "correctAnswer": "Chạy bộ",
-    "explanation": "跑步 (pǎobù) là hoạt động thể dục chạy bộ rèn luyện sức khỏe."
+    "correctAnswer": "Sự việc / Sự tình (việc cần làm)",
+    "explanation": "事情 (shìqing - Hán Việt: Sự tình) chỉ sự việc hoặc công việc cần giải quyết (Ví dụ: 什么事 - việc gì thế?)."
   },
   {
     "id": 77,
-    "hanzi": "便宜",
-    "pinyin": "piányi",
-    "question": "便宜 — piányi nghĩa là gì?",
+    "hanzi": "就",
+    "pinyin": "jiù",
+    "lesson": 8,
+    "question": "就 — jiù nghĩa là gì?",
     "options": [
-      "Giá rẻ",
-      "Giá đắt",
-      "Xinh đẹp",
-      "Ngon lành"
+      "Thì / Liền / Ngay (Tựu - nhấn mạnh sớm/nhanh)",
+      "Cũng vậy tương đồng",
+      "Đều là toàn thể",
+      "Vẫn còn tiếp diễn"
     ],
-    "correctAnswer": "Giá rẻ",
-    "explanation": "便宜 (piányi) miêu tả giá tiền thấp (đối lập với 贵 - đắt)."
+    "correctAnswer": "Thì / Liền / Ngay (Tựu - nhấn mạnh sớm/nhanh)",
+    "explanation": "就 (jiù - Hán Việt: Tựu) nhấn mạnh tính chất sớm, nhanh, thuận lợi hoặc khẳng định dứt khoát."
   },
   {
     "id": 78,
-    "hanzi": "票",
-    "pinyin": "piào",
-    "question": "票 — piào nghĩa là gì?",
+    "hanzi": "便宜",
+    "pinyin": "piányi",
+    "lesson": 8,
+    "question": "便宜 — piányi nghĩa là gì?",
     "options": [
-      "Tấm vé",
-      "Tiền bạc",
-      "Quyển sách",
-      "Tờ báo"
+      "Giá rẻ / Tiện nghi (đối lập với 贵)",
+      "Giá đắt đỏ son",
+      "Xinh đẹp mặn mà",
+      "Ngon lành thơm tho"
     ],
-    "correctAnswer": "Tấm vé",
-    "explanation": "票 (piào) là vé vào cửa, vé xem phim, vé tàu xe (Ví dụ: 车票, 电影票)."
+    "correctAnswer": "Giá rẻ / Tiện nghi (đối lập với 贵)",
+    "explanation": "便宜 (piányi - Hán Việt: Tiện nghi) miêu tả giá cả thấp, rẻ tiền (Ví dụ: 便宜点儿 - rẻ hơn chút đi)."
   },
   {
     "id": 79,
-    "hanzi": "妻子",
-    "pinyin": "qīzi",
-    "question": "妻子 — qīzi nghĩa là gì?",
+    "hanzi": "卖",
+    "pinyin": "mài",
+    "lesson": 8,
+    "question": "卖 — mài nghĩa là gì?",
     "options": [
-      "Người vợ",
-      "Người chồng",
-      "Người mẹ",
-      "Chị gái"
+      "Bán ra / Tiêu thụ (Mại - thanh 4)",
+      "Mua vào tích trữ (Mãi)",
+      "Tặng cho biếu xén",
+      "Mượn vay nợ nần"
     ],
-    "correctAnswer": "Người vợ",
-    "explanation": "妻子 (qīzi) là người vợ trong mối quan hệ hôn nhân."
+    "correctAnswer": "Bán ra / Tiêu thụ (Mại - thanh 4)",
+    "explanation": "卖 (mài - Hán Việt: Mại, mang thanh 4) nghĩa là bán hàng (đối lập với 买: mua, mang thanh 3)."
   },
   {
     "id": 80,
-    "hanzi": "起床",
-    "pinyin": "qǐchuáng",
-    "question": "起床 — qǐchuáng nghĩa là gì?",
+    "hanzi": "贵",
+    "pinyin": "guì",
+    "lesson": 8,
+    "question": "贵 — guì nghĩa là gì?",
     "options": [
-      "Thức dậy",
-      "Đi ngủ",
-      "Tắm rửa",
-      "Ăn sáng"
+      "Đắt đỏ / Quý giá (Quý - đối lập với 便宜)",
+      "Rẻ tiền hạ giá",
+      "Nhiều tiền dư dả",
+      "Tốt tính hiền hòa"
     ],
-    "correctAnswer": "Thức dậy",
-    "explanation": "起床 (qǐchuáng) là hành động dậy sau giấc ngủ."
+    "correctAnswer": "Đắt đỏ / Quý giá (Quý - đối lập với 便宜)",
+    "explanation": "贵 (guì - Hán Việt: Quý) miêu tả giá tiền cao, đắt đỏ (太贵了 - đắt quá rồi)."
   },
   {
     "id": 81,
-    "hanzi": "千",
-    "pinyin": "qiān",
-    "question": "千 — qiān nghĩa là gì?",
+    "hanzi": "上班",
+    "pinyin": "shàngbān",
+    "lesson": 9,
+    "question": "上班 — shàngbān nghĩa là gì?",
     "options": [
-      "Một nghìn",
-      "Một trăm",
-      "Một chục",
-      "Một vạn"
+      "Đi làm / Thượng ban (đối lập với 下班)",
+      "Tan sở về nhà",
+      "Đi học lên lớp",
+      "Nghỉ ngơi an dưỡng"
     ],
-    "correctAnswer": "Một nghìn",
-    "explanation": "千 (qiān) là hàng ngàn (Ví dụ: 一千 - một nghìn)."
+    "correctAnswer": "Đi làm / Thượng ban (đối lập với 下班)",
+    "explanation": "上班 (shàngbān - Hán Việt: Thượng ban) là đến cơ quan làm việc (đối lập với 下班: tan làm)."
   },
   {
     "id": 82,
-    "hanzi": "铅笔",
-    "pinyin": "qiānbǐ",
-    "question": "铅笔 — qiānbǐ nghĩa là gì?",
+    "hanzi": "唱歌",
+    "pinyin": "chànggē",
+    "lesson": 9,
+    "question": "唱歌 — chànggē nghĩa là gì?",
     "options": [
-      "Bút chì",
-      "Sách vở",
-      "Thước kẻ",
-      "Cục tẩy"
+      "Ca hát / Xướng ca",
+      "Nhảy múa khiêu vũ",
+      "Nghe nhạc thưởng thức",
+      "Nói chuyện tâm tình"
     ],
-    "correctAnswer": "Bút chì",
-    "explanation": "铅笔 (qiānbǐ) là dụng cụ viết bằng chì vẽ hoặc ghi chép."
+    "correctAnswer": "Ca hát / Xướng ca",
+    "explanation": "唱歌 (chànggē - Hán Việt: Xướng ca) là hát những giai điệu bài hát (喜欢唱歌 - thích hát)."
   },
   {
     "id": 83,
-    "hanzi": "晴",
-    "pinyin": "qíng",
-    "question": "晴 — qíng nghĩa là gì?",
+    "hanzi": "男",
+    "pinyin": "nán",
+    "lesson": 9,
+    "question": "男 — nán nghĩa là gì?",
     "options": [
-      "Trời nắng",
-      "Trời mưa",
-      "Trời rét",
-      "Có tuyết"
+      "Nam giới / Đàn ông (Nam)",
+      "Nữ giới đàn bà",
+      "Trẻ con thiếu nhi",
+      "Người già trưởng lão"
     ],
-    "correctAnswer": "Trời nắng",
-    "explanation": "晴 (qíng) miêu tả thời tiết có nắng, trời quang không mây (晴天)."
+    "correctAnswer": "Nam giới / Đàn ông (Nam)",
+    "explanation": "男 (nán - Hán Việt: Nam) chỉ giới tính nam (Ví dụ: 男人 - đàn ông, 男生 - nam sinh)."
   },
   {
     "id": 84,
-    "hanzi": "去年",
-    "pinyin": "qùnián",
-    "question": "去年 — qùnián nghĩa là gì?",
+    "hanzi": "女",
+    "pinyin": "nǚ",
+    "lesson": 9,
+    "question": "女 — nǚ nghĩa là gì?",
     "options": [
-      "Năm ngoái",
-      "Năm nay",
-      "Năm sau",
-      "Tháng trước"
+      "Nữ giới / Phụ nữ (Nữ)",
+      "Nam giới đàn ông",
+      "Người cha phụ thân",
+      "Con trai nhi tử"
     ],
-    "correctAnswer": "Năm ngoái",
-    "explanation": "去年 (qùnián) là năm liền trước năm hiện tại."
+    "correctAnswer": "Nữ giới / Phụ nữ (Nữ)",
+    "explanation": "女 (nǚ - Hán Việt: Nữ) chỉ giới tính nữ (Ví dụ: 女人 - phụ nữ, 女生 - nữ sinh)."
   },
   {
     "id": 85,
-    "hanzi": "让",
-    "pinyin": "ràng",
-    "question": "让 — ràng nghĩa là gì?",
+    "hanzi": "孩子",
+    "pinyin": "háizi",
+    "lesson": 9,
+    "question": "孩子 — háizi nghĩa là gì?",
     "options": [
-      "Để cho / Nhường",
-      "Bắt buộc / Cấm",
-      "Mong muốn / Cần",
-      "Biết rõ / Hiểu"
+      "Trẻ con / Con cái (Hài tử)",
+      "Người lớn trưởng thành",
+      "Học sinh lớp trên",
+      "Bố mẹ phụ huynh"
     ],
-    "correctAnswer": "Để cho / Nhường",
-    "explanation": "让 (ràng) là động từ sai khiến (让我看看: để tôi xem) hoặc nhượng bộ, nhường nhịn."
+    "correctAnswer": "Trẻ con / Con cái (Hài tử)",
+    "explanation": "孩子 (háizi - Hán Việt: Hài tử) chỉ đứa trẻ con hoặc con cái của bố mẹ."
   },
   {
     "id": 86,
+    "hanzi": "错",
+    "pinyin": "cuò",
+    "lesson": 9,
+    "question": "错 — cuò nghĩa là gì?",
+    "options": [
+      "Sai sót / Nhầm lẫn (Thác - đối lập với 对)",
+      "Đúng đắn chính xác",
+      "Tốt lành thuận lợi",
+      "Mới mẻ tinh tươm"
+    ],
+    "correctAnswer": "Sai sót / Nhầm lẫn (Thác - đối lập với 对)",
+    "explanation": "错 (cuò - Hán Việt: Thác) biểu thị sự sai, nhầm lẫn (Ví dụ: 没错 - không sai, 不错 - không tệ/rất tốt)."
+  },
+  {
+    "id": 87,
+    "hanzi": "从",
+    "pinyin": "cóng",
+    "lesson": 9,
+    "question": "从 — cóng nghĩa là gì?",
+    "options": [
+      "Từ đâu / Điểm xuất phát (Tòng)",
+      "Đến đâu điểm kết",
+      "Ở đâu vị trí",
+      "Với ai kết hợp"
+    ],
+    "correctAnswer": "Từ đâu / Điểm xuất phát (Tòng)",
+    "explanation": "从 (cóng - Hán Việt: Tòng) biểu thị mốc thời gian hoặc nơi chốn xuất phát (从北京来 - đến từ Bắc Kinh)."
+  },
+  {
+    "id": 88,
+    "hanzi": "跳舞",
+    "pinyin": "tiàowǔ",
+    "lesson": 9,
+    "question": "跳舞 — tiàowǔ nghĩa là gì?",
+    "options": [
+      "Khiêu vũ / Nhảy múa",
+      "Ca hát bài bản",
+      "Đá bóng sân bãi",
+      "Chạy bộ rèn luyện"
+    ],
+    "correctAnswer": "Khiêu vũ / Nhảy múa",
+    "explanation": "跳舞 (tiàowǔ - Hán Việt: Khiêu vũ) là hoạt động nhảy múa theo giai điệu."
+  },
+  {
+    "id": 89,
+    "hanzi": "第一",
+    "pinyin": "dì-yī",
+    "lesson": 9,
+    "question": "第一 — dì-yī nghĩa là gì?",
+    "options": [
+      "Thứ nhất / Đầu tiên (Đệ nhất)",
+      "Thứ hai tiếp nối",
+      "Thứ ba kế tiếp",
+      "Cuối cùng về sau"
+    ],
+    "correctAnswer": "Thứ nhất / Đầu tiên (Đệ nhất)",
+    "explanation": "第一 (dì-yī - Hán Việt: Đệ nhất) là số thứ tự đầu tiên (第一次 - lần đầu tiên, 第一名 - hạng nhất)."
+  },
+  {
+    "id": 90,
+    "hanzi": "希望",
+    "pinyin": "xīwàng",
+    "lesson": 9,
+    "question": "希望 — xīwàng nghĩa là gì?",
+    "options": [
+      "Hy vọng / Mong muốn (Hy vọng)",
+      "Thất vọng chán chường",
+      "Sợ hãi lo âu",
+      "Lãng quên mất tích"
+    ],
+    "correctAnswer": "Hy vọng / Mong muốn (Hy vọng)",
+    "explanation": "希望 (xīwàng - Hán Việt: Hy vọng) biểu thị nguyện vọng tốt đẹp đối với tương lai."
+  },
+  {
+    "id": 91,
+    "hanzi": "别",
+    "pinyin": "bié",
+    "lesson": 10,
+    "question": "别 — bié nghĩa là gì?",
+    "options": [
+      "Đừng / Biệt (khuyên ngăn/người khác)",
+      "Phải / Đúng đắn",
+      "Nên / Cần thiết",
+      "Muốn / Thích thú"
+    ],
+    "correctAnswer": "Đừng / Biệt (khuyên ngăn/người khác)",
+    "explanation": "别 (bié - Hán Việt: Biệt) dùng khuyên bảo cấm đoán (别走: đừng đi) hoặc chỉ người khác (别人)."
+  },
+  {
+    "id": 92,
+    "hanzi": "正在",
+    "pinyin": "zhèngzài",
+    "lesson": 10,
+    "question": "正在 — zhèngzài nghĩa là gì?",
+    "options": [
+      "Đang / Chính tại (hành động đang diễn ra)",
+      "Đã xong xuôi hết",
+      "Sắp sửa bắt đầu",
+      "Vừa mới xảy ra"
+    ],
+    "correctAnswer": "Đang / Chính tại (hành động đang diễn ra)",
+    "explanation": "正在 (zhèngzài - Hán Việt: Chính tại) nhấn mạnh hành động đang diễn ra tại đúng thời điểm nói."
+  },
+  {
+    "id": 93,
+    "hanzi": "手机",
+    "pinyin": "shǒujī",
+    "lesson": 10,
+    "question": "手机 — shǒujī nghĩa là gì?",
+    "options": [
+      "Điện thoại di động (Thủ cơ)",
+      "Đồng hồ đeo tay",
+      "Máy vi tính để bàn",
+      "Tivi truyền hình"
+    ],
+    "correctAnswer": "Điện thoại di động (Thủ cơ)",
+    "explanation": "手机 (shǒujī - Hán Việt: Thủ cơ: máy cầm tay) nghĩa là điện thoại di động."
+  },
+  {
+    "id": 94,
+    "hanzi": "洗",
+    "pinyin": "xǐ",
+    "lesson": 10,
+    "question": "洗 — xǐ nghĩa là gì?",
+    "options": [
+      "Rửa sạch / Giặt giũ (Tẩy)",
+      "Mặc trang phục",
+      "Mua đồ sắm sửa",
+      "Nấu nướng chín"
+    ],
+    "correctAnswer": "Rửa sạch / Giặt giũ (Tẩy)",
+    "explanation": "洗 (xǐ - Hán Việt: Tẩy) là làm sạch bằng nước (Ví dụ: 洗手 - rửa tay, 洗衣服 - giặt quần áo)."
+  },
+  {
+    "id": 95,
+    "hanzi": "帮助",
+    "pinyin": "bāngzhù",
+    "lesson": 10,
+    "question": "帮助 — bāngzhù nghĩa là gì?",
+    "options": [
+      "Giúp đỡ / Hỗ trợ (Bang trợ)",
+      "Học tập rèn luyện",
+      "Nói chuyện trao đổi",
+      "Tìm kiếm đồ đạc"
+    ],
+    "correctAnswer": "Giúp đỡ / Hỗ trợ (Bang trợ)",
+    "explanation": "帮助 (bāngzhù - Hán Việt: Bang trợ) là giúp sức cho người khác (谢谢你的帮助 - cảm ơn sự giúp đỡ của bạn)."
+  },
+  {
+    "id": 96,
+    "hanzi": "课",
+    "pinyin": "kè",
+    "lesson": 10,
+    "question": "课 — kè nghĩa là gì?",
+    "options": [
+      "Bài học / Tiết học (Khóa)",
+      "Quyển sách thư tịch",
+      "Kỳ thi khảo thí",
+      "Trường học viện"
+    ],
+    "correctAnswer": "Bài học / Tiết học (Khóa)",
+    "explanation": "课 (kè - Hán Việt: Khóa) chỉ tiết lên lớp hoặc bài học (Ví dụ: 上课 - vào học, 下课 - tan học)."
+  },
+  {
+    "id": 97,
+    "hanzi": "教室",
+    "pinyin": "jiàoshì",
+    "lesson": 10,
+    "question": "教室 — jiàoshì nghĩa là gì?",
+    "options": [
+      "Lớp học / Phòng học (Giáo thất)",
+      "Phòng ngủ nghỉ ngơi",
+      "Bệnh viện chữa trị",
+      "Cửa hàng buôn bán"
+    ],
+    "correctAnswer": "Lớp học / Phòng học (Giáo thất)",
+    "explanation": "教室 (jiàoshì - Hán Việt: Giáo thất: phòng dạy học) là phòng học trong trường."
+  },
+  {
+    "id": 98,
+    "hanzi": "往",
+    "pinyin": "wǎng",
+    "lesson": 10,
+    "question": "往 — wǎng nghĩa là gì?",
+    "options": [
+      "Hướng về / Về phía (Vãng)",
+      "Xuất phát rời đi",
+      "Ở tại địa điểm",
+      "Đến nơi kết thúc"
+    ],
+    "correctAnswer": "Hướng về / Về phía (Vãng)",
+    "explanation": "往 (wǎng - Hán Việt: Vãng) là giới từ chỉ hướng chuyển động (Ví dụ: 往前走 - đi về phía trước)."
+  },
+  {
+    "id": 99,
+    "hanzi": "旁边",
+    "pinyin": "pángbiān",
+    "lesson": 10,
+    "question": "旁边 — pángbiān nghĩa là gì?",
+    "options": [
+      "Bên cạnh / Sát bên (Bàng biên)",
+      "Phía trước mặt",
+      "Phía sau lưng",
+      "Bên trong lòng"
+    ],
+    "correctAnswer": "Bên cạnh / Sát bên (Bàng biên)",
+    "explanation": "旁边 (pángbiān - Hán Việt: Bàng biên) là phương vị từ chỉ vị trí sát cạnh đối tượng."
+  },
+  {
+    "id": 100,
+    "hanzi": "知道",
+    "pinyin": "zhīdào",
+    "lesson": 10,
+    "question": "知道 — zhīdào nghĩa là gì?",
+    "options": [
+      "Biết rõ / Hiểu (Tri đạo)",
+      "Quên mất lãng quên",
+      "Suy nghĩ đắn đo",
+      "Hỏi han vấn đáp"
+    ],
+    "correctAnswer": "Biết rõ / Hiểu (Tri đạo)",
+    "explanation": "知道 (zhīdào - Hán Việt: Tri đạo) là nắm rõ tin tức, sự tình (Ví dụ: 我知道 - tôi biết rồi)."
+  },
+  {
+    "id": 101,
+    "hanzi": "比",
+    "pinyin": "bǐ",
+    "lesson": 11,
+    "question": "比 — bǐ nghĩa là gì?",
+    "options": [
+      "So với / Tỷ (dùng trong câu so sánh)",
+      "Bởi vì nguyên nhân",
+      "Cùng nhau hợp tác",
+      "Cho nên kết quả"
+    ],
+    "correctAnswer": "So với / Tỷ (dùng trong câu so sánh)",
+    "explanation": "比 (bǐ - Hán Việt: Tỷ) dùng so sánh hơn (A 比 B + Tính từ: 他比我高 - anh ấy cao hơn tôi)."
+  },
+  {
+    "id": 102,
+    "hanzi": "哥哥",
+    "pinyin": "gēge",
+    "lesson": 11,
+    "question": "哥哥 — gēge nghĩa là gì?",
+    "options": [
+      "Anh trai (Ca ca)",
+      "Em trai đệ đệ",
+      "Người cha phụ thân",
+      "Bạn bè bằng hữu"
+    ],
+    "correctAnswer": "Anh trai (Ca ca)",
+    "explanation": "哥哥 (gēge - Hán Việt: Ca ca) là người anh trai ruột trong gia đình."
+  },
+  {
+    "id": 103,
+    "hanzi": "弟弟",
+    "pinyin": "dìdi",
+    "lesson": 11,
+    "question": "弟弟 — dìdi nghĩa là gì?",
+    "options": [
+      "Em trai (Đệ đệ)",
+      "Anh trai ca ca",
+      "Em gái muội muội",
+      "Con trai nhi tử"
+    ],
+    "correctAnswer": "Em trai (Đệ đệ)",
+    "explanation": "弟弟 (dìdi - Hán Việt: Đệ đệ) là em trai ruột trong gia đình."
+  },
+  {
+    "id": 104,
+    "hanzi": "姐姐",
+    "pinyin": "jiějie",
+    "lesson": 11,
+    "question": "姐姐 — jiějie nghĩa là gì?",
+    "options": [
+      "Chị gái (Tỷ tỷ)",
+      "Em gái muội muội",
+      "Người mẹ mẫu thân",
+      "Con gái nữ nhi"
+    ],
+    "correctAnswer": "Chị gái (Tỷ tỷ)",
+    "explanation": "姐姐 (jiějie - Hán Việt: Tỷ tỷ) là người chị gái ruột trong gia đình."
+  },
+  {
+    "id": 105,
+    "hanzi": "妹妹",
+    "pinyin": "mèimei",
+    "lesson": 11,
+    "question": "妹妹 — mèimei nghĩa là gì?",
+    "options": [
+      "Em gái (Muội muội)",
+      "Chị gái tỷ tỷ",
+      "Em trai đệ đệ",
+      "Con gái nữ nhi"
+    ],
+    "correctAnswer": "Em gái (Muội muội)",
+    "explanation": "妹妹 (mèimei - Hán Việt: Muội muội) là em gái ruột trong gia đình."
+  },
+  {
+    "id": 106,
+    "hanzi": "高",
+    "pinyin": "gāo",
+    "lesson": 11,
+    "question": "高 — gāo nghĩa là gì?",
+    "options": [
+      "Cao ráo / Cao lớn (Cao)",
+      "Thấp bé lùn tịt",
+      "Dài ngoẵng thước tất",
+      "To đùng bự chảng"
+    ],
+    "correctAnswer": "Cao ráo / Cao lớn (Cao)",
+    "explanation": "高 (gāo - Hán Việt: Cao) miêu tả chiều cao người hoặc vật (很高 - rất cao, đối lập với 矮 - lùn)."
+  },
+  {
+    "id": 107,
+    "hanzi": "右边",
+    "pinyin": "yòubian",
+    "lesson": 11,
+    "question": "右边 — yòubian nghĩa là gì?",
+    "options": [
+      "Bên phải (Hữu biên - đối lập với 左边)",
+      "Bên trái tả biên",
+      "Phía trước mặt",
+      "Phía sau lưng"
+    ],
+    "correctAnswer": "Bên phải (Hữu biên - đối lập với 左边)",
+    "explanation": "右边 (yòubian - Hán Việt: Hữu biên) là hướng tay phải (đối lập với 左边 - bên trái)."
+  },
+  {
+    "id": 108,
+    "hanzi": "左边",
+    "pinyin": "zuǒbian",
+    "lesson": 11,
+    "question": "左边 — zuǒbian nghĩa là gì?",
+    "options": [
+      "Bên trái (Tả biên - đối lập với 右边)",
+      "Bên phải hữu biên",
+      "Phía trước mặt",
+      "Phía sau lưng"
+    ],
+    "correctAnswer": "Bên trái (Tả biên - đối lập với 右边)",
+    "explanation": "左边 (zuǒbian - Hán Việt: Tả biên) là hướng tay trái (đối lập với 右边 - bên phải)."
+  },
+  {
+    "id": 109,
+    "hanzi": "两",
+    "pinyin": "liǎng",
+    "lesson": 11,
+    "question": "两 — liǎng nghĩa là gì?",
+    "options": [
+      "Hai / Đôi (Lưỡng - trước lượng từ)",
+      "Một cái đơn độc",
+      "Ba cái tiếp nối",
+      "Mười cái tròn chục"
+    ],
+    "correctAnswer": "Hai / Đôi (Lưỡng - trước lượng từ)",
+    "explanation": "两 (liǎng - Hán Việt: Lưỡng) dùng để nói số lượng 2 khi đứng trước lượng từ (两个人 - hai người)."
+  },
+  {
+    "id": 110,
+    "hanzi": "姓",
+    "pinyin": "xìng",
+    "lesson": 11,
+    "question": "姓 — xìng nghĩa là gì?",
+    "options": [
+      "Họ / Mang họ (Tính)",
+      "Tuổi tác đời người",
+      "Nghề nghiệp làm ăn",
+      "Quê quán xứ sở"
+    ],
+    "correctAnswer": "Họ / Mang họ (Tính)",
+    "explanation": "姓 (xìng - Hán Việt: Tính) chỉ dòng họ (Ví dụ: 我姓王 - tôi họ Vương, 您贵姓 - ngài quý họ là gì)."
+  },
+  {
+    "id": 111,
+    "hanzi": "穿",
+    "pinyin": "chuān",
+    "lesson": 12,
+    "question": "穿 — chuān nghĩa là gì?",
+    "options": [
+      "Mặc áo / Xỏ giày (Xuyên)",
+      "Mua sắm quần áo",
+      "Giặt giũ sạch sẽ",
+      "Cởi bỏ áo khoác"
+    ],
+    "correctAnswer": "Mặc áo / Xỏ giày (Xuyên)",
+    "explanation": "穿 (chuān - Hán Việt: Xuyên) là mặc trang phục (穿衣服 - mặc quần áo, 穿鞋 - đi giày)."
+  },
+  {
+    "id": 112,
+    "hanzi": "进",
+    "pinyin": "jìn",
+    "lesson": 12,
+    "question": "进 — jìn nghĩa là gì?",
+    "options": [
+      "Bước vào / Tiến vào (Tiến - đối lập với 出)",
+      "Bước ra ngoài đường",
+      "Đi xa tít tắp",
+      "Trở về chốn cũ"
+    ],
+    "correctAnswer": "Bước vào / Tiến vào (Tiến - đối lập với 出)",
+    "explanation": "进 (jìn - Hán Việt: Tiến) là đi vào bên trong (请进 - xin mời vào, 进来 - vào đây)."
+  },
+  {
+    "id": 113,
+    "hanzi": "得",
+    "pinyin": "de",
+    "lesson": 12,
+    "question": "得 — de nghĩa là gì?",
+    "options": [
+      "Được / Đến mức (trợ từ miêu tả trình độ)",
+      "Của ai sở hữu",
+      "Chăng nữa phủ nhận",
+      "Và cùng kết nối"
+    ],
+    "correctAnswer": "Được / Đến mức (trợ từ miêu tả trình độ)",
+    "explanation": "得 (de) đặt sau động từ để dẫn ra bổ ngữ trạng thái, trình độ (跑得很快 - chạy rất nhanh)."
+  },
+  {
+    "id": 114,
+    "hanzi": "妻子",
+    "pinyin": "qīzi",
+    "lesson": 12,
+    "question": "妻子 — qīzi nghĩa là gì?",
+    "options": [
+      "Người vợ / Thê tử",
+      "Người chồng trượng phu",
+      "Người mẹ mẫu thân",
+      "Chị gái tỷ tỷ"
+    ],
+    "correctAnswer": "Người vợ / Thê tử",
+    "explanation": "妻子 (qīzi - Hán Việt: Thê tử) là người vợ trong gia đình."
+  },
+  {
+    "id": 115,
+    "hanzi": "雪",
+    "pinyin": "xuě",
+    "lesson": 12,
+    "question": "雪 — xuě nghĩa là gì?",
+    "options": [
+      "Bông tuyết / Tuyết (Tuyết)",
+      "Hạt mưa rơi xuống",
+      "Cơn gió thoảng qua",
+      "Đám mây bay lượn"
+    ],
+    "correctAnswer": "Bông tuyết / Tuyết (Tuyết)",
+    "explanation": "雪 (xuě - Hán Việt: Tuyết) là những bông tuyết rơi vào mùa đông (下雪 - tuyết rơi)."
+  },
+  {
+    "id": 116,
+    "hanzi": "零",
+    "pinyin": "líng",
+    "lesson": 12,
+    "question": "零 — líng nghĩa là gì?",
+    "options": [
+      "Số 0 / Linh (số không)",
+      "Số 1 duy nhất",
+      "Số 10 tròn chục",
+      "Số 100 hàng trăm"
+    ],
+    "correctAnswer": "Số 0 / Linh (số không)",
+    "explanation": "零 (líng - Hán Việt: Linh) là con số 0 trong toán học và ngày tháng."
+  },
+  {
+    "id": 117,
+    "hanzi": "到",
+    "pinyin": "dào",
+    "lesson": 12,
+    "question": "到 — dào nghĩa là gì?",
+    "options": [
+      "Đến nơi / Tới (Đáo)",
+      "Rời đi nơi chốn",
+      "Chờ đợi ai đó",
+      "Bắt đầu khởi sự"
+    ],
+    "correctAnswer": "Đến nơi / Tới (Đáo)",
+    "explanation": "到 (dào - Hán Việt: Đáo) biểu thị điểm đến hoặc đạt tới kết quả (到了 - đã đến nơi rồi)."
+  },
+  {
+    "id": 118,
+    "hanzi": "次",
+    "pinyin": "cì",
+    "lesson": 12,
+    "question": "次 — cì nghĩa là gì?",
+    "options": [
+      "Lần / Số lần (Thứ - lượng từ hành động)",
+      "Giờ đồng hồ",
+      "Ngày trong tuần",
+      "Năm tháng trôi"
+    ],
+    "correctAnswer": "Lần / Số lần (Thứ - lượng từ hành động)",
+    "explanation": "次 (cì - Hán Việt: Thứ) là lượng từ đo số lần thực hiện (去过一次 - đã đi một lần)."
+  },
+  {
+    "id": 119,
+    "hanzi": "真",
+    "pinyin": "zhēn",
+    "lesson": 12,
+    "question": "真 — zhēn nghĩa là gì?",
+    "options": [
+      "Thật sự / Chân thực (Chân - phó từ cảm thán)",
+      "Giả dối dối lừa",
+      "Tạm bợ qua loa",
+      "Không hề phủ định"
+    ],
+    "correctAnswer": "Thật sự / Chân thực (Chân - phó từ cảm thán)",
+    "explanation": "真 (zhēn - Hán Việt: Chân) là phó từ nhấn mạnh sự chân thật, cảm thán (真好 - thật là tốt)."
+  },
+  {
+    "id": 120,
+    "hanzi": "已经",
+    "pinyin": "yǐjīng",
+    "lesson": 12,
+    "question": "已经 — yǐjīng nghĩa là gì?",
+    "options": [
+      "Đã / Đã rồi (Dĩ kinh)",
+      "Chưa từng bao giờ",
+      "Đang làm tiếp diễn",
+      "Sẽ làm tương lai"
+    ],
+    "correctAnswer": "Đã / Đã rồi (Dĩ kinh)",
+    "explanation": "已经 (yǐjīng - Hán Việt: Dĩ kinh) biểu thị hành động đã hoàn tất trước thời điểm nói (我已经知道了)."
+  },
+  {
+    "id": 121,
+    "hanzi": "着",
+    "pinyin": "zhe",
+    "lesson": 13,
+    "question": "着 — zhe nghĩa là gì?",
+    "options": [
+      "Đang (Trước - tiếp diễn trạng thái)",
+      "Đã kết thúc hoàn tất",
+      "Sẽ bắt đầu sắp tới",
+      "Chưa xảy ra bao giờ"
+    ],
+    "correctAnswer": "Đang (Trước - tiếp diễn trạng thái)",
+    "explanation": "着 (zhe - Hán Việt: Trước) đặt sau động từ chỉ sự tiếp diễn của một trạng thái (门开着 - cửa đang mở)."
+  },
+  {
+    "id": 122,
+    "hanzi": "铅笔",
+    "pinyin": "qiānbǐ",
+    "lesson": 13,
+    "question": "铅笔 — qiānbǐ nghĩa là gì?",
+    "options": [
+      "Bút chì (Duyên bút)",
+      "Sách vở học tập",
+      "Thước kẻ kẻ đường",
+      "Cục tẩy lau vết"
+    ],
+    "correctAnswer": "Bút chì (Duyên bút)",
+    "explanation": "铅笔 (qiānbǐ - Hán Việt: Duyên bút) là dụng cụ viết bằng chì vẽ hoặc ghi chép."
+  },
+  {
+    "id": 123,
+    "hanzi": "长",
+    "pinyin": "cháng",
+    "lesson": 13,
+    "question": "长 — cháng nghĩa là gì?",
+    "options": [
+      "Dài / Lâu (Trường - đối lập với 短)",
+      "Ngắn ngủi chốc lát",
+      "Cao ráo ngút ngàn",
+      "Rộng lớn bao la"
+    ],
+    "correctAnswer": "Dài / Lâu (Trường - đối lập với 短)",
+    "explanation": "长 (cháng - Hán Việt: Trường) miêu tả độ dài của vật hoặc thời gian (头发很长 - tóc rất dài)."
+  },
+  {
+    "id": 124,
+    "hanzi": "眼睛",
+    "pinyin": "yǎnjing",
+    "lesson": 13,
+    "question": "眼睛 — yǎnjing nghĩa là gì?",
+    "options": [
+      "Đôi mắt / Ánh mắt (Nhãn tình)",
+      "Kính đeo bảo vệ",
+      "Khuôn mặt diện mạo",
+      "Cái tai thính giác"
+    ],
+    "correctAnswer": "Đôi mắt / Ánh mắt (Nhãn tình)",
+    "explanation": "眼睛 (yǎnjing - Hán Việt: Nhãn tình) là cơ quan thị giác giúp con người nhìn ngắm."
+  },
+  {
+    "id": 125,
+    "hanzi": "笑",
+    "pinyin": "xiào",
+    "lesson": 13,
+    "question": "笑 — xiào nghĩa là gì?",
+    "options": [
+      "Mỉm cười / Cười (Tiếu - đối lập với 哭)",
+      "Khóc lóc đau buồn",
+      "Nói năng phát biểu",
+      "Ca hát rộn ràng"
+    ],
+    "correctAnswer": "Mỉm cười / Cười (Tiếu - đối lập với 哭)",
+    "explanation": "笑 (xiào - Hán Việt: Tiếu) biểu lộ niềm vui qua nụ cười (đối lập với 哭 - khóc)."
+  },
+  {
+    "id": 126,
+    "hanzi": "晴",
+    "pinyin": "qíng",
+    "lesson": 13,
+    "question": "晴 — qíng nghĩa là gì?",
+    "options": [
+      "Trời nắng / Quang đãng (Tình - đối lập với 阴)",
+      "Trời mưa ảm đạm",
+      "Trời rét căm căm",
+      "Có tuyết giá buốt"
+    ],
+    "correctAnswer": "Trời nắng / Quang đãng (Tình - đối lập với 阴)",
+    "explanation": "晴 (qíng - Hán Việt: Tình) miêu tả thời tiết nắng ráo, không mây (晴天: ngày nắng đẹp)."
+  },
+  {
+    "id": 127,
+    "hanzi": "百",
+    "pinyin": "bǎi",
+    "lesson": 13,
+    "question": "百 — bǎi nghĩa là gì?",
+    "options": [
+      "Một trăm / Trăm (Bách)",
+      "Một nghìn (Thiên)",
+      "Mười (Thập)",
+      "Một vạn (Vạn)"
+    ],
+    "correctAnswer": "Một trăm / Trăm (Bách)",
+    "explanation": "百 (bǎi - Hán Việt: Bách) là hàng trăm (Ví dụ: 一百 - một trăm, 三百 - ba trăm)."
+  },
+  {
+    "id": 128,
+    "hanzi": "白",
+    "pinyin": "bái",
+    "lesson": 13,
+    "question": "白 — bái nghĩa là gì?",
+    "options": [
+      "Màu trắng / Bạch (đối lập với 黑)",
+      "Màu đen hắc ám",
+      "Màu đỏ rực rỡ",
+      "Màu xanh mát mẻ"
+    ],
+    "correctAnswer": "Màu trắng / Bạch (đối lập với 黑)",
+    "explanation": "白 (bái - Hán Việt: Bạch) chỉ màu trắng (Ví dụ: 白色的衣服 - quần áo màu trắng)."
+  },
+  {
+    "id": 129,
+    "hanzi": "黑",
+    "pinyin": "hēi",
+    "lesson": 13,
+    "question": "黑 — hēi nghĩa là gì?",
+    "options": [
+      "Màu đen / Hắc (đối lập với 白)",
+      "Màu trắng tinh khôi",
+      "Màu đỏ thắm tươi",
+      "Màu vàng rực rỡ"
+    ],
+    "correctAnswer": "Màu đen / Hắc (đối lập với 白)",
+    "explanation": "黑 (hēi - Hán Việt: Hắc) chỉ màu đen (đối lập với 白 - trắng)."
+  },
+  {
+    "id": 130,
+    "hanzi": "它",
+    "pinyin": "tā",
+    "lesson": 13,
+    "question": "它 — tā nghĩa là gì?",
+    "options": [
+      "Đồ vật đó / Con vật đó (Tha)",
+      "Anh ấy (Tha - nam)",
+      "Cô ấy (Tha - nữ)",
+      "Tôi đây (Ngã)"
+    ],
+    "correctAnswer": "Đồ vật đó / Con vật đó (Tha)",
+    "explanation": "它 (tā - Hán Việt: Tha) là đại từ nhân xưng ngôi thứ ba chỉ con vật hoặc đồ vật."
+  },
+  {
+    "id": 131,
+    "hanzi": "虽然",
+    "pinyin": "suīrán",
+    "lesson": 14,
+    "question": "虽然 — suīrán nghĩa là gì?",
+    "options": [
+      "Mặc dù / Tuy rằng (Tuy nhiên)",
+      "Bởi vì nguyên cớ",
+      "Cho nên kết quả",
+      "Nếu như giả định"
+    ],
+    "correctAnswer": "Mặc dù / Tuy rằng (Tuy nhiên)",
+    "explanation": "虽然 (suīrán - Hán Việt: Tuy nhiên/Tuy rằng) đứng đầu phân câu nhượng bộ, thường cặp với 但是."
+  },
+  {
+    "id": 132,
+    "hanzi": "但是",
+    "pinyin": "dànshì",
+    "lesson": 14,
+    "question": "但是 — dànshì nghĩa là gì?",
+    "options": [
+      "Nhưng mà / Song le (Đãn thị)",
+      "Bởi vì do lẽ",
+      "Cho nên kết quả",
+      "Và lại thêm nữa"
+    ],
+    "correctAnswer": "Nhưng mà / Song le (Đãn thị)",
+    "explanation": "但是 (dànshì - Hán Việt: Đãn thị) là liên từ biểu thị sự chuyển ý tương phản (mặc dù... nhưng mà...)."
+  },
+  {
+    "id": 133,
+    "hanzi": "因为",
+    "pinyin": "yīnwèi",
+    "lesson": 14,
+    "question": "因为 — yīnwèi nghĩa là gì?",
+    "options": [
+      "Bởi vì / Do vì (Nhân vị)",
+      "Cho nên kết luận",
+      "Mặc dù nhượng bộ",
+      "Nhưng mà tương phản"
+    ],
+    "correctAnswer": "Bởi vì / Do vì (Nhân vị)",
+    "explanation": "因为 (yīnwèi - Hán Việt: Nhân vị) là liên từ biểu thị nguyên nhân, thường cặp với 所以."
+  },
+  {
+    "id": 134,
+    "hanzi": "所以",
+    "pinyin": "suǒyǐ",
+    "lesson": 14,
+    "question": "所以 — suǒyǐ nghĩa là gì?",
+    "options": [
+      "Cho nên / Vì thế (Sở dĩ)",
+      "Bởi vì nguyên do",
+      "Mặc dù chuyển ý",
+      "Nhưng mà đối lập"
+    ],
+    "correctAnswer": "Cho nên / Vì thế (Sở dĩ)",
+    "explanation": "所以 (suǒyǐ - Hán Việt: Sở dĩ) là liên từ biểu thị kết quả (因为... 所以...)."
+  },
+  {
+    "id": 135,
+    "hanzi": "玩",
+    "pinyin": "wán",
+    "lesson": 14,
+    "question": "玩 — wán nghĩa là gì?",
+    "options": [
+      "Vui chơi / Tiêu khiển (Ngoạn)",
+      "Làm việc vất vả",
+      "Học tập căng thẳng",
+      "Nghỉ ngơi an giấc"
+    ],
+    "correctAnswer": "Vui chơi / Tiêu khiển (Ngoạn)",
+    "explanation": "玩 (wán - Hán Việt: Ngoạn) là hoạt động giải trí, vui chơi (Ví dụ: 好玩 - chơi vui)."
+  },
+  {
+    "id": 136,
+    "hanzi": "可能",
+    "pinyin": "kěnéng",
+    "lesson": 14,
+    "question": "可能 — kěnéng nghĩa là gì?",
+    "options": [
+      "Có lẽ / Khả năng (Khả năng)",
+      "Nhất định trăm phần",
+      "Không thể hoàn toàn",
+      "Nên làm bổn phận"
+    ],
+    "correctAnswer": "Có lẽ / Khả năng (Khả năng)",
+    "explanation": "可能 (kěnéng - Hán Việt: Khả năng) biểu thị phán đoán về khả năng xảy ra của sự việc."
+  },
+  {
+    "id": 137,
+    "hanzi": "您",
+    "pinyin": "nín",
+    "lesson": 14,
+    "question": "您 — nín nghĩa là gì?",
+    "options": [
+      "Ngài / Ông / Bà (kính ngữ tôn kính)",
+      "Tôi / Mình (Ngã)",
+      "Anh ấy (Tha)",
+      "Các bạn (Nhĩ môn)"
+    ],
+    "correctAnswer": "Ngài / Ông / Bà (kính ngữ tôn kính)",
+    "explanation": "您 (nín) là cách gọi bạn (你) nhưng với lòng kính trọng đối với bậc trên hoặc khách quý."
+  },
+  {
+    "id": 138,
+    "hanzi": "服务员",
+    "pinyin": "fúwùyuán",
+    "lesson": 14,
+    "question": "服务员 — fúwùyuán nghĩa là gì?",
+    "options": [
+      "Nhân viên phục vụ / Bồi bàn (Phục vụ viên)",
+      "Bác sĩ khám bệnh",
+      "Thầy giáo trường học",
+      "Tài xế lái xe"
+    ],
+    "correctAnswer": "Nhân viên phục vụ / Bồi bàn (Phục vụ viên)",
+    "explanation": "服务员 (fúwùyuán - Hán Việt: Phục vụ viên) là nhân viên phục vụ ở nhà hàng, khách sạn."
+  },
+  {
+    "id": 139,
+    "hanzi": "近",
+    "pinyin": "jìn",
+    "lesson": 14,
+    "question": "近 — jìn nghĩa là gì?",
+    "options": [
+      "Gần gũi / Cận (cự ly gần - đối lập với 远)",
+      "Xa xôi ngút ngàn",
+      "To lớn khổng lồ",
+      "Nhỏ bé li ti"
+    ],
+    "correctAnswer": "Gần gũi / Cận (cự ly gần - đối lập với 远)",
+    "explanation": "近 (jìn - Hán Việt: Cận) miêu tả khoảng cách ngắn, cự ly gần (Ví dụ: 很近 - rất gần)."
+  },
+  {
+    "id": 140,
+    "hanzi": "游泳",
+    "pinyin": "yóuyǒng",
+    "lesson": 14,
+    "question": "游泳 — yóuyǒng nghĩa là gì?",
+    "options": [
+      "Bơi lội / Du vịnh (thể thao dưới nước)",
+      "Chạy bộ sân đường",
+      "Đá bóng sân cỏ",
+      "Chơi bóng rổ sân"
+    ],
+    "correctAnswer": "Bơi lội / Du vịnh (thể thao dưới nước)",
+    "explanation": "游泳 (yóuyǒng - Hán Việt: Du vịnh) là hoạt động bơi lội dưới nước rèn sức khỏe."
+  },
+  {
+    "id": 141,
+    "hanzi": "票",
+    "pinyin": "piào",
+    "lesson": 15,
+    "question": "票 — piào nghĩa là gì?",
+    "options": [
+      "Tấm vé / Vé vào cửa (Phiếu)",
+      "Tiền bạc chi tiêu",
+      "Quyển sách học tập",
+      "Tờ báo tin tức"
+    ],
+    "correctAnswer": "Tấm vé / Vé vào cửa (Phiếu)",
+    "explanation": "票 (piào - Hán Việt: Phiếu) là vé vào cửa, vé tàu xe (Ví dụ: 车票 - vé xe, 电影票 - vé xem phim)."
+  },
+  {
+    "id": 142,
+    "hanzi": "火车站",
+    "pinyin": "huǒchēzhàn",
+    "lesson": 15,
+    "question": "火车站 — huǒchēzhàn nghĩa là gì?",
+    "options": [
+      "Ga xe lửa / Ga tàu (Hỏa xa trạm)",
+      "Cảng hàng không sân bay",
+      "Bến xe buýt đón khách",
+      "Trạm xá y tế"
+    ],
+    "correctAnswer": "Ga xe lửa / Ga tàu (Hỏa xa trạm)",
+    "explanation": "火车站 (huǒchēzhàn - Hán Việt: Hỏa xa trạm) là nơi đón và trả khách của tàu hỏa."
+  },
+  {
+    "id": 143,
+    "hanzi": "大家",
+    "pinyin": "dàjiā",
+    "lesson": 15,
+    "question": "大家 — dàjiā nghĩa là gì?",
+    "options": [
+      "Mọi người / Đại gia (tập thể mọi người)",
+      "Gia đình thân thuộc",
+      "Bạn bè bằng hữu",
+      "Học sinh trường lớp"
+    ],
+    "correctAnswer": "Mọi người / Đại gia (tập thể mọi người)",
+    "explanation": "大家 (dàjiā - Hán Việt: Đại gia) là đại từ chỉ chung mọi người (Ví dụ: 大家好 - chào mọi người)."
+  },
+  {
+    "id": 144,
+    "hanzi": "机场",
+    "pinyin": "jīchǎng",
+    "lesson": 15,
+    "question": "机场 — jīchǎng nghĩa là gì?",
+    "options": [
+      "Sân bay / Phi trường (Cơ trường)",
+      "Ga tàu hỏa hỏa xa",
+      "Bến xe buýt bến cảng",
+      "Công viên giải trí"
+    ],
+    "correctAnswer": "Sân bay / Phi trường (Cơ trường)",
+    "explanation": "机场 (jīchǎng - Hán Việt: Cơ trường: bãi đỗ phi cơ) là sân bay hàng không."
+  },
+  {
+    "id": 145,
+    "hanzi": "问题",
+    "pinyin": "wèntí",
+    "lesson": 15,
+    "question": "问题 — wèntí nghĩa là gì?",
+    "options": [
+      "Vấn đề / Câu hỏi / Khúc mắc",
+      "Đáp án giải đáp",
+      "Bài tập về nhà",
+      "Ý kiến đóng góp"
+    ],
+    "correctAnswer": "Vấn đề / Câu hỏi / Khúc mắc",
+    "explanation": "问题 (wèntí - Hán Việt: Vấn đề) là khúc mắc, câu hỏi hoặc vấn đề cần xử lý (没问题 - không vấn đề)."
+  },
+  {
+    "id": 146,
+    "hanzi": "说话",
+    "pinyin": "shuōhuà",
+    "lesson": 15,
+    "question": "说话 — shuōhuà nghĩa là gì?",
+    "options": [
+      "Nói chuyện / Phát biểu (Thuyết thoại)",
+      "Nghe nhạc êm dịu",
+      "Ca hát rộn ràng",
+      "Đọc sách to tiếng"
+    ],
+    "correctAnswer": "Nói chuyện / Phát biểu (Thuyết thoại)",
+    "explanation": "说话 (shuōhuà - Hán Việt: Thuyết thoại) là việc phát ra lời nói để trao đổi (别说话 - đừng nói chuyện)."
+  },
+  {
+    "id": 147,
+    "hanzi": "时间",
+    "pinyin": "shíjiān",
+    "lesson": 15,
+    "question": "时间 — shíjiān nghĩa là gì?",
+    "options": [
+      "Thời gian / Thời khắc (Thời gian)",
+      "Thời tiết nắng mưa",
+      "Đồng hồ xem giờ",
+      "Ngày tháng năm xưa"
+    ],
+    "correctAnswer": "Thời gian / Thời khắc (Thời gian)",
+    "explanation": "时间 (shíjiān - Hán Việt: Thời gian) chỉ quỹ thời gian hoặc khoảnh khắc (没时间 - không có thời gian)."
+  },
+  {
+    "id": 148,
     "hanzi": "日",
     "pinyin": "rì",
+    "lesson": 15,
     "question": "日 — rì nghĩa là gì?",
     "options": [
-      "Ngày / Mặt trời",
+      "Ngày / Mặt trời (Nhật)",
       "Tháng / Mặt trăng",
       "Năm / Ngôi sao",
       "Tuần / Đám mây"
     ],
-    "correctAnswer": "Ngày / Mặt trời",
-    "explanation": "日 (rì) dùng trong văn viết chỉ ngày trong tháng (Ví dụ: 10月1日) hoặc mặt trời."
-  },
-  {
-    "id": 87,
-    "hanzi": "上班",
-    "pinyin": "shàngbān",
-    "question": "上班 — shàngbān nghĩa là gì?",
-    "options": [
-      "Đi làm",
-      "Tan làm",
-      "Đi học",
-      "Nghỉ ngơi"
-    ],
-    "correctAnswer": "Đi làm",
-    "explanation": "上班 (shàngbān) là đến cơ quan làm việc (đối lập với 下班 - tan làm)."
-  },
-  {
-    "id": 88,
-    "hanzi": "身体",
-    "pinyin": "shēntǐ",
-    "question": "身体 — shēntǐ nghĩa là gì?",
-    "options": [
-      "Thân thể",
-      "Thời gian",
-      "Công việc",
-      "Tuổi tác"
-    ],
-    "correctAnswer": "Thân thể",
-    "explanation": "身体 (shēntǐ) chỉ thân thể con người hoặc tình trạng sức khỏe (身体好)."
-  },
-  {
-    "id": 89,
-    "hanzi": "生病",
-    "pinyin": "shēngbìng",
-    "question": "生病 — shēngbìng nghĩa là gì?",
-    "options": [
-      "Bị ốm",
-      "Khỏe mạnh",
-      "Mệt mỏi",
-      "Đau răng"
-    ],
-    "correctAnswer": "Bị ốm",
-    "explanation": "生病 (shēngbìng) là trạng thái cơ thể không khỏe, nhiễm bệnh."
-  },
-  {
-    "id": 90,
-    "hanzi": "生日",
-    "pinyin": "shēngrì",
-    "question": "生日 — shēngrì nghĩa là gì?",
-    "options": [
-      "Sinh nhật",
-      "Hôm nay",
-      "Ngày lễ",
-      "Năm mới"
-    ],
-    "correctAnswer": "Sinh nhật",
-    "explanation": "生日 (shēngrì) là ngày kỷ niệm chào đời của một người."
-  },
-  {
-    "id": 91,
-    "hanzi": "时间",
-    "pinyin": "shíjiān",
-    "question": "时间 — shíjiān nghĩa là gì?",
-    "options": [
-      "Thời gian",
-      "Thời tiết",
-      "Đồng hồ",
-      "Ngày tháng"
-    ],
-    "correctAnswer": "Thời gian",
-    "explanation": "时间 (shíjiān) chỉ quỹ thời gian hoặc khoảnh khắc (Ví dụ: 没时间 - không có thời gian)."
-  },
-  {
-    "id": 92,
-    "hanzi": "事情",
-    "pinyin": "shìqing",
-    "question": "事情 — shìqing nghĩa là gì?",
-    "options": [
-      "Sự việc",
-      "Đồ vật",
-      "Thời gian",
-      "Nơi chốn"
-    ],
-    "correctAnswer": "Sự việc",
-    "explanation": "事情 (shìqing) chỉ sự tình hoặc công việc cần giải quyết (Ví dụ: 什么事)."
-  },
-  {
-    "id": 93,
-    "hanzi": "手表",
-    "pinyin": "shǒubiǎo",
-    "question": "手表 — shǒubiǎo nghĩa là gì?",
-    "options": [
-      "Đồng hồ",
-      "Điện thoại",
-      "Máy tính",
-      "Túi xách"
-    ],
-    "correctAnswer": "Đồng hồ",
-    "explanation": "手表 (shǒubiǎo) là phụ kiện xem giờ đeo ở cổ tay."
-  },
-  {
-    "id": 94,
-    "hanzi": "手机",
-    "pinyin": "shǒujī",
-    "question": "手机 — shǒujī nghĩa là gì?",
-    "options": [
-      "Điện thoại",
-      "Đồng hồ",
-      "Máy tính",
-      "Tivi"
-    ],
-    "correctAnswer": "Điện thoại",
-    "explanation": "手机 (shǒujī) nghĩa đen là 'máy cầm tay', tức điện thoại di động."
-  },
-  {
-    "id": 95,
-    "hanzi": "说话",
-    "pinyin": "shuōhuà",
-    "question": "说话 — shuōhuà nghĩa là gì?",
-    "options": [
-      "Nói chuyện",
-      "Nghe nhạc",
-      "Hát ca",
-      "Đọc sách"
-    ],
-    "correctAnswer": "Nói chuyện",
-    "explanation": "说话 (shuōhuà) là việc phát ra lời nói để trao đổi (Ví dụ: 别说话 - đừng nói chuyện)."
-  },
-  {
-    "id": 96,
-    "hanzi": "送",
-    "pinyin": "sòng",
-    "question": "送 — sòng nghĩa là gì?",
-    "options": [
-      "Tặng / Tiễn đưa",
-      "Nhận / Đón rước",
-      "Mua / Bán đồ",
-      "Mượn / Trả lại"
-    ],
-    "correctAnswer": "Tặng / Tiễn đưa",
-    "explanation": "送 (sòng) vừa có nghĩa là tặng quà (送礼物) vừa có nghĩa là tiễn ai đó lên đường (送朋友)."
-  },
-  {
-    "id": 97,
-    "hanzi": "虽然",
-    "pinyin": "suīrán",
-    "question": "虽然 — suīrán nghĩa là gì?",
-    "options": [
-      "Mặc dù",
-      "Bởi vì",
-      "Cho nên",
-      "Nếu như"
-    ],
-    "correctAnswer": "Mặc dù",
-    "explanation": "虽然 (suīrán) đứng đầu phân câu nhượng bộ, thường đi cặp với 但是 (nhưng)."
-  },
-  {
-    "id": 98,
-    "hanzi": "但是",
-    "pinyin": "dànshì",
-    "question": "但是 — dànshì nghĩa là gì?",
-    "options": [
-      "Nhưng mà",
-      "Bởi vì",
-      "Cho nên",
-      "Và lại"
-    ],
-    "correctAnswer": "Nhưng mà",
-    "explanation": "但是 (dànshì) là liên từ biểu thị sự chuyển ý tương phản."
-  },
-  {
-    "id": 99,
-    "hanzi": "它",
-    "pinyin": "tā",
-    "question": "它 — tā nghĩa là gì?",
-    "options": [
-      "Đồ vật đó",
-      "Anh ấy",
-      "Cô ấy",
-      "Tôi đây"
-    ],
-    "correctAnswer": "Đồ vật đó",
-    "explanation": "它 (tā) là đại từ nhân xưng ngôi thứ ba chỉ con vật hoặc đồ vật."
-  },
-  {
-    "id": 100,
-    "hanzi": "踢足球",
-    "pinyin": "tī zúqiú",
-    "question": "踢足球 — tī zúqiú nghĩa là gì?",
-    "options": [
-      "Đá bóng",
-      "Chơi bóng rổ",
-      "Bơi lội",
-      "Chạy bộ"
-    ],
-    "correctAnswer": "Đá bóng",
-    "explanation": "踢足球 (tī zúqiú) là môn thể thao bóng đá (tī: đá, zúqiú: bóng đá)."
-  },
-  {
-    "id": 101,
-    "hanzi": "题",
-    "pinyin": "tí",
-    "question": "题 — tí nghĩa là gì?",
-    "options": [
-      "Đề bài",
-      "Quyển sách",
-      "Bài thi",
-      "Điểm số"
-    ],
-    "correctAnswer": "Đề bài",
-    "explanation": "题 (tí) là đề mục, câu hỏi trong bài kiểm tra (Ví dụ: 这道题 - câu hỏi này)."
-  },
-  {
-    "id": 102,
-    "hanzi": "跳舞",
-    "pinyin": "tiàowǔ",
-    "question": "跳舞 — tiàowǔ nghĩa là gì?",
-    "options": [
-      "Khiêu vũ",
-      "Ca hát",
-      "Đá bóng",
-      "Chạy bộ"
-    ],
-    "correctAnswer": "Khiêu vũ",
-    "explanation": "跳舞 (tiàowǔ) là vũ đạo biểu diễn hoặc khiêu vũ."
-  },
-  {
-    "id": 103,
-    "hanzi": "外",
-    "pinyin": "wài",
-    "question": "外 — wài nghĩa là gì?",
-    "options": [
-      "Bên ngoài",
-      "Bên trong",
-      "Bên trên",
-      "Bên dưới"
-    ],
-    "correctAnswer": "Bên ngoài",
-    "explanation": "外 (wài) chỉ vị trí bên ngoài (đối lập với 里 - trong)."
-  },
-  {
-    "id": 104,
-    "hanzi": "完",
-    "pinyin": "wán",
-    "question": "完 — wán nghĩa là gì?",
-    "options": [
-      "Xong xuôi",
-      "Bắt đầu",
-      "Còn lại",
-      "Đang làm"
-    ],
-    "correctAnswer": "Xong xuôi",
-    "explanation": "完 (wán) là bổ ngữ kết quả chỉ hành động đã kết thúc (Ví dụ: 做完 - làm xong)."
-  },
-  {
-    "id": 105,
-    "hanzi": "玩",
-    "pinyin": "wán",
-    "question": "玩 — wán nghĩa là gì?",
-    "options": [
-      "Vui chơi",
-      "Làm việc",
-      "Học tập",
-      "Nghỉ ngơi"
-    ],
-    "correctAnswer": "Vui chơi",
-    "explanation": "玩 (wán) là hoạt động giải trí vui chơi (Ví dụ: 好玩 - chơi vui)."
-  },
-  {
-    "id": 106,
-    "hanzi": "晚上",
-    "pinyin": "wǎnshang",
-    "question": "晚上 — wǎnshang nghĩa là gì?",
-    "options": [
-      "Buổi tối",
-      "Buổi sáng",
-      "Buổi chiều",
-      "Buổi trưa"
-    ],
-    "correctAnswer": "Buổi tối",
-    "explanation": "晚上 (wǎnshang) là khoảng thời gian từ lúc chập tối đến đêm."
-  },
-  {
-    "id": 107,
-    "hanzi": "往",
-    "pinyin": "wǎng",
-    "question": "往 — wǎng nghĩa là gì?",
-    "options": [
-      "Hướng về",
-      "Xuất phát",
-      "Ở tại",
-      "Đến nơi"
-    ],
-    "correctAnswer": "Hướng về",
-    "explanation": "往 (wǎng) là giới từ chỉ hướng chuyển động (Ví dụ: 往前走 - đi về phía trước)."
-  },
-  {
-    "id": 108,
-    "hanzi": "为什么",
-    "pinyin": "wèishénme",
-    "question": "为什么 — wèishénme nghĩa là gì?",
-    "options": [
-      "Tại sao",
-      "Cái gì",
-      "Ở đâu",
-      "Bao giờ"
-    ],
-    "correctAnswer": "Tại sao",
-    "explanation": "为什么 (wèishénme) là đại từ hỏi nguyên nhân, lý do."
-  },
-  {
-    "id": 109,
-    "hanzi": "问",
-    "pinyin": "wèn",
-    "question": "问 — wèn nghĩa là gì?",
-    "options": [
-      "Hỏi han",
-      "Trả lời",
-      "Nói năng",
-      "Lắng nghe"
-    ],
-    "correctAnswer": "Hỏi han",
-    "explanation": "问 (wèn) là đặt câu hỏi cho người khác (Ví dụ: 问老师 - hỏi thầy giáo)."
-  },
-  {
-    "id": 110,
-    "hanzi": "问题",
-    "pinyin": "wèntí",
-    "question": "问题 — wèntí nghĩa là gì?",
-    "options": [
-      "Vấn đề",
-      "Đáp án",
-      "Bài tập",
-      "Ý kiến"
-    ],
-    "correctAnswer": "Vấn đề",
-    "explanation": "问题 (wèntí) là khúc mắc, câu hỏi hoặc vấn đề cần xử lý (Ví dụ: 没问题 - không vấn đề)."
-  },
-  {
-    "id": 111,
-    "hanzi": "西瓜",
-    "pinyin": "xīguā",
-    "question": "西瓜 — xīguā nghĩa là gì?",
-    "options": [
-      "Dưa hấu",
-      "Quả táo",
-      "Quả cam",
-      "Quả chuối"
-    ],
-    "correctAnswer": "Dưa hấu",
-    "explanation": "西瓜 (xīguā) là loại trái cây vỏ xanh ruột đỏ nhiều nước ngọt mát."
-  },
-  {
-    "id": 112,
-    "hanzi": "希望",
-    "pinyin": "xīwàng",
-    "question": "希望 — xīwàng nghĩa là gì?",
-    "options": [
-      "Hy vọng",
-      "Thất vọng",
-      "Sợ hãi",
-      "Quên mất"
-    ],
-    "correctAnswer": "Hy vọng",
-    "explanation": "希望 (xīwàng) biểu thị nguyện vọng tốt đẹp đối với tương lai."
-  },
-  {
-    "id": 113,
-    "hanzi": "洗",
-    "pinyin": "xǐ",
-    "question": "洗 — xǐ nghĩa là gì?",
-    "options": [
-      "Rửa sạch",
-      "Mặc vào",
-      "Mua về",
-      "Nấu chín"
-    ],
-    "correctAnswer": "Rửa sạch",
-    "explanation": "洗 (xǐ) là làm sạch bằng nước (Ví dụ: 洗手 - rửa tay, 洗衣服 - giặt quần áo)."
-  },
-  {
-    "id": 114,
-    "hanzi": "小时",
-    "pinyin": "xiǎoshí",
-    "question": "小时 — xiǎoshí nghĩa là gì?",
-    "options": [
-      "Tiếng đồng hồ",
-      "Phút giây",
-      "Ngày đêm",
-      "Tháng năm"
-    ],
-    "correctAnswer": "Tiếng đồng hồ",
-    "explanation": "小时 (xiǎoshí) chỉ độ dài thời gian tính bằng giờ (Ví dụ: 一个小时 - một tiếng)."
-  },
-  {
-    "id": 115,
-    "hanzi": "笑",
-    "pinyin": "xiào",
-    "question": "笑 — xiào nghĩa là gì?",
-    "options": [
-      "Mỉm cười",
-      "Khóc lóc",
-      "Nói năng",
-      "Ca hát"
-    ],
-    "correctAnswer": "Mỉm cười",
-    "explanation": "笑 (xiào) biểu lộ niềm vui qua nụ cười (đối lập với 哭 - khóc)."
-  },
-  {
-    "id": 116,
-    "hanzi": "新",
-    "pinyin": "xīn",
-    "question": "新 — xīn nghĩa là gì?",
-    "options": [
-      "Mới mẻ",
-      "Cũ kỹ",
-      "Xinh đẹp",
-      "Tốt lành"
-    ],
-    "correctAnswer": "Mới mẻ",
-    "explanation": "新 (xīn) chỉ sự vật mới xuất hiện (Ví dụ: 新书 - sách mới)."
-  },
-  {
-    "id": 117,
-    "hanzi": "姓",
-    "pinyin": "xìng",
-    "question": "姓 — xìng nghĩa là gì?",
-    "options": [
-      "Họ tên",
-      "Tuổi tác",
-      "Nghề nghiệp",
-      "Quê quán"
-    ],
-    "correctAnswer": "Họ tên",
-    "explanation": "姓 (xìng) dùng chỉ dòng họ của một người (Ví dụ: 我姓王 - tôi họ Vương)."
-  },
-  {
-    "id": 118,
-    "hanzi": "休息",
-    "pinyin": "xiūxi",
-    "question": "休息 — xiūxi nghĩa là gì?",
-    "options": [
-      "Nghỉ ngơi",
-      "Làm việc",
-      "Học tập",
-      "Tập luyện"
-    ],
-    "correctAnswer": "Nghỉ ngơi",
-    "explanation": "休息 (xiūxi) là dừng công việc để thư giãn, hồi phục năng lượng."
-  },
-  {
-    "id": 119,
-    "hanzi": "雪",
-    "pinyin": "xuě",
-    "question": "雪 — xuě nghĩa là gì?",
-    "options": [
-      "Bông tuyết",
-      "Hạt mưa",
-      "Cơn gió",
-      "Đám mây"
-    ],
-    "correctAnswer": "Bông tuyết",
-    "explanation": "雪 (xuě) là những bông tuyết trắng rơi vào mùa đông (下雪 - tuyết rơi)."
-  },
-  {
-    "id": 120,
-    "hanzi": "颜色",
-    "pinyin": "yánsè",
-    "question": "颜色 — yánsè nghĩa là gì?",
-    "options": [
-      "Màu sắc",
-      "Hình dáng",
-      "Kích thước",
-      "Âm thanh"
-    ],
-    "correctAnswer": "Màu sắc",
-    "explanation": "颜色 (yánsè) chỉ các sắc màu như đỏ, trắng, đen, xanh."
-  },
-  {
-    "id": 121,
-    "hanzi": "眼睛",
-    "pinyin": "yǎnjing",
-    "question": "眼睛 — yǎnjing nghĩa là gì?",
-    "options": [
-      "Đôi mắt",
-      "Kính đeo",
-      "Khuôn mặt",
-      "Cái tai"
-    ],
-    "correctAnswer": "Đôi mắt",
-    "explanation": "眼睛 (yǎnjing) là cơ quan thị giác giúp con người nhìn thấy vạn vật."
-  },
-  {
-    "id": 122,
-    "hanzi": "羊肉",
-    "pinyin": "yángròu",
-    "question": "羊肉 — yángròu nghĩa là gì?",
-    "options": [
-      "Thịt cừu",
-      "Thịt bò",
-      "Thịt heo",
-      "Thịt gà"
-    ],
-    "correctAnswer": "Thịt cừu",
-    "explanation": "羊肉 (yángròu) là món thịt từ loài cừu (dê)."
-  },
-  {
-    "id": 123,
-    "hanzi": "药",
-    "pinyin": "yào",
-    "question": "药 — yào nghĩa là gì?",
-    "options": [
-      "Thuốc uống",
-      "Thức ăn",
-      "Nước ngọt",
-      "Trà xanh"
-    ],
-    "correctAnswer": "Thuốc uống",
-    "explanation": "药 (yào) dùng để điều trị bệnh tật (Ví dụ: 吃药 - uống thuốc)."
-  },
-  {
-    "id": 124,
-    "hanzi": "要",
-    "pinyin": "yào",
-    "question": "要 — yào nghĩa là gì?",
-    "options": [
-      "Cần phải",
-      "Không cần",
-      "Đã từng",
-      "Chưa từng"
-    ],
-    "correctAnswer": "Cần phải",
-    "explanation": "要 (yào) biểu thị nguyện vọng, nhu cầu hoặc hành động sắp diễn ra."
-  },
-  {
-    "id": 125,
-    "hanzi": "也",
-    "pinyin": "yě",
-    "question": "也 — yě nghĩa là gì?",
-    "options": [
-      "Cũng là",
-      "Đều là",
-      "Rất là",
-      "Không là"
-    ],
-    "correctAnswer": "Cũng là",
-    "explanation": "也 (yě) là phó từ chỉ sự tương đồng (Ví dụ: 我也是 - tôi cũng vậy)."
-  },
-  {
-    "id": 126,
-    "hanzi": "一下",
-    "pinyin": "yíxià",
-    "question": "一下 — yíxià nghĩa là gì?",
-    "options": [
-      "Một lát",
-      "Một lần",
-      "Rất lâu",
-      "Mãi mãi"
-    ],
-    "correctAnswer": "Một lát",
-    "explanation": "一下 (yíxià) đứng sau động từ làm nhẹ sắc thái hành động (Ví dụ: 看一下 - xem thử một chút)."
-  },
-  {
-    "id": 127,
-    "hanzi": "一起",
-    "pinyin": "yìqǐ",
-    "question": "一起 — yìqǐ nghĩa là gì?",
-    "options": [
-      "Cùng nhau",
-      "Một mình",
-      "Trước tiên",
-      "Sau đó"
-    ],
-    "correctAnswer": "Cùng nhau",
-    "explanation": "一起 (yìqǐ) là phó từ chỉ sự kết hợp đồng thời (Ví dụ: 一起去 - cùng đi)."
-  },
-  {
-    "id": 128,
-    "hanzi": "已经",
-    "pinyin": "yǐjīng",
-    "question": "已经 — yǐjīng nghĩa là gì?",
-    "options": [
-      "Đã rồi",
-      "Chưa có",
-      "Đang làm",
-      "Sẽ làm"
-    ],
-    "correctAnswer": "Đã rồi",
-    "explanation": "已经 (yǐjīng) biểu thị hành động đã hoàn tất trước thời điểm nói (Ví dụ: 已经知道了)."
-  },
-  {
-    "id": 129,
-    "hanzi": "意思",
-    "pinyin": "yìsi",
-    "question": "意思 — yìsi nghĩa là gì?",
-    "options": [
-      "Ý nghĩa",
-      "Thời gian",
-      "Ý kiến",
-      "Lý do"
-    ],
-    "correctAnswer": "Ý nghĩa",
-    "explanation": "意思 (yìsi) là nội hàm của từ ngữ hoặc sự thú vị (有意思 - thú vị)."
-  },
-  {
-    "id": 130,
-    "hanzi": "因为",
-    "pinyin": "yīnwèi",
-    "question": "因为 — yīnwèi nghĩa là gì?",
-    "options": [
-      "Bởi vì",
-      "Cho nên",
-      "Mặc dù",
-      "Nhưng mà"
-    ],
-    "correctAnswer": "Bởi vì",
-    "explanation": "因为 (yīnwèi) là liên từ biểu thị nguyên nhân."
-  },
-  {
-    "id": 131,
-    "hanzi": "所以",
-    "pinyin": "suǒyǐ",
-    "question": "所以 — suǒyǐ nghĩa là gì?",
-    "options": [
-      "Cho nên",
-      "Bởi vì",
-      "Mặc dù",
-      "Nhưng mà"
-    ],
-    "correctAnswer": "Cho nên",
-    "explanation": "所以 (suǒyǐ) là liên từ biểu thị kết quả, thường đi cặp với 因为."
-  },
-  {
-    "id": 132,
-    "hanzi": "阴",
-    "pinyin": "yīn",
-    "question": "阴 — yīn nghĩa là gì?",
-    "options": [
-      "Trời râm",
-      "Trời nắng",
-      "Trời mưa",
-      "Tuyết rơi"
-    ],
-    "correctAnswer": "Trời râm",
-    "explanation": "阴 (yīn) miêu tả thời tiết nhiều mây, không có ánh mặt trời (阴天)."
-  },
-  {
-    "id": 133,
-    "hanzi": "游泳",
-    "pinyin": "yóuyǒng",
-    "question": "游泳 — yóuyǒng nghĩa là gì?",
-    "options": [
-      "Bơi lội",
-      "Chạy bộ",
-      "Đá bóng",
-      "Chơi bóng rổ"
-    ],
-    "correctAnswer": "Bơi lội",
-    "explanation": "游泳 (yóuyǒng) là môn thể thao dưới nước."
-  },
-  {
-    "id": 134,
-    "hanzi": "右边",
-    "pinyin": "yòubian",
-    "question": "右边 — yòubian nghĩa là gì?",
-    "options": [
-      "Bên phải",
-      "Bên trái",
-      "Phía trước",
-      "Phía sau"
-    ],
-    "correctAnswer": "Bên phải",
-    "explanation": "右边 (yòubian) là hướng tay phải (đối lập với 左边 - bên trái)."
-  },
-  {
-    "id": 135,
-    "hanzi": "鱼",
-    "pinyin": "yú",
-    "question": "鱼 — yú nghĩa là gì?",
-    "options": [
-      "Con cá",
-      "Con gà",
-      "Con cừu",
-      "Con chó"
-    ],
-    "correctAnswer": "Con cá",
-    "explanation": "鱼 (yú) là loài động vật sống dưới nước có vây và vảy."
-  },
-  {
-    "id": 136,
-    "hanzi": "远",
-    "pinyin": "yuǎn",
-    "question": "远 — yuǎn nghĩa là gì?",
-    "options": [
-      "Xa xôi",
-      "Gần gũi",
-      "Cao ráo",
-      "Rộng lớn"
-    ],
-    "correctAnswer": "Xa xôi",
-    "explanation": "远 (yuǎn) miêu tả cự ly dài (đối lập với 近 - gần)."
-  },
-  {
-    "id": 137,
-    "hanzi": "运动",
-    "pinyin": "yùndòng",
-    "question": "运动 — yùndòng nghĩa là gì?",
-    "options": [
-      "Thể thao",
-      "Học tập",
-      "Làm việc",
-      "Nghỉ ngơi"
-    ],
-    "correctAnswer": "Thể thao",
-    "explanation": "运动 (yùndòng) là tập luyện thể dục thể thao rèn luyện sức khỏe."
-  },
-  {
-    "id": 138,
-    "hanzi": "再",
-    "pinyin": "zài",
-    "question": "再 — zài nghĩa là gì?",
-    "options": [
-      "Lần nữa",
-      "Đã rồi",
-      "Chưa làm",
-      "Vẫn còn"
-    ],
-    "correctAnswer": "Lần nữa",
-    "explanation": "再 (zài) là phó từ chỉ hành động lặp lại trong tương lai (Ví dụ: 再见 - gặp lại sau)."
-  },
-  {
-    "id": 139,
-    "hanzi": "早上",
-    "pinyin": "zǎoshang",
-    "question": "早上 — zǎoshang nghĩa là gì?",
-    "options": [
-      "Sáng sớm",
-      "Buổi trưa",
-      "Buổi chiều",
-      "Buổi tối"
-    ],
-    "correctAnswer": "Sáng sớm",
-    "explanation": "早上 (zǎoshang) là thời điểm sáng tinh mơ khi mặt trời vừa mọc."
-  },
-  {
-    "id": 140,
-    "hanzi": "丈夫",
-    "pinyin": "zhàngfu",
-    "question": "丈夫 — zhàngfu nghĩa là gì?",
-    "options": [
-      "Người chồng",
-      "Người vợ",
-      "Người bố",
-      "Anh trai"
-    ],
-    "correctAnswer": "Người chồng",
-    "explanation": "丈夫 (zhàngfu) là người chồng trong gia đình."
-  },
-  {
-    "id": 141,
-    "hanzi": "找",
-    "pinyin": "zhǎo",
-    "question": "找 — zhǎo nghĩa là gì?",
-    "options": [
-      "Tìm kiếm / Thối tiền",
-      "Đánh mất / Tiêu xài",
-      "Mua sắm / Gom góp",
-      "Bán đi / Nhận lấy"
-    ],
-    "correctAnswer": "Tìm kiếm / Thối tiền",
-    "explanation": "找 (zhǎo) nghĩa là tìm kiếm đồ đạc (找东西) hoặc trả lại tiền thừa (找钱)."
-  },
-  {
-    "id": 142,
-    "hanzi": "着",
-    "pinyin": "zhe",
-    "question": "着 — zhe nghĩa là gì?",
-    "options": [
-      "Đang diễn ra",
-      "Đã kết thúc",
-      "Sẽ bắt đầu",
-      "Chưa xảy ra"
-    ],
-    "correctAnswer": "Đang diễn ra",
-    "explanation": "着 (zhe) đặt sau động từ chỉ sự tiếp diễn của một trạng thái (Ví dụ: 门开着 - cửa đang mở)."
-  },
-  {
-    "id": 143,
-    "hanzi": "真",
-    "pinyin": "zhēn",
-    "question": "真 — zhēn nghĩa là gì?",
-    "options": [
-      "Thật sự",
-      "Giả dối",
-      "Rất là",
-      "Không hề"
-    ],
-    "correctAnswer": "Thật sự",
-    "explanation": "真 (zhēn) là phó từ cảm thán nhấn mạnh (Ví dụ: 真好 - thật là tốt)."
-  },
-  {
-    "id": 144,
-    "hanzi": "正在",
-    "pinyin": "zhèngzài",
-    "question": "正在 — zhèngzài nghĩa là gì?",
-    "options": [
-      "Đang lúc",
-      "Đã xong",
-      "Sắp sửa",
-      "Vừa mới"
-    ],
-    "correctAnswer": "Đang lúc",
-    "explanation": "正在 (zhèngzài) nhấn mạnh hành động đang diễn ra tại đúng thời điểm nói."
-  },
-  {
-    "id": 145,
-    "hanzi": "知道",
-    "pinyin": "zhīdào",
-    "question": "知道 — zhīdào nghĩa là gì?",
-    "options": [
-      "Biết rõ",
-      "Quên mất",
-      "Suy nghĩ",
-      "Hỏi han"
-    ],
-    "correctAnswer": "Biết rõ",
-    "explanation": "知道 (zhīdào) là nắm được thông tin hoặc sự việc (Ví dụ: 我知道 - tôi biết rồi)."
-  },
-  {
-    "id": 146,
-    "hanzi": "准备",
-    "pinyin": "zhǔnbèi",
-    "question": "准备 — zhǔnbèi nghĩa là gì?",
-    "options": [
-      "Chuẩn bị",
-      "Bắt đầu",
-      "Hoàn thành",
-      "Nghỉ ngơi"
-    ],
-    "correctAnswer": "Chuẩn bị",
-    "explanation": "准备 (zhǔnbèi) là việc sắp xếp trước cho một kế hoạch hoặc công việc."
-  },
-  {
-    "id": 147,
-    "hanzi": "自行车",
-    "pinyin": "zìxíngchē",
-    "question": "自行车 — zìxíngchē nghĩa là gì?",
-    "options": [
-      "Xe đạp",
-      "Xe máy",
-      "Xe buýt",
-      "Xe taxi"
-    ],
-    "correctAnswer": "Xe đạp",
-    "explanation": "自行车 (zìxíngchē) nghĩa đen là 'xe tự đi', tức xe đạp hai bánh."
-  },
-  {
-    "id": 148,
-    "hanzi": "走",
-    "pinyin": "zǒu",
-    "question": "走 — zǒu nghĩa là gì?",
-    "options": [
-      "Bước đi",
-      "Chạy trốn",
-      "Ngồi xuống",
-      "Đứng lại"
-    ],
-    "correctAnswer": "Bước đi",
-    "explanation": "走 (zǒu) là hành động đi bộ hoặc rời khỏi vị trí (Ví dụ: 慢走 - đi thong thả)."
+    "correctAnswer": "Ngày / Mặt trời (Nhật)",
+    "explanation": "日 (rì - Hán Việt: Nhật) dùng trong văn viết chỉ ngày trong tháng (Ví dụ: 10月1日) hoặc mặt trời."
   },
   {
     "id": 149,
-    "hanzi": "最",
-    "pinyin": "zuì",
-    "question": "最 — zuì nghĩa là gì?",
+    "hanzi": "对",
+    "pinyin": "duì",
+    "lesson": 15,
+    "question": "对 — duì nghĩa là gì?",
     "options": [
-      "Nhất",
-      "Hơn",
-      "Rất",
-      "Đều"
+      "Đúng / Đối với (Đối - đúng đắn/giới từ)",
+      "Sai / Trái lại",
+      "Thích / Hợp ý",
+      "Gần / Cận kề"
     ],
-    "correctAnswer": "Nhất",
-    "explanation": "最 (zuì) đứng trước tính từ biểu thị mức độ cao nhất (Ví dụ: 最好 - tốt nhất)."
+    "correctAnswer": "Đúng / Đối với (Đối - đúng đắn/giới từ)",
+    "explanation": "对 (duì - Hán Việt: Đối) nghĩa là đúng (đối lập với 错) hoặc là giới từ 'đối với ai' (对我说)."
   },
   {
     "id": 150,
-    "hanzi": "左边",
-    "pinyin": "zuǒbian",
-    "question": "左边 — zuǒbian nghĩa là gì?",
+    "hanzi": "打篮球",
+    "pinyin": "dǎ lánqiú",
+    "lesson": 15,
+    "question": "打篮球 — dǎ lánqiú nghĩa là gì?",
     "options": [
-      "Bên trái",
-      "Bên phải",
-      "Phía trước",
-      "Phía sau"
+      "Chơi bóng rổ (Đả lam cầu)",
+      "Đá bóng sân bãi",
+      "Bơi lội dưới nước",
+      "Chạy bộ rèn sức"
     ],
-    "correctAnswer": "Bên trái",
-    "explanation": "左边 (zuǒbian) là phương hướng bên tay trái (đối lập với 右边 - bên phải)."
+    "correctAnswer": "Chơi bóng rổ (Đả lam cầu)",
+    "explanation": "打篮球 (dǎ lánqiú - Hán Việt: Đả lam cầu) là môn thể thao chơi bóng rổ."
   }
 ];

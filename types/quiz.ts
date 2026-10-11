@@ -8,6 +8,7 @@ export interface QuizQuestion {
   options: string[];
   correctAnswer: string;
   explanation: string;
+  lesson?: number;
 }
 
 export interface UserAnswerRecord {

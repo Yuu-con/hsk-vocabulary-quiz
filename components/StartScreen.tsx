@@ -3,6 +3,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { BookOpen, CheckCircle, HelpCircle, Sparkles, RotateCcw, ArrowRight, Shuffle, Layers, Check } from 'lucide-react';
 import { QuizLevel } from '@/types/quiz';
+import { HSK1_LESSON_INFO, HSK2_LESSON_INFO } from '@/data/lesson-info';
 
 interface StartScreenProps {
   currentLevel: QuizLevel;
@@ -180,32 +181,65 @@ export const StartScreen: React.FC<StartScreenProps> = ({
               </div>
 
               {/* Lesson Grid */}
-              <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 max-h-56 overflow-y-auto p-1">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 max-h-64 overflow-y-auto p-1.5 bg-slate-100/60 rounded-xl border border-slate-200">
                 {lessonList.map(lessonNum => {
                   const isChecked = selectedLessons.includes(lessonNum);
-                  const lessonLabel =
-                    currentLevel === 'all'
-                      ? lessonNum <= 15
-                        ? `HSK1 - B.${lessonNum}`
-                        : `HSK2 - B.${lessonNum - 15}`
-                      : `Bài ${lessonNum}`;
+                  
+                  let label = `Bài ${lessonNum}`;
+                  let title = '';
+                  let viTitle = '';
+
+                  if (currentLevel === 'hsk1') {
+                    const info = HSK1_LESSON_INFO.find(l => l.lesson === lessonNum);
+                    title = info?.title || '';
+                    viTitle = info?.viTitle || '';
+                  } else if (currentLevel === 'hsk2') {
+                    const info = HSK2_LESSON_INFO.find(l => l.lesson === lessonNum);
+                    title = info?.title || '';
+                    viTitle = info?.viTitle || '';
+                  } else {
+                    if (lessonNum <= 15) {
+                      const info = HSK1_LESSON_INFO.find(l => l.lesson === lessonNum);
+                      label = `HSK1 · B.${lessonNum}`;
+                      title = info?.title || '';
+                      viTitle = info?.viTitle || '';
+                    } else {
+                      const info = HSK2_LESSON_INFO.find(l => l.lesson === lessonNum - 15);
+                      label = `HSK2 · B.${lessonNum - 15}`;
+                      title = info?.title || '';
+                      viTitle = info?.viTitle || '';
+                    }
+                  }
 
                   return (
                     <button
                       key={lessonNum}
                       onClick={() => toggleLesson(lessonNum)}
                       type="button"
-                      className={`py-2 px-2.5 rounded-xl text-xs font-semibold flex items-center justify-between border transition-all ${
+                      title={`${label}: ${title} (${viTitle})`}
+                      className={`py-2 px-2.5 rounded-xl text-xs font-semibold flex items-center justify-between border transition-all text-left ${
                         isChecked
                           ? 'bg-rose-50 border-rose-300 text-rose-700 shadow-sm font-bold'
                           : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300 hover:bg-slate-50'
                       }`}
                     >
-                      <span className="truncate">{lessonLabel}</span>
+                      <div className="flex flex-col truncate mr-1.5 min-w-0">
+                        <div className="flex items-center gap-1.5 truncate">
+                          <span className={isChecked ? 'text-rose-700 font-bold shrink-0' : 'text-slate-900 font-semibold shrink-0'}>
+                            {label}:
+                          </span>
+                          <span className="text-rose-600 truncate font-medium">
+                            {title}
+                          </span>
+                        </div>
+                        <span className="text-[10px] text-slate-500 truncate font-normal">
+                          {viTitle}
+                        </span>
+                      </div>
                       {isChecked ? (
-                        <Check className="w-3.5 h-3.5 text-rose-600 shrink-0 ml-1" />
+                        <Check className="w-4 h-4 text-rose-600 shrink-0 ml-1" />
                       ) : (
-                        <span className="w-3.5 h-3.5 rounded border border-slate-300 shrink-0 ml-1" />
+                        <span className="w-4 h-4 rounded border border-slate-300 shrink-0 ml-1" />
                       )}
                     </button>
                   );

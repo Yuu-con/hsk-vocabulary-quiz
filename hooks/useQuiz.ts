@@ -121,10 +121,7 @@ export function useQuiz(initialLevel: QuizLevel = 'hsk1') {
     let chosenIds: number[] = [];
     if (selectedLessons && selectedLessons.length > 0) {
       chosenIds = dataset
-        .filter((_, idx) => {
-          const lessonNumber = Math.floor(idx / 10) + 1;
-          return selectedLessons.includes(lessonNumber);
-        })
+        .filter(q => (q.lesson ? selectedLessons.includes(q.lesson) : true))
         .map(q => q.id);
     } else {
       chosenIds = dataset.map(q => q.id);

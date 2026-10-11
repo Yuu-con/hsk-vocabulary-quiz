@@ -125,16 +125,13 @@ console.log('--- RUNNING SPACED REPETITION MASTERY LOOP TESTS ---');
 // Test 6: Lesson Selection filter
 {
   const dataset = HSK1_VOCAB_DATA;
-  const selectedLessons = [1, 3]; // Lesson 1 (words 1..10) and Lesson 3 (words 21..30)
-  const filtered = dataset.filter((_, idx) => {
-    const lessonNum = Math.floor(idx / 10) + 1;
-    return selectedLessons.includes(lessonNum);
-  });
+  const selectedLessons = [1, 3]; // Lesson 1 and Lesson 3
+  const filtered = dataset.filter(q => (q.lesson ? selectedLessons.includes(q.lesson) : false));
 
   assert.equal(filtered.length, 20, '2 selected lessons yield exactly 20 questions');
-  assert.equal(filtered[0].id, 1, 'First question is from Lesson 1');
-  assert.equal(filtered[10].id, 21, 'Eleventh question is from Lesson 3');
-  console.log('✔ Test 6: Lesson-based selection correctly filters chosen lessons');
+  assert.equal(filtered[0].lesson, 1, 'First questions are from Lesson 1');
+  assert.equal(filtered[10].lesson, 3, 'Questions 11-20 are from Lesson 3');
+  console.log('✔ Test 6: Lesson-based selection correctly filters chosen lessons using authentic lesson mapping');
 }
 
 // Test 7: Shuffling order
