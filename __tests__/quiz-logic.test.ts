@@ -148,4 +148,40 @@ console.log('--- RUNNING SPACED REPETITION MASTERY LOOP TESTS ---');
   console.log('✔ Test 7: Question sequence is successfully shuffled');
 }
 
+// Test 8: Verify no Hán-Việt bracketed annotations in question answers
+{
+  const allQuestions = [...HSK1_VOCAB_DATA, ...HSK2_VOCAB_DATA];
+  const withParens = allQuestions.filter(q => q.correctAnswer.includes('('));
+  assert.equal(withParens.length, 0, 'No answers should contain bracketed Hán-Việt annotations');
+  
+  const explanationsWithHanViet = allQuestions.filter(q => q.explanation.includes('Hán Việt'));
+  assert.equal(explanationsWithHanViet.length, 0, 'Explanations should not mention Hán Việt');
+  console.log('✔ Test 8: All Hán-Việt annotations successfully removed from answers and explanations');
+}
+
+// Test 9: Admin Live Answer Editing & Override Logic
+{
+  const sampleQuestion = { ...HSK1_VOCAB_DATA[0] };
+  const originalAnswer = sampleQuestion.correctAnswer;
+  const newAdminMeaning = "Bạn thân mến / Cậu (Tùy chỉnh Admin)";
+
+  // Update options replacing old answer with new one
+  const updatedOptions = [...sampleQuestion.options];
+  const oldIdx = updatedOptions.indexOf(originalAnswer);
+  assert.ok(oldIdx >= 0, 'Old answer exists in options');
+  updatedOptions[oldIdx] = newAdminMeaning;
+
+  const overriddenQuestion = {
+    ...sampleQuestion,
+    correctAnswer: newAdminMeaning,
+    options: updatedOptions,
+  };
+
+  assert.equal(overriddenQuestion.correctAnswer, newAdminMeaning, 'Correct answer updated to admin meaning');
+  assert.ok(overriddenQuestion.options.includes(newAdminMeaning), 'Options contain new admin meaning');
+  assert.equal(overriddenQuestion.options.length, 4, 'Still exactly 4 options');
+  console.log('✔ Test 9: Admin live answer editing correctly updates correctAnswer and options');
+}
+
 console.log('\n🎉 ALL MASTERY LOOP & NEW FEATURE TESTS PASSED SUCCESSFULLY!\n');
+

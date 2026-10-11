@@ -5,6 +5,12 @@ import { QuizQuestion, QuizProgress, QuizMode, UserAnswerRecord, QuizLevel } fro
 import { HSK1_VOCAB_DATA } from '@/data/hsk1-data';
 import { HSK2_VOCAB_DATA } from '@/data/hsk2-data';
 import { HSK_COMBINED_VOCAB_DATA } from '@/data/hsk-combined-data';
+import {
+  applyOverridesToDataset,
+  saveQuestionOverride,
+  removeQuestionOverride,
+  hasQuestionOverride,
+} from '@/lib/vocabOverrides';
 
 const STORAGE_PREFIX = 'hsk_mastery_loop_v1_';
 
@@ -49,6 +55,18 @@ export function useQuiz(initialLevel: QuizLevel = 'hsk1') {
   const [level, setLevel] = useState<QuizLevel>(initialLevel);
   const [state, setState] = useState<QuizProgress>(() => getInitialState(initialLevel));
   const [isHydrated, setIsHydrated] = useState(false);
+  const [overridesVersion, setOverridesVersion] = useState(0);
+
+  // Listen to custom overrides updates
+  useEffect(() => {
+    const handleOverridesUpdate = () => {
+      setOverridesVersion(v => v + 1);
+    };
+    window.addEventListener('hsk_vocab_overrides_updated', handleOverridesUpdate);
+    return () => {
+      window.removeEventListener('hsk_vocab_overrides_updated', handleOverridesUpdate);
+    };
+  }, []);
 
   // Load from localStorage whenever level changes
   useEffect(() => {
@@ -88,10 +106,11 @@ export function useQuiz(initialLevel: QuizLevel = 'hsk1') {
     }
   }, [state, isHydrated]);
 
-  // Full dataset for level
+  // Full dataset for level with admin overrides applied
   const fullDataset: QuizQuestion[] = useMemo(() => {
-    return getInitialDataset(state.level);
-  }, [state.level]);
+    const raw = getInitialDataset(state.level);
+    return applyOverridesToDataset(state.level, raw);
+  }, [state.level, overridesVersion]);
 
   // Questions for current round
   const activeRoundQuestions: QuizQuestion[] = useMemo(() => {
@@ -276,6 +295,48 @@ export function useQuiz(initialLevel: QuizLevel = 'hsk1') {
     });
   }, []);
 
+  // Admin action: Live update correct answer & explanation
+  const updateCurrentQuestionAnswer = useCallback(
+    (newCorrectAnswer: string, newExplanation?: string) => {
+      if (!currentQuestion) return;
+      saveQuestionOverride(state.level, currentQuestion, newCorrectAnswer, newExplanation);
+
+      // If user already answered, update user's answer record to reflect new correct answer
+      setState(prev => {
+        const existing = prev.currentRoundAnswers[currentQuestion.id];
+        if (existing) {
+          const wasCorrect = existing.isCorrect;
+          return {
+            ...prev,
+            currentRoundAnswers: {
+              ...prev.currentRoundAnswers,
+              [currentQuestion.id]: {
+                ...existing,
+                correctAnswer: newCorrectAnswer,
+                selectedAnswer: wasCorrect ? newCorrectAnswer : existing.selectedAnswer,
+              },
+            },
+          };
+        }
+        return prev;
+      });
+
+      setOverridesVersion(v => v + 1);
+    },
+    [currentQuestion, state.level]
+  );
+
+  // Admin action: Reset question override back to default
+  const resetCurrentQuestionAnswer = useCallback(() => {
+    if (!currentQuestion) return;
+    removeQuestionOverride(state.level, currentQuestion);
+    setOverridesVersion(v => v + 1);
+  }, [currentQuestion, state.level]);
+
+  const isCurrentQuestionOverridden = currentQuestion
+    ? hasQuestionOverride(state.level, currentQuestion)
+    : false;
+
   const answeredCountInRound = Object.keys(state.currentRoundAnswers).length;
   const hasSavedProgress =
     state.round > 1 || (answeredCountInRound > 0 && answeredCountInRound < totalQuestionsInRound);
@@ -311,5 +372,9 @@ export function useQuiz(initialLevel: QuizLevel = 'hsk1') {
     jumpToQuestion,
     startNextRound,
     setMode: (mode: QuizMode) => setState(prev => ({ ...prev, mode })),
+    // Admin Live Editing Actions
+    updateCurrentQuestionAnswer,
+    resetCurrentQuestionAnswer,
+    isCurrentQuestionOverridden,
   };
 }

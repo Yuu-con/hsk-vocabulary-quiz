@@ -12,7 +12,11 @@ import { NavigationTabs } from '@/components/NavigationTabs';
 import { SentencesSection } from '@/components/SentencesSection';
 import { ReadingSection } from '@/components/ReadingSection';
 import { ListeningSection } from '@/components/ListeningSection';
+import { AdminLoginModal } from '@/components/AdminLoginModal';
+import { AdminLiveEditor } from '@/components/AdminLiveEditor';
+import { useAdminAuth } from '@/hooks/useAdminAuth';
 import { PracticeTab } from '@/types/practice';
+import { Shield } from 'lucide-react';
 
 export default function HomePage() {
   const [activeTab, setActiveTab] = useState<PracticeTab>('vocab');
@@ -44,10 +48,15 @@ export default function HomePage() {
     jumpToQuestion,
     startNextRound,
     setMode,
+    updateCurrentQuestionAnswer,
+    resetCurrentQuestionAnswer,
+    isCurrentQuestionOverridden,
   } = useQuiz('hsk1');
 
+  const { isAdmin, adminUser } = useAdminAuth();
   const [showResetConfirm, setShowResetConfirm] = useState(false);
   const [isNavigatorOpen, setIsNavigatorOpen] = useState(false);
+  const [isAdminLoginOpen, setIsAdminLoginOpen] = useState(false);
 
   // Avoid flash during SSR hydration
   if (!isHydrated) {
@@ -144,6 +153,7 @@ export default function HomePage() {
                   onReset={() => setShowResetConfirm(true)}
                   onGoHome={() => setMode('idle')}
                   onOpenNavigator={() => setIsNavigatorOpen(true)}
+                  onOpenAdminModal={() => setIsAdminLoginOpen(true)}
                 />
 
                 <div className="flex-1 flex items-center justify-center">
@@ -159,6 +169,17 @@ export default function HomePage() {
                     isLastQuestion={currentIndex === totalQuestionsInRound - 1}
                   />
                 </div>
+
+                {/* Admin Live Editor pinned at the bottom corner of screen during quiz */}
+                <AdminLiveEditor
+                  question={currentQuestion}
+                  questionIndex={currentIndex}
+                  totalQuestions={totalQuestionsInRound}
+                  onUpdateAnswer={updateCurrentQuestionAnswer}
+                  onResetAnswer={resetCurrentQuestionAnswer}
+                  isOverridden={isCurrentQuestionOverridden}
+                  onOpenLoginModal={() => setIsAdminLoginOpen(true)}
+                />
               </>
             )}
 
@@ -201,9 +222,24 @@ export default function HomePage() {
         {activeTab === 'listening' && <ListeningSection />}
       </div>
 
+      {/* Admin Login Modal */}
+      <AdminLoginModal
+        isOpen={isAdminLoginOpen}
+        onClose={() => setIsAdminLoginOpen(false)}
+      />
+
       {/* Footer Branding */}
-      <footer className="w-full py-4 text-center text-xs text-slate-400 border-t border-slate-200/50 mt-auto">
-        <p>HSK Vocabulary Quiz · Luyện thi và thuộc 100% từ vựng HSK 1 & HSK 2 chuẩn HSK 2.0</p>
+      <footer className="w-full py-4 px-4 text-center text-xs text-slate-400 border-t border-slate-200/50 mt-auto">
+        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+          <p>HSK Vocabulary Quiz · Luyện thi và thuộc 100% từ vựng HSK 1 & HSK 2 chuẩn HSK 2.0</p>
+          <button
+            onClick={() => setIsAdminLoginOpen(true)}
+            className="text-slate-500 hover:text-rose-600 transition flex items-center gap-1.5 font-medium"
+          >
+            <Shield className="w-3.5 h-3.5 text-rose-500" />
+            <span>{isAdmin ? `Admin: ${adminUser?.username}` : 'Đăng nhập Quản trị viên'}</span>
+          </button>
+        </div>
       </footer>
     </main>
   );

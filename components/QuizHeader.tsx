@@ -1,8 +1,9 @@
 'use client';
 
 import React from 'react';
-import { RotateCcw, Home, LayoutGrid } from 'lucide-react';
+import { RotateCcw, Home, LayoutGrid, Shield } from 'lucide-react';
 import { QuizLevel } from '@/types/quiz';
+import { useAdminAuth } from '@/hooks/useAdminAuth';
 
 interface QuizHeaderProps {
   level: QuizLevel;
@@ -14,6 +15,7 @@ interface QuizHeaderProps {
   onReset: () => void;
   onGoHome?: () => void;
   onOpenNavigator?: () => void;
+  onOpenAdminModal?: () => void;
 }
 
 const LEVEL_LABELS: Record<QuizLevel, string> = {
@@ -32,7 +34,9 @@ export const QuizHeader: React.FC<QuizHeaderProps> = ({
   onReset,
   onGoHome,
   onOpenNavigator,
+  onOpenAdminModal,
 }) => {
+  const { isAdmin } = useAdminAuth();
   const currentQuestionNumber = Math.min(currentIndex + 1, totalQuestions);
   const progressPercent = totalQuestions > 0 ? (currentQuestionNumber / totalQuestions) * 100 : 0;
 
@@ -72,6 +76,22 @@ export const QuizHeader: React.FC<QuizHeaderProps> = ({
           </div>
 
           <div className="flex items-center gap-1.5">
+            {onOpenAdminModal && (
+              <button
+                onClick={onOpenAdminModal}
+                title={isAdmin ? "Quản trị viên (Đang đăng nhập)" : "Đăng nhập Quản trị viên"}
+                aria-label="Quản trị viên"
+                className={`flex items-center gap-1 px-2 py-1.5 text-xs font-semibold rounded-lg transition ${
+                  isAdmin
+                    ? 'bg-rose-50 text-rose-700 border border-rose-200 shadow-xs'
+                    : 'text-slate-600 hover:text-slate-900 bg-slate-100 hover:bg-slate-200'
+                }`}
+              >
+                <Shield className="w-3.5 h-3.5 text-rose-600" />
+                <span className="hidden sm:inline">{isAdmin ? 'Admin' : 'Admin'}</span>
+              </button>
+            )}
+
             {onOpenNavigator && (
               <button
                 onClick={onOpenNavigator}
