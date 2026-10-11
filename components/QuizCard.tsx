@@ -4,6 +4,7 @@ import React, { useEffect, useState, useMemo } from 'react';
 import { QuizQuestion, UserAnswerRecord } from '@/types/quiz';
 import { Volume2, CheckCircle2, XCircle, ArrowRight, ArrowLeft } from 'lucide-react';
 import { playChineseAudio, shuffleArray } from '@/lib/quiz-utils';
+import { RoastBanner } from '@/components/RoastBanner';
 
 interface QuizCardProps {
   question: QuizQuestion;
@@ -243,6 +244,13 @@ export const QuizCard: React.FC<QuizCardProps> = ({
                       </span>
                     )}
                   </div>
+
+                  {/* Humorous wrong answer roast banner */}
+                  {!isCorrect && (
+                    <RoastBanner
+                      seed={question.id * 37 + (userAnswer?.answeredAt || questionIndex)}
+                    />
+                  )}
 
                   {/* Highlight Core Word: Hanzi + Pinyin + Vietnamese Meaning */}
                   <div className="bg-white/80 rounded-xl p-3 border border-slate-200/80 shadow-xs">

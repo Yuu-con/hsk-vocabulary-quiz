@@ -183,5 +183,25 @@ console.log('--- RUNNING SPACED REPETITION MASTERY LOOP TESTS ---');
   console.log('✔ Test 9: Admin live answer editing correctly updates correctAnswer and options');
 }
 
+// Test 10: Humorous Wrong Answer Roasts
+{
+  const { WRONG_ANSWER_ROASTS, getRandomRoast } = require('../data/roasts');
+  assert.ok(WRONG_ANSWER_ROASTS.length >= 14, 'Must have at least 14 roast messages across all categories');
+  
+  const sample1 = getRandomRoast(0);
+  assert.ok(sample1 && sample1.quote, 'Roast message has quote');
+  assert.ok(sample1.category, 'Roast message has category');
+
+  // Verify key categories exist
+  const categories = WRONG_ANSWER_ROASTS.map((r: any) => r.category);
+  assert.ok(categories.some((c: string) => c.includes('khen đểu')), 'Includes khen đểu category');
+  assert.ok(categories.some((c: string) => c.includes('toán học')), 'Includes toán học category');
+  assert.ok(categories.some((c: string) => c.includes('xát muối')), 'Includes xát muối category');
+  assert.ok(categories.some((c: string) => c.includes('kèo phạt')), 'Includes kèo phạt category');
+
+  console.log('✔ Test 10: Humorous wrong answer roasts properly loaded and formatted');
+}
+
 console.log('\n🎉 ALL MASTERY LOOP & NEW FEATURE TESTS PASSED SUCCESSFULLY!\n');
+
 

@@ -18,6 +18,7 @@ import {
   ArrowRight,
   RotateCcw,
 } from 'lucide-react';
+import { RoastBanner } from '@/components/RoastBanner';
 
 export const SentencesSection: React.FC = () => {
   const [selectedLevel, setSelectedLevel] = useState<'all' | 'hsk1' | 'hsk2'>('all');
@@ -582,6 +583,11 @@ export const SentencesSection: React.FC = () => {
                       </span>
                     )}
                   </div>
+
+                  {/* Roast / Teasing banner on wrong answer */}
+                  {!isCorrectAnswer && (
+                    <RoastBanner seed={currentQuizItem.id * 43 + quizIndex} />
+                  )}
 
                   {/* Prominent Core Sentence Display: Hanzi + Pinyin + Vietnamese */}
                   <div className="bg-white/95 p-4 rounded-xl border border-stone-200 shadow-xs space-y-2">
