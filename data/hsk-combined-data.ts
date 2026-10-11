@@ -8,13 +8,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 1,
     "question": "你 — nǐ nghĩa là gì?",
     "options": [
-      "Bạn / Anh / Chị",
-      "Tôi / Mình",
-      "Anh ấy / Nó",
-      "Chúng tôi / Chúng ta"
+      "Bạn",
+      "Tôi",
+      "Anh ấy",
+      "Chúng tôi"
     ],
-    "correctAnswer": "Bạn / Anh / Chị",
-    "explanation": "你 (nǐ) là đại từ nhân xưng ngôi thứ 2 (Ví dụ: 你好 - Chào bạn)."
+    "correctAnswer": "Bạn",
+    "explanation": "你 (nǐ) là đại từ nhân xưng ngôi thứ hai (Ví dụ: 你好 - Chào bạn)."
   },
   {
     "id": 2,
@@ -23,13 +23,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 1,
     "question": "好 — hǎo nghĩa là gì?",
     "options": [
-      "Tốt / Đẹp / Khỏe",
-      "Xấu xí / Tệ hại",
-      "To lớn / Khổng lồ",
-      "Nhỏ bé / Chật hẹp"
+      "Tốt",
+      "Xấu",
+      "To",
+      "Nhỏ"
     ],
-    "correctAnswer": "Tốt / Đẹp / Khỏe",
-    "explanation": "好 (hǎo) mang nghĩa tốt lành, khỏe mạnh, thuận lợi (Ví dụ: 身体好 - Sức khỏe tốt)."
+    "correctAnswer": "Tốt",
+    "explanation": "好 (hǎo) mang nghĩa tốt lành, khỏe mạnh (Ví dụ: 很好 - Rất tốt)."
   },
   {
     "id": 3,
@@ -40,11 +40,11 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "options": [
       "Xin lỗi",
       "Cảm ơn",
-      "Không có chi / Đừng ngại",
-      "Tạm biệt"
+      "Tạm biệt",
+      "Không sao"
     ],
     "correctAnswer": "Xin lỗi",
-    "explanation": "对不起 (duìbuqǐ) dùng khi nhận lỗi, xin lỗi chân thành."
+    "explanation": "对不起 (duìbuqǐ) dùng khi xin lỗi chân thành."
   },
   {
     "id": 4,
@@ -53,13 +53,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 1,
     "question": "没关系 — méi guānxi nghĩa là gì?",
     "options": [
-      "Không sao / Không hề gì",
-      "Xin lỗi chân thành",
-      "Rất vui được gặp",
-      "Hẹn ngày tái ngộ"
+      "Không sao",
+      "Xin lỗi",
+      "Cảm ơn",
+      "Tạm biệt"
     ],
-    "correctAnswer": "Không sao / Không hề gì",
-    "explanation": "没关系 (méi guānxi) dùng đáp lại lời xin lỗi: không sao đâu, không có can hệ gì."
+    "correctAnswer": "Không sao",
+    "explanation": "没关系 (méi guānxi) dùng đáp lại lời xin lỗi."
   },
   {
     "id": 5,
@@ -68,13 +68,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 1,
     "question": "一 — yī nghĩa là gì?",
     "options": [
-      "Số 1 / Một",
-      "Số 2 / Hai",
-      "Số 3 / Ba",
-      "Số 10 / Mười"
+      "Một",
+      "Hai",
+      "Ba",
+      "Mười"
     ],
-    "correctAnswer": "Số 1 / Một",
-    "explanation": "一 (yī) là con số 1 (Ví dụ: 一个 - một cái, 一起 - cùng nhau)."
+    "correctAnswer": "Một",
+    "explanation": "一 (yī) là số 1 trong tiếng Trung."
   },
   {
     "id": 6,
@@ -83,13 +83,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 1,
     "question": "二 — èr nghĩa là gì?",
     "options": [
-      "Số 2 / Hai",
-      "Số 1 / Một",
-      "Số 3 / Ba",
-      "Số 4 / Bốn"
+      "Hai",
+      "Một",
+      "Ba",
+      "Bốn"
     ],
-    "correctAnswer": "Số 2 / Hai",
-    "explanation": "二 (èr) là số đếm 2 trong tiếng Trung."
+    "correctAnswer": "Hai",
+    "explanation": "二 (èr) là số 2 trong tiếng Trung."
   },
   {
     "id": 7,
@@ -98,13 +98,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 1,
     "question": "三 — sān nghĩa là gì?",
     "options": [
-      "Số 3 / Ba",
-      "Số 4 / Bốn",
-      "Số 2 / Hai",
-      "Số 5 / Năm"
+      "Ba",
+      "Bốn",
+      "Hai",
+      "Năm"
     ],
-    "correctAnswer": "Số 3 / Ba",
-    "explanation": "三 (sān) là con số 3 (Ví dụ: 三个人 - ba người)."
+    "correctAnswer": "Ba",
+    "explanation": "三 (sān) là số 3 trong tiếng Trung."
   },
   {
     "id": 8,
@@ -113,13 +113,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 1,
     "question": "四 — sì nghĩa là gì?",
     "options": [
-      "Số 4 / Bốn",
-      "Số 5 / Năm",
-      "Số 6 / Sáu",
-      "Số 7 / Bảy"
+      "Bốn",
+      "Năm",
+      "Sáu",
+      "Bảy"
     ],
-    "correctAnswer": "Số 4 / Bốn",
-    "explanation": "四 (sì) là con số 4 (Ví dụ: 四月 - tháng 4)."
+    "correctAnswer": "Bốn",
+    "explanation": "四 (sì) là số 4 trong tiếng Trung."
   },
   {
     "id": 9,
@@ -128,13 +128,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 1,
     "question": "五 — wǔ nghĩa là gì?",
     "options": [
-      "Số 5 / Năm",
-      "Số 4 / Bốn",
-      "Số 6 / Sáu",
-      "Số 7 / Bảy"
+      "Năm",
+      "Bốn",
+      "Sáu",
+      "Tám"
     ],
-    "correctAnswer": "Số 5 / Năm",
-    "explanation": "五 (wǔ) là con số 5 (Ví dụ: 星期五 - thứ Sáu)."
+    "correctAnswer": "Năm",
+    "explanation": "五 (wǔ) là số 5 trong tiếng Trung."
   },
   {
     "id": 10,
@@ -143,13 +143,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 1,
     "question": "是 — shì nghĩa là gì?",
     "options": [
-      "Là / Đúng / Phải",
-      "Không phải / Sai lầm",
-      "Có / Tồn tại",
-      "Ở tại / Đang"
+      "Là",
+      "Có",
+      "Ở",
+      "Đi"
     ],
-    "correctAnswer": "Là / Đúng / Phải",
-    "explanation": "是 (shì) là động từ phán đoán: là, phải (Ví dụ: 我是学生 - Tôi là học sinh)."
+    "correctAnswer": "Là",
+    "explanation": "是 (shì) là động từ khẳng định: là, phải (Ví dụ: 我是学生 - Tôi là học sinh)."
   },
   {
     "id": 11,
@@ -159,12 +159,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "谢谢 — xièxie nghĩa là gì?",
     "options": [
       "Cảm ơn",
-      "Xin lỗi chân tình",
-      "Tạm biệt chia tay",
-      "Đừng khách sáo chi"
+      "Xin lỗi",
+      "Tạm biệt",
+      "Không sao"
     ],
     "correctAnswer": "Cảm ơn",
-    "explanation": "谢谢 (xièxie) là lời cảm ơn khi nhận sự giúp đỡ (谢谢你 - Cảm ơn bạn)."
+    "explanation": "谢谢 (xièxie) dùng để bày tỏ lòng biết ơn."
   },
   {
     "id": 12,
@@ -173,13 +173,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 2,
     "question": "不 — bù nghĩa là gì?",
     "options": [
-      "Không / Chẳng",
-      "Rất / Lắm",
-      "Đều / Cùng",
-      "Cũng / Lại"
+      "Không",
+      "Có",
+      "Là",
+      "Rất"
     ],
-    "correctAnswer": "Không / Chẳng",
-    "explanation": "不 (bù) là phó từ phủ định, đứng trước động từ/tính từ (Ví dụ: 不好 - không tốt)."
+    "correctAnswer": "Không",
+    "explanation": "不 (bù) là phó từ phủ định (Ví dụ: 不好 - không tốt)."
   },
   {
     "id": 13,
@@ -188,13 +188,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 2,
     "question": "不客气 — bú kèqi nghĩa là gì?",
     "options": [
-      "Đừng khách sáo / Không có chi",
-      "Xin lỗi chân thành",
-      "Cảm ơn sâu sắc",
-      "Hẹn sớm gặp lại"
+      "Đừng khách sáo",
+      "Cảm ơn bạn",
+      "Xin lỗi bạn",
+      "Hẹn gặp lại"
     ],
-    "correctAnswer": "Đừng khách sáo / Không có chi",
-    "explanation": "不客气 (bú kèqi) dùng đáp lại lời cảm ơn 谢谢."
+    "correctAnswer": "Đừng khách sáo",
+    "explanation": "不客气 (bú kèqi) dùng đáp lại lời cảm ơn."
   },
   {
     "id": 14,
@@ -203,13 +203,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 2,
     "question": "再见 — zàijiàn nghĩa là gì?",
     "options": [
-      "Tạm biệt / Hẹn gặp lại",
-      "Xin chào gặp mặt",
-      "Cảm ơn giúp đỡ",
-      "Không hề có chi"
+      "Tạm biệt",
+      "Xin chào",
+      "Cảm ơn",
+      "Xin lỗi"
     ],
-    "correctAnswer": "Tạm biệt / Hẹn gặp lại",
-    "explanation": "再见 (zàijiàn) mang nghĩa gặp lại lần sau, tạm biệt lúc chia tay."
+    "correctAnswer": "Tạm biệt",
+    "explanation": "再见 (zàijiàn) dùng khi chào tạm biệt (hẹn gặp lại)."
   },
   {
     "id": 15,
@@ -218,13 +218,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 2,
     "question": "六 — liù nghĩa là gì?",
     "options": [
-      "Số 6 / Sáu",
-      "Số 5 / Năm",
-      "Số 7 / Bảy",
-      "Số 8 / Tám"
+      "Sáu",
+      "Bảy",
+      "Tám",
+      "Chín"
     ],
-    "correctAnswer": "Số 6 / Sáu",
-    "explanation": "六 (liù) là con số 6 (Ví dụ: 六点 - 6 giờ)."
+    "correctAnswer": "Sáu",
+    "explanation": "六 (liù) là số 6 trong tiếng Trung."
   },
   {
     "id": 16,
@@ -233,13 +233,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 2,
     "question": "七 — qī nghĩa là gì?",
     "options": [
-      "Số 7 / Bảy",
-      "Số 6 / Sáu",
-      "Số 8 / Tám",
-      "Số 9 / Chín"
+      "Bảy",
+      "Sáu",
+      "Tám",
+      "Chín"
     ],
-    "correctAnswer": "Số 7 / Bảy",
-    "explanation": "七 (qī) là con số 7 (Ví dụ: 七月 - tháng 7)."
+    "correctAnswer": "Bảy",
+    "explanation": "七 (qī) là số 7 trong tiếng Trung."
   },
   {
     "id": 17,
@@ -248,13 +248,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 2,
     "question": "八 — bā nghĩa là gì?",
     "options": [
-      "Số 8 / Tám",
-      "Số 7 / Bảy",
-      "Số 9 / Chín",
-      "Số 6 / Sáu"
+      "Tám",
+      "Bảy",
+      "Chín",
+      "Mười"
     ],
-    "correctAnswer": "Số 8 / Tám",
-    "explanation": "八 (bā) là con số 8 (phát âm gần từ 'phát' - phát tài)."
+    "correctAnswer": "Tám",
+    "explanation": "八 (bā) là số 8 trong tiếng Trung."
   },
   {
     "id": 18,
@@ -263,13 +263,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 2,
     "question": "九 — jiǔ nghĩa là gì?",
     "options": [
-      "Số 9 / Chín",
-      "Số 8 / Tám",
-      "Số 7 / Bảy",
-      "Số 6 / Sáu"
+      "Chín",
+      "Tám",
+      "Mười",
+      "Bảy"
     ],
-    "correctAnswer": "Số 9 / Chín",
-    "explanation": "九 (jiǔ) là con số 9 (Ví dụ: 九岁 - 9 tuổi)."
+    "correctAnswer": "Chín",
+    "explanation": "九 (jiǔ) là số 9 trong tiếng Trung."
   },
   {
     "id": 19,
@@ -278,13 +278,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 2,
     "question": "十 — shí nghĩa là gì?",
     "options": [
-      "Số 10 / Mười",
-      "Số 1 / Một",
-      "Số 4 / Bốn",
-      "Số 100 / Trăm"
+      "Mười",
+      "Chín",
+      "Tám",
+      "Một"
     ],
-    "correctAnswer": "Số 10 / Mười",
-    "explanation": "十 (shí) là số 10 (Ví dụ: 十个人 - mười người)."
+    "correctAnswer": "Mười",
+    "explanation": "十 (shí) là số 10 trong tiếng Trung."
   },
   {
     "id": 20,
@@ -293,12 +293,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 2,
     "question": "人 — rén nghĩa là gì?",
     "options": [
-      "Người / Con người",
-      "Động vật nuôi",
-      "Đồ vật dụng",
-      "Cây cối cảnh"
+      "Người",
+      "Nhà",
+      "Nước",
+      "Tên"
     ],
-    "correctAnswer": "Người / Con người",
+    "correctAnswer": "Người",
     "explanation": "人 (rén) chỉ con người (Ví dụ: 中国人 - người Trung Quốc)."
   },
   {
@@ -309,12 +309,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "叫 — jiào nghĩa là gì?",
     "options": [
       "Gọi / Tên là",
-      "Nói / Kể lại",
-      "Hỏi / Thắc mắc",
-      "Nghe / Hiểu rõ"
+      "Nói / Kể là",
+      "Hỏi / Nhắc là",
+      "Xem / Trông là"
     ],
     "correctAnswer": "Gọi / Tên là",
-    "explanation": "叫 (jiào) nghĩa là kêu, gọi hoặc giới thiệu họ tên (我叫李明 - Tôi tên là Lý Minh)."
+    "explanation": "叫 (jiào) có 2 nghĩa: gọi tên hoặc có tên là (Ví dụ: 我叫李明 - Tôi tên là Lý Minh)."
   },
   {
     "id": 22,
@@ -323,13 +323,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 3,
     "question": "什么 — shénme nghĩa là gì?",
     "options": [
-      "Cái gì / Gì",
-      "Ở đâu / Chỗ nào",
-      "Bao nhiêu / Mấy",
-      "Ai / Người nào"
+      "Cái gì",
+      "Ở đâu",
+      "Ai đó",
+      "Khi nào"
     ],
-    "correctAnswer": "Cái gì / Gì",
-    "explanation": "什么 (shénme) là đại từ nghi vấn hỏi về đồ vật, tên gọi (什么名字 - Tên gì)."
+    "correctAnswer": "Cái gì",
+    "explanation": "什么 (shénme) là đại từ nghi vấn hỏi về đồ vật, sự việc."
   },
   {
     "id": 23,
@@ -338,13 +338,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 3,
     "question": "名字 — míngzi nghĩa là gì?",
     "options": [
-      "Tên / Tên gọi",
-      "Tuổi tác năm",
-      "Quê quán xứ",
-      "Nghề nghiệp làm"
+      "Tên",
+      "Tuổi",
+      "Nhà",
+      "Trường"
     ],
-    "correctAnswer": "Tên / Tên gọi",
-    "explanation": "名字 (míngzi) là danh xưng, tên gọi của người hoặc vật."
+    "correctAnswer": "Tên",
+    "explanation": "名字 (míngzi) nghĩa là tên gọi của người hoặc vật."
   },
   {
     "id": 24,
@@ -353,13 +353,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 3,
     "question": "我 — wǒ nghĩa là gì?",
     "options": [
-      "Tôi / Mình / Ta",
-      "Bạn / Anh / Chị",
-      "Anh ấy / Cô ấy",
-      "Chúng tôi / Bọn họ"
+      "Tôi",
+      "Bạn",
+      "Anh ấy",
+      "Cô ấy"
     ],
-    "correctAnswer": "Tôi / Mình / Ta",
-    "explanation": "我 (wǒ) là đại từ nhân xưng ngôi thứ nhất số ít."
+    "correctAnswer": "Tôi",
+    "explanation": "我 (wǒ) là đại từ nhân xưng ngôi thứ nhất (tôi, mình)."
   },
   {
     "id": 25,
@@ -368,13 +368,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 3,
     "question": "老师 — lǎoshī nghĩa là gì?",
     "options": [
-      "Thầy cô / Giáo viên",
-      "Học sinh / Trò nhỏ",
-      "Bác sĩ / Y sĩ",
-      "Bạn bè"
+      "Giáo viên",
+      "Học sinh",
+      "Bác sĩ",
+      "Bạn học"
     ],
-    "correctAnswer": "Thầy cô / Giáo viên",
-    "explanation": "老师 (lǎoshī) là danh xưng tôn kính dành cho người dạy học."
+    "correctAnswer": "Giáo viên",
+    "explanation": "老师 (lǎoshī) là thầy giáo, cô giáo."
   },
   {
     "id": 26,
@@ -383,13 +383,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 3,
     "question": "学生 — xuésheng nghĩa là gì?",
     "options": [
-      "Học sinh / Học trò",
-      "Thầy cô giáo viên",
-      "Bác sĩ khám bệnh",
-      "Kỹ sư công trình"
+      "Học sinh",
+      "Giáo viên",
+      "Bác sĩ",
+      "Bạn bè"
     ],
-    "correctAnswer": "Học sinh / Học trò",
-    "explanation": "学生 (xuésheng) là người đang theo học tại trường lớp."
+    "correctAnswer": "Học sinh",
+    "explanation": "学生 (xuésheng) là học sinh, sinh viên."
   },
   {
     "id": 27,
@@ -398,13 +398,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 3,
     "question": "吗 — ma nghĩa là gì?",
     "options": [
-      "Không / Phải không",
-      "Đã rồi",
-      "Của ai",
-      "Và cùng"
+      "Phải không",
+      "Cái gì",
+      "Ở đâu",
+      "Thế nào"
     ],
-    "correctAnswer": "Không / Phải không",
-    "explanation": "吗 (ma) đặt ở cuối câu trần thuật để biến câu thành câu hỏi (Ví dụ: 你好吗 - Bạn khỏe không?)."
+    "correctAnswer": "Phải không",
+    "explanation": "吗 (ma) là trợ từ nghi vấn đặt ở cuối câu hỏi có/không."
   },
   {
     "id": 28,
@@ -414,12 +414,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "中国 — Zhōngguó nghĩa là gì?",
     "options": [
       "Trung Quốc",
-      "Việt Nam láng giềng",
-      "Nước Mỹ xa xôi",
-      "Bắc Kinh thủ đô"
+      "Bắc Kinh",
+      "Việt Nam",
+      "Nước Mỹ"
     ],
     "correctAnswer": "Trung Quốc",
-    "explanation": "中国 (Zhōngguó) là đất nước Trung Hoa."
+    "explanation": "中国 (Zhōngguó) là đất nước Trung Quốc."
   },
   {
     "id": 29,
@@ -429,12 +429,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "北京 — Běijīng nghĩa là gì?",
     "options": [
       "Bắc Kinh",
-      "Thượng Hải sầm uất",
-      "Quảng Châu mua bán",
-      "Nam Kinh cổ kính"
+      "Thượng Hải",
+      "Trung Quốc",
+      "Hà Nội"
     ],
     "correctAnswer": "Bắc Kinh",
-    "explanation": "北京 (Běijīng), thủ đô của Trung Quốc."
+    "explanation": "北京 (Běijīng) là thủ đô Bắc Kinh của Trung Quốc."
   },
   {
     "id": 30,
@@ -443,13 +443,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 3,
     "question": "学习 — xuéxí nghĩa là gì?",
     "options": [
-      "Học tập / Học hỏi",
-      "Làm việc công tác",
-      "Nghỉ ngơi thư giãn",
-      "Mua bán trao đổi"
+      "Học tập",
+      "Làm việc",
+      "Nghỉ ngơi",
+      "Vui chơi"
     ],
-    "correctAnswer": "Học tập / Học hỏi",
-    "explanation": "学习 (xuéxí) là động từ trau dồi kiến thức (Ví dụ: 学习汉语 - học tiếng Trung)."
+    "correctAnswer": "Học tập",
+    "explanation": "学习 (xuéxí) là hoạt động học tập, tiếp thu kiến thức."
   },
   {
     "id": 31,
@@ -458,13 +458,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 4,
     "question": "她 — tā nghĩa là gì?",
     "options": [
-      "Cô ấy / Bà ấy",
+      "Cô ấy",
       "Anh ấy",
-      "Đồ vật đó",
-      "Tôi / Mình"
+      "Tôi",
+      "Bạn"
     ],
-    "correctAnswer": "Cô ấy / Bà ấy",
-    "explanation": "她 (tā) là đại từ nhân xưng ngôi thứ ba số ít chỉ phái nữ (bộ Nữ 女 đứng trước)."
+    "correctAnswer": "Cô ấy",
+    "explanation": "她 (tā) là đại từ nhân xưng ngôi thứ ba chỉ nữ giới."
   },
   {
     "id": 32,
@@ -473,13 +473,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 4,
     "question": "谁 — shéi nghĩa là gì?",
     "options": [
-      "Ai / Người nào",
-      "Cái gì / Đồ gì",
-      "Ở đâu / Chỗ nào",
-      "Bao giờ / Lúc nào"
+      "Ai",
+      "Gì",
+      "Đâu",
+      "Nào"
     ],
-    "correctAnswer": "Ai / Người nào",
-    "explanation": "谁 (shéi) là đại từ nghi vấn dùng để hỏi người (Ví dụ: 他是谁 - Anh ấy là ai?)."
+    "correctAnswer": "Ai",
+    "explanation": "谁 (shéi) là đại từ nghi vấn hỏi về người."
   },
   {
     "id": 33,
@@ -488,13 +488,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 4,
     "question": "的 — de nghĩa là gì?",
     "options": [
-      "Của / Đích",
-      "Và / Cùng nhau",
-      "Tại / Ở đâu",
-      "Đã / Từng qua"
+      "Của",
+      "Và",
+      "Với",
+      "Là"
     ],
-    "correctAnswer": "Của / Đích",
-    "explanation": "的 (de) kết nối định ngữ với trung tâm ngữ (Ví dụ: 我的书 - Sách của tôi)."
+    "correctAnswer": "Của",
+    "explanation": "的 (de) là trợ từ kết cấu biểu thị sở hữu (Ví dụ: 我的 - của tôi)."
   },
   {
     "id": 34,
@@ -503,13 +503,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 4,
     "question": "汉语 — Hànyǔ nghĩa là gì?",
     "options": [
-      "Tiếng Trung / Hán ngữ",
-      "Chữ Hán tự dạng",
-      "Người Trung Hoa",
-      "Đất nước Trung Quốc"
+      "Tiếng Trung",
+      "Tiếng Anh",
+      "Tiếng Pháp",
+      "Tiếng Nhật"
     ],
-    "correctAnswer": "Tiếng Trung / Hán ngữ",
-    "explanation": "汉语 (Hànyǔ) là ngôn ngữ tiếng Trung Quốc."
+    "correctAnswer": "Tiếng Trung",
+    "explanation": "汉语 (Hànyǔ) là tiếng Trung (Hán ngữ)."
   },
   {
     "id": 35,
@@ -518,13 +518,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 4,
     "question": "哪 — nǎ nghĩa là gì?",
     "options": [
-      "Nào / Đâu",
-      "Kia / Đó",
-      "Đây / Này",
-      "Ai / Người nào"
+      "Nào",
+      "Đây",
+      "Kia",
+      "Đâu"
     ],
-    "correctAnswer": "Nào / Đâu",
-    "explanation": "哪 (nǎ) là đại từ nghi vấn chỉ sự lựa chọn (Ví dụ: 哪国人 - Người nước nào?)."
+    "correctAnswer": "Nào",
+    "explanation": "哪 (nǎ) là đại từ nghi vấn (Ví dụ: 哪国人 - người nước nào)."
   },
   {
     "id": 36,
@@ -533,13 +533,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 4,
     "question": "呢 — ne nghĩa là gì?",
     "options": [
-      "Thì sao / Nhỉ",
-      "Không phải không",
-      "Tại sao nguyên do",
-      "Bao giờ thời điểm"
+      "Thì sao",
+      "Ở đâu",
+      "Là gì",
+      "Thế nào"
     ],
-    "correctAnswer": "Thì sao / Nhỉ",
-    "explanation": "呢 (ne) dùng trong câu hỏi tỉnh lược (Ví dụ: 你呢？- Còn bạn thì sao?)."
+    "correctAnswer": "Thì sao",
+    "explanation": "呢 (ne) là trợ từ ngữ khí đặt ở cuối câu để hỏi tỉnh lược (Ví dụ: 你呢 - còn bạn thì sao)."
   },
   {
     "id": 37,
@@ -548,13 +548,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 4,
     "question": "他 — tā nghĩa là gì?",
     "options": [
-      "Anh ấy / Ông ấy",
+      "Anh ấy",
       "Cô ấy",
-      "Đồ vật đó",
-      "Chúng tôi"
+      "Tôi",
+      "Bạn"
     ],
-    "correctAnswer": "Anh ấy / Ông ấy",
-    "explanation": "他 (tā) là đại từ nhân xưng ngôi thứ ba số ít chỉ nam giới (bộ Nhân đứng trước)."
+    "correctAnswer": "Anh ấy",
+    "explanation": "他 (tā) là đại từ nhân xưng ngôi thứ ba chỉ nam giới."
   },
   {
     "id": 38,
@@ -563,13 +563,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 4,
     "question": "同学 — tóngxué nghĩa là gì?",
     "options": [
-      "Bạn học / Bạn cùng lớp",
-      "Thầy cô giáo viên",
-      "Bác sĩ bệnh viện",
-      "Hàng xóm láng giềng"
+      "Bạn học",
+      "Thầy cô",
+      "Bác sĩ",
+      "Bạn thân"
     ],
-    "correctAnswer": "Bạn học / Bạn cùng lớp",
-    "explanation": "同学 (tóngxué) chỉ người học chung trường lớp."
+    "correctAnswer": "Bạn học",
+    "explanation": "同学 (tóngxué) là bạn học cùng lớp hoặc cùng trường."
   },
   {
     "id": 39,
@@ -579,12 +579,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "朋友 — péngyou nghĩa là gì?",
     "options": [
       "Bạn bè",
-      "Thầy cô giáo dục",
-      "Người cha gia đình",
-      "Đồng nghiệp cơ quan"
+      "Người thân",
+      "Thầy cô",
+      "Học sinh"
     ],
     "correctAnswer": "Bạn bè",
-    "explanation": "朋友 (péngyou) chỉ người bạn bè thân thiết."
+    "explanation": "朋友 (péngyou) nghĩa là bạn bè."
   },
   {
     "id": 40,
@@ -593,13 +593,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 4,
     "question": "认识 — rènshi nghĩa là gì?",
     "options": [
-      "Quen biết / Nhận biết",
-      "Học tập rèn luyện",
-      "Gặp gỡ chia tay",
-      "Nói chuyện trao đổi"
+      "Quen biết",
+      "Hiểu lầm",
+      "Quên mất",
+      "Tìm thấy"
     ],
-    "correctAnswer": "Quen biết / Nhận biết",
-    "explanation": "认识 (rènshi) nghĩa là quen biết ai đó (很高兴认识你 - Rất vui được quen biết bạn)."
+    "correctAnswer": "Quen biết",
+    "explanation": "认识 (rènshi) nghĩa là quen biết, nhận ra ai đó."
   },
   {
     "id": 41,
@@ -608,13 +608,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 5,
     "question": "家 — jiā nghĩa là gì?",
     "options": [
-      "Gia đình / Nhà",
-      "Trường học",
-      "Cửa hàng quán",
-      "Công ty doanh nghiệp"
+      "Nhà / Gia đình",
+      "Trường / Lớp học",
+      "Cửa hàng / Tiệm",
+      "Công ty / Xưởng"
     ],
-    "correctAnswer": "Gia đình / Nhà",
-    "explanation": "家 (jiā) là ngôi nhà hoặc mái ấm gia đình (Ví dụ: 我家 - nhà tôi)."
+    "correctAnswer": "Nhà / Gia đình",
+    "explanation": "家 (jiā) vừa là gia đình vừa là ngôi nhà nơi mình sinh sống."
   },
   {
     "id": 42,
@@ -623,13 +623,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 5,
     "question": "有 — yǒu nghĩa là gì?",
     "options": [
-      "Có / Tồn tại / Sở hữu",
-      "Không có / Vắng",
-      "Là / Đúng phải",
-      "Ở tại / Nơi chốn"
+      "Có",
+      "Không",
+      "Là",
+      "Ở"
     ],
-    "correctAnswer": "Có / Tồn tại / Sở hữu",
-    "explanation": "有 (yǒu) biểu thị sự sở hữu hoặc tồn tại (Ví dụ: 我有一本书 - Tôi có 1 quyển sách)."
+    "correctAnswer": "Có",
+    "explanation": "有 (yǒu) biểu thị sự tồn tại hoặc sở hữu (Ví dụ: 我有 - tôi có)."
   },
   {
     "id": 43,
@@ -638,13 +638,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 5,
     "question": "几 — jǐ nghĩa là gì?",
     "options": [
-      "Mấy / Vài",
+      "Mấy",
       "Bao nhiêu",
-      "Cái nào lựa chọn",
-      "Ở đâu / Vị trí nào"
+      "Cái gì",
+      "Khi nào"
     ],
-    "correctAnswer": "Mấy / Vài",
-    "explanation": "几 (jǐ) dùng để hỏi số lượng nhỏ dưới 10 (Ví dụ: 几口人 - mấy người)."
+    "correctAnswer": "Mấy",
+    "explanation": "几 (jǐ) là từ để hỏi số lượng thường dưới 10."
   },
   {
     "id": 44,
@@ -659,7 +659,7 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
       "Ngày"
     ],
     "correctAnswer": "Tuổi",
-    "explanation": "岁 (suì) là đơn vị đo tuổi tác (Ví dụ: 二十岁 - 20 tuổi)."
+    "explanation": "岁 (suì) là lượng từ chỉ tuổi tác."
   },
   {
     "id": 45,
@@ -668,13 +668,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 5,
     "question": "了 — le nghĩa là gì?",
     "options": [
-      "Rồi / Biến chuyển",
-      "Của ai liên kết",
-      "Không phải phủ định",
-      "Cũng vậy tương đồng"
+      "Rồi",
+      "Chưa",
+      "Đang",
+      "Sẽ"
     ],
-    "correctAnswer": "Rồi / Biến chuyển",
-    "explanation": "了 (le) đặt cuối câu hoặc sau động từ biểu thị trạng thái mới xuất hiện hoặc hoàn thành."
+    "correctAnswer": "Rồi",
+    "explanation": "了 (le) là trợ từ ngữ khí biểu thị hành động đã hoàn thành hoặc tình huống thay đổi."
   },
   {
     "id": 46,
@@ -685,11 +685,11 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "options": [
       "Con gái",
       "Con trai",
-      "Người mẹ thân yêu",
-      "Chị gái ruột"
+      "Mẹ",
+      "Bố"
     ],
     "correctAnswer": "Con gái",
-    "explanation": "女儿 (nǚ'ér) chỉ người con gái trong quan hệ gia đình cha mẹ."
+    "explanation": "女儿 (nǚ'ér) nghĩa là con gái của bố mẹ."
   },
   {
     "id": 47,
@@ -700,11 +700,11 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "options": [
       "Con trai",
       "Con gái",
-      "Người cha phụ thân",
-      "Em trai đệ đệ"
+      "Bố",
+      "Mẹ"
     ],
     "correctAnswer": "Con trai",
-    "explanation": "儿子 (érzi) là con trai trong gia đình."
+    "explanation": "儿子 (érzi) nghĩa là con trai của bố mẹ."
   },
   {
     "id": 48,
@@ -713,13 +713,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 5,
     "question": "多 — duō nghĩa là gì?",
     "options": [
-      "Nhiều / Bao nhiêu",
-      "Ít ỏi / Thiếu",
-      "To lớn / Đại",
-      "Bé nhỏ / Tiểu"
+      "Nhiều",
+      "Ít",
+      "Lớn",
+      "Bé"
     ],
-    "correctAnswer": "Nhiều / Bao nhiêu",
-    "explanation": "多 (duō) chỉ số lượng nhiều hoặc dùng hỏi mức độ (Ví dụ: 多大 - bao nhiêu tuổi)."
+    "correctAnswer": "Nhiều",
+    "explanation": "多 (duō) chỉ số lượng nhiều hoặc dùng hỏi mức độ (多大 - bao nhiêu tuổi)."
   },
   {
     "id": 49,
@@ -728,13 +728,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 5,
     "question": "大 — dà nghĩa là gì?",
     "options": [
-      "To lớn / Lớn",
-      "Nhỏ bé / Tiểu",
-      "Nhiều nhặn / Đa",
-      "Ít ỏi / Thiểu"
+      "Lớn",
+      "Nhỏ",
+      "Dài",
+      "Ngắn"
     ],
-    "correctAnswer": "To lớn / Lớn",
-    "explanation": "大 (dà) miêu tả kích thước lớn hoặc tuổi tác lớn (đối lập với 小)."
+    "correctAnswer": "Lớn",
+    "explanation": "大 (dà) chỉ kích thước to lớn hoặc tuổi tác lớn."
   },
   {
     "id": 50,
@@ -743,13 +743,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 5,
     "question": "个 — gè nghĩa là gì?",
     "options": [
-      "Cái / Chiếc / Người",
-      "Cuốn / Quyển",
-      "Miếng / Mảnh",
-      "Đôi / Cặp"
+      "Cái",
+      "Con",
+      "Quyển",
+      "Cây"
     ],
-    "correctAnswer": "Cái / Chiếc / Người",
-    "explanation": "个 (gè) là lượng từ thông dụng nhất trong tiếng Trung (一个人: một người, 一个苹果: một quả táo)."
+    "correctAnswer": "Cái",
+    "explanation": "个 (gè) là lượng từ thông dụng nhất trong tiếng Trung."
   },
   {
     "id": 51,
@@ -759,12 +759,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "会 — huì nghĩa là gì?",
     "options": [
       "Biết / Sẽ",
-      "Muốn / Cần",
-      "Thích / Chuộng",
-      "Phải / Bắt buộc"
+      "Muốn / Thích",
+      "Đi / Đến",
+      "Nói / Làm"
     ],
     "correctAnswer": "Biết / Sẽ",
-    "explanation": "会 (huì) biểu thị kỹ năng học được (Biết) hoặc khả năng xảy ra (Sẽ)."
+    "explanation": "会 (huì) có 2 nghĩa: biết làm gì qua rèn luyện hoặc sẽ xảy ra trong tương lai."
   },
   {
     "id": 52,
@@ -773,13 +773,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 6,
     "question": "说 — shuō nghĩa là gì?",
     "options": [
-      "Nói / Diễn đạt",
-      "Nghe / Lĩnh hội",
-      "Đọc / Ngâm vịnh",
-      "Viết / Ghi chép"
+      "Nói",
+      "Nghe",
+      "Đọc",
+      "Viết"
     ],
-    "correctAnswer": "Nói / Diễn đạt",
-    "explanation": "说 (shuō) là hành động nói bằng lời (Ví dụ: 说汉语 - nói tiếng Trung)."
+    "correctAnswer": "Nói",
+    "explanation": "说 (shuō) là động từ nói (Ví dụ: 说话 - nói chuyện)."
   },
   {
     "id": 53,
@@ -788,13 +788,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 6,
     "question": "妈妈 — māma nghĩa là gì?",
     "options": [
-      "Mẹ / Má",
-      "Bố / Cha phụ thân",
-      "Chị gái tỷ tỷ",
-      "Con gái nữ nhi"
+      "Mẹ",
+      "Bố",
+      "Chị gái",
+      "Bà"
     ],
-    "correctAnswer": "Mẹ / Má",
-    "explanation": "妈妈 (māma) là tiếng gọi người mẹ thân thương."
+    "correctAnswer": "Mẹ",
+    "explanation": "妈妈 (māma) là người mẹ trong gia đình."
   },
   {
     "id": 54,
@@ -803,13 +803,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 6,
     "question": "菜 — cài nghĩa là gì?",
     "options": [
-      "Món ăn / Rau củ",
-      "Cơm trắng gạo",
-      "Hoa quả ngọt",
-      "Nước giải khát"
+      "Món ăn / Rau",
+      "Cơm / Mì",
+      "Trà / Nước",
+      "Thịt / Cá"
     ],
-    "correctAnswer": "Món ăn / Rau củ",
-    "explanation": "菜 (cài) chỉ món ăn trên bàn hoặc rau xanh (Ví dụ: 中国菜 - món ăn Trung Quốc)."
+    "correctAnswer": "Món ăn / Rau",
+    "explanation": "菜 (cài) có 2 nghĩa: món ăn nói chung hoặc các loại rau củ."
   },
   {
     "id": 55,
@@ -818,13 +818,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 6,
     "question": "很 — hěn nghĩa là gì?",
     "options": [
-      "Rất / Lắm",
-      "Không hề phủ định",
-      "Đều là bao quát",
-      "Cũng vậy tương đồng"
+      "Rất",
+      "Quá",
+      "Hơi",
+      "Không"
     ],
-    "correctAnswer": "Rất / Lắm",
-    "explanation": "很 (hěn) là phó từ chỉ mức độ cao (Ví dụ: 很好 - rất tốt, 很高 - rất cao)."
+    "correctAnswer": "Rất",
+    "explanation": "很 (hěn) là phó từ chỉ mức độ cao (Ví dụ: 很好 - rất tốt)."
   },
   {
     "id": 56,
@@ -833,13 +833,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 6,
     "question": "好吃 — hǎochī nghĩa là gì?",
     "options": [
-      "Ngon miệng / Ngon",
-      "Khó nuốt vị dở",
-      "Đẹp mắt ưa nhìn",
-      "Vui vẻ mừng rỡ"
+      "Ngon",
+      "Dở",
+      "Cay",
+      "Ngọt"
     ],
-    "correctAnswer": "Ngon miệng / Ngon",
-    "explanation": "好吃 (hǎochī) khen ngợi đồ ăn thơm ngon."
+    "correctAnswer": "Ngon",
+    "explanation": "好吃 (hǎochī) nghĩa là món ăn ngon miệng."
   },
   {
     "id": 57,
@@ -848,13 +848,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 6,
     "question": "做 — zuò nghĩa là gì?",
     "options": [
-      "Làm / Nấu nướng",
-      "Ngồi / Đi xe",
-      "Xem / Đọc sách",
-      "Nghe / Thưởng thức"
+      "Làm",
+      "Xem",
+      "Nói",
+      "Nghe"
     ],
-    "correctAnswer": "Làm / Nấu nướng",
-    "explanation": "做 (zuò) là làm ra cái gì đó (Ví dụ: 做饭 - nấu cơm, 做菜 - nấu món ăn)."
+    "correctAnswer": "Làm",
+    "explanation": "做 (zuò) là động từ làm, nấu nướng (Ví dụ: 做饭 - nấu cơm)."
   },
   {
     "id": 58,
@@ -863,13 +863,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 6,
     "question": "写 — xiě nghĩa là gì?",
     "options": [
-      "Viết chữ / Soạn",
-      "Đọc sách to",
-      "Nghe giảng bài",
-      "Hội họa vẽ"
+      "Viết",
+      "Đọc",
+      "Nói",
+      "Nghe"
     ],
-    "correctAnswer": "Viết chữ / Soạn",
-    "explanation": "写 (xiě) là cầm bút viết chữ (Ví dụ: 写汉字 - viết chữ Hán)."
+    "correctAnswer": "Viết",
+    "explanation": "写 (xiě) là hành động viết chữ."
   },
   {
     "id": 59,
@@ -878,13 +878,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 6,
     "question": "字 — zì nghĩa là gì?",
     "options": [
-      "Chữ / Ký tự",
-      "Quyển sách thư",
-      "Lời nói thoại",
-      "Tên gọi danh"
+      "Chữ",
+      "Số",
+      "Tranh",
+      "Sách"
     ],
-    "correctAnswer": "Chữ / Ký tự",
-    "explanation": "字 (zì) chỉ mặt chữ hoặc ký tự (Ví dụ: 汉字 - chữ Hán)."
+    "correctAnswer": "Chữ",
+    "explanation": "字 (zì) là chữ viết, ký tự (Ví dụ: 汉字 - chữ Hán)."
   },
   {
     "id": 60,
@@ -893,13 +893,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 6,
     "question": "读 — dú nghĩa là gì?",
     "options": [
-      "Đọc sách / Đọc",
-      "Viết văn bản",
-      "Nói năng lời",
-      "Lắng nghe tai"
+      "Đọc",
+      "Viết",
+      "Nghe",
+      "Nói"
     ],
-    "correctAnswer": "Đọc sách / Đọc",
-    "explanation": "读 (dú) là đọc thành tiếng hoặc đọc sách (读书: đọc sách, học hành)."
+    "correctAnswer": "Đọc",
+    "explanation": "读 (dú) là động từ đọc (Ví dụ: 读书 - đọc sách)."
   },
   {
     "id": 61,
@@ -908,13 +908,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 7,
     "question": "请 — qǐng nghĩa là gì?",
     "options": [
-      "Mời / Xin mời",
-      "Bảo / Ra lệnh",
-      "Hỏi / Vấn đáp",
-      "Cấm / Khuyên can"
+      "Mời",
+      "Cảm ơn",
+      "Tạm biệt",
+      "Xin lỗi"
     ],
-    "correctAnswer": "Mời / Xin mời",
-    "explanation": "请 (qǐng) là từ lịch sự đặt đầu câu (Ví dụ: 请问 - xin hỏi, 请坐 - xin mời ngồi)."
+    "correctAnswer": "Mời",
+    "explanation": "请 (qǐng) dùng khi mời, xin phép một cách lịch sự (Ví dụ: 请进 - xin mời vào)."
   },
   {
     "id": 62,
@@ -924,12 +924,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "今天 — jīntiān nghĩa là gì?",
     "options": [
       "Hôm nay",
-      "Ngày mai minh nhật",
-      "Hôm qua tạc thiên",
-      "Năm nay kim niên"
+      "Hôm qua",
+      "Ngày mai",
+      "Năm nay"
     ],
     "correctAnswer": "Hôm nay",
-    "explanation": "今天 (jīntiān) chỉ ngày hiện tại."
+    "explanation": "今天 (jīntiān) chỉ ngày hôm nay."
   },
   {
     "id": 63,
@@ -938,13 +938,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 7,
     "question": "号 — hào nghĩa là gì?",
     "options": [
-      "Ngày / Số hiệu",
-      "Tháng / Nguyệt",
-      "Năm / Niên",
-      "Tuần / Tuần lễ"
+      "Ngày",
+      "Tháng",
+      "Năm",
+      "Giờ"
     ],
-    "correctAnswer": "Ngày / Số hiệu",
-    "explanation": "号 (hào) dùng nói ngày trong tháng (Ví dụ: 5号 - ngày 5) hoặc số nhà, số xe."
+    "correctAnswer": "Ngày",
+    "explanation": "号 (hào) dùng chỉ ngày trong tháng theo văn nói."
   },
   {
     "id": 64,
@@ -953,13 +953,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 7,
     "question": "月 — yuè nghĩa là gì?",
     "options": [
-      "Tháng / Mặt trăng",
-      "Năm / Mặt trời",
-      "Ngày / Ngôi sao",
-      "Tuần / Đám mây"
+      "Tháng",
+      "Năm",
+      "Ngày",
+      "Tuần"
     ],
-    "correctAnswer": "Tháng / Mặt trăng",
-    "explanation": "月 (yuè) dùng nói các tháng trong năm (一月 - tháng 1) hoặc mặt trăng."
+    "correctAnswer": "Tháng",
+    "explanation": "月 (yuè) nghĩa là tháng trong năm."
   },
   {
     "id": 65,
@@ -968,13 +968,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 7,
     "question": "星期 — xīngqī nghĩa là gì?",
     "options": [
-      "Tuần lễ / Thứ",
-      "Tháng trong năm",
-      "Mùa trong tiết",
-      "Khoảng giờ phút"
+      "Tuần",
+      "Tháng",
+      "Năm",
+      "Ngày"
     ],
-    "correctAnswer": "Tuần lễ / Thứ",
-    "explanation": "星期 (xīngqī) nghĩa là tuần lễ hoặc thứ trong tuần (Ví dụ: 星期一 - thứ Hai)."
+    "correctAnswer": "Tuần",
+    "explanation": "星期 (xīngqī) nghĩa là tuần lễ hoặc thứ trong tuần."
   },
   {
     "id": 66,
@@ -984,12 +984,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "昨天 — zuótiān nghĩa là gì?",
     "options": [
       "Hôm qua",
-      "Hôm nay kim thiên",
-      "Ngày mai minh thiên",
-      "Hôm kia tiền thiên"
+      "Hôm nay",
+      "Ngày mai",
+      "Năm ngoái"
     ],
     "correctAnswer": "Hôm qua",
-    "explanation": "昨天 (zuótiān) chỉ ngày hôm qua."
+    "explanation": "昨天 (zuótiān) là ngày hôm qua."
   },
   {
     "id": 67,
@@ -999,12 +999,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "明天 — míngtiān nghĩa là gì?",
     "options": [
       "Ngày mai",
-      "Hôm nay kim thiên",
-      "Hôm qua tạc thiên",
-      "Năm sau minh niên"
+      "Hôm nay",
+      "Hôm qua",
+      "Năm sau"
     ],
     "correctAnswer": "Ngày mai",
-    "explanation": "明天 (míngtiān) chỉ ngày mai, ngày tiếp theo."
+    "explanation": "明天 (míngtiān) là ngày mai."
   },
   {
     "id": 68,
@@ -1013,13 +1013,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 7,
     "question": "去 — qù nghĩa là gì?",
     "options": [
-      "Đi / Đến nơi khác",
-      "Đến hướng người nói",
-      "Trở về chốn cũ",
-      "Ở tại vị trí"
+      "Đi",
+      "Đến",
+      "Về",
+      "Ở"
     ],
-    "correctAnswer": "Đi / Đến nơi khác",
-    "explanation": "去 (qù) chỉ chuyển động rời xa người nói đến nơi khác (Ví dụ: 去学校 - đi đến trường)."
+    "correctAnswer": "Đi",
+    "explanation": "去 (qù) là động từ rời khỏi vị trí hiện tại để đi đâu đó."
   },
   {
     "id": 69,
@@ -1029,12 +1029,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "学校 — xuéxiào nghĩa là gì?",
     "options": [
       "Trường học",
-      "Bệnh viện y tế",
-      "Cửa hàng / Tiệm",
-      "Nhà hàng ăn uống"
+      "Bệnh viện",
+      "Cửa hàng",
+      "Công ty"
     ],
     "correctAnswer": "Trường học",
-    "explanation": "学校 (xuéxiào) là cơ sở trường lớp giáo dục."
+    "explanation": "学校 (xuéxiào) là trường học."
   },
   {
     "id": 70,
@@ -1043,13 +1043,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 7,
     "question": "看 — kàn nghĩa là gì?",
     "options": [
-      "Xem / Nhìn / Đọc",
-      "Lắng nghe thanh âm",
-      "Nói chuyện trao đổi",
-      "Viết lách ghi chép"
+      "Xem",
+      "Nghe",
+      "Nói",
+      "Đọc"
     ],
-    "correctAnswer": "Xem / Nhìn / Đọc",
-    "explanation": "看 (kàn) là nhìn ngắm, xem (看电视: xem tivi) hoặc đọc sách báo (看书: đọc sách)."
+    "correctAnswer": "Xem",
+    "explanation": "看 (kàn) là động từ nhìn, xem (Ví dụ: 看电影 - xem phim)."
   },
   {
     "id": 71,
@@ -1058,13 +1058,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 8,
     "question": "想 — xiǎng nghĩa là gì?",
     "options": [
-      "Muốn / Nghĩ / Nhớ",
-      "Yêu thích đam mê",
-      "Làm việc nấu nướng",
-      "Hỏi han / Thắc mắc"
+      "Muốn / Nhớ",
+      "Thích / Yêu",
+      "Biết / Hiểu",
+      "Nói / Nghe"
     ],
-    "correctAnswer": "Muốn / Nghĩ / Nhớ",
-    "explanation": "想 (xiǎng) biểu thị ước muốn (Muốn), suy nghĩ (Nghĩ) hoặc nhớ nhung (Nhớ)."
+    "correctAnswer": "Muốn / Nhớ",
+    "explanation": "想 (xiǎng) có 2 nghĩa: muốn làm việc gì hoặc nhớ nhung ai đó."
   },
   {
     "id": 72,
@@ -1073,13 +1073,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 8,
     "question": "喝 — hē nghĩa là gì?",
     "options": [
-      "Uống / Dùng nước",
-      "Ăn thức ăn",
-      "Nói lời hay",
-      "Hát khúc ca"
+      "Uống",
+      "Ăn",
+      "Nấu",
+      "Mua"
     ],
-    "correctAnswer": "Uống / Dùng nước",
-    "explanation": "喝 (hē) là động từ uống chất lỏng (Ví dụ: 喝茶 - uống trà, 喝水 - uống nước)."
+    "correctAnswer": "Uống",
+    "explanation": "喝 (hē) là động từ uống chất lỏng (Ví dụ: 喝水 - uống nước)."
   },
   {
     "id": 73,
@@ -1088,13 +1088,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 8,
     "question": "茶 — chá nghĩa là gì?",
     "options": [
-      "Trà / Nước chè",
-      "Cà phê đen",
-      "Rượu nếp thơm",
-      "Canh rau ngọt"
+      "Trà",
+      "Cà phê",
+      "Sữa",
+      "Nước"
     ],
-    "correctAnswer": "Trà / Nước chè",
-    "explanation": "茶 (chá) là đồ uống trà truyền thống."
+    "correctAnswer": "Trà",
+    "explanation": "茶 (chá) là thức uống trà."
   },
   {
     "id": 74,
@@ -1103,13 +1103,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 8,
     "question": "吃 — chī nghĩa là gì?",
     "options": [
-      "Ăn / Dùng bữa",
-      "Uống chất lỏng",
-      "Ngủ say sưa",
-      "Nói năng lời"
+      "Ăn",
+      "Uống",
+      "Nấu",
+      "Mua"
     ],
-    "correctAnswer": "Ăn / Dùng bữa",
-    "explanation": "吃 (chī) là hành động ăn thức ăn (Ví dụ: 吃饭 - ăn cơm)."
+    "correctAnswer": "Ăn",
+    "explanation": "吃 (chī) là động từ ăn thức ăn (Ví dụ: 吃饭 - ăn cơm)."
   },
   {
     "id": 75,
@@ -1118,12 +1118,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 8,
     "question": "米饭 — mǐfàn nghĩa là gì?",
     "options": [
-      "Cơm / Cơm trắng",
-      "Mì sợi kéo",
-      "Bánh bao hấp",
-      "Canh súp nóng"
+      "Cơm",
+      "Mì",
+      "Bánh bao",
+      "Phở"
     ],
-    "correctAnswer": "Cơm / Cơm trắng",
+    "correctAnswer": "Cơm",
     "explanation": "米饭 (mǐfàn) là cơm nấu chín từ gạo."
   },
   {
@@ -1134,12 +1134,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "下午 — xiàwǔ nghĩa là gì?",
     "options": [
       "Buổi chiều",
-      "Buổi sáng sớm",
-      "Buổi trưa chính",
-      "Buổi tối đêm"
+      "Buổi sáng",
+      "Buổi trưa",
+      "Buổi tối"
     ],
     "correctAnswer": "Buổi chiều",
-    "explanation": "下午 (xiàwǔ) là khoảng thời gian buổi chiều sau 12h trưa."
+    "explanation": "下午 (xiàwǔ) là khoảng thời gian buổi chiều."
   },
   {
     "id": 77,
@@ -1148,13 +1148,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 8,
     "question": "商店 — shāngdiàn nghĩa là gì?",
     "options": [
-      "Cửa hàng / Tiệm",
-      "Bệnh viện chữa",
+      "Cửa hàng",
+      "Bệnh viện",
       "Trường học",
-      "Khách sạn lưu"
+      "Công ty"
     ],
-    "correctAnswer": "Cửa hàng / Tiệm",
-    "explanation": "商店 (shāngdiàn) là nơi bán hàng hóa, tiệm tạp hóa."
+    "correctAnswer": "Cửa hàng",
+    "explanation": "商店 (shāngdiàn) là cửa hàng buôn bán hàng hóa."
   },
   {
     "id": 78,
@@ -1163,13 +1163,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 8,
     "question": "买 — mǎi nghĩa là gì?",
     "options": [
-      "Mua / Mua sắm",
-      "Bán / Tiêu thụ",
-      "Tặng / Cho quà",
-      "Mượn / Vay nợ"
+      "Mua",
+      "Bán",
+      "Thuê",
+      "Mượn"
     ],
-    "correctAnswer": "Mua / Mua sắm",
-    "explanation": "买 (mǎi) là đổi tiền lấy hàng (đối lập với 卖 - bán, mang thanh 4)."
+    "correctAnswer": "Mua",
+    "explanation": "买 (mǎi) là động từ mua đồ."
   },
   {
     "id": 79,
@@ -1178,13 +1178,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 8,
     "question": "杯子 — bēizi nghĩa là gì?",
     "options": [
-      "Cái cốc / Cái ly",
-      "Cái bàn gỗ",
-      "Cái ghế ngồi",
-      "Quyển sách đọc"
+      "Cái cốc",
+      "Cái bát",
+      "Cái bàn",
+      "Cái đĩa"
     ],
-    "correctAnswer": "Cái cốc / Cái ly",
-    "explanation": "杯子 (bēizi) là cái cốc, ly để uống nước hoặc trà."
+    "correctAnswer": "Cái cốc",
+    "explanation": "杯子 (bēizi) là cái cốc, ly để đựng nước uống."
   },
   {
     "id": 80,
@@ -1193,13 +1193,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 8,
     "question": "这 — zhè nghĩa là gì?",
     "options": [
-      "Đây / Này",
-      "Kia / Đó",
-      "Nào / Đâu",
-      "Ai / Người nào"
+      "Đây",
+      "Kia",
+      "Đâu",
+      "Nào"
     ],
-    "correctAnswer": "Đây / Này",
-    "explanation": "这 (zhè) chỉ người hoặc vật ở gần người nói (đối lập với 那 - kia)."
+    "correctAnswer": "Đây",
+    "explanation": "这 (zhè) là đại từ chỉ định vị trí gần (này, đây)."
   },
   {
     "id": 81,
@@ -1208,13 +1208,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 9,
     "question": "小 — xiǎo nghĩa là gì?",
     "options": [
-      "Nhỏ bé / Bé",
-      "To lớn / Đại",
-      "Nhiều nhặn / Đa",
-      "Ít ỏi / Thiểu"
+      "Nhỏ",
+      "To",
+      "Nhiều",
+      "Ít"
     ],
-    "correctAnswer": "Nhỏ bé / Bé",
-    "explanation": "小 (xiǎo) miêu tả kích thước nhỏ nhắn (đối lập với 大 - to lớn)."
+    "correctAnswer": "Nhỏ",
+    "explanation": "小 (xiǎo) chỉ kích thước nhỏ nhắn (đối lập với 大)."
   },
   {
     "id": 82,
@@ -1224,12 +1224,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "猫 — māo nghĩa là gì?",
     "options": [
       "Con mèo",
-      "Con chó trung thành",
-      "Con chim trên cành",
-      "Con cá dưới nước"
+      "Con chó",
+      "Con chim",
+      "Con cá"
     ],
     "correctAnswer": "Con mèo",
-    "explanation": "猫 (māo) là con mèo nuôi trong nhà."
+    "explanation": "猫 (māo) là con mèo."
   },
   {
     "id": 83,
@@ -1239,12 +1239,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "狗 — gǒu nghĩa là gì?",
     "options": [
       "Con chó",
-      "Con mèo kêu meo",
-      "Con gà gáy sáng",
-      "Con heo trong chuồng"
+      "Con mèo",
+      "Con gà",
+      "Con lợn"
     ],
     "correctAnswer": "Con chó",
-    "explanation": "狗 (gǒu) là loài chó trung thành."
+    "explanation": "狗 (gǒu) là loài chó."
   },
   {
     "id": 84,
@@ -1254,9 +1254,9 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "椅子 — yǐzi nghĩa là gì?",
     "options": [
       "Cái ghế",
-      "Cái bàn học",
-      "Cái giường ngủ",
-      "Cái tủ đựng"
+      "Cái bàn",
+      "Cái giường",
+      "Cái tủ"
     ],
     "correctAnswer": "Cái ghế",
     "explanation": "椅子 (yǐzi) là đồ dùng nội thất để ngồi."
@@ -1268,13 +1268,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 9,
     "question": "哪儿 — nǎr nghĩa là gì?",
     "options": [
-      "Ở đâu / Chỗ nào",
-      "Ở đây chốn này",
-      "Ở kia chốn nọ",
-      "Bao giờ thời gian"
+      "Ở đâu",
+      "Ở đây",
+      "Ở kia",
+      "Khi nào"
     ],
-    "correctAnswer": "Ở đâu / Chỗ nào",
-    "explanation": "哪儿 (nǎr) là đại từ nghi vấn hỏi về vị trí nơi chốn (= 哪里)."
+    "correctAnswer": "Ở đâu",
+    "explanation": "哪儿 (nǎr) là đại từ hỏi vị trí nơi chốn."
   },
   {
     "id": 86,
@@ -1283,13 +1283,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 9,
     "question": "工作 — gōngzuò nghĩa là gì?",
     "options": [
-      "Làm việc / Công việc",
-      "Học tập rèn luyện",
-      "Nghỉ ngơi an dưỡng",
-      "Mua sắm tiêu xài"
+      "Làm việc",
+      "Học tập",
+      "Nghỉ ngơi",
+      "Vui chơi"
     ],
-    "correctAnswer": "Làm việc / Công việc",
-    "explanation": "工作 (gōngzuò) vừa là danh từ (công việc) vừa là động từ (làm việc)."
+    "correctAnswer": "Làm việc",
+    "explanation": "工作 (gōngzuò) là công việc hoặc hành động làm việc."
   },
   {
     "id": 87,
@@ -1300,11 +1300,11 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "options": [
       "Bệnh viện",
       "Trường học",
-      "Cửa hàng buôn",
-      "Nhà thuốc tây"
+      "Cửa hàng",
+      "Khách sạn"
     ],
     "correctAnswer": "Bệnh viện",
-    "explanation": "医院 (yīyuàn) là cơ sở khám và chữa bệnh."
+    "explanation": "医院 (yīyuàn) là cơ sở khám chữa bệnh."
   },
   {
     "id": 88,
@@ -1314,12 +1314,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "医生 — yīshēng nghĩa là gì?",
     "options": [
       "Bác sĩ",
-      "Giáo viên giảng dạy",
-      "Học sinh đi học",
-      "Y tá chăm sóc"
+      "Giáo viên",
+      "Học sinh",
+      "Y tá"
     ],
     "correctAnswer": "Bác sĩ",
-    "explanation": "医生 (yīshēng) là người thầy thuốc chữa bệnh."
+    "explanation": "医生 (yīshēng) là người bác sĩ trị bệnh."
   },
   {
     "id": 89,
@@ -1328,13 +1328,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 9,
     "question": "爸爸 — bàba nghĩa là gì?",
     "options": [
-      "Bố / Ba / Cha",
-      "Mẹ / Má mẫu thân",
-      "Anh trai ruột",
-      "Thầy giáo tôn kính"
+      "Bố",
+      "Mẹ",
+      "Anh trai",
+      "Ông"
     ],
-    "correctAnswer": "Bố / Ba / Cha",
-    "explanation": "爸爸 (bàba) nghĩa là bố, cha trong gia đình."
+    "correctAnswer": "Bố",
+    "explanation": "爸爸 (bàba) là người bố trong gia đình."
   },
   {
     "id": 90,
@@ -1344,12 +1344,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "多少 — duōshao nghĩa là gì?",
     "options": [
       "Bao nhiêu",
-      "Mấy giờ trong ngày",
-      "Cái nào lựa chọn",
-      "Ở đâu / Vị trí nào"
+      "Cái gì",
+      "Ở đâu",
+      "Thế nào"
     ],
     "correctAnswer": "Bao nhiêu",
-    "explanation": "多少 (duōshao) dùng để hỏi số lượng hoặc hỏi giá tiền (多少钱: bao nhiêu tiền)."
+    "explanation": "多少 (duōshao) là từ hỏi số lượng không giới hạn."
   },
   {
     "id": 91,
@@ -1359,12 +1359,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "桌子 — zhuōzi nghĩa là gì?",
     "options": [
       "Cái bàn",
-      "Cái ghế ngồi",
-      "Cái giường nằm",
-      "Cái cốc uống"
+      "Cái ghế",
+      "Cái giường",
+      "Cái tủ"
     ],
     "correctAnswer": "Cái bàn",
-    "explanation": "桌子 (zhuōzi) là cái bàn để học tập, làm việc hoặc ăn cơm."
+    "explanation": "桌子 (zhuōzi) là cái bàn để đồ hoặc làm việc."
   },
   {
     "id": 92,
@@ -1373,13 +1373,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 10,
     "question": "电脑 — diànnǎo nghĩa là gì?",
     "options": [
-      "Máy vi tính",
-      "Vô tuyến ti-vi",
-      "Điện thoại cầm tay",
-      "Đồng hồ xem giờ"
+      "Máy tính",
+      "Điện thoại",
+      "Đồng hồ",
+      "Tivi"
     ],
-    "correctAnswer": "Máy vi tính",
-    "explanation": "电脑 (diànnǎo) nghĩa là máy tính."
+    "correctAnswer": "Máy tính",
+    "explanation": "电脑 (diànnǎo) là máy vi tính."
   },
   {
     "id": 93,
@@ -1388,13 +1388,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 10,
     "question": "和 — hé nghĩa là gì?",
     "options": [
-      "Và / Cùng",
-      "Hoặc / Hay là",
-      "Nhưng / Song le",
-      "Vì / Do bởi"
+      "Và",
+      "Nhưng",
+      "Hoặc",
+      "Bởi vì"
     ],
-    "correctAnswer": "Và / Cùng",
-    "explanation": "和 (hé) là liên từ nối hai danh từ hoặc đại từ (Ví dụ: 我和他 - tôi và anh ấy)."
+    "correctAnswer": "Và",
+    "explanation": "和 (hé) là liên từ nối danh từ mang nghĩa và, cùng."
   },
   {
     "id": 94,
@@ -1403,13 +1403,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 10,
     "question": "本 — běn nghĩa là gì?",
     "options": [
-      "Cuốn / Quyển",
-      "Cái / Chiếc",
-      "Miếng / Mảnh",
-      "Chiếc xe cộ"
+      "Quyển",
+      "Cái",
+      "Chiếc",
+      "Con"
     ],
-    "correctAnswer": "Cuốn / Quyển",
-    "explanation": "本 (běn) là lượng từ dùng cho sách, vở (Ví dụ: 一本书 - một cuốn sách)."
+    "correctAnswer": "Quyển",
+    "explanation": "本 (běn) là lượng từ chỉ sách vở (Ví dụ: 一本书 - một quyển sách)."
   },
   {
     "id": 95,
@@ -1418,13 +1418,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 10,
     "question": "里 — lǐ nghĩa là gì?",
     "options": [
-      "Bên trong / Trong",
-      "Bên ngoài chốn ngoài",
-      "Phía trước đằng trước",
-      "Phía sau đằng sau"
+      "Bên trong",
+      "Bên ngoài",
+      "Phía trên",
+      "Phía dưới"
     ],
-    "correctAnswer": "Bên trong / Trong",
-    "explanation": "里 (lǐ) là phương vị từ chỉ phía trong (Ví dụ: 家里 - trong nhà, 学校里 - trong trường)."
+    "correctAnswer": "Bên trong",
+    "explanation": "里 (lǐ) là từ chỉ vị trí bên trong."
   },
   {
     "id": 96,
@@ -1433,13 +1433,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 10,
     "question": "前面 — qiánmiàn nghĩa là gì?",
     "options": [
-      "Phía trước / Đằng trước",
-      "Phía sau đằng sau",
-      "Bên trong phía trong",
-      "Bên cạnh sát bên"
+      "Phía trước",
+      "Phía sau",
+      "Bên trái",
+      "Bên phải"
     ],
-    "correctAnswer": "Phía trước / Đằng trước",
-    "explanation": "前面 (qiánmiàn) chỉ vị trí phía trước mặt (đối lập với 后面)."
+    "correctAnswer": "Phía trước",
+    "explanation": "前面 (qiánmiàn) là phương vị từ chỉ đằng trước."
   },
   {
     "id": 97,
@@ -1448,13 +1448,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 10,
     "question": "后面 — hòumiàn nghĩa là gì?",
     "options": [
-      "Phía sau / Đằng sau",
-      "Phía trước đằng trước",
-      "Bên trong phía trong",
-      "Bên ngoài phía ngoài"
+      "Phía sau",
+      "Phía trước",
+      "Bên trái",
+      "Bên phải"
     ],
-    "correctAnswer": "Phía sau / Đằng sau",
-    "explanation": "后面 (hòumiàn) chỉ vị trí phía sau lưng (đối lập với 前面)."
+    "correctAnswer": "Phía sau",
+    "explanation": "后面 (hòumiàn) là phương vị từ chỉ đằng sau."
   },
   {
     "id": 98,
@@ -1463,13 +1463,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 10,
     "question": "没有 — méiyǒu nghĩa là gì?",
     "options": [
-      "Không có / Chưa",
-      "Đang có sở hữu",
-      "Có thể khả thi",
-      "Bắt buộc cần thiết"
+      "Không có",
+      "Có",
+      "Là",
+      "Ở"
     ],
-    "correctAnswer": "Không có / Chưa",
-    "explanation": "没有 (méiyǒu) phủ định sự sở hữu hoặc hành động trong quá khứ."
+    "correctAnswer": "Không có",
+    "explanation": "没有 (méiyǒu) phủ định của 有 (không có, chưa có)."
   },
   {
     "id": 99,
@@ -1478,13 +1478,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 10,
     "question": "能 — néng nghĩa là gì?",
     "options": [
-      "Có thể / Năng lực",
-      "Không thể bó tay",
-      "Bắt buộc phải làm",
-      "Muốn có nguyện vọng"
+      "Có thể",
+      "Phải",
+      "Muốn",
+      "Dám"
     ],
-    "correctAnswer": "Có thể / Năng lực",
-    "explanation": "能 (néng) biểu thị khả năng hoặc điều kiện cho phép (Ví dụ: 我能坐这儿吗 - Tôi có thể ngồi đây không?)."
+    "correctAnswer": "Có thể",
+    "explanation": "能 (néng) biểu thị khả năng hoặc điều kiện cho phép làm gì."
   },
   {
     "id": 100,
@@ -1493,13 +1493,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 10,
     "question": "坐 — zuò nghĩa là gì?",
     "options": [
-      "Ngồi / Đi xe",
-      "Đứng vững vàng",
-      "Chạy thật nhanh",
-      "Nằm nghỉ ngơi"
+      "Ngồi",
+      "Đứng",
+      "Nằm",
+      "Đi"
     ],
-    "correctAnswer": "Ngồi / Đi xe",
-    "explanation": "坐 (zuò) nghĩa là ngồi xuống (请坐) hoặc đi bằng phương tiện giao thông (坐飞机)."
+    "correctAnswer": "Ngồi",
+    "explanation": "坐 (zuò) là hành động ngồi hoặc đi xe (坐车)."
   },
   {
     "id": 101,
@@ -1508,13 +1508,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 11,
     "question": "现在 — xiànzài nghĩa là gì?",
     "options": [
-      "Hiện tại / Bây giờ",
-      "Hôm nay kim thiên",
-      "Lúc trước quá khứ",
-      "Sau này tương lai"
+      "Bây giờ",
+      "Hôm qua",
+      "Ngày mai",
+      "Lúc trước"
     ],
-    "correctAnswer": "Hiện tại / Bây giờ",
-    "explanation": "现在 (xiànzài) chỉ thời điểm ngay lúc này (Ví dụ: 现在几点 - bây giờ là mấy giờ?)."
+    "correctAnswer": "Bây giờ",
+    "explanation": "现在 (xiànzài) chỉ thời điểm hiện tại."
   },
   {
     "id": 102,
@@ -1523,13 +1523,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 11,
     "question": "点 — diǎn nghĩa là gì?",
     "options": [
-      "Giờ / Chút ít",
-      "Phút / Giây lát",
-      "Năm / Mùa vụ",
-      "Tháng / Tuần lễ"
+      "Giờ / Một chút",
+      "Phút / Một lát",
+      "Ngày / Một buổi",
+      "Năm / Một lúc"
     ],
-    "correctAnswer": "Giờ / Chút ít",
-    "explanation": "点 (diǎn) dùng để nói giờ trong ngày (八点: 8 giờ) hoặc một chút (一点儿)."
+    "correctAnswer": "Giờ / Một chút",
+    "explanation": "点 (diǎn) có 2 nghĩa: chỉ giờ đồng hồ hoặc một chút ít (一点儿)."
   },
   {
     "id": 103,
@@ -1539,12 +1539,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "分钟 — fēnzhōng nghĩa là gì?",
     "options": [
       "Phút",
-      "Giờ đồng hồ",
-      "Giây ngắn ngủi",
-      "Ngày tròn vẹn"
+      "Giờ",
+      "Giây",
+      "Ngày"
     ],
     "correctAnswer": "Phút",
-    "explanation": "分钟 (fēnzhōng) chỉ khoảng thời gian tính bằng phút (Ví dụ: 五分钟 - 5 phút)."
+    "explanation": "分钟 (fēnzhōng) là đơn vị phút chỉ thời gian."
   },
   {
     "id": 104,
@@ -1554,12 +1554,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "中午 — zhōngwǔ nghĩa là gì?",
     "options": [
       "Buổi trưa",
-      "Buổi sáng sớm",
-      "Buổi chiều tà",
-      "Buổi tối đêm"
+      "Buổi sáng",
+      "Buổi chiều",
+      "Buổi tối"
     ],
     "correctAnswer": "Buổi trưa",
-    "explanation": "中午 (zhōngwǔ) là thời điểm chính giữa ngày khoảng 11h30 - 13h00."
+    "explanation": "中午 (zhōngwǔ) là khoảng thời gian buổi trưa."
   },
   {
     "id": 105,
@@ -1568,13 +1568,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 11,
     "question": "时候 — shíhou nghĩa là gì?",
     "options": [
-      "Lúc / Khi / Khoảng thời gian",
-      "Nơi chốn vị trí",
-      "Lý do nguyên cớ",
-      "Đồ vật khí cụ"
+      "Lúc / Khi",
+      "Nơi / Chốn",
+      "Người / Ai",
+      "Cách / Kiểu"
     ],
-    "correctAnswer": "Lúc / Khi / Khoảng thời gian",
-    "explanation": "时候 (shíhou) chỉ khoảnh khắc hoặc khoảng thời gian (...的时候: lúc/khi...)."
+    "correctAnswer": "Lúc / Khi",
+    "explanation": "时候 (shíhou) chỉ khoảng thời gian (Ví dụ: 什么时候 - khi nào)."
   },
   {
     "id": 106,
@@ -1583,13 +1583,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 11,
     "question": "回 — huí nghĩa là gì?",
     "options": [
-      "Về / Trở về",
-      "Đi đến nơi khác",
-      "Đến phía trước",
-      "Ở tại vị trí"
+      "Về",
+      "Đi",
+      "Đến",
+      "Ở"
     ],
-    "correctAnswer": "Về / Trở về",
-    "explanation": "回 (huí) là động từ trở về nơi cũ (Ví dụ: 回家 - về nhà, 回国 - về nước)."
+    "correctAnswer": "Về",
+    "explanation": "回 (huí) là quay trở về (Ví dụ: 回家 - về nhà)."
   },
   {
     "id": 107,
@@ -1598,13 +1598,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 11,
     "question": "我们 — wǒmen nghĩa là gì?",
     "options": [
-      "Chúng tôi / Chúng ta",
-      "Các bạn các anh",
-      "Bọn họ tha môn",
-      "Mọi người đại gia"
+      "Chúng tôi",
+      "Các bạn",
+      "Họ",
+      "Tôi"
     ],
-    "correctAnswer": "Chúng tôi / Chúng ta",
-    "explanation": "我们 (wǒmen) là đại từ nhân xưng ngôi thứ nhất số nhiều."
+    "correctAnswer": "Chúng tôi",
+    "explanation": "我们 (wǒmen) là đại từ nhân xưng số nhiều (chúng tôi, chúng ta)."
   },
   {
     "id": 108,
@@ -1613,13 +1613,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 11,
     "question": "电影 — diànyǐng nghĩa là gì?",
     "options": [
-      "Phim / Xem phim",
-      "Tivi truyền hình",
-      "Sách báo tạp chí",
-      "Âm nhạc bài ca"
+      "Phim",
+      "Nhạc",
+      "Sách",
+      "Báo"
     ],
-    "correctAnswer": "Phim / Xem phim",
-    "explanation": "电影 (diànyǐng) là bộ phim chiếu rạp hoặc phim truyện."
+    "correctAnswer": "Phim",
+    "explanation": "电影 (diànyǐng) là phim ảnh, phim điện ảnh."
   },
   {
     "id": 109,
@@ -1628,13 +1628,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 11,
     "question": "住 — zhù nghĩa là gì?",
     "options": [
-      "Ở / Sinh sống",
-      "Rời đi nơi khác",
-      "Làm việc công tác",
-      "Học tập trường lớp"
+      "Ở",
+      "Đi",
+      "Đến",
+      "Rời"
     ],
-    "correctAnswer": "Ở / Sinh sống",
-    "explanation": "住 (zhù) là động từ sinh sống, cư ngụ tại một địa điểm (Ví dụ: 住北京 - sống ở Bắc Kinh)."
+    "correctAnswer": "Ở",
+    "explanation": "住 (zhù) chỉ sự cư trú, sinh sống (Ví dụ: 住在北京 - sống ở Bắc Kinh)."
   },
   {
     "id": 110,
@@ -1643,13 +1643,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 11,
     "question": "上 — shàng nghĩa là gì?",
     "options": [
-      "Bên trên / Lên",
-      "Bên dưới xuống",
-      "Bên trong vào",
-      "Bên ngoài ra"
+      "Phía trên",
+      "Phía dưới",
+      "Bên trong",
+      "Bên ngoài"
     ],
-    "correctAnswer": "Bên trên / Lên",
-    "explanation": "上 (shàng) chỉ vị trí bên trên hoặc hành động đi lên (Ví dụ: 桌子上 - trên bàn, 上课 - vào học)."
+    "correctAnswer": "Phía trên",
+    "explanation": "上 (shàng) chỉ vị trí bên trên."
   },
   {
     "id": 111,
@@ -1658,13 +1658,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 12,
     "question": "天气 — tiānqì nghĩa là gì?",
     "options": [
-      "Thời tiết / Khí trời",
-      "Thời gian năm tháng",
-      "Không khí hít thở",
-      "Nhiệt độ nóng lạnh"
+      "Thời tiết",
+      "Thời gian",
+      "Sức khỏe",
+      "Môi trường"
     ],
-    "correctAnswer": "Thời tiết / Khí trời",
-    "explanation": "天气 (tiānqì) chỉ trạng thái nắng, mưa, nóng, lạnh (今天天气很好 - Hôm nay thời tiết rất tốt)."
+    "correctAnswer": "Thời tiết",
+    "explanation": "天气 (tiānqì) là tình trạng thời tiết khí hậu."
   },
   {
     "id": 112,
@@ -1673,13 +1673,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 12,
     "question": "怎么样 — zěnmeyàng nghĩa là gì?",
     "options": [
-      "Thế nào / Ra sao / Như thế nào",
-      "Bao nhiêu số lượng",
-      "Ở đâu nơi chốn",
-      "Làm gì hành động"
+      "Thế nào",
+      "Ở đâu",
+      "Bao nhiêu",
+      "Tại sao"
     ],
-    "correctAnswer": "Thế nào / Ra sao / Như thế nào",
-    "explanation": "怎么样 (zěnmeyàng) dùng hỏi về tính chất, tình hình hoặc trưng cầu ý kiến người khác."
+    "correctAnswer": "Thế nào",
+    "explanation": "怎么样 (zěnmeyàng) dùng hỏi về tính chất, tình hình."
   },
   {
     "id": 113,
@@ -1688,13 +1688,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 12,
     "question": "太 — tài nghĩa là gì?",
     "options": [
-      "Quá / Lắm",
-      "Không hề phủ định",
-      "Một chút ít ỏi",
-      "Bình thường vừa phải"
+      "Quá",
+      "Hơi",
+      "Rất",
+      "Không"
     ],
-    "correctAnswer": "Quá / Lắm",
-    "explanation": "太 (tài) biểu thị mức độ cao, thường đi cặp: 太……了 (Ví dụ: 太好了 - tốt quá rồi)."
+    "correctAnswer": "Quá",
+    "explanation": "太 (tài) biểu thị mức độ cực kỳ, quá mức (太好了 - tốt quá rồi)."
   },
   {
     "id": 114,
@@ -1703,13 +1703,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 12,
     "question": "热 — rè nghĩa là gì?",
     "options": [
-      "Nóng / Nóng bức",
-      "Lạnh lẽo buốt giá",
-      "Ấm áp dễ chịu",
-      "Mát mẻ sảng khoái"
+      "Nóng",
+      "Lạnh",
+      "Ấm",
+      "Mát"
     ],
-    "correctAnswer": "Nóng / Nóng bức",
-    "explanation": "热 (rè) miêu tả thời tiết hoặc nhiệt độ cao, nóng bức."
+    "correctAnswer": "Nóng",
+    "explanation": "热 (rè) chỉ nhiệt độ nóng bức."
   },
   {
     "id": 115,
@@ -1718,28 +1718,28 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 12,
     "question": "冷 — lěng nghĩa là gì?",
     "options": [
-      "Lạnh / Lạnh lẽo",
-      "Nóng bức oi ả",
-      "Ấm áp mùa xuân",
-      "Mát mẻ mùa thu"
+      "Lạnh",
+      "Nóng",
+      "Ấm",
+      "Mát"
     ],
-    "correctAnswer": "Lạnh / Lạnh lẽo",
-    "explanation": "冷 (lěng) miêu tả nhiệt độ thấp, thời tiết giá lạnh."
+    "correctAnswer": "Lạnh",
+    "explanation": "冷 (lěng) chỉ nhiệt độ lạnh giá."
   },
   {
     "id": 116,
     "hanzi": "下雨",
-    "pinyin": "xiàyǔ",
+    "pinyin": "xià yǔ",
     "lesson": 12,
-    "question": "下雨 — xiàyǔ nghĩa là gì?",
+    "question": "下雨 — xià yǔ nghĩa là gì?",
     "options": [
-      "Đổ mưa / Trời mưa",
-      "Trời nắng quang đãng",
-      "Tuyết rơi trắng xóa",
-      "Có gió giông bão"
+      "Trời mưa",
+      "Trời nắng",
+      "Trời râm",
+      "Có tuyết"
     ],
-    "correctAnswer": "Đổ mưa / Trời mưa",
-    "explanation": "下雨 (xiàyǔ) miêu tả hiện tượng mưa rơi từ bầu trời (雨: mưa)."
+    "correctAnswer": "Trời mưa",
+    "explanation": "下雨 (xià yǔ) nghĩa là trời đổ mưa."
   },
   {
     "id": 117,
@@ -1748,13 +1748,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 12,
     "question": "小姐 — xiǎojiě nghĩa là gì?",
     "options": [
-      "Cô gái / Cô",
-      "Quý ông tiên sinh",
-      "Người mẹ mẫu thân",
-      "Con gái nữ nhi"
+      "Cô gái",
+      "Quý ông",
+      "Bác sĩ",
+      "Học sinh"
     ],
-    "correctAnswer": "Cô gái / Cô",
-    "explanation": "小姐 (xiǎojiě) là danh xưng lịch sự dành cho phụ nữ trẻ tuổi (Ví dụ: 李小姐 - cô Lý)."
+    "correctAnswer": "Cô gái",
+    "explanation": "小姐 (xiǎojiě) là cách gọi lịch sự đối với phụ nữ trẻ."
   },
   {
     "id": 118,
@@ -1763,13 +1763,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 12,
     "question": "来 — lái nghĩa là gì?",
     "options": [
-      "Đến / Tới / Lại",
-      "Đi xa vị trí",
-      "Trở về chốn cũ",
-      "Ở lại chỗ này"
+      "Đến",
+      "Đi",
+      "Về",
+      "Ở"
     ],
-    "correctAnswer": "Đến / Tới / Lại",
-    "explanation": "来 (lái) chỉ chuyển động hướng về phía người nói (đối lập với 去 - đi)."
+    "correctAnswer": "Đến",
+    "explanation": "来 (lái) là động từ di chuyển lại gần người nói."
   },
   {
     "id": 119,
@@ -1778,13 +1778,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 12,
     "question": "些 — xiē nghĩa là gì?",
     "options": [
-      "Một vài / Một số / Chút ít",
-      "Tất cả toàn bộ",
-      "Rất nhiều vô kể",
-      "Một cái duy nhất"
+      "Một vài",
+      "Tất cả",
+      "Một cái",
+      "Toàn bộ"
     ],
-    "correctAnswer": "Một vài / Một số / Chút ít",
-    "explanation": "些 (xiē) là lượng từ biểu thị số lượng không xác định (Ví dụ: 这些 - những cái này, 一些 - một số/một ít)."
+    "correctAnswer": "Một vài",
+    "explanation": "些 (xiē) chỉ số lượng ít (Ví dụ: 这些 - những cái này)."
   },
   {
     "id": 120,
@@ -1794,12 +1794,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "水 — shuǐ nghĩa là gì?",
     "options": [
       "Nước",
-      "Lửa / Hỏa ngọn",
-      "Đất / Thổ đai",
-      "Gió / Phong lộng"
+      "Trà",
+      "Cà phê",
+      "Sữa"
     ],
     "correctAnswer": "Nước",
-    "explanation": "水 (shuǐ) là nước uống hoặc chất lỏng nói chung (喝水: uống nước)."
+    "explanation": "水 (shuǐ) là nước uống."
   },
   {
     "id": 121,
@@ -1808,13 +1808,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 13,
     "question": "喂 — wèi nghĩa là gì?",
     "options": [
-      "A-lô / Này",
-      "Xin chào gặp mặt",
-      "Tạm biệt chia tay",
-      "Cảm ơn giúp đỡ"
+      "A-lô",
+      "Tạm biệt",
+      "Xin chào",
+      "Cảm ơn"
     ],
-    "correctAnswer": "A-lô / Này",
-    "explanation": "喂 (wèi) là thán từ dùng khi bắt máy điện thoại tương tự như 'a-lô'."
+    "correctAnswer": "A-lô",
+    "explanation": "喂 (wèi) là từ dùng để chào khi nghe điện thoại."
   },
   {
     "id": 122,
@@ -1824,12 +1824,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "上午 — shàngwǔ nghĩa là gì?",
     "options": [
       "Buổi sáng",
-      "Buổi chiều sau trưa",
-      "Buổi tối đêm khuya",
-      "Buổi trưa chính ngọ"
+      "Buổi trưa",
+      "Buổi chiều",
+      "Buổi tối"
     ],
     "correctAnswer": "Buổi sáng",
-    "explanation": "上午 (shàngwǔ) là khoảng thời gian buổi sáng trước 12h trưa."
+    "explanation": "上午 (shàngwǔ) là buổi sáng trước 12 giờ trưa."
   },
   {
     "id": 123,
@@ -1838,13 +1838,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 13,
     "question": "睡觉 — shuìjiào nghĩa là gì?",
     "options": [
-      "Đi ngủ / Giấc ngủ",
-      "Thức dậy sớm mai",
-      "Tắm gội sạch sẽ",
-      "Ăn cơm trưa tối"
+      "Đi ngủ",
+      "Thức dậy",
+      "Nghỉ ngơi",
+      "Làm việc"
     ],
-    "correctAnswer": "Đi ngủ / Giấc ngủ",
-    "explanation": "睡觉 (shuìjiào) là hành động đi ngủ nghỉ ngơi."
+    "correctAnswer": "Đi ngủ",
+    "explanation": "睡觉 (shuìjiào) là động từ đi ngủ."
   },
   {
     "id": 124,
@@ -1854,12 +1854,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "电视 — diànshì nghĩa là gì?",
     "options": [
       "Tivi",
-      "Điện ảnh phim rạp",
-      "Máy vi tính để bàn",
-      "Điện thoại cầm tay"
+      "Máy tính",
+      "Điện thoại",
+      "Đài radio"
     ],
     "correctAnswer": "Tivi",
-    "explanation": "电视 (diànshì) là ti-vi, truyền hình vô tuyến."
+    "explanation": "电视 (diànshì) là vô tuyến truyền hình."
   },
   {
     "id": 125,
@@ -1868,13 +1868,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 13,
     "question": "喜欢 — xǐhuan nghĩa là gì?",
     "options": [
-      "Yêu thích / Thích thú",
-      "Chán ghét xa lánh",
-      "Mong muốn cần có",
-      "Quên mất"
+      "Thích",
+      "Ghét",
+      "Sợ",
+      "Muốn"
     ],
-    "correctAnswer": "Yêu thích / Thích thú",
-    "explanation": "喜欢 (xǐhuan) biểu thị sự yêu mến, thích thú (Ví dụ: 我喜欢汉语)."
+    "correctAnswer": "Thích",
+    "explanation": "喜欢 (xǐhuan) là động từ yêu thích điều gì."
   },
   {
     "id": 126,
@@ -1884,12 +1884,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "打电话 — dǎ diànhuà nghĩa là gì?",
     "options": [
       "Gọi điện thoại",
-      "Xem tivi giải trí",
-      "Nghe bài hát hay",
-      "Nói chuyện trực tiếp"
+      "Gửi thư từ",
+      "Xem ti vi",
+      "Nghe nhạc"
     ],
     "correctAnswer": "Gọi điện thoại",
-    "explanation": "打电话 (dǎ diànhuà) là quay số/bấm máy gọi điện thoại."
+    "explanation": "打电话 (dǎ diànhuà) là hành động gọi điện thoại."
   },
   {
     "id": 127,
@@ -1898,13 +1898,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 13,
     "question": "下 — xià nghĩa là gì?",
     "options": [
-      "Bên dưới / Xuống",
-      "Bên trên lên",
-      "Bên trong vào",
-      "Bên ngoài ra"
+      "Phía dưới",
+      "Phía trên",
+      "Bên trong",
+      "Bên ngoài"
     ],
-    "correctAnswer": "Bên dưới / Xuống",
-    "explanation": "下 (xià) chỉ vị trí bên dưới hoặc hướng chuyển động đi xuống (đối lập với 上)."
+    "correctAnswer": "Phía dưới",
+    "explanation": "下 (xià) là phương vị từ chỉ bên dưới."
   },
   {
     "id": 128,
@@ -1913,13 +1913,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 13,
     "question": "钱 — qián nghĩa là gì?",
     "options": [
-      "Tiền / Tiền bạc",
-      "Thời gian giờ giấc",
-      "Sách vở tri thức",
-      "Quần áo may mặc"
+      "Tiền",
+      "Thẻ",
+      "Vé",
+      "Sách"
     ],
-    "correctAnswer": "Tiền / Tiền bạc",
-    "explanation": "钱 (qián) là tiền tệ dùng trong giao thương (Ví dụ: 多少钱 - bao nhiêu tiền)."
+    "correctAnswer": "Tiền",
+    "explanation": "钱 (qián) nghĩa là tiền bạc."
   },
   {
     "id": 129,
@@ -1928,13 +1928,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 13,
     "question": "块 — kuài nghĩa là gì?",
     "options": [
-      "Đồng tiền / Mảnh / Khối",
-      "Phút giây thời gian",
-      "Quyển sách tập san",
-      "Chiếc xe cộ máy"
+      "Đồng",
+      "Quyển",
+      "Cái",
+      "Chiếc"
     ],
-    "correctAnswer": "Đồng tiền / Mảnh / Khối",
-    "explanation": "块 (kuài) dùng chỉ đơn vị tiền tệ khẩu ngữ (tệ/đồng) hoặc một mẩu, một khối."
+    "correctAnswer": "Đồng",
+    "explanation": "块 (kuài) là đơn vị đồng tiền theo văn nói Trung Quốc."
   },
   {
     "id": 130,
@@ -1943,13 +1943,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 13,
     "question": "那 — nà nghĩa là gì?",
     "options": [
-      "Kia / Đó",
-      "Đây / Này",
-      "Nào / Đâu",
-      "Ai / Người nào"
+      "Kia",
+      "Đây",
+      "Đâu",
+      "Nào"
     ],
-    "correctAnswer": "Kia / Đó",
-    "explanation": "那 (nà) dùng chỉ người hoặc vật ở xa người nói (đối lập với 这 - đây)."
+    "correctAnswer": "Kia",
+    "explanation": "那 (nà) là đại từ chỉ định ở vị trí xa (kia, đó)."
   },
   {
     "id": 131,
@@ -1958,13 +1958,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 14,
     "question": "东西 — dōngxi nghĩa là gì?",
     "options": [
-      "Đồ đạc / Đồ vật",
-      "Phương hướng la bàn",
-      "Quần áo mặc ngoài",
-      "Thức ăn bữa ăn"
+      "Đồ đạc",
+      "Con người",
+      "Thời gian",
+      "Địa điểm"
     ],
-    "correctAnswer": "Đồ đạc / Đồ vật",
-    "explanation": "东西 (dōngxi) nghĩa bóng là đồ đạc, đồ vật nói chung (买东西: mua sắm đồ)."
+    "correctAnswer": "Đồ đạc",
+    "explanation": "东西 (dōngxi) chỉ đồ vật, hàng hóa."
   },
   {
     "id": 132,
@@ -1973,13 +1973,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 14,
     "question": "一点儿 — yìdiǎnr nghĩa là gì?",
     "options": [
-      "Một chút / Một ít",
-      "Rất nhiều phong phú",
-      "Tất cả toàn vẹn",
-      "Bao nhiêu số lượng"
+      "Một chút",
+      "Rất nhiều",
+      "Tất cả",
+      "Toàn bộ"
     ],
-    "correctAnswer": "Một chút / Một ít",
-    "explanation": "一点儿 (yìdiǎnr) biểu thị số lượng nhỏ (吃一点儿: ăn một chút)."
+    "correctAnswer": "Một chút",
+    "explanation": "一点儿 (yìdiǎnr) chỉ một lượng nhỏ, một ít."
   },
   {
     "id": 133,
@@ -1989,12 +1989,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "苹果 — píngguǒ nghĩa là gì?",
     "options": [
       "Quả táo",
-      "Quả cam mọng nước",
-      "Quả chuối tiêu vàng",
-      "Quả dưa hấu mát"
+      "Quả dưa hấu",
+      "Quả chuối",
+      "Quả cam"
     ],
     "correctAnswer": "Quả táo",
-    "explanation": "苹果 (píngguǒ) là loại quả táo tây ăn được."
+    "explanation": "苹果 (píngguǒ) là quả táo."
   },
   {
     "id": 134,
@@ -2003,13 +2003,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 14,
     "question": "看见 — kànjiàn nghĩa là gì?",
     "options": [
-      "Trông thấy / Nhìn thấy",
-      "Lắng nghe tai nghe",
-      "Gặp gỡ tương ngộ",
-      "Nghĩ tới nhớ nhung"
+      "Nhìn thấy",
+      "Nghe thấy",
+      "Nói ra",
+      "Tìm thấy"
     ],
-    "correctAnswer": "Trông thấy / Nhìn thấy",
-    "explanation": "看见 (kànjiàn) là bổ ngữ kết quả, biểu thị kết quả mắt nhìn và thấy được đối tượng."
+    "correctAnswer": "Nhìn thấy",
+    "explanation": "看见 (kànjiàn) là trông thấy, nhìn thấy."
   },
   {
     "id": 135,
@@ -2018,13 +2018,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 14,
     "question": "先生 — xiānsheng nghĩa là gì?",
     "options": [
-      "Quý ông / Ngài / Chồng",
-      "Tiểu thư quý cô",
-      "Bác sĩ chữa bệnh",
-      "Thầy giáo trường học"
+      "Quý ông",
+      "Cô gái",
+      "Bác sĩ",
+      "Học sinh"
     ],
-    "correctAnswer": "Quý ông / Ngài / Chồng",
-    "explanation": "先生 (xiānsheng) là danh xưng lịch sự dành cho phái nam hoặc gọi chồng."
+    "correctAnswer": "Quý ông",
+    "explanation": "先生 (xiānsheng) là cách xưng hô lịch sự đối với nam giới."
   },
   {
     "id": 136,
@@ -2033,13 +2033,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 14,
     "question": "开 — kāi nghĩa là gì?",
     "options": [
-      "Mở / Lái xe / Họp",
-      "Đóng / Dừng xe",
-      "Ngồi / Chờ đợi",
-      "Đi / Rời khỏi"
+      "Mở ra / Lái xe",
+      "Đóng vào / Đi bộ",
+      "Bắt đầu / Dừng lại",
+      "Mua về / Bán đi"
     ],
-    "correctAnswer": "Mở / Lái xe / Họp",
-    "explanation": "开 (kāi) có nhiều nghĩa: 开门 (mở cửa), 开车 (lái xe), 开会 (họp hành)."
+    "correctAnswer": "Mở ra / Lái xe",
+    "explanation": "开 (kāi) có 2 nghĩa: mở cửa/mở hộp hoặc lái xe (开车)."
   },
   {
     "id": 137,
@@ -2048,13 +2048,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 14,
     "question": "漂亮 — piàoliang nghĩa là gì?",
     "options": [
-      "Xinh đẹp / Đẹp đẽ",
-      "Xấu xí thô kệch",
-      "Thông minh đĩnh ngộ",
-      "Hiền lành chất phác"
+      "Xinh đẹp",
+      "Xấu xí",
+      "Đắt đỏ",
+      "Rẻ tiền"
     ],
-    "correctAnswer": "Xinh đẹp / Đẹp đẽ",
-    "explanation": "漂亮 (piàoliang) dùng khen ngợi ngoại hình người hoặc vẻ đẹp sự vật."
+    "correctAnswer": "Xinh đẹp",
+    "explanation": "漂亮 (piàoliang) khen ngợi vẻ đẹp ngoại hình hoặc sự việc."
   },
   {
     "id": 138,
@@ -2063,13 +2063,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 14,
     "question": "少 — shǎo nghĩa là gì?",
     "options": [
-      "Ít ỏi / Thiếu",
-      "Nhiều nhặn đa số",
-      "To lớn khổng lồ",
-      "Bé nhỏ li ti"
+      "Ít",
+      "Nhiều",
+      "To",
+      "Bé"
     ],
-    "correctAnswer": "Ít ỏi / Thiếu",
-    "explanation": "少 (shǎo) chỉ số lượng ít (Ví dụ: 不少: không ít, nhiều)."
+    "correctAnswer": "Ít",
+    "explanation": "少 (shǎo) là ít ỏi về số lượng."
   },
   {
     "id": 139,
@@ -2078,13 +2078,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 14,
     "question": "都 — dōu nghĩa là gì?",
     "options": [
-      "Đều / Tất cả",
-      "Rất nhiều mức độ",
-      "Không hề phủ định",
-      "Cũng vậy tương đồng"
+      "Đều",
+      "Cũng",
+      "Rất",
+      "Chỉ"
     ],
-    "correctAnswer": "Đều / Tất cả",
-    "explanation": "都 (dōu) là phó từ chỉ tổng thể: mọi người/mọi thứ đều (我们都很好 - chúng tôi đều khỏe)."
+    "correctAnswer": "Đều",
+    "explanation": "都 (dōu) là phó từ mang nghĩa tất cả, đều."
   },
   {
     "id": 140,
@@ -2094,12 +2094,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "衣服 — yīfu nghĩa là gì?",
     "options": [
       "Quần áo",
-      "Giày dép đi chân",
-      "Mũ nón đội đầu",
-      "Túi xách xách tay"
+      "Giày dép",
+      "Mũ nón",
+      "Đồng hồ"
     ],
     "correctAnswer": "Quần áo",
-    "explanation": "衣服 (yīfu) chỉ trang phục quần áo may mặc mặc trên người."
+    "explanation": "衣服 (yīfu) nghĩa là trang phục quần áo."
   },
   {
     "id": 141,
@@ -2109,12 +2109,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "年 — nián nghĩa là gì?",
     "options": [
       "Năm",
-      "Tháng trong năm",
-      "Ngày trong tháng",
-      "Giờ trong ngày"
+      "Tháng",
+      "Ngày",
+      "Tuần"
     ],
     "correctAnswer": "Năm",
-    "explanation": "年 (nián) chỉ năm (Ví dụ: 今年 - năm nay, 去年 - năm ngoái, 明年 - năm sau)."
+    "explanation": "年 (nián) là đơn vị năm thời gian."
   },
   {
     "id": 142,
@@ -2123,13 +2123,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 15,
     "question": "饭店 — fàndiàn nghĩa là gì?",
     "options": [
-      "Nhà hàng / Khách sạn",
-      "Bệnh viện khám chữa",
-      "Trường học viện đào tạo",
-      "Cửa hàng bán lẻ"
+      "Nhà hàng",
+      "Trường học",
+      "Bệnh viện",
+      "Cửa hàng"
     ],
-    "correctAnswer": "Nhà hàng / Khách sạn",
-    "explanation": "饭店 (fàndiàn) là nơi ăn uống (nhà hàng) hoặc khách sạn lưu trú."
+    "correctAnswer": "Nhà hàng",
+    "explanation": "饭店 (fàndiàn) là quán ăn hoặc nhà hàng, khách sạn."
   },
   {
     "id": 143,
@@ -2139,12 +2139,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "出租车 — chūzūchē nghĩa là gì?",
     "options": [
       "Xe taxi",
-      "Máy bay phi cơ",
-      "Xe buýt công cộng",
-      "Tàu hỏa hỏa xa"
+      "Xe buýt",
+      "Xe đạp",
+      "Máy bay"
     ],
     "correctAnswer": "Xe taxi",
-    "explanation": "出租车 (chūzūchē) là xe taxi (xe cho thuê)."
+    "explanation": "出租车 (chūzūchē) là xe taxi."
   },
   {
     "id": 144,
@@ -2154,12 +2154,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "一起 — yìqǐ nghĩa là gì?",
     "options": [
       "Cùng nhau",
-      "Một mình đơn độc",
-      "Trước tiên mở đầu",
-      "Sau đó tiếp nối"
+      "Một mình",
+      "Rời xa",
+      "Khác nhau"
     ],
     "correctAnswer": "Cùng nhau",
-    "explanation": "一起 (yìqǐ) là phó từ chỉ sự kết hợp cùng làm gì (Ví dụ: 一起去 - cùng nhau đi)."
+    "explanation": "一起 (yìqǐ) là phó từ chỉ sự cùng làm chung."
   },
   {
     "id": 145,
@@ -2168,13 +2168,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 15,
     "question": "高兴 — gāoxìng nghĩa là gì?",
     "options": [
-      "Vui vẻ / Phấn khởi",
-      "Buồn bã đau xót",
-      "Tức giận phẫn nộ",
-      "Mệt mỏi kiệt sức"
+      "Vui vẻ",
+      "Buồn bã",
+      "Mệt mỏi",
+      "Tức giận"
     ],
-    "correctAnswer": "Vui vẻ / Phấn khởi",
-    "explanation": "高兴 (gāoxìng) miêu tả tâm trạng vui mừng, phấn chấn (很高兴认识你)."
+    "correctAnswer": "Vui vẻ",
+    "explanation": "高兴 (gāoxìng) mang nghĩa vui mừng, phấn khởi."
   },
   {
     "id": 146,
@@ -2183,13 +2183,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 15,
     "question": "听 — tīng nghĩa là gì?",
     "options": [
-      "Nghe / Lắng nghe",
-      "Phát biểu ý kiến",
-      "Đọc to sách báo",
-      "Nhìn ngắm quang cảnh"
+      "Nghe",
+      "Xem",
+      "Nói",
+      "Đọc"
     ],
-    "correctAnswer": "Nghe / Lắng nghe",
-    "explanation": "听 (tīng) là hành động lắng nghe bằng tai (Ví dụ: 听音乐 - nghe nhạc)."
+    "correctAnswer": "Nghe",
+    "explanation": "听 (tīng) là động từ nghe (Ví dụ: 听音乐 - nghe nhạc)."
   },
   {
     "id": 147,
@@ -2199,12 +2199,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "飞机 — fēijī nghĩa là gì?",
     "options": [
       "Máy bay",
-      "Xe taxi bốn bánh",
-      "Tàu hỏa đường sắt",
-      "Xe buýt tuyến đường"
+      "Xe lửa",
+      "Xe buýt",
+      "Xe taxi"
     ],
     "correctAnswer": "Máy bay",
-    "explanation": "飞机 (fēijī) là phương tiện hàng không máy bay."
+    "explanation": "飞机 (fēijī) là máy bay."
   },
   {
     "id": 148,
@@ -2213,13 +2213,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 15,
     "question": "爱 — ài nghĩa là gì?",
     "options": [
-      "Yêu / Yêu thương",
-      "Chán ghét xa lánh",
-      "Mua bán trao đổi",
-      "Nói năng phát biểu"
+      "Yêu",
+      "Ghét",
+      "Thích",
+      "Giận"
     ],
-    "correctAnswer": "Yêu / Yêu thương",
-    "explanation": "爱 (ài) nghĩa là yêu hoặc thích ai đó/cái gì đó (Ví dụ: 我爱你 - Tôi yêu bạn)."
+    "correctAnswer": "Yêu",
+    "explanation": "爱 (ài) là tình yêu thương sâu sắc."
   },
   {
     "id": 149,
@@ -2228,13 +2228,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 15,
     "question": "水果 — shuǐguǒ nghĩa là gì?",
     "options": [
-      "Hoa quả / Trái cây",
-      "Rau xanh củ cải",
-      "Món ăn bữa chính",
-      "Nước khoáng đóng chai"
+      "Hoa quả",
+      "Rau củ",
+      "Thịt cá",
+      "Cơm canh"
     ],
-    "correctAnswer": "Hoa quả / Trái cây",
-    "explanation": "水果 (shuǐguǒ) chỉ các loại quả trái cây ngọt lành ăn được."
+    "correctAnswer": "Hoa quả",
+    "explanation": "水果 (shuǐguǒ) là các loại trái cây."
   },
   {
     "id": 150,
@@ -2243,13 +2243,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 15,
     "question": "怎么 — zěnme nghĩa là gì?",
     "options": [
-      "Làm sao / Thế nào / Sao lại",
-      "Ở đâu vị trí chốn",
-      "Bao nhiêu số lượng tiền",
-      "Cái gì đồ vật sự việc"
+      "Làm sao",
+      "Ở đâu",
+      "Bao nhiêu",
+      "Cái gì"
     ],
-    "correctAnswer": "Làm sao / Thế nào / Sao lại",
-    "explanation": "怎么 (zěnme) dùng hỏi phương thức hành động (怎么去: đi như thế nào) hoặc nguyên do (你怎么了: bạn làm sao vậy)."
+    "correctAnswer": "Làm sao",
+    "explanation": "怎么 (zěnme) dùng để hỏi phương thức hành động hoặc nguyên nhân."
   },
   {
     "id": 151,
@@ -2258,13 +2258,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 16,
     "question": "旅游 — lǚyóu nghĩa là gì?",
     "options": [
-      "Du lịch / Tham quan",
-      "Làm việc công sở",
-      "Học tập trường lớp",
-      "Nghỉ ngơi tại nhà"
+      "Du lịch",
+      "Làm việc",
+      "Học tập",
+      "Nghỉ ngơi"
     ],
-    "correctAnswer": "Du lịch / Tham quan",
-    "explanation": "旅游 (lǚyóu) là hoạt động đi tham quan nghỉ dưỡng (Ví dụ: 去北京旅游 - đi Bắc Kinh du lịch)."
+    "correctAnswer": "Du lịch",
+    "explanation": "旅游 (lǚyóu) là hoạt động đi tham quan nghỉ dưỡng."
   },
   {
     "id": 152,
@@ -2273,13 +2273,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 16,
     "question": "觉得 — juéde nghĩa là gì?",
     "options": [
-      "Cảm thấy / Cho rằng",
-      "Nghe thấy thanh âm",
-      "Nhìn thấy tận mắt",
-      "Biết rõ sự tình"
+      "Cảm thấy",
+      "Nhìn thấy",
+      "Nghe thấy",
+      "Tìm thấy"
     ],
-    "correctAnswer": "Cảm thấy / Cho rằng",
-    "explanation": "觉得 (juéde) dùng để bày tỏ cảm nhận, nhận định cá nhân (Ví dụ: 我觉得很好 - Tôi cảm thấy rất tốt)."
+    "correctAnswer": "Cảm thấy",
+    "explanation": "觉得 (juéde) dùng để bày tỏ cảm nhận, ý kiến cá nhân."
   },
   {
     "id": 153,
@@ -2288,13 +2288,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 16,
     "question": "最 — zuì nghĩa là gì?",
     "options": [
-      "Nhất / Cực kỳ",
-      "Hơn / Tương đối",
-      "Rất / Khá là",
-      "Đều / Toàn bộ"
+      "Nhất",
+      "Hơn",
+      "Rất",
+      "Quá"
     ],
-    "correctAnswer": "Nhất / Cực kỳ",
-    "explanation": "最 (zuì) đứng trước tính từ/động từ chỉ mức độ cao nhất (Ví dụ: 最好 - tốt nhất, 最喜欢 - thích nhất)."
+    "correctAnswer": "Nhất",
+    "explanation": "最 (zuì) biểu thị mức độ cao nhất (Ví dụ: 最好 - tốt nhất)."
   },
   {
     "id": 154,
@@ -2303,12 +2303,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 16,
     "question": "为什么 — wèishénme nghĩa là gì?",
     "options": [
-      "Tại sao / Vì sao",
-      "Cái gì đồ vật",
-      "Ở đâu nơi chốn",
-      "Bao giờ thời điểm"
+      "Tại sao",
+      "Cái gì",
+      "Ở đâu",
+      "Khi nào"
     ],
-    "correctAnswer": "Tại sao / Vì sao",
+    "correctAnswer": "Tại sao",
     "explanation": "为什么 (wèishénme) là đại từ hỏi nguyên nhân, lý do."
   },
   {
@@ -2318,13 +2318,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 16,
     "question": "也 — yě nghĩa là gì?",
     "options": [
-      "Cũng / Cũng vậy",
-      "Đều là toàn bộ",
-      "Rất là mức độ",
-      "Không là phủ định"
+      "Cũng",
+      "Đều",
+      "Rất",
+      "Chỉ"
     ],
-    "correctAnswer": "Cũng / Cũng vậy",
-    "explanation": "也 (yě) là phó từ chỉ sự đồng nhất, tương đồng (Ví dụ: 我也是 - Tôi cũng vậy)."
+    "correctAnswer": "Cũng",
+    "explanation": "也 (yě) là phó từ chỉ sự đồng nhất (Ví dụ: 我也是 - Tôi cũng vậy)."
   },
   {
     "id": 156,
@@ -2333,13 +2333,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 16,
     "question": "运动 — yùndòng nghĩa là gì?",
     "options": [
-      "Vận động / Thể thao",
-      "Học tập tri thức",
-      "Nghỉ ngơi an dưỡng",
-      "Làm việc công tác"
+      "Vận động",
+      "Nghỉ ngơi",
+      "Học tập",
+      "Làm việc"
     ],
-    "correctAnswer": "Vận động / Thể thao",
-    "explanation": "运动 (yùndòng) là hoạt động thể dục thể thao rèn luyện sức khỏe."
+    "correctAnswer": "Vận động",
+    "explanation": "运动 (yùndòng) là thể dục thể thao rèn luyện sức khỏe."
   },
   {
     "id": 157,
@@ -2348,13 +2348,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 16,
     "question": "踢足球 — tī zúqiú nghĩa là gì?",
     "options": [
-      "Đá bóng / Chơi bóng đá",
-      "Chơi bóng rổ tay",
-      "Bơi lội dưới nước",
-      "Chạy bộ rèn sức"
+      "Đá bóng",
+      "Bóng rổ",
+      "Bơi lội",
+      "Chạy bộ"
     ],
-    "correctAnswer": "Đá bóng / Chơi bóng đá",
-    "explanation": "踢足球 (tī zúqiú) là môn bóng đá."
+    "correctAnswer": "Đá bóng",
+    "explanation": "踢足球 (tī zúqiú) là môn thể thao bóng đá."
   },
   {
     "id": 158,
@@ -2364,12 +2364,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "一起 — yìqǐ nghĩa là gì?",
     "options": [
       "Cùng nhau",
-      "Một mình đơn độc",
-      "Trước tiên mở đầu",
-      "Sau đó tiếp nối"
+      "Một mình",
+      "Rời xa",
+      "Khác nhau"
     ],
     "correctAnswer": "Cùng nhau",
-    "explanation": "一起 (yìqǐ) chỉ sự kết hợp đồng thời cùng làm gì đó (Ví dụ: 一起去 - cùng đi)."
+    "explanation": "一起 (yìqǐ) là làm việc cùng nhau."
   },
   {
     "id": 159,
@@ -2378,13 +2378,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 16,
     "question": "新 — xīn nghĩa là gì?",
     "options": [
-      "Mới mẻ / Mới",
-      "Cũ kỹ cổ xưa",
-      "Đẹp đẽ mỹ miều",
-      "Tốt lành thuận lợi"
+      "Mới",
+      "Cũ",
+      "Đẹp",
+      "Tốt"
     ],
-    "correctAnswer": "Mới mẻ / Mới",
-    "explanation": "新 (xīn) chỉ sự vật mới xuất hiện (Ví dụ: 新书 - sách mới, 新年 - năm mới)."
+    "correctAnswer": "Mới",
+    "explanation": "新 (xīn) chỉ cái mới, đối lập với 旧 (cũ)."
   },
   {
     "id": 160,
@@ -2393,13 +2393,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 16,
     "question": "要 — yào nghĩa là gì?",
     "options": [
-      "Cần / Muốn / Sắp sửa",
-      "Không cần chối từ",
-      "Đã từng trải qua",
-      "Chưa từng thực hiện"
+      "Muốn / Cần",
+      "Thích / Yêu",
+      "Biết / Hiểu",
+      "Đi / Đến"
     ],
-    "correctAnswer": "Cần / Muốn / Sắp sửa",
-    "explanation": "要 (yào) biểu thị nhu cầu, nguyện vọng hoặc hành động sắp diễn ra (Ví dụ: 我要买 - tôi muốn mua)."
+    "correctAnswer": "Muốn / Cần",
+    "explanation": "要 (yào) có 2 nghĩa: muốn làm gì hoặc cần thiết phải làm gì."
   },
   {
     "id": 161,
@@ -2408,13 +2408,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 17,
     "question": "生病 — shēngbìng nghĩa là gì?",
     "options": [
-      "Bị ốm / Nhiễm bệnh",
-      "Khỏe mạnh cường tráng",
-      "Mệt mỏi kiệt sức",
-      "Đau đầu nhức óc"
+      "Bị ốm",
+      "Khỏe mạnh",
+      "Mệt mỏi",
+      "Nghỉ ngơi"
     ],
-    "correctAnswer": "Bị ốm / Nhiễm bệnh",
-    "explanation": "生病 (shēngbìng) là trạng thái cơ thể không khỏe, mắc bệnh tật."
+    "correctAnswer": "Bị ốm",
+    "explanation": "生病 (shēngbìng) nghĩa là mắc bệnh, bị ốm."
   },
   {
     "id": 162,
@@ -2423,13 +2423,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 17,
     "question": "每 — měi nghĩa là gì?",
     "options": [
-      "Mỗi / Hàng",
-      "Tất cả toàn bộ",
-      "Rất nhiều vô kể",
-      "Ít ỏi hiếm hoi"
+      "Mỗi",
+      "Tất cả",
+      "Một vài",
+      "Nhiều"
     ],
-    "correctAnswer": "Mỗi / Hàng",
-    "explanation": "每 (měi) chỉ từng cá thể trong một tập thể (Ví dụ: 每天 - mỗi ngày/hàng ngày, 每个人 - mỗi người)."
+    "correctAnswer": "Mỗi",
+    "explanation": "每 (měi) là đại từ chỉ từng cá thể (Ví dụ: 每天 - mỗi ngày)."
   },
   {
     "id": 163,
@@ -2438,13 +2438,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 17,
     "question": "早上 — zǎoshang nghĩa là gì?",
     "options": [
-      "Buổi sáng / Sáng sớm",
-      "Buổi trưa chính ngọ",
-      "Buổi chiều tà tà",
-      "Buổi tối đêm khuya"
+      "Buổi sáng",
+      "Buổi trưa",
+      "Buổi chiều",
+      "Buổi tối"
     ],
-    "correctAnswer": "Buổi sáng / Sáng sớm",
-    "explanation": "早上 (zǎoshang) là thời điểm sáng sớm khi mặt trời vừa lên."
+    "correctAnswer": "Buổi sáng",
+    "explanation": "早上 (zǎoshang) là sáng sớm tinh mơ."
   },
   {
     "id": 164,
@@ -2454,12 +2454,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "跑步 — pǎobù nghĩa là gì?",
     "options": [
       "Chạy bộ",
-      "Bơi lội dưới hồ",
-      "Đá bóng sân cỏ",
-      "Đi dạo thong thả"
+      "Bơi lội",
+      "Đá bóng",
+      "Đi bộ"
     ],
     "correctAnswer": "Chạy bộ",
-    "explanation": "跑步 (pǎobù) là hoạt động chạy bộ rèn luyện sức khỏe."
+    "explanation": "跑步 (pǎobù) là môn thể thao chạy bộ."
   },
   {
     "id": 165,
@@ -2469,12 +2469,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "起床 — qǐchuáng nghĩa là gì?",
     "options": [
       "Thức dậy",
-      "Đi ngủ say giấc",
-      "Tắm gội sạch sẽ",
-      "Ăn sáng điểm tâm"
+      "Đi ngủ",
+      "Ăn cơm",
+      "Rửa mặt"
     ],
     "correctAnswer": "Thức dậy",
-    "explanation": "起床 (qǐchuáng) là thức dậy sau giấc ngủ."
+    "explanation": "起床 (qǐchuáng) là rời giường khi thức giấc."
   },
   {
     "id": 166,
@@ -2483,13 +2483,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 17,
     "question": "药 — yào nghĩa là gì?",
     "options": [
-      "Thuốc uống / Dược phẩm",
-      "Thức ăn bổ dưỡng",
-      "Nước ngọt giải khát",
-      "Trà xanh thanh nhiệt"
+      "Thuốc",
+      "Trà",
+      "Cơm",
+      "Nước"
     ],
-    "correctAnswer": "Thuốc uống / Dược phẩm",
-    "explanation": "药 (yào) là thuốc chữa bệnh (Ví dụ: 吃药 - uống thuốc, 中药 - thuốc đông y)."
+    "correctAnswer": "Thuốc",
+    "explanation": "药 (yào) là dược phẩm chữa bệnh (吃药 - uống thuốc)."
   },
   {
     "id": 167,
@@ -2498,13 +2498,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 17,
     "question": "身体 — shēntǐ nghĩa là gì?",
     "options": [
-      "Thân thể / Sức khỏe",
-      "Thời gian năm tháng",
-      "Công việc sự nghiệp",
-      "Tuổi tác đời người"
+      "Sức khỏe",
+      "Thời tiết",
+      "Công việc",
+      "Thời gian"
     ],
-    "correctAnswer": "Thân thể / Sức khỏe",
-    "explanation": "身体 (shēntǐ) chỉ cơ thể hoặc sức khỏe con người (身体好: sức khỏe tốt)."
+    "correctAnswer": "Sức khỏe",
+    "explanation": "身体 (shēntǐ) chỉ cơ thể hoặc sức khỏe con người."
   },
   {
     "id": 168,
@@ -2514,12 +2514,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "休息 — xiūxi nghĩa là gì?",
     "options": [
       "Nghỉ ngơi",
-      "Làm việc miệt mài",
-      "Học tập chăm chỉ",
-      "Tập luyện thể thao"
+      "Làm việc",
+      "Học tập",
+      "Vận động"
     ],
     "correctAnswer": "Nghỉ ngơi",
-    "explanation": "休息 (xiūxi) là dừng công việc để nghỉ ngơi, hồi phục sức lực."
+    "explanation": "休息 (xiūxi) là tạm dừng làm việc để thư giãn lấy lại sức."
   },
   {
     "id": 169,
@@ -2528,13 +2528,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 17,
     "question": "出 — chū nghĩa là gì?",
     "options": [
-      "Đi ra / Ra ngoài",
-      "Đi vào bên trong",
-      "Đi đến nơi xa",
-      "Trở về chốn cũ"
+      "Đi ra / Xuất hiện",
+      "Đi vào / Biến mất",
+      "Đi lên / Bắt đầu",
+      "Đi xuống / Kết thúc"
     ],
-    "correctAnswer": "Đi ra / Ra ngoài",
-    "explanation": "出 (chū) là chuyển động từ trong ra ngoài (Ví dụ: 出去 - đi ra ngoài, 出院 - xuất viện)."
+    "correctAnswer": "Đi ra / Xuất hiện",
+    "explanation": "出 (chū) có 2 nghĩa: bước ra ngoài hoặc xuất hiện."
   },
   {
     "id": 170,
@@ -2543,13 +2543,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 17,
     "question": "忙 — máng nghĩa là gì?",
     "options": [
-      "Bận rộn / Bận",
-      "Rảnh rỗi thảnh thơi",
-      "Mệt mỏi đuối sức",
-      "Vui vẻ phấn khởi"
+      "Bận rộn",
+      "Rảnh rỗi",
+      "Mệt mỏi",
+      "Vui vẻ"
     ],
-    "correctAnswer": "Bận rộn / Bận",
-    "explanation": "忙 (máng) miêu tả trạng thái có nhiều việc phải làm tất bật (Ví dụ: 你忙吗 - bạn bận không?)."
+    "correctAnswer": "Bận rộn",
+    "explanation": "忙 (máng) chỉ trạng thái có nhiều việc phải làm."
   },
   {
     "id": 171,
@@ -2558,13 +2558,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 18,
     "question": "手表 — shǒubiǎo nghĩa là gì?",
     "options": [
-      "Đồng hồ đeo tay",
-      "Điện thoại di động",
-      "Máy vi tính để bàn",
-      "Túi xách thời trang"
+      "Đồng hồ",
+      "Điện thoại",
+      "Máy tính",
+      "Túi xách"
     ],
-    "correctAnswer": "Đồng hồ đeo tay",
-    "explanation": "手表 (shǒubiǎo) là phụ kiện xem giờ đeo ở cổ tay."
+    "correctAnswer": "Đồng hồ",
+    "explanation": "手表 (shǒubiǎo) là đồng hồ đeo tay."
   },
   {
     "id": 172,
@@ -2573,13 +2573,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 18,
     "question": "千 — qiān nghĩa là gì?",
     "options": [
-      "Một nghìn / Ngàn",
+      "Một nghìn",
       "Một trăm",
       "Một vạn",
       "Mười"
     ],
-    "correctAnswer": "Một nghìn / Ngàn",
-    "explanation": "千 (qiān) là hàng ngàn (Ví dụ: 一千 - một nghìn, 三千 - ba nghìn)."
+    "correctAnswer": "Một nghìn",
+    "explanation": "千 (qiān) là số đếm hàng nghìn."
   },
   {
     "id": 173,
@@ -2588,13 +2588,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 18,
     "question": "报纸 — bàozhǐ nghĩa là gì?",
     "options": [
-      "Báo chí / Tờ báo",
-      "Quyển sách vở",
-      "Cây bút mực",
-      "Tờ giấy trắng"
+      "Tờ báo",
+      "Quyển sách",
+      "Cây bút",
+      "Tờ giấy"
     ],
-    "correctAnswer": "Báo chí / Tờ báo",
-    "explanation": "报纸 (bàozhǐ) là ấn phẩm báo đọc tin tức (看报纸 - đọc báo)."
+    "correctAnswer": "Tờ báo",
+    "explanation": "报纸 (bàozhǐ) là ấn phẩm báo in tức."
   },
   {
     "id": 174,
@@ -2603,13 +2603,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 18,
     "question": "送 — sòng nghĩa là gì?",
     "options": [
-      "Tặng / Tiễn đưa",
-      "Nhận / Đón rước",
-      "Mua / Bán đồ",
-      "Mượn / Vay tiền"
+      "Tặng quà / Tiễn đưa",
+      "Nhận đồ / Đón về",
+      "Mua vào / Bán ra",
+      "Vay mượn / Trả lại"
     ],
-    "correctAnswer": "Tặng / Tiễn đưa",
-    "explanation": "送 (sòng) vừa là tặng quà (送礼物), vừa là tiễn ai đó lên đường (送朋友: tiễn bạn)."
+    "correctAnswer": "Tặng quà / Tiễn đưa",
+    "explanation": "送 (sòng) có 2 nghĩa: tặng quà cho ai hoặc tiễn ai lên đường."
   },
   {
     "id": 175,
@@ -2618,13 +2618,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 18,
     "question": "一下 — yíxià nghĩa là gì?",
     "options": [
-      "Một lát / Thử xem",
-      "Một lần duy nhất",
-      "Rất lâu hàng giờ",
-      "Mãi mãi trường tồn"
+      "Một lát",
+      "Một lần",
+      "Cả ngày",
+      "Mãi mãi"
     ],
-    "correctAnswer": "Một lát / Thử xem",
-    "explanation": "一下 (yíxià) đứng sau động từ để làm nhẹ sắc thái, biểu thị làm thử một chút (看一下 - xem thử)."
+    "correctAnswer": "Một lát",
+    "explanation": "一下 (yíxià) làm giảm nhẹ sắc thái động từ (làm thử một chút)."
   },
   {
     "id": 176,
@@ -2634,12 +2634,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "牛奶 — niúnǎi nghĩa là gì?",
     "options": [
       "Sữa bò",
-      "Trà xanh thanh mát",
-      "Cà phê đen đậm",
-      "Nước khoáng tinh khiết"
+      "Trà",
+      "Cà phê",
+      "Nước"
     ],
     "correctAnswer": "Sữa bò",
-    "explanation": "牛奶 (niúnǎi) là thức uống sữa dinh dưỡng từ con bò."
+    "explanation": "牛奶 (niúnǎi) là thức uống sữa bò."
   },
   {
     "id": 177,
@@ -2648,13 +2648,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 18,
     "question": "房间 — fángjiān nghĩa là gì?",
     "options": [
-      "Căn phòng / Buồng",
-      "Ngôi nhà toàn thể",
-      "Cửa hàng / Tiệm",
-      "Trường học"
+      "Căn phòng",
+      "Ngôi nhà",
+      "Lớp học",
+      "Cửa hàng"
     ],
-    "correctAnswer": "Căn phòng / Buồng",
-    "explanation": "房间 (fángjiān) là căn phòng bên trong ngôi nhà hoặc khách sạn."
+    "correctAnswer": "Căn phòng",
+    "explanation": "房间 (fángjiān) là phòng ở trong nhà."
   },
   {
     "id": 178,
@@ -2663,13 +2663,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 18,
     "question": "丈夫 — zhàngfu nghĩa là gì?",
     "options": [
-      "Người chồng / Chồng",
-      "Người vợ thê tử",
-      "Người cha phụ thân",
-      "Anh trai ca ca"
+      "Người chồng",
+      "Người vợ",
+      "Anh trai",
+      "Bố"
     ],
-    "correctAnswer": "Người chồng / Chồng",
-    "explanation": "丈夫 (zhàngfu) là người chồng trong quan hệ hôn nhân."
+    "correctAnswer": "Người chồng",
+    "explanation": "丈夫 (zhàngfu) nghĩa là người chồng trong hôn nhân."
   },
   {
     "id": 179,
@@ -2678,13 +2678,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 18,
     "question": "红 — hóng nghĩa là gì?",
     "options": [
-      "Màu đỏ / Hồng",
-      "Màu trắng bạch",
-      "Màu đen hắc",
-      "Màu vàng hoàng"
+      "Màu đỏ",
+      "Màu trắng",
+      "Màu đen",
+      "Màu vàng"
     ],
-    "correctAnswer": "Màu đỏ / Hồng",
-    "explanation": "红 (hóng) chỉ màu đỏ (Ví dụ: 红色的衣服 - quần áo màu đỏ)."
+    "correctAnswer": "Màu đỏ",
+    "explanation": "红 (hóng) là sắc đỏ."
   },
   {
     "id": 180,
@@ -2694,12 +2694,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "颜色 — yánsè nghĩa là gì?",
     "options": [
       "Màu sắc",
-      "Hình dáng vóc dáng",
-      "Kích thước độ lớn",
-      "Âm thanh tiếng động"
+      "Hình dáng",
+      "Kích thước",
+      "Số lượng"
     ],
     "correctAnswer": "Màu sắc",
-    "explanation": "颜色 (yánsè) chỉ các sắc màu như đỏ, xanh, trắng, vàng."
+    "explanation": "颜色 (yánsè) nghĩa là màu sắc."
   },
   {
     "id": 181,
@@ -2708,13 +2708,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 19,
     "question": "生日 — shēngrì nghĩa là gì?",
     "options": [
-      "Sinh nhật / Ngày sinh",
-      "Hôm nay hiện tại",
-      "Ngày lễ kỷ niệm",
-      "Năm mới tết đến"
+      "Sinh nhật",
+      "Năm mới",
+      "Ngày nghỉ",
+      "Lễ hội"
     ],
-    "correctAnswer": "Sinh nhật / Ngày sinh",
-    "explanation": "生日 (shēngrì) là ngày kỷ niệm chào đời (Ví dụ: 生日快乐 - sinh nhật vui vẻ)."
+    "correctAnswer": "Sinh nhật",
+    "explanation": "生日 (shēngrì) là ngày sinh của một người."
   },
   {
     "id": 182,
@@ -2723,13 +2723,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 19,
     "question": "快乐 — kuàilè nghĩa là gì?",
     "options": [
-      "Hạnh phúc / Vui vẻ",
-      "Buồn bã đau thương",
-      "Mệt mỏi suy kiệt",
-      "Tức giận căm hờn"
+      "Hạnh phúc",
+      "Buồn bã",
+      "Mệt mỏi",
+      "Lo lắng"
     ],
-    "correctAnswer": "Hạnh phúc / Vui vẻ",
-    "explanation": "快乐 (kuàilè) miêu tả niềm vui trọn vẹn, hoan hỷ."
+    "correctAnswer": "Hạnh phúc",
+    "explanation": "快乐 (kuàilè) là niềm vui tươi, hạnh phúc (生日快乐 - sinh nhật vui vẻ)."
   },
   {
     "id": 183,
@@ -2738,13 +2738,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 19,
     "question": "给 — gěi nghĩa là gì?",
     "options": [
-      "Cho / Đưa cho / Cấp",
-      "Cầm / Nhận lấy",
-      "Bán / Giao đồ",
-      "Mua / Chuộc về"
+      "Cho / Đưa cho",
+      "Lấy / Nhận về",
+      "Mua / Bán đi",
+      "Mượn / Vay về"
     ],
-    "correctAnswer": "Cho / Đưa cho / Cấp",
-    "explanation": "给 (gěi) là đưa vật gì cho ai (给你) hoặc giới từ làm gì cho ai (给我买: mua cho tôi)."
+    "correctAnswer": "Cho / Đưa cho",
+    "explanation": "给 (gěi) có 2 nghĩa: đưa cho ai vật gì hoặc làm gì cho ai."
   },
   {
     "id": 184,
@@ -2753,13 +2753,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 19,
     "question": "晚上 — wǎnshang nghĩa là gì?",
     "options": [
-      "Buổi tối / Ban đêm",
-      "Buổi sáng sớm mai",
-      "Buổi chiều tà tà",
-      "Buổi trưa chính ngọ"
+      "Buổi tối",
+      "Buổi sáng",
+      "Buổi trưa",
+      "Buổi chiều"
     ],
-    "correctAnswer": "Buổi tối / Ban đêm",
-    "explanation": "晚上 (wǎnshang) là khoảng thời gian từ chiều tối đến đêm."
+    "correctAnswer": "Buổi tối",
+    "explanation": "晚上 (wǎnshang) là khoảng thời gian ban đêm."
   },
   {
     "id": 185,
@@ -2768,13 +2768,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 19,
     "question": "问 — wèn nghĩa là gì?",
     "options": [
-      "Hỏi / Hỏi thăm",
-      "Trả lời giải đáp",
-      "Nói năng phát biểu",
-      "Lắng nghe tiếp nhận"
+      "Hỏi",
+      "Trả lời",
+      "Nói",
+      "Nghe"
     ],
-    "correctAnswer": "Hỏi / Hỏi thăm",
-    "explanation": "问 (wèn) là đặt câu hỏi (Ví dụ: 问好 - hỏi thăm, 问老师 - hỏi thầy giáo)."
+    "correctAnswer": "Hỏi",
+    "explanation": "问 (wèn) là động từ thắc mắc, hỏi han."
   },
   {
     "id": 186,
@@ -2783,13 +2783,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 19,
     "question": "非常 — fēicháng nghĩa là gì?",
     "options": [
-      "Vô cùng / Phi thường / Rất",
-      "Một chút ít ỏi",
-      "Bình thường không có gì",
-      "Không hề phủ định"
+      "Vô cùng",
+      "Hơi hơi",
+      "Không hề",
+      "Một chút"
     ],
-    "correctAnswer": "Vô cùng / Phi thường / Rất",
-    "explanation": "非常 (fēicháng) là phó từ chỉ mức độ cao hơn cả 很 (非常高兴)."
+    "correctAnswer": "Vô cùng",
+    "explanation": "非常 (fēicháng) là phó từ chỉ mức độ rất cao (vô cùng, đặc biệt)."
   },
   {
     "id": 187,
@@ -2798,13 +2798,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 19,
     "question": "开始 — kāishǐ nghĩa là gì?",
     "options": [
-      "Bắt đầu / Khởi đầu",
-      "Kết thúc hoàn tất",
-      "Nghỉ ngơi tạm dừng",
-      "Dừng hẳn thôi làm"
+      "Bắt đầu",
+      "Kết thúc",
+      "Tiếp tục",
+      "Tạm dừng"
     ],
-    "correctAnswer": "Bắt đầu / Khởi đầu",
-    "explanation": "开始 (kāishǐ) là khởi đầu một quá trình hoặc hành động (开始学习 - bắt đầu học)."
+    "correctAnswer": "Bắt đầu",
+    "explanation": "开始 (kāishǐ) là khởi đầu một việc."
   },
   {
     "id": 188,
@@ -2813,13 +2813,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 19,
     "question": "介绍 — jièshào nghĩa là gì?",
     "options": [
-      "Giới thiệu / Tiến cử",
-      "Giúp đỡ hỗ trợ",
-      "Bắt đầu mở màn",
-      "Gặp gỡ tương ngộ"
+      "Giới thiệu",
+      "Chào hỏi",
+      "Tạm biệt",
+      "Cảm ơn"
     ],
-    "correctAnswer": "Giới thiệu / Tiến cử",
-    "explanation": "介绍 (jièshào) là làm quen, cung cấp thông tin người hoặc vật (介绍一下)."
+    "correctAnswer": "Giới thiệu",
+    "explanation": "介绍 (jièshào) là hành động giới thiệu người hoặc vật."
   },
   {
     "id": 189,
@@ -2829,12 +2829,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "去年 — qùnián nghĩa là gì?",
     "options": [
       "Năm ngoái",
-      "Năm nay kim niên",
-      "Năm sau minh niên",
-      "Tháng trước thượng nguyệt"
+      "Năm nay",
+      "Năm sau",
+      "Hôm qua"
     ],
     "correctAnswer": "Năm ngoái",
-    "explanation": "去年 (qùnián) là năm vừa trôi qua liền trước năm hiện tại."
+    "explanation": "去年 (qùnián) là năm trước năm hiện tại."
   },
   {
     "id": 190,
@@ -2843,13 +2843,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 19,
     "question": "累 — lèi nghĩa là gì?",
     "options": [
-      "Mệt mỏi / Mệt nhọc",
-      "Đói bụng cồn cào",
-      "Vui vẻ phấn khởi",
-      "Khát nước cháy họng"
+      "Mệt mỏi",
+      "Khỏe mạnh",
+      "Bận rộn",
+      "Vui vẻ"
     ],
-    "correctAnswer": "Mệt mỏi / Mệt nhọc",
-    "explanation": "累 (lèi) miêu tả trạng thái hao tổn thể lực sau khi làm việc nặng."
+    "correctAnswer": "Mệt mỏi",
+    "explanation": "累 (lèi) miêu tả trạng thái mệt nhọc."
   },
   {
     "id": 191,
@@ -2858,13 +2858,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 20,
     "question": "外 — wài nghĩa là gì?",
     "options": [
-      "Bên ngoài / Ngoại",
-      "Bên trong phía trong",
-      "Bên trên phía trên",
-      "Bên dưới phía dưới"
+      "Bên ngoài",
+      "Bên trong",
+      "Phía trên",
+      "Phía dưới"
     ],
-    "correctAnswer": "Bên ngoài / Ngoại",
-    "explanation": "外 (wài) chỉ vị trí bên ngoài (Ví dụ: 外面 - bên ngoài, 外国 - nước ngoài)."
+    "correctAnswer": "Bên ngoài",
+    "explanation": "外 (wài) là phương vị từ chỉ bên ngoài."
   },
   {
     "id": 192,
@@ -2874,12 +2874,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "自行车 — zìxíngchē nghĩa là gì?",
     "options": [
       "Xe đạp",
-      "Xe máy hai bánh",
-      "Xe buýt công cộng",
-      "Xe taxi dịch vụ"
+      "Xe máy",
+      "Xe buýt",
+      "Xe taxi"
     ],
     "correctAnswer": "Xe đạp",
-    "explanation": "自行车 (zìxíngchē) là xe đạp."
+    "explanation": "自行车 (zìxíngchē) là xe đạp hai bánh."
   },
   {
     "id": 193,
@@ -2888,13 +2888,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 20,
     "question": "羊肉 — yángròu nghĩa là gì?",
     "options": [
-      "Thịt cừu / Thịt dê",
-      "Thịt bò bổ dưỡng",
-      "Thịt heo nạc dăm",
-      "Thịt gà thả vườn"
+      "Thịt cừu",
+      "Thịt bò",
+      "Thịt gà",
+      "Thịt lợn"
     ],
-    "correctAnswer": "Thịt cừu / Thịt dê",
-    "explanation": "羊肉 (yángròu) là món thịt từ loài dê hoặc cừu."
+    "correctAnswer": "Thịt cừu",
+    "explanation": "羊肉 (yángròu) là thịt của con cừu/dê."
   },
   {
     "id": 194,
@@ -2903,13 +2903,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 20,
     "question": "好吃 — hǎochī nghĩa là gì?",
     "options": [
-      "Ngon miệng / Ngon",
-      "Khó nuốt vị đắng",
-      "Đẹp đẽ ưa nhìn",
-      "Vui tươi sảng khoái"
+      "Ngon miệng",
+      "Khó nuốt",
+      "Cay nồng",
+      "Chua chát"
     ],
-    "correctAnswer": "Ngon miệng / Ngon",
-    "explanation": "好吃 (hǎochī) khen ngợi đồ ăn thơm ngon hợp khẩu vị."
+    "correctAnswer": "Ngon miệng",
+    "explanation": "好吃 (hǎochī) nghĩa là thức ăn có vị thơm ngon."
   },
   {
     "id": 195,
@@ -2918,13 +2918,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 20,
     "question": "吧 — ba nghĩa là gì?",
     "options": [
-      "Nhé / Đi",
-      "Không phủ định",
-      "Ở đâu / Vị trí nào",
-      "Của ai sở hữu"
+      "Nhé",
+      "Không",
+      "Gì",
+      "Ai"
     ],
-    "correctAnswer": "Nhé / Đi",
-    "explanation": "吧 (ba) đứng cuối câu biểu thị sự gợi ý, đề xuất, thương lượng (走吧 - đi thôi nào)."
+    "correctAnswer": "Nhé",
+    "explanation": "吧 (ba) là trợ từ ngữ khí đặt cuối câu dùng để rủ rê, khuyên bảo (Ví dụ: 走吧 - đi nhé)."
   },
   {
     "id": 196,
@@ -2933,13 +2933,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 20,
     "question": "件 — jiàn nghĩa là gì?",
     "options": [
-      "Chiếc / Vụ việc",
-      "Cuốn sách tập san",
-      "Cái chén cái cốc",
-      "Bát cơm tô canh"
+      "Chiếc",
+      "Quyển",
+      "Bát",
+      "Cốc"
     ],
-    "correctAnswer": "Chiếc / Vụ việc",
-    "explanation": "件 (jiàn) là lượng từ dùng cho quần áo (一件衣服) hoặc sự việc (一件事)."
+    "correctAnswer": "Chiếc",
+    "explanation": "件 (jiàn) là lượng từ dùng cho quần áo hoặc sự việc (一件衣服)."
   },
   {
     "id": 197,
@@ -2948,13 +2948,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 20,
     "question": "还 — hái nghĩa là gì?",
     "options": [
-      "Vẫn còn / Còn",
-      "Đã qua dĩ vãng",
-      "Chưa từng trải qua",
-      "Chỉ có duy nhất"
+      "Vẫn còn",
+      "Đã hết",
+      "Không hề",
+      "Vừa mới"
     ],
-    "correctAnswer": "Vẫn còn / Còn",
-    "explanation": "还 (hái) là phó từ biểu thị sự tiếp diễn hoặc bổ sung (Ví dụ: 还有 - vẫn còn)."
+    "correctAnswer": "Vẫn còn",
+    "explanation": "还 (hái) biểu thị hành động hoặc trạng thái vẫn đang tiếp diễn."
   },
   {
     "id": 198,
@@ -2964,12 +2964,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "可以 — kěyǐ nghĩa là gì?",
     "options": [
       "Có thể / Được phép",
-      "Không được cấm đoán",
-      "Bắt buộc phải làm",
-      "Muốn có ước ao"
+      "Cần phải / Bắt buộc",
+      "Muốn làm / Thích thú",
+      "Dám làm / Sẵn sàng"
     ],
     "correctAnswer": "Có thể / Được phép",
-    "explanation": "可以 (kěyǐ) biểu thị sự cho phép hoặc khả thi (Ví dụ: 可以吗 - được không?)."
+    "explanation": "可以 (kěyǐ) có 2 nghĩa: biểu thị khả năng có thể làm hoặc được cho phép làm gì."
   },
   {
     "id": 199,
@@ -2979,12 +2979,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "咖啡 — kāfēi nghĩa là gì?",
     "options": [
       "Cà phê",
-      "Trà thơm thanh mát",
-      "Nước lọc tinh khiết",
-      "Sữa bò nguyên kem"
+      "Trà",
+      "Sữa",
+      "Nước"
     ],
     "correctAnswer": "Cà phê",
-    "explanation": "咖啡 (kāfēi) là đồ uống cà phê pha từ hạt cà phê."
+    "explanation": "咖啡 (kāfēi) là đồ uống cà phê."
   },
   {
     "id": 200,
@@ -2994,12 +2994,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "鱼 — yú nghĩa là gì?",
     "options": [
       "Con cá",
-      "Con gà gáy sáng",
-      "Con cừu lông trắng",
-      "Con chó giữ nhà"
+      "Con gà",
+      "Con cừu",
+      "Con bò"
     ],
     "correctAnswer": "Con cá",
-    "explanation": "鱼 (yú) là loài động vật sống dưới nước có vây và vảy (吃鱼: ăn cá)."
+    "explanation": "鱼 (yú) là loài cá bơi dưới nước."
   },
   {
     "id": 201,
@@ -3008,13 +3008,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 21,
     "question": "门 — mén nghĩa là gì?",
     "options": [
-      "Cửa vào / Cổng",
-      "Cửa sổ thông gió",
-      "Căn phòng ngủ",
-      "Cái bàn ăn cơm"
+      "Cửa",
+      "Tường",
+      "Cửa sổ",
+      "Bàn"
     ],
-    "correctAnswer": "Cửa vào / Cổng",
-    "explanation": "门 (mén) là cửa ra vào hoặc cổng nhà (Ví dụ: 开门 - mở cửa)."
+    "correctAnswer": "Cửa",
+    "explanation": "门 (mén) là cửa ra vào hoặc cổng nhà."
   },
   {
     "id": 202,
@@ -3023,13 +3023,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 21,
     "question": "考试 — kǎoshì nghĩa là gì?",
     "options": [
-      "Thi cử / Kiểm tra",
-      "Học tập trường lớp",
-      "Làm việc công sở",
-      "Nghỉ hè an dưỡng"
+      "Thi cử",
+      "Học tập",
+      "Nghỉ ngơi",
+      "Vui chơi"
     ],
-    "correctAnswer": "Thi cử / Kiểm tra",
-    "explanation": "考试 (kǎoshì) là kỳ thi hoặc bài kiểm tra năng lực học tập."
+    "correctAnswer": "Thi cử",
+    "explanation": "考试 (kǎoshì) là bài kiểm tra, kỳ thi."
   },
   {
     "id": 203,
@@ -3038,13 +3038,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 21,
     "question": "意思 — yìsi nghĩa là gì?",
     "options": [
-      "Ý nghĩa / Thú vị",
-      "Thời gian năm tháng",
-      "Ý kiến đóng góp",
-      "Lý do biện minh"
+      "Ý nghĩa",
+      "Âm thanh",
+      "Hình ảnh",
+      "Màu sắc"
     ],
-    "correctAnswer": "Ý nghĩa / Thú vị",
-    "explanation": "意思 (yìsi) là nội hàm của từ ngữ hoặc sự thú vị (有意思 - thú vị, 什么意思 - ý gì)."
+    "correctAnswer": "Ý nghĩa",
+    "explanation": "意思 (yìsi) là ý nghĩa hoặc sự thú vị (很有意思)."
   },
   {
     "id": 204,
@@ -3053,13 +3053,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 21,
     "question": "准备 — zhǔnbèi nghĩa là gì?",
     "options": [
-      "Chuẩn bị / Trù bị",
+      "Chuẩn bị",
       "Bắt đầu",
-      "Hoàn thành xong xuôi",
-      "Nghỉ ngơi thư giãn"
+      "Kết thúc",
+      "Từ bỏ"
     ],
-    "correctAnswer": "Chuẩn bị / Trù bị",
-    "explanation": "准备 (zhǔnbèi) là sắp xếp, trù bị trước cho một kế hoạch hoặc công việc."
+    "correctAnswer": "Chuẩn bị",
+    "explanation": "准备 (zhǔnbèi) là việc sắp xếp, chuẩn bị trước."
   },
   {
     "id": 205,
@@ -3068,13 +3068,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 21,
     "question": "阴 — yīn nghĩa là gì?",
     "options": [
-      "Trời râm / U ám",
-      "Trời nắng chói chang",
-      "Trời mưa tầm tã",
-      "Tuyết rơi lạnh buốt"
+      "Trời râm",
+      "Trời nắng",
+      "Trời mưa",
+      "Có tuyết"
     ],
-    "correctAnswer": "Trời râm / U ám",
-    "explanation": "阴 (yīn) miêu tả thời tiết nhiều mây, không có ánh nắng mặt trời (阴天: ngày râm trời)."
+    "correctAnswer": "Trời râm",
+    "explanation": "阴 (yīn) chỉ thời tiết nhiều mây u ám (阴天)."
   },
   {
     "id": 206,
@@ -3083,13 +3083,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 21,
     "question": "懂 — dǒng nghĩa là gì?",
     "options": [
-      "Hiểu rõ / Nắm được",
-      "Quên mất",
-      "Nói năng phát biểu",
-      "Nhìn thấy mắt thấy"
+      "Hiểu",
+      "Quên",
+      "Nhớ",
+      "Biết"
     ],
-    "correctAnswer": "Hiểu rõ / Nắm được",
-    "explanation": "懂 (dǒng) chỉ sự nhận thức, hiểu rõ nội dung (Ví dụ: 我懂了 - tôi hiểu rồi)."
+    "correctAnswer": "Hiểu",
+    "explanation": "懂 (dǒng) là thấu hiểu điều được nghe hoặc đọc."
   },
   {
     "id": 207,
@@ -3098,13 +3098,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 21,
     "question": "题 — tí nghĩa là gì?",
     "options": [
-      "Đề thi / Câu hỏi",
-      "Quyển sách",
-      "Bài thi kiểm tra",
-      "Điểm số đạt được"
+      "Câu hỏi",
+      "Đáp án",
+      "Bài học",
+      "Đoạn văn"
     ],
-    "correctAnswer": "Đề thi / Câu hỏi",
-    "explanation": "题 (tí) là đề mục, câu hỏi trong bài kiểm tra (这道题 - câu hỏi này)."
+    "correctAnswer": "Câu hỏi",
+    "explanation": "题 (tí) là đề bài, câu hỏi bài tập hay bài thi."
   },
   {
     "id": 208,
@@ -3114,12 +3114,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "西瓜 — xīguā nghĩa là gì?",
     "options": [
       "Dưa hấu",
-      "Quả táo đỏ giòn",
-      "Quả cam mọng nước",
-      "Quả chuối chín vàng"
+      "Táo",
+      "Chuối",
+      "Cam"
     ],
     "correctAnswer": "Dưa hấu",
-    "explanation": "西瓜 (xīguā) là loại dưa vỏ xanh ruột đỏ nhiều nước ngọt mát."
+    "explanation": "西瓜 (xīguā) là quả dưa hấu."
   },
   {
     "id": 209,
@@ -3129,12 +3129,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "鸡蛋 — jīdàn nghĩa là gì?",
     "options": [
       "Trứng gà",
-      "Thịt cừu nướng",
-      "Cá tươi kho",
-      "Thịt bò xào"
+      "Thịt bò",
+      "Thịt cừu",
+      "Con cá"
     ],
     "correctAnswer": "Trứng gà",
-    "explanation": "鸡蛋 (jīdàn) là thực phẩm quen thuộc."
+    "explanation": "鸡蛋 (jīdàn) là quả trứng gà."
   },
   {
     "id": 210,
@@ -3143,13 +3143,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 21,
     "question": "完 — wán nghĩa là gì?",
     "options": [
-      "Xong xuôi / Hoàn thành",
-      "Bắt đầu khởi đầu",
-      "Còn lại dư thừa",
-      "Đang làm dang dở"
+      "Xong",
+      "Bắt đầu",
+      "Tiếp tục",
+      "Dang dở"
     ],
-    "correctAnswer": "Xong xuôi / Hoàn thành",
-    "explanation": "完 (wán) là bổ ngữ kết quả chỉ hành động đã kết thúc trọn vẹn (做完 - làm xong)."
+    "correctAnswer": "Xong",
+    "explanation": "完 (wán) là bổ ngữ kết quả chỉ hành động kết thúc hoàn thành (做完 - làm xong)."
   },
   {
     "id": 211,
@@ -3158,13 +3158,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 22,
     "question": "离 — lí nghĩa là gì?",
     "options": [
-      "Cách xa / Ly",
-      "Đến gần cận kề",
-      "Ở tại vị trí",
-      "Từ nơi xuất phát"
+      "Cách xa / Rời khỏi",
+      "Gần lại / Đến gần",
+      "Ở tại / Nằm trong",
+      "Đi tới / Hướng về"
     ],
-    "correctAnswer": "Cách xa / Ly",
-    "explanation": "离 (lí) dùng để đo cự ly giữa hai địa điểm (我家离学校很近 - Nhà tôi cách trường rất gần)."
+    "correctAnswer": "Cách xa / Rời khỏi",
+    "explanation": "离 (lí) có 2 nghĩa: chỉ khoảng cách không gian/thời gian hoặc sự rời khỏi."
   },
   {
     "id": 212,
@@ -3173,13 +3173,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 22,
     "question": "公司 — gōngsī nghĩa là gì?",
     "options": [
-      "Công ty / Doanh nghiệp",
-      "Bệnh viện khám bệnh",
-      "Trường học giảng dạy",
-      "Cửa hàng bán lẻ"
+      "Công ty",
+      "Trường học",
+      "Bệnh viện",
+      "Cửa hàng"
     ],
-    "correctAnswer": "Công ty / Doanh nghiệp",
-    "explanation": "公司 (gōngsī) là cơ quan, doanh nghiệp làm việc (去公司 - đến công ty làm việc)."
+    "correctAnswer": "Công ty",
+    "explanation": "公司 (gōngsī) là công ty, doanh nghiệp."
   },
   {
     "id": 213,
@@ -3188,13 +3188,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 22,
     "question": "远 — yuǎn nghĩa là gì?",
     "options": [
-      "Xa xôi / Xa",
-      "Gần gũi sát bên",
-      "Cao ráo ngất trời",
-      "Rộng lớn bao la"
+      "Xa",
+      "Gần",
+      "Cao",
+      "Thấp"
     ],
-    "correctAnswer": "Xa xôi / Xa",
-    "explanation": "远 (yuǎn) miêu tả cự ly dài, khoảng cách xa (Ví dụ: 很远 - rất xa)."
+    "correctAnswer": "Xa",
+    "explanation": "远 (yuǎn) chỉ cự ly xa xôi (đối lập với 近)."
   },
   {
     "id": 214,
@@ -3204,9 +3204,9 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "公共汽车 — gōnggòng qìchē nghĩa là gì?",
     "options": [
       "Xe buýt",
-      "Xe taxi dịch vụ",
-      "Máy bay hàng không",
-      "Xe đạp hai bánh"
+      "Xe taxi",
+      "Xe đạp",
+      "Máy bay"
     ],
     "correctAnswer": "Xe buýt",
     "explanation": "公共汽车 (gōnggòng qìchē) là phương tiện xe buýt công cộng."
@@ -3218,13 +3218,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 22,
     "question": "小时 — xiǎoshí nghĩa là gì?",
     "options": [
-      "Tiếng đồng hồ / Giờ",
-      "Phút giây chốc lát",
-      "Ngày đêm tròn vẹn",
-      "Tháng năm dài lâu"
+      "Tiếng đồng hồ",
+      "Phút",
+      "Giây",
+      "Ngày"
     ],
-    "correctAnswer": "Tiếng đồng hồ / Giờ",
-    "explanation": "小时 (xiǎoshí) chỉ khoảng thời gian tính bằng giờ (一个小时 - một tiếng đồng hồ)."
+    "correctAnswer": "Tiếng đồng hồ",
+    "explanation": "小时 (xiǎoshí) là khoảng thời gian một giờ đồng hồ."
   },
   {
     "id": 216,
@@ -3233,13 +3233,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 22,
     "question": "慢 — màn nghĩa là gì?",
     "options": [
-      "Chậm chạp / Từ tốn",
-      "Nhanh nhẹn cấp tốc",
-      "Sớm sủa kịp thời",
-      "Muộn màng trễ nải"
+      "Chậm",
+      "Nhanh",
+      "Sớm",
+      "Muộn"
     ],
-    "correctAnswer": "Chậm chạp / Từ tốn",
-    "explanation": "慢 (màn) miêu tả tốc độ chậm (慢走: đi thong thả, 走得慢: đi chậm)."
+    "correctAnswer": "Chậm",
+    "explanation": "慢 (màn) biểu thị tốc độ chậm chạp."
   },
   {
     "id": 217,
@@ -3248,28 +3248,28 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 22,
     "question": "快 — kuài nghĩa là gì?",
     "options": [
-      "Nhanh / Sắp sửa",
-      "Chậm / Muộn màng",
-      "Sớm / Kịp thời",
-      "Dài / Lâu lắc"
+      "Nhanh",
+      "Chậm",
+      "Sớm",
+      "Muộn"
     ],
-    "correctAnswer": "Nhanh / Sắp sửa",
-    "explanation": "快 (kuài) chỉ tốc độ nhanh (跑得快) hoặc sự việc sắp diễn ra (快到了: sắp đến nơi)."
+    "correctAnswer": "Nhanh",
+    "explanation": "快 (kuài) biểu thị tốc độ nhanh nhẹn."
   },
   {
     "id": 218,
     "hanzi": "过",
-    "pinyin": "guo",
+    "pinyin": "guò",
     "lesson": 22,
-    "question": "过 — guo nghĩa là gì?",
+    "question": "过 — guò nghĩa là gì?",
     "options": [
-      "Đã từng / Qua",
-      "Đang làm hiện tại",
-      "Sẽ làm tương lai",
-      "Chưa từng bao giờ"
+      "Đi qua / Đã từng",
+      "Dừng lại / Chưa từng",
+      "Quay lại / Sắp sửa",
+      "Đến nơi / Hiện tại"
     ],
-    "correctAnswer": "Đã từng / Qua",
-    "explanation": "过 (guo) đặt sau động từ biểu thị trải nghiệm trong quá khứ (去过 - từng đi qua)."
+    "correctAnswer": "Đi qua / Đã từng",
+    "explanation": "过 (guò) có 2 nghĩa: đi qua địa điểm hoặc làm trợ từ động thái chỉ từng trải nghiệm trong quá khứ."
   },
   {
     "id": 219,
@@ -3278,13 +3278,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 22,
     "question": "走 — zǒu nghĩa là gì?",
     "options": [
-      "Đi bộ / Rời đi",
-      "Chạy trốn thật xa",
-      "Ngồi xuống ghế tựa",
-      "Đứng lại bất động"
+      "Đi bộ",
+      "Chạy bộ",
+      "Đứng lại",
+      "Ngồi xuống"
     ],
-    "correctAnswer": "Đi bộ / Rời đi",
-    "explanation": "走 (zǒu) là hành động đi bộ hoặc rời khỏi vị trí (Ví dụ: 慢走 - đi thong thả)."
+    "correctAnswer": "Đi bộ",
+    "explanation": "走 (zǒu) là hành động bước đi hoặc rời đi."
   },
   {
     "id": 220,
@@ -3293,13 +3293,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 22,
     "question": "路 — lù nghĩa là gì?",
     "options": [
-      "Con đường / Tuyến đường",
-      "Cửa ngõ ra vào",
-      "Căn phòng khép kín",
-      "Cây cầu bắc qua"
+      "Con đường",
+      "Cây cầu",
+      "Ngôi nhà",
+      "Dòng sông"
     ],
-    "correctAnswer": "Con đường / Tuyến đường",
-    "explanation": "路 (lù) là đường sá đi lại hoặc tuyến xe (路上: trên đường, 一路顺风: thượng lộ bình an)."
+    "correctAnswer": "Con đường",
+    "explanation": "路 (lù) là con đường giao thông."
   },
   {
     "id": 221,
@@ -3308,13 +3308,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 23,
     "question": "再 — zài nghĩa là gì?",
     "options": [
-      "Lần nữa / Lại",
-      "Đã rồi hoàn tất",
-      "Chưa làm dang dở",
-      "Vẫn còn tiếp tục"
+      "Lại / Lần nữa",
+      "Đã / Trước kia",
+      "Đang / Hiện tại",
+      "Chưa / Bao giờ"
     ],
-    "correctAnswer": "Lần nữa / Lại",
-    "explanation": "再 (zài) là phó từ chỉ hành động lặp lại trong tương lai (Ví dụ: 再见 - gặp lại sau, 再看 - xem lại)."
+    "correctAnswer": "Lại / Lần nữa",
+    "explanation": "再 (zài) là phó từ chỉ hành động lặp lại trong tương lai hoặc làm sau."
   },
   {
     "id": 222,
@@ -3323,13 +3323,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 23,
     "question": "让 — ràng nghĩa là gì?",
     "options": [
-      "Để cho / Bảo / Nhường",
-      "Bắt buộc ép uổng",
-      "Mong muốn khao khát",
-      "Biết rõ tường tận"
+      "Để cho / Nhường",
+      "Bắt buộc / Cấm",
+      "Rủ rê / Mời",
+      "Giúp đỡ / Hỗ trợ"
     ],
-    "correctAnswer": "Để cho / Bảo / Nhường",
-    "explanation": "让 (ràng) là động từ sai khiến (让我想想: để tôi nghĩ) hoặc nhượng bộ."
+    "correctAnswer": "Để cho / Nhường",
+    "explanation": "让 (ràng) có 2 nghĩa: cho phép/khiến ai làm gì hoặc nhường nhịn ai."
   },
   {
     "id": 223,
@@ -3338,13 +3338,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 23,
     "question": "告诉 — gàosu nghĩa là gì?",
     "options": [
-      "Nói cho / Báo cho",
-      "Hỏi han thắc mắc",
-      "Nghe ngóng tin tức",
-      "Suy nghĩ / Đắn đo"
+      "Nói cho",
+      "Hỏi han",
+      "Lắng nghe",
+      "Giấu kín"
     ],
-    "correctAnswer": "Nói cho / Báo cho",
-    "explanation": "告诉 (gàosu) là truyền đạt thông tin cho người khác biết (告诉我: nói cho tôi biết)."
+    "correctAnswer": "Nói cho",
+    "explanation": "告诉 (gàosu) là truyền đạt thông tin cho người khác biết."
   },
   {
     "id": 224,
@@ -3353,13 +3353,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 23,
     "question": "等 — děng nghĩa là gì?",
     "options": [
-      "Chờ đợi / Đợi",
-      "Rời bước đi ngay",
-      "Tìm kiếm khắp nơi",
-      "Hỏi han cặn kẽ"
+      "Chờ đợi",
+      "Rời đi",
+      "Tìm kiếm",
+      "Bỏ qua"
     ],
-    "correctAnswer": "Chờ đợi / Đợi",
-    "explanation": "等 (děng) là hành động chờ đợi ai đó hoặc điều gì (等一下 - đợi một lát)."
+    "correctAnswer": "Chờ đợi",
+    "explanation": "等 (děng) là chờ đợi ai đó hoặc sự việc gì."
   },
   {
     "id": 225,
@@ -3368,13 +3368,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 23,
     "question": "找 — zhǎo nghĩa là gì?",
     "options": [
-      "Tìm kiếm / Thối tiền thừa",
-      "Đánh mất tiêu xài",
-      "Mua sắm gom góp",
-      "Bán đi nhận lấy"
+      "Tìm kiếm / Thối lại tiền",
+      "Hỏi han / Nhận lại đồ",
+      "Mua sắm / Đổi lại hàng",
+      "Gặp gỡ / Chia tay bạn"
     ],
-    "correctAnswer": "Tìm kiếm / Thối tiền thừa",
-    "explanation": "找 (zhǎo) nghĩa là tìm kiếm đồ đạc (找东西) hoặc trả lại tiền thối (找钱)."
+    "correctAnswer": "Tìm kiếm / Thối lại tiền",
+    "explanation": "找 (zhǎo) có 2 nghĩa: tìm kiếm đồ vật hoặc thối lại tiền thừa (找钱)."
   },
   {
     "id": 226,
@@ -3383,13 +3383,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 23,
     "question": "事情 — shìqing nghĩa là gì?",
     "options": [
-      "Sự việc / Sự tình",
-      "Đồ vật khí cụ",
-      "Thời gian khoảnh khắc",
-      "Nơi chốn địa điểm"
+      "Sự việc",
+      "Thời gian",
+      "Địa điểm",
+      "Con người"
     ],
-    "correctAnswer": "Sự việc / Sự tình",
-    "explanation": "事情 (shìqing) chỉ sự việc hoặc công việc cần giải quyết (Ví dụ: 什么事 - việc gì thế?)."
+    "correctAnswer": "Sự việc",
+    "explanation": "事情 (shìqing) nghĩa là việc xảy ra, sự tình."
   },
   {
     "id": 227,
@@ -3398,13 +3398,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 23,
     "question": "就 — jiù nghĩa là gì?",
     "options": [
-      "Thì / Liền / Ngay",
-      "Cũng vậy tương đồng",
-      "Đều là toàn thể",
-      "Vẫn còn tiếp diễn"
+      "Liền / Ngay",
+      "Chưa / Muộn",
+      "Mới / Lâu",
+      "Không / Hẳn"
     ],
-    "correctAnswer": "Thì / Liền / Ngay",
-    "explanation": "就 (jiù) nhấn mạnh tính chất sớm, nhanh, thuận lợi hoặc khẳng định dứt khoát."
+    "correctAnswer": "Liền / Ngay",
+    "explanation": "就 (jiù) nhấn mạnh tính mau lẹ, ngay lập tức."
   },
   {
     "id": 228,
@@ -3413,13 +3413,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 23,
     "question": "便宜 — piányi nghĩa là gì?",
     "options": [
-      "Giá rẻ / Rẻ",
-      "Giá đắt đỏ son",
-      "Xinh đẹp mặn mà",
-      "Ngon lành thơm tho"
+      "Rẻ",
+      "Đắt",
+      "Tốt",
+      "Xấu"
     ],
-    "correctAnswer": "Giá rẻ / Rẻ",
-    "explanation": "便宜 (piányi) miêu tả giá cả thấp, rẻ tiền (Ví dụ: 便宜点儿 - rẻ hơn chút đi)."
+    "correctAnswer": "Rẻ",
+    "explanation": "便宜 (piányi) chỉ mức giá cả thấp, phải chăng."
   },
   {
     "id": 229,
@@ -3428,13 +3428,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 23,
     "question": "卖 — mài nghĩa là gì?",
     "options": [
-      "Bán ra / Tiêu thụ",
-      "Mua vào tích trữ",
-      "Tặng cho biếu xén",
-      "Mượn vay nợ nần"
+      "Bán",
+      "Mua",
+      "Tặng",
+      "Thuê"
     ],
-    "correctAnswer": "Bán ra / Tiêu thụ",
-    "explanation": "卖 (mài) nghĩa là bán hàng (đối lập với 买: mua, mang thanh 3)."
+    "correctAnswer": "Bán",
+    "explanation": "卖 (mài) là trao đổi hàng hóa để lấy tiền (bán hàng)."
   },
   {
     "id": 230,
@@ -3443,13 +3443,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 23,
     "question": "贵 — guì nghĩa là gì?",
     "options": [
-      "Đắt đỏ / Quý giá",
-      "Rẻ tiền hạ giá",
-      "Nhiều tiền dư dả",
-      "Tốt tính hiền hòa"
+      "Đắt",
+      "Rẻ",
+      "Nhiều",
+      "Ít"
     ],
-    "correctAnswer": "Đắt đỏ / Quý giá",
-    "explanation": "贵 (guì) miêu tả giá tiền cao, đắt đỏ (太贵了 - đắt quá rồi)."
+    "correctAnswer": "Đắt",
+    "explanation": "贵 (guì) biểu thị giá tiền đắt đỏ."
   },
   {
     "id": 231,
@@ -3459,12 +3459,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "上班 — shàngbān nghĩa là gì?",
     "options": [
       "Đi làm",
-      "Tan sở về nhà",
-      "Đi học lên lớp",
-      "Nghỉ ngơi an dưỡng"
+      "Tan làm",
+      "Đi học",
+      "Đi ngủ"
     ],
     "correctAnswer": "Đi làm",
-    "explanation": "上班 (shàngbān) là đến cơ quan làm việc (đối lập với 下班: tan làm)."
+    "explanation": "上班 (shàngbān) là bắt đầu giờ làm việc."
   },
   {
     "id": 232,
@@ -3473,13 +3473,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 24,
     "question": "唱歌 — chànggē nghĩa là gì?",
     "options": [
-      "Ca hát / Hát",
-      "Nhảy múa khiêu vũ",
-      "Nghe nhạc thưởng thức",
-      "Nói chuyện tâm tình"
+      "Hát",
+      "Múa",
+      "Nói",
+      "Nghe"
     ],
-    "correctAnswer": "Ca hát / Hát",
-    "explanation": "唱歌 (chànggē) là hát những giai điệu bài hát (喜欢唱歌 - thích hát)."
+    "correctAnswer": "Hát",
+    "explanation": "唱歌 (chànggē) là ca hát."
   },
   {
     "id": 233,
@@ -3488,13 +3488,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 24,
     "question": "男 — nán nghĩa là gì?",
     "options": [
-      "Nam giới / Đàn ông",
-      "Nữ giới đàn bà",
-      "Trẻ con thiếu nhi",
-      "Người già trưởng lão"
+      "Nam",
+      "Nữ",
+      "Già",
+      "Trẻ"
     ],
-    "correctAnswer": "Nam giới / Đàn ông",
-    "explanation": "男 (nán) chỉ giới tính nam (Ví dụ: 男人 - đàn ông, 男生 - nam sinh)."
+    "correctAnswer": "Nam",
+    "explanation": "男 (nán) chỉ giới tính nam (Ví dụ: 男人 - đàn ông)."
   },
   {
     "id": 234,
@@ -3503,13 +3503,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 24,
     "question": "女 — nǚ nghĩa là gì?",
     "options": [
-      "Nữ giới / Phụ nữ",
-      "Nam giới đàn ông",
-      "Người cha phụ thân",
-      "Con trai nhi tử"
+      "Nữ",
+      "Nam",
+      "Già",
+      "Trẻ"
     ],
-    "correctAnswer": "Nữ giới / Phụ nữ",
-    "explanation": "女 (nǚ) chỉ giới tính nữ (Ví dụ: 女人 - phụ nữ, 女生 - nữ sinh)."
+    "correctAnswer": "Nữ",
+    "explanation": "女 (nǚ) chỉ giới tính nữ (Ví dụ: 女人 - phụ nữ)."
   },
   {
     "id": 235,
@@ -3518,13 +3518,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 24,
     "question": "孩子 — háizi nghĩa là gì?",
     "options": [
-      "Trẻ con / Con cái",
-      "Người lớn trưởng thành",
-      "Học sinh lớp trên",
-      "Bố mẹ phụ huynh"
+      "Trẻ con",
+      "Người lớn",
+      "Thầy cô",
+      "Bố mẹ"
     ],
-    "correctAnswer": "Trẻ con / Con cái",
-    "explanation": "孩子 (háizi) chỉ đứa trẻ con hoặc con cái của bố mẹ."
+    "correctAnswer": "Trẻ con",
+    "explanation": "孩子 (háizi) là đứa trẻ hoặc con cái."
   },
   {
     "id": 236,
@@ -3533,13 +3533,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 24,
     "question": "错 — cuò nghĩa là gì?",
     "options": [
-      "Sai sót / Nhầm lẫn",
-      "Đúng đắn chính xác",
-      "Tốt lành thuận lợi",
-      "Mới mẻ tinh tươm"
+      "Sai",
+      "Đúng",
+      "Tốt",
+      "Xấu"
     ],
-    "correctAnswer": "Sai sót / Nhầm lẫn",
-    "explanation": "错 (cuò) biểu thị sự sai, nhầm lẫn (Ví dụ: 没错 - không sai, 不错 - không tệ/rất tốt)."
+    "correctAnswer": "Sai",
+    "explanation": "错 (cuò) biểu thị sự nhầm lẫn, sai sót (đối lập với 对)."
   },
   {
     "id": 237,
@@ -3548,13 +3548,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 24,
     "question": "从 — cóng nghĩa là gì?",
     "options": [
-      "Từ đâu / Điểm xuất phát",
-      "Đến đâu / Tới nơi nào",
-      "Ở đâu / Vị trí nào",
-      "Cùng ai / Với ai"
+      "Từ đâu / Bắt đầu từ",
+      "Đến đâu / Kết thúc ở",
+      "Ở đâu / Nằm tại",
+      "Về đâu / Hướng tới"
     ],
-    "correctAnswer": "Từ đâu / Điểm xuất phát",
-    "explanation": "从 (cóng) biểu thị mốc thời gian hoặc nơi chốn xuất phát (从北京来 - đến từ Bắc Kinh)."
+    "correctAnswer": "Từ đâu / Bắt đầu từ",
+    "explanation": "从 (cóng) có 2 nghĩa: mốc xuất phát về thời gian hoặc địa điểm."
   },
   {
     "id": 238,
@@ -3563,13 +3563,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 24,
     "question": "跳舞 — tiàowǔ nghĩa là gì?",
     "options": [
-      "Khiêu vũ / Nhảy múa",
-      "Ca hát vui vẻ",
-      "Đá bóng sân bãi",
-      "Chạy bộ rèn luyện"
+      "Nhảy múa",
+      "Ca hát",
+      "Đá bóng",
+      "Chạy bộ"
     ],
-    "correctAnswer": "Khiêu vũ / Nhảy múa",
-    "explanation": "跳舞 (tiàowǔ) là hoạt động nhảy múa theo giai điệu."
+    "correctAnswer": "Nhảy múa",
+    "explanation": "跳舞 (tiàowǔ) là vũ đạo, nhảy múa."
   },
   {
     "id": 239,
@@ -3578,13 +3578,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 24,
     "question": "第一 — dì-yī nghĩa là gì?",
     "options": [
-      "Thứ nhất / Đầu tiên",
-      "Thứ hai tiếp nối",
-      "Thứ ba kế tiếp",
-      "Cuối cùng về sau"
+      "Thứ nhất",
+      "Thứ hai",
+      "Thứ ba",
+      "Cuối cùng"
     ],
-    "correctAnswer": "Thứ nhất / Đầu tiên",
-    "explanation": "第一 (dì-yī) là số thứ tự đầu tiên (第一次 - lần đầu tiên, 第一名 - hạng nhất)."
+    "correctAnswer": "Thứ nhất",
+    "explanation": "第一 (dì-yī) là số thứ tự đầu tiên."
   },
   {
     "id": 240,
@@ -3593,13 +3593,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 24,
     "question": "希望 — xīwàng nghĩa là gì?",
     "options": [
-      "Hy vọng / Mong muốn",
-      "Thất vọng chán chường",
-      "Sợ hãi lo âu",
-      "Lãng quên mất tích"
+      "Hy vọng",
+      "Thất vọng",
+      "Lo lắng",
+      "Sợ hãi"
     ],
-    "correctAnswer": "Hy vọng / Mong muốn",
-    "explanation": "希望 (xīwàng) biểu thị nguyện vọng tốt đẹp đối với tương lai."
+    "correctAnswer": "Hy vọng",
+    "explanation": "希望 (xīwàng) là ước muốn, mong ước tốt đẹp."
   },
   {
     "id": 241,
@@ -3608,13 +3608,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 25,
     "question": "别 — bié nghĩa là gì?",
     "options": [
-      "Đừng / Không nên",
-      "Phải / Đúng đắn",
-      "Nên / Cần thiết",
-      "Muốn / Thích thú"
+      "Đừng",
+      "Phải",
+      "Nên",
+      "Muốn"
     ],
-    "correctAnswer": "Đừng / Không nên",
-    "explanation": "别 (bié) dùng khuyên bảo cấm đoán (别走: đừng đi) hoặc chỉ người khác (别人)."
+    "correctAnswer": "Đừng",
+    "explanation": "别 (bié) dùng khuyên ngăn, cấm đoán (Ví dụ: 别走 - đừng đi)."
   },
   {
     "id": 242,
@@ -3623,13 +3623,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 25,
     "question": "正在 — zhèngzài nghĩa là gì?",
     "options": [
-      "Đang / Đang diễn ra",
-      "Đã hoàn thành",
-      "Sắp sửa / Chuẩn bị",
-      "Vừa mới"
+      "Đang",
+      "Đã",
+      "Sắp",
+      "Vừa"
     ],
-    "correctAnswer": "Đang / Đang diễn ra",
-    "explanation": "正在 (zhèngzài) nhấn mạnh hành động đang diễn ra tại đúng thời điểm nói."
+    "correctAnswer": "Đang",
+    "explanation": "正在 (zhèngzài) nhấn mạnh hành động đang diễn ra tại thời điểm nói."
   },
   {
     "id": 243,
@@ -3638,13 +3638,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 25,
     "question": "手机 — shǒujī nghĩa là gì?",
     "options": [
-      "Điện thoại di động",
-      "Đồng hồ đeo tay",
-      "Máy vi tính để bàn",
-      "Tivi truyền hình"
+      "Điện thoại",
+      "Đồng hồ",
+      "Máy tính",
+      "Tivi"
     ],
-    "correctAnswer": "Điện thoại di động",
-    "explanation": "手机 (shǒujī) nghĩa là điện thoại di động."
+    "correctAnswer": "Điện thoại",
+    "explanation": "手机 (shǒujī) là điện thoại di động."
   },
   {
     "id": 244,
@@ -3653,13 +3653,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 25,
     "question": "洗 — xǐ nghĩa là gì?",
     "options": [
-      "Rửa sạch / Giặt giũ",
-      "Mặc quần áo",
-      "Mua đồ sắm sửa",
-      "Nấu nướng thức ăn"
+      "Rửa / Giặt",
+      "Nấu / Nướng",
+      "Mặc / Cởi",
+      "Mua / Bán"
     ],
-    "correctAnswer": "Rửa sạch / Giặt giũ",
-    "explanation": "洗 (xǐ) là làm sạch bằng nước (Ví dụ: 洗手 - rửa tay, 洗衣服 - giặt quần áo)."
+    "correctAnswer": "Rửa / Giặt",
+    "explanation": "洗 (xǐ) có 2 nghĩa: làm sạch bằng nước như rửa tay hoặc giặt quần áo."
   },
   {
     "id": 245,
@@ -3668,13 +3668,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 25,
     "question": "帮助 — bāngzhù nghĩa là gì?",
     "options": [
-      "Giúp đỡ / Hỗ trợ",
-      "Học tập rèn luyện",
-      "Nói chuyện trao đổi",
-      "Tìm kiếm đồ đạc"
+      "Giúp đỡ",
+      "Làm phiền",
+      "Cảm ơn",
+      "Xin lỗi"
     ],
-    "correctAnswer": "Giúp đỡ / Hỗ trợ",
-    "explanation": "帮助 (bāngzhù) là giúp sức cho người khác (谢谢你的帮助 - cảm ơn sự giúp đỡ của bạn)."
+    "correctAnswer": "Giúp đỡ",
+    "explanation": "帮助 (bāngzhù) là hỗ trợ, giúp sức cho người khác."
   },
   {
     "id": 246,
@@ -3683,13 +3683,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 25,
     "question": "课 — kè nghĩa là gì?",
     "options": [
-      "Bài học / Tiết học",
-      "Quyển sách",
-      "Kỳ thi / Bài kiểm tra",
-      "Trường học"
+      "Bài học",
+      "Kỳ thi",
+      "Cuốn sách",
+      "Câu chuyện"
     ],
-    "correctAnswer": "Bài học / Tiết học",
-    "explanation": "课 (kè) chỉ tiết lên lớp hoặc bài học (Ví dụ: 上课 - vào học, 下课 - tan học)."
+    "correctAnswer": "Bài học",
+    "explanation": "课 (kè) là tiết học hoặc môn học."
   },
   {
     "id": 247,
@@ -3698,13 +3698,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 25,
     "question": "教室 — jiàoshì nghĩa là gì?",
     "options": [
-      "Lớp học / Phòng học",
-      "Phòng ngủ nghỉ ngơi",
+      "Lớp học",
+      "Phòng ngủ",
       "Bệnh viện",
-      "Cửa hàng / Tiệm"
+      "Cửa hàng"
     ],
-    "correctAnswer": "Lớp học / Phòng học",
-    "explanation": "教室 (jiàoshì) là phòng học trong trường."
+    "correctAnswer": "Lớp học",
+    "explanation": "教室 (jiàoshì) là phòng học ở trường."
   },
   {
     "id": 248,
@@ -3714,12 +3714,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "往 — wǎng nghĩa là gì?",
     "options": [
       "Hướng về / Về phía",
-      "Rời đi / Xuất phát",
-      "Ở tại / Nơi chốn",
-      "Đến nơi / Tới nơi"
+      "Rời khỏi / Cách xa",
+      "Ở tại / Dừng chân",
+      "Đến nơi / Chạm tới"
     ],
     "correctAnswer": "Hướng về / Về phía",
-    "explanation": "往 (wǎng) là giới từ chỉ hướng chuyển động (Ví dụ: 往前走 - đi về phía trước)."
+    "explanation": "往 (wǎng) có 2 nghĩa: giới từ chỉ phương hướng di chuyển tới đâu."
   },
   {
     "id": 249,
@@ -3728,13 +3728,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 25,
     "question": "旁边 — pángbiān nghĩa là gì?",
     "options": [
-      "Bên cạnh / Sát bên",
-      "Phía trước mặt",
-      "Phía sau lưng",
-      "Bên trong lòng"
+      "Bên cạnh",
+      "Phía trước",
+      "Phía sau",
+      "Bên trong"
     ],
-    "correctAnswer": "Bên cạnh / Sát bên",
-    "explanation": "旁边 (pángbiān) là phương vị từ chỉ vị trí sát cạnh đối tượng."
+    "correctAnswer": "Bên cạnh",
+    "explanation": "旁边 (pángbiān) là vị trí ngay bên cạnh."
   },
   {
     "id": 250,
@@ -3743,13 +3743,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 25,
     "question": "知道 — zhīdào nghĩa là gì?",
     "options": [
-      "Biết rõ / Hiểu",
-      "Quên mất",
-      "Suy nghĩ / Đắn đo",
-      "Hỏi han / Thắc mắc"
+      "Biết",
+      "Quên",
+      "Hiểu",
+      "Nghĩ"
     ],
-    "correctAnswer": "Biết rõ / Hiểu",
-    "explanation": "知道 (zhīdào) là nắm rõ tin tức, sự tình (Ví dụ: 我知道 - tôi biết rồi)."
+    "correctAnswer": "Biết",
+    "explanation": "知道 (zhīdào) là nắm rõ tin tức, sự tình."
   },
   {
     "id": 251,
@@ -3758,13 +3758,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 26,
     "question": "比 — bǐ nghĩa là gì?",
     "options": [
-      "So với",
-      "Bởi vì nguyên nhân",
-      "Cùng nhau hợp tác",
-      "Cho nên kết quả"
+      "So với / Hơn là",
+      "Giống như / Bằng là",
+      "Kém hơn / Thua là",
+      "Khác với / Trái là"
     ],
-    "correctAnswer": "So với",
-    "explanation": "比 (bǐ) dùng so sánh hơn (A 比 B + Tính từ: 他比我高 - anh ấy cao hơn tôi)."
+    "correctAnswer": "So với / Hơn là",
+    "explanation": "比 (bǐ) dùng trong câu so sánh hơn giữa 2 đối tượng."
   },
   {
     "id": 252,
@@ -3774,12 +3774,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "哥哥 — gēge nghĩa là gì?",
     "options": [
       "Anh trai",
-      "Em trai đệ đệ",
-      "Người cha phụ thân",
-      "Bạn bè bằng hữu"
+      "Em trai",
+      "Chị gái",
+      "Em gái"
     ],
     "correctAnswer": "Anh trai",
-    "explanation": "哥哥 (gēge) là người anh trai ruột trong gia đình."
+    "explanation": "哥哥 (gēge) là người anh trai."
   },
   {
     "id": 253,
@@ -3789,12 +3789,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "弟弟 — dìdi nghĩa là gì?",
     "options": [
       "Em trai",
-      "Anh trai ca ca",
-      "Em gái muội muội",
-      "Con trai nhi tử"
+      "Anh trai",
+      "Chị gái",
+      "Em gái"
     ],
     "correctAnswer": "Em trai",
-    "explanation": "弟弟 (dìdi) là em trai ruột trong gia đình."
+    "explanation": "弟弟 (dìdi) là người em trai."
   },
   {
     "id": 254,
@@ -3804,12 +3804,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "姐姐 — jiějie nghĩa là gì?",
     "options": [
       "Chị gái",
-      "Em gái muội muội",
-      "Người mẹ mẫu thân",
-      "Con gái nữ nhi"
+      "Anh trai",
+      "Em trai",
+      "Em gái"
     ],
     "correctAnswer": "Chị gái",
-    "explanation": "姐姐 (jiějie) là người chị gái ruột trong gia đình."
+    "explanation": "姐姐 (jiějie) là người chị gái."
   },
   {
     "id": 255,
@@ -3819,12 +3819,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "妹妹 — mèimei nghĩa là gì?",
     "options": [
       "Em gái",
-      "Chị gái tỷ tỷ",
-      "Em trai đệ đệ",
-      "Con gái nữ nhi"
+      "Chị gái",
+      "Anh trai",
+      "Em trai"
     ],
     "correctAnswer": "Em gái",
-    "explanation": "妹妹 (mèimei) là em gái ruột trong gia đình."
+    "explanation": "妹妹 (mèimei) là người em gái."
   },
   {
     "id": 256,
@@ -3833,13 +3833,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 26,
     "question": "高 — gāo nghĩa là gì?",
     "options": [
-      "Cao ráo / Cao lớn",
-      "Thấp bé lùn tịt",
-      "Dài ngoẵng thước tất",
-      "To đùng bự chảng"
+      "Cao",
+      "Thấp",
+      "Dài",
+      "Ngắn"
     ],
-    "correctAnswer": "Cao ráo / Cao lớn",
-    "explanation": "高 (gāo) miêu tả chiều cao người hoặc vật (很高 - rất cao, đối lập với 矮 - lùn)."
+    "correctAnswer": "Cao",
+    "explanation": "高 (gāo) chỉ chiều cao cao lớn."
   },
   {
     "id": 257,
@@ -3849,12 +3849,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "右边 — yòubian nghĩa là gì?",
     "options": [
       "Bên phải",
-      "Bên trái tả biên",
-      "Phía trước mặt",
-      "Phía sau lưng"
+      "Bên trái",
+      "Phía trước",
+      "Phía sau"
     ],
     "correctAnswer": "Bên phải",
-    "explanation": "右边 (yòubian) là hướng tay phải (đối lập với 左边 - bên trái)."
+    "explanation": "右边 (yòubian) là phía bên tay phải."
   },
   {
     "id": 258,
@@ -3864,12 +3864,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "左边 — zuǒbian nghĩa là gì?",
     "options": [
       "Bên trái",
-      "Bên phải hữu biên",
-      "Phía trước mặt",
-      "Phía sau lưng"
+      "Bên phải",
+      "Phía trước",
+      "Phía sau"
     ],
     "correctAnswer": "Bên trái",
-    "explanation": "左边 (zuǒbian) là hướng tay trái (đối lập với 右边 - bên phải)."
+    "explanation": "左边 (zuǒbian) là phía bên tay trái."
   },
   {
     "id": 259,
@@ -3878,13 +3878,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 26,
     "question": "两 — liǎng nghĩa là gì?",
     "options": [
-      "Hai / Đôi",
-      "Một cái đơn độc",
-      "Ba cái tiếp nối",
-      "Mười cái tròn chục"
+      "Hai",
+      "Ba",
+      "Bốn",
+      "Năm"
     ],
-    "correctAnswer": "Hai / Đôi",
-    "explanation": "两 (liǎng) dùng để nói số lượng 2 khi đứng trước lượng từ (两个人 - hai người)."
+    "correctAnswer": "Hai",
+    "explanation": "两 (liǎng) dùng trước lượng từ để chỉ số lượng 2 (Ví dụ: 两个人)."
   },
   {
     "id": 260,
@@ -3893,13 +3893,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 26,
     "question": "姓 — xìng nghĩa là gì?",
     "options": [
-      "Họ / Mang họ",
-      "Tuổi tác đời người",
-      "Nghề nghiệp làm ăn",
-      "Quê quán xứ sở"
+      "Họ",
+      "Tên",
+      "Tuổi",
+      "Quê"
     ],
-    "correctAnswer": "Họ / Mang họ",
-    "explanation": "姓 (xìng) chỉ dòng họ (Ví dụ: 我姓王 - tôi họ Vương, 您贵姓 - ngài quý họ là gì)."
+    "correctAnswer": "Họ",
+    "explanation": "姓 (xìng) là họ của một người (Ví dụ: 我姓王 - tôi họ Vương)."
   },
   {
     "id": 261,
@@ -3908,13 +3908,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 27,
     "question": "穿 — chuān nghĩa là gì?",
     "options": [
-      "Mặc áo / Xỏ giày",
-      "Mua sắm quần áo",
-      "Giặt giũ sạch sẽ",
-      "Cởi bỏ áo khoác"
+      "Mặc",
+      "Cởi",
+      "Mua",
+      "Giặt"
     ],
-    "correctAnswer": "Mặc áo / Xỏ giày",
-    "explanation": "穿 (chuān) là mặc trang phục (穿衣服 - mặc quần áo, 穿鞋 - đi giày)."
+    "correctAnswer": "Mặc",
+    "explanation": "穿 (chuān) là mặc trang phục hoặc đi giày."
   },
   {
     "id": 262,
@@ -3923,13 +3923,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 27,
     "question": "进 — jìn nghĩa là gì?",
     "options": [
-      "Đi vào / Bước vào",
-      "Bước ra ngoài đường",
-      "Đi xa tít tắp",
-      "Trở về chốn cũ"
+      "Đi vào / Tiến lên",
+      "Đi ra / Lùi lại",
+      "Đi lên / Xuống dốc",
+      "Rời đi / Ở lại"
     ],
-    "correctAnswer": "Đi vào / Bước vào",
-    "explanation": "进 (jìn) là đi vào bên trong (请进 - xin mời vào, 进来 - vào đây)."
+    "correctAnswer": "Đi vào / Tiến lên",
+    "explanation": "进 (jìn) có 2 nghĩa: bước vào trong hoặc tiến lên phía trước."
   },
   {
     "id": 263,
@@ -3938,13 +3938,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 27,
     "question": "得 — de nghĩa là gì?",
     "options": [
-      "Được / Đến mức",
-      "Của ai sở hữu",
-      "Chăng nữa phủ nhận",
-      "Và cùng kết nối"
+      "Đến mức",
+      "Của",
+      "Và",
+      "Với"
     ],
-    "correctAnswer": "Được / Đến mức",
-    "explanation": "得 (de) đặt sau động từ để dẫn ra bổ ngữ trạng thái, trình độ (跑得很快 - chạy rất nhanh)."
+    "correctAnswer": "Đến mức",
+    "explanation": "得 (de) là trợ từ kết cấu đứng sau động từ biểu thị mức độ (Ví dụ: 跑得快)."
   },
   {
     "id": 264,
@@ -3953,13 +3953,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 27,
     "question": "妻子 — qīzi nghĩa là gì?",
     "options": [
-      "Người vợ / Vợ",
-      "Người chồng trượng phu",
-      "Người mẹ mẫu thân",
-      "Chị gái tỷ tỷ"
+      "Người vợ",
+      "Người chồng",
+      "Chị gái",
+      "Mẹ"
     ],
-    "correctAnswer": "Người vợ / Vợ",
-    "explanation": "妻子 (qīzi) là người vợ trong gia đình."
+    "correctAnswer": "Người vợ",
+    "explanation": "妻子 (qīzi) nghĩa là người vợ trong gia đình."
   },
   {
     "id": 265,
@@ -3968,13 +3968,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 27,
     "question": "雪 — xuě nghĩa là gì?",
     "options": [
-      "Bông tuyết / Tuyết",
-      "Hạt mưa rơi xuống",
-      "Cơn gió thoảng qua",
-      "Đám mây bay lượn"
+      "Tuyết",
+      "Mưa",
+      "Gió",
+      "Mây"
     ],
-    "correctAnswer": "Bông tuyết / Tuyết",
-    "explanation": "雪 (xuě) là những bông tuyết rơi vào mùa đông (下雪 - tuyết rơi)."
+    "correctAnswer": "Tuyết",
+    "explanation": "雪 (xuě) là những bông tuyết rơi."
   },
   {
     "id": 266,
@@ -3983,13 +3983,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 27,
     "question": "零 — líng nghĩa là gì?",
     "options": [
-      "Số 0",
-      "Số 1 duy nhất",
-      "Số 10 tròn chục",
-      "Số 100 hàng trăm"
+      "Số không",
+      "Số một",
+      "Số mười",
+      "Số một trăm"
     ],
-    "correctAnswer": "Số 0",
-    "explanation": "零 (líng) là con số 0 trong toán học và ngày tháng."
+    "correctAnswer": "Số không",
+    "explanation": "零 (líng) là con số 0."
   },
   {
     "id": 267,
@@ -3998,13 +3998,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 27,
     "question": "到 — dào nghĩa là gì?",
     "options": [
-      "Đến nơi / Tới",
-      "Rời đi nơi chốn",
-      "Chờ đợi ai đó",
-      "Bắt đầu"
+      "Tới nơi",
+      "Rời đi",
+      "Xuất phát",
+      "Ở lại"
     ],
-    "correctAnswer": "Đến nơi / Tới",
-    "explanation": "到 (dào) biểu thị điểm đến hoặc đạt tới kết quả (到了 - đã đến nơi rồi)."
+    "correctAnswer": "Tới nơi",
+    "explanation": "到 (dào) biểu thị sự di chuyển tới đích."
   },
   {
     "id": 268,
@@ -4013,13 +4013,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 27,
     "question": "次 — cì nghĩa là gì?",
     "options": [
-      "Lần / Số lần",
-      "Giờ đồng hồ",
-      "Ngày trong tuần",
-      "Năm tháng trôi"
+      "Lần",
+      "Cái",
+      "Quyển",
+      "Người"
     ],
-    "correctAnswer": "Lần / Số lần",
-    "explanation": "次 (cì) là lượng từ đo số lần thực hiện (去过一次 - đã đi một lần)."
+    "correctAnswer": "Lần",
+    "explanation": "次 (cì) là lượng từ chỉ số lần thực hiện hành động."
   },
   {
     "id": 269,
@@ -4028,13 +4028,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 27,
     "question": "真 — zhēn nghĩa là gì?",
     "options": [
-      "Thật sự / Chân thực",
-      "Giả dối dối lừa",
-      "Tạm bợ qua loa",
-      "Không hề phủ định"
+      "Thật sự",
+      "Giả tạo",
+      "Hơi hơi",
+      "Không hề"
     ],
-    "correctAnswer": "Thật sự / Chân thực",
-    "explanation": "真 (zhēn) là phó từ nhấn mạnh sự chân thật, cảm thán (真好 - thật là tốt)."
+    "correctAnswer": "Thật sự",
+    "explanation": "真 (zhēn) là phó từ nhấn mạnh mức độ chân thực (Ví dụ: 真好 - thật tốt)."
   },
   {
     "id": 270,
@@ -4043,13 +4043,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 27,
     "question": "已经 — yǐjīng nghĩa là gì?",
     "options": [
-      "Đã / Đã rồi",
-      "Chưa từng bao giờ",
-      "Đang làm tiếp diễn",
-      "Sẽ làm tương lai"
+      "Đã",
+      "Chưa",
+      "Đang",
+      "Sắp"
     ],
-    "correctAnswer": "Đã / Đã rồi",
-    "explanation": "已经 (yǐjīng) biểu thị hành động đã hoàn tất trước thời điểm nói (我已经知道了)."
+    "correctAnswer": "Đã",
+    "explanation": "已经 (yǐjīng) là phó từ biểu thị hành động đã xảy ra rồi."
   },
   {
     "id": 271,
@@ -4058,13 +4058,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 28,
     "question": "着 — zhe nghĩa là gì?",
     "options": [
-      "Đang",
-      "Đã kết thúc hoàn tất",
-      "Sẽ bắt đầu sắp tới",
-      "Chưa xảy ra bao giờ"
+      "Đang duy trì",
+      "Đã kết thúc",
+      "Sắp xảy ra",
+      "Chưa bắt đầu"
     ],
-    "correctAnswer": "Đang",
-    "explanation": "着 (zhe) đặt sau động từ chỉ sự tiếp diễn của một trạng thái (门开着 - cửa đang mở)."
+    "correctAnswer": "Đang duy trì",
+    "explanation": "着 (zhe) là trợ từ động thái chỉ trạng thái đang được duy trì (Ví dụ: 开着 - đang mở)."
   },
   {
     "id": 272,
@@ -4074,12 +4074,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "铅笔 — qiānbǐ nghĩa là gì?",
     "options": [
       "Bút chì",
-      "Sách vở học tập",
-      "Thước kẻ kẻ đường",
-      "Cục tẩy lau vết"
+      "Cục tẩy",
+      "Thước kẻ",
+      "Quyển vở"
     ],
     "correctAnswer": "Bút chì",
-    "explanation": "铅笔 (qiānbǐ) là dụng cụ viết bằng chì vẽ hoặc ghi chép."
+    "explanation": "铅笔 (qiānbǐ) là cây bút chì."
   },
   {
     "id": 273,
@@ -4088,13 +4088,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 28,
     "question": "长 — cháng nghĩa là gì?",
     "options": [
-      "Dài / Lâu",
-      "Ngắn ngủi chốc lát",
-      "Cao ráo ngút ngàn",
-      "Rộng lớn bao la"
+      "Dài",
+      "Ngắn",
+      "Cao",
+      "Thấp"
     ],
-    "correctAnswer": "Dài / Lâu",
-    "explanation": "长 (cháng) miêu tả độ dài của vật hoặc thời gian (头发很长 - tóc rất dài)."
+    "correctAnswer": "Dài",
+    "explanation": "长 (cháng) chỉ độ dài kích thước hoặc thời gian dài."
   },
   {
     "id": 274,
@@ -4103,13 +4103,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 28,
     "question": "眼睛 — yǎnjing nghĩa là gì?",
     "options": [
-      "Đôi mắt / Ánh mắt",
-      "Kính đeo bảo vệ",
-      "Khuôn mặt diện mạo",
-      "Cái tai thính giác"
+      "Đôi mắt",
+      "Cái tai",
+      "Cái miệng",
+      "Cái mũi"
     ],
-    "correctAnswer": "Đôi mắt / Ánh mắt",
-    "explanation": "眼睛 (yǎnjing) là cơ quan thị giác giúp con người nhìn ngắm."
+    "correctAnswer": "Đôi mắt",
+    "explanation": "眼睛 (yǎnjing) là đôi mắt của con người."
   },
   {
     "id": 275,
@@ -4118,13 +4118,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 28,
     "question": "笑 — xiào nghĩa là gì?",
     "options": [
-      "Mỉm cười / Cười",
-      "Khóc lóc đau buồn",
-      "Nói năng phát biểu",
-      "Ca hát rộn ràng"
+      "Cười",
+      "Khóc",
+      "Nói",
+      "Hát"
     ],
-    "correctAnswer": "Mỉm cười / Cười",
-    "explanation": "笑 (xiào) biểu lộ niềm vui qua nụ cười (đối lập với 哭 - khóc)."
+    "correctAnswer": "Cười",
+    "explanation": "笑 (xiào) là mỉm cười hoặc cười vui vẻ."
   },
   {
     "id": 276,
@@ -4133,13 +4133,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 28,
     "question": "晴 — qíng nghĩa là gì?",
     "options": [
-      "Trời nắng / Quang đãng",
-      "Trời mưa ảm đạm",
-      "Trời rét căm căm",
-      "Có tuyết giá buốt"
+      "Trời nắng",
+      "Trời mưa",
+      "Trời râm",
+      "Có tuyết"
     ],
-    "correctAnswer": "Trời nắng / Quang đãng",
-    "explanation": "晴 (qíng) miêu tả thời tiết nắng ráo, không mây (晴天: ngày nắng đẹp)."
+    "correctAnswer": "Trời nắng",
+    "explanation": "晴 (qíng) chỉ thời tiết quang đãng nhiều nắng."
   },
   {
     "id": 277,
@@ -4148,13 +4148,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 28,
     "question": "百 — bǎi nghĩa là gì?",
     "options": [
-      "Một trăm / Trăm",
+      "Một trăm",
       "Một nghìn",
       "Mười",
       "Một vạn"
     ],
-    "correctAnswer": "Một trăm / Trăm",
-    "explanation": "百 (bǎi) là hàng trăm (Ví dụ: 一百 - một trăm, 三百 - ba trăm)."
+    "correctAnswer": "Một trăm",
+    "explanation": "百 (bǎi) là con số hàng trăm."
   },
   {
     "id": 278,
@@ -4164,12 +4164,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "白 — bái nghĩa là gì?",
     "options": [
       "Màu trắng",
-      "Màu đen hắc ám",
-      "Màu đỏ rực rỡ",
-      "Màu xanh mát mẻ"
+      "Màu đen",
+      "Màu đỏ",
+      "Màu vàng"
     ],
     "correctAnswer": "Màu trắng",
-    "explanation": "白 (bái) chỉ màu trắng (Ví dụ: 白色的衣服 - quần áo màu trắng)."
+    "explanation": "白 (bái) chỉ sắc trắng (đối lập với 黑)."
   },
   {
     "id": 279,
@@ -4179,12 +4179,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "黑 — hēi nghĩa là gì?",
     "options": [
       "Màu đen",
-      "Màu trắng tinh khôi",
-      "Màu đỏ thắm tươi",
-      "Màu vàng rực rỡ"
+      "Màu trắng",
+      "Màu đỏ",
+      "Màu xanh"
     ],
     "correctAnswer": "Màu đen",
-    "explanation": "黑 (hēi) chỉ màu đen (đối lập với 白 - trắng)."
+    "explanation": "黑 (hēi) chỉ sắc đen."
   },
   {
     "id": 280,
@@ -4193,13 +4193,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 28,
     "question": "它 — tā nghĩa là gì?",
     "options": [
-      "Đồ vật đó / Con vật đó",
-      "Anh ấy",
-      "Cô ấy",
-      "Tôi đây"
+      "Nó",
+      "Tôi",
+      "Bạn",
+      "Họ"
     ],
-    "correctAnswer": "Đồ vật đó / Con vật đó",
-    "explanation": "它 (tā) là đại từ nhân xưng ngôi thứ ba chỉ con vật hoặc đồ vật."
+    "correctAnswer": "Nó",
+    "explanation": "它 (tā) là đại từ ngôi thứ ba chỉ đồ vật hoặc con vật."
   },
   {
     "id": 281,
@@ -4208,13 +4208,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 29,
     "question": "虽然 — suīrán nghĩa là gì?",
     "options": [
-      "Mặc dù / Tuy rằng",
-      "Bởi vì nguyên cớ",
-      "Cho nên kết quả",
-      "Nếu như giả định"
+      "Mặc dù",
+      "Bởi vì",
+      "Cho nên",
+      "Nếu như"
     ],
-    "correctAnswer": "Mặc dù / Tuy rằng",
-    "explanation": "虽然 (suīrán) đứng đầu phân câu nhượng bộ, thường cặp với 但是."
+    "correctAnswer": "Mặc dù",
+    "explanation": "虽然 (suīrán) mở đầu vế câu chỉ sự nhượng bộ (mặc dù... nhưng...)."
   },
   {
     "id": 282,
@@ -4223,13 +4223,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 29,
     "question": "但是 — dànshì nghĩa là gì?",
     "options": [
-      "Nhưng mà / Song le",
-      "Bởi vì do lẽ",
-      "Cho nên kết quả",
-      "Và lại thêm nữa"
+      "Nhưng",
+      "Và",
+      "Hoặc",
+      "Bởi vì"
     ],
-    "correctAnswer": "Nhưng mà / Song le",
-    "explanation": "但是 (dànshì) là liên từ biểu thị sự chuyển ý tương phản (mặc dù... nhưng mà...)."
+    "correctAnswer": "Nhưng",
+    "explanation": "但是 (dànshì) là liên từ biểu thị sự chuyển ngoặt (nhưng mà)."
   },
   {
     "id": 283,
@@ -4238,13 +4238,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 29,
     "question": "因为 — yīnwèi nghĩa là gì?",
     "options": [
-      "Bởi vì / Do vì",
-      "Cho nên kết luận",
-      "Mặc dù nhượng bộ",
-      "Nhưng mà tương phản"
+      "Bởi vì",
+      "Cho nên",
+      "Mặc dù",
+      "Nhưng"
     ],
-    "correctAnswer": "Bởi vì / Do vì",
-    "explanation": "因为 (yīnwèi) là liên từ biểu thị nguyên nhân, thường cặp với 所以."
+    "correctAnswer": "Bởi vì",
+    "explanation": "因为 (yīnwèi) mở đầu vế câu chỉ nguyên nhân."
   },
   {
     "id": 284,
@@ -4253,13 +4253,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 29,
     "question": "所以 — suǒyǐ nghĩa là gì?",
     "options": [
-      "Cho nên / Vì thế",
-      "Bởi vì nguyên do",
-      "Mặc dù chuyển ý",
-      "Nhưng mà đối lập"
+      "Cho nên",
+      "Bởi vì",
+      "Mặc dù",
+      "Nếu như"
     ],
-    "correctAnswer": "Cho nên / Vì thế",
-    "explanation": "所以 (suǒyǐ) là liên từ biểu thị kết quả (因为... 所以...)."
+    "correctAnswer": "Cho nên",
+    "explanation": "所以 (suǒyǐ) chỉ kết quả, hệ quả."
   },
   {
     "id": 285,
@@ -4268,13 +4268,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 29,
     "question": "玩 — wán nghĩa là gì?",
     "options": [
-      "Vui chơi / Tiêu khiển",
-      "Làm việc vất vả",
-      "Học tập căng thẳng",
-      "Nghỉ ngơi an giấc"
+      "Chơi",
+      "Học",
+      "Làm",
+      "Nghỉ"
     ],
-    "correctAnswer": "Vui chơi / Tiêu khiển",
-    "explanation": "玩 (wán) là hoạt động giải trí, vui chơi (Ví dụ: 好玩 - chơi vui)."
+    "correctAnswer": "Chơi",
+    "explanation": "玩 (wán) là hành động vui chơi, giải trí."
   },
   {
     "id": 286,
@@ -4283,13 +4283,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 29,
     "question": "可能 — kěnéng nghĩa là gì?",
     "options": [
-      "Có lẽ / Khả năng",
-      "Nhất định trăm phần",
-      "Không thể hoàn toàn",
-      "Nên làm bổn phận"
+      "Có lẽ",
+      "Chắc chắn",
+      "Tuyệt đối",
+      "Không thể"
     ],
-    "correctAnswer": "Có lẽ / Khả năng",
-    "explanation": "可能 (kěnéng) biểu thị phán đoán về khả năng xảy ra của sự việc."
+    "correctAnswer": "Có lẽ",
+    "explanation": "可能 (kěnéng) chỉ khả năng có thể xảy ra (có lẽ, có thể)."
   },
   {
     "id": 287,
@@ -4298,13 +4298,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 29,
     "question": "您 — nín nghĩa là gì?",
     "options": [
-      "Ngài / Ông / Bà",
-      "Tôi / Mình",
-      "Anh ấy",
-      "Các bạn"
+      "Ngài",
+      "Tôi",
+      "Hắn",
+      "Nó"
     ],
-    "correctAnswer": "Ngài / Ông / Bà",
-    "explanation": "您 (nín) là cách gọi bạn (你) nhưng với lòng kính trọng đối với bậc trên hoặc khách quý."
+    "correctAnswer": "Ngài",
+    "explanation": "您 (nín) là cách gọi bạn (你) một cách kính trọng."
   },
   {
     "id": 288,
@@ -4313,13 +4313,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 29,
     "question": "服务员 — fúwùyuán nghĩa là gì?",
     "options": [
-      "Nhân viên phục vụ / Bồi bàn",
+      "Nhân viên phục vụ",
       "Bác sĩ khám bệnh",
-      "Thầy giáo trường học",
-      "Tài xế lái xe"
+      "Giáo viên giảng dạy",
+      "Học sinh đi học"
     ],
-    "correctAnswer": "Nhân viên phục vụ / Bồi bàn",
-    "explanation": "服务员 (fúwùyuán) là nhân viên phục vụ ở nhà hàng, khách sạn."
+    "correctAnswer": "Nhân viên phục vụ",
+    "explanation": "服务员 (fúwùyuán) là người phục vụ trong nhà hàng, khách sạn."
   },
   {
     "id": 289,
@@ -4328,13 +4328,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 29,
     "question": "近 — jìn nghĩa là gì?",
     "options": [
-      "Gần / Gần gũi",
-      "Xa xôi ngút ngàn",
-      "To lớn khổng lồ",
-      "Nhỏ bé li ti"
+      "Gần",
+      "Xa",
+      "Rộng",
+      "Hẹp"
     ],
-    "correctAnswer": "Gần / Gần gũi",
-    "explanation": "近 (jìn) miêu tả khoảng cách ngắn, cự ly gần (Ví dụ: 很近 - rất gần)."
+    "correctAnswer": "Gần",
+    "explanation": "近 (jìn) chỉ cự ly gần gũi."
   },
   {
     "id": 290,
@@ -4343,13 +4343,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 29,
     "question": "游泳 — yóuyǒng nghĩa là gì?",
     "options": [
-      "Bơi / Bơi lội",
-      "Chạy bộ sân đường",
-      "Đá bóng sân cỏ",
-      "Chơi bóng rổ sân"
+      "Bơi lội",
+      "Chạy bộ",
+      "Đá bóng",
+      "Bóng rổ"
     ],
-    "correctAnswer": "Bơi / Bơi lội",
-    "explanation": "游泳 (yóuyǒng) là hoạt động bơi lội dưới nước rèn sức khỏe."
+    "correctAnswer": "Bơi lội",
+    "explanation": "游泳 (yóuyǒng) là môn thể thao bơi lội."
   },
   {
     "id": 291,
@@ -4358,13 +4358,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 30,
     "question": "票 — piào nghĩa là gì?",
     "options": [
-      "Tấm vé / Vé vào cửa",
-      "Tiền bạc chi tiêu",
-      "Quyển sách học tập",
-      "Tờ báo tin tức"
+      "Tấm vé",
+      "Hóa đơn",
+      "Tờ tiền",
+      "Bức ảnh"
     ],
-    "correctAnswer": "Tấm vé / Vé vào cửa",
-    "explanation": "票 (piào) là vé vào cửa, vé tàu xe (Ví dụ: 车票 - vé xe, 电影票 - vé xem phim)."
+    "correctAnswer": "Tấm vé",
+    "explanation": "票 (piào) là vé xe, vé vào cửa."
   },
   {
     "id": 292,
@@ -4373,13 +4373,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 30,
     "question": "火车站 — huǒchēzhàn nghĩa là gì?",
     "options": [
-      "Ga xe lửa / Ga tàu",
-      "Cảng hàng không sân bay",
-      "Bến xe buýt đón khách",
-      "Trạm xá y tế"
+      "Ga xe lửa",
+      "Sân bay",
+      "Bến xe",
+      "Bến cảng"
     ],
-    "correctAnswer": "Ga xe lửa / Ga tàu",
-    "explanation": "火车站 (huǒchēzhàn) là nơi đón và trả khách của tàu hỏa."
+    "correctAnswer": "Ga xe lửa",
+    "explanation": "火车站 (huǒchēzhàn) là nhà ga tàu hỏa."
   },
   {
     "id": 293,
@@ -4388,13 +4388,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 30,
     "question": "大家 — dàjiā nghĩa là gì?",
     "options": [
-      "Mọi người / Tất cả mọi người",
-      "Gia đình thân thuộc",
-      "Bạn bè bằng hữu",
-      "Học sinh trường lớp"
+      "Mọi người",
+      "Gia đình",
+      "Bạn thân",
+      "Người lạ"
     ],
-    "correctAnswer": "Mọi người / Tất cả mọi người",
-    "explanation": "大家 (dàjiā) là đại từ chỉ chung mọi người (Ví dụ: 大家好 - chào mọi người)."
+    "correctAnswer": "Mọi người",
+    "explanation": "大家 (dàjiā) chỉ tất cả mọi người có mặt."
   },
   {
     "id": 294,
@@ -4404,12 +4404,12 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "机场 — jīchǎng nghĩa là gì?",
     "options": [
       "Sân bay",
-      "Ga tàu hỏa hỏa xa",
-      "Bến xe buýt bến cảng",
-      "Công viên giải trí"
+      "Ga tàu",
+      "Bến xe",
+      "Bến cảng"
     ],
     "correctAnswer": "Sân bay",
-    "explanation": "机场 (jīchǎng) là sân bay hàng không."
+    "explanation": "机场 (jīchǎng) là phi trường, sân bay máy bay."
   },
   {
     "id": 295,
@@ -4418,13 +4418,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 30,
     "question": "问题 — wèntí nghĩa là gì?",
     "options": [
-      "Vấn đề / Câu hỏi / Khúc mắc",
-      "Đáp án giải đáp",
-      "Bài tập về nhà",
-      "Ý kiến đóng góp"
+      "Vấn đề / Câu hỏi",
+      "Đáp án / Trả lời",
+      "Mục tiêu / Kế hoạch",
+      "Ý kiến / Đề xuất"
     ],
-    "correctAnswer": "Vấn đề / Câu hỏi / Khúc mắc",
-    "explanation": "问题 (wèntí) là khúc mắc, câu hỏi hoặc vấn đề cần xử lý (没问题 - không vấn đề)."
+    "correctAnswer": "Vấn đề / Câu hỏi",
+    "explanation": "问题 (wèntí) có 2 nghĩa: câu hỏi bài thi hoặc vấn đề cần giải quyết."
   },
   {
     "id": 296,
@@ -4433,13 +4433,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 30,
     "question": "说话 — shuōhuà nghĩa là gì?",
     "options": [
-      "Nói chuyện / Phát biểu",
-      "Nghe nhạc êm dịu",
-      "Ca hát rộn ràng",
-      "Đọc sách to tiếng"
+      "Nói chuyện",
+      "Lắng nghe",
+      "Đọc sách",
+      "Viết chữ"
     ],
-    "correctAnswer": "Nói chuyện / Phát biểu",
-    "explanation": "说话 (shuōhuà) là việc phát ra lời nói để trao đổi (别说话 - đừng nói chuyện)."
+    "correctAnswer": "Nói chuyện",
+    "explanation": "说话 (shuōhuà) là trò chuyện, nói ra lời."
   },
   {
     "id": 297,
@@ -4448,13 +4448,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 30,
     "question": "时间 — shíjiān nghĩa là gì?",
     "options": [
-      "Thời gian / Thời khắc",
-      "Thời tiết nắng mưa",
-      "Đồng hồ xem giờ",
-      "Ngày tháng năm xưa"
+      "Thời gian",
+      "Địa điểm",
+      "Thời tiết",
+      "Công việc"
     ],
-    "correctAnswer": "Thời gian / Thời khắc",
-    "explanation": "时间 (shíjiān) chỉ quỹ thời gian hoặc khoảnh khắc (没时间 - không có thời gian)."
+    "correctAnswer": "Thời gian",
+    "explanation": "时间 (shíjiān) chỉ thời gian, giờ giấc."
   },
   {
     "id": 298,
@@ -4463,13 +4463,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 30,
     "question": "日 — rì nghĩa là gì?",
     "options": [
-      "Ngày / Mặt trời",
-      "Tháng / Mặt trăng",
-      "Năm / Ngôi sao",
-      "Tuần / Đám mây"
+      "Ngày",
+      "Tháng",
+      "Năm",
+      "Tuần"
     ],
-    "correctAnswer": "Ngày / Mặt trời",
-    "explanation": "日 (rì) dùng trong văn viết chỉ ngày trong tháng (Ví dụ: 10月1日) hoặc mặt trời."
+    "correctAnswer": "Ngày",
+    "explanation": "日 (rì) chỉ ngày theo văn viết hoặc mặt trời."
   },
   {
     "id": 299,
@@ -4478,13 +4478,13 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "lesson": 30,
     "question": "对 — duì nghĩa là gì?",
     "options": [
-      "Đúng / Đối với",
-      "Sai / Trái lại",
-      "Thích / Hợp ý",
-      "Gần / Cận kề"
+      "Đúng",
+      "Sai",
+      "Tốt",
+      "Xấu"
     ],
-    "correctAnswer": "Đúng / Đối với",
-    "explanation": "对 (duì) nghĩa là đúng (đối lập với 错) hoặc là giới từ 'đối với ai' (对我说)."
+    "correctAnswer": "Đúng",
+    "explanation": "对 (duì) biểu thị sự chính xác, đúng đắn."
   },
   {
     "id": 300,
@@ -4494,11 +4494,11 @@ export const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = [
     "question": "打篮球 — dǎ lánqiú nghĩa là gì?",
     "options": [
       "Chơi bóng rổ",
-      "Đá bóng sân bãi",
-      "Bơi lội dưới nước",
-      "Chạy bộ rèn sức"
+      "Đá bóng",
+      "Bơi lội",
+      "Chạy bộ"
     ],
     "correctAnswer": "Chơi bóng rổ",
-    "explanation": "打篮球 (dǎ lánqiú) là môn thể thao chơi bóng rổ."
+    "explanation": "打篮球 (dǎ lánqiú) là môn thể thao bóng rổ."
   }
 ];

@@ -18,7 +18,7 @@ import {
   ArrowRight,
   RotateCcw,
 } from 'lucide-react';
-import { RoastBanner } from '@/components/RoastBanner';
+import { RoastNotification } from '@/components/RoastNotification';
 
 export const SentencesSection: React.FC = () => {
   const [selectedLevel, setSelectedLevel] = useState<'all' | 'hsk1' | 'hsk2'>('all');
@@ -38,6 +38,7 @@ export const SentencesSection: React.FC = () => {
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [isAnswered, setIsAnswered] = useState<boolean>(false);
   const [quizScore, setQuizScore] = useState<number>(0);
+  const [showSentenceRoast, setShowSentenceRoast] = useState<boolean>(false);
 
   useEffect(() => {
     try {
@@ -120,14 +121,18 @@ export const SentencesSection: React.FC = () => {
         : option === currentQuizItem.quizFill.correctAnswer;
 
     if (isCorrect) {
+      setShowSentenceRoast(false);
       setQuizScore((prev) => prev + 1);
       if (!learnedIds.includes(currentQuizItem.id)) {
         saveLearned([...learnedIds, currentQuizItem.id]);
       }
+    } else {
+      setShowSentenceRoast(true);
     }
   };
 
   const handleNextQuiz = () => {
+    setShowSentenceRoast(false);
     if (quizIndex < filteredSentences.length - 1) {
       setQuizIndex(quizIndex + 1);
       setSelectedAnswer(null);
@@ -150,7 +155,15 @@ export const SentencesSection: React.FC = () => {
       : selectedAnswer === currentQuizItem?.quizFill.correctAnswer;
 
   return (
-    <section className="w-full max-w-4xl mx-auto px-4 pb-16">
+    <>
+      {/* Floating Roast Notification Card */}
+      <RoastNotification
+        isVisible={showSentenceRoast}
+        onClose={() => setShowSentenceRoast(false)}
+        seed={currentQuizItem ? currentQuizItem.id * 43 + quizIndex : 0}
+      />
+
+      <section className="w-full max-w-4xl mx-auto px-4 pb-16">
       {/* Header */}
       <div className="bg-white rounded-2xl p-6 sm:p-8 border border-stone-200/80 shadow-sm mb-6">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-stone-100 pb-5">
@@ -584,11 +597,6 @@ export const SentencesSection: React.FC = () => {
                     )}
                   </div>
 
-                  {/* Roast / Teasing banner on wrong answer */}
-                  {!isCorrectAnswer && (
-                    <RoastBanner seed={currentQuizItem.id * 43 + quizIndex} />
-                  )}
-
                   {/* Prominent Core Sentence Display: Hanzi + Pinyin + Vietnamese */}
                   <div className="bg-white/95 p-4 rounded-xl border border-stone-200 shadow-xs space-y-2">
                     <div className="text-[11px] font-bold text-stone-400 uppercase tracking-wider">
@@ -665,5 +673,6 @@ export const SentencesSection: React.FC = () => {
         </div>
       )}
     </section>
+    </>
   );
 };

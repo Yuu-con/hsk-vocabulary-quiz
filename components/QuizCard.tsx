@@ -4,7 +4,7 @@ import React, { useEffect, useState, useMemo } from 'react';
 import { QuizQuestion, UserAnswerRecord } from '@/types/quiz';
 import { Volume2, CheckCircle2, XCircle, ArrowRight, ArrowLeft } from 'lucide-react';
 import { playChineseAudio, shuffleArray } from '@/lib/quiz-utils';
-import { RoastBanner } from '@/components/RoastBanner';
+import { RoastNotification } from '@/components/RoastNotification';
 
 interface QuizCardProps {
   question: QuizQuestion;
@@ -37,6 +37,16 @@ export const QuizCard: React.FC<QuizCardProps> = ({
   }, [question.id]);
 
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
+  const [showRoastNotification, setShowRoastNotification] = useState(false);
+
+  // Trigger floating roast notification whenever user answers incorrectly
+  useEffect(() => {
+    if (userAnswer && !userAnswer.isCorrect) {
+      setShowRoastNotification(true);
+    } else {
+      setShowRoastNotification(false);
+    }
+  }, [userAnswer, question.id]);
 
   const handlePlayAudio = async () => {
     setIsPlayingAudio(true);
@@ -100,8 +110,16 @@ export const QuizCard: React.FC<QuizCardProps> = ({
   }, [displayOptions, question.correctAnswer]);
 
   return (
-    <div className="w-full max-w-2xl mx-auto px-4 py-4 sm:py-6">
-      <div className="bg-white rounded-3xl shadow-lg shadow-slate-200/50 border border-slate-100 overflow-hidden transition-all duration-300">
+    <>
+      {/* Floating Roast Notification Card (thẻ thông báo nổi) */}
+      <RoastNotification
+        isVisible={showRoastNotification}
+        onClose={() => setShowRoastNotification(false)}
+        seed={question.id * 37 + (userAnswer?.answeredAt || questionIndex)}
+      />
+
+      <div className="w-full max-w-2xl mx-auto px-4 py-4 sm:py-6">
+        <div className="bg-white rounded-3xl shadow-lg shadow-slate-200/50 border border-slate-100 overflow-hidden transition-all duration-300">
         
         {/* Top Header inside card */}
         <div className="px-6 pt-6 pb-2 flex items-center justify-between text-xs sm:text-sm text-slate-400 font-medium">
@@ -245,13 +263,6 @@ export const QuizCard: React.FC<QuizCardProps> = ({
                     )}
                   </div>
 
-                  {/* Humorous wrong answer roast banner */}
-                  {!isCorrect && (
-                    <RoastBanner
-                      seed={question.id * 37 + (userAnswer?.answeredAt || questionIndex)}
-                    />
-                  )}
-
                   {/* Highlight Core Word: Hanzi + Pinyin + Vietnamese Meaning */}
                   <div className="bg-white/80 rounded-xl p-3 border border-slate-200/80 shadow-xs">
                     <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">
@@ -314,5 +325,6 @@ export const QuizCard: React.FC<QuizCardProps> = ({
 
       </div>
     </div>
+    </>
   );
 };
