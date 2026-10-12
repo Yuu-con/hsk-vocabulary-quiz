@@ -67,8 +67,8 @@ function validateDataset(name: string, data: QuizQuestion[], expectedCount: numb
 function validateVocabStudyData(): boolean {
   const errors: string[] = [];
 
-  if (VOCAB_TOPIC_DATA.length !== 161) {
-    errors.push(`Expected 161 topic vocab items, got ${VOCAB_TOPIC_DATA.length}`);
+  if (VOCAB_TOPIC_DATA.length !== 163) {
+    errors.push(`Expected 163 topic vocab items, got ${VOCAB_TOPIC_DATA.length}`);
   }
   if (VOCAB_TOPIC_CATEGORIES.length !== 14) {
     errors.push(`Expected 14 topic categories, got ${VOCAB_TOPIC_CATEGORIES.length}`);

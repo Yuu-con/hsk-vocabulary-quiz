@@ -17,10 +17,10 @@ console.log('--- RUNNING HSK VOCABULARY & MASTERY LOOP TESTS ---');
   assert.equal(HSK_COMBINED_VOCAB_DATA.length, 328, 'Combined must have exactly 328 questions');
   assert.equal(COMPOUND_QUIZ_DATA.length, 77, 'Compound Quiz must have exactly 77 questions');
   assert.equal(COMPOUND_PHRASES_DATA.length, 77, 'Compound Phrases must have exactly 77 items');
-  assert.equal(VOCAB_TOPIC_DATA.length, 161, 'Vocab Topic data must have 161 items');
+  assert.equal(VOCAB_TOPIC_DATA.length, 163, 'Vocab Topic data must have 163 items');
   assert.equal(VOCAB_TOPIC_CATEGORIES.length, 14, 'Vocab Topic data must have 14 categories');
   assert.equal(VOCAB_LESSON_DATA.length, 327, 'Vocab Lesson data must have 327 items');
-  console.log('✔ Test 1: Datasets count valid: HSK1 (163), HSK2 (165), Combined (328), Compound (77), Topic (161), Lesson (327)');
+  console.log('✔ Test 1: Datasets count valid: HSK1 (163), HSK2 (165), Combined (328), Compound (77), Topic (163), Lesson (327)');
 }
 
 // Test 2: Strict Answer Lock - User cannot change answer immediately on the same question

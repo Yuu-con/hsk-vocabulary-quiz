@@ -5,7 +5,7 @@ import * as path from 'path';
 const HSK1_QUIZ_PATH = 'c:/Users/dyysi/Downloads/b_tr_c_nghi_m_to_n_di_n_t_v_ng_gi_o_tr_nh_chu_n_hsk_1_b_i_1_15 (1).md';
 const HSK2_QUIZ_PATH = 'c:/Users/dyysi/Downloads/b_tr_c_nghi_m_to_n_di_n_t_v_ng_gi_o_tr_nh_chu_n_hsk_2_b_i_1_15 (1).md';
 const COMPOUND_PATH = 'c:/Users/dyysi/Downloads/gemini-code-1791822613434.md';
-const TOPIC_VOCAB_PATH = 'c:/Users/dyysi/Downloads/t_ng_h_p_t_v_ng_hsk_1_v_2_theo_ch.md';
+const TOPIC_VOCAB_PATH = 'c:/Users/dyysi/Downloads/Tong_hop_tu_vung_HSK_1_va_2_theo_chu_de.md';
 const LESSON_VOCAB_PATH = 'c:/Users/dyysi/Downloads/t_v_ng_chu_n_hsk_1_v_hsk_2_theo_t_ng_b_i (1).md';
 
 // Target files in data/
@@ -197,20 +197,20 @@ function parseTopicVocab(filePath: string) {
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i].trim();
-    const topMatch = line.match(/^##\s+(\d+)\.\s*(.*)/);
+    const topMatch = line.match(/^##\s+(\d+)[\.\\]\s*(.*)/);
     if (topMatch) {
       currentTopicId = parseInt(topMatch[1], 10);
-      currentTopic = line.replace(/^##\s*/, '').trim();
+      currentTopic = line.replace(/^##\s*/, '').replace(/\\/g, '').trim();
       continue;
     }
 
-    if (line.startsWith('| **')) {
+    if (line.startsWith('| **') || line.startsWith('|**')) {
       const parts = line.split('|').map(s => s.trim()).filter(Boolean);
       if (parts.length >= 3) {
-        const hanzi = parts[0].replace(/\*\*/g, '').trim();
-        const pinyin = parts[1].trim();
-        const meaning = parts[2].trim();
-        const note = parts[3] ? parts[3].trim() : '';
+        const hanzi = parts[0].replace(/\*\*/g, '').replace(/\\/g, '').trim();
+        const pinyin = parts[1].replace(/\\/g, '').trim();
+        const meaning = parts[2].replace(/\\/g, '').trim();
+        const note = parts[3] ? parts[3].replace(/\\/g, '').trim() : '';
         items.push({
           id: items.length + 1,
           topicId: currentTopicId,
@@ -226,9 +226,9 @@ function parseTopicVocab(filePath: string) {
 
     const bulletMatch = line.match(/^\*\s+\*\*([^\*]+)\*\*\s*\(([^\)]+)\):\s*(.*)/);
     if (bulletMatch) {
-      const hanzi = bulletMatch[1].trim();
-      const pinyin = bulletMatch[2].trim();
-      const meaning = bulletMatch[3].trim();
+      const hanzi = bulletMatch[1].replace(/\\/g, '').trim();
+      const pinyin = bulletMatch[2].replace(/\\/g, '').trim();
+      const meaning = bulletMatch[3].replace(/\\/g, '').trim();
       items.push({
         id: items.length + 1,
         topicId: currentTopicId,
