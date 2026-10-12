@@ -325,7 +325,7 @@ export const VocabStudySection: React.FC = () => {
                       : 'text-slate-600 hover:text-slate-900'
                   }`}
                 >
-                  HSK 1 (15 bài · 162 từ)
+                  HSK 1 (15 bài · 163 từ)
                 </button>
                 <button
                   onClick={() => {
@@ -446,7 +446,7 @@ export const VocabStudySection: React.FC = () => {
                 <span>Chọn nhóm phân biệt:</span>
               </span>
               <span className="text-slate-400 font-normal">
-                {selectedConfusableCat === 'all' ? 'Tất cả 8 nhóm (34 cặp từ)' : selectedConfusableCat}
+                {selectedConfusableCat === 'all' ? 'Tất cả 8 nhóm (29 nhóm từ)' : selectedConfusableCat}
               </span>
             </div>
 
@@ -460,7 +460,7 @@ export const VocabStudySection: React.FC = () => {
                     : 'bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100'
                 }`}
               >
-                Tất cả (34 nhóm)
+                Tất cả (29 nhóm)
               </button>
               {CONFUSABLE_CATEGORIES.map((cat, idx) => {
                 const isSelected = selectedConfusableCat === cat;

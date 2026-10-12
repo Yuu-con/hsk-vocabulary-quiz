@@ -20,10 +20,13 @@ console.log('--- RUNNING HSK VOCABULARY & MASTERY LOOP TESTS ---');
   assert.equal(COMPOUND_PHRASES_DATA.length, 77, 'Compound Phrases must have exactly 77 items');
   assert.equal(VOCAB_TOPIC_DATA.length, 163, 'Vocab Topic data must have 163 items');
   assert.equal(VOCAB_TOPIC_CATEGORIES.length, 14, 'Vocab Topic data must have 14 categories');
-  assert.equal(VOCAB_LESSON_DATA.length, 327, 'Vocab Lesson data must have 327 items');
+  assert.equal(VOCAB_LESSON_DATA.length, 328, 'Vocab Lesson data must have 328 items');
+  assert.equal(VOCAB_LESSON_DATA.filter(x => x.level === 'hsk1').length, 163, 'HSK 1 Lesson Vocab must have 163 items');
+  assert.equal(VOCAB_LESSON_DATA.filter(x => x.level === 'hsk2').length, 165, 'HSK 2 Lesson Vocab must have 165 items');
+  assert.ok(VOCAB_LESSON_DATA.some(x => x.level === 'hsk1' && x.lesson === 6 && x.hanzi === '汉字'), 'HSK 1 Lesson 6 must contain 汉字');
   assert.equal(CONFUSABLE_VOCAB_DATA.length, 29, 'Confusable Vocab data must have 29 groups');
   assert.equal(CONFUSABLE_CATEGORIES.length, 8, 'Confusable Vocab data must have 8 categories');
-  console.log('✔ Test 1: Datasets count valid: HSK1 (163), HSK2 (165), Combined (328), Compound (77), Topic (163), Lesson (327), Confusable (29 groups in 8 categories)');
+  console.log('✔ Test 1: Datasets count valid: HSK1 (163), HSK2 (165), Combined (328), Compound (77), Topic (163), Lesson (328: 163 HSK1 + 165 HSK2), Confusable (29 groups in 8 categories)');
 }
 
 // Test 2: Strict Answer Lock - User cannot change answer immediately on the same question

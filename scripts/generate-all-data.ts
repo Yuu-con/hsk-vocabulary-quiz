@@ -6,7 +6,7 @@ const HSK1_QUIZ_PATH = 'c:/Users/dyysi/Downloads/b_tr_c_nghi_m_to_n_di_n_t_v_ng_
 const HSK2_QUIZ_PATH = 'c:/Users/dyysi/Downloads/b_tr_c_nghi_m_to_n_di_n_t_v_ng_gi_o_tr_nh_chu_n_hsk_2_b_i_1_15 (1).md';
 const COMPOUND_PATH = 'c:/Users/dyysi/Downloads/gemini-code-1791822613434.md';
 const TOPIC_VOCAB_PATH = 'c:/Users/dyysi/Downloads/Tong_hop_tu_vung_HSK_1_va_2_theo_chu_de.md';
-const LESSON_VOCAB_PATH = 'c:/Users/dyysi/Downloads/t_v_ng_chu_n_hsk_1_v_hsk_2_theo_t_ng_b_i (1).md';
+const LESSON_VOCAB_PATH = 'c:/Users/dyysi/Downloads/t_v_ng_chu_n_hsk_1_v_hsk_2_theo_t_ng_b_i.md';
 const CONFUSABLE_PATH = 'c:/Users/dyysi/Downloads/gemini-code-1791834423762.md';
 
 // Target files in data/
@@ -278,8 +278,9 @@ function parseLessonVocab(filePath: string) {
       continue;
     }
 
-    if (line.startsWith('|') && !line.includes('---') && !line.includes('STT') && !line.includes('Chữ Hán')) {
+    if (line.startsWith('|') && !line.includes('---')) {
       const parts = line.split('|').map(s => s.trim()).filter(Boolean);
+      if (parts[0] === 'STT') continue;
       if (parts.length >= 5) {
         items.push({
           id: items.length + 1,
@@ -428,73 +429,73 @@ async function main() {
   console.log('Generating datasets from user Markdown sources...');
 
   // 1. HSK 1 & HSK 2 Quiz Data
-  const hsk1Data = parseQuizMarkdown(HSK1_QUIZ_PATH, 0);
-  const hsk2Data = parseQuizMarkdown(HSK2_QUIZ_PATH, 0);
-  
-  // Combined data with continuous IDs
-  const combinedData = [
-    ...hsk1Data,
-    ...hsk2Data.map((q, idx) => ({
-      ...q,
-      id: hsk1Data.length + idx + 1,
-    })),
-  ];
+  if (fs.existsSync(HSK1_QUIZ_PATH) && fs.existsSync(HSK2_QUIZ_PATH)) {
+    const hsk1Data = parseQuizMarkdown(HSK1_QUIZ_PATH, 0);
+    const hsk2Data = parseQuizMarkdown(HSK2_QUIZ_PATH, 0);
+    const combinedData = [
+      ...hsk1Data,
+      ...hsk2Data.map((q, idx) => ({
+        ...q,
+        id: hsk1Data.length + idx + 1,
+      })),
+    ];
+    console.log(`HSK 1 questions: ${hsk1Data.length}`);
+    console.log(`HSK 2 questions: ${hsk2Data.length}`);
+    console.log(`Combined questions: ${combinedData.length}`);
 
-  console.log(`HSK 1 questions: ${hsk1Data.length}`);
-  console.log(`HSK 2 questions: ${hsk2Data.length}`);
-  console.log(`Combined questions: ${combinedData.length}`);
+    fs.writeFileSync(
+      path.join(DATA_DIR, 'hsk1-data.ts'),
+      `import { QuizQuestion } from '@/types/quiz';\n\nexport const HSK1_VOCAB_DATA: QuizQuestion[] = ${JSON.stringify(hsk1Data, null, 2)};\n`
+    );
+    fs.writeFileSync(
+      path.join(DATA_DIR, 'hsk2-data.ts'),
+      `import { QuizQuestion } from '@/types/quiz';\n\nexport const HSK2_VOCAB_DATA: QuizQuestion[] = ${JSON.stringify(hsk2Data, null, 2)};\n`
+    );
+    fs.writeFileSync(
+      path.join(DATA_DIR, 'hsk-combined-data.ts'),
+      `import { QuizQuestion } from '@/types/quiz';\n\nexport const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = ${JSON.stringify(combinedData, null, 2)};\n`
+    );
+  }
 
   // 2. Compound Phrases & Quiz Data
-  const { items: compoundItems, quizQuestions: compoundQuiz } = parseCompoundMaterials(COMPOUND_PATH);
-  console.log(`Compound items: ${compoundItems.length}, quiz questions: ${compoundQuiz.length}`);
+  if (fs.existsSync(COMPOUND_PATH)) {
+    const { items: compoundItems, quizQuestions: compoundQuiz } = parseCompoundMaterials(COMPOUND_PATH);
+    console.log(`Compound items: ${compoundItems.length}, quiz questions: ${compoundQuiz.length}`);
+    fs.writeFileSync(
+      path.join(DATA_DIR, 'compound-sentences-data.ts'),
+      `import { QuizQuestion } from '@/types/quiz';\nimport { CompoundPhraseItem } from '@/types/practice';\n\nexport const COMPOUND_PHRASES_DATA: CompoundPhraseItem[] = ${JSON.stringify(compoundItems, null, 2)};\n\nexport const COMPOUND_QUIZ_DATA: QuizQuestion[] = ${JSON.stringify(compoundQuiz, null, 2)};\n`
+    );
+  }
 
   // 3. Topic Vocab
-  const { items: topicItems, topicCategories } = parseTopicVocab(TOPIC_VOCAB_PATH);
-  console.log(`Topic vocab items: ${topicItems.length}, categories: ${topicCategories.length}`);
+  if (fs.existsSync(TOPIC_VOCAB_PATH)) {
+    const { items: topicItems, topicCategories } = parseTopicVocab(TOPIC_VOCAB_PATH);
+    console.log(`Topic vocab items: ${topicItems.length}, categories: ${topicCategories.length}`);
+    fs.writeFileSync(
+      path.join(DATA_DIR, 'vocab-study-topic-data.ts'),
+      `import { VocabTopicItem } from '@/types/practice';\n\nexport const VOCAB_TOPIC_CATEGORIES = ${JSON.stringify(topicCategories, null, 2)};\n\nexport const VOCAB_TOPIC_DATA: VocabTopicItem[] = ${JSON.stringify(topicItems, null, 2)};\n`
+    );
+  }
 
   // 4. Lesson Vocab
-  const lessonItems = parseLessonVocab(LESSON_VOCAB_PATH);
-  console.log(`Lesson vocab items: ${lessonItems.length}`);
+  if (fs.existsSync(LESSON_VOCAB_PATH)) {
+    const lessonItems = parseLessonVocab(LESSON_VOCAB_PATH);
+    console.log(`Lesson vocab items: ${lessonItems.length}`);
+    fs.writeFileSync(
+      path.join(DATA_DIR, 'vocab-study-lesson-data.ts'),
+      `import { VocabLessonItem } from '@/types/practice';\n\nexport const VOCAB_LESSON_DATA: VocabLessonItem[] = ${JSON.stringify(lessonItems, null, 2)};\n`
+    );
+  }
 
   // 5. Confusable Vocab
-  const { groups: confusableGroups, categories: confusableCategories } = parseConfusableVocab(CONFUSABLE_PATH);
-  console.log(`Confusable vocab groups: ${confusableGroups.length}, categories: ${confusableCategories.length}`);
-
-  // Write files
-  fs.writeFileSync(
-    path.join(DATA_DIR, 'hsk1-data.ts'),
-    `import { QuizQuestion } from '@/types/quiz';\n\nexport const HSK1_VOCAB_DATA: QuizQuestion[] = ${JSON.stringify(hsk1Data, null, 2)};\n`
-  );
-
-  fs.writeFileSync(
-    path.join(DATA_DIR, 'hsk2-data.ts'),
-    `import { QuizQuestion } from '@/types/quiz';\n\nexport const HSK2_VOCAB_DATA: QuizQuestion[] = ${JSON.stringify(hsk2Data, null, 2)};\n`
-  );
-
-  fs.writeFileSync(
-    path.join(DATA_DIR, 'hsk-combined-data.ts'),
-    `import { QuizQuestion } from '@/types/quiz';\n\nexport const HSK_COMBINED_VOCAB_DATA: QuizQuestion[] = ${JSON.stringify(combinedData, null, 2)};\n`
-  );
-
-  fs.writeFileSync(
-    path.join(DATA_DIR, 'compound-sentences-data.ts'),
-    `import { QuizQuestion } from '@/types/quiz';\nimport { CompoundPhraseItem } from '@/types/practice';\n\nexport const COMPOUND_PHRASES_DATA: CompoundPhraseItem[] = ${JSON.stringify(compoundItems, null, 2)};\n\nexport const COMPOUND_QUIZ_DATA: QuizQuestion[] = ${JSON.stringify(compoundQuiz, null, 2)};\n`
-  );
-
-  fs.writeFileSync(
-    path.join(DATA_DIR, 'vocab-study-topic-data.ts'),
-    `import { VocabTopicItem } from '@/types/practice';\n\nexport const VOCAB_TOPIC_CATEGORIES = ${JSON.stringify(topicCategories, null, 2)};\n\nexport const VOCAB_TOPIC_DATA: VocabTopicItem[] = ${JSON.stringify(topicItems, null, 2)};\n`
-  );
-
-  fs.writeFileSync(
-    path.join(DATA_DIR, 'vocab-study-lesson-data.ts'),
-    `import { VocabLessonItem } from '@/types/practice';\n\nexport const VOCAB_LESSON_DATA: VocabLessonItem[] = ${JSON.stringify(lessonItems, null, 2)};\n`
-  );
-
-  fs.writeFileSync(
-    path.join(DATA_DIR, 'confusable-vocab-data.ts'),
-    `import { ConfusableGroupItem } from '@/types/practice';\n\nexport const CONFUSABLE_CATEGORIES: string[] = ${JSON.stringify(confusableCategories, null, 2)};\n\nexport const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = ${JSON.stringify(confusableGroups, null, 2)};\n`
-  );
+  if (fs.existsSync(CONFUSABLE_PATH)) {
+    const { groups: confusableGroups, categories: confusableCategories } = parseConfusableVocab(CONFUSABLE_PATH);
+    console.log(`Confusable vocab groups: ${confusableGroups.length}, categories: ${confusableCategories.length}`);
+    fs.writeFileSync(
+      path.join(DATA_DIR, 'confusable-vocab-data.ts'),
+      `import { ConfusableGroupItem } from '@/types/practice';\n\nexport const CONFUSABLE_CATEGORIES: string[] = ${JSON.stringify(confusableCategories, null, 2)};\n\nexport const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = ${JSON.stringify(confusableGroups, null, 2)};\n`
+    );
+  }
 
   console.log('✅ All datasets successfully generated!');
 }

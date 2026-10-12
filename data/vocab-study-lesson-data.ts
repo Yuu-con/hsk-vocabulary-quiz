@@ -545,6 +545,17 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "level": "hsk1",
     "lesson": 6,
     "lessonTitle": "我会说汉语",
+    "stt": "9",
+    "hanzi": "汉字",
+    "pinyin": "hànzì",
+    "wordType": "Danh từ",
+    "meaning": "Chữ Hán"
+  },
+  {
+    "id": 51,
+    "level": "hsk1",
+    "lesson": 6,
+    "lessonTitle": "我会说汉语",
     "stt": "10",
     "hanzi": "字",
     "pinyin": "zì",
@@ -552,7 +563,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Chữ"
   },
   {
-    "id": 51,
+    "id": 52,
     "level": "hsk1",
     "lesson": 6,
     "lessonTitle": "我会说汉语",
@@ -563,7 +574,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Làm sao, thế nào (hỏi phương thức hành động)"
   },
   {
-    "id": 52,
+    "id": 53,
     "level": "hsk1",
     "lesson": 6,
     "lessonTitle": "我会说汉语",
@@ -574,7 +585,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Đọc"
   },
   {
-    "id": 53,
+    "id": 54,
     "level": "hsk1",
     "lesson": 7,
     "lessonTitle": "今天几号",
@@ -585,7 +596,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Xin, mời, làm ơn"
   },
   {
-    "id": 54,
+    "id": 55,
     "level": "hsk1",
     "lesson": 7,
     "lessonTitle": "今天几号",
@@ -596,7 +607,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Hỏi (*请问: Xin hỏi*)"
   },
   {
-    "id": 55,
+    "id": 56,
     "level": "hsk1",
     "lesson": 7,
     "lessonTitle": "今天几号",
@@ -607,7 +618,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Hôm nay"
   },
   {
-    "id": 56,
+    "id": 57,
     "level": "hsk1",
     "lesson": 7,
     "lessonTitle": "今天几号",
@@ -618,7 +629,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Ngày (văn nói); số"
   },
   {
-    "id": 57,
+    "id": 58,
     "level": "hsk1",
     "lesson": 7,
     "lessonTitle": "今天几号",
@@ -629,7 +640,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Tháng, mặt trăng"
   },
   {
-    "id": 58,
+    "id": 59,
     "level": "hsk1",
     "lesson": 7,
     "lessonTitle": "今天几号",
@@ -640,7 +651,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Tuần, thứ"
   },
   {
-    "id": 59,
+    "id": 60,
     "level": "hsk1",
     "lesson": 7,
     "lessonTitle": "今天几号",
@@ -651,7 +662,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Hôm qua"
   },
   {
-    "id": 60,
+    "id": 61,
     "level": "hsk1",
     "lesson": 7,
     "lessonTitle": "今天几号",
@@ -662,7 +673,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Ngày mai"
   },
   {
-    "id": 61,
+    "id": 62,
     "level": "hsk1",
     "lesson": 7,
     "lessonTitle": "今天几号",
@@ -673,7 +684,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Đi (rời khỏi vị trí người nói)"
   },
   {
-    "id": 62,
+    "id": 63,
     "level": "hsk1",
     "lesson": 7,
     "lessonTitle": "今天几号",
@@ -684,7 +695,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Trường học"
   },
   {
-    "id": 63,
+    "id": 64,
     "level": "hsk1",
     "lesson": 7,
     "lessonTitle": "今天几号",
@@ -695,7 +706,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Xem, nhìn, ngắm, đọc (sách)"
   },
   {
-    "id": 64,
+    "id": 65,
     "level": "hsk1",
     "lesson": 7,
     "lessonTitle": "今天几号",
@@ -706,7 +717,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Sách"
   },
   {
-    "id": 65,
+    "id": 66,
     "level": "hsk1",
     "lesson": 8,
     "lessonTitle": "我想喝茶",
@@ -717,7 +728,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Muốn; nhớ; suy nghĩ"
   },
   {
-    "id": 66,
+    "id": 67,
     "level": "hsk1",
     "lesson": 8,
     "lessonTitle": "我想喝茶",
@@ -728,7 +739,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Uống"
   },
   {
-    "id": 67,
+    "id": 68,
     "level": "hsk1",
     "lesson": 8,
     "lessonTitle": "我想喝茶",
@@ -739,7 +750,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Trà, chè"
   },
   {
-    "id": 68,
+    "id": 69,
     "level": "hsk1",
     "lesson": 8,
     "lessonTitle": "我想喝茶",
@@ -750,7 +761,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Ăn"
   },
   {
-    "id": 69,
+    "id": 70,
     "level": "hsk1",
     "lesson": 8,
     "lessonTitle": "我想喝茶",
@@ -761,7 +772,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Cơm (nấu từ gạo tẻ)"
   },
   {
-    "id": 70,
+    "id": 71,
     "level": "hsk1",
     "lesson": 8,
     "lessonTitle": "我想喝茶",
@@ -772,7 +783,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Buổi chiều"
   },
   {
-    "id": 71,
+    "id": 72,
     "level": "hsk1",
     "lesson": 8,
     "lessonTitle": "我想喝茶",
@@ -783,7 +794,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Cửa hàng, tiệm buôn"
   },
   {
-    "id": 72,
+    "id": 73,
     "level": "hsk1",
     "lesson": 8,
     "lessonTitle": "我想喝茶",
@@ -794,7 +805,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Mua"
   },
   {
-    "id": 73,
+    "id": 74,
     "level": "hsk1",
     "lesson": 8,
     "lessonTitle": "我想喝茶",
@@ -805,7 +816,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Cái, chiếc, người (lượng từ phổ biến nhất)"
   },
   {
-    "id": 74,
+    "id": 75,
     "level": "hsk1",
     "lesson": 8,
     "lessonTitle": "我想喝茶",
@@ -816,7 +827,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Cái cốc, cái ly, tách"
   },
   {
-    "id": 75,
+    "id": 76,
     "level": "hsk1",
     "lesson": 8,
     "lessonTitle": "我想喝茶",
@@ -827,7 +838,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Đây, này (chỉ vị trí gần)"
   },
   {
-    "id": 76,
+    "id": 77,
     "level": "hsk1",
     "lesson": 8,
     "lessonTitle": "我想喝茶",
@@ -838,7 +849,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Bao nhiêu (hỏi số lượng chung)"
   },
   {
-    "id": 77,
+    "id": 78,
     "level": "hsk1",
     "lesson": 8,
     "lessonTitle": "我想喝茶",
@@ -849,7 +860,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Tiền"
   },
   {
-    "id": 78,
+    "id": 79,
     "level": "hsk1",
     "lesson": 8,
     "lessonTitle": "我想喝茶",
@@ -860,7 +871,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Đồng, tệ (văn nói của đồng Nhân dân tệ)"
   },
   {
-    "id": 79,
+    "id": 80,
     "level": "hsk1",
     "lesson": 9,
     "lessonTitle": "你儿子在哪儿工作",
@@ -871,7 +882,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Nhỏ, bé"
   },
   {
-    "id": 80,
+    "id": 81,
     "level": "hsk1",
     "lesson": 9,
     "lessonTitle": "你儿子在哪儿工作",
@@ -882,7 +893,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Con mèo"
   },
   {
-    "id": 81,
+    "id": 82,
     "level": "hsk1",
     "lesson": 9,
     "lessonTitle": "你儿子在哪儿工作",
@@ -893,7 +904,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Ở, tại"
   },
   {
-    "id": 82,
+    "id": 83,
     "level": "hsk1",
     "lesson": 9,
     "lessonTitle": "你儿子在哪儿工作",
@@ -904,7 +915,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Chỗ đó, nơi đó, bên kia"
   },
   {
-    "id": 83,
+    "id": 84,
     "level": "hsk1",
     "lesson": 9,
     "lessonTitle": "你儿子在哪儿工作",
@@ -915,7 +926,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Con chó"
   },
   {
-    "id": 84,
+    "id": 85,
     "level": "hsk1",
     "lesson": 9,
     "lessonTitle": "你儿子在哪儿工作",
@@ -926,7 +937,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Cái ghế"
   },
   {
-    "id": 85,
+    "id": 86,
     "level": "hsk1",
     "lesson": 9,
     "lessonTitle": "你儿子在哪儿工作",
@@ -937,7 +948,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Dưới, phía dưới"
   },
   {
-    "id": 86,
+    "id": 87,
     "level": "hsk1",
     "lesson": 9,
     "lessonTitle": "你儿子在哪儿工作",
@@ -948,7 +959,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Ở đâu, chỗ nào (hỏi vị trí)"
   },
   {
-    "id": 87,
+    "id": 88,
     "level": "hsk1",
     "lesson": 9,
     "lessonTitle": "你儿子在哪儿工作",
@@ -959,7 +970,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Làm việc; công việc"
   },
   {
-    "id": 88,
+    "id": 89,
     "level": "hsk1",
     "lesson": 9,
     "lessonTitle": "你儿子在哪儿工作",
@@ -970,7 +981,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Con trai"
   },
   {
-    "id": 89,
+    "id": 90,
     "level": "hsk1",
     "lesson": 9,
     "lessonTitle": "你儿子在哪儿工作",
@@ -981,7 +992,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Bệnh viện"
   },
   {
-    "id": 90,
+    "id": 91,
     "level": "hsk1",
     "lesson": 9,
     "lessonTitle": "你儿子在哪儿工作",
@@ -992,7 +1003,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Bác sĩ"
   },
   {
-    "id": 91,
+    "id": 92,
     "level": "hsk1",
     "lesson": 9,
     "lessonTitle": "你儿子在哪儿工作",
@@ -1003,7 +1014,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Bố, ba, cha"
   },
   {
-    "id": 92,
+    "id": 93,
     "level": "hsk1",
     "lesson": 10,
     "lessonTitle": "我能坐这儿吗",
@@ -1014,7 +1025,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Cái bàn"
   },
   {
-    "id": 93,
+    "id": 94,
     "level": "hsk1",
     "lesson": 10,
     "lessonTitle": "我能坐这儿吗",
@@ -1025,7 +1036,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Trên, phía trên"
   },
   {
-    "id": 94,
+    "id": 95,
     "level": "hsk1",
     "lesson": 10,
     "lessonTitle": "我能坐这儿吗",
@@ -1036,7 +1047,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Máy vi tính"
   },
   {
-    "id": 95,
+    "id": 96,
     "level": "hsk1",
     "lesson": 10,
     "lessonTitle": "我能坐这儿吗",
@@ -1047,7 +1058,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Và, với (nối danh từ/cụm danh từ)"
   },
   {
-    "id": 96,
+    "id": 97,
     "level": "hsk1",
     "lesson": 10,
     "lessonTitle": "我能坐这儿吗",
@@ -1058,7 +1069,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Quyển, cuốn (sách, vở, từ điển)"
   },
   {
-    "id": 97,
+    "id": 98,
     "level": "hsk1",
     "lesson": 10,
     "lessonTitle": "我能坐这儿吗",
@@ -1069,7 +1080,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Trong, bên trong"
   },
   {
-    "id": 98,
+    "id": 99,
     "level": "hsk1",
     "lesson": 10,
     "lessonTitle": "我能坐这儿吗",
@@ -1080,7 +1091,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Phía trước, đằng trước"
   },
   {
-    "id": 99,
+    "id": 100,
     "level": "hsk1",
     "lesson": 10,
     "lessonTitle": "我能坐这儿吗",
@@ -1091,7 +1102,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Phía sau, đằng sau"
   },
   {
-    "id": 100,
+    "id": 101,
     "level": "hsk1",
     "lesson": 10,
     "lessonTitle": "我能坐这儿吗",
@@ -1102,7 +1113,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Ở đây, chỗ này"
   },
   {
-    "id": 101,
+    "id": 102,
     "level": "hsk1",
     "lesson": 10,
     "lessonTitle": "我能坐这儿吗",
@@ -1113,7 +1124,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Không có, chưa"
   },
   {
-    "id": 102,
+    "id": 103,
     "level": "hsk1",
     "lesson": 10,
     "lessonTitle": "我能坐这儿吗",
@@ -1124,7 +1135,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Có thể (biểu thị khả năng hoặc sự cho phép)"
   },
   {
-    "id": 103,
+    "id": 104,
     "level": "hsk1",
     "lesson": 10,
     "lessonTitle": "我能坐这儿吗",
@@ -1135,7 +1146,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Ngồi"
   },
   {
-    "id": 104,
+    "id": 105,
     "level": "hsk1",
     "lesson": 11,
     "lessonTitle": "现在几点",
@@ -1146,7 +1157,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Bây giờ, hiện tại"
   },
   {
-    "id": 105,
+    "id": 106,
     "level": "hsk1",
     "lesson": 11,
     "lessonTitle": "现在几点",
@@ -1157,7 +1168,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Giờ (mốc giờ trên đồng hồ)"
   },
   {
-    "id": 106,
+    "id": 107,
     "level": "hsk1",
     "lesson": 11,
     "lessonTitle": "现在几点",
@@ -1168,7 +1179,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Phút (mốc phút trên đồng hồ)"
   },
   {
-    "id": 107,
+    "id": 108,
     "level": "hsk1",
     "lesson": 11,
     "lessonTitle": "现在几点",
@@ -1179,7 +1190,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Buổi trưa"
   },
   {
-    "id": 108,
+    "id": 109,
     "level": "hsk1",
     "lesson": 11,
     "lessonTitle": "现在几点",
@@ -1190,7 +1201,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Ăn cơm, dùng bữa"
   },
   {
-    "id": 109,
+    "id": 110,
     "level": "hsk1",
     "lesson": 11,
     "lessonTitle": "现在几点",
@@ -1201,7 +1212,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Lúc, khi (*...的时候: lúc/khi...*)"
   },
   {
-    "id": 110,
+    "id": 111,
     "level": "hsk1",
     "lesson": 11,
     "lessonTitle": "现在几点",
@@ -1212,7 +1223,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Về, quay trở lại"
   },
   {
-    "id": 111,
+    "id": 112,
     "level": "hsk1",
     "lesson": 11,
     "lessonTitle": "现在几点",
@@ -1223,7 +1234,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Chúng tôi, chúng ta"
   },
   {
-    "id": 112,
+    "id": 113,
     "level": "hsk1",
     "lesson": 11,
     "lessonTitle": "现在几点",
@@ -1234,7 +1245,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Phim ảnh, điện ảnh"
   },
   {
-    "id": 113,
+    "id": 114,
     "level": "hsk1",
     "lesson": 11,
     "lessonTitle": "现在几点",
@@ -1245,7 +1256,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Sống, ở, cư trú"
   },
   {
-    "id": 114,
+    "id": 115,
     "level": "hsk1",
     "lesson": 11,
     "lessonTitle": "现在几点",
@@ -1256,7 +1267,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Trước (thời gian: *...之前; trước đây*)"
   },
   {
-    "id": 115,
+    "id": 116,
     "level": "hsk1",
     "lesson": 12,
     "lessonTitle": "明天天气怎么样",
@@ -1267,7 +1278,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Thời tiết"
   },
   {
-    "id": 116,
+    "id": 117,
     "level": "hsk1",
     "lesson": 12,
     "lessonTitle": "明天天气怎么样",
@@ -1278,7 +1289,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Như thế nào, ra sao (hỏi tính chất, tình hình)"
   },
   {
-    "id": 117,
+    "id": 118,
     "level": "hsk1",
     "lesson": 12,
     "lessonTitle": "明天天气怎么样",
@@ -1289,7 +1300,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Quá, lắm (*太...了: ...quá*)"
   },
   {
-    "id": 118,
+    "id": 119,
     "level": "hsk1",
     "lesson": 12,
     "lessonTitle": "明天天气怎么样",
@@ -1300,7 +1311,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Nóng (nhiệt độ)"
   },
   {
-    "id": 119,
+    "id": 120,
     "level": "hsk1",
     "lesson": 12,
     "lessonTitle": "明天天气怎么样",
@@ -1311,7 +1322,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Lạnh"
   },
   {
-    "id": 120,
+    "id": 121,
     "level": "hsk1",
     "lesson": 12,
     "lessonTitle": "明天天气怎么样",
@@ -1322,7 +1333,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Trời mưa"
   },
   {
-    "id": 121,
+    "id": 122,
     "level": "hsk1",
     "lesson": 12,
     "lessonTitle": "明天天气怎么样",
@@ -1333,7 +1344,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Cô gái, tiểu thư (xưng hô lịch sự)"
   },
   {
-    "id": 122,
+    "id": 123,
     "level": "hsk1",
     "lesson": 12,
     "lessonTitle": "明天天气怎么样",
@@ -1344,7 +1355,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Đến, tới (hướng về phía người nói)"
   },
   {
-    "id": 123,
+    "id": 124,
     "level": "hsk1",
     "lesson": 12,
     "lessonTitle": "明天天气怎么样",
@@ -1355,7 +1366,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Thân thể, sức khỏe"
   },
   {
-    "id": 124,
+    "id": 125,
     "level": "hsk1",
     "lesson": 12,
     "lessonTitle": "明天天气怎么样",
@@ -1366,7 +1377,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Yêu; thích, ham"
   },
   {
-    "id": 125,
+    "id": 126,
     "level": "hsk1",
     "lesson": 12,
     "lessonTitle": "明天天气怎么样",
@@ -1377,7 +1388,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Hoa quả, trái cây"
   },
   {
-    "id": 126,
+    "id": 127,
     "level": "hsk1",
     "lesson": 12,
     "lessonTitle": "明天天气怎么样",
@@ -1388,7 +1399,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Nước"
   },
   {
-    "id": 127,
+    "id": 128,
     "level": "hsk1",
     "lesson": 13,
     "lessonTitle": "他在学做中国菜呢",
@@ -1399,7 +1410,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Alo (nghe máy); này"
   },
   {
-    "id": 128,
+    "id": 129,
     "level": "hsk1",
     "lesson": 13,
     "lessonTitle": "他在学做中国菜呢",
@@ -1410,7 +1421,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Cũng"
   },
   {
-    "id": 129,
+    "id": 130,
     "level": "hsk1",
     "lesson": 13,
     "lessonTitle": "他在学做中国菜呢",
@@ -1421,7 +1432,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Học tập, học"
   },
   {
-    "id": 130,
+    "id": 131,
     "level": "hsk1",
     "lesson": 13,
     "lessonTitle": "他在学做中国菜呢",
@@ -1432,7 +1443,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Buổi sáng (tầm giữa buổi)"
   },
   {
-    "id": 131,
+    "id": 132,
     "level": "hsk1",
     "lesson": 13,
     "lessonTitle": "他在学做中国菜呢",
@@ -1443,7 +1454,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Đi ngủ"
   },
   {
-    "id": 132,
+    "id": 133,
     "level": "hsk1",
     "lesson": 13,
     "lessonTitle": "他在学做中国菜呢",
@@ -1454,7 +1465,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Ti vi, truyền hình"
   },
   {
-    "id": 133,
+    "id": 134,
     "level": "hsk1",
     "lesson": 13,
     "lessonTitle": "他在学做中国菜呢",
@@ -1465,7 +1476,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Thích, yêu thích"
   },
   {
-    "id": 134,
+    "id": 135,
     "level": "hsk1",
     "lesson": 13,
     "lessonTitle": "他在学做中国菜呢",
@@ -1476,7 +1487,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Cho; gọi cho (*给...打电话*)"
   },
   {
-    "id": 135,
+    "id": 136,
     "level": "hsk1",
     "lesson": 13,
     "lessonTitle": "他在学做中国菜呢",
@@ -1487,7 +1498,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Gọi điện thoại"
   },
   {
-    "id": 136,
+    "id": 137,
     "level": "hsk1",
     "lesson": 13,
     "lessonTitle": "他在学做中国菜呢",
@@ -1498,7 +1509,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Nhé, đi, nha (đề nghị, khuyên bảo, suy đoán)"
   },
   {
-    "id": 137,
+    "id": 138,
     "level": "hsk1",
     "lesson": 14,
     "lessonTitle": "她买了不少衣服",
@@ -1509,7 +1520,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Đồ vật, đồ đạc, thứ"
   },
   {
-    "id": 138,
+    "id": 139,
     "level": "hsk1",
     "lesson": 14,
     "lessonTitle": "她买了不少衣服",
@@ -1520,7 +1531,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Một ít, một chút"
   },
   {
-    "id": 139,
+    "id": 140,
     "level": "hsk1",
     "lesson": 14,
     "lessonTitle": "她买了不少衣服",
@@ -1531,7 +1542,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Quả táo"
   },
   {
-    "id": 140,
+    "id": 141,
     "level": "hsk1",
     "lesson": 14,
     "lessonTitle": "她买了不少衣服",
@@ -1542,7 +1553,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Nhìn thấy, trông thấy"
   },
   {
-    "id": 141,
+    "id": 142,
     "level": "hsk1",
     "lesson": 14,
     "lessonTitle": "她买了不少衣服",
@@ -1553,7 +1564,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Ngài, ông; chồng"
   },
   {
-    "id": 142,
+    "id": 143,
     "level": "hsk1",
     "lesson": 14,
     "lessonTitle": "她买了不少衣服",
@@ -1564,7 +1575,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Lái (xe); mở"
   },
   {
-    "id": 143,
+    "id": 144,
     "level": "hsk1",
     "lesson": 14,
     "lessonTitle": "她买了不少衣服",
@@ -1575,7 +1586,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Xe (xe cộ nói chung)"
   },
   {
-    "id": 144,
+    "id": 145,
     "level": "hsk1",
     "lesson": 14,
     "lessonTitle": "她买了不少衣服",
@@ -1586,7 +1597,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Trở về, về đây"
   },
   {
-    "id": 145,
+    "id": 146,
     "level": "hsk1",
     "lesson": 14,
     "lessonTitle": "她买了不少衣服",
@@ -1597,7 +1608,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Phút (khoảng thời gian)"
   },
   {
-    "id": 146,
+    "id": 147,
     "level": "hsk1",
     "lesson": 14,
     "lessonTitle": "她买了不少衣服",
@@ -1608,7 +1619,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Sau, sau khi"
   },
   {
-    "id": 147,
+    "id": 148,
     "level": "hsk1",
     "lesson": 14,
     "lessonTitle": "她买了不少衣服",
@@ -1619,7 +1630,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Quần áo, trang phục"
   },
   {
-    "id": 148,
+    "id": 149,
     "level": "hsk1",
     "lesson": 14,
     "lessonTitle": "她买了不少衣服",
@@ -1630,7 +1641,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Đẹp, xinh xắn"
   },
   {
-    "id": 149,
+    "id": 150,
     "level": "hsk1",
     "lesson": 14,
     "lessonTitle": "她买了不少衣服",
@@ -1641,7 +1652,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "À, chà (thán từ / trợ từ cảm thán)"
   },
   {
-    "id": 150,
+    "id": 151,
     "level": "hsk1",
     "lesson": 14,
     "lessonTitle": "她买了不少衣服",
@@ -1652,7 +1663,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Ít"
   },
   {
-    "id": 151,
+    "id": 152,
     "level": "hsk1",
     "lesson": 14,
     "lessonTitle": "她买了不少衣服",
@@ -1663,7 +1674,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Không ít, khá nhiều"
   },
   {
-    "id": 152,
+    "id": 153,
     "level": "hsk1",
     "lesson": 14,
     "lessonTitle": "她买了不少衣服",
@@ -1674,7 +1685,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Những cái này, những người này"
   },
   {
-    "id": 153,
+    "id": 154,
     "level": "hsk1",
     "lesson": 14,
     "lessonTitle": "她买了不少衣服",
@@ -1685,7 +1696,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Đều, tất cả"
   },
   {
-    "id": 154,
+    "id": 155,
     "level": "hsk1",
     "lesson": 15,
     "lessonTitle": "我是坐飞机来的",
@@ -1696,7 +1707,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Quen biết, nhận biết"
   },
   {
-    "id": 155,
+    "id": 156,
     "level": "hsk1",
     "lesson": 15,
     "lessonTitle": "我是坐飞机来的",
@@ -1707,7 +1718,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Năm"
   },
   {
-    "id": 156,
+    "id": 157,
     "level": "hsk1",
     "lesson": 15,
     "lessonTitle": "我是坐飞机来的",
@@ -1718,7 +1729,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Trường đại học"
   },
   {
-    "id": 157,
+    "id": 158,
     "level": "hsk1",
     "lesson": 15,
     "lessonTitle": "我是坐飞机来的",
@@ -1729,7 +1740,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Nhà hàng, quán ăn, khách sạn nhỏ"
   },
   {
-    "id": 158,
+    "id": 159,
     "level": "hsk1",
     "lesson": 15,
     "lessonTitle": "我是坐飞机来的",
@@ -1740,7 +1751,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Xe taxi"
   },
   {
-    "id": 159,
+    "id": 160,
     "level": "hsk1",
     "lesson": 15,
     "lessonTitle": "我是坐飞机来的",
@@ -1751,7 +1762,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Cùng nhau"
   },
   {
-    "id": 160,
+    "id": 161,
     "level": "hsk1",
     "lesson": 15,
     "lessonTitle": "我是坐飞机来的",
@@ -1762,7 +1773,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Vui vẻ, mừng rỡ"
   },
   {
-    "id": 161,
+    "id": 162,
     "level": "hsk1",
     "lesson": 15,
     "lessonTitle": "我是坐飞机来的",
@@ -1773,7 +1784,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Nghe"
   },
   {
-    "id": 162,
+    "id": 163,
     "level": "hsk1",
     "lesson": 15,
     "lessonTitle": "我是坐飞机来的",
@@ -1784,7 +1795,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Máy bay"
   },
   {
-    "id": 163,
+    "id": 164,
     "level": "hsk2",
     "lesson": 1,
     "lessonTitle": "九月去北京旅游最好",
@@ -1795,7 +1806,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Đi du lịch"
   },
   {
-    "id": 164,
+    "id": 165,
     "level": "hsk2",
     "lesson": 1,
     "lessonTitle": "九月去北京旅游最好",
@@ -1806,7 +1817,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Cảm thấy, thấy rằng, nghĩ rằng"
   },
   {
-    "id": 165,
+    "id": 166,
     "level": "hsk2",
     "lesson": 1,
     "lessonTitle": "九月去北京旅游最好",
@@ -1817,7 +1828,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Nhất (thích nhất, đẹp nhất...)"
   },
   {
-    "id": 166,
+    "id": 167,
     "level": "hsk2",
     "lesson": 1,
     "lessonTitle": "九月去北京旅游最好",
@@ -1828,7 +1839,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Tại sao, vì sao"
   },
   {
-    "id": 167,
+    "id": 168,
     "level": "hsk2",
     "lesson": 1,
     "lessonTitle": "九月去北京旅游最好",
@@ -1839,7 +1850,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Cũng"
   },
   {
-    "id": 168,
+    "id": 169,
     "level": "hsk2",
     "lesson": 1,
     "lessonTitle": "九月去北京旅游最好",
@@ -1850,7 +1861,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Thể thao; vận động, tập thể dục"
   },
   {
-    "id": 169,
+    "id": 170,
     "level": "hsk2",
     "lesson": 1,
     "lessonTitle": "九月去北京旅游最好",
@@ -1861,7 +1872,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Đá bóng, đá banh"
   },
   {
-    "id": 170,
+    "id": 171,
     "level": "hsk2",
     "lesson": 1,
     "lessonTitle": "九月去北京旅游最好",
@@ -1872,7 +1883,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Cùng nhau, cùng"
   },
   {
-    "id": 171,
+    "id": 172,
     "level": "hsk2",
     "lesson": 1,
     "lessonTitle": "九月去北京旅游最好",
@@ -1883,7 +1894,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Muốn; cần/phải; sắp sửa"
   },
   {
-    "id": 172,
+    "id": 173,
     "level": "hsk2",
     "lesson": 1,
     "lessonTitle": "九月去北京旅游最好",
@@ -1894,7 +1905,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Mới (đối lập với cũ)"
   },
   {
-    "id": 173,
+    "id": 174,
     "level": "hsk2",
     "lesson": 1,
     "lessonTitle": "九月去北京旅游最好",
@@ -1905,7 +1916,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Bắc Kinh"
   },
   {
-    "id": 174,
+    "id": 175,
     "level": "hsk2",
     "lesson": 2,
     "lessonTitle": "我每天六点起床",
@@ -1916,7 +1927,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Bị ốm, bị bệnh"
   },
   {
-    "id": 175,
+    "id": 176,
     "level": "hsk2",
     "lesson": 2,
     "lessonTitle": "我每天六点起床",
@@ -1927,7 +1938,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Mỗi, từng (mỗi ngày, mỗi người...)"
   },
   {
-    "id": 176,
+    "id": 177,
     "level": "hsk2",
     "lesson": 2,
     "lessonTitle": "我每天六点起床",
@@ -1938,7 +1949,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Buổi sáng (sáng sớm)"
   },
   {
-    "id": 177,
+    "id": 178,
     "level": "hsk2",
     "lesson": 2,
     "lessonTitle": "我每天六点起床",
@@ -1949,7 +1960,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Chạy bộ"
   },
   {
-    "id": 178,
+    "id": 179,
     "level": "hsk2",
     "lesson": 2,
     "lessonTitle": "我每天六点起床",
@@ -1960,7 +1971,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Thức dậy, rời giường"
   },
   {
-    "id": 179,
+    "id": 180,
     "level": "hsk2",
     "lesson": 2,
     "lessonTitle": "我每天六点起床",
@@ -1971,7 +1982,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Thuốc (chữa bệnh)"
   },
   {
-    "id": 180,
+    "id": 181,
     "level": "hsk2",
     "lesson": 2,
     "lessonTitle": "我每天六点起床",
@@ -1982,7 +1993,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Sức khỏe; cơ thể"
   },
   {
-    "id": 181,
+    "id": 182,
     "level": "hsk2",
     "lesson": 2,
     "lessonTitle": "我每天六点起床",
@@ -1993,7 +2004,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Xuất viện, ra viện"
   },
   {
-    "id": 182,
+    "id": 183,
     "level": "hsk2",
     "lesson": 2,
     "lessonTitle": "我每天六点起床",
@@ -2004,7 +2015,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Ra, đi ra ngoài"
   },
   {
-    "id": 183,
+    "id": 184,
     "level": "hsk2",
     "lesson": 2,
     "lessonTitle": "我每天六点起床",
@@ -2015,7 +2026,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Cao (chiều cao, vị trí)"
   },
   {
-    "id": 184,
+    "id": 185,
     "level": "hsk2",
     "lesson": 2,
     "lessonTitle": "我每天六点起床",
@@ -2026,7 +2037,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Mét (m)"
   },
   {
-    "id": 185,
+    "id": 186,
     "level": "hsk2",
     "lesson": 2,
     "lessonTitle": "我每天六点起床",
@@ -2037,7 +2048,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Biết, nắm được thông tin"
   },
   {
-    "id": 186,
+    "id": 187,
     "level": "hsk2",
     "lesson": 2,
     "lessonTitle": "我每天六点起床",
@@ -2048,7 +2059,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Nghỉ ngơi"
   },
   {
-    "id": 187,
+    "id": 188,
     "level": "hsk2",
     "lesson": 2,
     "lessonTitle": "我每天六点起床",
@@ -2059,7 +2070,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Bận, bận rộn"
   },
   {
-    "id": 188,
+    "id": 189,
     "level": "hsk2",
     "lesson": 3,
     "lessonTitle": "左边那个红色的是我的",
@@ -2070,7 +2081,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Đồng hồ đeo tay"
   },
   {
-    "id": 189,
+    "id": 190,
     "level": "hsk2",
     "lesson": 3,
     "lessonTitle": "左边那个红色的是我的",
@@ -2081,7 +2092,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Nghìn, ngàn (1.000)"
   },
   {
-    "id": 190,
+    "id": 191,
     "level": "hsk2",
     "lesson": 3,
     "lessonTitle": "左边那个红色的是我的",
@@ -2092,7 +2103,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Báo, tờ báo"
   },
   {
-    "id": 191,
+    "id": 192,
     "level": "hsk2",
     "lesson": 3,
     "lessonTitle": "左边那个红色的是我的",
@@ -2103,7 +2114,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Giao, đưa tới (*送牛奶: giao sữa*); tặng; tiễn"
   },
   {
-    "id": 192,
+    "id": 193,
     "level": "hsk2",
     "lesson": 3,
     "lessonTitle": "左边那个红色的是我的",
@@ -2114,7 +2125,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Một chút, một lát, thử một tí"
   },
   {
-    "id": 193,
+    "id": 194,
     "level": "hsk2",
     "lesson": 3,
     "lessonTitle": "左边那个红色的是我的",
@@ -2125,7 +2136,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Sữa bò, sữa tươi"
   },
   {
-    "id": 194,
+    "id": 195,
     "level": "hsk2",
     "lesson": 3,
     "lessonTitle": "左边那个红色的是我的",
@@ -2136,7 +2147,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Phòng, căn phòng"
   },
   {
-    "id": 195,
+    "id": 196,
     "level": "hsk2",
     "lesson": 3,
     "lessonTitle": "左边那个红色的是我的",
@@ -2147,7 +2158,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Chồng"
   },
   {
-    "id": 196,
+    "id": 197,
     "level": "hsk2",
     "lesson": 3,
     "lessonTitle": "左边那个红色的是我的",
@@ -2158,7 +2169,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Bên cạnh, kế bên"
   },
   {
-    "id": 197,
+    "id": 198,
     "level": "hsk2",
     "lesson": 3,
     "lessonTitle": "左边那个红色的是我的",
@@ -2169,7 +2180,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Thật, thật là, quả thực (cảm thán)"
   },
   {
-    "id": 198,
+    "id": 199,
     "level": "hsk2",
     "lesson": 3,
     "lessonTitle": "左边那个红色的是我的",
@@ -2180,7 +2191,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Màu sắc"
   },
   {
-    "id": 199,
+    "id": 200,
     "level": "hsk2",
     "lesson": 3,
     "lessonTitle": "左边那个红色的是我的",
@@ -2191,7 +2202,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Màu hồng"
   },
   {
-    "id": 200,
+    "id": 201,
     "level": "hsk2",
     "lesson": 3,
     "lessonTitle": "左边那个红色的是我的",
@@ -2202,7 +2213,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Màu đỏ, đỏ"
   },
   {
-    "id": 201,
+    "id": 202,
     "level": "hsk2",
     "lesson": 3,
     "lessonTitle": "左边那个红色的是我的",
@@ -2213,7 +2224,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Bên trái, phía bên trái"
   },
   {
-    "id": 202,
+    "id": 203,
     "level": "hsk2",
     "lesson": 4,
     "lessonTitle": "这个工作是他帮我介绍的",
@@ -2224,7 +2235,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Sinh nhật, ngày sinh"
   },
   {
-    "id": 203,
+    "id": 204,
     "level": "hsk2",
     "lesson": 4,
     "lessonTitle": "这个工作是他帮我介绍的",
@@ -2235,7 +2246,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Vui vẻ, hạnh phúc (*dùng chúc mừng*)"
   },
   {
-    "id": 204,
+    "id": 205,
     "level": "hsk2",
     "lesson": 4,
     "lessonTitle": "这个工作是他帮我介绍的",
@@ -2246,7 +2257,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Cho, tặng; gửi cho, gọi cho (*打电话给...*)"
   },
   {
-    "id": 205,
+    "id": 206,
     "level": "hsk2",
     "lesson": 4,
     "lessonTitle": "这个工作是他帮我介绍的",
@@ -2257,7 +2268,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Nghe/bắt (máy điện thoại); đón (người)"
   },
   {
-    "id": 206,
+    "id": 207,
     "level": "hsk2",
     "lesson": 4,
     "lessonTitle": "这个工作是他帮我介绍的",
@@ -2268,7 +2279,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Buổi tối"
   },
   {
-    "id": 207,
+    "id": 208,
     "level": "hsk2",
     "lesson": 4,
     "lessonTitle": "这个工作是他帮我介绍的",
@@ -2279,7 +2290,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Hỏi"
   },
   {
-    "id": 208,
+    "id": 209,
     "level": "hsk2",
     "lesson": 4,
     "lessonTitle": "这个工作是他帮我介绍的",
@@ -2290,7 +2301,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Rất, vô cùng, hết sức"
   },
   {
-    "id": 209,
+    "id": 210,
     "level": "hsk2",
     "lesson": 4,
     "lessonTitle": "这个工作是他帮我介绍的",
@@ -2301,7 +2312,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Bắt đầu"
   },
   {
-    "id": 210,
+    "id": 211,
     "level": "hsk2",
     "lesson": 4,
     "lessonTitle": "这个工作是他帮我介绍的",
@@ -2312,7 +2323,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Đã, rồi"
   },
   {
-    "id": 211,
+    "id": 212,
     "level": "hsk2",
     "lesson": 4,
     "lessonTitle": "这个工作是他帮我介绍的",
@@ -2323,7 +2334,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Dài (độ dài, khoảng thời gian)"
   },
   {
-    "id": 212,
+    "id": 213,
     "level": "hsk2",
     "lesson": 4,
     "lessonTitle": "这个工作是他帮我介绍的",
@@ -2334,7 +2345,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Hai (dùng trước lượng từ: *hai cái, hai người*)"
   },
   {
-    "id": 213,
+    "id": 214,
     "level": "hsk2",
     "lesson": 4,
     "lessonTitle": "这个工作是他帮我介绍的",
@@ -2345,7 +2356,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Giúp, giúp đỡ, hỗ trợ"
   },
   {
-    "id": 214,
+    "id": 215,
     "level": "hsk2",
     "lesson": 4,
     "lessonTitle": "这个工作是他帮我介绍的",
@@ -2356,7 +2367,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Giới thiệu"
   },
   {
-    "id": 215,
+    "id": 216,
     "level": "hsk2",
     "lesson": 5,
     "lessonTitle": "就买这件吧",
@@ -2367,7 +2378,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Bên ngoài, phía ngoài"
   },
   {
-    "id": 216,
+    "id": 217,
     "level": "hsk2",
     "lesson": 5,
     "lessonTitle": "就买这件吧",
@@ -2378,7 +2389,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Chuẩn bị; dự định"
   },
   {
-    "id": 217,
+    "id": 218,
     "level": "hsk2",
     "lesson": 5,
     "lessonTitle": "就买这件吧",
@@ -2389,7 +2400,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Liền, thì, ngay; chính là (*nhấn mạnh*)"
   },
   {
-    "id": 218,
+    "id": 219,
     "level": "hsk2",
     "lesson": 5,
     "lessonTitle": "就买这件吧",
@@ -2400,7 +2411,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Con cá, món cá"
   },
   {
-    "id": 219,
+    "id": 220,
     "level": "hsk2",
     "lesson": 5,
     "lessonTitle": "就买这件吧",
@@ -2411,7 +2422,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Cái, chiếc (quần áo, sự việc)"
   },
   {
-    "id": 220,
+    "id": 221,
     "level": "hsk2",
     "lesson": 5,
     "lessonTitle": "就买这件吧",
@@ -2422,7 +2433,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Vẫn, còn; tạm, khá (*还可以: cũng tạm*)"
   },
   {
-    "id": 221,
+    "id": 222,
     "level": "hsk2",
     "lesson": 5,
     "lessonTitle": "就买这件吧",
@@ -2433,7 +2444,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Có thể, được; tạm ổn"
   },
   {
-    "id": 222,
+    "id": 223,
     "level": "hsk2",
     "lesson": 5,
     "lessonTitle": "就买这件吧",
@@ -2444,7 +2455,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Khá tốt, không tệ, hay"
   },
   {
-    "id": 223,
+    "id": 224,
     "level": "hsk2",
     "lesson": 5,
     "lessonTitle": "就买这件吧",
@@ -2455,7 +2466,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Đi thi, kiểm tra; bài thi, kỳ thi"
   },
   {
-    "id": 224,
+    "id": 225,
     "level": "hsk2",
     "lesson": 5,
     "lessonTitle": "就买这件吧",
@@ -2466,7 +2477,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Ý nghĩa; thú vị (*有意思: hay ho, thú vị*)"
   },
   {
-    "id": 225,
+    "id": 226,
     "level": "hsk2",
     "lesson": 5,
     "lessonTitle": "就买这件吧",
@@ -2477,7 +2488,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Cà phê"
   },
   {
-    "id": 226,
+    "id": 227,
     "level": "hsk2",
     "lesson": 5,
     "lessonTitle": "就买这件吧",
@@ -2488,7 +2499,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Đối với, với (*对...好*); đúng"
   },
   {
-    "id": 227,
+    "id": 228,
     "level": "hsk2",
     "lesson": 5,
     "lessonTitle": "就买这件吧",
@@ -2499,7 +2510,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Sau này, sau khi, về sau"
   },
   {
-    "id": 228,
+    "id": 229,
     "level": "hsk2",
     "lesson": 6,
     "lessonTitle": "你怎么不吃了",
@@ -2510,7 +2521,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Cửa, cổng"
   },
   {
-    "id": 229,
+    "id": 230,
     "level": "hsk2",
     "lesson": 6,
     "lessonTitle": "你怎么不吃了",
@@ -2521,7 +2532,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Ngoài, bên ngoài"
   },
   {
-    "id": 230,
+    "id": 231,
     "level": "hsk2",
     "lesson": 6,
     "lessonTitle": "你怎么不吃了",
@@ -2532,7 +2543,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Xe đạp"
   },
   {
-    "id": 231,
+    "id": 232,
     "level": "hsk2",
     "lesson": 6,
     "lessonTitle": "你怎么不吃了",
@@ -2543,7 +2554,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Thịt cừu"
   },
   {
-    "id": 232,
+    "id": 233,
     "level": "hsk2",
     "lesson": 6,
     "lessonTitle": "你怎么不吃了",
@@ -2554,7 +2565,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Ngon (đồ ăn)"
   },
   {
-    "id": 233,
+    "id": 234,
     "level": "hsk2",
     "lesson": 6,
     "lessonTitle": "你怎么不吃了",
@@ -2565,7 +2576,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Mì, sợi mì"
   },
   {
-    "id": 234,
+    "id": 235,
     "level": "hsk2",
     "lesson": 6,
     "lessonTitle": "你怎么不吃了",
@@ -2576,7 +2587,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Chơi bóng rổ"
   },
   {
-    "id": 235,
+    "id": 236,
     "level": "hsk2",
     "lesson": 6,
     "lessonTitle": "你怎么不吃了",
@@ -2587,7 +2598,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Bởi vì, do"
   },
   {
-    "id": 236,
+    "id": 237,
     "level": "hsk2",
     "lesson": 6,
     "lessonTitle": "你怎么不吃了",
@@ -2598,7 +2609,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Cho nên, nên"
   },
   {
-    "id": 237,
+    "id": 238,
     "level": "hsk2",
     "lesson": 6,
     "lessonTitle": "你怎么不吃了",
@@ -2609,7 +2620,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Bơi, bơi lội"
   },
   {
-    "id": 238,
+    "id": 239,
     "level": "hsk2",
     "lesson": 6,
     "lessonTitle": "你怎么不吃了",
@@ -2620,7 +2631,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Thường, thường xuyên"
   },
   {
-    "id": 239,
+    "id": 240,
     "level": "hsk2",
     "lesson": 6,
     "lessonTitle": "你怎么不吃了",
@@ -2631,7 +2642,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Cân, ki-lô-gam (kg)"
   },
   {
-    "id": 240,
+    "id": 241,
     "level": "hsk2",
     "lesson": 7,
     "lessonTitle": "你家离公司远吗",
@@ -2642,7 +2653,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Phòng học, lớp học"
   },
   {
-    "id": 241,
+    "id": 242,
     "level": "hsk2",
     "lesson": 7,
     "lessonTitle": "你家离公司远吗",
@@ -2653,7 +2664,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Sân bay, phi trường"
   },
   {
-    "id": 242,
+    "id": 243,
     "level": "hsk2",
     "lesson": 7,
     "lessonTitle": "你家离公司远吗",
@@ -2664,7 +2675,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Đường, con đường; tuyến (tuyến xe)"
   },
   {
-    "id": 243,
+    "id": 244,
     "level": "hsk2",
     "lesson": 7,
     "lessonTitle": "你家离公司远吗",
@@ -2675,7 +2686,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Cách (khoảng cách không gian hoặc thời gian)"
   },
   {
-    "id": 244,
+    "id": 245,
     "level": "hsk2",
     "lesson": 7,
     "lessonTitle": "你家离公司远吗",
@@ -2686,7 +2697,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Công ty"
   },
   {
-    "id": 245,
+    "id": 246,
     "level": "hsk2",
     "lesson": 7,
     "lessonTitle": "你家离公司远吗",
@@ -2697,7 +2708,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Xa"
   },
   {
-    "id": 246,
+    "id": 247,
     "level": "hsk2",
     "lesson": 7,
     "lessonTitle": "你家离公司远吗",
@@ -2708,7 +2719,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Xe buýt, xe công cộng"
   },
   {
-    "id": 247,
+    "id": 248,
     "level": "hsk2",
     "lesson": 7,
     "lessonTitle": "你家离公司远吗",
@@ -2719,7 +2730,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Tiếng, giờ đồng hồ (khoảng thời gian)"
   },
   {
-    "id": 248,
+    "id": 249,
     "level": "hsk2",
     "lesson": 7,
     "lessonTitle": "你家离公司远吗",
@@ -2730,7 +2741,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Chậm, từ từ"
   },
   {
-    "id": 249,
+    "id": 250,
     "level": "hsk2",
     "lesson": 7,
     "lessonTitle": "你家离公司远吗",
@@ -2741,7 +2752,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Nhanh; sắp sửa (*快...了*)"
   },
   {
-    "id": 250,
+    "id": 251,
     "level": "hsk2",
     "lesson": 7,
     "lessonTitle": "你家离公司远吗",
@@ -2752,7 +2763,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Đón, ăn mừng (sinh nhật, tết); qua (thời gian)"
   },
   {
-    "id": 251,
+    "id": 252,
     "level": "hsk2",
     "lesson": 7,
     "lessonTitle": "你家离公司远吗",
@@ -2763,7 +2774,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Đi, đi bộ; rời đi"
   },
   {
-    "id": 252,
+    "id": 253,
     "level": "hsk2",
     "lesson": 7,
     "lessonTitle": "你家离公司远吗",
@@ -2774,7 +2785,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Đến, tới nơi"
   },
   {
-    "id": 253,
+    "id": 254,
     "level": "hsk2",
     "lesson": 8,
     "lessonTitle": "让我想想再告诉你",
@@ -2785,7 +2796,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Rồi mới... (*hãy làm A rồi hãy làm B*); lại, nữa"
   },
   {
-    "id": 254,
+    "id": 255,
     "level": "hsk2",
     "lesson": 8,
     "lessonTitle": "让我想想再告诉你",
@@ -2796,7 +2807,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Để cho, bảo, cho phép; khiến cho"
   },
   {
-    "id": 255,
+    "id": 256,
     "level": "hsk2",
     "lesson": 8,
     "lessonTitle": "让我想想再告诉你",
@@ -2807,7 +2818,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Nói cho biết, bảo cho"
   },
   {
-    "id": 256,
+    "id": 257,
     "level": "hsk2",
     "lesson": 8,
     "lessonTitle": "让我想想再告诉你",
@@ -2818,7 +2829,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Đợi, chờ"
   },
   {
-    "id": 257,
+    "id": 258,
     "level": "hsk2",
     "lesson": 8,
     "lessonTitle": "让我想想再告诉你",
@@ -2829,7 +2840,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Tìm, kiếm; thối/trả lại tiền thừa"
   },
   {
-    "id": 258,
+    "id": 259,
     "level": "hsk2",
     "lesson": 8,
     "lessonTitle": "让我想想再告诉你",
@@ -2840,7 +2851,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Việc, sự việc, chuyện"
   },
   {
-    "id": 259,
+    "id": 260,
     "level": "hsk2",
     "lesson": 8,
     "lessonTitle": "让我想想再告诉你",
@@ -2851,7 +2862,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Nhân viên phục vụ, bồi bàn"
   },
   {
-    "id": 260,
+    "id": 261,
     "level": "hsk2",
     "lesson": 8,
     "lessonTitle": "让我想想再告诉你",
@@ -2862,7 +2873,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Trắng, màu trắng"
   },
   {
-    "id": 261,
+    "id": 262,
     "level": "hsk2",
     "lesson": 8,
     "lessonTitle": "让我想想再告诉你",
@@ -2873,7 +2884,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Đen, màu đen; tối"
   },
   {
-    "id": 262,
+    "id": 263,
     "level": "hsk2",
     "lesson": 8,
     "lessonTitle": "让我想想再告诉你",
@@ -2884,7 +2895,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Đắt, mắc (giá cao)"
   },
   {
-    "id": 263,
+    "id": 264,
     "level": "hsk2",
     "lesson": 9,
     "lessonTitle": "题太多，我没做完",
@@ -2895,7 +2906,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Sai, nhầm"
   },
   {
-    "id": 264,
+    "id": 265,
     "level": "hsk2",
     "lesson": 9,
     "lessonTitle": "题太多，我没做完",
@@ -2906,7 +2917,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Từ (chỉ mốc thời gian, điểm xuất phát)"
   },
   {
-    "id": 265,
+    "id": 266,
     "level": "hsk2",
     "lesson": 9,
     "lessonTitle": "题太多，我没做完",
@@ -2917,7 +2928,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Nhảy múa, khiêu vũ"
   },
   {
-    "id": 266,
+    "id": 267,
     "level": "hsk2",
     "lesson": 9,
     "lessonTitle": "题太多，我没做完",
@@ -2928,7 +2939,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Thứ nhất, đầu tiên, hạng nhất"
   },
   {
-    "id": 267,
+    "id": 268,
     "level": "hsk2",
     "lesson": 9,
     "lessonTitle": "题太多，我没做完",
@@ -2939,7 +2950,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Hy vọng, mong rằng; niềm hy vọng"
   },
   {
-    "id": 268,
+    "id": 269,
     "level": "hsk2",
     "lesson": 9,
     "lessonTitle": "题太多，我没做完",
@@ -2950,7 +2961,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Câu hỏi; vấn đề, sự cố trục trặc"
   },
   {
-    "id": 269,
+    "id": 270,
     "level": "hsk2",
     "lesson": 9,
     "lessonTitle": "题太多，我没做完",
@@ -2961,7 +2972,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Chào mừng, hoan nghênh"
   },
   {
-    "id": 270,
+    "id": 271,
     "level": "hsk2",
     "lesson": 9,
     "lessonTitle": "题太多，我没做完",
@@ -2972,7 +2983,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Đi làm"
   },
   {
-    "id": 271,
+    "id": 272,
     "level": "hsk2",
     "lesson": 9,
     "lessonTitle": "题太多，我没做完",
@@ -2983,7 +2994,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Hiểu, hiểu rõ"
   },
   {
-    "id": 272,
+    "id": 273,
     "level": "hsk2",
     "lesson": 9,
     "lessonTitle": "题太多，我没做完",
@@ -2994,7 +3005,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Xong, hết (kết quả của hành động)"
   },
   {
-    "id": 273,
+    "id": 274,
     "level": "hsk2",
     "lesson": 9,
     "lessonTitle": "题太多，我没做完",
@@ -3005,7 +3016,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Câu (bài tập), đề thi"
   },
   {
-    "id": 274,
+    "id": 275,
     "level": "hsk2",
     "lesson": 10,
     "lessonTitle": "别找了，手机在桌子上呢",
@@ -3016,7 +3027,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Đừng, chớ (khuyên can, cấm đoán)"
   },
   {
-    "id": 275,
+    "id": 276,
     "level": "hsk2",
     "lesson": 10,
     "lessonTitle": "别找了，手机在桌子上呢",
@@ -3027,7 +3038,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Anh trai"
   },
   {
-    "id": 276,
+    "id": 277,
     "level": "hsk2",
     "lesson": 10,
     "lessonTitle": "别找了，手机在桌子上呢",
@@ -3038,7 +3049,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Trứng gà"
   },
   {
-    "id": 277,
+    "id": 278,
     "level": "hsk2",
     "lesson": 10,
     "lessonTitle": "别找了，手机在桌子上呢",
@@ -3049,7 +3060,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Dưa hấu"
   },
   {
-    "id": 278,
+    "id": 279,
     "level": "hsk2",
     "lesson": 10,
     "lessonTitle": "别找了，手机在桌子上呢",
@@ -3060,7 +3071,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Đang (chỉ hành động đang diễn ra)"
   },
   {
-    "id": 279,
+    "id": 280,
     "level": "hsk2",
     "lesson": 10,
     "lessonTitle": "别找了，手机在桌子上呢",
@@ -3071,7 +3082,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Điện thoại di động"
   },
   {
-    "id": 280,
+    "id": 281,
     "level": "hsk2",
     "lesson": 10,
     "lessonTitle": "别找了，手机在桌子上呢",
@@ -3082,7 +3093,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Rửa, giặt, gội"
   },
   {
-    "id": 281,
+    "id": 282,
     "level": "hsk2",
     "lesson": 11,
     "lessonTitle": "他比我大三岁",
@@ -3093,7 +3104,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Hát, ca hát"
   },
   {
-    "id": 282,
+    "id": 283,
     "level": "hsk2",
     "lesson": 11,
     "lessonTitle": "他比我大三岁",
@@ -3104,7 +3115,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Nam, con trai, đàn ông"
   },
   {
-    "id": 283,
+    "id": 284,
     "level": "hsk2",
     "lesson": 11,
     "lessonTitle": "他比我大三岁",
@@ -3115,7 +3126,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Nữ, con gái, phụ nữ"
   },
   {
-    "id": 284,
+    "id": 285,
     "level": "hsk2",
     "lesson": 11,
     "lessonTitle": "他比我大三岁",
@@ -3126,7 +3137,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Đứa bé, trẻ con; con cái"
   },
   {
-    "id": 285,
+    "id": 286,
     "level": "hsk2",
     "lesson": 11,
     "lessonTitle": "他比我大三岁",
@@ -3137,7 +3148,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Bên phải, phía bên phải"
   },
   {
-    "id": 286,
+    "id": 287,
     "level": "hsk2",
     "lesson": 11,
     "lessonTitle": "他比我大三岁",
@@ -3148,7 +3159,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "So với, hơn (trong câu so sánh)"
   },
   {
-    "id": 287,
+    "id": 288,
     "level": "hsk2",
     "lesson": 11,
     "lessonTitle": "他比我大三岁",
@@ -3159,7 +3170,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Rẻ (giá thấp)"
   },
   {
-    "id": 288,
+    "id": 289,
     "level": "hsk2",
     "lesson": 11,
     "lessonTitle": "他比我大三岁",
@@ -3170,7 +3181,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Nói chuyện, trò chuyện, nói"
   },
   {
-    "id": 289,
+    "id": 290,
     "level": "hsk2",
     "lesson": 11,
     "lessonTitle": "他比我大三岁",
@@ -3181,7 +3192,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Có thể, có lẽ, có khả năng"
   },
   {
-    "id": 290,
+    "id": 291,
     "level": "hsk2",
     "lesson": 11,
     "lessonTitle": "他比我大三岁",
@@ -3192,7 +3203,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Năm ngoái"
   },
   {
-    "id": 291,
+    "id": 292,
     "level": "hsk2",
     "lesson": 11,
     "lessonTitle": "他比我大三岁",
@@ -3203,7 +3214,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Họ là...; họ (họ tên)"
   },
   {
-    "id": 292,
+    "id": 293,
     "level": "hsk2",
     "lesson": 12,
     "lessonTitle": "你穿得太少了",
@@ -3214,7 +3225,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Dùng sau ĐT/TT để nối với bổ ngữ mức độ/khả năng"
   },
   {
-    "id": 293,
+    "id": 294,
     "level": "hsk2",
     "lesson": 12,
     "lessonTitle": "你穿得太少了",
@@ -3225,7 +3236,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Vợ"
   },
   {
-    "id": 294,
+    "id": 295,
     "level": "hsk2",
     "lesson": 12,
     "lessonTitle": "你穿得太少了",
@@ -3236,7 +3247,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Tuyết"
   },
   {
-    "id": 295,
+    "id": 296,
     "level": "hsk2",
     "lesson": 12,
     "lessonTitle": "你穿得太少了",
@@ -3247,7 +3258,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Không, số không (0)"
   },
   {
-    "id": 296,
+    "id": 297,
     "level": "hsk2",
     "lesson": 12,
     "lessonTitle": "你穿得太少了",
@@ -3258,7 +3269,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Độ (nhiệt độ)"
   },
   {
-    "id": 297,
+    "id": 298,
     "level": "hsk2",
     "lesson": 12,
     "lessonTitle": "你穿得太少了",
@@ -3269,7 +3280,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Mặc (quần áo), mang/đi (giày dép, tất)"
   },
   {
-    "id": 298,
+    "id": 299,
     "level": "hsk2",
     "lesson": 12,
     "lessonTitle": "你穿得太少了",
@@ -3280,7 +3291,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Vào, đi vào"
   },
   {
-    "id": 299,
+    "id": 300,
     "level": "hsk2",
     "lesson": 12,
     "lessonTitle": "你穿得太少了",
@@ -3291,7 +3302,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Em trai"
   },
   {
-    "id": 300,
+    "id": 301,
     "level": "hsk2",
     "lesson": 12,
     "lessonTitle": "你穿得太少了",
@@ -3302,7 +3313,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Gần (khoảng cách, thời gian)"
   },
   {
-    "id": 301,
+    "id": 302,
     "level": "hsk2",
     "lesson": 12,
     "lessonTitle": "你穿得太少了",
@@ -3313,7 +3324,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Sớm; chào buổi sáng"
   },
   {
-    "id": 302,
+    "id": 303,
     "level": "hsk2",
     "lesson": 13,
     "lessonTitle": "门开着呢",
@@ -3324,7 +3335,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Đang (biểu thị trạng thái đang duy trì: đang mở, đang cầm...)"
   },
   {
-    "id": 303,
+    "id": 304,
     "level": "hsk2",
     "lesson": 13,
     "lessonTitle": "门开着呢",
@@ -3335,7 +3346,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Tay, bàn tay"
   },
   {
-    "id": 304,
+    "id": 305,
     "level": "hsk2",
     "lesson": 13,
     "lessonTitle": "门开着呢",
@@ -3346,7 +3357,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Cầm, nắm, xách, lấy"
   },
   {
-    "id": 305,
+    "id": 306,
     "level": "hsk2",
     "lesson": 13,
     "lessonTitle": "门开着呢",
@@ -3357,7 +3368,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Bút chì"
   },
   {
-    "id": 306,
+    "id": 307,
     "level": "hsk2",
     "lesson": 13,
     "lessonTitle": "门开着呢",
@@ -3368,7 +3379,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Lớp học; ca làm việc"
   },
   {
-    "id": 307,
+    "id": 308,
     "level": "hsk2",
     "lesson": 13,
     "lessonTitle": "门开着呢",
@@ -3379,7 +3390,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Lớn lên; trông, có vẻ ngoài (*长得...*)"
   },
   {
-    "id": 308,
+    "id": 309,
     "level": "hsk2",
     "lesson": 13,
     "lessonTitle": "门开着呢",
@@ -3390,7 +3401,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Cười"
   },
   {
-    "id": 309,
+    "id": 310,
     "level": "hsk2",
     "lesson": 13,
     "lessonTitle": "门开着呢",
@@ -3401,7 +3412,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Khách sạn"
   },
   {
-    "id": 310,
+    "id": 311,
     "level": "hsk2",
     "lesson": 13,
     "lessonTitle": "门开着呢",
@@ -3412,7 +3423,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Cứ, thẳng một mạch (hướng); suốt, liên tục (thời gian)"
   },
   {
-    "id": 311,
+    "id": 312,
     "level": "hsk2",
     "lesson": 13,
     "lessonTitle": "门开着呢",
@@ -3423,7 +3434,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Về phía, hướng tới (*往左走: đi về phía bên trái*)"
   },
   {
-    "id": 312,
+    "id": 313,
     "level": "hsk2",
     "lesson": 13,
     "lessonTitle": "门开着呢",
@@ -3434,7 +3445,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Ngã rẽ, nút giao, ngã ba/ngã tư"
   },
   {
-    "id": 313,
+    "id": 314,
     "level": "hsk2",
     "lesson": 14,
     "lessonTitle": "你看过那个电影吗",
@@ -3445,7 +3456,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Đã từng (chỉ kinh nghiệm, trải nghiệm trong quá khứ)"
   },
   {
-    "id": 314,
+    "id": 315,
     "level": "hsk2",
     "lesson": 14,
     "lessonTitle": "你看过那个电影吗",
@@ -3456,7 +3467,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Lần, lượt"
   },
   {
-    "id": 315,
+    "id": 316,
     "level": "hsk2",
     "lesson": 14,
     "lessonTitle": "你看过那个电影吗",
@@ -3467,7 +3478,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Vui, vui vẻ, mừng rỡ"
   },
   {
-    "id": 316,
+    "id": 317,
     "level": "hsk2",
     "lesson": 14,
     "lessonTitle": "你看过那个电影吗",
@@ -3478,7 +3489,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Mặc dù, tuy"
   },
   {
-    "id": 317,
+    "id": 318,
     "level": "hsk2",
     "lesson": 14,
     "lessonTitle": "你看过那个电影吗",
@@ -3489,7 +3500,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Nhưng, nhưng mà"
   },
   {
-    "id": 318,
+    "id": 319,
     "level": "hsk2",
     "lesson": 14,
     "lessonTitle": "你看过那个电影吗",
@@ -3500,7 +3511,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Nắng, tạnh ráo, trời quang"
   },
   {
-    "id": 319,
+    "id": 320,
     "level": "hsk2",
     "lesson": 14,
     "lessonTitle": "你看过那个电影吗",
@@ -3511,7 +3522,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Trăm (100)"
   },
   {
-    "id": 320,
+    "id": 321,
     "level": "hsk2",
     "lesson": 14,
     "lessonTitle": "你看过那个电影吗",
@@ -3522,7 +3533,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Ngày (văn viết, mốc ngày tháng); mặt trời"
   },
   {
-    "id": 321,
+    "id": 322,
     "level": "hsk2",
     "lesson": 15,
     "lessonTitle": "新年就要到了",
@@ -3533,7 +3544,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Năm mới, tết"
   },
   {
-    "id": 322,
+    "id": 323,
     "level": "hsk2",
     "lesson": 15,
     "lessonTitle": "新年就要到了",
@@ -3544,7 +3555,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Vé (vé tàu, vé xe, vé xem phim...)"
   },
   {
-    "id": 323,
+    "id": 324,
     "level": "hsk2",
     "lesson": 15,
     "lessonTitle": "新年就要到了",
@@ -3555,7 +3566,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Ga tàu hỏa, ga xe lửa"
   },
   {
-    "id": 324,
+    "id": 325,
     "level": "hsk2",
     "lesson": 15,
     "lessonTitle": "新年就要到了",
@@ -3566,7 +3577,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Mọi người, tất cả mọi người"
   },
   {
-    "id": 325,
+    "id": 326,
     "level": "hsk2",
     "lesson": 15,
     "lessonTitle": "新年就要到了",
@@ -3577,7 +3588,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Càng, hơn nữa (so sánh hơn về mức độ)"
   },
   {
-    "id": 326,
+    "id": 327,
     "level": "hsk2",
     "lesson": 15,
     "lessonTitle": "新年就要到了",
@@ -3588,7 +3599,7 @@ export const VOCAB_LESSON_DATA: VocabLessonItem[] = [
     "meaning": "Em gái"
   },
   {
-    "id": 327,
+    "id": 328,
     "level": "hsk2",
     "lesson": 15,
     "lessonTitle": "新年就要到了",

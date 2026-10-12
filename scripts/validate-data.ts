@@ -74,8 +74,8 @@ function validateVocabStudyData(): boolean {
   if (VOCAB_TOPIC_CATEGORIES.length !== 14) {
     errors.push(`Expected 14 topic categories, got ${VOCAB_TOPIC_CATEGORIES.length}`);
   }
-  if (VOCAB_LESSON_DATA.length !== 327) {
-    errors.push(`Expected 327 lesson vocab items, got ${VOCAB_LESSON_DATA.length}`);
+  if (VOCAB_LESSON_DATA.length !== 328) {
+    errors.push(`Expected 328 lesson vocab items, got ${VOCAB_LESSON_DATA.length}`);
   }
   if (COMPOUND_PHRASES_DATA.length !== 77) {
     errors.push(`Expected 77 compound phrases, got ${COMPOUND_PHRASES_DATA.length}`);
@@ -103,7 +103,7 @@ function validateVocabStudyData(): boolean {
     console.error('❌ [Vocab Study Data] FAILED:', errors);
     return false;
   }
-  console.log(`✅ [Vocab Study Data] Passed (161 topics in 14 categories, 327 lesson items, 77 compound phrases)`);
+  console.log(`✅ [Vocab Study Data] Passed (163 topics in 14 categories, 328 lesson items, 77 compound phrases)`);
   return true;
 }
 
