@@ -1,4 +1,4 @@
-export type QuizLevel = 'hsk1' | 'hsk2' | 'all';
+export type QuizLevel = 'hsk1' | 'hsk2' | 'all' | 'compound';
 
 export interface QuizQuestion {
   id: number;
@@ -9,6 +9,14 @@ export interface QuizQuestion {
   correctAnswer: string;
   explanation: string;
   lesson?: number;
+  sectionId?: number;
+  sectionTitle?: string;
+  memoryPhrase?: string;
+  exampleContext?: {
+    chinese: string;
+    pinyin: string;
+    vietnamese: string;
+  };
 }
 
 export interface UserAnswerRecord {

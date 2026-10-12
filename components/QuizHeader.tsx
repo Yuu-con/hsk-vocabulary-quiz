@@ -20,9 +20,10 @@ interface QuizHeaderProps {
 }
 
 const LEVEL_LABELS: Record<QuizLevel, string> = {
-  hsk1: 'HSK 1 · 150 từ',
-  hsk2: 'HSK 2 · 150 từ',
-  all: 'HSK 1 & 2 · 300 từ',
+  hsk1: 'HSK 1 · 163 câu',
+  hsk2: 'HSK 2 · 165 câu',
+  all: 'HSK 1 & 2 · 328 câu',
+  compound: 'Cụm câu ghép · 77 câu',
 };
 
 export const QuizHeader: React.FC<QuizHeaderProps> = ({

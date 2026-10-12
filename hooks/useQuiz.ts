@@ -5,6 +5,7 @@ import { QuizQuestion, QuizProgress, QuizMode, UserAnswerRecord, QuizLevel } fro
 import { HSK1_VOCAB_DATA } from '@/data/hsk1-data';
 import { HSK2_VOCAB_DATA } from '@/data/hsk2-data';
 import { HSK_COMBINED_VOCAB_DATA } from '@/data/hsk-combined-data';
+import { COMPOUND_QUIZ_DATA } from '@/data/compound-sentences-data';
 import {
   applyOverridesToDataset,
   saveQuestionOverride,
@@ -21,6 +22,8 @@ function getInitialDataset(level: QuizLevel): QuizQuestion[] {
       return HSK2_VOCAB_DATA;
     case 'all':
       return HSK_COMBINED_VOCAB_DATA;
+    case 'compound':
+      return COMPOUND_QUIZ_DATA;
     case 'hsk1':
     default:
       return HSK1_VOCAB_DATA;

@@ -312,6 +312,44 @@ export const QuizCard: React.FC<QuizCardProps> = ({
                     </div>
                   )}
 
+                  {/* Memory phrase (Cụm từ ghép dễ nhớ) */}
+                  {question.memoryPhrase && (
+                    <div className="text-xs sm:text-sm text-amber-900 leading-relaxed bg-amber-50/80 p-3 rounded-xl border border-amber-200/80">
+                      <strong className="text-amber-950 font-bold">💡 Cụm từ ghép dễ nhớ: </strong>
+                      <span className="font-medium">{question.memoryPhrase}</span>
+                    </div>
+                  )}
+
+                  {/* Contextual example (Ngữ cảnh ví dụ - specifically for compound sentences) */}
+                  {question.exampleContext && (
+                    <div className="text-xs sm:text-sm bg-blue-50/90 p-3.5 rounded-xl border border-blue-200/90 space-y-1.5 shadow-2xs">
+                      <div className="flex items-center justify-between text-blue-900 font-bold text-xs">
+                        <span className="flex items-center gap-1.5">
+                          <span>💬</span>
+                          <span>Ngữ cảnh ví dụ:</span>
+                        </span>
+                        <button
+                          type="button"
+                          onClick={() => playChineseAudio(question.exampleContext!.chinese)}
+                          className="px-2 py-0.5 rounded-md bg-blue-100 hover:bg-blue-200 text-blue-700 flex items-center gap-1 transition text-xs font-semibold cursor-pointer"
+                          title="Phát âm câu ví dụ"
+                        >
+                          <Volume2 className="w-3.5 h-3.5" />
+                          <span>Nghe ví dụ</span>
+                        </button>
+                      </div>
+                      <div className="font-hanzi text-base sm:text-lg font-bold text-slate-900 tracking-wide">
+                        {question.exampleContext.chinese}
+                      </div>
+                      <div className="text-rose-600 font-medium text-xs sm:text-sm italic">
+                        {question.exampleContext.pinyin}
+                      </div>
+                      <div className="text-slate-700 text-xs sm:text-sm font-medium">
+                        ({question.exampleContext.vietnamese})
+                      </div>
+                    </div>
+                  )}
+
                   {!isCorrect && (
                     <div className="text-xs text-amber-800 bg-amber-100/70 rounded-xl p-2.5 font-medium border border-amber-200/60 flex items-center gap-2">
                       <span>📌</span>

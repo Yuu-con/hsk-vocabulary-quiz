@@ -1,6 +1,40 @@
 import { QuizLevel, QuizQuestion, UserAnswerRecord, QuizMode, QuizProgress } from './quiz';
 
-export type PracticeTab = 'vocab' | 'sentences' | 'reading' | 'listening';
+export type PracticeTab = 'quiz' | 'vocab' | 'sentences' | 'listening' | 'reading';
+
+export interface VocabTopicItem {
+  id: number;
+  topicId: number;
+  topicTitle: string;
+  hanzi: string;
+  pinyin: string;
+  meaning: string;
+  note?: string;
+}
+
+export interface VocabLessonItem {
+  id: number;
+  level: 'hsk1' | 'hsk2';
+  lesson: number;
+  lessonTitle: string;
+  stt: string;
+  hanzi: string;
+  pinyin: string;
+  wordType: string;
+  meaning: string;
+}
+
+export interface CompoundPhraseItem {
+  id: number;
+  sectionId: number;
+  section: string;
+  phrase: string;
+  pinyin: string;
+  meaning: string;
+  contextChinese: string;
+  contextPinyin: string;
+  contextVietnamese: string;
+}
 
 export interface SentencePattern {
   id: number;

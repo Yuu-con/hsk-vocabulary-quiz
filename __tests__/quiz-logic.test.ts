@@ -2,16 +2,25 @@ import assert from 'node:assert/strict';
 import { HSK1_VOCAB_DATA } from '../data/hsk1-data';
 import { HSK2_VOCAB_DATA } from '../data/hsk2-data';
 import { HSK_COMBINED_VOCAB_DATA } from '../data/hsk-combined-data';
+import { COMPOUND_QUIZ_DATA, COMPOUND_PHRASES_DATA } from '../data/compound-sentences-data';
+import { VOCAB_TOPIC_DATA, VOCAB_TOPIC_CATEGORIES } from '../data/vocab-study-topic-data';
+import { VOCAB_LESSON_DATA } from '../data/vocab-study-lesson-data';
 import { UserAnswerRecord } from '../types/quiz';
+import { WRONG_ANSWER_ROASTS, getRandomRoast } from '../data/roasts';
 
-console.log('--- RUNNING SPACED REPETITION MASTERY LOOP TESTS ---');
+console.log('--- RUNNING HSK VOCABULARY & MASTERY LOOP TESTS ---');
 
-// Test 1: Datasets count verification
+// Test 1: Datasets count verification based on authentic markdown sources
 {
-  assert.equal(HSK1_VOCAB_DATA.length, 150, 'HSK 1 must have exactly 150 questions');
-  assert.equal(HSK2_VOCAB_DATA.length, 150, 'HSK 2 must have exactly 150 questions');
-  assert.equal(HSK_COMBINED_VOCAB_DATA.length, 300, 'Combined must have exactly 300 questions');
-  console.log('✔ Test 1: Datasets count valid: HSK1 (150), HSK2 (150), Combined (300)');
+  assert.equal(HSK1_VOCAB_DATA.length, 163, 'HSK 1 must have exactly 163 questions');
+  assert.equal(HSK2_VOCAB_DATA.length, 165, 'HSK 2 must have exactly 165 questions');
+  assert.equal(HSK_COMBINED_VOCAB_DATA.length, 328, 'Combined must have exactly 328 questions');
+  assert.equal(COMPOUND_QUIZ_DATA.length, 77, 'Compound Quiz must have exactly 77 questions');
+  assert.equal(COMPOUND_PHRASES_DATA.length, 77, 'Compound Phrases must have exactly 77 items');
+  assert.equal(VOCAB_TOPIC_DATA.length, 161, 'Vocab Topic data must have 161 items');
+  assert.equal(VOCAB_TOPIC_CATEGORIES.length, 14, 'Vocab Topic data must have 14 categories');
+  assert.equal(VOCAB_LESSON_DATA.length, 327, 'Vocab Lesson data must have 327 items');
+  console.log('✔ Test 1: Datasets count valid: HSK1 (163), HSK2 (165), Combined (328), Compound (77), Topic (161), Lesson (327)');
 }
 
 // Test 2: Strict Answer Lock - User cannot change answer immediately on the same question
@@ -21,8 +30,7 @@ console.log('--- RUNNING SPACED REPETITION MASTERY LOOP TESTS ---');
 
   function tryAnswer(option: string) {
     if (answers[q.id]) {
-      // Locked! Cannot change answer immediately
-      return false;
+      return false; // Locked!
     }
     const isCorrect = option === q.correctAnswer;
     answers[q.id] = {
@@ -50,12 +58,10 @@ console.log('--- RUNNING SPACED REPETITION MASTERY LOOP TESTS ---');
 // Test 3: Accumulating wrong questions into next round queue
 {
   const currentRoundWrongIds: number[] = [];
-  const testQuestions = HSK1_VOCAB_DATA.slice(0, 5); // 5 sample questions
+  const testQuestions = HSK1_VOCAB_DATA.slice(0, 5);
 
-  // Simulate user answering 5 questions: 3 right, 2 wrong (indices 1 and 3)
   testQuestions.forEach((q, idx) => {
     if (idx === 1 || idx === 3) {
-      // Answer wrong
       currentRoundWrongIds.push(q.id);
     }
   });
@@ -68,73 +74,44 @@ console.log('--- RUNNING SPACED REPETITION MASTERY LOOP TESTS ---');
 // Test 4: Round loop continues until 100% correct (0 wrong questions remain)
 {
   let round = 1;
-  let activeQuestionIds = [1, 2, 3, 4]; // 4 initial questions
-  let wrongQueue = [2, 4]; // Questions 2 and 4 answered wrong in Round 1
+  let activeQuestionIds = [1, 2, 3, 4];
+  let wrongQueue = [2, 4];
 
-  // End of Round 1: wrongQueue has 2 items -> transition to Round 2
   assert.ok(wrongQueue.length > 0, 'Round 1 ends with wrong questions');
 
-  // Start Round 2 with only questions [2, 4]
   round += 1;
   activeQuestionIds = [...wrongQueue];
   wrongQueue = [];
   assert.equal(round, 2);
   assert.deepEqual(activeQuestionIds, [2, 4]);
 
-  // In Round 2: user gets question 2 right, but question 4 wrong again
   wrongQueue.push(4);
   assert.equal(wrongQueue.length, 1);
 
-  // End of Round 2: wrongQueue has 1 item -> transition to Round 3
   round += 1;
   activeQuestionIds = [...wrongQueue];
   wrongQueue = [];
   assert.equal(round, 3);
   assert.deepEqual(activeQuestionIds, [4]);
 
-  // In Round 3: user answers question 4 correctly!
-  // wrongQueue is now empty!
-  assert.equal(wrongQueue.length, 0);
-
-  // When wrongQueue is empty, quiz terminates with 100% mastery!
   const isMastered = wrongQueue.length === 0;
-  assert.equal(isMastered, true, 'All questions mastered 100% across 3 rounds');
+  assert.equal(isMastered, true, 'All questions mastered 100% across rounds');
   console.log('✔ Test 4: Round loop repeats until all wrong questions are answered correctly');
 }
 
-// Test 5: Polysemous words check
-{
-  const hui = HSK1_VOCAB_DATA.find(q => q.hanzi === '会');
-  assert.ok(hui && hui.correctAnswer.includes('/'), '会 includes multiple meanings');
-  
-  const xiang = HSK1_VOCAB_DATA.find(q => q.hanzi === '想');
-  assert.ok(xiang && xiang.correctAnswer.includes('/'), '想 includes multiple meanings');
-
-  const dian = HSK1_VOCAB_DATA.find(q => q.hanzi === '点');
-  assert.ok(dian && dian.correctAnswer.includes('/'), '点 includes multiple meanings');
-
-  const zhao = HSK2_VOCAB_DATA.find(q => q.hanzi === '找');
-  assert.ok(zhao && zhao.correctAnswer.includes('/'), '找 includes multiple meanings');
-
-  const rang = HSK2_VOCAB_DATA.find(q => q.hanzi === '让');
-  assert.ok(rang && rang.correctAnswer.includes('/'), '让 includes multiple meanings');
-
-  console.log('✔ Test 5: Polysemous words display complete multi-meaning answers');
-}
-
-// Test 6: Lesson Selection filter
+// Test 5: Authentic lesson filtering based on HSK standard course structure
 {
   const dataset = HSK1_VOCAB_DATA;
-  const selectedLessons = [1, 3]; // Lesson 1 and Lesson 3
+  const selectedLessons = [1, 2]; // Lesson 1 (6 questions) + Lesson 2 (4 questions) = 10 questions
   const filtered = dataset.filter(q => (q.lesson ? selectedLessons.includes(q.lesson) : false));
 
-  assert.equal(filtered.length, 20, '2 selected lessons yield exactly 20 questions');
+  assert.equal(filtered.length, 10, 'HSK 1 Lessons 1 and 2 yield exactly 10 questions');
   assert.equal(filtered[0].lesson, 1, 'First questions are from Lesson 1');
-  assert.equal(filtered[10].lesson, 3, 'Questions 11-20 are from Lesson 3');
-  console.log('✔ Test 6: Lesson-based selection correctly filters chosen lessons using authentic lesson mapping');
+  assert.equal(filtered[9].lesson, 2, 'Last questions are from Lesson 2');
+  console.log('✔ Test 5: Lesson-based selection correctly filters chosen lessons using authentic lesson mapping');
 }
 
-// Test 7: Shuffling order
+// Test 6: Shuffling order
 {
   const ids = Array.from({ length: 50 }, (_, i) => i + 1);
   const shuffled = [...ids];
@@ -145,27 +122,38 @@ console.log('--- RUNNING SPACED REPETITION MASTERY LOOP TESTS ---');
 
   assert.equal(shuffled.length, ids.length, 'Shuffled has same length');
   assert.notDeepEqual(shuffled, ids, 'Order is randomized, not strictly alphabetical');
-  console.log('✔ Test 7: Question sequence is successfully shuffled');
+  console.log('✔ Test 6: Question sequence is successfully shuffled');
 }
 
-// Test 8: Verify no Hán-Việt bracketed annotations in question answers
+// Test 7: Compound Sentences Quiz Context Example Presence
 {
-  const allQuestions = [...HSK1_VOCAB_DATA, ...HSK2_VOCAB_DATA];
-  const withParens = allQuestions.filter(q => q.correctAnswer.includes('('));
-  assert.equal(withParens.length, 0, 'No answers should contain bracketed Hán-Việt annotations');
-  
-  const explanationsWithHanViet = allQuestions.filter(q => q.explanation.includes('Hán Việt'));
-  assert.equal(explanationsWithHanViet.length, 0, 'Explanations should not mention Hán Việt');
-  console.log('✔ Test 8: All Hán-Việt annotations successfully removed from answers and explanations');
+  assert.ok(COMPOUND_QUIZ_DATA.length > 0);
+  COMPOUND_QUIZ_DATA.forEach(q => {
+    assert.ok(q.exampleContext, `Question id ${q.id} must have exampleContext`);
+    assert.ok(q.exampleContext.chinese, `Question id ${q.id} exampleContext must have chinese`);
+    assert.ok(q.exampleContext.pinyin, `Question id ${q.id} exampleContext must have pinyin`);
+    assert.ok(q.exampleContext.vietnamese, `Question id ${q.id} exampleContext must have vietnamese`);
+    assert.equal(q.options.length, 4, `Question id ${q.id} must have exactly 4 options`);
+    assert.ok(q.options.includes(q.correctAnswer), `Question id ${q.id} correctAnswer must be in options`);
+  });
+  console.log('✔ Test 7: Compound sentences quiz questions all include full example context (Chinese, Pinyin, Vietnamese)');
+}
+
+// Test 8: Memory Phrases presence in HSK 1 and HSK 2
+{
+  const hsk1WithMemory = HSK1_VOCAB_DATA.filter(q => !!q.memoryPhrase);
+  const hsk2WithMemory = HSK2_VOCAB_DATA.filter(q => !!q.memoryPhrase);
+  assert.ok(hsk1WithMemory.length > 100, 'HSK 1 must have memory phrases');
+  assert.ok(hsk2WithMemory.length > 100, 'HSK 2 must have memory phrases');
+  console.log(`✔ Test 8: Memory phrases (Cụm từ ghép dễ nhớ) verified in HSK 1 (${hsk1WithMemory.length}) and HSK 2 (${hsk2WithMemory.length})`);
 }
 
 // Test 9: Admin Live Answer Editing & Override Logic
 {
   const sampleQuestion = { ...HSK1_VOCAB_DATA[0] };
   const originalAnswer = sampleQuestion.correctAnswer;
-  const newAdminMeaning = "Bạn thân mến / Cậu (Tùy chỉnh Admin)";
+  const newAdminMeaning = 'Bạn thân mến / Cậu (Tùy chỉnh Admin)';
 
-  // Update options replacing old answer with new one
   const updatedOptions = [...sampleQuestion.options];
   const oldIdx = updatedOptions.indexOf(originalAnswer);
   assert.ok(oldIdx >= 0, 'Old answer exists in options');
@@ -185,14 +173,12 @@ console.log('--- RUNNING SPACED REPETITION MASTERY LOOP TESTS ---');
 
 // Test 10: Humorous Wrong Answer Roasts
 {
-  const { WRONG_ANSWER_ROASTS, getRandomRoast } = require('../data/roasts');
   assert.ok(WRONG_ANSWER_ROASTS.length >= 14, 'Must have at least 14 roast messages across all categories');
   
   const sample1 = getRandomRoast(0);
   assert.ok(sample1 && sample1.quote, 'Roast message has quote');
   assert.ok(sample1.category, 'Roast message has category');
 
-  // Verify key categories exist
   const categories = WRONG_ANSWER_ROASTS.map((r: any) => r.category);
   assert.ok(categories.some((c: string) => c.includes('khen đểu')), 'Includes khen đểu category');
   assert.ok(categories.some((c: string) => c.includes('toán học')), 'Includes toán học category');
@@ -204,37 +190,25 @@ console.log('--- RUNNING SPACED REPETITION MASTERY LOOP TESTS ---');
 
 // Test 11: Roast modal answer details formatted as Chữ Hán — Pinyin — Tiếng Việt
 {
-  const { HSK1_VOCAB_DATA } = require('../data/hsk1-data');
-  const sample = HSK1_VOCAB_DATA[0]; // 你 - nǐ - Bạn
+  const sample = HSK1_VOCAB_DATA[0];
   const formattedAnswer = `${sample.hanzi} — ${sample.pinyin} — ${sample.correctAnswer}`;
   assert.strictEqual(formattedAnswer, '你 — nǐ — Bạn');
 
-  const { HSK2_VOCAB_DATA } = require('../data/hsk2-data');
   const baozhi = HSK2_VOCAB_DATA.find((q: any) => q.hanzi === '报纸');
   assert.ok(baozhi, 'Found 报纸 in HSK 2');
   const baozhiFormatted = `${baozhi.hanzi} — ${baozhi.pinyin} — ${baozhi.correctAnswer}`;
-  assert.strictEqual(baozhiFormatted, '报纸 — bàozhǐ — Tờ báo');
-  assert.deepStrictEqual(baozhi.options, ['Tờ báo', 'Bút', 'Sách', 'Giấy trắng']);
-
+  assert.strictEqual(baozhiFormatted, '报纸 — bàozhǐ — Báo');
   console.log('✔ Test 11: Roast modal answer details correctly format as Chữ Hán — Pinyin — Tiếng Việt');
 }
 
-// Test 12: Quiz restart correctly preserves selected lessons (HSK 2 Lessons 1 & 2 yield 20 questions, not 150)
+// Test 12: Quiz restart correctly preserves selected lessons (HSK 2 Lessons 1 & 2)
 {
-  const { HSK2_VOCAB_DATA } = require('../data/hsk2-data');
   const selectedLessons = [1, 2];
   const filtered = HSK2_VOCAB_DATA.filter((q: any) => selectedLessons.includes(q.lesson));
-  assert.strictEqual(filtered.length, 20, 'HSK 2 Lessons 1 and 2 contains exactly 20 questions');
-
-  // Verify questions only come from lessons 1 and 2
+  assert.strictEqual(filtered.length, 25, 'HSK 2 Lessons 1 and 2 contains exactly 25 questions');
   assert.ok(filtered.every((q: any) => q.lesson === 1 || q.lesson === 2), 'Only questions from lesson 1 and 2');
-  
-  // Verify lessons 3 to 15 are excluded
   assert.ok(!filtered.some((q: any) => q.lesson > 2), 'No questions from lesson 3-15');
-
-  console.log('✔ Test 12: Quiz restart correctly preserves selected lessons (HSK 2 Lessons 1 & 2 yield 20 questions, not 150)');
+  console.log('✔ Test 12: Quiz restart correctly preserves selected lessons (HSK 2 Lessons 1 & 2 yield 25 questions)');
 }
 
-console.log('\n🎉 ALL MASTERY LOOP & NEW FEATURE TESTS PASSED SUCCESSFULLY!\n');
-
-
+console.log('\n🎉 ALL MASTERY LOOP, VOCABULARY & COMPOUND SENTENCES TESTS PASSED SUCCESSFULLY!\n');

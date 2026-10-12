@@ -12,6 +12,7 @@ import { NavigationTabs } from '@/components/NavigationTabs';
 import { SentencesSection } from '@/components/SentencesSection';
 import { ReadingSection } from '@/components/ReadingSection';
 import { ListeningSection } from '@/components/ListeningSection';
+import { VocabStudySection } from '@/components/VocabStudySection';
 import { AdminLoginModal } from '@/components/AdminLoginModal';
 import { AdminLiveEditor } from '@/components/AdminLiveEditor';
 import { useAdminAuth } from '@/hooks/useAdminAuth';
@@ -19,7 +20,7 @@ import { PracticeTab } from '@/types/practice';
 import { Shield } from 'lucide-react';
 
 export default function HomePage() {
-  const [activeTab, setActiveTab] = useState<PracticeTab>('vocab');
+  const [activeTab, setActiveTab] = useState<PracticeTab>('quiz');
 
   const {
     isHydrated,
@@ -128,7 +129,8 @@ export default function HomePage() {
 
       {/* Content Rendering Based on Active Tab & Quiz Mode */}
       <div className="w-full flex-1 flex flex-col">
-        {activeTab === 'vocab' && (
+        {/* Tab 1: Quiz (Trắc nghiệm ôn tập) */}
+        {activeTab === 'quiz' && (
           <>
             {mode === 'idle' && (
               <StartScreen
@@ -217,14 +219,17 @@ export default function HomePage() {
           </>
         )}
 
-        {/* Tab 2: Sentences */}
+        {/* Tab 2: Vocab Study (Học từ vựng - Không trắc nghiệm) */}
+        {activeTab === 'vocab' && <VocabStudySection />}
+
+        {/* Tab 3: Sentences (Mẫu câu thường gặp) */}
         {activeTab === 'sentences' && <SentencesSection />}
 
-        {/* Tab 3: Reading */}
-        {activeTab === 'reading' && <ReadingSection />}
-
-        {/* Tab 4: Listening */}
+        {/* Tab 4: Listening (Luyện nghe) */}
         {activeTab === 'listening' && <ListeningSection />}
+
+        {/* Tab 5: Reading (Luyện đọc) */}
+        {activeTab === 'reading' && <ReadingSection />}
       </div>
 
       {/* Admin Login Modal */}

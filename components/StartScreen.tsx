@@ -3,7 +3,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { BookOpen, CheckCircle, HelpCircle, Sparkles, RotateCcw, ArrowRight, Shuffle, Layers, Check, Flame } from 'lucide-react';
 import { QuizLevel } from '@/types/quiz';
-import { HSK1_LESSON_INFO, HSK2_LESSON_INFO } from '@/data/lesson-info';
+import { HSK1_LESSON_INFO, HSK2_LESSON_INFO, COMPOUND_SECTION_INFO } from '@/data/lesson-info';
 import { useRoastMode } from '@/hooks/useRoastMode';
 import { getSavedLessonPreferences, saveLessonPreferences } from '@/lib/quizPreferences';
 
@@ -21,9 +21,10 @@ interface StartScreenProps {
 }
 
 const LEVEL_CONFIGS: Record<QuizLevel, { title: string; count: number; desc: string; totalLessons: number }> = {
-  hsk1: { title: 'HSK 1', count: 150, desc: '150 từ vựng căn bản HSK 1', totalLessons: 15 },
-  hsk2: { title: 'HSK 2', count: 150, desc: '150 từ vựng nâng cao HSK 2', totalLessons: 15 },
-  all: { title: 'HSK 1 + 2', count: 300, desc: 'Trọn bộ 300 từ vựng HSK 1 & 2', totalLessons: 30 },
+  hsk1: { title: 'HSK 1', count: 163, desc: '163 câu trắc nghiệm HSK 1 (Bài 1–15)', totalLessons: 15 },
+  hsk2: { title: 'HSK 2', count: 165, desc: '165 câu trắc nghiệm HSK 2 (Bài 1–15)', totalLessons: 15 },
+  all: { title: 'HSK 1 + 2', count: 328, desc: 'Trọn bộ 328 câu HSK 1 & 2', totalLessons: 30 },
+  compound: { title: 'Cụm câu ghép', count: 77, desc: '77 cụm câu ghép & ngữ cảnh HSK 1–2', totalLessons: 8 },
 };
 
 export const StartScreen: React.FC<StartScreenProps> = ({
@@ -112,24 +113,24 @@ export const StartScreen: React.FC<StartScreenProps> = ({
           Chọn cấp độ và phạm vi bài học bạn muốn kiểm tra
         </p>
 
-        {/* 3 Level Tabs */}
-        <div className="grid grid-cols-3 gap-2 sm:gap-3 p-1.5 bg-slate-100 rounded-2xl mb-6">
-          {(['hsk1', 'hsk2', 'all'] as QuizLevel[]).map(lvl => {
+        {/* 4 Level Tabs */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-2.5 p-1.5 bg-slate-100 rounded-2xl mb-6">
+          {(['hsk1', 'hsk2', 'all', 'compound'] as QuizLevel[]).map(lvl => {
             const config = LEVEL_CONFIGS[lvl];
             const isSelected = currentLevel === lvl;
             return (
               <button
                 key={lvl}
                 onClick={() => onChangeLevel(lvl)}
-                className={`py-3 px-2 rounded-xl text-center transition-all ${
+                className={`py-2.5 px-2 rounded-xl text-center transition-all ${
                   isSelected
                     ? 'bg-white text-rose-600 font-bold shadow-md shadow-slate-200 scale-[1.02]'
                     : 'text-slate-600 hover:text-slate-900 font-medium'
                 }`}
               >
-                <div className="text-sm sm:text-base">{config.title}</div>
+                <div className="text-xs sm:text-sm font-bold">{config.title}</div>
                 <div className="text-[11px] text-slate-400 font-normal">
-                  {config.count} từ
+                  {config.count} câu
                 </div>
               </button>
             );
@@ -212,6 +213,11 @@ export const StartScreen: React.FC<StartScreenProps> = ({
                     viTitle = info?.viTitle || '';
                   } else if (currentLevel === 'hsk2') {
                     const info = HSK2_LESSON_INFO.find(l => l.lesson === lessonNum);
+                    title = info?.title || '';
+                    viTitle = info?.viTitle || '';
+                  } else if (currentLevel === 'compound') {
+                    const info = COMPOUND_SECTION_INFO.find(l => l.lesson === lessonNum);
+                    label = `Nhóm ${lessonNum}`;
                     title = info?.title || '';
                     viTitle = info?.viTitle || '';
                   } else {

@@ -51,11 +51,11 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
         </h1>
 
         <p className="text-sm sm:text-base text-slate-600 font-medium mb-6">
-          Bạn đã ghi nhớ và trả lời chính xác toàn bộ <b>{totalQuestions} từ vựng</b>
+          Bạn đã ghi nhớ và trả lời chính xác toàn bộ <b>{totalQuestions} câu hỏi</b>
           {selectedLessons && selectedLessons.length > 0 ? (
             <span className="font-bold text-rose-600"> (Bài {selectedLessons.join(', ')})</span>
           ) : null}{' '}
-          cấp độ {level.toUpperCase()}!
+          cấp độ {level === 'compound' ? 'Cụm câu ghép' : level.toUpperCase()}!
         </p>
 
         {/* 100% Mastery Banner */}

@@ -40,3 +40,14 @@ export const HSK2_LESSON_INFO = [
   { lesson: 14, title: '你看过那个电影吗', viTitle: 'Bạn đã từng xem bộ phim đó chưa' },
   { lesson: 15, title: '新年就要到了', viTitle: 'Năm mới sắp đến rồi' },
 ];
+
+export const COMPOUND_SECTION_INFO = [
+  { lesson: 1, title: '指示与判断', viTitle: 'Chỉ trỏ & Xác định' },
+  { lesson: 2, title: '疑问短语', viTitle: 'Từ để hỏi thường gặp' },
+  { lesson: 3, title: '人物与关系', viTitle: 'Người, xuất thân & Mối quan hệ' },
+  { lesson: 4, title: '时间组合', viTitle: 'Thời gian ghép đôi' },
+  { lesson: 5, title: '饮食与购物', viTitle: 'Ẩm thực, đồ uống & Mua sắm' },
+  { lesson: 6, title: '生活与运动', viTitle: 'Sinh hoạt, đi lại & Thể thao' },
+  { lesson: 7, title: '状态与补语', viTitle: 'Kết quả, trạng thái & Bổ ngữ' },
+  { lesson: 8, title: '程度与感叹', viTitle: 'Mức độ & Cảm thán giao tiếp' },
+];
