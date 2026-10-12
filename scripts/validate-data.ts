@@ -6,6 +6,7 @@ import { VOCAB_TOPIC_DATA, VOCAB_TOPIC_CATEGORIES } from '../data/vocab-study-to
 import { VOCAB_LESSON_DATA } from '../data/vocab-study-lesson-data';
 import { HSK_SENTENCE_PATTERNS } from '../data/hsk-sentences-data';
 import { HSK_DIALOGUES } from '../data/hsk-dialogues-data';
+import { CONFUSABLE_VOCAB_DATA, CONFUSABLE_CATEGORIES } from '../data/confusable-vocab-data';
 import { QuizQuestion } from '../types/quiz';
 
 function validateDataset(name: string, data: QuizQuestion[], expectedCount: number) {
@@ -157,6 +158,38 @@ function validateDialogues(): boolean {
   return true;
 }
 
+function validateConfusableVocab(): boolean {
+  const errors: string[] = [];
+
+  if (CONFUSABLE_VOCAB_DATA.length !== 29) {
+    errors.push(`Expected 29 confusable groups, got ${CONFUSABLE_VOCAB_DATA.length}`);
+  }
+  if (CONFUSABLE_CATEGORIES.length !== 8) {
+    errors.push(`Expected 8 confusable categories, got ${CONFUSABLE_CATEGORIES.length}`);
+  }
+
+  CONFUSABLE_VOCAB_DATA.forEach(group => {
+    if (!group.id || !group.part || !group.category || !group.tips) {
+      errors.push(`Confusable group ${group.id} has missing required field`);
+    }
+    if (!Array.isArray(group.words) || group.words.length < 2) {
+      errors.push(`Confusable group ${group.id} should have at least 2 words to compare`);
+    }
+    group.words.forEach((w, idx) => {
+      if (!w.hanzi || !w.pinyin || !w.meaning) {
+        errors.push(`Confusable group ${group.id} word ${idx + 1} has missing field`);
+      }
+    });
+  });
+
+  if (errors.length > 0) {
+    console.error('❌ [Confusable Vocab Data] FAILED:', errors);
+    return false;
+  }
+  console.log(`✅ [Confusable Vocab Data] Passed (${CONFUSABLE_VOCAB_DATA.length} groups in ${CONFUSABLE_CATEGORIES.length} categories valid)`);
+  return true;
+}
+
 function runAllValidation() {
   const v1 = validateDataset('HSK 1', HSK1_VOCAB_DATA, 163);
   const v2 = validateDataset('HSK 2', HSK2_VOCAB_DATA, 165);
@@ -165,11 +198,12 @@ function runAllValidation() {
   const v5 = validateVocabStudyData();
   const v6 = validateSentences();
   const v7 = validateDialogues();
+  const v8 = validateConfusableVocab();
 
-  if (!v1 || !v2 || !v3 || !v4 || !v5 || !v6 || !v7) {
+  if (!v1 || !v2 || !v3 || !v4 || !v5 || !v6 || !v7 || !v8) {
     process.exit(1);
   }
-  console.log('\n🎉 ALL DATASETS (HSK 1, HSK 2, HSK 1+2, COMPOUND QUIZ, VOCAB STUDY, SENTENCES, DIALOGUES) PASSED VALIDATION!\n');
+  console.log('\n🎉 ALL DATASETS (HSK 1, HSK 2, HSK 1+2, COMPOUND QUIZ, VOCAB STUDY, SENTENCES, DIALOGUES, CONFUSABLE) PASSED VALIDATION!\n');
 }
 
 runAllValidation();

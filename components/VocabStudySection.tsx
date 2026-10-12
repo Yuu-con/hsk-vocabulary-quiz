@@ -9,18 +9,18 @@ import {
   EyeOff, 
   LayoutGrid, 
   Table as TableIcon, 
-  Layers, 
-  Sparkles,
   Tag,
-  Check
+  Sparkles,
+  Zap
 } from 'lucide-react';
 import { VOCAB_LESSON_DATA } from '@/data/vocab-study-lesson-data';
 import { VOCAB_TOPIC_DATA, VOCAB_TOPIC_CATEGORIES } from '@/data/vocab-study-topic-data';
 import { COMPOUND_PHRASES_DATA } from '@/data/compound-sentences-data';
+import { CONFUSABLE_VOCAB_DATA, CONFUSABLE_CATEGORIES } from '@/data/confusable-vocab-data';
 import { HSK1_LESSON_INFO, HSK2_LESSON_INFO, COMPOUND_SECTION_INFO } from '@/data/lesson-info';
 import { playChineseAudio } from '@/lib/quiz-utils';
 
-type StudyMode = 'by_topic' | 'by_lesson' | 'compound';
+type StudyMode = 'by_topic' | 'by_lesson' | 'compound' | 'confusable';
 
 // Helper to parse notes with Chinese and translation details
 function parseNote(noteText?: string) {
@@ -39,11 +39,15 @@ function parseNote(noteText?: string) {
 }
 
 export const VocabStudySection: React.FC = () => {
-  // Default to by_topic as requested
+  // Default to by_topic
   const [studyMode, setStudyMode] = useState<StudyMode>('by_topic');
   const [searchQuery, setSearchQuery] = useState('');
   const [hideAllMeanings, setHideAllMeanings] = useState(false);
-  const [revealedIds, setRevealedIds] = useState<Record<string, boolean>>({});
+  
+  // Track individual card/word meaning visibility overrides:
+  // true = explicitly visible, false = explicitly hidden
+  const [individualVisibility, setIndividualVisibility] = useState<Record<string, boolean>>({});
+  
   const [viewStyle, setViewStyle] = useState<'grid' | 'table'>('grid');
 
   // Topic sub-filter
@@ -55,6 +59,9 @@ export const VocabStudySection: React.FC = () => {
 
   // Compound sub-filter
   const [selectedCompoundSecId, setSelectedCompoundSecId] = useState<number>(0); // 0 = all
+
+  // Confusable sub-filter
+  const [selectedConfusableCat, setSelectedConfusableCat] = useState<string>('all');
 
   // Audio playing indicator
   const [playingHanzi, setPlayingHanzi] = useState<string | null>(null);
@@ -70,8 +77,29 @@ export const VocabStudySection: React.FC = () => {
     }
   };
 
-  const toggleReveal = (key: string) => {
-    setRevealedIds(prev => ({ ...prev, [key]: !prev[key] }));
+  // Check if a specific card's meaning is visible
+  const isMeaningVisible = (cardKey: string): boolean => {
+    if (individualVisibility[cardKey] !== undefined) {
+      return individualVisibility[cardKey];
+    }
+    return !hideAllMeanings;
+  };
+
+  // Toggle visibility of a specific card's meaning
+  const toggleMeaning = (cardKey: string) => {
+    const current = isMeaningVisible(cardKey);
+    setIndividualVisibility(prev => ({
+      ...prev,
+      [cardKey]: !current,
+    }));
+  };
+
+  // Global toggle handler
+  const handleToggleGlobalMeanings = () => {
+    const next = !hideAllMeanings;
+    setHideAllMeanings(next);
+    // Reset individual overrides so all cards sync with the new global state
+    setIndividualVisibility({});
   };
 
   // 1. Filtered Topic Items (14 chủ đề)
@@ -123,6 +151,25 @@ export const VocabStudySection: React.FC = () => {
     });
   }, [selectedCompoundSecId, searchQuery]);
 
+  // 4. Filtered Confusable Items
+  const filteredConfusableItems = useMemo(() => {
+    return CONFUSABLE_VOCAB_DATA.filter(group => {
+      if (selectedConfusableCat !== 'all' && group.category !== selectedConfusableCat) {
+        return false;
+      }
+      if (searchQuery.trim()) {
+        const q = searchQuery.toLowerCase().trim();
+        const matchWords = group.words.some(
+          w => w.hanzi.toLowerCase().includes(q) || w.pinyin.toLowerCase().includes(q) || w.meaning.toLowerCase().includes(q)
+        );
+        const matchTips = group.tips.toLowerCase().includes(q);
+        const matchCat = group.category.toLowerCase().includes(q);
+        if (!matchWords && !matchTips && !matchCat) return false;
+      }
+      return true;
+    });
+  }, [selectedConfusableCat, searchQuery]);
+
   return (
     <div className="w-full max-w-5xl mx-auto px-3 sm:px-6 py-4 sm:py-6 space-y-5 animate-pop-in">
       {/* Header Banner */}
@@ -135,7 +182,7 @@ export const VocabStudySection: React.FC = () => {
             Học & Ghi Nhớ Từ Vựng HSK 1 & HSK 2
           </h1>
           <p className="text-xs sm:text-sm text-rose-100 font-medium leading-relaxed">
-            Học thuộc bảng từ vựng theo 14 chủ đề đời sống, theo từng bài học giáo trình hoặc theo các cụm câu ghép thường gặp kèm phát âm và câu ví dụ chuẩn.
+            Học thuộc bảng từ vựng theo 14 chủ đề, theo bài học, cụm câu ghép và cẩm nang phân biệt các từ vựng dễ nhầm lẫn. Bấm trực tiếp vào nghĩa của từng từ để ẩn/hiện tự ôn tập.
           </p>
         </div>
         <div className="absolute right-4 bottom-2 text-7xl sm:text-8xl opacity-10 select-none pointer-events-none">
@@ -143,8 +190,8 @@ export const VocabStudySection: React.FC = () => {
         </div>
       </div>
 
-      {/* Main Sub-Mode Switcher */}
-      <div className="grid grid-cols-3 gap-2 p-1.5 bg-slate-200/70 backdrop-blur rounded-2xl">
+      {/* Main 4-Tab Sub-Mode Switcher */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 p-1.5 bg-slate-200/70 backdrop-blur rounded-2xl">
         <button
           onClick={() => {
             setStudyMode('by_topic');
@@ -188,6 +235,21 @@ export const VocabStudySection: React.FC = () => {
         >
           <span>🔗</span>
           <span>Cụm câu ghép & Ví dụ</span>
+        </button>
+
+        <button
+          onClick={() => {
+            setStudyMode('confusable');
+            setSearchQuery('');
+          }}
+          className={`py-2.5 sm:py-3 px-2 sm:px-3 rounded-xl font-bold text-xs sm:text-sm transition-all flex items-center justify-center gap-2 ${
+            studyMode === 'confusable'
+              ? 'bg-white text-rose-600 shadow-md shadow-slate-200 scale-[1.01]'
+              : 'text-slate-600 hover:text-slate-900'
+          }`}
+        >
+          <span>⚡</span>
+          <span>Từ vựng dễ nhầm</span>
         </button>
       </div>
 
@@ -375,6 +437,56 @@ export const VocabStudySection: React.FC = () => {
           </div>
         )}
 
+        {/* SUB-FILTER 4: TỪ VỰNG DỄ NHẦM LẪN */}
+        {studyMode === 'confusable' && (
+          <div className="space-y-2.5 pb-2 border-b border-slate-100">
+            <div className="flex items-center justify-between text-xs font-bold text-slate-700">
+              <span className="flex items-center gap-1.5">
+                <Zap className="w-3.5 h-3.5 text-amber-500" />
+                <span>Chọn nhóm phân biệt:</span>
+              </span>
+              <span className="text-slate-400 font-normal">
+                {selectedConfusableCat === 'all' ? 'Tất cả 8 nhóm (34 cặp từ)' : selectedConfusableCat}
+              </span>
+            </div>
+
+            {/* Quick Horizontal Confusable Category Pill Bar */}
+            <div className="flex items-center gap-1.5 overflow-x-auto pb-2 pt-0.5 scrollbar-thin">
+              <button
+                onClick={() => setSelectedConfusableCat('all')}
+                className={`px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all shrink-0 ${
+                  selectedConfusableCat === 'all'
+                    ? 'bg-gradient-to-r from-amber-500 to-rose-600 text-white shadow-sm'
+                    : 'bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100'
+                }`}
+              >
+                Tất cả (34 nhóm)
+              </button>
+              {CONFUSABLE_CATEGORIES.map((cat, idx) => {
+                const isSelected = selectedConfusableCat === cat;
+                return (
+                  <button
+                    key={cat}
+                    onClick={() => setSelectedConfusableCat(cat)}
+                    className={`px-2.5 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all shrink-0 flex items-center gap-1.5 ${
+                      isSelected
+                        ? 'bg-gradient-to-r from-amber-500 to-rose-600 text-white shadow-sm'
+                        : 'bg-slate-50 text-slate-600 border border-slate-200 hover:border-slate-300 hover:bg-slate-100'
+                    }`}
+                  >
+                    <span className={`w-4 h-4 rounded-full flex items-center justify-center text-[10px] font-black ${
+                      isSelected ? 'bg-white/25 text-white' : 'bg-slate-200 text-slate-700'
+                    }`}>
+                      {idx + 1}
+                    </span>
+                    <span>{cat.split('(')[0].replace(/^\d+[\.\\]\s*/, '').trim()}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
         {/* Bottom Search Bar + Action Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-1">
           {/* Search Input */}
@@ -391,53 +503,52 @@ export const VocabStudySection: React.FC = () => {
 
           {/* Action Buttons */}
           <div className="flex items-center gap-2 self-end sm:self-auto">
-            {/* Toggle Meaning Hide / Show */}
+            {/* Toggle Meaning Hide / Show (Global) */}
             <button
-              onClick={() => {
-                setHideAllMeanings(!hideAllMeanings);
-                setRevealedIds({});
-              }}
-              className={`px-3 py-2 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition ${
+              onClick={handleToggleGlobalMeanings}
+              className={`px-3 py-2 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition cursor-pointer ${
                 hideAllMeanings
                   ? 'bg-amber-100 text-amber-900 border border-amber-300'
                   : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
               }`}
-              title="Ẩn hoặc hiện nghĩa để tự kiểm tra ghi nhớ"
+              title="Ẩn hoặc hiện tất cả nghĩa để tự kiểm tra ghi nhớ"
             >
               {hideAllMeanings ? (
                 <>
                   <EyeOff className="w-3.5 h-3.5 text-amber-700" />
-                  <span>Đang ẩn nghĩa</span>
+                  <span>Đang ẩn toàn bộ nghĩa</span>
                 </>
               ) : (
                 <>
                   <Eye className="w-3.5 h-3.5 text-slate-600" />
-                  <span>Ẩn nghĩa để tự ôn</span>
+                  <span>Ẩn toàn bộ nghĩa</span>
                 </>
               )}
             </button>
 
-            {/* View style: Grid vs Table */}
-            <div className="inline-flex p-0.5 bg-slate-100 rounded-xl border border-slate-200">
-              <button
-                onClick={() => setViewStyle('grid')}
-                className={`p-1.5 rounded-lg transition ${
-                  viewStyle === 'grid' ? 'bg-white shadow-xs text-rose-600' : 'text-slate-500 hover:text-slate-800'
-                }`}
-                title="Dạng thẻ ghi nhớ"
-              >
-                <LayoutGrid className="w-4 h-4" />
-              </button>
-              <button
-                onClick={() => setViewStyle('table')}
-                className={`p-1.5 rounded-lg transition ${
-                  viewStyle === 'table' ? 'bg-white shadow-xs text-rose-600' : 'text-slate-500 hover:text-slate-800'
-                }`}
-                title="Dạng bảng chi tiết"
-              >
-                <TableIcon className="w-4 h-4" />
-              </button>
-            </div>
+            {/* View style: Grid vs Table (for modes other than confusable) */}
+            {studyMode !== 'confusable' && (
+              <div className="inline-flex p-0.5 bg-slate-100 rounded-xl border border-slate-200">
+                <button
+                  onClick={() => setViewStyle('grid')}
+                  className={`p-1.5 rounded-lg transition cursor-pointer ${
+                    viewStyle === 'grid' ? 'bg-white shadow-xs text-rose-600' : 'text-slate-500 hover:text-slate-800'
+                  }`}
+                  title="Dạng thẻ ghi nhớ"
+                >
+                  <LayoutGrid className="w-4 h-4" />
+                </button>
+                <button
+                  onClick={() => setViewStyle('table')}
+                  className={`p-1.5 rounded-lg transition cursor-pointer ${
+                    viewStyle === 'table' ? 'bg-white shadow-xs text-rose-600' : 'text-slate-500 hover:text-slate-800'
+                  }`}
+                  title="Dạng bảng chi tiết"
+                >
+                  <TableIcon className="w-4 h-4" />
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -448,12 +559,11 @@ export const VocabStudySection: React.FC = () => {
           {studyMode === 'by_topic' && `Đang hiển thị ${filteredTopicItems.length} từ vựng theo chủ đề`}
           {studyMode === 'by_lesson' && `Đang hiển thị ${filteredLessonItems.length} từ vựng theo bài học`}
           {studyMode === 'compound' && `Đang hiển thị ${filteredCompoundItems.length} cụm câu ghép & ví dụ`}
+          {studyMode === 'confusable' && `Đang hiển thị ${filteredConfusableItems.length} nhóm từ dễ nhầm lẫn`}
         </div>
-        {hideAllMeanings && (
-          <div className="text-amber-700 font-semibold flex items-center gap-1">
-            <span>💡 Mẹo:</span> Bấm vào thẻ để lật xem nghĩa tiếng Việt
-          </div>
-        )}
+        <div className="text-amber-800 font-semibold flex items-center gap-1 text-xs">
+          <span>💡 Bấm trực tiếp vào nghĩa của từng từ để ẩn hoặc hiện lại tùy ý</span>
+        </div>
       </div>
 
       {/* ========================================================================= */}
@@ -464,7 +574,7 @@ export const VocabStudySection: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3.5 sm:gap-4">
             {filteredTopicItems.map(item => {
               const cardKey = `topic_${item.id}`;
-              const isRevealed = !hideAllMeanings || !!revealedIds[cardKey];
+              const isRevealed = isMeaningVisible(cardKey);
               const parsedNote = parseNote(item.note);
 
               return (
@@ -499,18 +609,31 @@ export const VocabStudySection: React.FC = () => {
                     </span>
                   </div>
 
-                  {/* ROW 3: MEANING (SUPPORT TOGGLE / REVEAL) */}
+                  {/* ROW 3: MEANING (CLICKABLE TO TOGGLE HIDE / REVEAL INDIVIDUALLY) */}
                   <div className="pt-0.5">
                     {isRevealed ? (
-                      <div className="text-sm sm:text-base font-bold text-slate-800 leading-snug">
-                        {item.meaning}
+                      <div
+                        onClick={() => toggleMeaning(cardKey)}
+                        title="Bấm để ẩn nghĩa từ này"
+                        className="group flex items-center justify-between gap-2 p-2 rounded-xl bg-slate-50 hover:bg-slate-100/90 border border-slate-200/70 transition cursor-pointer select-none"
+                      >
+                        <span className="text-sm sm:text-base font-bold text-slate-800 leading-snug">
+                          {item.meaning}
+                        </span>
+                        <span className="text-[11px] font-semibold text-slate-400 group-hover:text-rose-600 flex items-center gap-1 shrink-0 transition">
+                          <EyeOff className="w-3.5 h-3.5" />
+                          <span className="hidden sm:inline">Ẩn nghĩa</span>
+                        </span>
                       </div>
                     ) : (
                       <button
-                        onClick={() => toggleReveal(cardKey)}
-                        className="w-full py-2 px-3 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-800 text-xs font-semibold border border-dashed border-amber-300 transition text-center cursor-pointer"
+                        type="button"
+                        onClick={() => toggleMeaning(cardKey)}
+                        className="w-full py-2 px-3 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-800 text-xs font-semibold border border-dashed border-amber-300 transition flex items-center justify-center gap-1.5 cursor-pointer select-none"
+                        title="Bấm để xem nghĩa tiếng Việt"
                       >
-                        [ Bấm để xem nghĩa tiếng Việt ]
+                        <Eye className="w-3.5 h-3.5 text-amber-700" />
+                        <span>[ Bấm để xem nghĩa tiếng Việt ]</span>
                       </button>
                     )}
                   </div>
@@ -566,7 +689,7 @@ export const VocabStudySection: React.FC = () => {
                 <tbody className="divide-y divide-slate-100">
                   {filteredTopicItems.map((item, idx) => {
                     const cardKey = `table_topic_${item.id}`;
-                    const isRevealed = !hideAllMeanings || !!revealedIds[cardKey];
+                    const isRevealed = isMeaningVisible(cardKey);
                     return (
                       <tr key={item.id} className="hover:bg-slate-50/80 transition">
                         <td className="py-3 px-4 text-center text-slate-400 font-medium">{idx + 1}</td>
@@ -579,13 +702,22 @@ export const VocabStudySection: React.FC = () => {
                         <td className="py-3 px-4 text-rose-600 font-semibold">{item.pinyin}</td>
                         <td className="py-3 px-4 font-medium text-slate-800">
                           {isRevealed ? (
-                            item.meaning
+                            <div
+                              onClick={() => toggleMeaning(cardKey)}
+                              className="cursor-pointer group flex items-center justify-between gap-1.5"
+                              title="Bấm để ẩn nghĩa"
+                            >
+                              <span>{item.meaning}</span>
+                              <EyeOff className="w-3.5 h-3.5 text-slate-300 group-hover:text-rose-500" />
+                            </div>
                           ) : (
                             <button
-                              onClick={() => toggleReveal(cardKey)}
-                              className="text-xs text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 cursor-pointer"
+                              onClick={() => toggleMeaning(cardKey)}
+                              className="text-xs text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 cursor-pointer flex items-center gap-1"
+                              title="Bấm để xem nghĩa"
                             >
-                              [Hiện nghĩa]
+                              <Eye className="w-3 h-3" />
+                              <span>[Hiện nghĩa]</span>
                             </button>
                           )}
                         </td>
@@ -617,7 +749,7 @@ export const VocabStudySection: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3.5 sm:gap-4">
             {filteredLessonItems.map(item => {
               const cardKey = `lesson_${item.id}`;
-              const isRevealed = !hideAllMeanings || !!revealedIds[cardKey];
+              const isRevealed = isMeaningVisible(cardKey);
 
               return (
                 <div
@@ -627,10 +759,10 @@ export const VocabStudySection: React.FC = () => {
                   {/* ROW 1 (TOP OF CARD): LESSON BADGE & WORD TYPE ON LEFT, SPEAKER ON RIGHT */}
                   <div className="flex items-center justify-between gap-2 pb-2.5 border-b border-slate-100">
                     <div className="flex items-center gap-1.5 truncate max-w-[80%]">
-                      <span className="px-2.5 py-1 rounded-lg bg-rose-50 text-rose-700 font-bold text-xs border border-rose-100">
+                      <span className="px-2.5 py-1 rounded-lg bg-rose-50 text-rose-700 font-bold text-xs border border-rose-100 truncate">
                         Bài {item.lesson}: {item.lessonTitle}
                       </span>
-                      <span className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 font-semibold text-[11px]">
+                      <span className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 font-semibold text-[11px] shrink-0">
                         {item.wordType}
                       </span>
                     </div>
@@ -655,18 +787,31 @@ export const VocabStudySection: React.FC = () => {
                     </span>
                   </div>
 
-                  {/* ROW 3: MEANING */}
+                  {/* ROW 3: MEANING (CLICKABLE TO TOGGLE HIDE / REVEAL INDIVIDUALLY) */}
                   <div className="pt-0.5">
                     {isRevealed ? (
-                      <div className="text-sm sm:text-base font-bold text-slate-800 leading-snug">
-                        {item.meaning}
+                      <div
+                        onClick={() => toggleMeaning(cardKey)}
+                        title="Bấm để ẩn nghĩa từ này"
+                        className="group flex items-center justify-between gap-2 p-2 rounded-xl bg-slate-50 hover:bg-slate-100/90 border border-slate-200/70 transition cursor-pointer select-none"
+                      >
+                        <span className="text-sm sm:text-base font-bold text-slate-800 leading-snug">
+                          {item.meaning}
+                        </span>
+                        <span className="text-[11px] font-semibold text-slate-400 group-hover:text-rose-600 flex items-center gap-1 shrink-0 transition">
+                          <EyeOff className="w-3.5 h-3.5" />
+                          <span className="hidden sm:inline">Ẩn nghĩa</span>
+                        </span>
                       </div>
                     ) : (
                       <button
-                        onClick={() => toggleReveal(cardKey)}
-                        className="w-full py-2 px-3 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-800 text-xs font-semibold border border-dashed border-amber-300 transition text-center cursor-pointer"
+                        type="button"
+                        onClick={() => toggleMeaning(cardKey)}
+                        className="w-full py-2 px-3 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-800 text-xs font-semibold border border-dashed border-amber-300 transition flex items-center justify-center gap-1.5 cursor-pointer select-none"
+                        title="Bấm để xem nghĩa tiếng Việt"
                       >
-                        [ Bấm để xem nghĩa tiếng Việt ]
+                        <Eye className="w-3.5 h-3.5 text-amber-700" />
+                        <span>[ Bấm để xem nghĩa tiếng Việt ]</span>
                       </button>
                     )}
                   </div>
@@ -692,7 +837,7 @@ export const VocabStudySection: React.FC = () => {
                 <tbody className="divide-y divide-slate-100">
                   {filteredLessonItems.map((item, idx) => {
                     const cardKey = `table_lesson_${item.id}`;
-                    const isRevealed = !hideAllMeanings || !!revealedIds[cardKey];
+                    const isRevealed = isMeaningVisible(cardKey);
                     return (
                       <tr key={item.id} className="hover:bg-slate-50/80 transition">
                         <td className="py-3 px-4 text-center text-slate-400 font-medium">{idx + 1}</td>
@@ -708,13 +853,22 @@ export const VocabStudySection: React.FC = () => {
                         </td>
                         <td className="py-3 px-4 font-medium text-slate-800">
                           {isRevealed ? (
-                            item.meaning
+                            <div
+                              onClick={() => toggleMeaning(cardKey)}
+                              className="cursor-pointer group flex items-center justify-between gap-1.5"
+                              title="Bấm để ẩn nghĩa"
+                            >
+                              <span>{item.meaning}</span>
+                              <EyeOff className="w-3.5 h-3.5 text-slate-300 group-hover:text-rose-500" />
+                            </div>
                           ) : (
                             <button
-                              onClick={() => toggleReveal(cardKey)}
-                              className="text-xs text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 cursor-pointer"
+                              onClick={() => toggleMeaning(cardKey)}
+                              className="text-xs text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 cursor-pointer flex items-center gap-1"
+                              title="Bấm để xem nghĩa"
                             >
-                              [Hiện nghĩa]
+                              <Eye className="w-3 h-3" />
+                              <span>[Hiện nghĩa]</span>
                             </button>
                           )}
                         </td>
@@ -744,7 +898,7 @@ export const VocabStudySection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {filteredCompoundItems.map(item => {
             const cardKey = `compound_${item.id}`;
-            const isRevealed = !hideAllMeanings || !!revealedIds[cardKey];
+            const isRevealed = isMeaningVisible(cardKey);
             return (
               <div
                 key={item.id}
@@ -776,18 +930,31 @@ export const VocabStudySection: React.FC = () => {
                   </span>
                 </div>
 
-                {/* ROW 3: MEANING */}
+                {/* ROW 3: MEANING (CLICKABLE TO TOGGLE HIDE / REVEAL INDIVIDUALLY) */}
                 <div>
                   {isRevealed ? (
-                    <div className="text-base font-bold text-emerald-800 bg-emerald-50 px-3 py-1.5 rounded-xl border border-emerald-200/80 inline-block">
-                      Nghĩa: {item.meaning}
+                    <div
+                      onClick={() => toggleMeaning(cardKey)}
+                      title="Bấm để ẩn nghĩa cụm từ này"
+                      className="group flex items-center justify-between gap-2 p-2 rounded-xl bg-emerald-50/80 hover:bg-emerald-100/70 border border-emerald-200/80 transition cursor-pointer select-none"
+                    >
+                      <span className="text-sm sm:text-base font-bold text-emerald-900">
+                        Nghĩa: {item.meaning}
+                      </span>
+                      <span className="text-[11px] font-semibold text-emerald-600 group-hover:text-rose-600 flex items-center gap-1 shrink-0 transition">
+                        <EyeOff className="w-3.5 h-3.5" />
+                        <span className="hidden sm:inline">Ẩn nghĩa</span>
+                      </span>
                     </div>
                   ) : (
                     <button
-                      onClick={() => toggleReveal(cardKey)}
-                      className="w-full py-2 px-3 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-800 text-xs font-semibold border border-dashed border-amber-300 transition text-center cursor-pointer"
+                      type="button"
+                      onClick={() => toggleMeaning(cardKey)}
+                      className="w-full py-2 px-3 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-800 text-xs font-semibold border border-dashed border-amber-300 transition flex items-center justify-center gap-1.5 cursor-pointer select-none"
+                      title="Bấm để xem nghĩa tiếng Việt"
                     >
-                      [ Bấm để xem nghĩa tiếng Việt ]
+                      <Eye className="w-3.5 h-3.5 text-amber-700" />
+                      <span>[ Bấm để xem nghĩa tiếng Việt ]</span>
                     </button>
                   )}
                 </div>
@@ -817,6 +984,114 @@ export const VocabStudySection: React.FC = () => {
               </div>
             );
           })}
+        </div>
+      )}
+
+      {/* ========================================================================= */}
+      {/* 4. CONTENT DISPLAY: TỪ VỰNG DỄ NHẦM LẪN (CONFUSABLE VOCABULARY GUIDE) */}
+      {/* ========================================================================= */}
+      {studyMode === 'confusable' && (
+        <div className="space-y-4">
+          <div className="bg-amber-50/80 rounded-2xl p-3.5 border border-amber-200/80 text-xs text-amber-900 flex items-start gap-2.5">
+            <span className="text-lg shrink-0">💡</span>
+            <div>
+              <span className="font-bold">Mẹo học từ vựng dễ nhầm lẫn:</span> Bấm vào từng loa 🔊 để nghe và so sánh sự khác biệt về thanh điệu và âm đầu/cuối. Bạn có thể bấm vào nghĩa tiếng Việt của từng từ để ẩn đi và tự nhẩm lại!
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {filteredConfusableItems.map(group => (
+              <div
+                key={group.id}
+                className="bg-white rounded-3xl p-5 border border-slate-200/80 shadow-xs hover:shadow-md hover:border-amber-300 transition-all space-y-4 flex flex-col justify-between"
+              >
+                {/* Header: Category Badge + Suffix/Prefix */}
+                <div>
+                  <div className="flex items-center justify-between gap-2 pb-2.5 border-b border-slate-100">
+                    <span className="px-2.5 py-1 rounded-lg bg-amber-50 text-amber-900 font-bold text-xs border border-amber-200 flex items-center gap-1.5 truncate max-w-[85%]">
+                      <Zap className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                      <span className="truncate">{group.category}</span>
+                    </span>
+
+                    {group.prefixOrSuffix && (
+                      <span className="px-2 py-0.5 rounded-md bg-purple-50 text-purple-700 font-semibold text-xs border border-purple-100 shrink-0">
+                        {group.prefixOrSuffix}
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Words Grid Comparison */}
+                  <div className={`mt-3.5 grid grid-cols-1 ${group.words.length === 2 ? 'sm:grid-cols-2' : group.words.length === 3 ? 'sm:grid-cols-3' : 'sm:grid-cols-2'} gap-2.5`}>
+                    {group.words.map((w, idx) => {
+                      const wordKey = `confusable_${group.id}_${idx}`;
+                      const isRevealed = isMeaningVisible(wordKey);
+
+                      return (
+                        <div
+                          key={idx}
+                          className="bg-slate-50/90 rounded-2xl p-3 border border-slate-200/70 flex flex-col justify-between space-y-2"
+                        >
+                          {/* Hanzi + Speaker */}
+                          <div className="flex items-center justify-between">
+                            <span className="font-hanzi text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-wide select-none">
+                              {w.hanzi}
+                            </span>
+                            <button
+                              onClick={() => handlePlayAudio(w.hanzi)}
+                              disabled={playingHanzi === w.hanzi}
+                              className="p-1 rounded-lg text-slate-400 hover:text-rose-600 hover:bg-white transition cursor-pointer"
+                              title={`Nghe phát âm: ${w.hanzi}`}
+                            >
+                              <Volume2 className="w-4 h-4" />
+                            </button>
+                          </div>
+
+                          {/* Pinyin */}
+                          <div className="text-xs sm:text-sm font-bold text-rose-600">
+                            {w.pinyin}
+                          </div>
+
+                          {/* Meaning (Clickable to toggle hide/reveal) */}
+                          <div className="pt-1 border-t border-slate-200/50">
+                            {isRevealed ? (
+                              <div
+                                onClick={() => toggleMeaning(wordKey)}
+                                title="Bấm để ẩn nghĩa"
+                                className="group flex items-center justify-between gap-1 p-1.5 rounded-lg bg-white border border-slate-200/80 text-xs font-bold text-slate-800 cursor-pointer hover:bg-slate-100/60 transition select-none"
+                              >
+                                <span className="leading-tight">{w.meaning}</span>
+                                <EyeOff className="w-3 h-3 text-slate-300 group-hover:text-rose-600 shrink-0" />
+                              </div>
+                            ) : (
+                              <button
+                                type="button"
+                                onClick={() => toggleMeaning(wordKey)}
+                                className="w-full py-1.5 px-2 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-800 text-[11px] font-semibold border border-dashed border-amber-300 transition text-center cursor-pointer select-none"
+                                title="Bấm để hiện nghĩa"
+                              >
+                                [Hiện nghĩa]
+                              </button>
+                            )}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* Tips & Distinction Rules Box */}
+                <div className="bg-amber-50/70 rounded-2xl p-3 border border-amber-200/70 text-xs text-amber-950 space-y-1 mt-2">
+                  <div className="font-bold flex items-center gap-1.5 text-amber-900">
+                    <span>💡</span>
+                    <span>Mẹo phân biệt & Phản xạ:</span>
+                  </div>
+                  <div className="text-slate-700 whitespace-pre-line leading-relaxed pl-5 font-medium">
+                    {group.tips}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       )}
     </div>

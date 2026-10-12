@@ -7,6 +7,7 @@ const HSK2_QUIZ_PATH = 'c:/Users/dyysi/Downloads/b_tr_c_nghi_m_to_n_di_n_t_v_ng_
 const COMPOUND_PATH = 'c:/Users/dyysi/Downloads/gemini-code-1791822613434.md';
 const TOPIC_VOCAB_PATH = 'c:/Users/dyysi/Downloads/Tong_hop_tu_vung_HSK_1_va_2_theo_chu_de.md';
 const LESSON_VOCAB_PATH = 'c:/Users/dyysi/Downloads/t_v_ng_chu_n_hsk_1_v_hsk_2_theo_t_ng_b_i (1).md';
+const CONFUSABLE_PATH = 'c:/Users/dyysi/Downloads/gemini-code-1791834423762.md';
 
 // Target files in data/
 const DATA_DIR = path.resolve(__dirname, '../data');
@@ -298,6 +299,131 @@ function parseLessonVocab(filePath: string) {
   return items;
 }
 
+// 5. Parse Confusable Vocabulary (Từ vựng dễ nhầm lẫn)
+function parseConfusableVocab(filePath: string) {
+  const content = fs.readFileSync(filePath, 'utf8');
+  const sections = content.split(/\n(?=###\s+)/);
+
+  let currentPart = 'PHẦN 1: CÁC CẶP TỪ ĐƠN & TỐI THIỂU VỀ NGỮ ÂM';
+  const groups: any[] = [];
+
+  for (const sec of sections) {
+    if (!sec.trim()) continue;
+    if (sec.includes('## PHẦN 2:')) {
+      currentPart = 'PHẦN 2: CÁC TỪ GHÉP TƯƠNG ĐỒNG CẤU TRÚC';
+    }
+
+    const lines = sec.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+    const catHeaderLine = lines.find(l => l.startsWith('### '));
+    if (!catHeaderLine) continue;
+
+    const currentCat = catHeaderLine.replace(/^###\s*/, '').trim();
+    const tableRows = lines.filter(l => l.startsWith('| **') || l.startsWith('|**'));
+
+    if (currentCat.includes('Cặp âm đối xứng') || currentCat.includes('Cặp khuôn vần')) {
+      // Group the pair into 1 comparison card
+      const words: any[] = [];
+      const tipParts: string[] = [];
+
+      for (const row of tableRows) {
+        const parts = row.split('|').map(s => s.trim()).filter(Boolean);
+        if (parts.length >= 4) {
+          const hanzi = parts[0].replace(/\*\*/g, '').trim();
+          const pinyin = parts[1].trim();
+          const meaning = parts[2].trim();
+          const tip = parts[3].replace(/<br>/gi, '\n').trim();
+          words.push({ hanzi, pinyin, meaning });
+          tipParts.push(`• **${hanzi}**: ${tip}`);
+        }
+      }
+
+      if (words.length > 0) {
+        groups.push({
+          id: groups.length + 1,
+          part: currentPart,
+          category: currentCat,
+          words,
+          tips: tipParts.join('\n'),
+        });
+      }
+    } else if (currentCat.includes('tiền tố')) {
+      // Group [diàn-] into 1 comparison card
+      const words: any[] = [];
+      const tipParts: string[] = [];
+
+      for (const row of tableRows) {
+        const parts = row.split('|').map(s => s.trim()).filter(Boolean);
+        if (parts.length >= 4) {
+          const hanzi = parts[0].replace(/\*\*/g, '').trim();
+          const pinyin = parts[1].trim();
+          const meaning = parts[2].trim();
+          const tip = parts[3].replace(/<br>/gi, '\n').trim();
+          words.push({ hanzi, pinyin, meaning });
+          tipParts.push(`• **${hanzi}**: ${tip}`);
+        }
+      }
+
+      if (words.length > 0) {
+        groups.push({
+          id: groups.length + 1,
+          part: currentPart,
+          category: currentCat,
+          prefixOrSuffix: '[diàn-] (Thiết bị dùng điện)',
+          words,
+          tips: tipParts.join('\n'),
+        });
+      }
+    } else {
+      // Standard rows (Part 1 rows & Part 2 Section 3 suffix rows)
+      for (const row of tableRows) {
+        const parts = row.split('|').map(s => s.trim()).filter(Boolean);
+        if (parts.length >= 4) {
+          let prefixOrSuffix = '';
+          let hanziRaw = '';
+          let pinyinRaw = '';
+          let meaningRaw = '';
+          let tipRaw = '';
+
+          if (parts.length === 5) {
+            prefixOrSuffix = parts[0].replace(/<br>/gi, ' ').replace(/\*\*/g, '').trim();
+            hanziRaw = parts[1];
+            pinyinRaw = parts[2];
+            meaningRaw = parts[3];
+            tipRaw = parts[4];
+          } else {
+            hanziRaw = parts[0];
+            pinyinRaw = parts[1];
+            meaningRaw = parts[2];
+            tipRaw = parts[3];
+          }
+
+          const hanzis = hanziRaw.split(/<br>/gi).map(s => s.replace(/\*\*/g, '').trim()).filter(Boolean);
+          const pinyins = pinyinRaw.split(/<br>/gi).map(s => s.trim()).filter(Boolean);
+          const meanings = meaningRaw.split(/<br>/gi).map(s => s.trim()).filter(Boolean);
+
+          const words = hanzis.map((h, idx) => ({
+            hanzi: h,
+            pinyin: pinyins[idx] || pinyins[0] || '',
+            meaning: meanings[idx] || meanings[0] || '',
+          }));
+
+          groups.push({
+            id: groups.length + 1,
+            part: currentPart,
+            category: currentCat,
+            prefixOrSuffix: prefixOrSuffix || undefined,
+            words,
+            tips: tipRaw.replace(/<br>/gi, '\n').trim(),
+          });
+        }
+      }
+    }
+  }
+
+  const categories = Array.from(new Set(groups.map(g => g.category)));
+  return { groups, categories };
+}
+
 async function main() {
   console.log('Generating datasets from user Markdown sources...');
 
@@ -330,6 +456,10 @@ async function main() {
   const lessonItems = parseLessonVocab(LESSON_VOCAB_PATH);
   console.log(`Lesson vocab items: ${lessonItems.length}`);
 
+  // 5. Confusable Vocab
+  const { groups: confusableGroups, categories: confusableCategories } = parseConfusableVocab(CONFUSABLE_PATH);
+  console.log(`Confusable vocab groups: ${confusableGroups.length}, categories: ${confusableCategories.length}`);
+
   // Write files
   fs.writeFileSync(
     path.join(DATA_DIR, 'hsk1-data.ts'),
@@ -359,6 +489,11 @@ async function main() {
   fs.writeFileSync(
     path.join(DATA_DIR, 'vocab-study-lesson-data.ts'),
     `import { VocabLessonItem } from '@/types/practice';\n\nexport const VOCAB_LESSON_DATA: VocabLessonItem[] = ${JSON.stringify(lessonItems, null, 2)};\n`
+  );
+
+  fs.writeFileSync(
+    path.join(DATA_DIR, 'confusable-vocab-data.ts'),
+    `import { ConfusableGroupItem } from '@/types/practice';\n\nexport const CONFUSABLE_CATEGORIES: string[] = ${JSON.stringify(confusableCategories, null, 2)};\n\nexport const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = ${JSON.stringify(confusableGroups, null, 2)};\n`
   );
 
   console.log('✅ All datasets successfully generated!');

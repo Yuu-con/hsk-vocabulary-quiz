@@ -36,6 +36,21 @@ export interface CompoundPhraseItem {
   contextVietnamese: string;
 }
 
+export interface ConfusableWordEntry {
+  hanzi: string;
+  pinyin: string;
+  meaning: string;
+}
+
+export interface ConfusableGroupItem {
+  id: number;
+  part: string;
+  category: string;
+  prefixOrSuffix?: string;
+  words: ConfusableWordEntry[];
+  tips: string;
+}
+
 export interface SentencePattern {
   id: number;
   category: string;

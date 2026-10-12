@@ -5,6 +5,7 @@ import { HSK_COMBINED_VOCAB_DATA } from '../data/hsk-combined-data';
 import { COMPOUND_QUIZ_DATA, COMPOUND_PHRASES_DATA } from '../data/compound-sentences-data';
 import { VOCAB_TOPIC_DATA, VOCAB_TOPIC_CATEGORIES } from '../data/vocab-study-topic-data';
 import { VOCAB_LESSON_DATA } from '../data/vocab-study-lesson-data';
+import { CONFUSABLE_VOCAB_DATA, CONFUSABLE_CATEGORIES } from '../data/confusable-vocab-data';
 import { UserAnswerRecord } from '../types/quiz';
 import { WRONG_ANSWER_ROASTS, getRandomRoast } from '../data/roasts';
 
@@ -20,7 +21,9 @@ console.log('--- RUNNING HSK VOCABULARY & MASTERY LOOP TESTS ---');
   assert.equal(VOCAB_TOPIC_DATA.length, 163, 'Vocab Topic data must have 163 items');
   assert.equal(VOCAB_TOPIC_CATEGORIES.length, 14, 'Vocab Topic data must have 14 categories');
   assert.equal(VOCAB_LESSON_DATA.length, 327, 'Vocab Lesson data must have 327 items');
-  console.log('✔ Test 1: Datasets count valid: HSK1 (163), HSK2 (165), Combined (328), Compound (77), Topic (163), Lesson (327)');
+  assert.equal(CONFUSABLE_VOCAB_DATA.length, 29, 'Confusable Vocab data must have 29 groups');
+  assert.equal(CONFUSABLE_CATEGORIES.length, 8, 'Confusable Vocab data must have 8 categories');
+  console.log('✔ Test 1: Datasets count valid: HSK1 (163), HSK2 (165), Combined (328), Compound (77), Topic (163), Lesson (327), Confusable (29 groups in 8 categories)');
 }
 
 // Test 2: Strict Answer Lock - User cannot change answer immediately on the same question
@@ -209,6 +212,73 @@ console.log('--- RUNNING HSK VOCABULARY & MASTERY LOOP TESTS ---');
   assert.ok(filtered.every((q: any) => q.lesson === 1 || q.lesson === 2), 'Only questions from lesson 1 and 2');
   assert.ok(!filtered.some((q: any) => q.lesson > 2), 'No questions from lesson 3-15');
   console.log('✔ Test 12: Quiz restart correctly preserves selected lessons (HSK 2 Lessons 1 & 2 yield 25 questions)');
+}
+
+// Test 13: Confusable vocabulary dataset integrity (29 groups, all with >= 2 words)
+{
+  assert.equal(CONFUSABLE_VOCAB_DATA.length, 29, 'Must have 29 confusable groups');
+  assert.equal(CONFUSABLE_CATEGORIES.length, 8, 'Must have 8 confusable categories');
+
+  CONFUSABLE_VOCAB_DATA.forEach(group => {
+    assert.ok(group.id, 'Group has id');
+    assert.ok(group.part, 'Group has part');
+    assert.ok(group.category, 'Group has category');
+    assert.ok(group.tips && group.tips.length > 0, `Group ${group.id} must have tips`);
+    assert.ok(Array.isArray(group.words) && group.words.length >= 2, `Group ${group.id} must have at least 2 words`);
+    group.words.forEach(w => {
+      assert.ok(w.hanzi, `Group ${group.id} word must have hanzi`);
+      assert.ok(w.pinyin, `Group ${group.id} word must have pinyin`);
+      assert.ok(w.meaning, `Group ${group.id} word must have meaning`);
+    });
+  });
+  console.log('✔ Test 13: Confusable vocabulary data integrity verified (all 29 groups contain >= 2 words with complete Hanzi, Pinyin, Meaning & Tips)');
+}
+
+// Test 14: Individual Meaning Bidirectional Toggle Logic
+{
+  let hideAllMeanings = false;
+  let individualVisibility: Record<string, boolean> = {};
+
+  const getMeaningVisible = (cardKey: string) => {
+    if (individualVisibility[cardKey] !== undefined) {
+      return individualVisibility[cardKey];
+    }
+    return !hideAllMeanings;
+  };
+
+  const toggleMeaning = (cardKey: string) => {
+    const current = getMeaningVisible(cardKey);
+    individualVisibility[cardKey] = !current;
+  };
+
+  const cardKey = 'topic-1';
+
+  // 1. Initially when hideAllMeanings is false, word meaning is visible
+  assert.equal(getMeaningVisible(cardKey), true, 'Initial state: meaning is visible');
+
+  // 2. User clicks on meaning to hide it individually
+  toggleMeaning(cardKey);
+  assert.equal(getMeaningVisible(cardKey), false, 'First click: individual meaning is hidden');
+
+  // 3. User clicks on hidden placeholder to reveal it again
+  toggleMeaning(cardKey);
+  assert.equal(getMeaningVisible(cardKey), true, 'Second click: individual meaning is revealed');
+
+  // 4. Now global hideAllMeanings is enabled
+  hideAllMeanings = true;
+  individualVisibility = {}; // Reset overrides on global switch
+
+  assert.equal(getMeaningVisible(cardKey), false, 'When hideAll is true, initial meaning is hidden');
+
+  // 5. User clicks hidden placeholder to reveal
+  toggleMeaning(cardKey);
+  assert.equal(getMeaningVisible(cardKey), true, 'Clicked when global hidden: meaning reveals');
+
+  // 6. User clicks revealed meaning to re-hide it
+  toggleMeaning(cardKey);
+  assert.equal(getMeaningVisible(cardKey), false, 'Clicked revealed meaning again: meaning re-hides (bidirectional!)');
+
+  console.log('✔ Test 14: Individual meaning bidirectional toggle verified (hide -> show and show -> hide works in both global states)');
 }
 
 console.log('\n🎉 ALL MASTERY LOOP, VOCABULARY & COMPOUND SENTENCES TESTS PASSED SUCCESSFULLY!\n');
