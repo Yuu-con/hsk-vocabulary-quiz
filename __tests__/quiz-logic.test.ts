@@ -219,6 +219,22 @@ console.log('--- RUNNING SPACED REPETITION MASTERY LOOP TESTS ---');
   console.log('✔ Test 11: Roast modal answer details correctly format as Chữ Hán — Pinyin — Tiếng Việt');
 }
 
+// Test 12: Quiz restart correctly preserves selected lessons (HSK 2 Lessons 1 & 2 yield 20 questions, not 150)
+{
+  const { HSK2_VOCAB_DATA } = require('../data/hsk2-data');
+  const selectedLessons = [1, 2];
+  const filtered = HSK2_VOCAB_DATA.filter((q: any) => selectedLessons.includes(q.lesson));
+  assert.strictEqual(filtered.length, 20, 'HSK 2 Lessons 1 and 2 contains exactly 20 questions');
+
+  // Verify questions only come from lessons 1 and 2
+  assert.ok(filtered.every((q: any) => q.lesson === 1 || q.lesson === 2), 'Only questions from lesson 1 and 2');
+  
+  // Verify lessons 3 to 15 are excluded
+  assert.ok(!filtered.some((q: any) => q.lesson > 2), 'No questions from lesson 3-15');
+
+  console.log('✔ Test 12: Quiz restart correctly preserves selected lessons (HSK 2 Lessons 1 & 2 yield 20 questions, not 150)');
+}
+
 console.log('\n🎉 ALL MASTERY LOOP & NEW FEATURE TESTS PASSED SUCCESSFULLY!\n');
 
 

@@ -12,6 +12,7 @@ interface ResultScreenProps {
   totalRounds: number;
   onRestart: () => void;
   onGoHome: () => void;
+  selectedLessons?: number[];
 }
 
 export const ResultScreen: React.FC<ResultScreenProps> = ({
@@ -21,6 +22,7 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
   totalRounds,
   onRestart,
   onGoHome,
+  selectedLessons,
 }) => {
   const initialPercentage =
     totalQuestions > 0 ? ((initialScore / totalQuestions) * 100).toFixed(1) : '100';
@@ -49,7 +51,11 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
         </h1>
 
         <p className="text-sm sm:text-base text-slate-600 font-medium mb-6">
-          Bạn đã ghi nhớ và trả lời chính xác toàn bộ <b>{totalQuestions} từ vựng</b> cấp độ {level.toUpperCase()}!
+          Bạn đã ghi nhớ và trả lời chính xác toàn bộ <b>{totalQuestions} từ vựng</b>
+          {selectedLessons && selectedLessons.length > 0 ? (
+            <span className="font-bold text-rose-600"> (Bài {selectedLessons.join(', ')})</span>
+          ) : null}{' '}
+          cấp độ {level.toUpperCase()}!
         </p>
 
         {/* 100% Mastery Banner */}
@@ -100,7 +106,10 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
             className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-rose-600 to-red-600 hover:from-rose-700 hover:to-red-700 text-white font-bold text-base sm:text-lg shadow-lg shadow-rose-600/20 flex items-center justify-center gap-2 transition active:scale-[0.99]"
           >
             <RotateCcw className="w-5 h-5" />
-            <span>Làm lại từ đầu bài kiểm tra</span>
+            <span>
+              Làm lại từ đầu bài kiểm tra
+              {selectedLessons && selectedLessons.length > 0 ? ` (Bài ${selectedLessons.join(', ')})` : ''}
+            </span>
           </button>
 
           <button

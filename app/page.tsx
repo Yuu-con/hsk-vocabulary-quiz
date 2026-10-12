@@ -40,6 +40,7 @@ export default function HomePage() {
     activeRoundQuestions,
     changeLevel,
     startQuiz,
+    restartQuiz,
     resumeQuiz,
     resetQuiz,
     selectAnswer,
@@ -51,6 +52,7 @@ export default function HomePage() {
     updateCurrentQuestionAnswer,
     resetCurrentQuestionAnswer,
     isCurrentQuestionOverridden,
+    selectedLessons,
   } = useQuiz('hsk1');
 
   const { isAdmin, adminUser } = useAdminAuth();
@@ -71,7 +73,7 @@ export default function HomePage() {
   }
 
   const handleConfirmReset = () => {
-    resetQuiz();
+    restartQuiz();
     setShowResetConfirm(false);
   };
 
@@ -84,7 +86,9 @@ export default function HomePage() {
             <div className="text-3xl mb-2">⚠️</div>
             <h3 className="text-lg font-bold text-slate-900 mb-1">Bắt đầu lại từ đầu?</h3>
             <p className="text-xs sm:text-sm text-slate-500 mb-6 leading-relaxed">
-              Toàn bộ tiến độ của cấp độ {level.toUpperCase()} sẽ bị xóa và bạn sẽ làm lại từ Vòng 1.
+              Tiến độ hiện tại của cấp độ {level.toUpperCase()}
+              {selectedLessons && selectedLessons.length > 0 ? ` (Bài ${selectedLessons.join(', ')})` : ''}{' '}
+              sẽ được làm lại từ Vòng 1.
             </p>
             <div className="flex items-center gap-3">
               <button
@@ -97,7 +101,7 @@ export default function HomePage() {
                 onClick={handleConfirmReset}
                 className="flex-1 py-2.5 px-4 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-medium text-sm shadow-md transition"
               >
-                Đồng ý xóa
+                Đồng ý làm lại
               </button>
             </div>
           </div>
@@ -204,7 +208,8 @@ export default function HomePage() {
                   totalQuestions={totalFullQuestions}
                   initialScore={initialFirstRoundScore}
                   totalRounds={round}
-                  onRestart={startQuiz}
+                  selectedLessons={selectedLessons}
+                  onRestart={restartQuiz}
                   onGoHome={() => setMode('idle')}
                 />
               </div>

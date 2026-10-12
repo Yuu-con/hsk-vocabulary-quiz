@@ -5,6 +5,7 @@ import { BookOpen, CheckCircle, HelpCircle, Sparkles, RotateCcw, ArrowRight, Shu
 import { QuizLevel } from '@/types/quiz';
 import { HSK1_LESSON_INFO, HSK2_LESSON_INFO } from '@/data/lesson-info';
 import { useRoastMode } from '@/hooks/useRoastMode';
+import { getSavedLessonPreferences, saveLessonPreferences } from '@/lib/quizPreferences';
 
 interface StartScreenProps {
   currentLevel: QuizLevel;
@@ -42,11 +43,19 @@ export const StartScreen: React.FC<StartScreenProps> = ({
   const [selectedLessons, setSelectedLessons] = useState<number[]>([]);
   const [shuffleQuestions, setShuffleQuestions] = useState<boolean>(true);
 
-  // Reset selected lessons when level changes
+  // Restore saved lesson preferences whenever level changes or on mount
   useEffect(() => {
-    setSelectedLessons([]);
-    setScopeMode('all');
-  }, [currentLevel]);
+    const saved = getSavedLessonPreferences(currentLevel);
+    const validLessons = saved.selectedLessons.filter(l => l <= currentConfig.totalLessons);
+    if (saved.scopeMode === 'custom' && validLessons.length > 0) {
+      setScopeMode('custom');
+      setSelectedLessons(validLessons);
+    } else {
+      setScopeMode('all');
+      setSelectedLessons([]);
+    }
+    setShuffleQuestions(saved.shuffle);
+  }, [currentLevel, currentConfig.totalLessons]);
 
   const totalLessons = currentConfig.totalLessons;
   const lessonList = useMemo(() => {
@@ -73,8 +82,14 @@ export const StartScreen: React.FC<StartScreenProps> = ({
 
   const handleStart = () => {
     if (isStartDisabled) return;
+    const lessonsToUse = scopeMode === 'custom' ? selectedLessons : undefined;
+    saveLessonPreferences(currentLevel, {
+      scopeMode,
+      selectedLessons: scopeMode === 'custom' ? selectedLessons : [],
+      shuffle: shuffleQuestions,
+    });
     onStartQuiz({
-      selectedLessons: scopeMode === 'custom' ? selectedLessons : undefined,
+      selectedLessons: lessonsToUse,
       shuffle: shuffleQuestions,
     });
   };
