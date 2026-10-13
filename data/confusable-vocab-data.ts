@@ -20,12 +20,12 @@ export const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = [
       {
         "hanzi": "他",
         "pinyin": "tā",
-        "meaning": "Anh ấy, ông ấy"
+        "meaning": "Anh ấy, ông ấy, cậu ấy"
       },
       {
         "hanzi": "她",
         "pinyin": "tā",
-        "meaning": "Cô ấy, bà ấy"
+        "meaning": "Cô ấy, bà ấy, chị ấy"
       },
       {
         "hanzi": "它",
@@ -43,12 +43,12 @@ export const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = [
       {
         "hanzi": "做",
         "pinyin": "zuò",
-        "meaning": "Làm, chế tạo"
+        "meaning": "Làm, nấu (*做菜: nấu ăn*)"
       },
       {
         "hanzi": "坐",
         "pinyin": "zuò",
-        "meaning": "Ngồi; đi (xe, tàu)"
+        "meaning": "Ngồi"
       }
     ],
     "tips": "• **做**: Hành động tạo ra công việc/sản phẩm (做饭 = nấu cơm, 做作业 = làm bài tập).\n• **坐**: Tư thế ngồi hoặc ngồi trên phương tiện (请坐 = mời ngồi, 坐车 = đi xe)."
@@ -61,12 +61,12 @@ export const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = [
       {
         "hanzi": "快",
         "pinyin": "kuài",
-        "meaning": "Nhanh; sắp sửa"
+        "meaning": "Nhanh; sắp sửa (*快...了*)"
       },
       {
         "hanzi": "块",
         "pinyin": "kuài",
-        "meaning": "Đồng (tiền); miếng, cục"
+        "meaning": "Đồng, tệ (văn nói của đồng Nhân dân tệ)"
       }
     ],
     "tips": "• **快**: Tốc độ hoặc thời gian sắp tới (快走 = đi nhanh, 快到了 = sắp đến rồi).\n• **块**: Lượng từ chỉ tiền tệ (五块钱) hoặc vật dạng khối (一块蛋糕 = 1 miếng bánh)."
@@ -79,12 +79,12 @@ export const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = [
       {
         "hanzi": "进",
         "pinyin": "jìn",
-        "meaning": "Vào"
+        "meaning": "Vào, đi vào"
       },
       {
         "hanzi": "近",
         "pinyin": "jìn",
-        "meaning": "Gần"
+        "meaning": "Gần (khoảng cách, thời gian)"
       }
     ],
     "tips": "• **进**: Động từ di chuyển vào trong, trái nghĩa với 出 (ra).\n• **近**: Cự ly khoảng cách, trái nghĩa với 远 (xa)."
@@ -97,7 +97,7 @@ export const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = [
       {
         "hanzi": "完",
         "pinyin": "wán",
-        "meaning": "Xong, hết"
+        "meaning": "Xong, hết (kết quả của hành động)"
       },
       {
         "hanzi": "玩",
@@ -115,7 +115,7 @@ export const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = [
       {
         "hanzi": "要",
         "pinyin": "yào",
-        "meaning": "Cần, muốn; sắp"
+        "meaning": "Muốn; cần/phải; sắp sửa"
       },
       {
         "hanzi": "药",
@@ -133,12 +133,12 @@ export const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = [
       {
         "hanzi": "的",
         "pinyin": "de",
-        "meaning": "Của (nối danh từ)"
+        "meaning": "Của (chỉ sở hữu); thành phần nối định ngữ - trung tâm ngữ"
       },
       {
         "hanzi": "得",
         "pinyin": "de",
-        "meaning": "Trợ từ mức độ"
+        "meaning": "Dùng sau ĐT/TT để nối với bổ ngữ mức độ/khả năng"
       }
     ],
     "tips": "• **的**: Đứng trước danh từ (我的书 = sách của tôi).\n• **得**: Đứng sau động từ miêu tả trạng thái/mức độ (跑得快 = chạy nhanh)."
@@ -169,7 +169,7 @@ export const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = [
       {
         "hanzi": "哪",
         "pinyin": "nǎ (thanh 3)",
-        "meaning": "Nào (dùng để hỏi)"
+        "meaning": "Nào, đâu (hỏi lựa chọn)"
       },
       {
         "hanzi": "那",
@@ -187,12 +187,12 @@ export const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = [
       {
         "hanzi": "哪儿",
         "pinyin": "nǎr (thanh 3)",
-        "meaning": "Ở đâu, chỗ nào"
+        "meaning": "Ở đâu, chỗ nào (hỏi vị trí)"
       },
       {
         "hanzi": "那儿",
         "pinyin": "nàr (thanh 4)",
-        "meaning": "Chỗ kia, nơi đó"
+        "meaning": "Chỗ đó, nơi đó, bên kia"
       }
     ],
     "tips": "• Tương ứng với cặp 哪 / 那 nhưng thêm âm uốn lưỡi để chỉ rõ địa điểm."
@@ -205,12 +205,12 @@ export const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = [
       {
         "hanzi": "白",
         "pinyin": "bái (thanh 2)",
-        "meaning": "Màu trắng"
+        "meaning": "Trắng, màu trắng"
       },
       {
         "hanzi": "百",
         "pinyin": "bǎi (thanh 3)",
-        "meaning": "Trăm (số 100)"
+        "meaning": "Trăm (100)"
       }
     ],
     "tips": "• **白**: Đọc vuốt lên (sắc).\n• **百**: Hạ giọng (hỏi); chữ **百** có thêm nét ngang trên đầu chữ **白**."
@@ -228,7 +228,7 @@ export const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = [
       {
         "hanzi": "晴",
         "pinyin": "qíng (thanh 2)",
-        "meaning": "Trời nắng, tạnh ráo"
+        "meaning": "Nắng, tạnh ráo, trời quang"
       }
     ],
     "tips": "• **请**: Có bộ Ngôn (言) liên quan đến lời nói, mời mọc.\n• **晴**: Có bộ Nhật (日) liên quan đến mặt trời, nắng ráo."
@@ -246,7 +246,7 @@ export const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = [
       {
         "hanzi": "和",
         "pinyin": "hé (thanh 2)",
-        "meaning": "Và, cùng với"
+        "meaning": "Và, với (nối danh từ/cụm danh từ)"
       }
     ],
     "tips": "• **喝**: Đọc đều cao (喝水 = uống nước).\n• **和**: Đọc vuốt lên (我和你 = tôi và bạn)."
@@ -259,12 +259,12 @@ export const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = [
       {
         "hanzi": "雨",
         "pinyin": "yǔ (thanh 3)",
-        "meaning": "Mưa"
+        "meaning": "Mưa (*下雨: trời mưa*)"
       },
       {
         "hanzi": "鱼",
         "pinyin": "yú (thanh 2)",
-        "meaning": "Con cá"
+        "meaning": "Con cá, món cá"
       }
     ],
     "tips": "• **雨**: Đọc giọng trầm trong 下雨 (xiàyǔ = trời mưa).\n• **鱼**: Đọc vuốt lên trong 吃鱼 (chī yú = ăn cá)."
@@ -295,12 +295,12 @@ export const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = [
       {
         "hanzi": "坐 / 做",
         "pinyin": "zuò",
-        "meaning": "Ngồi / Làm"
+        "meaning": "Ngồi / Làm, nấu"
       },
       {
         "hanzi": "错",
         "pinyin": "cuò",
-        "meaning": "Sai, lỗi"
+        "meaning": "Sai, nhầm"
       }
     ],
     "tips": "• **zuò**: Phát âm nhẹ, không bật hơi.\n• **cuò**: Cắn nhẹ đầu lưỡi rồi bật luồng hơi mạnh ra ngoài."
@@ -313,12 +313,12 @@ export const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = [
       {
         "hanzi": "走",
         "pinyin": "zǒu",
-        "meaning": "Đi bộ, rời đi"
+        "meaning": "Đi, đi bộ; rời đi"
       },
       {
         "hanzi": "左",
         "pinyin": "zuǒ",
-        "meaning": "Bên trái"
+        "meaning": "Bên trái, phía bên trái (*左边*)"
       }
     ],
     "tips": "• **zǒu**: Vần -ou (走路 = đi bộ).\n• **zuǒ**: Vần -uo (左边 = phía bên trái)."
@@ -336,7 +336,7 @@ export const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = [
       {
         "hanzi": "问",
         "pinyin": "wèn",
-        "meaning": "Hỏi"
+        "meaning": "Hỏi (*请问: xin hỏi*)"
       }
     ],
     "tips": "• **mén**: Bắt đầu bằng âm môi m-.\n• **wèn**: Bắt đầu bằng âm w-; có bộ Khẩu (口) nằm trong khung cửa 门 để hỏi."
@@ -354,7 +354,7 @@ export const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = [
       {
         "hanzi": "忙",
         "pinyin": "máng",
-        "meaning": "Bận rộn"
+        "meaning": "Bận, bận rộn"
       }
     ],
     "tips": "• **-an**: Vần mũi trước, đầu lưỡi chạm chân răng trên khi dứt âm.\n• **-ang**: Vần mũi sau, gốc lưỡi nâng lên chạm ngạc mềm, âm ngân vang."
@@ -367,12 +367,12 @@ export const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = [
       {
         "hanzi": "进 / 近",
         "pinyin": "jìn",
-        "meaning": "Vào / Gần"
+        "meaning": "Vào, đi vào / Gần (khoảng cách, thời gian)"
       },
       {
         "hanzi": "新",
         "pinyin": "xīn",
-        "meaning": "Mới"
+        "meaning": "Mới (đối lập với cũ)"
       }
     ],
     "tips": "• **j-**: Âm mặt lưỡi dứt khoát.\n• **x-**: Âm luồng gió trượt nhẹ qua mặt lưỡi."
@@ -385,12 +385,12 @@ export const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = [
       {
         "hanzi": "点",
         "pinyin": "diǎn",
-        "meaning": "Giờ; một chút"
+        "meaning": "Giờ (mốc giờ trên đồng hồ); một ít, một chút (*一点儿*)"
       },
       {
         "hanzi": "店",
         "pinyin": "diàn",
-        "meaning": "Cửa hàng, quán"
+        "meaning": "Cửa hàng, tiệm buôn (*商店*); nhà hàng, quán ăn (*饭店*)"
       }
     ],
     "tips": "• Cùng âm dian; **点** mang thanh 3 (hỏi); **店** mang thanh 4 (dứt khoát trong 商店, 饭店)."
@@ -408,10 +408,10 @@ export const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = [
       {
         "hanzi": "考试",
         "pinyin": "kǎoshì",
-        "meaning": "Thi cử, bài thi"
+        "meaning": "Đi thi, kiểm tra; bài thi, kỳ thi"
       }
     ],
-    "tips": "• **开始**: **kāi** (thanh 1, cao bằng): mở ra, bắt đầu.\n*Phản xạ:* 考试开始了！ (Kǎoshì kāishǐ le! = Bài thi bắt đầu rồi!)\n• **考试**: **kǎo** (thanh 3, trầm): kiểm tra; **shì** (thanh 4, dằn giọng): bài thi."
+    "tips": "• **开始**: **kāi** (thanh 1, cao bằng): mở ra, bắt đầu.\n• *Phản xạ:* 考试开始了！ (Kǎoshì kāishǐ le! = Bài thi bắt đầu rồi!)\n• **考试**: **kǎo** (thanh 3, trầm): kiểm tra; **shì** (thanh 4, dằn giọng): bài thi."
   },
   {
     "id": 23,
@@ -421,21 +421,21 @@ export const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = [
       {
         "hanzi": "旁边",
         "pinyin": "pángbiān",
-        "meaning": "Bên cạnh"
+        "meaning": "Bên cạnh, kế bên"
       },
       {
         "hanzi": "房间",
         "pinyin": "fángjiān",
-        "meaning": "Căn phòng"
+        "meaning": "Phòng, căn phòng"
       }
     ],
-    "tips": "• **旁边**: Đuôi **边 (biān)** chỉ phương hướng, cạnh bên. Âm đầu là p-.\n*Phản xạ:* 我的房间旁边是学校。 (Bên cạnh phòng tôi là trường học).\n• **房间**: Đuôi **间 (jiān)** chỉ không gian, gian phòng. Âm đầu f- phát âm lướt răng môi gần giống âm Ph (Phòng)."
+    "tips": "• **旁边**: Đuôi **边 (biān)** chỉ phương hướng, cạnh bên. Âm đầu là p-.\n• *Phản xạ:* 我的房间旁边是学校。 (Bên cạnh phòng tôi là trường học).\n• **房间**: Đuôi **间 (jiān)** chỉ không gian, gian phòng. Âm đầu f- phát âm lướt răng môi gần giống âm Ph (Phòng)."
   },
   {
     "id": 24,
     "part": "PHẦN 2: CÁC TỪ GHÉP TƯƠNG ĐỒNG CẤU TRÚC",
     "category": "3. Nhóm chung hậu tố (Đuôi từ)",
-    "prefixOrSuffix": "-xīn *(Cảm xúc)*",
+    "prefixOrSuffix": "-xīn (Cảm xúc)",
     "words": [
       {
         "hanzi": "开心",
@@ -459,17 +459,17 @@ export const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = [
     "id": 25,
     "part": "PHẦN 2: CÁC TỪ GHÉP TƯƠNG ĐỒNG CẤU TRÚC",
     "category": "3. Nhóm chung hậu tố (Đuôi từ)",
-    "prefixOrSuffix": "-hòu *(Thời gian)*",
+    "prefixOrSuffix": "-hòu (Thời gian)",
     "words": [
       {
         "hanzi": "时候",
         "pinyin": "shíhou",
-        "meaning": "Lúc, khi"
+        "meaning": "Lúc, khi (*...的时候: lúc/khi...*)"
       },
       {
         "hanzi": "以后",
         "pinyin": "yǐhòu",
-        "meaning": "Sau khi, sau này"
+        "meaning": "Sau này, sau khi, về sau"
       }
     ],
     "tips": "• **时候**: Đi trong cụm ...的时候 chỉ việc đang xảy ra (吃饭的时候 = lúc đang ăn).\n• **以后**: Đứng sau hành động hoặc đầu câu chỉ việc sau đó (吃饭以后 = sau khi ăn xong)."
@@ -478,7 +478,7 @@ export const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = [
     "id": 26,
     "part": "PHẦN 2: CÁC TỪ GHÉP TƯƠNG ĐỒNG CẤU TRÚC",
     "category": "3. Nhóm chung hậu tố (Đuôi từ)",
-    "prefixOrSuffix": "-qì *(Khí)*",
+    "prefixOrSuffix": "-qì (Khí)",
     "words": [
       {
         "hanzi": "天气",
@@ -488,7 +488,7 @@ export const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = [
       {
         "hanzi": "客气",
         "pinyin": "kèqi",
-        "meaning": "Khách sáo"
+        "meaning": "Khách sáo (*不客气: đừng khách sáo, không có chi*)"
       },
       {
         "hanzi": "生气",
@@ -502,7 +502,7 @@ export const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = [
     "id": 27,
     "part": "PHẦN 2: CÁC TỪ GHÉP TƯƠNG ĐỒNG CẤU TRÚC",
     "category": "3. Nhóm chung hậu tố (Đuôi từ)",
-    "prefixOrSuffix": "-jī *(Máy móc)*",
+    "prefixOrSuffix": "-jī (Máy móc)",
     "words": [
       {
         "hanzi": "飞机",
@@ -521,7 +521,7 @@ export const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = [
     "id": 28,
     "part": "PHẦN 2: CÁC TỪ GHÉP TƯƠNG ĐỒNG CẤU TRÚC",
     "category": "3. Nhóm chung hậu tố (Đuôi từ)",
-    "prefixOrSuffix": "-yuàn *(Khuôn viên)*",
+    "prefixOrSuffix": "-yuàn (Khuôn viên)",
     "words": [
       {
         "hanzi": "医院",
@@ -545,7 +545,7 @@ export const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = [
       {
         "hanzi": "电话",
         "pinyin": "diànhuà",
-        "meaning": "Điện thoại / Cuộc gọi"
+        "meaning": "Điện thoại (*打电话: gọi điện thoại*)"
       },
       {
         "hanzi": "电脑",
@@ -555,12 +555,12 @@ export const CONFUSABLE_VOCAB_DATA: ConfusableGroupItem[] = [
       {
         "hanzi": "电视",
         "pinyin": "diànshì",
-        "meaning": "Ti-vi"
+        "meaning": "Ti vi, truyền hình"
       },
       {
         "hanzi": "电影",
         "pinyin": "diànyǐng",
-        "meaning": "Phim chiếu rạp"
+        "meaning": "Phim ảnh, điện ảnh"
       }
     ],
     "tips": "• **电话**: **huà**: Lời nói, giao tiếp nói chuyện.\n• **电脑**: **nǎo**: Bộ não, cỗ máy xử lý dữ liệu thông minh như não người.\n• **电视**: **shì**: Thị giác, nhìn thấy (màn hình hiển thị hình ảnh truyền hình).\n• **电影**: **yǐng**: Hình bóng (những thước phim nghệ thuật trình chiếu)."

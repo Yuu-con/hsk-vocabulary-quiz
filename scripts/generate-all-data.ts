@@ -7,7 +7,7 @@ const HSK2_QUIZ_PATH = 'c:/Users/dyysi/Downloads/b_tr_c_nghi_m_to_n_di_n_t_v_ng_
 const COMPOUND_PATH = 'c:/Users/dyysi/Downloads/gemini-code-1791822613434.md';
 const TOPIC_VOCAB_PATH = 'c:/Users/dyysi/Downloads/Tong_hop_tu_vung_HSK_1_va_2_theo_chu_de.md';
 const LESSON_VOCAB_PATH = 'c:/Users/dyysi/Downloads/t_v_ng_chu_n_hsk_1_v_hsk_2_theo_t_ng_b_i.md';
-const CONFUSABLE_PATH = 'c:/Users/dyysi/Downloads/gemini-code-1791834423762.md';
+const CONFUSABLE_PATH = 'c:/Users/dyysi/Downloads/gemini-code-1791835961977.md';
 
 // Target files in data/
 const DATA_DIR = path.resolve(__dirname, '../data');
@@ -302,7 +302,8 @@ function parseLessonVocab(filePath: string) {
 
 // 5. Parse Confusable Vocabulary (Từ vựng dễ nhầm lẫn)
 function parseConfusableVocab(filePath: string) {
-  const content = fs.readFileSync(filePath, 'utf8');
+  const rawContent = fs.readFileSync(filePath, 'utf8');
+  const content = rawContent.replace(/\[cite:\s*[\d,\s]+\]/gi, '');
   const sections = content.split(/\n(?=###\s+)/);
 
   let currentPart = 'PHẦN 1: CÁC CẶP TỪ ĐƠN & TỐI THIỂU VỀ NGỮ ÂM';
@@ -332,7 +333,7 @@ function parseConfusableVocab(filePath: string) {
           const hanzi = parts[0].replace(/\*\*/g, '').trim();
           const pinyin = parts[1].trim();
           const meaning = parts[2].trim();
-          const tip = parts[3].replace(/<br>/gi, '\n').trim();
+          const tip = parts[3].replace(/<br>/gi, '\n').replace(/^•\s*/, '').trim();
           words.push({ hanzi, pinyin, meaning });
           tipParts.push(`• **${hanzi}**: ${tip}`);
         }
@@ -358,7 +359,7 @@ function parseConfusableVocab(filePath: string) {
           const hanzi = parts[0].replace(/\*\*/g, '').trim();
           const pinyin = parts[1].trim();
           const meaning = parts[2].trim();
-          const tip = parts[3].replace(/<br>/gi, '\n').trim();
+          const tip = parts[3].replace(/<br>/gi, '\n').replace(/^•\s*/, '').trim();
           words.push({ hanzi, pinyin, meaning });
           tipParts.push(`• **${hanzi}**: ${tip}`);
         }
@@ -386,7 +387,7 @@ function parseConfusableVocab(filePath: string) {
           let tipRaw = '';
 
           if (parts.length === 5) {
-            prefixOrSuffix = parts[0].replace(/<br>/gi, ' ').replace(/\*\*/g, '').trim();
+            prefixOrSuffix = parts[0].replace(/<br>/gi, ' ').replace(/\*\*/g, '').replace(/\*/g, '').trim();
             hanziRaw = parts[1];
             pinyinRaw = parts[2];
             meaningRaw = parts[3];

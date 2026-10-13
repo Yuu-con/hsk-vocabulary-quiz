@@ -17,7 +17,7 @@ import { VOCAB_LESSON_DATA } from '@/data/vocab-study-lesson-data';
 import { VOCAB_TOPIC_DATA, VOCAB_TOPIC_CATEGORIES } from '@/data/vocab-study-topic-data';
 import { COMPOUND_PHRASES_DATA } from '@/data/compound-sentences-data';
 import { CONFUSABLE_VOCAB_DATA, CONFUSABLE_CATEGORIES } from '@/data/confusable-vocab-data';
-import { HSK1_LESSON_INFO, HSK2_LESSON_INFO, COMPOUND_SECTION_INFO } from '@/data/lesson-info';
+import { COMPOUND_SECTION_INFO } from '@/data/lesson-info';
 import { playChineseAudio } from '@/lib/quiz-utils';
 
 type StudyMode = 'by_topic' | 'by_lesson' | 'compound' | 'confusable';
@@ -38,6 +38,29 @@ function parseNote(noteText?: string) {
   };
 }
 
+// Helper to render inline **bold** and *italic* markdown cleanly
+function renderFormattedText(text: string): React.ReactNode {
+  if (!text) return null;
+  const parts = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*)/g);
+  return parts.map((part, idx) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return (
+        <strong key={idx} className="font-extrabold text-slate-900">
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
+    if (part.startsWith('*') && part.endsWith('*')) {
+      return (
+        <em key={idx} className="italic text-rose-700 font-semibold">
+          {part.slice(1, -1)}
+        </em>
+      );
+    }
+    return <React.Fragment key={idx}>{part}</React.Fragment>;
+  });
+}
+
 export const VocabStudySection: React.FC = () => {
   // Default to by_topic
   const [studyMode, setStudyMode] = useState<StudyMode>('by_topic');
@@ -53,9 +76,18 @@ export const VocabStudySection: React.FC = () => {
   // Topic sub-filter
   const [selectedTopicId, setSelectedTopicId] = useState<number>(0); // 0 = all
 
-  // Lesson sub-filters
+  // Lesson sub-filters (multi-select: empty array = all 15 lessons)
   const [lessonLevel, setLessonLevel] = useState<'hsk1' | 'hsk2'>('hsk1');
-  const [selectedLessonNum, setSelectedLessonNum] = useState<number>(0); // 0 = all
+  const [selectedLessons, setSelectedLessons] = useState<number[]>([]);
+
+  const toggleLessonSelection = (lessonNum: number) => {
+    setSelectedLessons(prev => {
+      if (prev.includes(lessonNum)) {
+        return prev.filter(n => n !== lessonNum);
+      }
+      return [...prev, lessonNum].sort((a, b) => a - b);
+    });
+  };
 
   // Compound sub-filter
   const [selectedCompoundSecId, setSelectedCompoundSecId] = useState<number>(0); // 0 = all
@@ -118,11 +150,11 @@ export const VocabStudySection: React.FC = () => {
     });
   }, [selectedTopicId, searchQuery]);
 
-  // 2. Filtered Lesson Items
+  // 2. Filtered Lesson Items (supports multi-select lessons)
   const filteredLessonItems = useMemo(() => {
     return VOCAB_LESSON_DATA.filter(item => {
       if (item.level !== lessonLevel) return false;
-      if (selectedLessonNum !== 0 && item.lesson !== selectedLessonNum) return false;
+      if (selectedLessons.length > 0 && !selectedLessons.includes(item.lesson)) return false;
       if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase().trim();
         const matchHanzi = item.hanzi.toLowerCase().includes(q);
@@ -133,7 +165,7 @@ export const VocabStudySection: React.FC = () => {
       }
       return true;
     });
-  }, [lessonLevel, selectedLessonNum, searchQuery]);
+  }, [lessonLevel, selectedLessons, searchQuery]);
 
   // 3. Filtered Compound Items
   const filteredCompoundItems = useMemo(() => {
@@ -268,11 +300,11 @@ export const VocabStudySection: React.FC = () => {
               </span>
             </div>
 
-            {/* Quick Horizontal Topic Pill Bar */}
-            <div className="flex items-center gap-1.5 overflow-x-auto pb-2 pt-0.5 scrollbar-thin">
+            {/* Compact Wrapped Topic Pill Bar */}
+            <div className="flex flex-wrap items-center gap-1.5 pt-0.5">
               <button
                 onClick={() => setSelectedTopicId(0)}
-                className={`px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all shrink-0 ${
+                className={`px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all cursor-pointer ${
                   selectedTopicId === 0
                     ? 'bg-gradient-to-r from-rose-500 to-red-600 text-white shadow-sm'
                     : 'bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100'
@@ -287,7 +319,7 @@ export const VocabStudySection: React.FC = () => {
                   <button
                     key={cat.id}
                     onClick={() => setSelectedTopicId(cat.id)}
-                    className={`px-2.5 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all shrink-0 flex items-center gap-1.5 ${
+                    className={`px-2.5 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all flex items-center gap-1.5 cursor-pointer ${
                       isSelected
                         ? 'bg-gradient-to-r from-rose-500 to-red-600 text-white shadow-sm'
                         : 'bg-slate-50 text-slate-600 border border-slate-200 hover:border-slate-300 hover:bg-slate-100'
@@ -309,17 +341,17 @@ export const VocabStudySection: React.FC = () => {
           </div>
         )}
 
-        {/* SUB-FILTER 2: THEO TỪNG BÀI HỌC */}
+        {/* SUB-FILTER 2: THEO TỪNG BÀI HỌC (MULTI-SELECT & COMPACT WRAPPED GRID) */}
         {studyMode === 'by_lesson' && (
-          <div className="space-y-2.5 pb-2 border-b border-slate-100">
+          <div className="space-y-3 pb-2 border-b border-slate-100">
             <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-bold text-slate-700">
               <div className="inline-flex p-1 bg-slate-100 rounded-xl">
                 <button
                   onClick={() => {
                     setLessonLevel('hsk1');
-                    setSelectedLessonNum(0);
+                    setSelectedLessons([]);
                   }}
-                  className={`px-3 py-1.5 rounded-lg transition ${
+                  className={`px-3 py-1.5 rounded-lg transition cursor-pointer ${
                     lessonLevel === 'hsk1'
                       ? 'bg-white text-rose-600 shadow-xs'
                       : 'text-slate-600 hover:text-slate-900'
@@ -330,9 +362,9 @@ export const VocabStudySection: React.FC = () => {
                 <button
                   onClick={() => {
                     setLessonLevel('hsk2');
-                    setSelectedLessonNum(0);
+                    setSelectedLessons([]);
                   }}
-                  className={`px-3 py-1.5 rounded-lg transition ${
+                  className={`px-3 py-1.5 rounded-lg transition cursor-pointer ${
                     lessonLevel === 'hsk2'
                       ? 'bg-white text-rose-600 shadow-xs'
                       : 'text-slate-600 hover:text-slate-900'
@@ -342,44 +374,48 @@ export const VocabStudySection: React.FC = () => {
                 </button>
               </div>
 
-              <span className="text-slate-400 font-normal">
-                {selectedLessonNum === 0 ? 'Tất cả 15 bài' : `Bài ${selectedLessonNum}`}
-              </span>
+              <div className="flex items-center gap-2">
+                <span className="text-slate-500 font-medium">
+                  {selectedLessons.length === 0
+                    ? 'Đang xem: Tất cả 15 bài (có thể chọn nhiều bài cùng lúc)'
+                    : `Đã chọn ${selectedLessons.length} bài: ${selectedLessons.map(n => `Bài ${n}`).join(', ')}`}
+                </span>
+                {selectedLessons.length > 0 && (
+                  <button
+                    onClick={() => setSelectedLessons([])}
+                    className="px-2 py-0.5 rounded-md bg-rose-50 text-rose-600 hover:bg-rose-100 font-bold text-[11px] transition cursor-pointer border border-rose-200"
+                  >
+                    Bỏ chọn
+                  </button>
+                )}
+              </div>
             </div>
 
-            {/* Quick Horizontal Lesson Pill Bar */}
-            <div className="flex items-center gap-1.5 overflow-x-auto pb-2 pt-0.5 scrollbar-thin">
+            {/* Compact Multi-Select Lesson Buttons (No Horizontal Scrollbar) */}
+            <div className="flex flex-wrap items-center gap-1.5">
               <button
-                onClick={() => setSelectedLessonNum(0)}
-                className={`px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all shrink-0 ${
-                  selectedLessonNum === 0
+                onClick={() => setSelectedLessons([])}
+                className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+                  selectedLessons.length === 0
                     ? 'bg-gradient-to-r from-rose-500 to-red-600 text-white shadow-sm'
                     : 'bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100'
                 }`}
               >
-                Tất cả các bài
+                Tất cả
               </button>
               {Array.from({ length: 15 }, (_, i) => i + 1).map(n => {
-                const isSelected = selectedLessonNum === n;
-                const lessonInfo =
-                  lessonLevel === 'hsk1'
-                    ? HSK1_LESSON_INFO.find(l => l.lesson === n)
-                    : HSK2_LESSON_INFO.find(l => l.lesson === n);
+                const isSelected = selectedLessons.includes(n);
                 return (
                   <button
                     key={n}
-                    onClick={() => setSelectedLessonNum(n)}
-                    title={`Bài ${n}: ${lessonInfo?.title} (${lessonInfo?.viTitle})`}
-                    className={`px-2.5 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all shrink-0 flex items-center gap-1.5 ${
+                    onClick={() => toggleLessonSelection(n)}
+                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                       isSelected
-                        ? 'bg-gradient-to-r from-rose-500 to-red-600 text-white shadow-sm'
-                        : 'bg-slate-50 text-slate-600 border border-slate-200 hover:border-slate-300 hover:bg-slate-100'
+                        ? 'bg-gradient-to-r from-rose-500 to-red-600 text-white shadow-sm ring-2 ring-rose-200'
+                        : 'bg-slate-50 text-slate-600 border border-slate-200 hover:border-rose-300 hover:bg-rose-50/50'
                     }`}
                   >
-                    <span>Bài {n}</span>
-                    <span className={`text-[10px] font-normal ${isSelected ? 'text-rose-100' : 'text-slate-400'}`}>
-                      {lessonInfo?.title}
-                    </span>
+                    Bài {n}
                   </button>
                 );
               })}
@@ -400,11 +436,11 @@ export const VocabStudySection: React.FC = () => {
               </span>
             </div>
 
-            {/* Quick Horizontal Compound Pill Bar */}
-            <div className="flex items-center gap-1.5 overflow-x-auto pb-2 pt-0.5 scrollbar-thin">
+            {/* Compact Wrapped Compound Pill Bar */}
+            <div className="flex flex-wrap items-center gap-1.5 pt-0.5">
               <button
                 onClick={() => setSelectedCompoundSecId(0)}
-                className={`px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all shrink-0 ${
+                className={`px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all cursor-pointer ${
                   selectedCompoundSecId === 0
                     ? 'bg-gradient-to-r from-rose-500 to-red-600 text-white shadow-sm'
                     : 'bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100'
@@ -418,7 +454,7 @@ export const VocabStudySection: React.FC = () => {
                   <button
                     key={sec.lesson}
                     onClick={() => setSelectedCompoundSecId(sec.lesson)}
-                    className={`px-2.5 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all shrink-0 flex items-center gap-1.5 ${
+                    className={`px-2.5 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all flex items-center gap-1.5 cursor-pointer ${
                       isSelected
                         ? 'bg-gradient-to-r from-rose-500 to-red-600 text-white shadow-sm'
                         : 'bg-slate-50 text-slate-600 border border-slate-200 hover:border-slate-300 hover:bg-slate-100'
@@ -450,11 +486,11 @@ export const VocabStudySection: React.FC = () => {
               </span>
             </div>
 
-            {/* Quick Horizontal Confusable Category Pill Bar */}
-            <div className="flex items-center gap-1.5 overflow-x-auto pb-2 pt-0.5 scrollbar-thin">
+            {/* Compact Wrapped Confusable Category Pill Bar */}
+            <div className="flex flex-wrap items-center gap-1.5 pt-0.5">
               <button
                 onClick={() => setSelectedConfusableCat('all')}
-                className={`px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all shrink-0 ${
+                className={`px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all cursor-pointer ${
                   selectedConfusableCat === 'all'
                     ? 'bg-gradient-to-r from-amber-500 to-rose-600 text-white shadow-sm'
                     : 'bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100'
@@ -468,7 +504,7 @@ export const VocabStudySection: React.FC = () => {
                   <button
                     key={cat}
                     onClick={() => setSelectedConfusableCat(cat)}
-                    className={`px-2.5 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all shrink-0 flex items-center gap-1.5 ${
+                    className={`px-2.5 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all flex items-center gap-1.5 cursor-pointer ${
                       isSelected
                         ? 'bg-gradient-to-r from-amber-500 to-rose-600 text-white shadow-sm'
                         : 'bg-slate-50 text-slate-600 border border-slate-200 hover:border-slate-300 hover:bg-slate-100'
@@ -759,8 +795,8 @@ export const VocabStudySection: React.FC = () => {
                   {/* ROW 1 (TOP OF CARD): LESSON BADGE & WORD TYPE ON LEFT, SPEAKER ON RIGHT */}
                   <div className="flex items-center justify-between gap-2 pb-2.5 border-b border-slate-100">
                     <div className="flex items-center gap-1.5 truncate max-w-[80%]">
-                      <span className="px-2.5 py-1 rounded-lg bg-rose-50 text-rose-700 font-bold text-xs border border-rose-100 truncate">
-                        Bài {item.lesson}: {item.lessonTitle}
+                      <span className="px-2.5 py-1 rounded-lg bg-rose-50 text-rose-700 font-bold text-xs border border-rose-100 shrink-0">
+                        Bài {item.lesson}
                       </span>
                       <span className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 font-semibold text-[11px] shrink-0">
                         {item.wordType}
@@ -796,7 +832,7 @@ export const VocabStudySection: React.FC = () => {
                         className="group flex items-center justify-between gap-2 p-2 rounded-xl bg-slate-50 hover:bg-slate-100/90 border border-slate-200/70 transition cursor-pointer select-none"
                       >
                         <span className="text-sm sm:text-base font-bold text-slate-800 leading-snug">
-                          {item.meaning}
+                          {renderFormattedText(item.meaning)}
                         </span>
                         <span className="text-[11px] font-semibold text-slate-400 group-hover:text-rose-600 flex items-center gap-1 shrink-0 transition">
                           <EyeOff className="w-3.5 h-3.5" />
@@ -841,8 +877,8 @@ export const VocabStudySection: React.FC = () => {
                     return (
                       <tr key={item.id} className="hover:bg-slate-50/80 transition">
                         <td className="py-3 px-4 text-center text-slate-400 font-medium">{idx + 1}</td>
-                        <td className="py-3 px-4 text-slate-500 font-medium text-xs">
-                          Bài {item.lesson}: {item.lessonTitle}
+                        <td className="py-3 px-4 text-slate-600 font-semibold text-xs whitespace-nowrap">
+                          Bài {item.lesson}
                         </td>
                         <td className="py-3 px-4 font-hanzi text-xl font-bold text-slate-900">{item.hanzi}</td>
                         <td className="py-3 px-4 text-rose-600 font-semibold">{item.pinyin}</td>
@@ -858,7 +894,7 @@ export const VocabStudySection: React.FC = () => {
                               className="cursor-pointer group flex items-center justify-between gap-1.5"
                               title="Bấm để ẩn nghĩa"
                             >
-                              <span>{item.meaning}</span>
+                              <span>{renderFormattedText(item.meaning)}</span>
                               <EyeOff className="w-3.5 h-3.5 text-slate-300 group-hover:text-rose-500" />
                             </div>
                           ) : (
@@ -1059,7 +1095,7 @@ export const VocabStudySection: React.FC = () => {
                                 title="Bấm để ẩn nghĩa"
                                 className="group flex items-center justify-between gap-1 p-1.5 rounded-lg bg-white border border-slate-200/80 text-xs font-bold text-slate-800 cursor-pointer hover:bg-slate-100/60 transition select-none"
                               >
-                                <span className="leading-tight">{w.meaning}</span>
+                                <span className="leading-tight">{renderFormattedText(w.meaning)}</span>
                                 <EyeOff className="w-3 h-3 text-slate-300 group-hover:text-rose-600 shrink-0" />
                               </div>
                             ) : (
@@ -1086,7 +1122,7 @@ export const VocabStudySection: React.FC = () => {
                     <span>Mẹo phân biệt & Phản xạ:</span>
                   </div>
                   <div className="text-slate-700 whitespace-pre-line leading-relaxed pl-5 font-medium">
-                    {group.tips}
+                    {renderFormattedText(group.tips)}
                   </div>
                 </div>
               </div>

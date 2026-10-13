@@ -217,7 +217,7 @@ console.log('--- RUNNING HSK VOCABULARY & MASTERY LOOP TESTS ---');
   console.log('✔ Test 12: Quiz restart correctly preserves selected lessons (HSK 2 Lessons 1 & 2 yield 25 questions)');
 }
 
-// Test 13: Confusable vocabulary dataset integrity (29 groups, all with >= 2 words)
+// Test 13: Confusable vocabulary dataset integrity (29 groups, all with >= 2 words, no [cite] artifacts)
 {
   assert.equal(CONFUSABLE_VOCAB_DATA.length, 29, 'Must have 29 confusable groups');
   assert.equal(CONFUSABLE_CATEGORIES.length, 8, 'Must have 8 confusable categories');
@@ -226,15 +226,22 @@ console.log('--- RUNNING HSK VOCABULARY & MASTERY LOOP TESTS ---');
     assert.ok(group.id, 'Group has id');
     assert.ok(group.part, 'Group has part');
     assert.ok(group.category, 'Group has category');
+    assert.ok(!group.category.includes('[cite'), 'Category must not contain [cite');
     assert.ok(group.tips && group.tips.length > 0, `Group ${group.id} must have tips`);
+    assert.ok(!group.tips.includes('[cite'), `Group ${group.id} tips must not contain [cite`);
     assert.ok(Array.isArray(group.words) && group.words.length >= 2, `Group ${group.id} must have at least 2 words`);
     group.words.forEach(w => {
       assert.ok(w.hanzi, `Group ${group.id} word must have hanzi`);
       assert.ok(w.pinyin, `Group ${group.id} word must have pinyin`);
       assert.ok(w.meaning, `Group ${group.id} word must have meaning`);
+      assert.ok(!w.meaning.includes('[cite'), `Group ${group.id} word ${w.hanzi} meaning must not contain [cite`);
     });
   });
-  console.log('✔ Test 13: Confusable vocabulary data integrity verified (all 29 groups contain >= 2 words with complete Hanzi, Pinyin, Meaning & Tips)');
+
+  // Check updated standard meanings from gemini-code-1791835961977.md
+  assert.equal(CONFUSABLE_VOCAB_DATA[0].words[0].meaning, 'Anh ấy, ông ấy, cậu ấy');
+  assert.equal(CONFUSABLE_VOCAB_DATA[1].words[0].meaning, 'Làm, nấu (*做菜: nấu ăn*)');
+  console.log('✔ Test 13: Confusable vocabulary data integrity verified (all 29 groups updated & clean of [cite] tags)');
 }
 
 // Test 14: Individual Meaning Bidirectional Toggle Logic
@@ -282,6 +289,40 @@ console.log('--- RUNNING HSK VOCABULARY & MASTERY LOOP TESTS ---');
   assert.equal(getMeaningVisible(cardKey), false, 'Clicked revealed meaning again: meaning re-hides (bidirectional!)');
 
   console.log('✔ Test 14: Individual meaning bidirectional toggle verified (hide -> show and show -> hide works in both global states)');
+}
+
+// Test 15: Multi-select lesson filtering in VocabStudySection
+{
+  let selectedLessons: number[] = [];
+  const toggleLesson = (n: number) => {
+    if (selectedLessons.includes(n)) {
+      selectedLessons = selectedLessons.filter(x => x !== n);
+    } else {
+      selectedLessons = [...selectedLessons, n].sort((a, b) => a - b);
+    }
+  };
+
+  const getFilteredHsk1 = () =>
+    VOCAB_LESSON_DATA.filter(
+      item => item.level === 'hsk1' && (selectedLessons.length === 0 || selectedLessons.includes(item.lesson))
+    );
+
+  // Initially empty -> all 163 words
+  assert.equal(getFilteredHsk1().length, 163, 'Empty selection shows all 163 HSK 1 words');
+
+  // Select Lesson 1 (6 words) and Lesson 2 (4 words) and Lesson 6 (12 words) = 22 words
+  toggleLesson(1);
+  toggleLesson(6);
+  toggleLesson(2);
+  assert.deepEqual(selectedLessons, [1, 2, 6], 'Selected lessons sorted');
+  assert.equal(getFilteredHsk1().length, 22, 'Lessons 1, 2, and 6 yield 22 words');
+
+  // Deselect Lesson 6 -> Lessons 1 & 2 = 10 words
+  toggleLesson(6);
+  assert.deepEqual(selectedLessons, [1, 2]);
+  assert.equal(getFilteredHsk1().length, 10, 'Lessons 1 and 2 yield 10 words');
+
+  console.log('✔ Test 15: Multi-select lesson filtering works accurately for any combination of lessons');
 }
 
 console.log('\n🎉 ALL MASTERY LOOP, VOCABULARY & COMPOUND SENTENCES TESTS PASSED SUCCESSFULLY!\n');
