@@ -184,3 +184,29 @@ export function playChineseAudio(text: string, rate: number = 1.0): Promise<bool
     }
   });
 }
+
+/**
+ * Normalize Pinyin by stripping diacritical tone marks for clean A-Z alphabetical sorting
+ */
+export function normalizePinyinForSort(pinyin: string): string {
+  if (!pinyin) return '';
+  return pinyin
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, '')
+    .trim();
+}
+
+/**
+ * Compare two items with pinyin / hanzi alphabetically (A -> Z)
+ */
+export function comparePinyin<T extends { pinyin?: string; hanzi?: string }>(a: T, b: T): number {
+  const normA = normalizePinyinForSort(a.pinyin || '');
+  const normB = normalizePinyinForSort(b.pinyin || '');
+  const primary = normA.localeCompare(normB);
+  if (primary !== 0) return primary;
+  const secondary = (a.pinyin || '').localeCompare(b.pinyin || '');
+  if (secondary !== 0) return secondary;
+  return (a.hanzi || '').localeCompare(b.hanzi || '');
+}

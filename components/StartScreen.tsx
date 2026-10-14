@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useMemo, useEffect } from 'react';
-import { BookOpen, CheckCircle, HelpCircle, Sparkles, RotateCcw, ArrowRight, Shuffle, Layers, Check, Flame } from 'lucide-react';
+import { BookOpen, CheckCircle, HelpCircle, Sparkles, RotateCcw, ArrowRight, Shuffle, Layers, Check, Flame, ArrowDownAZ } from 'lucide-react';
 import { QuizLevel } from '@/types/quiz';
 import { HSK1_LESSON_INFO, HSK2_LESSON_INFO, COMPOUND_SECTION_INFO } from '@/data/lesson-info';
 import { useRoastMode } from '@/hooks/useRoastMode';
@@ -10,7 +10,7 @@ import { getSavedLessonPreferences, saveLessonPreferences } from '@/lib/quizPref
 interface StartScreenProps {
   currentLevel: QuizLevel;
   onChangeLevel: (level: QuizLevel) => void;
-  onStartQuiz: (options?: { selectedLessons?: number[]; shuffle?: boolean }) => void;
+  onStartQuiz: (options?: { selectedLessons?: number[]; shuffle?: boolean; sortByPinyin?: boolean }) => void;
   onResumeQuiz?: () => void;
   onResetQuiz: () => void;
   hasSavedProgress: boolean;
@@ -43,6 +43,7 @@ export const StartScreen: React.FC<StartScreenProps> = ({
   const [scopeMode, setScopeMode] = useState<'all' | 'custom'>('all');
   const [selectedLessons, setSelectedLessons] = useState<number[]>([]);
   const [shuffleQuestions, setShuffleQuestions] = useState<boolean>(true);
+  const [sortByPinyin, setSortByPinyin] = useState<boolean>(false);
 
   // Restore saved lesson preferences whenever level changes or on mount
   useEffect(() => {
@@ -56,6 +57,7 @@ export const StartScreen: React.FC<StartScreenProps> = ({
       setSelectedLessons([]);
     }
     setShuffleQuestions(saved.shuffle);
+    setSortByPinyin(saved.sortByPinyin ?? false);
   }, [currentLevel, currentConfig.totalLessons]);
 
   const totalLessons = currentConfig.totalLessons;
@@ -88,10 +90,12 @@ export const StartScreen: React.FC<StartScreenProps> = ({
       scopeMode,
       selectedLessons: scopeMode === 'custom' ? selectedLessons : [],
       shuffle: shuffleQuestions,
+      sortByPinyin,
     });
     onStartQuiz({
       selectedLessons: lessonsToUse,
       shuffle: shuffleQuestions,
+      sortByPinyin,
     });
   };
 
@@ -287,7 +291,7 @@ export const StartScreen: React.FC<StartScreenProps> = ({
         </div>
 
         {/* Question Shuffle Toggle Option */}
-        <div className="mb-6 p-4 rounded-2xl bg-rose-50/50 border border-rose-100 text-left flex items-center justify-between gap-4">
+        <div className="mb-4 p-4 rounded-2xl bg-rose-50/50 border border-rose-100 text-left flex items-center justify-between gap-4">
           <div className="flex items-start gap-3">
             <div className="w-8 h-8 rounded-lg bg-rose-100 text-rose-600 flex items-center justify-center shrink-0 mt-0.5">
               <Shuffle className="w-4 h-4" />
@@ -295,8 +299,10 @@ export const StartScreen: React.FC<StartScreenProps> = ({
             <div>
               <div className="font-bold text-sm text-slate-900 flex items-center gap-1.5">
                 Xáo trộn thứ tự câu hỏi ngẫu nhiên
-                <span className="text-[10px] uppercase font-bold tracking-wide bg-rose-100 text-rose-700 px-1.5 py-0.5 rounded">
-                  Khuyên dùng
+                <span className={`text-[10px] uppercase font-bold tracking-wide px-1.5 py-0.5 rounded ${
+                  shuffleQuestions ? 'bg-rose-100 text-rose-700' : 'bg-slate-200 text-slate-600'
+                }`}>
+                  {shuffleQuestions ? 'Khuyên dùng' : 'Đang tắt'}
                 </span>
               </div>
               <div className="text-xs text-slate-500 mt-0.5">
@@ -309,7 +315,51 @@ export const StartScreen: React.FC<StartScreenProps> = ({
             <input
               type="checkbox"
               checked={shuffleQuestions}
-              onChange={(e) => setShuffleQuestions(e.target.checked)}
+              onChange={(e) => {
+                const checked = e.target.checked;
+                setShuffleQuestions(checked);
+                if (checked) {
+                  setSortByPinyin(false);
+                }
+              }}
+              className="sr-only peer"
+            />
+            <div className="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-rose-600"></div>
+          </label>
+        </div>
+
+        {/* Sort by Pinyin Alphabetical Toggle Option */}
+        <div className="mb-4 p-4 rounded-2xl bg-indigo-50/50 border border-indigo-100 text-left flex items-center justify-between gap-4">
+          <div className="flex items-start gap-3">
+            <div className="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center shrink-0 mt-0.5">
+              <ArrowDownAZ className="w-4 h-4" />
+            </div>
+            <div>
+              <div className="font-bold text-sm text-slate-900 flex items-center gap-1.5">
+                Sắp xếp theo phiên âm Pinyin (A → Z)
+                <span className={`text-[10px] uppercase font-bold tracking-wide px-1.5 py-0.5 rounded ${
+                  sortByPinyin ? 'bg-indigo-100 text-indigo-800' : 'bg-slate-200 text-slate-600'
+                }`}>
+                  {sortByPinyin ? 'A → Z' : 'Đang tắt'}
+                </span>
+              </div>
+              <div className="text-xs text-slate-500 mt-0.5">
+                Câu hỏi sẽ được sắp xếp tuần tự theo thứ tự bảng chữ cái Pinyin (A → Z) giúp học có hệ thống
+              </div>
+            </div>
+          </div>
+
+          <label className="relative inline-flex items-center cursor-pointer shrink-0">
+            <input
+              type="checkbox"
+              checked={sortByPinyin}
+              onChange={(e) => {
+                const checked = e.target.checked;
+                setSortByPinyin(checked);
+                if (checked) {
+                  setShuffleQuestions(false);
+                }
+              }}
               className="sr-only peer"
             />
             <div className="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-rose-600"></div>

@@ -41,4 +41,5 @@ export interface QuizProgress {
   mode: QuizMode;
   selectedLessons?: number[];
   isShuffled?: boolean;
+  sortByPinyin?: boolean;
 }

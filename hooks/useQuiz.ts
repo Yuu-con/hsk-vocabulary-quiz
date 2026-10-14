@@ -13,6 +13,7 @@ import {
   hasQuestionOverride,
 } from '@/lib/vocabOverrides';
 import { getSavedLessonPreferences, saveLessonPreferences } from '@/lib/quizPreferences';
+import { comparePinyin } from '@/lib/quiz-utils';
 
 const STORAGE_PREFIX = 'hsk_mastery_loop_v1_';
 
@@ -42,16 +43,25 @@ function shuffleArray<T>(array: T[]): T[] {
 function getInitialState(
   level: QuizLevel,
   rememberedLessons?: number[],
-  rememberedShuffle?: boolean
+  rememberedShuffle?: boolean,
+  rememberedSortByPinyin?: boolean
 ): QuizProgress {
   const dataset = getInitialDataset(level);
-  let activeQuestionIds: number[] = [];
+  let chosenQuestions: QuizQuestion[] = [];
   if (rememberedLessons && rememberedLessons.length > 0) {
-    activeQuestionIds = dataset
-      .filter(q => (q.lesson ? rememberedLessons.includes(q.lesson) : true))
-      .map(q => q.id);
+    chosenQuestions = dataset.filter(q => (q.lesson ? rememberedLessons.includes(q.lesson) : true));
   } else {
-    activeQuestionIds = dataset.map(q => q.id);
+    chosenQuestions = [...dataset];
+  }
+
+  let activeQuestionIds: number[] = [];
+  if (rememberedSortByPinyin) {
+    chosenQuestions.sort(comparePinyin);
+    activeQuestionIds = chosenQuestions.map(q => q.id);
+  } else if (rememberedShuffle) {
+    activeQuestionIds = shuffleArray(chosenQuestions.map(q => q.id));
+  } else {
+    activeQuestionIds = chosenQuestions.map(q => q.id);
   }
 
   return {
@@ -66,6 +76,7 @@ function getInitialState(
     mode: 'idle',
     selectedLessons: rememberedLessons,
     isShuffled: rememberedShuffle ?? true,
+    sortByPinyin: rememberedSortByPinyin ?? false,
   };
 }
 
@@ -108,12 +119,13 @@ export function useQuiz(initialLevel: QuizLevel = 'hsk1') {
             level,
             selectedLessons: parsed.selectedLessons ?? defaultLessons,
             isShuffled: parsed.isShuffled ?? savedPrefs.shuffle,
+            sortByPinyin: parsed.sortByPinyin ?? savedPrefs.sortByPinyin ?? false,
           });
         } else {
-          setState(getInitialState(level, defaultLessons, savedPrefs.shuffle));
+          setState(getInitialState(level, defaultLessons, savedPrefs.shuffle, savedPrefs.sortByPinyin));
         }
       } else {
-        setState(getInitialState(level, defaultLessons, savedPrefs.shuffle));
+        setState(getInitialState(level, defaultLessons, savedPrefs.shuffle, savedPrefs.sortByPinyin));
       }
     } catch (e) {
       console.error('Failed to load quiz progress', e);
@@ -160,7 +172,7 @@ export function useQuiz(initialLevel: QuizLevel = 'hsk1') {
   }, []);
 
   // Start new quiz from Round 1
-  const startQuiz = useCallback((options?: { selectedLessons?: number[]; shuffle?: boolean }) => {
+  const startQuiz = useCallback((options?: { selectedLessons?: number[]; shuffle?: boolean; sortByPinyin?: boolean }) => {
     const dataset = getInitialDataset(state.level);
 
     // Detect if options is a genuine config object or undefined / MouseEvent from React onClick
@@ -173,6 +185,7 @@ export function useQuiz(initialLevel: QuizLevel = 'hsk1') {
 
     let selectedLessons: number[] | undefined;
     let shouldShuffle: boolean;
+    let shouldSortByPinyin: boolean;
 
     if (isOptionsObject && 'selectedLessons' in options!) {
       selectedLessons = options!.selectedLessons;
@@ -182,10 +195,18 @@ export function useQuiz(initialLevel: QuizLevel = 'hsk1') {
       selectedLessons = state.selectedLessons ?? (savedPrefs.scopeMode === 'custom' && savedPrefs.selectedLessons.length > 0 ? savedPrefs.selectedLessons : undefined);
     }
 
-    if (isOptionsObject && 'shuffle' in options!) {
-      shouldShuffle = options!.shuffle ?? true;
+    if (isOptionsObject && 'sortByPinyin' in options!) {
+      shouldSortByPinyin = Boolean(options!.sortByPinyin);
     } else {
-      shouldShuffle = state.isShuffled ?? true;
+      const savedPrefs = getSavedLessonPreferences(state.level);
+      shouldSortByPinyin = state.sortByPinyin ?? savedPrefs.sortByPinyin ?? false;
+    }
+
+    if (isOptionsObject && 'shuffle' in options!) {
+      shouldShuffle = options!.shuffle ?? (shouldSortByPinyin ? false : true);
+    } else {
+      const savedPrefs = getSavedLessonPreferences(state.level);
+      shouldShuffle = state.isShuffled ?? (shouldSortByPinyin ? false : (savedPrefs.shuffle ?? true));
     }
 
     // Persist preference for this level
@@ -194,26 +215,32 @@ export function useQuiz(initialLevel: QuizLevel = 'hsk1') {
         scopeMode: 'custom',
         selectedLessons,
         shuffle: shouldShuffle,
+        sortByPinyin: shouldSortByPinyin,
       });
     } else {
       saveLessonPreferences(state.level, {
         scopeMode: 'all',
         selectedLessons: [],
         shuffle: shouldShuffle,
+        sortByPinyin: shouldSortByPinyin,
       });
     }
 
-    let chosenIds: number[] = [];
+    let chosenQuestions: QuizQuestion[] = [];
     if (selectedLessons && selectedLessons.length > 0) {
-      chosenIds = dataset
-        .filter(q => (q.lesson ? selectedLessons!.includes(q.lesson) : true))
-        .map(q => q.id);
+      chosenQuestions = dataset.filter(q => (q.lesson ? selectedLessons!.includes(q.lesson) : true));
     } else {
-      chosenIds = dataset.map(q => q.id);
+      chosenQuestions = [...dataset];
     }
 
-    if (shouldShuffle) {
-      chosenIds = shuffleArray(chosenIds);
+    let chosenIds: number[] = [];
+    if (shouldSortByPinyin) {
+      chosenQuestions.sort(comparePinyin);
+      chosenIds = chosenQuestions.map(q => q.id);
+    } else if (shouldShuffle) {
+      chosenIds = shuffleArray(chosenQuestions.map(q => q.id));
+    } else {
+      chosenIds = chosenQuestions.map(q => q.id);
     }
 
     setState({
@@ -228,11 +255,12 @@ export function useQuiz(initialLevel: QuizLevel = 'hsk1') {
       mode: 'in_progress',
       selectedLessons: selectedLessons,
       isShuffled: shouldShuffle,
+      sortByPinyin: shouldSortByPinyin,
     });
-  }, [state.level, state.selectedLessons, state.isShuffled]);
+  }, [state.level, state.selectedLessons, state.isShuffled, state.sortByPinyin]);
 
   // Restart quiz with previously selected lessons
-  const restartQuiz = useCallback((options?: { selectedLessons?: number[]; shuffle?: boolean }) => {
+  const restartQuiz = useCallback((options?: { selectedLessons?: number[]; shuffle?: boolean; sortByPinyin?: boolean }) => {
     startQuiz(options);
   }, [startQuiz]);
 
@@ -353,7 +381,14 @@ export function useQuiz(initialLevel: QuizLevel = 'hsk1') {
   const startNextRound = useCallback(() => {
     setState(prev => {
       let nextRoundQuestions = [...prev.currentRoundWrongIds];
-      if (prev.isShuffled) {
+      if (prev.sortByPinyin) {
+        const idMap = new Map(fullDataset.map(q => [q.id, q]));
+        const wrongQuestions = nextRoundQuestions
+          .map(id => idMap.get(id))
+          .filter((q): q is QuizQuestion => q !== undefined);
+        wrongQuestions.sort(comparePinyin);
+        nextRoundQuestions = wrongQuestions.map(q => q.id);
+      } else if (prev.isShuffled) {
         nextRoundQuestions = shuffleArray(nextRoundQuestions);
       }
       return {
@@ -366,7 +401,7 @@ export function useQuiz(initialLevel: QuizLevel = 'hsk1') {
         mode: 'in_progress',
       };
     });
-  }, []);
+  }, [fullDataset]);
 
   // Admin action: Live update correct answer & explanation
   const updateCurrentQuestionAnswer = useCallback(
@@ -442,6 +477,7 @@ export function useQuiz(initialLevel: QuizLevel = 'hsk1') {
     fullDataset,
     selectedLessons: state.selectedLessons,
     isShuffled: state.isShuffled,
+    sortByPinyin: state.sortByPinyin,
     // Actions
     changeLevel,
     startQuiz,

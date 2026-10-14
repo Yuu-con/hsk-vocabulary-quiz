@@ -8,6 +8,7 @@ import { VOCAB_LESSON_DATA } from '../data/vocab-study-lesson-data';
 import { CONFUSABLE_VOCAB_DATA, CONFUSABLE_CATEGORIES } from '../data/confusable-vocab-data';
 import { UserAnswerRecord } from '../types/quiz';
 import { WRONG_ANSWER_ROASTS, getRandomRoast } from '../data/roasts';
+import { normalizePinyinForSort, comparePinyin } from '../lib/quiz-utils';
 
 console.log('--- RUNNING HSK VOCABULARY & MASTERY LOOP TESTS ---');
 
@@ -323,6 +324,57 @@ console.log('--- RUNNING HSK VOCABULARY & MASTERY LOOP TESTS ---');
   assert.equal(getFilteredHsk1().length, 10, 'Lessons 1 and 2 yield 10 words');
 
   console.log('✔ Test 15: Multi-select lesson filtering works accurately for any combination of lessons');
+}
+
+// Test 16: Alphabetical Pinyin sorting (A → Z)
+{
+  // 1. Pinyin normalization tests
+  assert.equal(normalizePinyinForSort('ài'), 'ai');
+  assert.equal(normalizePinyinForSort('bā'), 'ba');
+  assert.equal(normalizePinyinForSort('hǎo'), 'hao');
+  assert.equal(normalizePinyinForSort('nǐ'), 'ni');
+  assert.equal(normalizePinyinForSort('zàijiàn'), 'zaijian');
+  assert.equal(normalizePinyinForSort('shíhou'), 'shihou');
+
+  // 2. Sorting sample questions
+  const sample = [
+    { hanzi: '你', pinyin: 'nǐ' },
+    { hanzi: '爱', pinyin: 'ài' },
+    { hanzi: '八', pinyin: 'bā' },
+    { hanzi: '好', pinyin: 'hǎo' },
+    { hanzi: '再见', pinyin: 'zàijiàn' },
+  ];
+  const sorted = [...sample].sort(comparePinyin);
+  assert.deepEqual(
+    sorted.map(s => s.hanzi),
+    ['爱', '八', '好', '你', '再见']
+  );
+
+  // 3. Sorting entire HSK 1 dataset by Pinyin produces strictly non-decreasing A-Z order
+  const sortedHsk1 = [...HSK1_VOCAB_DATA].sort(comparePinyin);
+  assert.equal(sortedHsk1.length, 163);
+  for (let i = 1; i < sortedHsk1.length; i++) {
+    const prevNorm = normalizePinyinForSort(sortedHsk1[i - 1].pinyin);
+    const currNorm = normalizePinyinForSort(sortedHsk1[i].pinyin);
+    assert.ok(
+      prevNorm.localeCompare(currNorm) <= 0,
+      `Pinyin order mismatch at index ${i}: "${prevNorm}" should come before or equal "${currNorm}"`
+    );
+  }
+
+  // 4. Sorting entire HSK 2 dataset by Pinyin produces strictly non-decreasing A-Z order
+  const sortedHsk2 = [...HSK2_VOCAB_DATA].sort(comparePinyin);
+  assert.equal(sortedHsk2.length, 165);
+  for (let i = 1; i < sortedHsk2.length; i++) {
+    const prevNorm = normalizePinyinForSort(sortedHsk2[i - 1].pinyin);
+    const currNorm = normalizePinyinForSort(sortedHsk2[i].pinyin);
+    assert.ok(
+      prevNorm.localeCompare(currNorm) <= 0,
+      `Pinyin order mismatch at index ${i}: "${prevNorm}" should come before or equal "${currNorm}"`
+    );
+  }
+
+  console.log('✔ Test 16: Alphabetical Pinyin sorting (A → Z) verified across HSK 1 and HSK 2 datasets');
 }
 
 console.log('\n🎉 ALL MASTERY LOOP, VOCABULARY & COMPOUND SENTENCES TESTS PASSED SUCCESSFULLY!\n');
