@@ -377,4 +377,34 @@ console.log('--- RUNNING HSK VOCABULARY & MASTERY LOOP TESTS ---');
   console.log('✔ Test 16: Alphabetical Pinyin sorting (A → Z) verified across HSK 1 and HSK 2 datasets');
 }
 
+// Test 17: Combined HSK 1 & 2 vocabulary study mode with alphabetical Pinyin sort
+{
+  // 1. Total count of combined vocabulary
+  assert.equal(VOCAB_LESSON_DATA.length, 328, 'Combined VOCAB_LESSON_DATA has exactly 328 words');
+
+  // 2. Sort all 328 words using comparePinyin
+  const sortedCombined = [...VOCAB_LESSON_DATA].sort(comparePinyin);
+  assert.equal(sortedCombined.length, 328);
+
+  // 3. Verify non-decreasing alphabetical order
+  for (let i = 1; i < sortedCombined.length; i++) {
+    const prevNorm = normalizePinyinForSort(sortedCombined[i - 1].pinyin);
+    const currNorm = normalizePinyinForSort(sortedCombined[i].pinyin);
+    assert.ok(
+      prevNorm.localeCompare(currNorm) <= 0,
+      `Pinyin order mismatch at index ${i}: "${prevNorm}" should come before or equal "${currNorm}"`
+    );
+  }
+
+  // 4. Verify lesson filtering when combined
+  const lesson1Combined = VOCAB_LESSON_DATA.filter(x => x.lesson === 1).sort(comparePinyin);
+  const hsk1L1 = VOCAB_LESSON_DATA.filter(x => x.level === 'hsk1' && x.lesson === 1);
+  const hsk2L1 = VOCAB_LESSON_DATA.filter(x => x.level === 'hsk2' && x.lesson === 1);
+  assert.equal(lesson1Combined.length, hsk1L1.length + hsk2L1.length);
+  assert.ok(lesson1Combined.some(x => x.level === 'hsk1'));
+  assert.ok(lesson1Combined.some(x => x.level === 'hsk2'));
+
+  console.log('✔ Test 17: Combined HSK 1 & 2 vocabulary (328 words) with alphabetical Pinyin sort verified');
+}
+
 console.log('\n🎉 ALL MASTERY LOOP, VOCABULARY & COMPOUND SENTENCES TESTS PASSED SUCCESSFULLY!\n');

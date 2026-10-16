@@ -11,14 +11,15 @@ import {
   Table as TableIcon, 
   Tag,
   Sparkles,
-  Zap
+  Zap,
+  ArrowDownAZ
 } from 'lucide-react';
 import { VOCAB_LESSON_DATA } from '@/data/vocab-study-lesson-data';
 import { VOCAB_TOPIC_DATA, VOCAB_TOPIC_CATEGORIES } from '@/data/vocab-study-topic-data';
 import { COMPOUND_PHRASES_DATA } from '@/data/compound-sentences-data';
 import { CONFUSABLE_VOCAB_DATA, CONFUSABLE_CATEGORIES } from '@/data/confusable-vocab-data';
 import { COMPOUND_SECTION_INFO } from '@/data/lesson-info';
-import { playChineseAudio } from '@/lib/quiz-utils';
+import { playChineseAudio, comparePinyin } from '@/lib/quiz-utils';
 
 type StudyMode = 'by_topic' | 'by_lesson' | 'compound' | 'confusable';
 
@@ -77,8 +78,9 @@ export const VocabStudySection: React.FC = () => {
   const [selectedTopicId, setSelectedTopicId] = useState<number>(0); // 0 = all
 
   // Lesson sub-filters (multi-select: empty array = all 15 lessons)
-  const [lessonLevel, setLessonLevel] = useState<'hsk1' | 'hsk2'>('hsk1');
+  const [lessonLevel, setLessonLevel] = useState<'hsk1' | 'hsk2' | 'all'>('hsk1');
   const [selectedLessons, setSelectedLessons] = useState<number[]>([]);
+  const [lessonSortOrder, setLessonSortOrder] = useState<'pinyin' | 'lesson'>('lesson');
 
   const toggleLessonSelection = (lessonNum: number) => {
     setSelectedLessons(prev => {
@@ -150,10 +152,10 @@ export const VocabStudySection: React.FC = () => {
     });
   }, [selectedTopicId, searchQuery]);
 
-  // 2. Filtered Lesson Items (supports multi-select lessons)
+  // 2. Filtered Lesson Items (supports multi-select lessons & combined HSK 1 + 2)
   const filteredLessonItems = useMemo(() => {
-    return VOCAB_LESSON_DATA.filter(item => {
-      if (item.level !== lessonLevel) return false;
+    const list = VOCAB_LESSON_DATA.filter(item => {
+      if (lessonLevel !== 'all' && item.level !== lessonLevel) return false;
       if (selectedLessons.length > 0 && !selectedLessons.includes(item.lesson)) return false;
       if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase().trim();
@@ -165,7 +167,12 @@ export const VocabStudySection: React.FC = () => {
       }
       return true;
     });
-  }, [lessonLevel, selectedLessons, searchQuery]);
+
+    if (lessonLevel === 'all' || lessonSortOrder === 'pinyin') {
+      return [...list].sort(comparePinyin);
+    }
+    return list;
+  }, [lessonLevel, selectedLessons, searchQuery, lessonSortOrder]);
 
   // 3. Filtered Compound Items
   const filteredCompoundItems = useMemo(() => {
@@ -345,7 +352,7 @@ export const VocabStudySection: React.FC = () => {
         {studyMode === 'by_lesson' && (
           <div className="space-y-3 pb-2 border-b border-slate-100">
             <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-bold text-slate-700">
-              <div className="inline-flex p-1 bg-slate-100 rounded-xl">
+              <div className="inline-flex p-1 bg-slate-100 rounded-xl flex-wrap gap-1">
                 <button
                   onClick={() => {
                     setLessonLevel('hsk1');
@@ -372,13 +379,49 @@ export const VocabStudySection: React.FC = () => {
                 >
                   HSK 2 (15 bài · 165 từ)
                 </button>
+                <button
+                  onClick={() => {
+                    setLessonLevel('all');
+                    setSelectedLessons([]);
+                    setLessonSortOrder('pinyin');
+                  }}
+                  className={`px-3 py-1.5 rounded-lg transition cursor-pointer flex items-center gap-1.5 ${
+                    lessonLevel === 'all'
+                      ? 'bg-white text-rose-600 shadow-xs font-bold'
+                      : 'text-slate-600 hover:text-slate-900 font-semibold'
+                  }`}
+                >
+                  <ArrowDownAZ className="w-3.5 h-3.5 text-rose-600" />
+                  <span>Ghép HSK 1 & 2 (328 từ · A → Z)</span>
+                </button>
               </div>
 
-              <div className="flex items-center gap-2">
+              <div className="flex flex-wrap items-center gap-2">
+                <button
+                  onClick={() => setLessonSortOrder(prev => prev === 'pinyin' ? 'lesson' : 'pinyin')}
+                  className={`px-2.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 cursor-pointer border ${
+                    (lessonLevel === 'all' || lessonSortOrder === 'pinyin')
+                      ? 'bg-rose-50 text-rose-700 border-rose-300 shadow-2xs'
+                      : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
+                  }`}
+                  title="Bật/tắt sắp xếp theo bảng chữ cái Pinyin (A → Z)"
+                >
+                  <ArrowDownAZ className="w-3.5 h-3.5 text-rose-600" />
+                  <span>
+                    {(lessonLevel === 'all' || lessonSortOrder === 'pinyin')
+                      ? 'Xếp Pinyin (A → Z)'
+                      : 'Xếp theo bài học'}
+                  </span>
+                </button>
+
                 <span className="text-slate-500 font-medium">
-                  {selectedLessons.length === 0
-                    ? 'Đang xem: Tất cả 15 bài (có thể chọn nhiều bài cùng lúc)'
-                    : `Đã chọn ${selectedLessons.length} bài: ${selectedLessons.map(n => `Bài ${n}`).join(', ')}`}
+                  {lessonLevel === 'all'
+                    ? (selectedLessons.length === 0
+                        ? 'Đang xem: Ghép toàn bộ HSK 1 & 2 (328 từ · Xếp A → Z)'
+                        : `Đã chọn ${selectedLessons.length} bài (HSK 1 & 2): ${selectedLessons.map(n => `Bài ${n}`).join(', ')}`)
+                    : (selectedLessons.length === 0
+                        ? 'Đang xem: Tất cả 15 bài (có thể chọn nhiều bài cùng lúc)'
+                        : `Đã chọn ${selectedLessons.length} bài: ${selectedLessons.map(n => `Bài ${n}`).join(', ')}`)}
                 </span>
                 {selectedLessons.length > 0 && (
                   <button
@@ -593,7 +636,11 @@ export const VocabStudySection: React.FC = () => {
       <div className="flex items-center justify-between text-xs sm:text-sm text-slate-500 px-1 font-medium">
         <div>
           {studyMode === 'by_topic' && `Đang hiển thị ${filteredTopicItems.length} từ vựng theo chủ đề`}
-          {studyMode === 'by_lesson' && `Đang hiển thị ${filteredLessonItems.length} từ vựng theo bài học`}
+          {studyMode === 'by_lesson' && (
+            lessonLevel === 'all'
+              ? `Đang hiển thị ${filteredLessonItems.length} từ vựng ghép HSK 1 & 2 (Xếp theo phiên âm A → Z)`
+              : `Đang hiển thị ${filteredLessonItems.length} từ vựng ${lessonLevel.toUpperCase()} theo bài học`
+          )}
           {studyMode === 'compound' && `Đang hiển thị ${filteredCompoundItems.length} cụm câu ghép & ví dụ`}
           {studyMode === 'confusable' && `Đang hiển thị ${filteredConfusableItems.length} nhóm từ dễ nhầm lẫn`}
         </div>
@@ -795,8 +842,12 @@ export const VocabStudySection: React.FC = () => {
                   {/* ROW 1 (TOP OF CARD): LESSON BADGE & WORD TYPE ON LEFT, SPEAKER ON RIGHT */}
                   <div className="flex items-center justify-between gap-2 pb-2.5 border-b border-slate-100">
                     <div className="flex items-center gap-1.5 truncate max-w-[80%]">
-                      <span className="px-2.5 py-1 rounded-lg bg-rose-50 text-rose-700 font-bold text-xs border border-rose-100 shrink-0">
-                        Bài {item.lesson}
+                      <span className={`px-2.5 py-1 rounded-lg font-bold text-xs border shrink-0 ${
+                        item.level === 'hsk1'
+                          ? 'bg-rose-50 text-rose-700 border-rose-100'
+                          : 'bg-blue-50 text-blue-700 border-blue-100'
+                      }`}>
+                        {lessonLevel === 'all' ? `${item.level.toUpperCase()} · B.${item.lesson}` : `Bài ${item.lesson}`}
                       </span>
                       <span className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 font-semibold text-[11px] shrink-0">
                         {item.wordType}
@@ -877,8 +928,18 @@ export const VocabStudySection: React.FC = () => {
                     return (
                       <tr key={item.id} className="hover:bg-slate-50/80 transition">
                         <td className="py-3 px-4 text-center text-slate-400 font-medium">{idx + 1}</td>
-                        <td className="py-3 px-4 text-slate-600 font-semibold text-xs whitespace-nowrap">
-                          Bài {item.lesson}
+                        <td className="py-3 px-4 font-semibold text-xs whitespace-nowrap">
+                          {lessonLevel === 'all' ? (
+                            <span className={`px-2 py-0.5 rounded-md font-bold text-[11px] border ${
+                              item.level === 'hsk1'
+                                ? 'bg-rose-50 text-rose-700 border-rose-100'
+                                : 'bg-blue-50 text-blue-700 border-blue-100'
+                            }`}>
+                              {item.level.toUpperCase()} · B.{item.lesson}
+                            </span>
+                          ) : (
+                            <span className="text-slate-600 font-semibold">Bài {item.lesson}</span>
+                          )}
                         </td>
                         <td className="py-3 px-4 font-hanzi text-xl font-bold text-slate-900">{item.hanzi}</td>
                         <td className="py-3 px-4 text-rose-600 font-semibold">{item.pinyin}</td>
